@@ -61,8 +61,7 @@ El archivo `docs/tags_project.csv` define etiquetas para clasificar correos de G
 
 ## Documentación Técnica
 
-*   **`ref/setup.md`**: Configuración inicial del grafo, estructura de páginas y templates.
-*   **`ref/update_setup.md`**: Plan de estandarización completado (categorías, templates, tags, homogeneización de journals).
+*   **`ref/setup.md`**: Configuración inicial, estandarización de journals, sistema de clasificación de correos y templates.
 *   **`AGENTS.md`**: Guía para el agente AI, incluyendo directrices de desarrollo de contenido y sintaxis de Logseq.
 *   **`ref/logseq.md`**: Guía completa de Logseq para gestión profesional del conocimiento.
 
@@ -76,6 +75,4 @@ El directorio `logs/` mantiene registro de las sesiones del agente AI:
 
 ## Setup Inicial
 
-Para configurar este grafo desde cero, seguir las instrucciones en `ref/setup.md`.
-
-Para entender el sistema de estandarización implementado, consultar `ref/update_setup.md`.
+Para configurar este grafo desde cero o entender el sistema de estandarización implementado, seguir las instrucciones en `ref/setup.md`.
