@@ -54,3 +54,22 @@
 	    - 
 	  - **Criterios de Aceptación**
 	    - 
+- **Journal Diario**
+	- template:: journal-daily
+	- # Registro del Día
+	  project:: [[CALAIRE-EA]]
+	- ## Prueba Piloto
+	  collapsed:: true
+		- 
+	- ## Gestión Administrativa
+	  collapsed:: true
+		- 
+	- ## Desarrollo Técnico
+	  collapsed:: true
+		- 
+	- ## SGC / Calidad
+	  collapsed:: true
+		- 
+	- ## Infraestructura
+	  collapsed:: true
+		- 

@@ -28,9 +28,12 @@
 - **Rondas**
 	- [[Ronda 1]] (Feb 18-23)
 	- [[Ronda 2]] (Feb 25-Mar 2)
-	- [[Ronda 3]] (Mar 18-23)
-	- [[Ronda 4]] (Mar 25-30)
+	- [[Ronda 3]] (Mar 18-23) - Universidad de Medellín confirmada
+	- [[Ronda 4]] (Mar 25-30) - Universidad de Medellín confirmada
 	- [[Ronda 5]] (Apr 8-13)
+- **Confirmaciones de Laboratorios**
+	- Universidad Pontificia Bolivariana :: Carta enviada
+	- Universidad de Medellín :: Confirmada para Rondas 3 y 4
 - **Logística**
 	- Equipos a transportar: Analizadores CO, NOx, SO2, O3.
 	- Responsable transporte: TBD

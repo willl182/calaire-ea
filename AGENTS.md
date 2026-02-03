@@ -37,6 +37,43 @@ managers. Content is structured markdown files consumed by Logseq.
 
 ---
 
+## Content Development Guidelines
+
+### Input Processing
+
+The user provides quick notes, bullet points, or informal ideas in Spanish. The agent
+must:
+
+1. **Expand and develop** the content into well-structured technical prose
+2. **Use domain-appropriate vocabulary** (metrology, proficiency testing, ISO standards)
+3. **Add context and detail** that clarifies the technical significance
+4. **Never copy user input verbatim** - always reformulate and enrich
+
+### Tone and Style
+
+- Technical and professional
+- Third person or impersonal voice
+- Avoid colloquialisms
+- Include relevant links to MOCs (`[[Prueba Piloto]]`, `[[CALAIRE-EA]]`, `[[QMS]]`, `[[CALAIRE-APP]]`)
+- Convert facts into milestones: what happened, why it matters, impact, next control
+
+### Examples
+
+| User Input | Agent Output |
+|------------|--------------|
+| "UdeM confirmó rondas 3 y 4" | "**Universidad de Medellín:** respuesta positiva recibida. Confirman disponibilidad para participar en [[Ronda 3]] y [[Ronda 4]] del calendario piloto (periodos 18-23 de marzo y 25-30 de marzo 2026 respectivamente)." |
+| "verificando espacio al lado del lab" | "**Verificación de espacio físico:** en evaluación activa la disponibilidad del área contigua al laboratorio de gases para almacenamiento temporal de equipos y operaciones auxiliares durante las rondas de ensayo." |
+| "David ajustó cartas" | "Se ejecutó la actualización técnica de cartas de invitación para laboratorios participantes. David completó la revisión y ajuste de fechas del calendario operativo, procediendo al envío formal de las comunicaciones." |
+
+### Key Principle
+
+**Do not copy user input verbatim.** Always reformulate and enrich with:
+- Technical context relevant to CALAIRE-EA project
+- Connections to project MOCs and phases
+- Clear, professional Spanish prose suitable for documentation
+
+---
+
 ## Logseq Markdown Syntax
 
 ### Block Structure

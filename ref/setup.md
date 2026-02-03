@@ -2,8 +2,8 @@
 
 Este documento detalla la configuración y estructura del grafo de Logseq implementada para la gestión del proyecto 61134 (CALAIRE-EA).
 
-**Estado:** ✅ Implementado
-**Fecha:** 2026-02-02
+**Estado:** ✅ Implementado | 🔄 Actualización en curso
+**Fecha:** 2026-02-03
 
 ## Fase 1: Inicialización Git (✅ Completado)
 
@@ -38,6 +38,7 @@ Templates disponibles en `pages/templates.md`:
 2.  **Protocolo Técnico** (`template:: protocolo`): Estructura para documentación de gases (CO, NOx, SO2, O3).
 3.  **Ronda Piloto** (`template:: ronda-piloto`): Seguimiento de logística y resultados por laboratorio/semana.
 4.  **Entregable** (`template:: entregable`): Seguimiento de hitos con plazos y criterios de aceptación.
+5.  **Journal Diario** (`template:: journal-daily`): Estructura estándar para registros diarios con categorías organizativas.
 
 ## Fase 4: Configuración de Queries (✅ Completado)
 
@@ -60,3 +61,26 @@ Se han poblado las páginas MOC con las tareas urgentes identificadas:
 1.  **Nueva Tarea**: Crear bloque en Journal -> `TODO Tarea... project:: [[CALAIRE-EA]]`.
 2.  **Nueva Reunión**: En Journal -> Escribir `[[Reunión: Tema]]`, entrar a la página y aplicar template `reunion`.
 3.  **Ver Progreso**: Ir a la página `[[CALAIRE-EA]]` o revisar la sección inferior del Journal diario.
+
+### Uso del Journal Diario
+
+Para mantener consistencia en los registros diarios, usar el template `journal-daily`:
+
+1.  Ejecutar `/template journal-daily` en el journal del día.
+2.  Eliminar secciones que no apliquen (no forzar secciones vacías).
+3.  Usar `collapsed:: true` para secciones extensas.
+
+#### Categorías Estándar
+
+| Categoría                | Contenido Típico                                           |
+|--------------------------|------------------------------------------------------------|
+| **Prueba Piloto**        | Rondas EA, confirmaciones laboratorios, logística equipos   |
+| **Gestión Administrativa** | Cartas oficiales, comunicaciones, contratación           |
+| **Desarrollo Técnico**   | CALAIRE-APP, protocolos, calibración                      |
+| **SGC / Calidad**       | Auditorías, ISO 17043/13528, control documental            |
+| **Infraestructura**      | Instalaciones, TI, transporte de equipos                     |
+
+#### Convención para Notas Históricas
+
+- Journals con contenido mínimo (2 líneas o menos): marcar como `- #nota-historica`.
+- Journals con cronogramas/diagramas desactualizados: encapsular bajo `#version-historica` y colapsar.
