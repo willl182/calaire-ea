@@ -1,0 +1,5 @@
+- tags:: [[Equipo]]
+- # Carmen Zapata
+- role:: Directora del grupo
+- focus:: Direccion general, decisiones, aprobacion de documentos.
+- project:: [[CALAIRE-EA]]

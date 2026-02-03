@@ -1,0 +1,14 @@
+- tags:: [[Ronda]], [[Prueba Piloto]]
+- # Ronda 1
+- **Fechas**
+	- Inicio (montaje): 2026-02-18
+	- Dias de prueba: 2026-02-19 a 2026-02-21
+	- Recoleccion: 2026-02-23
+- **Ciclo operativo**
+	- Miercoles: recepcion y acondicionamiento.
+	- Jueves a sabado: ejecucion de pruebas.
+	- Lunes: recoleccion de equipos.
+- **Estado**
+	- status:: planificada
+- **Referencias**
+	- [[Prueba Piloto]]

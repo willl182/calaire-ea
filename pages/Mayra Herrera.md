@@ -1,0 +1,5 @@
+- tags:: [[Equipo]]
+- # Mayra Herrera
+- role:: Profesional infraestructura
+- focus:: Compras de equipos, soporte de infraestructura.
+- project:: [[CALAIRE-EA]]

@@ -1,0 +1,5 @@
+- tags:: [[Equipo]]
+- # David Pulgarin
+- role:: Profesional de proyectos
+- focus:: Cartas, coordinacion de la fase final del servicio.
+- project:: [[CALAIRE-EA]]

@@ -20,3 +20,5 @@
 	- [[docs/proyecto.md]] - Plan detallado.
 	- [[docs/gantt.md]] - Cronograma Gantt.
 	- [[docs/timeline.md]] - Línea de tiempo rondas.
+	- [[docs/memoria_2025.md]] - Memoria de actividades 2025.
+

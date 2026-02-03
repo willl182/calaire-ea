@@ -1,0 +1,5 @@
+- tags:: [[Equipo]]
+- # Cesar Yate
+- role:: Consultor experto en Ensayos de Aptitud
+- focus:: Asesoría técnica especializada, validación de esquemas EA.
+- project:: [[CALAIRE-EA]]

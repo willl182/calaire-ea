@@ -1,0 +1,5 @@
+- tags:: [[Equipo]]
+- # Jeniffer Ochoa
+- role:: Profesional calidad
+- focus:: SGC, requisitos ISO, revision documental.
+- project:: [[CALAIRE-EA]]

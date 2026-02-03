@@ -1,0 +1,5 @@
+- tags:: [[Equipo]]
+- # Fabian Moreno
+- role:: Tecnico instrumental especializado
+- focus:: Operacion tecnica de pruebas, calibracion, equipos.
+- project:: [[CALAIRE-EA]]
