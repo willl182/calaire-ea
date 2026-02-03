@@ -70,4 +70,4 @@ Manage CALAIRE-EA project documentation and structure in Logseq.
 1. `6dcd4bf` - Standardize journals, templates, and email tags
 2. `7c3aeee` - Update README to reflect standardization and document oversight
 3. `a72d747` - Update CURRENT_SESSION with README fix and final session state
-4. `pending` - Documentation consolidation (ref/setup.md updated, ref/update_setup.md deleted, README.md updated)
+4. `50616e1` - Consolidate documentation into ref/setup.md and eliminate duplication
