@@ -238,7 +238,21 @@
             [(< ?d ?next)]]
     :inputs [:today :7d-after]
     :group-by-page? false
-    :collapsed? false}]}
+    :collapsed? false}
+   {:title "📋 CALAIRE-EA Tasks"
+    :query [:find (pull ?b [*])
+            :where
+            [?b :block/marker ?m]
+            [(contains? #{"TODO" "DOING" "NOW" "LATER"} ?m)]
+            [?b :block/refs ?p]
+            [?p :block/name "calaire-ea"]]
+    :collapsed? false}
+   {:title "🎯 Decisiones Recientes"
+    :query [:find (pull ?b [*])
+            :where
+            [?b :block/refs ?p]
+            [?p :block/name "decision"]]
+    :collapsed? true}]}
 
  ;; Add custom commands to the command palette
  ;; Example usage:

@@ -1,0 +1,18 @@
+- tags:: [[Team]]
+- # Equipo del Proyecto
+- **Liderazgo**
+	- [[Carmen Elena Zapata]]
+		- role:: Project Director
+		- focus:: Supervisión, aprobación documentos.
+	- [[Technical Lead]] (Contratista No Egresado)
+		- role:: Líder Técnico / Experto Aire
+		- focus:: Metrología, protocolos, software, ejecución piloto.
+- **Soporte**
+	- [[Jeniffer Ochoa]]
+		- role:: QMS Specialist
+		- focus:: ISO 17025/17043, integración SGC.
+	- [[David Esteban Pulgarín]]
+		- role:: Costing Specialist
+		- focus:: Modelo de costos, precios sostenibles.
+	- **REDAIRE-UNAL**
+		- role:: Research Partner

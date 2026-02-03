@@ -1,99 +1,62 @@
-# Plan de Implementación - Proyecto CALAIRE-EA (Logseq Setup)
+# Registro de Implementación - Proyecto CALAIRE-EA (Logseq Setup)
 
-Este documento describe la configuración y estructura del grafo de Logseq para la gestión del proyecto 61134 (CALAIRE-EA).
+Este documento detalla la configuración y estructura del grafo de Logseq implementada para la gestión del proyecto 61134 (CALAIRE-EA).
 
-## Fase 1: Inicialización Git
+**Estado:** ✅ Implementado
+**Fecha:** 2026-02-02
 
-1.  **Inicializar repositorio**: `git init`
-2.  **Configurar `.gitignore`**:
+## Fase 1: Inicialización Git (✅ Completado)
+
+1.  **Repositorio**: Inicializado en raíz.
+2.  **`.gitignore`**: Configurado para excluir archivos de sistema y caché de Logseq.
     *   `.DS_Store`
     *   `bak/`
     *   `pages-metadata.edn`
     *   `logseq/graphs-txid.edn`
     *   `logseq/.recycle/`
-3.  **Commit inicial**: Guardar estado actual.
+3.  **Control de Versiones**: Primer commit realizado con la estructura base.
 
-## Fase 2: Estructura de Páginas (MOCs)
+## Fase 2: Estructura de Páginas (MOCs) (✅ Completado)
 
-Crear las siguientes páginas en `/pages/` para centralizar la información:
+Se han creado las siguientes páginas en `/pages/` para centralizar la información:
 
-| Archivo | Propósito | Contenido Clave |
+| Archivo | Propósito | Contenido Implementado |
 | :--- | :--- | :--- |
 | `CALAIRE-EA.md` | **MOC Principal** | Visión general, enlaces a fases, hitos, documentos maestros. |
 | `CALAIRE-APP.md` | **Aplicativo** | Gestión del desarrollo del software estadístico, repositorio, bugs, features. |
 | `Prueba Piloto.md` | **Ejecución** | Coordinación de las 4 rondas de marzo, logística de equipos, cronograma. |
-| `Laboratorios.md` | **Base de Datos** | Registro de laboratorios participantes, contactos, estado de participación. |
-| `QMS.md` | **Calidad** | Integración ISO 17043/13528, listado de documentos F-GCM-03, auditorías. |
-| `Equipo.md` | **Personas** | Directorio del equipo (Carmen Elena, Jeniffer, David Esteban), roles y responsabilidades. |
+| `Laboratorios.md` | **Base de Datos** | Registro de laboratorios participantes. |
+| `QMS.md` | **Calidad** | Integración ISO 17043/13528, listado de documentos F-GCM-03. |
+| `Equipo.md` | **Personas** | Directorio del equipo (Carmen Elena, Jeniffer, David Esteban), roles. |
 | `templates.md` | **Sistema** | Archivo contenedor para todos los templates de Logseq. |
 
-## Fase 3: Templates (Logseq)
+## Fase 3: Templates (Logseq) (✅ Completado)
 
-Implementar los siguientes templates en `pages/templates.md` usando propiedades en inglés y contenido en español (convención mixta):
+Templates disponibles en `pages/templates.md`:
 
-### 1. Reunión
-```markdown
-- #[[Reunión Template]]
-  template:: reunion
-  - type:: [[Meeting]]
-  - attendees:: 
-  - project:: [[CALAIRE-EA]]
-  - date:: 
-  - **Temas Discutidos**
-    - 
-  - **Decisiones**
-    - #decision 
-  - **Acciones**
-    - TODO 
-```
+1.  **Reunión** (`template:: reunion`): Estructura para actas con asistentes, decisiones y acciones.
+2.  **Protocolo Técnico** (`template:: protocolo`): Estructura para documentación de gases (CO, NOx, SO2, O3).
+3.  **Ronda Piloto** (`template:: ronda-piloto`): Seguimiento de logística y resultados por laboratorio/semana.
+4.  **Entregable** (`template:: entregable`): Seguimiento de hitos con plazos y criterios de aceptación.
 
-### 2. Protocolo Técnico
-```markdown
-- #[[Protocolo Template]]
-  template:: protocolo
-  - type:: [[Protocolo]]
-  - gas:: 
-  - version:: 1.0
-  - status:: #borrador
-  - **Objetivo**
-    - 
-  - **Procedimiento**
-    - 
-  - **Criterios de Aceptación**
-    - 
-```
+## Fase 4: Configuración de Queries (✅ Completado)
 
-### 3. Ronda Piloto
-```markdown
-- #[[Ronda Piloto Template]]
-  template:: ronda-piloto
-  - type:: [[Ronda Piloto]]
-  - laboratorio:: 
-  - week:: 
-  - reception-date:: 
-  - return-date:: 
-  - **Equipos**
-    - 
-  - **Resultados**
-    - CO:: 
-    - NOx:: 
-    - SO2:: 
-    - O3:: 
-  - **Observaciones**
-    - 
-```
+Se ha actualizado `logseq/config.edn` (`:default-queries`) para visualización automática en el Journal:
 
-## Fase 4: Configuración de Queries
+1.  **📋 CALAIRE-EA Tasks**: Muestra todos los TODO/DOING/NOW/LATER vinculados a la página `[[CALAIRE-EA]]`.
+2.  **🎯 Decisiones Recientes**: Rastrea automáticamente cualquier bloque con el tag `#decision`.
+3.  **Default**: Se mantienen las secciones "🔨 NOW" y "📅 NEXT".
 
-Agregar las siguientes queries a `logseq/config.edn` (`:default-queries`) para visualización rápida en el Journal:
+## Fase 5: Tareas Inmediatas (Backlog Inicial) (✅ Completado)
 
-1.  **Tareas CALAIRE-EA**: Muestra todos los TODO/DOING relacionados con el proyecto.
-2.  **Decisiones Recientes**: Rastrea bloques con tag `#decision`.
-
-## Fase 5: Tareas Inmediatas (Backlog Inicial)
-
-Poblar las páginas MOC con las tareas urgentes identificadas:
+Se han poblado las páginas MOC con las tareas urgentes identificadas:
 
 *   **Prueba Piloto**: Reajuste de cartas, confirmación laboratorios, logística equipos.
 *   **Aplicativo**: Informe validación, documentación, testing, migración repo.
 *   **QMS**: Protocolos (CO, NOx, SO2, O3), manual transporte, portafolio.
+
+## Instrucciones de Uso
+
+1.  **Nueva Tarea**: Crear bloque en Journal -> `TODO Tarea... project:: [[CALAIRE-EA]]`.
+2.  **Nueva Reunión**: En Journal -> Escribir `[[Reunión: Tema]]`, entrar a la página y aplicar template `reunion`.
+3.  **Ver Progreso**: Ir a la página `[[CALAIRE-EA]]` o revisar la sección inferior del Journal diario.

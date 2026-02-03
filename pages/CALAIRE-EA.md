@@ -1,0 +1,22 @@
+- tags:: [[MOC]], [[Project]]
+- # CALAIRE-EA: Implementación de Proficiency Testing para Gases Contaminantes
+- **Visión General**
+	- Proyecto 61134: INM + UNAL
+	- Objetivo: Establecer servicio de Ensayos de Aptitud (EA) para CO, NOx, SO2, O3.
+	- Inversión Total: $437M COP
+- **MOCs Principales**
+	- [[Prueba Piloto]] - Coordinación operativa rondas Marzo 2026.
+	- [[CALAIRE-APP]] - Desarrollo software estadístico (ISO 13528).
+	- [[QMS]] - Gestión de calidad, ISO 17043, protocolos.
+	- [[Laboratorios]] - Registro de participantes.
+	- [[Equipo]] - Directorio y roles.
+- **Fases del Proyecto**
+	- Fase I: Diseño (Completada)
+	- Fase II: Ejecución y Piloto (EN PROGRESO)
+		- deadline:: 2026-04-30
+	- Fase III: QMS y Lanzamiento
+		- deadline:: 2026-11-03
+- **Documentación Maestra**
+	- [[docs/proyecto.md]] - Plan detallado.
+	- [[docs/gantt.md]] - Cronograma Gantt.
+	- [[docs/timeline.md]] - Línea de tiempo rondas.

@@ -1,0 +1,11 @@
+- tags:: [[Database]]
+- # Registro de Laboratorios
+- **Participantes Confirmados**
+	- (Agregar laboratorios aquí)
+- **Candidatos**
+	- [[Laboratorio A]]
+		- status:: #contactado
+		- contact:: 
+	- [[Laboratorio B]]
+		- status:: #pendiente
+		- contact:: 
