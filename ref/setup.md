@@ -109,6 +109,17 @@ Para mantener consistencia en los registros diarios, usar el template `journal-d
 3.  Usar `collapsed:: true` para secciones extensas.
 4.  Reuniones formales se registran como `#[[Reunión: Tema]]` y se usa el template `reunion`.
 
+### Ubicación de TODOs y Decisiones
+
+- **TODOs** y **#decision** van **dentro de la categoría temática** correspondiente.
+- No crear secciones separadas para tareas al final del journal.
+- Esto mantiene contexto inmediato y evita duplicación.
+
+| Tipo de bloque | Ubicación |
+|----------------|-----------|
+| `TODO`, `DOING`, `DONE` | Bajo la categoría temática donde aplica |
+| `#decision` | Bajo la categoría donde aplica la decisión |
+
 ### Categorías Estándar
 
 | Categoría                | Contenido Típico                                           |

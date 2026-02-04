@@ -1,6 +1,6 @@
 # Session State: CALAIRE-EA Knowledge Graph
 
-**Last Updated**: 2026-02-03 18:45
+**Last Updated**: 2026-02-03 19:15
 
 ## Session Objective
 
@@ -23,6 +23,8 @@ Manage CALAIRE-EA project documentation and structure in Logseq.
 - [x] Consolidate ref/setup.md with standardization content
 - [x] Delete ref/update_setup.md (eliminated duplication)
 - [x] Update README.md to reference only ref/setup.md
+- [x] Add TODOs location guidelines to ref/setup.md
+- [x] Reorganize journals to move TODOs inside categories (2026_02_02, 2026_01_30)
 
 ## Critical Technical Context
 
@@ -34,21 +36,23 @@ Manage CALAIRE-EA project documentation and structure in Logseq.
 - Tags in docs/tags_project.csv mapped to journal categories for email-to-graph traceability.
 - **Documentation consolidated**: ref/setup.md now contains both initial setup AND standardization (sections 1-7).
 - **ref/update_setup.md eliminated** to avoid duplication.
+- **TODOs and #decision must be inside categories**: Updated ref/setup.md with explicit guidelines. All TODOs/decisions now belong to their thematic category.
 
 ## Files Modified This Session
 
 - `pages/templates.md` - Added journal-daily template
 - `AGENTS.md` - Added Content Development Guidelines section
 - `journals/2026_02_03.md` - Restructured with categories
-- `journals/2026_02_02.md` - Reorganized by categories
-- `journals/2026_01_30.md` - Marked historical versions, collapsed
+- `journals/2026_02_02.md` - Reorganized by categories; TODOs moved inside categories
+- `journals/2026_01_30.md` - Marked historical versions, collapsed; reorganized meeting/app blocks
 - `journals/2026_01_28.md` - Added standard header
 - `journals/2026_01_12.md` - Marked as #nota-historica
 - `journals/2026_01_11.md` - Marked as #nota-historica
 - `docs/tags_project.csv` - Added 4 new groups, subtags, and Categoria_Journal column
 - `pages/Prueba Piloto.md` - Updated with Universidad de Medellín confirmation
-- `ref/setup.md` - Consolidated with standardization content (renumbered sections 1-7)
+- `ref/setup.md` - Consolidated with standardization content; added TODOs location guidelines
 - `ref/update_setup.md` - DELETED (eliminated duplication)
+- `ref/update_setup2.md` - Created with TODOs location plan and implementation checklist
 - `README.md` - Updated to reflect standardization and reference only ref/setup.md
 - `logs/CURRENT_SESSION.md` - Session state updated
 - `logs/history/260203_1817_findings.md` - Standardization completion milestone
