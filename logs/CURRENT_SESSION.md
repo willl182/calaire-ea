@@ -18,6 +18,9 @@ Manage CALAIRE-EA project documentation and structure in Logseq.
 - [x] Homogenize existing journals (6 files)
 - [x] Update ref/setup.md with journal guidelines
 - [x] Enrich tags_project.csv with new categories and mapping
+- [x] Add TODOs location guidelines to ref/setup.md
+- [x] Reorganize journals to move TODOs inside categories (2026_02_02, 2026_01_30)
+- [x] Update README with TODOs location guideline
 - [x] Update README.md to reflect standardization
 - [x] Document README oversight in logs
 - [x] Consolidate ref/setup.md with standardization content
@@ -41,6 +44,27 @@ Manage CALAIRE-EA project documentation and structure in Logseq.
 ## Files Modified This Session
 
 - `pages/templates.md` - Added journal-daily template
+- `AGENTS.md` - Added Content Development Guidelines section
+- `journals/2026_02_03.md` - Restructured with categories
+- `journals/2026_02_02.md` - Reorganized by categories; TODOs moved inside categories
+- `journals/2026_01_30.md` - Marked historical versions, collapsed; reorganized meeting/app blocks
+- `journals/2026_01_28.md` - Added standard header
+- `journals/2026_01_12.md` - Marked as #nota-historica
+- `journals/2026_01_11.md` - Marked as #nota-historica
+- `docs/tags_project.csv` - Added 4 new groups, subtags, and Categoria_Journal column
+- `pages/Prueba Piloto.md` - Updated with Universidad de Medellín confirmation
+- `ref/setup.md` - Consolidated with standardization content; added TODOs location guidelines
+- `ref/update_setup.md` - DELETED (eliminated duplication)
+- `ref/update_setup2.md` - Created with TODOs location plan and implementation checklist
+- `README.md` - Updated to reflect standardization, reference only ref/setup.md, and TODOs location guideline
+- `logs/CURRENT_SESSION.md` - Session state updated
+- `logs/history/260203_1817_findings.md` - Standardization completion milestone
+- `logs/history/260203_1817_problems.md` - Process learnings from standardization
+- `logs/history/260203_1825_findings.md` - README update documentation
+- `logs/history/260203_1825_problems.md` - Error analysis: README omission
+- `logs/history/260203_1845_findings.md` - Documentation consolidation milestone
+- `logs/history/260203_1915_findings.md` - TODOs location clarification milestone
+- `logs/history/260203_1915_problems.md` - TODOs location analysis and learnings
 - `AGENTS.md` - Added Content Development Guidelines section
 - `journals/2026_02_03.md` - Restructured with categories
 - `journals/2026_02_02.md` - Reorganized by categories; TODOs moved inside categories
@@ -77,3 +101,5 @@ Manage CALAIRE-EA project documentation and structure in Logseq.
 4. `50616e1` - Consolidate documentation into ref/setup.md and eliminate duplication
 5. `fed284d` - Update CURRENT_SESSION with final commit list
 6. `2db1f31` - Document consolidation issue and resolution in problem log
+7. `7a0be41` - Clarify TODOs location in journals and reorganize blocks
+8. `dd06f10` - Update README with TODOs location guideline
