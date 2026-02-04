@@ -1,6 +1,6 @@
 # Session State: CALAIRE-EA Knowledge Graph
 
-**Last Updated**: 2026-02-03 19:15
+**Last Updated**: 2026-02-03 19:30
 
 ## Session Objective
 
@@ -21,6 +21,11 @@ Manage CALAIRE-EA project documentation and structure in Logseq.
 - [x] Add TODOs location guidelines to ref/setup.md
 - [x] Reorganize journals to move TODOs inside categories (2026_02_02, 2026_01_30)
 - [x] Update README with TODOs location guideline
+- [x] Create individual pages for laboratories (SIATA, Universidad de Medellín, Universidad Pontificia Bolivariana)
+- [x] Update Laboratorios.md MOC with template structure and status definitions
+- [x] Update ref/setup.md with laboratory pages structure documentation
+- [x] Update AGENTS.md with laboratory page creation instructions
+- [x] Update README.md with laboratory pages section
 - [x] Update README.md to reflect standardization
 - [x] Document README oversight in logs
 - [x] Consolidate ref/setup.md with standardization content
@@ -40,11 +45,12 @@ Manage CALAIRE-EA project documentation and structure in Logseq.
 - **Documentation consolidated**: ref/setup.md now contains both initial setup AND standardization (sections 1-7).
 - **ref/update_setup.md eliminated** to avoid duplication.
 - **TODOs and #decision must be inside categories**: Updated ref/setup.md with explicit guidelines. All TODOs/decisions now belong to their thematic category.
+- **Laboratory pages structure**: Each participating laboratory must have its own individual page with standard structure (participation by round, equipment inventory, status). MOC [[Laboratorios]] acts as centralized registry.
 
 ## Files Modified This Session
 
 - `pages/templates.md` - Added journal-daily template
-- `AGENTS.md` - Added Content Development Guidelines section
+- `AGENTS.md` - Added Content Development Guidelines section; added laboratory page creation instructions
 - `journals/2026_02_03.md` - Restructured with categories
 - `journals/2026_02_02.md` - Reorganized by categories; TODOs moved inside categories
 - `journals/2026_01_30.md` - Marked historical versions, collapsed; reorganized meeting/app blocks
@@ -53,10 +59,14 @@ Manage CALAIRE-EA project documentation and structure in Logseq.
 - `journals/2026_01_11.md` - Marked as #nota-historica
 - `docs/tags_project.csv` - Added 4 new groups, subtags, and Categoria_Journal column
 - `pages/Prueba Piloto.md` - Updated with Universidad de Medellín confirmation
-- `ref/setup.md` - Consolidated with standardization content; added TODOs location guidelines
+- `pages/Laboratorios.md` - Restructured as MOC with template and status definitions
+- `pages/SIATA.md` - Created individual laboratory page (candidate)
+- `pages/Universidad de Medellín.md` - Created individual laboratory page (confirmed Rondas 3-4)
+- `pages/Universidad Pontificia Bolivariana.md` - Created individual laboratory page (contacted)
+- `ref/setup.md` - Consolidated with standardization content; added TODOs location guidelines; added laboratory pages structure
 - `ref/update_setup.md` - DELETED (eliminated duplication)
-- `ref/update_setup2.md` - Created with TODOs location plan and implementation checklist
-- `README.md` - Updated to reflect standardization, reference only ref/setup.md, and TODOs location guideline
+- `ref/update_setup2.md` - DELETED (plan implemented in ref/setup.md)
+- `README.md` - Updated to reflect standardization, reference only ref/setup.md, TODOs location guideline, and laboratory pages section
 - `logs/CURRENT_SESSION.md` - Session state updated
 - `logs/history/260203_1817_findings.md` - Standardization completion milestone
 - `logs/history/260203_1817_problems.md` - Process learnings from standardization
@@ -65,22 +75,6 @@ Manage CALAIRE-EA project documentation and structure in Logseq.
 - `logs/history/260203_1845_findings.md` - Documentation consolidation milestone
 - `logs/history/260203_1915_findings.md` - TODOs location clarification milestone
 - `logs/history/260203_1915_problems.md` - TODOs location analysis and learnings
-- `AGENTS.md` - Added Content Development Guidelines section
-- `journals/2026_02_03.md` - Restructured with categories
-- `journals/2026_02_02.md` - Reorganized by categories; TODOs moved inside categories
-- `journals/2026_01_30.md` - Marked historical versions, collapsed; reorganized meeting/app blocks
-- `journals/2026_01_28.md` - Added standard header
-- `journals/2026_01_12.md` - Marked as #nota-historica
-- `journals/2026_01_11.md` - Marked as #nota-historica
-- `docs/tags_project.csv` - Added 4 new groups, subtags, and Categoria_Journal column
-- `pages/Prueba Piloto.md` - Updated with Universidad de Medellín confirmation
-- `ref/setup.md` - Consolidated with standardization content; added TODOs location guidelines
-- `ref/update_setup.md` - DELETED (eliminated duplication)
-- `ref/update_setup2.md` - Created with TODOs location plan and implementation checklist
-- `README.md` - Updated to reflect standardization and reference only ref/setup.md
-- `logs/CURRENT_SESSION.md` - Session state updated
-- `logs/history/260203_1817_findings.md` - Standardization completion milestone
-- `logs/history/260203_1817_problems.md` - Process learnings from standardization
 - `logs/history/260203_1825_findings.md` - README update documentation
 - `logs/history/260203_1825_problems.md` - Error analysis: README omission
 - `logs/history/260203_1845_findings.md` - Documentation consolidation milestone
@@ -103,3 +97,5 @@ Manage CALAIRE-EA project documentation and structure in Logseq.
 6. `2db1f31` - Document consolidation issue and resolution in problem log
 7. `7a0be41` - Clarify TODOs location in journals and reorganize blocks
 8. `dd06f10` - Update README with TODOs location guideline
+9. `9e3a549` - Update CURRENT_SESSION with README fix commit
+10. `ab6b9d1` - Remove ref/update_setup2.md (plan implemented) and clean up 2026_02_03.md formatting

@@ -60,6 +60,22 @@ El archivo `docs/tags_project.csv` define etiquetas para clasificar correos de G
 *   `[[Prueba Piloto]]`: Coordinación operativa de las rondas EA.
 *   `[[CALAIRE-APP]]`: Desarrollo del software estadístico.
 *   `[[QMS]]`: Gestión de calidad y normas ISO 17043/13528.
+*   `[[Laboratorios]]`: Registro de laboratorios participantes (MOC que lista todos los laboratorios con enlaces a sus páginas individuales).
+
+## Páginas de Laboratorios
+
+Cada laboratorio participante tiene su propia página individual con:
+*   Información de la institución y ubicación
+*   Estatus de participación por ronda (#confirmado, #contactado, #candidato)
+*   Inventario de equipos (CO, NOx, SO2, O3)
+*   Observaciones y documentación relevante
+
+Laboratorios actuales:
+*   `[[SIATA]]` (Sistema de Alerta Temprana)
+*   `[[Universidad de Medellín]]`
+*   `[[Universidad Pontificia Bolivariana]]`
+
+Para crear una nueva página de laboratorio, ver la estructura en `ref/setup.md` sección 2.5.
 
 ## Documentación Técnica
 

@@ -220,6 +220,12 @@ Key configurations:
 2. Navigate to the new page
 3. Apply template `reunion`
 
+### Create a laboratory page
+1. Create file in `/pages/` with format: `Nombre del Laboratorio.md`
+2. Use standard structure (see `ref/setup.md` section 2.5)
+3. Add to MOC `[[Laboratorios]]` under appropriate status section
+4. Update `[[Prueba Piloto]]` with lab links if applicable
+
 ---
 
 ## Git Workflow

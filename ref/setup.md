@@ -25,10 +25,53 @@ Se han creado las siguientes páginas en `/pages/` para centralizar la informaci
 | `CALAIRE-EA.md` | **MOC Principal** | Visión general, enlaces a fases, hitos, documentos maestros. |
 | `CALAIRE-APP.md` | **Aplicativo** | Gestión del desarrollo del software estadístico, repositorio, bugs, features. |
 | `Prueba Piloto.md` | **Ejecución** | Coordinación de las 4 rondas de marzo, logística de equipos, cronograma. |
-| `Laboratorios.md` | **Base de Datos** | Registro de laboratorios participantes. |
+| `Laboratorios.md` | **Base de Datos** | MOC que lista todos los laboratorios participantes con enlaces a páginas individuales. |
+| `SIATA.md` | **Laboratorio** | Página individual para Sistema de Alerta Temprana (candidato). |
+| `Universidad de Medellín.md` | **Laboratorio** | Página individual para Universidad de Medellín (confirmado Rondas 3-4). |
+| `Universidad Pontificia Bolivariana.md` | **Laboratorio** | Página individual para UPB (contactado, carta enviada). |
 | `QMS.md` | **Calidad** | Integración ISO 17043/13528, listado de documentos F-GCM-03. |
 | `Equipo.md` | **Personas** | Directorio del equipo (Carmen Elena, Jeniffer, David Esteban), roles. |
 | `templates.md` | **Sistema** | Archivo contenedor para todos los templates de Logseq. |
+
+### Estructura de Páginas de Laboratorios
+
+Cada laboratorio participante debe tener su propia página individual en `/pages/` con la siguiente estructura estándar:
+
+```
+- tags:: [[Laboratorio]]
+- # Nombre del Laboratorio
+  type:: [[Laboratorio]]
+  status:: #confirmado | #contactado | #candidato | #inactivo
+  institution:: Nombre de la institución
+  location:: Ciudad
+- ## Participación en Rondas EA
+    - [[Ronda X]]: #confirmado | #pendiente
+- ## Equipos
+    - CO: [[Analizador Modelo X]]
+    - NOx: [[Analizador Modelo Y]]
+    - SO2: [[Analizador Modelo Z]]
+    - O3: [[Analizador Modelo W]]
+- ## Observaciones
+    - 
+- ## Documentación
+    - 
+```
+
+**MOC `[[Laboratorios]]`**: Actúa como índice centralizado que lista todos los laboratorios con enlaces a sus páginas individuales, organizados por estatus:
+- **Laboratorios Confirmados**
+- **Laboratorios Contactados**
+- **Candidatos**
+
+**Estatus de Laboratorio:**
+
+| Status | Significado |
+|--------|-------------|
+| `#confirmado` | Ha confirmado participación explícita |
+| `#contactado` | Se ha enviado carta/invitación oficial |
+| `#candidato` | En lista de posibles participantes |
+| `#inactivo` | Participó anteriormente pero no en esta ronda |
+
+**Propósito:** Permite trazabilidad detallada por laboratorio, histórico de participación en rondas, y gestión de inventario de equipos.
 
 ## 3. Templates
 
