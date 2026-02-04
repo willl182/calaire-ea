@@ -75,9 +75,8 @@ Manage CALAIRE-EA project documentation and structure in Logseq.
 - `logs/history/260203_1845_findings.md` - Documentation consolidation milestone
 - `logs/history/260203_1915_findings.md` - TODOs location clarification milestone
 - `logs/history/260203_1915_problems.md` - TODOs location analysis and learnings
-- `logs/history/260203_1825_findings.md` - README update documentation
-- `logs/history/260203_1825_problems.md` - Error analysis: README omission
-- `logs/history/260203_1845_findings.md` - Documentation consolidation milestone
+- `logs/history/260203_1930_findings.md` - Laboratory pages implementation milestone
+- `logs/history/260203_1930_problems.md` - Laboratory pages implementation analysis
 
 ## Next Steps
 
@@ -86,6 +85,8 @@ Manage CALAIRE-EA project documentation and structure in Logseq.
 3. Use journal-daily template for new entries.
 4. Apply content development guidelines when processing user input.
 5. Maintain ref/setup.md as single source of truth for setup/standardization.
+6. Populate equipment inventory for laboratory pages (SIATA, UdeM, UPB).
+7. Create lab pages for new candidates as they are identified.
 
 ## Commits
 
@@ -99,3 +100,4 @@ Manage CALAIRE-EA project documentation and structure in Logseq.
 8. `dd06f10` - Update README with TODOs location guideline
 9. `9e3a549` - Update CURRENT_SESSION with README fix commit
 10. `ab6b9d1` - Remove ref/update_setup2.md (plan implemented) and clean up 2026_02_03.md formatting
+11. `724d053` - Create individual pages for laboratories and update documentation
