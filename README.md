@@ -32,6 +32,8 @@ Los journals diarios siguen una estructura estandarizada con 5 categorías para 
 | **SGC / Calidad**       | Auditorías, ISO 17043/13528, control documental            |
 | **Infraestructura**      | Instalaciones, TI, transporte de equipos                     |
 
+**Importante**: Los TODOs, DOING, DONE y #decision deben ubicarse **dentro de la categoría temática** correspondiente, no sueltos al final del journal. Esto mantiene contexto inmediato y evita duplicación.
+
 Uso: ejecutar `/template journal-daily` en el journal del día y eliminar secciones que no apliquen.
 
 ## Templates Disponibles
