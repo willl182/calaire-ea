@@ -1,0 +1,29 @@
+- tags:: [[MOC]], [[Categoría Journal]]
+- # Desarrollo Técnico
+  type:: [[Categoría Journal]]
+  description:: Centraliza desarrollo técnico: CALAIRE-APP, protocolos, calibración y capacitación.
+- ## Contenido Típico
+	- Requerimientos y bugs de CALAIRE-APP
+	- Validación estadística del aplicativo
+	- Repositorio de código
+	- Protocolos de ensayos de aptitud para CO, NOx, SO2, O3
+	- Metodologías estadísticas según ISO 13528
+	- Calibración de equipos y certificados metrológicos
+	- Capacitaciones técnicas para el equipo y participantes
+	- Notas técnicas de referencia
+	- Solicitudes de información técnica
+	- Documentación técnica: manuales, guías, especificaciones
+	- Talleres prácticos y ejercicios de simulación
+- ## Tags de Correo Asociados
+	- `[[[TECH] Desarrollo App]]`
+	- `[[[TECH] Calibración]]`
+	- `[[Referencia - Notas]]`
+	- `[[Referencia - Solicitud Info]]`
+	- `[[Referencia - Documentación]]`
+	- `[[[EVENTO] Capacitación]]`
+	- `[[Seguimiento - Entregable - Técnico]]`
+	- `[[Seguimiento - Entregable - Administrativo]]`
+- ## Ver También
+	- [[CALAIRE-EA]]
+	- [[CALAIRE-APP]]
+	- [[QMS]]

@@ -1,0 +1,42 @@
+- tags:: [[Equipo]], [[Calibración]]
+- # Calibrador de Gases T700
+- **Descripción General**
+	- Sistema generador de gases de referencia para calibración de analizadores atmosféricos.
+	- Tipo: Generador de mezclas dinámico.
+	- Marca: [Fabricante]
+	- Modelo: T700
+- **Especificaciones Técnicas**
+	- Gases generados: CO, NO, NO2, SO2, O3
+	- Rango de concentraciones: [rango especificado por fabricante]
+	- Incertidumbre de referencia: ±[valor] k=2
+	- Flujos disponibles: [rango]
+	- Puerto de salida: [número] puertos concurrentes
+- **Estado Actual**
+	- status:: #operativo | #en_calibracion | #en_mantenimiento
+	- Fecha de adquisición: 2026
+	- Última verificación: [fecha]
+	- Próxima calibración: [fecha]
+- **Documentación Técnica**
+	- [[Presentación T700]] - Diapositivas técnicas del equipo
+	- Manual de operación: [[Manual Operativo T700]]
+	- Especificaciones del fabricante: [[Datasheet T700]]
+- **Aplicación en CALAIRE-EA**
+	- Uso principal: Calibración multipunto de analizadores para rondas EA.
+	- Procedimiento: Referenciado en [[Protocolo de Calibración Multipunto]].
+	- Responsable técnico: [[Fabian Moreno]]
+- **Mantenimiento**
+	- Verificación periódica: [frecuencia]
+	- Cambio de filtros/absorbentes: [frecuencia]
+	- Calibración del generador: [frecuencia]
+- **Asignación por Ronda**
+	- [[Ronda 1]]: En uso para calibración pre-ronda
+	- [[Ronda 2]]: En uso para calibración pre-ronda
+	- [[Ronda 3]]: En uso para calibración pre-ronda
+	- [[Ronda 4]]: En uso para calibración pre-ronda
+	- [[Ronda 5]]: En uso para calibración pre-ronda
+- **Observaciones**
+	- Equipo nuevo adquirido para el proyecto 61134.
+	- Requiere capacitación del personal técnico antes del primer uso.
+- **Enlaces Relacionados**
+	- [[Equipos]] - MOC general de equipos
+	- [[Prueba Piloto]] - Planificación de uso por ronda

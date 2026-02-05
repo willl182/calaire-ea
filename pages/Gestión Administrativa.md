@@ -1,0 +1,31 @@
+- tags:: [[MOC]], [[Categoría Journal]]
+- # Gestión Administrativa
+  type:: [[Categoría Journal]]
+  description:: Centraliza gestión financiera, contratación y comunicaciones oficiales del proyecto.
+- ## Contenido Típico
+	- Propuestas de costos y presupuestos
+	- Cotizaciones de equipos
+	- Contratos y acuerdos de servicio
+	- Órdenes de compra
+	- Facturas y cobros
+	- Solicitudes de aprobación formal
+	- Decisiones importantes del proyecto
+	- Comunicaciones con stakeholders externos
+	- Anuncios formales y boletines
+- ## Tags de Correo Asociados
+	- `[[Finanzas - Cotización]]`
+	- `[[Finanzas - Cotización - Equipos]]`
+	- `[[Finanzas - Contratación]]`
+	- `[[Finanzas - Contratación - Servicio]]`
+	- `[[Finanzas - Factura/Cobro]]`
+	- `[[[ACCION] Aprobación]]`
+	- `[[[ACCION] Decisión]]`
+	- `[[Reunión - Externa]]`
+	- `[[Comunicado - Stakeholders]]`
+	- `[[CALENDAR]]`
+	- `[[Seguimiento - Entregable - Administrativo]]`
+	- `[[[EVENTO] Socialización]]`
+	- `[[[EVENTO] Congreso/Evento]]`
+- ## Ver También
+	- [[CALAIRE-EA]]
+	- [[QMS]]

@@ -10,6 +10,13 @@
 	- [[QMS]] - Gestión de calidad, ISO 17043, protocolos.
 	- [[Laboratorios]] - Registro de participantes.
 	- [[Equipo]] - Directorio y roles.
+	- [[Equipos]] - Inventario de equipos de medición y calibración.
+- **Categorías Temáticas (Journal)**
+	- [[Prueba Piloto]] - Coordinación operativa, rondas EA y logística.
+	- [[Gestión Administrativa]] - Gestión financiera, contratación y comunicaciones.
+	- [[Desarrollo Técnico]] - CALAIRE-APP, protocolos, calibración y capacitación.
+	- [[Infraestructura]] - TI, instalaciones y transporte de equipos.
+	- [[SGC / Calidad]] - Auditorías, ISO 17043/13528 y control documental.
 - **Fases del Proyecto**
 	- Fase I: Diseño (Completada)
 	- Fase II: Ejecución y Piloto (EN PROGRESO)

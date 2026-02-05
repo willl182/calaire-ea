@@ -265,6 +265,39 @@ On ANY task, the agent should:
 
 ---
 
+## Phase Workflow
+
+When working with plans in `logs/plans/` that have multiple phases (Fase 1, Fase 2, etc.), follow this workflow after completing each phase:
+
+### Per Phase Completion
+
+1. **Execute Phase Review:** Use subagent `revisor-fase` to review the implemented phase for errors, inconsistencies, and risks
+2. **Update Plan:** Incorporate findings from the reviewer into the plan file (`logs/plans/[slug].md`)
+3. **Save Session:** Use the `saver` skill to persist state and create findings record
+4. **Git Commit:** Commit changes with meaningful message
+5. **Git Push:** Push commits to remote repository
+
+### After All Phases Complete
+
+1. **Execute `/compact`:** Run the compact command to finalize the plan execution
+
+### Subagent: `revisor-fase`
+
+Use `task` with `subagent_type: "revisor-fase"` to execute phase reviews. The reviewer will:
+- Identify errors in syntax (indentation, properties, markdown)
+- Detect inconsistencies in links, tags, and references
+- Highlight risks in content structure or navigation
+- Provide structured feedback with severity tiers (Blocking, Required, Suggestions)
+
+**Example invocation:**
+```
+Task: Revisar Fase 3 - Sistema de Equipos
+Phase: Fase 3
+Context: Se crearon `pages/Equipos.md` y `pages/Calibrador T700.md`, se actualizó `pages/CALAIRE-EA.md`
+```
+
+---
+
 ## No Build/Test Commands
 
 This knowledge graph has no:

@@ -37,3 +37,13 @@
 - **Logística**
 	- Equipos a transportar: Analizadores CO, NOx, SO2, O3.
 	- Responsable transporte: TBD
+- ## Tags de Correo Asociados
+    - `[[Seguimiento - Entregable]]`
+    - `[[Seguimiento - Report]]`
+    - `[[Seguimiento - Riesgo/Problema]]`
+    - `[[Seguimiento - Entregable - Técnico]]`
+    - `[[[TECH] Ronda Piloto]]`
+    - `[[[TECH] Ronda - Confirmación Lab]]`
+    - `[[[TECH] Ronda - Equipos]]`
+    - `[[Reunión - Interna]]`
+    - `[[[EVENTO] Taller]]`

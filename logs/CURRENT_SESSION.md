@@ -1,104 +1,94 @@
 # Session State: CALAIRE-EA Knowledge Graph
 
-**Last Updated**: 2026-02-03 19:30
+**Last Updated**: 2026-02-05 01:48
 
 ## Session Objective
 
-Manage CALAIRE-EA project documentation and structure in Logseq.
+Implementar sistema de planes persistentes en logs/plans/ con nomenclatura sistemática y ciclo de vida, luego ejecutar el plan de categorías MOC, sistema de equipos e ingesta de correos 2026.
 
 ## Current State
 
-- [x] Create 'memoria_2025.md' document
-- [x] Update 'CALAIRE-EA.md' MOC
-- [x] Create pages for team members and rounds
-- [x] Update journal entries
-- [x] Standardize journal structure with categories
-- [x] Add 'journal-daily' template
-- [x] Update AGENTS.md with content development guidelines
-- [x] Homogenize existing journals (6 files)
-- [x] Update ref/setup.md with journal guidelines
-- [x] Enrich tags_project.csv with new categories and mapping
-- [x] Add TODOs location guidelines to ref/setup.md
-- [x] Reorganize journals to move TODOs inside categories (2026_02_02, 2026_01_30)
-- [x] Update README with TODOs location guideline
-- [x] Create individual pages for laboratories (SIATA, Universidad de Medellín, Universidad Pontificia Bolivariana)
-- [x] Update Laboratorios.md MOC with template structure and status definitions
-- [x] Update ref/setup.md with laboratory pages structure documentation
-- [x] Update AGENTS.md with laboratory page creation instructions
-- [x] Update README.md with laboratory pages section
-- [x] Update README.md to reflect standardization
-- [x] Document README oversight in logs
-- [x] Consolidate ref/setup.md with standardization content
-- [x] Delete ref/update_setup.md (eliminated duplication)
-- [x] Update README.md to reference only ref/setup.md
-- [x] Add TODOs location guidelines to ref/setup.md
-- [x] Reorganize journals to move TODOs inside categories (2026_02_02, 2026_01_30)
+- [x] Fase 1: Extensión de Skills (completada con mejoras de redacción)
+  - [x] 1.1 saver/SKILL.md
+  - [x] 1.2 continue/SKILL.md
+  - [x] 1.3 logs/plans/
+- [x] Fase 2: Sistema de Categorías (completada con revisión del subagente)
+  - [x] 2.1 tags_project.csv
+  - [x] 2.2-2.4 Crear MOCs (Gestión Administrativa, Desarrollo Técnico, Infraestructura)
+  - [x] 2.5-2.6 Verificar y actualizar MOCs existentes (CALAIRE-EA, Prueba Piloto, QMS)
+  - [x] Correcciones aplicadas según revisor:
+    - [x] Agregar `[[Prueba Piloto]]` y `[[SGC / Calidad]]` a CALAIRE-EA.md
+    - [x] Completar tags en Gestión Administrativa.md
+    - [x] Mover `[[[EVENTO] Taller]]` a Prueba Piloto.md
+    - [x] Corregir indentación con tabs (MOCs reescritos)
+  - [x] Revisión del subagente completada (7/7 checklist items)
+- [x] Fase 3: Sistema de Equipos (completada con revisión y correcciones del subagente)
+  - [x] 3.1 Crear MOC `pages/Equipos.md`
+  - [x] 3.2 Crear página técnica `pages/Calibrador T700.md`
+  - [x] 3.3 Agregar `[[Equipos]]` a `pages/CALAIRE-EA.md`
+  - [x] Correcciones aplicadas según revisor:
+    - [x] Convertir líneas sin prefijo `- ` a bloques en `pages/Equipos.md`
+    - [x] Cambiar indentación de espacios a tabs en `pages/Equipos.md`
+    - [x] Anidar bloque de template correctamente
+    - [x] Mover tabla de estatus dentro de bloque
+  - [x] Revisión del subagente completada (6/6 checklist items)
+- [ ] Fase 4: Ingesta de Correos
+  - [ ] 4.1-4.5
+- [ ] Fase 5: Documentación
+  - [ ] 5.1-5.4
 
 ## Critical Technical Context
 
 - Project is a Logseq knowledge graph.
 - No build/test commands.
 - Use strict markdown formatting compatible with Logseq (indentation with tabs, properties).
-- 'memoria_2025.md' contains the annual report.
-- Journals now follow standard categories: Prueba Piloto, Gestión Administrativa, Desarrollo Técnico, SGC / Calidad, Infraestructura.
-- Tags in docs/tags_project.csv mapped to journal categories for email-to-graph traceability.
-- **Documentation consolidated**: ref/setup.md now contains both initial setup AND standardization (sections 1-7).
-- **ref/update_setup.md eliminated** to avoid duplication.
-- **TODOs and #decision must be inside categories**: Updated ref/setup.md with explicit guidelines. All TODOs/decisions now belong to their thematic category.
-- **Laboratory pages structure**: Each participating laboratory must have its own individual page with standard structure (participation by round, equipment inventory, status). MOC [[Laboratorios]] acts as centralized registry.
+- Skills `saver` y `continue` extendidos para soportar planes persistentes en `logs/plans/`.
+- 5 categorías del journal ahora funcionan como MOCs navegables: `[[Gestión Administrativa]]`, `[[Desarrollo Técnico]]`, `[[Infraestructura]]`, `[[Prueba Piloto]]`, `[[SGC / Calidad]]`.
+- Columna `Categoria_Journal` en `docs/tags_project.csv` actualizada a formato `[[...]]`.
+- MOC de categorías creadas con estructura estándar y tags de correo asociados.
+- MOC de Equipos creado para gestión de inventario de equipos de medición y calibración.
+- Página técnica del Calibrador T700 creada con enlace a diapositivas.
+- **Workflow de fases establecido:** Revisión con `revisor-fase` → Actualizar plan → `saver` → Git commit → Git push → `/compact` al final.
 
 ## Files Modified This Session
 
-- `pages/templates.md` - Added journal-daily template
-- `AGENTS.md` - Added Content Development Guidelines section; added laboratory page creation instructions
-- `journals/2026_02_03.md` - Restructured with categories
-- `journals/2026_02_02.md` - Reorganized by categories; TODOs moved inside categories
-- `journals/2026_01_30.md` - Marked historical versions, collapsed; reorganized meeting/app blocks
-- `journals/2026_01_28.md` - Added standard header
-- `journals/2026_01_12.md` - Marked as #nota-historica
-- `journals/2026_01_11.md` - Marked as #nota-historica
-- `docs/tags_project.csv` - Added 4 new groups, subtags, and Categoria_Journal column
-- `pages/Prueba Piloto.md` - Updated with Universidad de Medellín confirmation
-- `pages/Laboratorios.md` - Restructured as MOC with template and status definitions
-- `pages/SIATA.md` - Created individual laboratory page (candidate)
-- `pages/Universidad de Medellín.md` - Created individual laboratory page (confirmed Rondas 3-4)
-- `pages/Universidad Pontificia Bolivariana.md` - Created individual laboratory page (contacted)
-- `ref/setup.md` - Consolidated with standardization content; added TODOs location guidelines; added laboratory pages structure
-- `ref/update_setup.md` - DELETED (eliminated duplication)
-- `ref/update_setup2.md` - DELETED (plan implemented in ref/setup.md)
-- `README.md` - Updated to reflect standardization, reference only ref/setup.md, TODOs location guideline, and laboratory pages section
-- `logs/CURRENT_SESSION.md` - Session state updated
-- `logs/history/260203_1817_findings.md` - Standardization completion milestone
-- `logs/history/260203_1817_problems.md` - Process learnings from standardization
-- `logs/history/260203_1825_findings.md` - README update documentation
-- `logs/history/260203_1825_problems.md` - Error analysis: README omission
-- `logs/history/260203_1845_findings.md` - Documentation consolidation milestone
-- `logs/history/260203_1915_findings.md` - TODOs location clarification milestone
-- `logs/history/260203_1915_problems.md` - TODOs location analysis and learnings
-- `logs/history/260203_1930_findings.md` - Laboratory pages implementation milestone
-- `logs/history/260203_1930_problems.md` - Laboratory pages implementation analysis
+### Skills
+- `~/.config/opencode/skills/saver/SKILL.md` - Agregado soporte para plans (ítem 4 en File Structure, ítem 4 en When to Use, mkdir -p logs/plans, Step 4C con template de planes)
+- `~/.config/opencode/skills/continue/SKILL.md` - Agregado verificación de plans en Step 3 y Step 4
+
+### AGENTS.md
+- `AGENTS.md` - Agregada sección "Phase Workflow" con flujo de trabajo por fase
+
+### CSV de Tags
+- `docs/tags_project.csv` - Columna `Categoria_Journal` actualizada con formato `[[...]]`
+
+### Páginas de Categorías MOCs (5 nuevas/actualizadas)
+- `pages/Gestión Administrativa.md` - MOC creado para gestión financiera, contratación y comunicaciones
+- `pages/Desarrollo Técnico.md` - MOC creado para CALAIRE-APP, protocolos, calibración y capacitación
+- `pages/Infraestructura.md` - MOC creado para TI, instalaciones y transporte de equipos
+- `pages/Prueba Piloto.md` - Verificado (ya existe con estructura MOC)
+- `pages/QMS.md` - Verificado (ya existe como SGC/Calidad)
+
+### Páginas de Equipos (2 nuevas)
+- `pages/Equipos.md` - MOC creado para inventario de equipos de medición y calibración (corregido según revisor)
+- `pages/Calibrador T700.md` - Página técnica del calibrador nuevo con enlace a diapositivas
+
+### Página Principal
+- `pages/CALAIRE-EA.md` - Agregada sección "Categorías Temáticas (Journal)" y MOC `[[Equipos]]` en principales
+
+### Plan
+- `logs/plans/260205_0053_plan_extension-skills-categorias-correos.md` - Creado y actualizado con progreso y resultados de revisión
+
+### Historial de Findings
+- `logs/history/260205_0133_findings.md` - Fase 2: Categorías como MOCs implementadas
+- `logs/history/260205_0147_findings.md` - Fase 3: Sistema de Equipos implementado (pendiente actualización con correcciones)
 
 ## Next Steps
 
-1. Continue populating content for Pilot Round.
-2. Monitor tasks in daily journals.
-3. Use journal-daily template for new entries.
-4. Apply content development guidelines when processing user input.
-5. Maintain ref/setup.md as single source of truth for setup/standardization.
-6. Populate equipment inventory for laboratory pages (SIATA, UdeM, UPB).
-7. Create lab pages for new candidates as they are identified.
+1. Continuar con Fase 4: Ingesta de Correos
+2. Continuar con Fase 5: Documentación
+3. Ejecutar `/compact` al finalizar todas las fases
 
 ## Commits
 
-1. `6dcd4bf` - Standardize journals, templates, and email tags
-2. `7c3aeee` - Update README to reflect standardization and document oversight
-3. `a72d747` - Update CURRENT_SESSION with README fix and final session state
-4. `50616e1` - Consolidate documentation into ref/setup.md and eliminate duplication
-5. `fed284d` - Update CURRENT_SESSION with final commit list
-6. `2db1f31` - Document consolidation issue and resolution in problem log
-7. `7a0be41` - Clarify TODOs location in journals and reorganize blocks
-8. `dd06f10` - Update README with TODOs location guideline
-9. `9e3a549` - Update CURRENT_SESSION with README fix commit
-10. `ab6b9d1` - Remove ref/update_setup2.md (plan implemented) and clean up 2026_02_03.md formatting
-11. `724d053` - Create individual pages for laboratories and update documentation
-12. `f51aed1` - Create logs for laboratory pages implementation
+- Por hacer al final del plan (únicamente cuando todas las fases estén completadas y verificadas)
