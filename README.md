@@ -53,6 +53,7 @@ El archivo `docs/tags_project.csv` define etiquetas para clasificar correos de G
 *   10 grupos de clasificación
 *   29 etiquetas totales (incluyendo subtags para granularidad)
 *   Columna `Categoria_Journal` para trazabilidad correo ↔ grafo
+*   Regla uno a uno: cada etiqueta corresponde a una sola categoría del journal
 
 ## MOCs Principales (Puntos de Entrada)
 
@@ -61,6 +62,17 @@ El archivo `docs/tags_project.csv` define etiquetas para clasificar correos de G
 *   `[[CALAIRE-APP]]`: Desarrollo del software estadístico.
 *   `[[QMS]]`: Gestión de calidad y normas ISO 17043/13528.
 *   `[[Laboratorios]]`: Registro de laboratorios participantes (MOC que lista todos los laboratorios con enlaces a sus páginas individuales).
+*   `[[Equipos]]`: Inventario de equipos de medición y calibración.
+
+## Categorías Temáticas (Journal) como MOCs
+
+Las categorías estándar del journal funcionan como páginas MOC para navegación temática:
+
+*   `[[Gestión Administrativa]]`
+*   `[[Desarrollo Técnico]]`
+*   `[[Infraestructura]]`
+*   `[[Prueba Piloto]]`
+*   `[[SGC / Calidad]]` (referenciada en `pages/QMS.md`)
 
 ## Páginas de Laboratorios
 

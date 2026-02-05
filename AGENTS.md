@@ -139,6 +139,7 @@ Available templates to insert via `/template` command in Logseq:
 | `[[QMS]]`          | Quality management, ISO 17043/13528        |
 | `[[Laboratorios]]` | Participant laboratory registry            |
 | `[[Equipo]]`       | Team directory and roles                   |
+| `[[Equipos]]`      | Equipment inventory and calibration assets |
 
 ---
 
@@ -222,9 +223,15 @@ Key configurations:
 
 ### Create a laboratory page
 1. Create file in `/pages/` with format: `Nombre del Laboratorio.md`
-2. Use standard structure (see `ref/setup.md` section 2.5)
+2. Use standard structure (see `ref/setup.md` section "Estructura de Páginas de Laboratorios")
 3. Add to MOC `[[Laboratorios]]` under appropriate status section
 4. Update `[[Prueba Piloto]]` with lab links if applicable
+
+### Create an equipment page
+1. Create file in `/pages/` with format: `Nombre del Equipo.md`
+2. Use the standard structure from `pages/Equipos.md` (Plantilla para Nuevos Equipos)
+3. Add the equipment link in `pages/Equipos.md` under the correct category
+4. Link to `[[Prueba Piloto]]` and `[[Laboratorios]]` when it impacts logistics or ownership
 
 ---
 
@@ -276,10 +283,6 @@ When working with plans in `logs/plans/` that have multiple phases (Fase 1, Fase
 3. **Save Session:** Use the `saver` skill to persist state and create findings record
 4. **Git Commit:** Commit changes with meaningful message
 5. **Git Push:** Push commits to remote repository
-
-### After All Phases Complete
-
-1. **Execute `/compact`:** Run the compact command to finalize the plan execution
 
 ### Subagent: `revisor-fase`
 

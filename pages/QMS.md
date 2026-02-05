@@ -1,5 +1,6 @@
 - tags:: [[MOC]], [[Quality]]
 - # Sistema de Gestión de Calidad (QMS)
+	alias:: [[SGC / Calidad]]
 - **Estándares**
 	- [[ISO 17043]] - Requisitos generales para EA.
 	- [[ISO 13528]] - Métodos estadísticos.

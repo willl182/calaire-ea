@@ -1,8 +1,8 @@
 # Plan: Extension Skills + Categorías + Equipos + Correos
 
 **Created**: 2026-02-05 00:53
-**Updated**: 2026-02-05 02:06
-**Status**: in_progress
+**Updated**: 2026-02-05 02:26
+**Status**: completed
 **Slug**: `extension-skills-categorias-correos`
 
 ---
@@ -195,6 +195,27 @@ Extender los skills `saver` y `continue` para soportar planes persistentes, lueg
 - [x] #236 con `category:: [[Prueba Piloto]]`.
 - [x] Redacción profesional en español (sin copia literal del CSV).
 
+---
+
+## Resultados de Revisión (Subagente) - Fase 5
+
+**Hallazgos críticos**: Ninguno.
+
+**Hallazgos importantes** (corregidos):
+- `pages/QMS.md` sin alias explícito para `[[SGC / Calidad]]`: corregido con `alias:: [[SGC / Calidad]]`.
+- Referencia a sección inexistente en `AGENTS.md`: corregido para apuntar al encabezado real en `ref/setup.md`.
+
+**Hallazgos menores** (corregidos):
+- `AGENTS.md` no listaba `[[Equipos]]` en MOCs de entrada: corregido.
+
+**Riesgos**:
+- Riesgo de doble página `[[QMS]]`/`[[SGC / Calidad]]` mitigado con alias en `pages/QMS.md`.
+
+**Checklist de verificación del revisor - Fase 5**:
+- [x] Alias definido para `[[SGC / Calidad]]`.
+- [x] `AGENTS.md` lista MOCs actuales, incluyendo `[[Equipos]]`.
+- [x] Referencias a secciones en `ref/setup.md` apuntan a títulos reales.
+
 - [x] Fase 3: Sistema de Equipos
    - [x] 3.1 Crear MOC `pages/Equipos.md`
    - [x] 3.2 Crear página técnica `pages/Calibrador T700.md`
@@ -205,8 +226,11 @@ Extender los skills `saver` y `continue` para soportar planes persistentes, lueg
   - [x] 4.3 `journals/2026_02_02.md` (#233)
   - [x] 4.4 `journals/2026_02_03.md` (#234, #235, #236)
   - [x] 4.5 `journals/2026_02_04.md` (#237)
-- [ ] Fase 5: Documentación
-   - [ ] 5.1-5.4
+- [x] Fase 5: Documentación
+   - [x] 5.1 `ref/setup.md`
+   - [x] 5.2 `AGENTS.md`
+   - [x] 5.3 `README.md`
+   - [x] 5.4 `logs/CURRENT_SESSION.md`
 
 ---
 
@@ -219,7 +243,6 @@ Extender los skills `saver` y `continue` para soportar planes persistentes, lueg
   - [x] Saver ejecutado
   - [x] Git commit (commit hash: 6db19ad - agrupado con Fase 3)
   - [x] Git push (main -> main)
-  - [x] /compact ejecutado (Fase 1 compactada)
 
 - [x] Fase 2: Sistema de Categorías
   - [x] Implementación completada
@@ -228,7 +251,6 @@ Extender los skills `saver` y `continue` para soportar planes persistentes, lueg
   - [x] Saver ejecutado
   - [x] Git commit (commit hash: 6db19ad - agrupado con Fase 3)
   - [x] Git push (main -> main)
-  - [x] /compact ejecutado (Fase 2 compactada)
 
 - [x] Fase 3: Sistema de Equipos
   - [x] Implementación completada
@@ -237,7 +259,6 @@ Extender los skills `saver` y `continue` para soportar planes persistentes, lueg
   - [x] Saver ejecutado
   - [x] Git commit (commit hash: 6db19ad)
   - [x] Git push (main -> main)
-  - [x] /compact ejecutado (Fase 3 compactada)
 
 - [x] Fase 4: Ingesta de Correos
   - [x] Implementación completada
@@ -246,4 +267,11 @@ Extender los skills `saver` y `continue` para soportar planes persistentes, lueg
   - [x] Saver ejecutado
   - [x] Git commit
   - [x] Git push
-  - [x] /compact ejecutado (Fase 4 compactada)
+
+- [x] Fase 5: Documentación
+  - [x] Implementación completada
+  - [x] Revisión del subagente: 4/4 checklist completado
+  - [x] Plan actualizado con hallazgos del revisor
+  - [x] Saver ejecutado
+  - [x] Git commit
+  - [x] Git push

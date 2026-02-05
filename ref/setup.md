@@ -33,6 +33,31 @@ Se han creado las siguientes páginas en `/pages/` para centralizar la informaci
 | `Equipo.md` | **Personas** | Directorio del equipo (Carmen Elena, Jeniffer, David Esteban), roles. |
 | `templates.md` | **Sistema** | Archivo contenedor para todos los templates de Logseq. |
 
+### Categorías Temáticas (Journal) como MOCs
+
+Las 5 categorías estándar del journal también funcionan como páginas MOC navegables para organizar el conocimiento por tema. Estas páginas consolidan etiquetas de correo y referencias clave:
+
+- `pages/Gestión Administrativa.md`
+- `pages/Desarrollo Técnico.md`
+- `pages/Infraestructura.md`
+- `pages/Prueba Piloto.md`
+- `pages/QMS.md` (alias `[[SGC / Calidad]]` en journals)
+
+Estas categorías están enlazadas desde `pages/CALAIRE-EA.md` en la sección “Categorías Temáticas (Journal)”.
+
+### Sistema de Equipos
+
+Se creó un MOC de inventario para equipos de medición y calibración:
+
+- `pages/Equipos.md`: índice central de analizadores y calibradores usados en las rondas.
+- `pages/Calibrador T700.md`: página técnica de referencia como ejemplo de equipo individual.
+
+Para agregar un nuevo equipo:
+
+1. Crear una página individual en `/pages/` siguiendo la plantilla incluida en `pages/Equipos.md`.
+2. Añadir el enlace del equipo en la sección correspondiente de `pages/Equipos.md` (Medición o Calibración).
+3. Vincularlo con `[[Prueba Piloto]]` y `[[Laboratorios]]` si aplica.
+
 ### Estructura de Páginas de Laboratorios
 
 Cada laboratorio participante debe tener su propia página individual en `/pages/` con la siguiente estructura estándar:
@@ -120,6 +145,7 @@ Archivo de referencia: `docs/tags_project.csv`
 - **10 grupos de clasificación** (Acción Requerida, Gestión Financiera, Seguimiento y Entregas, Comunicaciones, Referencia, Operación Técnica, Calidad/SGC, Infraestructura, Actividades Transversales)
 - **29 etiquetas totales** (incluyendo subtags para granularidad)
 - **Columna `Categoria_Journal`**: mapeo explícito entre etiqueta de correo y categoría del journal
+- **Regla de uno a uno**: cada etiqueta de correo debe mapearse a una sola categoría de journal para clasificar con precisión
 
 ### Mapeo Recomendado
 
@@ -130,6 +156,11 @@ Archivo de referencia: `docs/tags_project.csv`
 | Desarrollo Técnico | `[TECH] Desarrollo App`, `[TECH] Calibración`, `[EVENTO] Capacitacion` |
 | SGC / Calidad | `[SGC] *` |
 | Infraestructura | `[INFRA] *` |
+
+### Regla de Clasificación
+
+- Un correo debe tener **una etiqueta primaria** y, por tanto, **una categoría de journal** asociada.
+- Evitar asignaciones múltiples a distintas categorías para mantener trazabilidad y consultas consistentes.
 
 ### Propósito
 
