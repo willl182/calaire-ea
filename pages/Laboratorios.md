@@ -7,6 +7,7 @@
 - ## Laboratorios Contactados
 - ## Candidatos
     - [[SIATA]]
+    - [[Politécnico Colombiano Jaime Isaza Cadavid]]
 - ## Plantilla para Nuevos Laboratorios
 
 Cada laboratorio debe tener su propia página individual con la siguiente estructura:
