@@ -107,8 +107,8 @@ Registrar noticias del día (Gelima/UPB confirma Ronda 5, SIATA pendiente confir
 - [x] Fase 3: Gestión Contacto Politécnico Isaza Cadavid completada
 - [x] Fase 4: Documentación Roles y Suplencia iniciada
 - [x] Fase 4: Documentación Roles y Suplencia completada
-- [ ] Fase 5: Actualización Estado Sesión iniciada
-- [ ] Fase 5: Actualización Estado Sesión completada
+- [x] Fase 5: Actualización Estado Sesión iniciada
+- [x] Fase 5: Actualización Estado Sesión completada
 - [ ] Placeholder: Ajustes CALAIRE-APP (pendiente info usuario sobre César)
 
 ---
