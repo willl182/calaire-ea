@@ -15,6 +15,9 @@
 		- role:: Profesional infraestructura
 		- focus:: Compras de equipos, soporte de infraestructura.
 - **Tecnico**
-	- [[Fabian Moreno]]
-		- role:: Tecnico instrumental especializado
+	- Nuevo contratado - pendiente (técnico principal)
+		- role:: Tecnico instrumental principal
 		- focus:: Pruebas tecnicas, calibracion, operacion de equipos.
+	- [[Fabian Moreno]]
+		- role:: Tecnico instrumental especializado (backup tecnico)
+		- focus:: Pruebas tecnicas, calibracion, operacion de equipos. Rol de suplencia en caso de contingencias.
