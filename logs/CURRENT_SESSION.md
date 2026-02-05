@@ -1,6 +1,6 @@
 # Session State: CALAIRE-EA Knowledge Graph
 
-**Last Updated**: 2026-02-05 01:48
+**Last Updated**: 2026-02-05 02:07
 
 ## Session Objective
 
@@ -32,8 +32,12 @@ Implementar sistema de planes persistentes en logs/plans/ con nomenclatura siste
     - [x] Anidar bloque de template correctamente
     - [x] Mover tabla de estatus dentro de bloque
   - [x] Revisión del subagente completada (6/6 checklist items)
-- [ ] Fase 4: Ingesta de Correos
-  - [ ] 4.1-4.5
+- [x] Fase 4: Ingesta de Correos (completada con revisión del subagente)
+  - [x] 4.1 `journals/2026_01_29.md` (#229)
+  - [x] 4.2 `journals/2026_01_30.md` (#231, #232)
+  - [x] 4.3 `journals/2026_02_02.md` (#233)
+  - [x] 4.4 `journals/2026_02_03.md` (#234, #235, #236)
+  - [x] 4.5 `journals/2026_02_04.md` (#237)
 - [ ] Fase 5: Documentación
   - [ ] 5.1-5.4
 
@@ -48,7 +52,7 @@ Implementar sistema de planes persistentes en logs/plans/ con nomenclatura siste
 - MOC de categorías creadas con estructura estándar y tags de correo asociados.
 - MOC de Equipos creado para gestión de inventario de equipos de medición y calibración.
 - Página técnica del Calibrador T700 creada con enlace a diapositivas.
-- **Workflow de fases establecido:** Revisión con `revisor-fase` → Actualizar plan → `saver` → Git commit → Git push → `/compact` al final.
+- **Workflow de fases establecido:** Revisión con `revisor-fase` → Actualizar plan → `saver` → Git commit → Git push → `/compact` después de cada fase.
 
 ## Files Modified This Session
 
@@ -77,17 +81,24 @@ Implementar sistema de planes persistentes en logs/plans/ con nomenclatura siste
 - `pages/CALAIRE-EA.md` - Agregada sección "Categorías Temáticas (Journal)" y MOC `[[Equipos]]` en principales
 
 ### Plan
-- `logs/plans/260205_0053_plan_extension-skills-categorias-correos.md` - Creado y actualizado con progreso y resultados de revisión
+- `logs/plans/260205_0053_plan_extension-skills-categorias-correos.md` - Creado y actualizado con progreso, revisión y Fase 4 completada
+
+### Journals (Fase 4)
+- `journals/2026_01_29.md` - Nuevo: funciones contrato Wilson 2026
+- `journals/2026_01_30.md` - Actualizado: contratación Wilson y documentación T700U
+- `journals/2026_02_02.md` - Actualizado: perfil contractual Wilson 2026
+- `journals/2026_02_03.md` - Actualizado: cuentas pendientes y confirmación UdeM
+- `journals/2026_02_04.md` - Nuevo: revisión estadística CALAIRE-APP
 
 ### Historial de Findings
 - `logs/history/260205_0133_findings.md` - Fase 2: Categorías como MOCs implementadas
-- `logs/history/260205_0147_findings.md` - Fase 3: Sistema de Equipos implementado (pendiente actualización con correcciones)
+- `logs/history/260205_0148_findings.md` - Fase 3: Sistema de Equipos implementado
+- `logs/history/260205_0207_findings.md` - Fase 4: Ingesta de Correos implementada
 
 ## Next Steps
 
-1. Continuar con Fase 4: Ingesta de Correos
-2. Continuar con Fase 5: Documentación
-3. Ejecutar `/compact` al finalizar todas las fases
+1. Continuar con Fase 5: Documentación
+2. Ejecutar `/compact` después de Git push en cada fase
 
 ## Commits
 
