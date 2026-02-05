@@ -233,6 +233,12 @@ Key configurations:
 3. Add the equipment link in `pages/Equipos.md` under the correct category
 4. Link to `[[Prueba Piloto]]` and `[[Laboratorios]]` when it impacts logistics or ownership
 
+### Create a work plan
+1. Get timestamp: `date +"%y%m%d_%H%M"`
+2. Create slug from topic (kebab-case, 5-7 words max)
+3. Create file: `logs/plans/[TIMESTAMP]_plan_[slug].md`
+4. Use structure from "Plan Creation Workflow" section
+
 ---
 
 ## Git Workflow
@@ -255,6 +261,7 @@ This graph uses a memory system via `logs/` directory to persist context between
 | `logs/CURRENT_SESSION.md`              | Live session state (mutable)         |
 | `logs/history/YYMMDD_HHMM_findings.md` | Technical discoveries, milestones    |
 | `logs/history/YYMMDD_HHMM_problems.md` | Blockers and troubleshooting records |
+| `logs/plans/YYMMDD_HHMM_plan_[slug].md` | Multi-phase work plans with lifecycle tracking |
 
 ### Skills
 
@@ -269,12 +276,82 @@ On ANY task, the agent should:
 1. Check if `logs/CURRENT_SESSION.md` exists
 2. If exists, read it immediately before proceeding
 3. Check `logs/history/` for recent `_problems.md` files (priority blockers)
+4. Check `logs/plans/` for active plans (status: approved or in_progress)
+
+---
+
+## Plan Creation Workflow
+
+When the user requests planning or structuring multi-phase work (ej: "planificar categorización", "crear sistema de equipos", "migrar estructura"):
+
+### Plan File Creation
+
+1. **Generate timestamp:** `date +"%y%m%d_%H%M"`
+2. **Create slug:** kebab-case, 5-7 words max (ej: `categorizacion-correos`, `sistema-equipos`)
+3. **Create file:** `logs/plans/[TIMESTAMP]_plan_[slug].md`
+
+### Plan Structure
+
+```markdown
+# Plan: [Título Descriptivo]
+
+**Created**: YYYY-MM-DD HH:MM
+**Updated**: YYYY-MM-DD HH:MM
+**Status**: draft | approved | in_progress | completed | cancelled
+**Slug**: [slug-corto]
+
+---
+
+## Objetivo
+
+[Descripción concisa del objetivo del plan]
+
+---
+
+## Fases
+
+### Fase 1: [Nombre de la fase]
+
+**Objetivo:** [Descripción del objetivo de esta fase]
+
+| # | Archivo | Acción | Descripción |
+|---|---------|--------|-------------|
+| 1.1 | path/file.md | Crear/Modificar/Verificar | Notas |
+
+### Fase 2: [Nombre de la fase]
+
+...
+
+---
+
+## Log de Ejecución
+
+- [ ] Fase 1 iniciada
+- [ ] Fase 1 completada
+- [ ] Fase 2 iniciada
+- [ ] Fase 2 completada
+```
+
+### Lifecycle Status
+
+- `draft`: Plan created, not yet reviewed/approved
+- `approved`: Plan reviewed, ready for execution
+- `in_progress`: Plan is being executed
+- `completed`: All phases completed successfully
+- `cancelled`: Plan abandoned (document reason in log)
+
+### Plan Update Rules
+
+- Update `Updated` field whenever plan changes
+- Update `Status` when transitioning between lifecycle stages
+- Add checkboxes to Log de Ejecución as phases progress
+- Add review findings from `revisor-fase` after each phase
 
 ---
 
 ## Phase Workflow
 
-When working with plans in `logs/plans/` that have multiple phases (Fase 1, Fase 2, etc.), follow this workflow after completing each phase:
+When working with plans in `logs/plans/` that have multiple phases (Fase 1, Fase 2, etc.), follow this workflow after completing each phase. See "Plan Creation Workflow" for how to create and structure plans.
 
 ### Per Phase Completion
 
