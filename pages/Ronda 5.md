@@ -10,5 +10,7 @@
 	- Lunes: recoleccion de equipos.
 - **Estado**
 	- status:: planificada
+- **Laboratorios Confirmados**
+    - [[Universidad Pontificia Bolivariana]]
 - **Referencias**
 	- [[Prueba Piloto]]

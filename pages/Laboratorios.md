@@ -3,8 +3,8 @@
 - Este MOC centraliza el registro de todos los laboratorios participantes en las rondas de Ensayo de Aptitud del proyecto CALAIRE-EA.
 - ## Laboratorios Confirmados
     - [[Universidad de Medellín]]
-- ## Laboratorios Contactados
     - [[Universidad Pontificia Bolivariana]]
+- ## Laboratorios Contactados
 - ## Candidatos
     - [[SIATA]]
 - ## Plantilla para Nuevos Laboratorios
@@ -15,15 +15,15 @@ Cada laboratorio debe tener su propia página individual con la siguiente estruc
 - tags:: [[Laboratorio]]
 - # Nombre del Laboratorio
   type:: [[Laboratorio]]
-  status:: #confirmado | #contactado | #candidato | #inactivo
+  status:: confirmed | contacted | candidate | inactive
   institution:: Nombre de la institución
   location:: Ciudad
 - ## Participación en Rondas EA
-    - [[Ronda 1]]: #confirmado | #pendiente
-    - [[Ronda 2]]: #confirmado | #pendiente
-    - [[Ronda 3]]: #confirmado | #pendiente
-    - [[Ronda 4]]: #confirmado | #pendiente
-    - [[Ronda 5]]: #confirmado | #pendiente
+    - [[Ronda 1]]: confirmed | pending
+    - [[Ronda 2]]: confirmed | pending
+    - [[Ronda 3]]: confirmed | pending
+    - [[Ronda 4]]: confirmed | pending
+    - [[Ronda 5]]: confirmed | pending
 - ## Equipos
     - CO: [[Analizador Modelo X]]
     - NOx: [[Analizador Modelo Y]]
@@ -39,10 +39,10 @@ Cada laboratorio debe tener su propia página individual con la siguiente estruc
 
 | Status | Significado |
 |--------|-------------|
-| `#confirmado` | Ha confirmado participación explícita |
-| `#contactado` | Se ha enviado carta/invitación oficial |
-| `#candidato` | En lista de posibles participantes |
-| `#inactivo` | Participó anteriormente pero no en esta ronda |
+| `confirmed` | Ha confirmado participación explícita |
+| `contacted` | Se ha enviado carta/invitación oficial |
+| `candidate` | En lista de posibles participantes |
+| `inactive` | Participó anteriormente pero no en esta ronda |
 
 ## Trazabilidad
 

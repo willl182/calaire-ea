@@ -32,8 +32,9 @@
 	- [[Ronda 4]] (Mar 25-30) - Universidad de Medellín confirmada
 	- [[Ronda 5]] (Apr 8-13)
 - **Confirmaciones de Laboratorios**
-    - [[Universidad Pontificia Bolivariana]] :: Carta enviada
+    - [[Universidad Pontificia Bolivariana]] :: Confirmada para Ronda 5
     - [[Universidad de Medellín]] :: Confirmada para Rondas 3 y 4
+    - [[SIATA]] :: Pendiente confirmación (semanas 3-4 febrero)
 - **Logística**
 	- Equipos a transportar: Analizadores CO, NOx, SO2, O3.
 	- Responsable transporte: TBD

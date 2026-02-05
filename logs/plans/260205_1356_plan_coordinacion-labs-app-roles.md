@@ -101,8 +101,8 @@ Registrar noticias del día (Gelima/UPB confirma Ronda 5, SIATA pendiente confir
 
 - [x] Fase 1: Registro de Noticias del Día iniciada
 - [x] Fase 1: Registro de Noticias del Día completada
-- [ ] Fase 2: Actualización Confirmaciones Laboratorios iniciada
-- [ ] Fase 2: Actualización Confirmaciones Laboratorios completada
+- [x] Fase 2: Actualización Confirmaciones Laboratorios iniciada
+- [x] Fase 2: Actualización Confirmaciones Laboratorios completada
 - [ ] Fase 3: Gestión Contacto Politécnico Isaza Cadavid iniciada
 - [ ] Fase 3: Gestión Contacto Politécnico Isaza Cadavid completada
 - [ ] Fase 4: Documentación Roles y Suplencia iniciada
@@ -110,6 +110,35 @@ Registrar noticias del día (Gelima/UPB confirma Ronda 5, SIATA pendiente confir
 - [ ] Fase 5: Actualización Estado Sesión iniciada
 - [ ] Fase 5: Actualización Estado Sesión completada
 - [ ] Placeholder: Ajustes CALAIRE-APP (pendiente info usuario sobre César)
+
+---
+
+## Resultados de Revisión (Subagente) - Fase 2
+
+**Hallazgos críticos:** Ninguno.
+
+**Hallazgos importantes** (corregidos):
+- Inconsistencia de estados en "Participación en Rondas EA": uso mixto de `confirmed` y `#pendiente` en UPB y SIATA. Corregido a `pending` (sin #).
+- Contradicción en SIATA: "Disponibilidad confirmada" vs `status:: candidate`. Corregido nota para aclarar disponibilidad logística vs confirmación formal.
+- Plantilla y tabla en Laboratorios.md usaban `#confirmado/#candidato`. Corregido a `confirmed/candidate/inactive`.
+
+**Hallazgos menores:** Ninguno después de correcciones.
+
+**Riesgos mitigados:**
+- Queries de estado por ronda ahora consistentes con convención (inglés sin #).
+- Interpretación clara entre disponibilidad logística y confirmación formal en SIATA.
+- Plantilla de Laboratorios.md alineada con convención vigente para futuros laboratorios.
+
+**Recomendaciones del revisor aplicadas:**
+1. Unificar vocabulario de estado en inglés sin # ✅
+2. Clarificar nota de SIATA (logística vs formal) ✅
+3. Actualizar plantilla y tabla de estatus en Laboratorios.md ✅
+
+**Checklist de verificación del revisor - Fase 2** (4/4 completados):
+- [x] Estados por ronda usan inglés sin # en páginas actualizadas
+- [x] Texto de SIATA alineado entre pages/SIATA.md y pages/Prueba Piloto.md
+- [x] MOC pages/Laboratorios.md no introduce formatos inconsistentes
+- [x] Plantilla actualizada refleja convención vigente
 
 ---
 
