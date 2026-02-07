@@ -1,5 +1,5 @@
 - tags:: [[Ronda]], [[Prueba Piloto]]
-- # Ronda 1
+- # Ronda 1 (CANCELLED)
 - **Fechas**
 	- Inicio (montaje): 2026-02-18
 	- Dias de prueba: 2026-02-19 a 2026-02-21
@@ -9,6 +9,8 @@
 	- Jueves a sabado: ejecucion de pruebas.
 	- Lunes: recoleccion de equipos.
 - **Estado**
-	- status:: planificada
+	- status:: cancelled
+- **Observaciones**
+	- **Ronda Cancelada - Contingencias Ambientales:** Esta ronda fue cancelada debido a consideraciones operativas relacionadas con contingencias ambientales. Febrero-marzo constituye un periodo crítico para SIATA y autoridades ambientales como Corantioquia debido a la temporada de contingencias. Este aprendizaje aplica para futuras programaciones del servicio de ensayos de aptitud.
 - **Referencias**
 	- [[Prueba Piloto]]
