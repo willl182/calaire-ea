@@ -1,127 +1,96 @@
 # Session State: CALAIRE-EA Knowledge Graph
 
-**Last Updated**: 2026-02-07 18:35
+**Last Updated**: 2026-02-07 18:22
 
 ## Session Objective
 
-Reestructuración del cronograma de la Prueba Piloto: cancelación de rondas febrero, reubicación SIATA, extensión calendario abril-mayo.
+Reestructurar el cronograma de la Prueba Piloto debido a la cancelación de las rondas de febrero, reubicar a SIATA en abril, extender el calendario con rondas adicionales (6, 7, 8), actualizar los diagramas Mermaid, y documentar los cambios en contratación y hallazgos de CALAIRE-APP.
 
 ## Current State
 
 **Plan Activo**: `logs/plans/260207_1741_plan_reestructuracion-cronograma-piloto.md`
-- Status: in_progress (Fase 3 completada)
-- 7 fases planificadas
-- Fase 1: ✅ Completada con correcciones de revisor-fase
-- Fase 2: ✅ Completada con correcciones de revisor-fase
-- Fase 3: ✅ Completada con correcciones de revisor-fase
+- Status: in_progress
+- 7 fases planificadas, 4 completadas
 
-**Fase 1 - Completada**:
-- ✅ Creado `journals/2026_02_07.md` con registro de decisiones
-- ✅ Modificado `pages/Ronda 1.md` con `status:: cancelled` + observación + etiqueta "(CANCELLED)"
-- ✅ Modificado `pages/Ronda 2.md` con `status:: cancelled` + observación + etiqueta "(CANCELLED)"
-- ✅ Corrección aplicada: etiquetas "(CANCELLED)" en títulos para visibilidad en navegación
+**Fases Completadas:**
+- [x] Fase 1: Cancelación Rondas Febrero
+- [x] Fase 2: Crear Rondas 6, 7, 8
+- [x] Fase 3: Actualizar Cronograma en Prueba Piloto y SIATA
+- [x] Fase 4: Actualizar Diagramas Mermaid
 
-**Fase 2 - Completada**:
-- ✅ Creado `pages/Ronda 6.md` - Abr 15-20, SIATA asignado, `status:: planificada`
-- ✅ Creado `pages/Ronda 7.md` - Abr 22-27, buffer/Politécnico, `status:: planificada`
-- ✅ Creado `pages/Ronda 8.md` - Abr 29 - May 4, buffer, `status:: planificada`
-- ✅ Corrección aplicada: alias `[[Politécnico Colombiano Jaime Isaza Cadavid|Politécnico JIC]]` para mantener texto corto
+**Fases Pendientes:**
+- [ ] Fase 5: Actualizar Contratación Fabián
+- [ ] Fase 6: Actualizar CALAIRE-APP
+- [ ] Fase 7: Actualizar Estado de Sesión
 
-**Fase 3 - Completada**:
-- ✅ Modificado `pages/Prueba Piloto.md` - Nuevo inicio: Mar 18. Fin: May 4. Agregar R6-R8. Marcar R1-R2 cancelled. Actualizar confirmaciones SIATA→R6.
-- ✅ Modificado `pages/SIATA.md` - R1-R2: cancelled, R6: pending (asignada). Actualizar observaciones.
-- ✅ Correcciones aplicadas: enlaces normalizados, triple corchetes corregidos, indentación corregida a tabs en ambos archivos
+## Critical Technical Context
 
-**Plan Anterior**: `logs/plans/260205_1356_plan_coordinacion-labs-app-roles.md`
-- Status: completed (todas las fases ejecutadas, placeholder de CALAIRE-APP cerrado con hallazgo de imputación)
+### Logseq Technical Conventions
+1. **Indentación:** Tabs (NO espacios) - CRÍTICO para Logseq. Usar `sed -i 's/^    /\t/g'` para corregir.
+2. **Sintaxis Links:** `[[Page]]` o `[[Page|Display Text]]` con alias. Triples corchetes NO son estándar.
+3. **Status:** Inglés sin # (`confirmed`, `cancelled`, `planificada`, `pending`, etc.)
+4. **Tags:** Inglés con [[]] (`[[Team]]`, `[[Laboratorio]]`)
+5. **Cancelled rounds:** Deben tener "(CANCELLED)" en el título para visibilidad.
+6. **Encoding:** Problema detectado en `pages/Prueba Piloto.md` y `pages/SIATA.md` - caracteres acentuados no se muestran correctamente.
 
-## Decisiones del Día (2026-02-07)
+### Mermaid Diagram Conventions
+1. **IDs Únicos:** Cada tarea debe tener ID único (r1_rec, r2_ac, etc.)
+2. **Milestones:** Usar `milestone` con ID (m1, m2)
+3. **Fechas Consistentes:** Gantt y Timeline deben usar las mismas fechas
 
-1. **Rondas 1 y 2 canceladas:** Febrero descartado por preparación de contingencias SIATA y autoridades ambientales (Corantioquia).
-
-2. **SIATA:** Reubicado de Rondas 1-2 (febrero) a Ronda 6 (abril 15-20).
-
-3. **Extensión calendario:** Crear Rondas 6, 7 y 8 para mayor flexibilidad.
-
-4. **Contratación Fabián:** Posterga de febrero a marzo-abril.
-
-5. **CALAIRE-APP:** Discrepancias de César Yate fueron por imputación de datos (menor gravedad). Pendiente enviar informe de hallazgos.
+### Validated Workflow
+1. Implementar fase
+2. Revisar con `revisor-fase` subagent
+3. Corregir hallazgos
+4. Commit con mensaje descriptivo
+5. Push a repositorio remoto
 
 ## Nuevo Cronograma
 
 | Ronda | Fechas | Laboratorio | Status |
 |-------|--------|-------------|--------|
-| ~~R1~~ | ~~Feb 18-23~~ | - | cancelled |
-| ~~R2~~ | ~~Feb 25-Mar 2~~ | - | cancelled |
-| R3 | Mar 18-23 | UdeM | confirmed |
-| R4 | Mar 25-30 | UdeM | confirmed |
-| R5 | Abr 8-13 | UPB | confirmed |
-| R6 | Abr 15-20 | SIATA | pending |
-| R7 | Abr 22-27 | buffer/Politécnico | planificada |
-| R8 | Abr 29 - May 4 | buffer | planificada |
+| Ronda 1 (CANCELLED) | Feb 16-21 | - | cancelled |
+| Ronda 2 (CANCELLED) | Feb 23-28 | - | cancelled |
+| Ronda 3 | Mar 16-21 | Universidad de Medellín | confirmed |
+| Ronda 4 | Mar 23-28 | Universidad de Medellín | confirmed |
+| Ronda 5 | Abr 6-11 | Universidad Pontificia Bolivariana | confirmed |
+| Ronda 6 | Abr 13-18 | SIATA | pending |
+| Ronda 7 | Abr 20-25 | (buffer/Politécnico) | planificada |
+| Ronda 8 | Abr 27 - May 2 | (buffer) | planificada |
 
-**Inicio real:** 18 de marzo 2026
-**Fin:** 4 de mayo 2026
+**Inicio real:** 16 de marzo 2026 (Ronda 3)
+**Fin:** 4 de mayo 2026 (Ronda 8)
 
-## Aprendizajes Documentados
+## Key Decisions Documented
 
-### Contingencias Ambientales (2026-02-07)
+1. **Rondas 1 & 2 canceladas:** Febrero no es adecuado por preparación de contingencias para SIATA y autoridades ambientales.
+2. **SIATA reubicado:** De Rondas 1-2 (febrero) a Ronda 6 (abril 15-20).
+3. **Extensión del calendario:** Se crean Rondas 6, 7 y 8 para mayor flexibilidad en abril-mayo.
+4. **Contratación Fabián:** Posterga de febrero a marzo-abril.
+5. **CALAIRE-APP:** Las discrepancias reportadas por César Yate fueron principalmente por imputación de datos (menor gravedad).
 
-> **Evitar programar rondas en periodos cercanos a contingencias ambientales.** Febrero-marzo es periodo crítico para SIATA y autoridades ambientales como Corantioquia debido a temporada de contingencias. Este aprendizaje aplica para futuras programaciones del servicio de ensayos de aptitud.
+## Learnings to Preserve
 
-### Convención de Estados (2026-02-05)
-
-- **status**: Inglés sin # (`confirmed`, `candidate`, `pending`, `inactive`, `contacted`, `cancelled`, `planificada`)
-- **tags**: Inglés con [[]] (`[[Team]]`, `[[Laboratorio]]`)
-- **Indentación**: Tabs (no espacios)
-- **Links internos**: `[[Page]]`
-- **Referencias docs/**: Texto plano (no `[[]]`)
-
-### Etiquetas de Visibilidad (2026-02-07)
-
-> **Rondas cancelled deben mantenerse visibles con etiquetas "(CANCELLED)"** en títulos/encabezados para mejorar visibilidad en navegación y backlinks.
-
-### Aliases para Links Internos (2026-02-07)
-
-> **Usar aliases para mantener texto corto** en links internos. Sintaxis: `[[Nombre de Página Completo|Texto Corto]]`. Ejemplo: `[[Politécnico Colombiano Jaime Isaza Cadavid|Politécnico JIC]]` para mantener el texto corto pero apuntando a la página correcta.
-
-### Indentación con Tabs en Logseq (2026-02-07)
-
-> **Logseq requiere tabs (no espacios) para la jerarquía de bloques.** Los bloques hijos deben usar tabulación al inicio para mantener la estructura correcta. Los espacios pueden causar que los bloques queden fuera de la jerarquía y afecten consultas y visibilidad. USar sed commands para reemplazar espacios por tabs: `sed -i 's/^    /\t/g' filename.md`.
-
-### Enlaces Estándar en Logseq (2026-02-07)
-
-> **Usar doble corchete estándar para enlaces.** Sintaxis: `[[Page]]` o `[[Page|Display Text]]`. El triple corchete `[[[Page]]]` no es sintaxis estándar y puede generar páginas inesperadas o enlaces mal formados.
-
-## Critical Technical Context
-
-- Proyecto: Grafo de conocimiento Logseq para CALAIRE-EA (Ensayos de Aptitud para gases contaminantes)
-- Diagramas Mermaid en `docs/gantt.md` y `docs/timeline.md` requieren actualización
-- Rondas cancelled deben mantenerse visibles con etiquetas "(CANCELLED)"
-- Propiedades `status:: cancelled` se usan como bloque hijo con guion (consistente con estructura del grafo)
+1. **Evitar programar rondas en periodos cercanos a contingencias ambientales.** Febrero-marzo es periodo crítico para SIATA y autoridades ambientales.
+2. **Logseq requiere tabs para indentación.** Espacios rompen la estructura y afectan queries.
+3. **IDs en Mermaid Gantt deben ser únicos.** Reutilizar IDs provoca render incorrecto o colisiones.
+4. **Consistencia de enlaces:** Usar mismos nombres de página enlaces para evitar crear páginas duplicadas.
 
 ## Next Steps
 
-1. ✅ Ejecutar Fase 1: Registro del día + cancelación Rondas 1-2
-2. ✅ Ejecutar Fase 2: Crear Rondas 6, 7, 8
-3. ✅ Ejecutar Fase 3: Actualizar Prueba Piloto y SIATA
-4. ⏳ Ejecutar Fase 4: Actualizar diagramas Mermaid
-5. Ejecutar Fase 5: Actualizar contratación Fabián
-6. Ejecutar Fase 6: Actualizar CALAIRE-APP
-7. Ejecutar Fase 7: Actualizar estado de sesión (final)
+1. Continuar con Fase 5: Actualizar Contratación Fabián
+   - Modificar `pages/Fabian Moreno.md`: Timeline: contratación marzo-abril
+   - Modificar `pages/Equipo.md`: Reflejar nuevo timeline técnico principal
+
+2. Fase 6: Actualizar CALAIRE-APP
+   - Modificar `pages/CALAIRE-APP.md`: Hallazgo: imputación de datos
+   - Agregar TODO: enviar informe a César Yate
+
+3. Fase 7: Actualizar Estado de Sesión
+   - Actualizar `logs/CURRENT_SESSION.md` con estado final
 
 ## Pending User Input
 
-- Confirmación de SIATA para Ronda 6 (abril)
-- Contacto con Politécnico JIC (Profe Myryam) para posible Ronda 7
-- Detalles adicionales del informe de hallazgos para César Yate
-
-## Workflow Validado
-
-Implementar fase → Revisar con `revisor-fase` → Corregir hallazgos → Commit → Push
-
-## Planes en el Proyecto
-
-1. `260207_1741_plan_reestructuracion-cronograma-piloto.md` - Status: in_progress (Fase 3 completada)
-2. `260205_1356_plan_coordinacion-labs-app-roles.md` - Status: completed
-3. `260205_0053_plan_extension-skills-categorias-correos.md` - Status: completed
+- SIATA confirmación para Ronda 6 (abril)
+- Contacto con Politécnico JIC (Prof. Myryam) para posible Ronda 7
+- Detalles adicionales para informe de hallazgos a César Yate
