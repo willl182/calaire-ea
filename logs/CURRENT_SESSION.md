@@ -1,6 +1,6 @@
 # Session State: CALAIRE-EA Knowledge Graph
 
-**Last Updated**: 2026-02-07 17:53
+**Last Updated**: 2026-02-07 17:57
 
 ## Session Objective
 
@@ -9,15 +9,22 @@ Reestructuración del cronograma de la Prueba Piloto: cancelación de rondas feb
 ## Current State
 
 **Plan Activo**: `logs/plans/260207_1741_plan_reestructuracion-cronograma-piloto.md`
-- Status: in_progress (Fase 1 completada)
+- Status: in_progress (Fase 2 completada)
 - 7 fases planificadas
 - Fase 1: ✅ Completada con correcciones de revisor-fase
+- Fase 2: ✅ Completada con correcciones de revisor-fase
 
 **Fase 1 - Completada**:
 - ✅ Creado `journals/2026_02_07.md` con registro de decisiones
 - ✅ Modificado `pages/Ronda 1.md` con `status:: cancelled` + observación + etiqueta "(CANCELLED)"
 - ✅ Modificado `pages/Ronda 2.md` con `status:: cancelled` + observación + etiqueta "(CANCELLED)"
 - ✅ Corrección aplicada: etiquetas "(CANCELLED)" en títulos para visibilidad en navegación
+
+**Fase 2 - Completada**:
+- ✅ Creado `pages/Ronda 6.md` - Abr 15-20, SIATA asignado, `status:: planificada`
+- ✅ Creado `pages/Ronda 7.md` - Abr 22-27, buffer/Politécnico, `status:: planificada`
+- ✅ Creado `pages/Ronda 8.md` - Abr 29 - May 4, buffer, `status:: planificada`
+- ✅ Corrección aplicada: alias `[[Politécnico Colombiano Jaime Isaza Cadavid|Politécnico JIC]]` para mantener texto corto
 
 **Plan Anterior**: `logs/plans/260205_1356_plan_coordinacion-labs-app-roles.md`
 - Status: completed (todas las fases ejecutadas, placeholder de CALAIRE-APP cerrado con hallazgo de imputación)
@@ -68,6 +75,10 @@ Reestructuración del cronograma de la Prueba Piloto: cancelación de rondas feb
 
 > **Rondas cancelled deben mantenerse visibles con etiquetas "(CANCELLED)"** en títulos/encabezados para mejorar visibilidad en navegación y backlinks.
 
+### Aliases para Links Internos (2026-02-07)
+
+> **Usar aliases para mantener texto corto** en links internos. Sintaxis: `[[Nombre de Página Completo|Texto Corto]]`. Ejemplo: `[[Politécnico Colombiano Jaime Isaza Cadavid|Politécnico JIC]]` para mantener el texto corto pero apuntando a la página correcta.
+
 ## Critical Technical Context
 
 - Proyecto: Grafo de conocimiento Logseq para CALAIRE-EA (Ensayos de Aptitud para gases contaminantes)
@@ -78,8 +89,8 @@ Reestructuración del cronograma de la Prueba Piloto: cancelación de rondas feb
 ## Next Steps
 
 1. ✅ Ejecutar Fase 1: Registro del día + cancelación Rondas 1-2
-2. ⏳ Ejecutar Fase 2: Crear Rondas 6, 7, 8
-3. Ejecutar Fase 3: Actualizar Prueba Piloto y SIATA
+2. ✅ Ejecutar Fase 2: Crear Rondas 6, 7, 8
+3. ⏳ Ejecutar Fase 3: Actualizar Prueba Piloto y SIATA
 4. Ejecutar Fase 4: Actualizar diagramas Mermaid
 5. Ejecutar Fase 5: Actualizar contratación Fabián
 6. Ejecutar Fase 6: Actualizar CALAIRE-APP
@@ -97,6 +108,6 @@ Implementar fase → Revisar con `revisor-fase` → Corregir hallazgos → Commi
 
 ## Planes en el Proyecto
 
-1. `260207_1741_plan_reestructuracion-cronograma-piloto.md` - Status: in_progress (Fase 1 completada)
+1. `260207_1741_plan_reestructuracion-cronograma-piloto.md` - Status: in_progress (Fase 2 completada)
 2. `260205_1356_plan_coordinacion-labs-app-roles.md` - Status: completed
 3. `260205_0053_plan_extension-skills-categorias-correos.md` - Status: completed

@@ -1,0 +1,16 @@
+- tags:: [[Ronda]], [[Prueba Piloto]]
+- # Ronda 8
+- **Fechas**
+	- Inicio (montaje): 2026-04-29
+	- Dias de prueba: 2026-04-30 a 2026-05-02
+	- Recoleccion: 2026-05-04
+- **Ciclo operativo**
+	- Miercoles: recepcion y acondicionamiento.
+	- Jueves a sabado: ejecucion de pruebas.
+	- Lunes: recoleccion de equipos.
+- **Estado**
+	- status:: planificada
+- **Laboratorio**
+	- Buffer (sin asignar)
+- **Referencias**
+	- [[Prueba Piloto]]

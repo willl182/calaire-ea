@@ -1,0 +1,16 @@
+- tags:: [[Ronda]], [[Prueba Piloto]]
+- # Ronda 6
+- **Fechas**
+	- Inicio (montaje): 2026-04-15
+	- Dias de prueba: 2026-04-16 a 2026-04-18
+	- Recoleccion: 2026-04-20
+- **Ciclo operativo**
+	- Miercoles: recepcion y acondicionamiento.
+	- Jueves a sabado: ejecucion de pruebas.
+	- Lunes: recoleccion de equipos.
+- **Estado**
+	- status:: planificada
+- **Laboratorio**
+	- [[SIATA]]
+- **Referencias**
+	- [[Prueba Piloto]]

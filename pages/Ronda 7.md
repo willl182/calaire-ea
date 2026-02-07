@@ -1,0 +1,16 @@
+- tags:: [[Ronda]], [[Prueba Piloto]]
+- # Ronda 7
+- **Fechas**
+	- Inicio (montaje): 2026-04-22
+	- Dias de prueba: 2026-04-23 a 2026-04-25
+	- Recoleccion: 2026-04-27
+- **Ciclo operativo**
+	- Miercoles: recepcion y acondicionamiento.
+	- Jueves a sabado: ejecucion de pruebas.
+	- Lunes: recoleccion de equipos.
+- **Estado**
+	- status:: planificada
+- **Laboratorio**
+	- Buffer / [[Politécnico Colombiano Jaime Isaza Cadavid|Politécnico JIC]] (por confirmar con Profe Myryam)
+- **Referencias**
+	- [[Prueba Piloto]]
