@@ -1,6 +1,6 @@
 # Session State: CALAIRE-EA Knowledge Graph
 
-**Last Updated**: 2026-02-07 17:57
+**Last Updated**: 2026-02-07 18:35
 
 ## Session Objective
 
@@ -9,10 +9,11 @@ Reestructuración del cronograma de la Prueba Piloto: cancelación de rondas feb
 ## Current State
 
 **Plan Activo**: `logs/plans/260207_1741_plan_reestructuracion-cronograma-piloto.md`
-- Status: in_progress (Fase 2 completada)
+- Status: in_progress (Fase 3 completada)
 - 7 fases planificadas
 - Fase 1: ✅ Completada con correcciones de revisor-fase
 - Fase 2: ✅ Completada con correcciones de revisor-fase
+- Fase 3: ✅ Completada con correcciones de revisor-fase
 
 **Fase 1 - Completada**:
 - ✅ Creado `journals/2026_02_07.md` con registro de decisiones
@@ -25,6 +26,11 @@ Reestructuración del cronograma de la Prueba Piloto: cancelación de rondas feb
 - ✅ Creado `pages/Ronda 7.md` - Abr 22-27, buffer/Politécnico, `status:: planificada`
 - ✅ Creado `pages/Ronda 8.md` - Abr 29 - May 4, buffer, `status:: planificada`
 - ✅ Corrección aplicada: alias `[[Politécnico Colombiano Jaime Isaza Cadavid|Politécnico JIC]]` para mantener texto corto
+
+**Fase 3 - Completada**:
+- ✅ Modificado `pages/Prueba Piloto.md` - Nuevo inicio: Mar 18. Fin: May 4. Agregar R6-R8. Marcar R1-R2 cancelled. Actualizar confirmaciones SIATA→R6.
+- ✅ Modificado `pages/SIATA.md` - R1-R2: cancelled, R6: pending (asignada). Actualizar observaciones.
+- ✅ Correcciones aplicadas: enlaces normalizados, triple corchetes corregidos, indentación corregida a tabs en ambos archivos
 
 **Plan Anterior**: `logs/plans/260205_1356_plan_coordinacion-labs-app-roles.md`
 - Status: completed (todas las fases ejecutadas, placeholder de CALAIRE-APP cerrado con hallazgo de imputación)
@@ -79,6 +85,14 @@ Reestructuración del cronograma de la Prueba Piloto: cancelación de rondas feb
 
 > **Usar aliases para mantener texto corto** en links internos. Sintaxis: `[[Nombre de Página Completo|Texto Corto]]`. Ejemplo: `[[Politécnico Colombiano Jaime Isaza Cadavid|Politécnico JIC]]` para mantener el texto corto pero apuntando a la página correcta.
 
+### Indentación con Tabs en Logseq (2026-02-07)
+
+> **Logseq requiere tabs (no espacios) para la jerarquía de bloques.** Los bloques hijos deben usar tabulación al inicio para mantener la estructura correcta. Los espacios pueden causar que los bloques queden fuera de la jerarquía y afecten consultas y visibilidad. USar sed commands para reemplazar espacios por tabs: `sed -i 's/^    /\t/g' filename.md`.
+
+### Enlaces Estándar en Logseq (2026-02-07)
+
+> **Usar doble corchete estándar para enlaces.** Sintaxis: `[[Page]]` o `[[Page|Display Text]]`. El triple corchete `[[[Page]]]` no es sintaxis estándar y puede generar páginas inesperadas o enlaces mal formados.
+
 ## Critical Technical Context
 
 - Proyecto: Grafo de conocimiento Logseq para CALAIRE-EA (Ensayos de Aptitud para gases contaminantes)
@@ -90,8 +104,8 @@ Reestructuración del cronograma de la Prueba Piloto: cancelación de rondas feb
 
 1. ✅ Ejecutar Fase 1: Registro del día + cancelación Rondas 1-2
 2. ✅ Ejecutar Fase 2: Crear Rondas 6, 7, 8
-3. ⏳ Ejecutar Fase 3: Actualizar Prueba Piloto y SIATA
-4. Ejecutar Fase 4: Actualizar diagramas Mermaid
+3. ✅ Ejecutar Fase 3: Actualizar Prueba Piloto y SIATA
+4. ⏳ Ejecutar Fase 4: Actualizar diagramas Mermaid
 5. Ejecutar Fase 5: Actualizar contratación Fabián
 6. Ejecutar Fase 6: Actualizar CALAIRE-APP
 7. Ejecutar Fase 7: Actualizar estado de sesión (final)
@@ -108,6 +122,6 @@ Implementar fase → Revisar con `revisor-fase` → Corregir hallazgos → Commi
 
 ## Planes en el Proyecto
 
-1. `260207_1741_plan_reestructuracion-cronograma-piloto.md` - Status: in_progress (Fase 2 completada)
+1. `260207_1741_plan_reestructuracion-cronograma-piloto.md` - Status: in_progress (Fase 3 completada)
 2. `260205_1356_plan_coordinacion-labs-app-roles.md` - Status: completed
 3. `260205_0053_plan_extension-skills-categorias-correos.md` - Status: completed

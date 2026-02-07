@@ -1,19 +1,17 @@
 - tags:: [[Laboratorio]]
 - # SIATA (Sistema de Alerta Temprana de Medellín y el Valle de Aburrá)
-  type:: [[Laboratorio]]
-  status:: candidate
-  institution:: Área Metropolitana del Valle de Aburrá
-  location:: Medellín
+	type:: [[Laboratorio]]
+	status:: candidate
+	institution:: Área Metropolitana del Valle de Aburrá
+	location:: Medellín
 - ## Participación en Rondas EA
-    - [[Ronda 1]]: pending
-    - [[Ronda 2]]: pending
-    - [[Ronda 3]]: pending
-    - [[Ronda 4]]: pending
-    - [[Ronda 5]]: pending
+	- [[Ronda 1]]: cancelled
+	- [[Ronda 2]]: cancelled
+	- [[Ronda 6]]: pending (asignada)
 - ## Equipos
-    - Pendiente de inventario
+	- Pendiente de inventario
 - ## Observaciones
-    - Disponibilidad logística inicial para semanas 3-4 febrero (Rondas 1 y 2) - pendiente confirmación formal de participación
-    - Pendiente confirmación definitiva por llamada - seguimiento activo
+	- Rondas 1-2 canceladas por contingencias ambientales. Reubicado a Ronda 6 (Abr 15-20, 2026). Pendiente confirmación formal para la nueva fecha.
+	- Febrero-marzo es periodo crítico para SIATA y autoridades ambientales como Corantioquia debido a temporada de contingencias.
 - ## Documentación
-    - 
+	- 

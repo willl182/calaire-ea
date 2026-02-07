@@ -1,7 +1,7 @@
 # Plan: Reestructuración Cronograma Prueba Piloto
 
 **Created**: 2026-02-07 17:41
-**Updated**: 2026-02-07 18:20
+**Updated**: 2026-02-07 18:35
 **Status**: in_progress
 **Slug**: `reestructuracion-cronograma-piloto`
 
@@ -159,6 +159,27 @@ Reestructurar el cronograma de la Prueba Piloto debido a la cancelación de las 
 
 **Estado:** Completado con correcciones.
 
+### Fase 3 - Actualizar Cronograma en Prueba Piloto y SIATA
+
+**Revisor**: `revisor-fase` (2026-02-07 18:30)
+
+**Hallazgos importantes:**
+- Inconsistencia de enlaces: `[[Ronda 1 (CANCELLED)]]` en `pages/Prueba Piloto.md` vs `[[Ronda 1]]` en `pages/SIATA.md`.
+- Sintaxis Logseq con indentación por espacios en secciones secundarias de ambos archivos.
+- Uso de enlaces con triple corchete `[[[TECH]...]]` que no es sintaxis estándar de Logseq.
+
+**Correcciones aplicadas:**
+- Enlaces normalizados: `[[Ronda 1]]` y `[[Ronda 2]]` en ambos archivos (páginas ya tienen etiqueta "(CANCELLED)" en título).
+- Título actualizado: "Coordinacion Prueba Piloto (Marzo-Mayo 2026) - Febrero cancelado por contingencias ambientales".
+- Triple corchetes corregidos a doble corchete estándar en tags de correo.
+- Indentación corregida: todos los bloques hijos ahora usan tabs (no espacios) en ambos archivos.
+- Sed commands aplicados para reemplazar espacios por tabs en secciones secundarias.
+
+**Observaciones:**
+- Problema de encoding detectado en ambos archivos: caracteres acentuados no se muestran correctamente (M-CM-3, M-CM--n, etc.). No se corrigió en esta fase para evitar cambios mayores, pero debe ser monitoreado.
+
+**Estado:** Completado con correcciones.
+
 ---
 
 ## Resumen de Archivos
@@ -178,6 +199,9 @@ Reestructurar el cronograma de la Prueba Piloto debido a la cancelación de las 
 - [x] Fase 2 iniciada
 - [x] Fase 2 completada
 - [x] Fase 2 corregida (hallazgos revisor-fase)
+- [x] Fase 3 iniciada
+- [x] Fase 3 completada
+- [x] Fase 3 corregida (hallazgos revisor-fase)
 - [ ] Fase 2 iniciada
 - [ ] Fase 2 completada
 - [ ] Fase 3 iniciada
