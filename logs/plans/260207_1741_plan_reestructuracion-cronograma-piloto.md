@@ -1,7 +1,7 @@
 # Plan: Reestructuración Cronograma Prueba Piloto
 
 **Created**: 2026-02-07 17:41
-**Updated**: 2026-02-07 18:35
+**Updated**: 2026-02-07 19:45
 **Status**: in_progress
 **Slug**: `reestructuracion-cronograma-piloto`
 
@@ -180,6 +180,26 @@ Reestructurar el cronograma de la Prueba Piloto debido a la cancelación de las 
 
 **Estado:** Completado con correcciones.
 
+### Fase 4 - Actualizar Diagramas Mermaid
+
+**Revisor**: `revisor-fase` (2026-02-07 19:40)
+
+**Hallazgos importantes:**
+- Blocking: En `docs/gantt.md` varias líneas no cumplen sintaxis gantt (faltan IDs en tareas como Inicio/Fin Prueba Piloto y múltiples Devolución Equipos).
+- Required: `docs/gantt.md` reutiliza IDs (a1-a6) en todas las rondas. En Mermaid Gantt los IDs deben ser únicos.
+- Required: `docs/timeline.md` extendía el calendario hasta May 9, contradiciendo el requisito de terminar en May 4.
+- Required: Semanas marcadas como "(vacía)" que se superponen con R6-R8.
+
+**Correcciones aplicadas:**
+- IDs únicos asignados a cada tarea en `docs/gantt.md` (r1_rec, r1_ac, etc.).
+- Agregados IDs a milestones (Inicio/Fin Prueba Piloto).
+- `docs/timeline.md` ajustado para terminar en May 4 (eliminadas fechas May 5-9).
+- Eliminadas etiquetas "(vacía)" en secciones correspondientes a R6-R8.
+- Agregadas rondas 6, 7 y 8 en ambos diagramas con fechas correctas.
+- R1-R2 marcadas con "(CANCELLED)" en ambos diagramas.
+
+**Estado:** Completado con correcciones.
+
 ---
 
 ## Resumen de Archivos
@@ -202,12 +222,9 @@ Reestructurar el cronograma de la Prueba Piloto debido a la cancelación de las 
 - [x] Fase 3 iniciada
 - [x] Fase 3 completada
 - [x] Fase 3 corregida (hallazgos revisor-fase)
-- [ ] Fase 2 iniciada
-- [ ] Fase 2 completada
-- [ ] Fase 3 iniciada
-- [ ] Fase 3 completada
-- [ ] Fase 4 iniciada
-- [ ] Fase 4 completada
+- [x] Fase 4 iniciada
+- [x] Fase 4 completada
+- [x] Fase 4 corregida (hallazgos revisor-fase)
 - [ ] Fase 5 iniciada
 - [ ] Fase 5 completada
 - [ ] Fase 6 iniciada
