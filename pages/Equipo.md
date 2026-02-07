@@ -18,6 +18,7 @@
 	- Nuevo contratado - pendiente (técnico principal)
 		- role:: Tecnico instrumental principal
 		- focus:: Pruebas tecnicas, calibracion, operacion de equipos.
+		- timeline:: Marzo-Abril 2026 (postergado de febrero debido a reestructuracion del cronograma de la [[Prueba Piloto]])
 	- [[Fabian Moreno]]
 		- role:: Tecnico instrumental especializado (backup tecnico)
 		- focus:: Pruebas tecnicas, calibracion, operacion de equipos. Rol de suplencia en caso de contingencias.
