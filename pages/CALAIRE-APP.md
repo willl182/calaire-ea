@@ -4,11 +4,13 @@
 	- status:: [[EN PROGRESO]]
 	- deadline:: 2026-02-20
 	- repo:: [Pending GitHub URL]
+- **Hallazgos Recientes**
+	- Revisión de resultados reportada por César Yate (2026-02-07): las discrepancias identificadas corresponden principalmente a procesos de imputación de datos, lo cual presenta menor gravedad de lo esperado inicialmente. Este hallazgo indica que el núcleo de cálculos estadísticos (z-score, En, algoritmos robustos) se comporta correctamente.
 - **Backlog Inmediato**
-	- TODO Revisar primeros resultados de César Yate y aplicar ajustes técnicos
-	  project:: [[CALAIRE-EA]]
+	- TODO Enviar informe de hallazgos a César Yate
+	  project:: [[CALAIRE-APP]]
 	  priority:: high
-	  deadline:: 2026-02-10
+	  deadline:: 2026-02-15
 	- TODO Completar informe de validación
 	  project:: [[CALAIRE-APP]]
 	  priority:: high
