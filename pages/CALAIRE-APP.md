@@ -5,7 +5,9 @@
 	- deadline:: 2026-02-20
 	- repo:: [Pending GitHub URL]
 - **Hallazgos Recientes**
-	- Revisión de resultados reportada por César Yate (2026-02-07): las discrepancias identificadas corresponden principalmente a procesos de imputación de datos, lo cual presenta menor gravedad de lo esperado inicialmente. Este hallazgo indica que el núcleo de cálculos estadísticos (homogeneidad, estabilidad, nIQR, algoritmos robustos MADe) se comporta correctamente.
+	- Validación de resultados reportada por César Yate (2026-02-07): el error de imputación de datos fue cometido por César Yate durante la verificación manual, no por el aplicativo CALAIRE-APP. El aplicativo funciona correctamente para preprocesamiento, homogeneidad, estabilidad, nIQR y MADe según ISO 13528:2017.
+	- **Estado validado:** Preprocesamiento ✅, Homogeneidad ✅, Estabilidad ✅, nIQR ✅, MADe ✅
+	- **Estado pendiente de revisión:** Incertidumbre de homogeneidad y estabilidad, Algoritmo A, Compatibilidad metrológica, Puntuaciones z, z', zeta, En
 - **Backlog Inmediato**
 	- TODO Enviar informe de hallazgos a César Yate
 	  project:: [[CALAIRE-APP]]

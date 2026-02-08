@@ -31,13 +31,13 @@
 
 - **Hallazgos CALAIRE-APP**
 	- **Validación técnica:** Demostración a César Yate (consultor ISO 17043): homogeneidad, estabilidad, nIQR, MADe
-	- **Hallazgo:** Discrepancias observadas corresponden a procesos de **imputación de datos**, no a errores en algoritmos estadísticos
-	- **Impacto:** Menor gravedad de lo inicialmente esperado; núcleo estadístico (nIQR, MADe) validado, homogeneidad y estabilidad en revisión
-	- **Estado:** nIQR y MADe validados; homogeneidad/estabilidad en revisión; preprocesamiento requiere refinamiento
+	- **Hallazgo:** El error de imputación de datos fue de César Yate (verificación manual), NO del aplicativo
+	- **Impacto:** CALAIRE-APP funciona correctamente para preprocesamiento, homogeneidad, estabilidad, nIQR y MADe
+	- **Estado:** Preprocesamiento ✅, Homogeneidad ✅, Estabilidad ✅, nIQR ✅, MADe ✅; pendiente revisar: incertidumbre homogeneidad/estabilidad, Algoritmo A, Compatibilidad metrológica, Puntuaciones z/z'/zeta/En
 	- **Próximos pasos:**
-		- Generación de informe de hallazgos (Wilson Salas, 2026-02-12)
-		- Refinamiento de algoritmos de imputación (Wilson Salas, 2026-02-20)
-		- Segunda validación con César Yate: homogeneidad, estabilidad, nIQR, MADe (Wilson Salas + César Yate, 2026-03-01)
+		- Comunicar validación exitosa a César Yate (Wilson Salas, 2026-02-12)
+		- Solicitar validación de componentes pendientes (Wilson Salas, 2026-02-20)
+		- Segunda validación con César Yate: componentes pendientes (Wilson Salas + César Yate, 2026-03-01)
 
 - **Recursos Humanos y Contratación**
 	- **Perfil:** Contratista Líder de Proyecto - Experto en Ensayos de Calidad del Aire (Gases Contaminantes)
@@ -55,7 +55,7 @@
 		- Gestión de contratación (Área Administrativa, 2026-02-28)
 	- **Mediano plazo (Marzo-Abril):**
 		- Auditoría interna SGC (Jeniffer Ochoa + Wilson Salas, 2026-03-15)
-		- Segunda validación CALAIRE-APP: homogeneidad, estabilidad, nIQR, MADe (Wilson Salas + César Yate, 2026-03-25)
+		- Segunda validación CALAIRE-APP: componentes pendientes (Wilson Salas + César Yate, 2026-03-25)
 		- Preparación logística equipos (Wilson Salas, 2026-03-10)
 
 - **Revisión del Informe**
