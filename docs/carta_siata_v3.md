@@ -10,7 +10,7 @@ SIATA \- Sistema de Alerta Temprana de Medellín y el Valle de Aburrá
 
 Presente
 
-**Asunto:** Invitación a participar en prueba piloto: Ensayo de Aptitud para la medición de gases contaminantes criterio – Programación Febrero-Abril 2026\.
+**Asunto:** Invitación a participar en prueba piloto: Ensayo de Aptitud para la medición de gases contaminantes criterio – Programación Marzo-Mayo 2026\.
 
 Estimado Ingeniero Ramírez,
 
@@ -18,16 +18,8 @@ Reciba un cordial saludo en nombre del equipo del Laboratorio CALAIRE y del proy
 
 Conociendo el **rol fundamental que cumple el SIATA en el monitoreo de la calidad del aire**, nos complace extenderles una invitación formal para participar en la prueba piloto de nuestro ensayo de aptitud. Esta prueba representa un hito clave en nuestro objetivo de fortalecer las capacidades metrológicas del país bajo los lineamientos de la norma internacional ISO/IEC 17043:2023.
 
-La prueba se realizará **entre febrero y abril de 2026**, organizándose en 5 rondas semanales para facilitar la logística y operación:
+La prueba se realizará **entre marzo y mayo de 2026**, organizándose en **6 rondas activas** para facilitar la logística y operación. Nota: las rondas previstas para febrero fueron canceladas por la preparación de las autoridades ambientales para las contingencias de marzo.
 
-- RONDA 1  
-  - Inicio (Montaje): Miércoles 18 de febrero  
-  - Días de Prueba: Jueves 19 a Sábado 21 de febrero  
-  - Recolección de Equipos: Lunes 23 de febrero  
-- RONDA 2  
-  - Inicio (Montaje): Miércoles 25 de febrero  
-  - Días de Prueba: Jueves 26 a Sábado 28 de febrero  
-  - Recolección de Equipos: Lunes 02 de marzo  
 - RONDA 3  
   - Inicio (Montaje): Miércoles 18 de marzo  
   - Días de Prueba: Jueves 19 a Sábado 21 de marzo  
@@ -40,6 +32,18 @@ La prueba se realizará **entre febrero y abril de 2026**, organizándose en 5 r
   - Inicio (Montaje): Miércoles 08 de abril  
   - Días de Prueba: Jueves 09 a Sábado 11 de abril  
   - Recolección de Equipos: Lunes 13 de abril
+- RONDA 6  
+  - Inicio (Montaje): Miércoles 15 de abril  
+  - Días de Prueba: Jueves 16 a Sábado 18 de abril  
+  - Recolección de Equipos: Lunes 20 de abril
+- RONDA 7  
+  - Inicio (Montaje): Miércoles 22 de abril  
+  - Días de Prueba: Jueves 23 a Sábado 25 de abril  
+  - Recolección de Equipos: Lunes 27 de abril
+- RONDA 8  
+  - Inicio (Montaje): Miércoles 29 de abril  
+  - Días de Prueba: Jueves 30 de abril a Sábado 02 de mayo  
+  - Recolección de Equipos: Lunes 04 de mayo
 
 | ![][image1] |
 | :---- |
@@ -52,7 +56,7 @@ La prueba se realizará **entre febrero y abril de 2026**, organizándose en 5 r
 
 **Cronograma y Metodología Operativa:**
 
-Para esta fase piloto, hemos diseñado un esquema de participación por rondas semanales. Su institución podrá integrarse en una de las 5 rondas programadas entre febrero y abril, operando bajo el siguiente ciclo:
+Para esta fase piloto, hemos diseñado un esquema de participación por rondas semanales. Su institución podrá integrarse en una de las 6 rondas activas programadas entre marzo y mayo, operando bajo el siguiente ciclo:
 
 1. **Miércoles (Recepción y Acondicionamiento):** Ingreso de equipos a las 08:00 a.m. Instalación, encendido y estabilización (warm-up) de los analizadores.  
 2. **Jueves a Sábado (Ejecución de Pruebas):** Inyección de muestra y toma de datos continua. El sistema operará de manera ininterrumpida durante estos tres días.  
@@ -70,7 +74,7 @@ La participación en esta fase piloto **no tendrá costo de inscripción**. Gara
 
 **Confirmación:**
 
-Agradeceríamos enormemente confirmar su interés a más tardar el día **\[Fecha sugerida: 7 de febrero de 2026\]**, indicándonos 2 rondas de su preferencia entre las 5 opciones disponibles (sujeto a disponibilidad). La participación del SIATA no solo enriquecerá técnicamente este ejercicio, sino que también nos permitirá validar nuestra metodología con uno de los actores más importantes en la materia.
+Agradeceríamos enormemente confirmar su interés a más tardar el día **\[Fecha sugerida: 7 de febrero de 2026\]**, indicándonos 2 rondas de su preferencia entre las 6 opciones disponibles (sujeto a disponibilidad). Como propuesta, sugerimos priorizar las rondas **5-8**. La participación del SIATA no solo enriquecerá técnicamente este ejercicio, sino que también nos permitirá validar nuestra metodología con uno de los actores más importantes en la materia.
 
 Se realizará posteriormente reunión para explicar los detalles de la prueba con el fin de aclarar las dudas que puedan surgir.
 

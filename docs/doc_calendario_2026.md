@@ -1,10 +1,10 @@
-# **Propuesta de Cronograma: Pruebas Piloto Ensayos de Aptitud \- Febrero - Abril 2026**
+# **Propuesta de Cronograma: Pruebas Piloto Ensayos de Aptitud \- Marzo - Mayo 2026**
 
 ## **1\. Introducción**
 
 El presente documento detalla la propuesta logística y de calendario para la ejecución de los **Ensayos de Aptitud para la medición de gases contaminantes criterio** (SO₂, NO₂, CO y O₃).
 
-Con el objetivo de maximizar la capacidad operativa y garantizar la calidad de los datos conforme a la norma **ISO/IEC 17043:2023**, se ha diseñado un esquema de **5 Rondas** a realizarse durante el período de **Febrero - Abril de 2026**.
+Con el objetivo de maximizar la capacidad operativa y garantizar la calidad de los datos conforme a la norma **ISO/IEC 17043:2023**, se ha diseñado un esquema de **8 rondas (6 activas)** a realizarse durante el período de **marzo - mayo de 2026**. Las rondas previstas para febrero fueron canceladas por la preparación de las autoridades ambientales para las contingencias de marzo.
 
 ## **2\. Esquema Operativo de la Ronda (Ciclo Semanal)**
 
@@ -20,25 +20,9 @@ Para cada una de las cinco rondas, se mantendrá una estructura fija de **miérc
 | **Sábado** | **Ejecución y Cierre de Ensayos (Día 3\)** |
 | **Lunes** | **Recolección de Equipos** |
 
-## **3\. Calendario Detallado \- Febrero - Abril 2026**
+## **3\. Calendario Detallado \- Marzo - Mayo 2026**
 
-A continuación, se presentan las fechas específicas para las 5 rondas propuestas:
-
-### **RONDA 1**
-
-*Enfoque: Grupo 1 de Laboratorios Participantes*
-
-* **Inicio (Montaje):** Miércoles 18 de febrero  
-* **Días de Prueba:** Jueves 19 a Sábado 21 de febrero  
-* **Recolección de Equipos:** Lunes 23 de febrero
-
-### **RONDA 2**
-
-*Enfoque: Grupo 2 de Laboratorios Participantes*
-
-* **Inicio (Montaje):** Miércoles 25 de febrero  
-* **Días de Prueba:** Jueves 26 a Sábado 28 de febrero  
-* **Recolección de Equipos:** Lunes 02 de marzo
+A continuación, se presentan las fechas específicas para las **6 rondas activas**:
 
 ### **RONDA 3**
 
@@ -64,9 +48,33 @@ A continuación, se presentan las fechas específicas para las 5 rondas propuest
 * **Días de Prueba:** Jueves 09 a Sábado 11 de abril  
 * **Recolección de Equipos:** Lunes 13 de abril
 
+### **RONDA 6**
+
+*Enfoque: Grupo 6 de Laboratorios Participantes*
+
+* **Inicio (Montaje):** Miércoles 15 de abril  
+* **Días de Prueba:** Jueves 16 a Sábado 18 de abril  
+* **Recolección de Equipos:** Lunes 20 de abril
+
+### **RONDA 7**
+
+*Enfoque: Grupo 7 de Laboratorios Participantes*
+
+* **Inicio (Montaje):** Miércoles 22 de abril  
+* **Días de Prueba:** Jueves 23 a Sábado 25 de abril  
+* **Recolección de Equipos:** Lunes 27 de abril
+
+### **RONDA 8**
+
+*Enfoque: Grupo 8 de Laboratorios Participantes*
+
+* **Inicio (Montaje):** Miércoles 29 de abril  
+* **Días de Prueba:** Jueves 30 de abril a Sábado 02 de mayo  
+* **Recolección de Equipos:** Lunes 04 de mayo
+
 ## **4\. Planificación de la Ronda**
 
-Las 5 rondas de las pruebas pilotos, se llevarán a cabo bajo el siguiente esquema:
+Las 6 rondas activas de las pruebas pilotos se llevarán a cabo bajo el siguiente esquema:
 
 | Corrida | Componente | Dia | Inicio | Duración | O3 | NO | NO2 | SO2 | CO |
 | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
