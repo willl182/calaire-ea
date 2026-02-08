@@ -175,4 +175,28 @@ conformidad total con ISO/IEC 17043:2023.
 
 ---
 
+## Corrección Post-Implementación (2026-02-08)
+
+**Motivo:** El plan original implementó la sección 8.1 asumiendo que CALAIRE utilizaría subcontratistas. Sin embargo, se confirmó que **todas las actividades del EA se realizan internamente** por personal propio de CALAIRE, sin subcontratación.
+
+**Acciones ejecutadas:**
+
+| Documento | Líneas | Acción | Detalle |
+|-----------|--------|--------|--------|
+| `M.LCAFMi-## Comunicacion Detallada EAdocx.md` | 159-204 | Reemplazadas | 46 líneas (subcontratación con 4 subsecciones) → 15 líneas (declaración NO subcontratación) |
+| `P-PSEA-01 Protocolo General EA.md` | 49 | Modificada | Eliminada nota que permitía subcontratación |
+| `P-PSEA-01 Protocolo General EA.md` | 61 | Modificada | Eliminada mención de "servicios externos" en comunicación |
+| `P-PSEA-09 Procedimiento de Planificacion Ronda EA.md` | 13 | Limpieza | Eliminados comentarios embebidos ("--- comentario:", "[...]") |
+
+**Plan de corrección:** `logs/plans/260208_1826_plan_ajuste-no-subcontratacion-comunicacion-detallada.md`
+
+**Backups creados:**
+- `docs/docs_sgc/backup_260208_1826_M.LCAFMi-## Comunicacion Detallada EAdocx.md`
+- `docs/docs_sgc/backup_260208_1834_P-PSEA-09 Procedimiento de Planificacion Ronda EA.md`
+- `docs/docs_sgc/backup_260208_1838_P-PSEA-01 Protocolo General EA.md`
+
+**Cumplimiento ISO/IEC 17043:2023:** Se mantiene cumplimiento cláusula 6.4 mediante declaración explícita de NO subcontratación en lugar de procedimiento de supervisión de subcontratistas.
+
+---
+
 **Fin del Plan**

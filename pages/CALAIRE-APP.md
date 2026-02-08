@@ -10,21 +10,25 @@
 	- **Estado pendiente de revisión:** Incertidumbre de homogeneidad y estabilidad, Algoritmo A, Compatibilidad metrológica, Puntuaciones z, z', zeta, En
 - **Backlog Inmediato**
 	- TODO Enviar informe de hallazgos a César Yate
-	  project:: [[CALAIRE-APP]]
-	  priority:: high
-	  deadline:: 2026-02-15
+		project:: [[CALAIRE-APP]]
+		priority:: high
+		deadline:: 2026-02-15
+	- TODO Informe de estabilidad y homogeneidad (DOCX + preview HTML)
+		project:: [[CALAIRE-APP]]
+		priority:: high
+		deadline:: 2026-02-12
 	- TODO Completar informe de validación
-	  project:: [[CALAIRE-APP]]
-	  priority:: high
-	  deadline:: 2026-02-20
+		project:: [[CALAIRE-APP]]
+		priority:: high
+		deadline:: 2026-02-20
 	- TODO Documentación de uso para participantes
-	  project:: [[CALAIRE-APP]]
-	  deadline:: 2026-02-18
+		project:: [[CALAIRE-APP]]
+		deadline:: 2026-02-18
 	- TODO Testing con datos simulados (Rondas 1-4)
-	  project:: [[CALAIRE-APP]]
-	  deadline:: 2026-02-15
+		project:: [[CALAIRE-APP]]
+		deadline:: 2026-02-15
 	- TODO Migrar repositorio a GitHub del grupo
-	  project:: [[CALAIRE-APP]]
+		project:: [[CALAIRE-APP]]
 - **Especificaciones Técnicas**
 	- Lenguaje: Python 3
 	- Normativa: ISO 13528:2017

@@ -123,11 +123,27 @@ Esta declaración cumple con el requisito de transparencia de la norma ISO/IEC 1
 - [x] Fase 2 iniciada (2026-02-08 18:30)
 - [x] Fase 2 completada (2026-02-08 18:30)
 - [x] Fase 3 iniciada (2026-02-08 18:31)
-- [x] Fase 3 completada (2026-02-08 18:31)
-- [ ] Fase 4 iniciada
-- [ ] Fase 4 completada
-- [ ] Fase 5 iniciada
+- [x] Fase 3 completada (2026-02-08 18:31) - Revisada con revisor-fase, sin hallazgos Blocking/Required
+- [x] Fase 4 iniciada (2026-02-08 18:35)
+- [x] Fase 4 completada (2026-02-08 18:43) - Todas las correcciones aplicadas
+- [x] Fase 5 iniciada (2026-02-08 18:43)
 - [ ] Fase 5 completada
+
+---
+
+## Hallazgos Revisor-Fase Fase 4
+
+**Primera Revisión (2026-02-08 18:35):**
+- Required: Inconsistencia P-PSEA-01 vs P-PSEA-09 (nota de subcontratación)
+- Required: Comentarios internos en P-PSEA-09
+
+**Segunda Revisión (2026-02-08 18:40):**
+- Required: Referencia a "servicios externos" en sección de comunicación de P-PSEA-01
+
+**Correcciones aplicadas:**
+- ✅ P-PSEA-01 (línea 49): Eliminada nota que permitía subcontratación
+- ✅ P-PSEA-01 (línea 61): Eliminada mención de "servicios externos" en comunicación
+- ✅ P-PSEA-09: Eliminados comentarios embebidos ("--- comentario:", "[...]")
 
 ---
 
