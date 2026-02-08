@@ -1,5 +1,5 @@
 ```mermaid
-%%{init: {"theme": "base", "themeVariables": {"cScale0": "#999999", "cScale1": "#eeeeee", "cScale2": "#eeeeee", "cScale3": "#bbbbbb", "cScale4": "#bbbbbb", "cScale5": "#bbbbbb", "cScale6": "#bbbbbb"}}}%%
+%%{init: {"theme": "base", "themeVariables": {"cScale0": "#999999", "cScale1": "#eeeeee", "cScale2": "#eeeeee", "cScale3": "#d6d6d6", "cScale4": "#d6d6d6", "cScale5": "#d6d6d6", "cScale6": "#d6d6d6"}}}%%
 timeline
     title Programación Pruebas Piloto EA - Gases Contaminantes Criterio
     SEMANAS: Feb 16-21 <br> Ronda 1 (CANCELLED)
@@ -13,28 +13,31 @@ timeline
            :  Abr 13-18 <br>.<br> Ronda 6
            :  Abr 20-25 <br>.<br> Ronda 7
            :  Abr 27 - May 2 <br>.<br> Ronda 8
-    LUNES : Feb 16 <br> .<br> .
+           :  May 4 - May 9 <br>.<br>.
+    LUNES : Feb 16 <br>. <br>.
            : Feb 23 <br> . <br>Devolución equipos
            : Mar 2 <br> . <br>Devolución equipos
-           : Mar 9 <br> .<br> .
-           : Mar 16 <br> .<br> .
+           : Mar 9 <br>. <br>.
+           : Mar 16 <br> .<br>.
            : Mar 23 <br> . <br>Devolución equipos
            : Mar 30 <br> . <br>Devolución equipos
-           : Abr 6 <br> .<br> .
+           : Abr 6 <br>. <br>.
            : Abr 13 <br> . <br>Devolución equipos
            : Abr 20 <br> . <br>Devolución equipos
            : Abr 27 <br> . <br>Devolución equipos
-    MARTES : Feb 17 <br> .<br> .
+           : May 4 <br> . <br>Devolución equipos
+    MARTES : Feb 17 <br>. <br>.
            : Feb 24 <br> .<br> .
            : Mar 3 <br> .<br> .
-           : Mar 10 <br> .<br> .
+           : Mar 10 <br> .<br>.
            : Mar 17 <br> .<br> .
            : Mar 24 <br> . <br> .
            : Mar 31 <br> . <br> .
-           : Abr 7 <br> . <br> .
+           : Abr 7 <br> .<br>.
            : Abr 14 <br> . <br> .
            : Abr 21 <br> . <br> .
            : Abr 28 <br> . <br> .
+           : May 5 <br> .<br>.
     MIERCOLES : Feb 18 <br> Recepción - Acondicionamiento
            : Feb 25 <br> Recepción - Acondicionamiento
            : Mar 4 <br> .<br> .
@@ -46,6 +49,7 @@ timeline
            : Abr 15 <br> Recepción - Acondicionamiento
            : Abr 22 <br> Recepción - Acondicionamiento
            : Abr 29 <br> Recepción - Acondicionamiento
+           : May 6 <br> .<br> .
     JUEVES : Feb 19 <br> Prueba GAS1 - GAS2
      : Feb 26 <br> Prueba GAS1 - GAS2
      : Mar 5 <br> .<br> .
@@ -57,6 +61,7 @@ timeline
      : Abr 16 <br> Prueba GAS1 - GAS2
      : Abr 23 <br> Prueba GAS1 - GAS2
      : Abr 30 <br> Prueba GAS1 - GAS2
+     : May 7 <br> .<br> .
     VIERNES : Feb 20 <br> Prueba GAS2 - GAS3
        : Feb 27 <br> Prueba GAS2 - GAS3
        : Mar 6 <br> .<br> .
@@ -68,6 +73,7 @@ timeline
        : Abr 17 <br> Prueba GAS2 - GAS3
        : Abr 24 <br> Prueba GAS2 - GAS3
        : May 1 <br> Prueba GAS2 - GAS3
+       : May 8 <br> .<br> .
     SABADO : Feb 21 <br> Prueba GAS3 - GAS4
      : Feb 28 <br> Prueba GAS3 - GAS4
      : Mar 7 <br> .<br> .
@@ -79,4 +85,5 @@ timeline
      : Abr 18 <br> Prueba GAS3 - GAS4
      : Abr 25 <br> Prueba GAS3 - GAS4
      : May 2 <br> Prueba GAS3 - GAS4
+     : May 9 <br> .<br> .
      ```

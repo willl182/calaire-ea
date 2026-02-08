@@ -1,64 +1,39 @@
 # Session State: CALAIRE-EA Knowledge Graph
 
-**Last Updated**: 2026-02-08 12:10
+**Last Updated**: 2026-02-08 14:03
 
 ## Session Objective
 
-Corregir inconsistencias técnicas y de contenido en el Informe Ejecutivo del periodo 28 ene - 8 feb 2026, calendario de prueba piloto y documentación relacionada. Además, generar imágenes PNG de los diagramas Mermaid para que carguen correctamente en el informe y la presentación.
+Ajustar diagramas Mermaid (Gantt y Timeline) del Informe Ejecutivo con layout correcto, colores por columna y tamaños finales, y regenerar PNG/SVG para informe y slides.
 
 ## Current State
 
-- [x] Plan de correcciones creado y guardado en `logs/plans/260208_1125_plan_correcciones-informe-calendario.md`
-- [x] Corrección de 5 archivos sobre hallazgos CALAIRE-APP (error de imputación fue de César Yate, no del aplicativo)
-- [x] Hallazgos técnicos guardados en `logs/history/260208_1153_findings.md`
-- [x] Renderizado de diagramas Mermaid a PNG (Gantt: 1616x1276px, Timeline: 1616x1281px)
-- [x] Simplificación de Gantt: eliminadas subactividades de Rondas 1-2 canceladas
-- [x] Hallazgos técnicos guardados en `logs/history/260208_1230_findings.md`
-- [x] Fase 1 completada: docs/timeline.md corregido (eliminado DOMINGO, LUNES extra, ajustado formato SEMANAS)
-- [x] Fase 2 completada: docs/informes/260208_ie_01.md actualizado (César Yate, motivo cancelación, eliminada sección Fabián)
-- [x] Fase 3 completada: docs/informes/260208_ie_01_slides.md actualizado
-- [x] Fase 4 completada: pages/Informe Ejecutivo Ene 28 - Feb 8 2026.md actualizado
-- [x] Fase 5 completada: pages/Prueba Piloto.md actualizado
-- [x] Fase 6 completada: journals/2026_02_07.md actualizado
-- [x] Fase 7 completada: pages/CALAIRE-APP.md actualizado
-- [x] Fase 8 completada: pages/Fabian Moreno.md actualizado
-- [x] Fase 9 completada: Renderizado de gráficos Mermaid (Gantt y Timeline)
-- [x] Revisión de fase ejecutada con subagente revisor-fase
-- [x] Correcciones Required aplicadas (inconsistencia estado validación, status:: planificada)
-- [x] Correcciones Suggestions aplicadas (propiedades Logseq sin negritas, hito slides actualizado)
-- [x] Git commit realizado
+- [x] Gantt actualizado con rondas canceladas usando placeholders y milestones; fuente aumentada a 16px; tema neutral
+- [x] Timeline actualizado con semana final May 4-9 y devolucion May 4
+- [x] Timeline usa `theme: base` con cScale definido para columnas (1 gris oscuro, 2-3 gris ligero, 4-7 gris intermedio)
+- [x] PNG y SVG regenerados para Gantt y Timeline
+- [x] PNG del timeline generado desde SVG con Inkscape para preservar colores
+- [x] Informe y slides mantienen solo PNG (sin SVG)
+- [x] Hallazgos guardados en `logs/history/260208_1403_findings.md`
 
 ## Critical Technical Context
 
-- **Lo que validó César Yate:** homogeneidad, estabilidad, nIQR, MADe según ISO 13528 (NO z-score ni En)
-- **Renderizado Mermaid:** Usar mmdc para generar PNG desde archivos .md con diagramas Mermaid
-- **Imagenes generadas:**
-  - `docs/informes/gantt_piloto.png`: 784x1564px, 137KB
-  - `docs/informes/timeline_piloto.png`: 784x622px, 73KB
-- **Motivo de cancelación rondas febrero:** Preparación de las autoridades ambientales para las contingencias de marzo
-- **Eliminado:** Secciones sobre "Transición de Roles: Fabián Moreno" (solo contratación)
-- **Status permitidos en journals:** confirmed, pending, in_progress, in_review, cancelled, completed, documented, in_study
-- **Timeline Mermaid:** Debe tener cierre sin indentación excesiva
-- **Propiedades Logseq:** Deben ser `project::` y `tags::` (sin negritas)
+- Mermaid CLI acepta `default/forest/dark/neutral` en `-t`, pero `theme: base` solo via `%%{init: ...}%%`
+- Para que el PNG respete los colores del timeline, convertir desde SVG con Inkscape
+- Gantt usa `%%{init: {"theme": "neutral", "themeVariables": {"fontSize": "16px"}}}%%`
+- Timeline usa `%%{init: {"theme": "base", "themeVariables": {"cScale0": "#999999", "cScale1": "#eeeeee", "cScale2": "#eeeeee", "cScale3": "#d6d6d6", "cScale4": "#d6d6d6", "cScale5": "#d6d6d6", "cScale6": "#d6d6d6"}}}%%`
 
 ## Key Files Affected
 
-- `docs/timeline.md` (modificado: eliminado DOMINGO, LUNES extra, ajustado SEMANAS)
-- `docs/gantt.md` (origen para renderizado PNG)
-- `docs/informes/gantt_piloto.png` (regenerado desde gantt.md, 784x1564px)
-- `docs/informes/timeline_piloto.png` (regenerado desde timeline.md, 784x622px)
-- `docs/informes/260208_ie_01.md` (modificado: César Yate, motivo cancelación, eliminada sección Fabián)
-- `docs/informes/260208_ie_01_slides.md` (modificado: núcleo validado, hito actualizado)
-- `pages/Informe Ejecutivo Ene 28 - Feb 8 2026.md` (modificado: César Yate, propiedades sin negritas)
-- `pages/Prueba Piloto.md` (modificado: motivo cancelación)
-- `journals/2026_02_07.md` (modificado: César Yate, motivo cancelación, status corregido)
-- `pages/CALAIRE-APP.md` (modificado: César Yate)
-- `pages/Fabian Moreno.md` (modificado: eliminada sección "Rol de Suplencia")
+- `docs/gantt.md`
+- `docs/timeline.md`
+- `docs/informes/gantt_piloto.png`
+- `docs/informes/gantt_piloto.svg`
+- `docs/informes/timeline_piloto.svg`
+- `docs/informes/timeline_piloto.png`
+- `docs/informes/260208_ie_01.md`
+- `docs/informes/260208_ie_01_slides.md`
 
 ## Next Steps
 
-- [x] Corrección de documentación sobre hallazgos CALAIRE-APP (error de imputación fue de César Yate, no del aplicativo)
-- [x] Guardar hallazgos técnicos en logs/history/
-- [x] Renderizado de diagramas Mermaid a PNG
-- [x] Simplificación de Gantt (Rondas canceladas sin subactividades)
 - [ ] Commit de cambios a git
