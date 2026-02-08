@@ -1,71 +1,79 @@
-# Session State: CALAIRE-EA Ajuste Comunicación Detallada EA
+# Session State: CALAIRE-EA Ajuste de Protocolo P-PSEA-01
 
-**Last Updated**: 2026-02-08 18:15
+**Last Updated**: 2026-02-08 17:53
 
 ## Session Objective
 
-Planificar y ejecutar el ajuste de la Comunicación Detallada del Ensayo de Aptitud (M.LCAFMi-## Comunicacion Detallada EAdocx.md) para cerrar 4 brechas identificadas frente a ISO/IEC 17043:2023 y mejores prácticas internacionales.
+Planificar y preparar la actualización del Protocolo General de Ensayo de Aptitud (P-PSEA-01) para cerrar brechas identificadas frente a ISO/IEC 17043:2023 e ISO 13528:2022.
 
 ## Current State
 
-- [x] Fase 1 completada: Consolidación de Análisis Preliminares
-  - Matriz de 4 brechas priorizadas creada
-  - Hallazgo crítico: Seguridad Industrial (sin sección de normas)
-  - Hallazgos de alta prioridad: Definición σpt, Quejas y Apelaciones
-  - Hallazgo de media prioridad: Declaración Subcontratación
-
-- [x] Fase 2 completada: Mapeo de Comunicación Actual
-   - Estructura actual documentada (8 secciones con duplicidad en Sección 8)
-   - Ubicación propuesta para cada mejora:
-     * Seguridad Industrial: Sección 9 (antes de DECLARACIÓN)
-     * Definición σpt: Ampliar Sección 7 (línea 122-124)
-     * Quejas y Apelaciones: Sección 10 (después de DECLARACIÓN)
-     * Subcontratación: Ampliar Sección 8 (línea 140-141)
-   - Estructura final propuesta: 11 secciones
-
-- [x] Fase 3 completada: Extracción de Modelos de Referencia (PDFs)
-   - Extraído sección Safety de JRC-ERLAP (11.5)
-   - Extraído Quejas/Apelaciones de UBA
-   - Extraído Criterio de desempeño σpt de UBA (parcial)
-   - Extraído Horn procedure de Brno (PTPP_ZK 2023/1)
-   - Extraído Subcontratación de UCLSB
-   - Revisado con revisor-fase: hallazgos incorporados
-   - Entregable: `logs/plans/260208_1701_fase3_modelos_referencia.md`
-
-- [x] Fase 4 completada: Redacción de Mejoras
-   - Redactado borrador Seguridad Industrial (Nueva Sección 9) basado en JRC-ERLAP
-   - Redactado borrador Definición σpt (Ampliar Sección 7) basado en UBA + ISO 13528:2022
-   - Redactado borrador Quejas y Apelaciones (Nueva Sección 10) basado en UBA
-   - Redactado borrador Declaración Subcontratación (Ampliar Sección 8) basado en UCLSB
-   - Revisado con revisor-fase: hallazgos incorporados y corregidos
-   - Entregable: `logs/plans/260208_1739_fase4_borradores_mejoras.md`
-
-- [ ] Fase 5: Implementación
-
-- [ ] Fase 5: Implementación
+- [x] Fase 1 completada: Categorización de 5 brechas (3 Blocking, 1 Required, 1 Suggestions)
+- [x] Fase 2 completada: Análisis de estructura actual de P-PSEA-01
+- [x] Fase 3 completada: Extracción de criterios de ISO 13528:2022
+- [x] Fase 4 completada: Plan de mejora aprobado (4 nuevas secciones + 3 modificaciones)
+- [ ] Fase 5 pendiente: Implementación de cambios en P-PSEA-01
+- [ ] Revisión final y commit
 
 ## Critical Technical Context
 
-- El documento base es de Logseq knowledge graph, NO código. No hay build commands.
-- El archivo de comunicación tiene imágenes embebidas en base64 (image1, image2) que deben preservarse.
-- Hay duplicidad de numeración en Sección 8 (Confidencialidad y Declaración) que debe corregirse en Fase 5.
-- Las referencias a documentos adjuntos (F-PSEA-01, F-PSEA-02, I-PSEA-01) son URLs de Google Docs que deben mantenerse.
-- Se usa subagente `revisor-fase` para validar cada fase antes de proceder.
+**Documento Objetivo:**
+- P-PSEA-01 Protocolo General EA (`docs/docs_sgc/P-PSEA-01 Protocolo General EA.md`)
+- Formato actual: Tabla HTML (necesita convertión a markdown)
 
-## Files Created
+**Brechas críticas a cerrar:**
 
-1. `logs/plans/260208_1635_plan_ajuste-comunicacion-detallada-ea.md` - Plan principal con 5 fases
-2. `logs/plans/260208_1635_fase1_matriz_hallazgos.md` - Matriz de hallazgos consolidados
-3. `logs/plans/260208_1635_fase2_mapa_estructura.md` - Mapa de estructura y ubicación de mejoras
-4. `logs/plans/260208_1701_fase3_modelos_referencia.md` - Modelos extraídos de 4 PDFs
+| # | Brecha | Severidad | Referencia |
+|---|--------|-----------|------------|
+| B1 | Algoritmos robustos no especificados | Blocking | ISO 13528 Anexo C |
+| B2 | Criterios H/S cuantitativos ausentes | Blocking | ISO 13528 Anexo B |
+| B3 | Criterio de decisión z vs z' no formalizado | Required | ISO 13528 §9.2.1, §9.5.1 |
+| B4 | Tratamiento de grupos pequeños (n < 5) | Blocking | ISO 17043 §7.2.2.3, ISO 13528 §5.4 |
+| B5 | Compatibilidad metrológica no mencionada | Suggestions | ISO 13528 §7.8 |
+
+**Criterios normativos extraídos:**
+- Homogeneidad: ss ≤ 0.3σpt (ISO 13528 B.2.2)
+- z-score: z = (xi - xpt)/σpt (ISO 13528 9.4.1)
+- z'-score: z' = (xi - xpt)/√(σpt² + u²(xpt)) (ISO 13528 9.5.1)
+- ζ-score: ζ = (xi - xpt)/√(u²(xi) + u²(xpt)) (ISO 13528 9.6.1)
+- Compatibilidad: |xdiff| > 2udiff → investigar (ISO 13528 7.8.2)
+
+**Aplicativo CALAIRE-APP:**
+- Software validado que implementa algoritmos de ISO 13528
+- Manual v0.4.0 contiene fórmulas y criterios
+- Debe ser vinculado formalmente en el protocolo
+
+## Archivos del Plan
+
+- **Plan principal:** `.opencode/plans/260208_1706_plan_ajuste-protocolo-psea-01.md`
+- **Status del plan:** approved, in_progress
+
+## Secciones a Crear en P-PSEA-01
+
+1. **Métodos Estadísticos** - Definir Algoritmo A, MADe, nIQR
+2. **Criterios de Homogeneidad y Estabilidad** - Tabla con criterios cuantitativos
+3. **Contingencias Estadísticas** - Procedimiento n<5, incertidumbre alta
+4. **Validación del Valor Asignado** - Compatibilidad metrológica
+
+## Secciones a Modificar en P-PSEA-01
+
+1. **Definiciones** - Añadir z', ζ-score, umbral de incertidumbre
+2. **Procesamiento de Datos** - Vincular CALAIRE-APP validado
+3. **Referencias** - Añadir ISO 13528:2022, Manual CALAIRE-APP v0.4.0
 
 ## Next Steps
 
-1. Iniciar Fase 5: Implementación de mejoras en documento de Comunicación Detallada
-2. Crear backup del documento actual
-3. Insertar los 4 borradores en sus ubicaciones correspondientes
-4. Renumerar secciones (corregir duplicidad en Sección 8)
-5. Revisar coherencia general del documento
-6. Revisar Fase 5 con revisor-fase
-7. Actualizar plan y sesión con estado final
-8. Commit git de cambios de la sesión
+1. Crear backup de P-PSEA-01 actual
+2. Convertir documento de formato tabla HTML a markdown estructurado
+3. Insertar 4 nuevas secciones con contenido especificado en el plan
+4. Modificar 3 secciones existentes
+5. Revisar con subagent `revisor-fase`
+6. Commit con mensaje descriptivo en Git
+7. Push a repositorio remoto
+
+## Archivos Relevantes
+
+- `docs/docs_sgc/P-PSEA-01 Protocolo General EA.md` - Documento a modificar
+- `docs/compliance_protocolo_general.md` - Análisis de brechas original
+- `docs/referencias/iso 13528_2022.md` - Fuente normativa
+- `docs/referencias/iso 17043_2023.md` - Fuente normativa
