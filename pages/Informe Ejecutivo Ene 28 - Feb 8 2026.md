@@ -3,8 +3,8 @@
 	- **Documento:** [[docs/informes/260208_ie_01.md]]
 	- **Estado:** Aprobado con observaciones
 	- **Fecha emisión:** 2026-02-08
-	- **project::** [[CALAIRE-EA]]
-	- **tags::** [[Informe]], [[Documentación]]
+	- project:: [[CALAIRE-EA]]
+	- tags:: [[Informe]], [[Documentación]]
 
 - **Resumen Ejecutivo**
 	- El proyecto avanzó en gestión de participantes, maduración técnica de [[CALAIRE-APP]] y reestructuración del cronograma operativo.
@@ -30,19 +30,18 @@
 		- Extensión de buffer operativo (Rondas 7-8) para flexibilidad
 
 - **Hallazgos CALAIRE-APP**
-	- **Validación técnica:** Demostración a César Yate (consultor ISO 17043)
+	- **Validación técnica:** Demostración a César Yate (consultor ISO 17043): homogeneidad, estabilidad, nIQR, MADe
 	- **Hallazgo:** Discrepancias observadas corresponden a procesos de **imputación de datos**, no a errores en algoritmos estadísticos
-	- **Impacto:** Menor gravedad de lo inicialmente esperado; núcleo estadístico (z-score, En, MADe) validado conforme a ISO 13528:2017
-	- **Estado:** Componentes de cálculo validados; preprocesamiento requiere refinamiento
+	- **Impacto:** Menor gravedad de lo inicialmente esperado; núcleo estadístico (nIQR, MADe) validado, homogeneidad y estabilidad en revisión
+	- **Estado:** nIQR y MADe validados; homogeneidad/estabilidad en revisión; preprocesamiento requiere refinamiento
 	- **Próximos pasos:**
 		- Generación de informe de hallazgos (Wilson Salas, 2026-02-12)
 		- Refinamiento de algoritmos de imputación (Wilson Salas, 2026-02-20)
-		- Segunda validación con César Yate (Wilson Salas + César Yate, 2026-03-01)
+		- Segunda validación con César Yate: homogeneidad, estabilidad, nIQR, MADe (Wilson Salas + César Yate, 2026-03-01)
 
 - **Recursos Humanos y Contratación**
 	- **Perfil:** Contratista Líder de Proyecto - Experto en Ensayos de Calidad del Aire (Gases Contaminantes)
 	- **Contratación:** Postergada a marzo-abril 2026 (sincronizada con inicio operaciones)
-	- **Transición Fabián Moreno:** Técnico operativo durante prueba piloto → Suplencia técnica tras contratación
 	- **Modalidad:** Licitación Pública (Área Administrativa, deadline 2026-02-28)
 
 - **Próximos Pasos**
@@ -51,13 +50,13 @@
 		- Contacto Politécnico JIC (Coordinación Técnica/Wilson Salas, 2026-02-15)
 		- Informe Hallazgos CALAIRE-APP (Wilson Salas, 2026-02-12)
 	- **Corto plazo (2-4 semanas):**
-		- Alistamiento operativo y metrológico (Fabián Moreno + Wilson Salas, 2026-03-10)
+		- Alistamiento operativo y metrológico (Wilson Salas, 2026-03-10)
 		- Socialización técnica para participantes (Coordinación Técnica/Wilson Salas, 2026-03-15)
 		- Gestión de contratación (Área Administrativa, 2026-02-28)
 	- **Mediano plazo (Marzo-Abril):**
 		- Auditoría interna SGC (Jeniffer Ochoa + Wilson Salas, 2026-03-15)
-		- Segunda validación CALAIRE-APP (Wilson Salas + César Yate, 2026-03-25)
-		- Preparación logística equipos (Fabián Moreno, 2026-03-10)
+		- Segunda validación CALAIRE-APP: homogeneidad, estabilidad, nIQR, MADe (Wilson Salas + César Yate, 2026-03-25)
+		- Preparación logística equipos (Wilson Salas, 2026-03-10)
 
 - **Revisión del Informe**
 	- **7 revisores independientes** evaluaron el informe desde 5 perspectivas (precisión técnica, claridad, completitud, estructura, accionabilidad)

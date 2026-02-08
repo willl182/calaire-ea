@@ -1,9 +1,9 @@
 - tags:: [[MOC]], [[Operation]]
-- # Coordinacion Prueba Piloto (Marzo-Mayo 2026) - Febrero cancelado por contingencias ambientales
+- # Coordinacion Prueba Piloto (Marzo-Mayo 2026) - Febrero cancelado por preparación de autoridades ambientales para contingencias de marzo
 - **Cronograma General**
 	- Inicio: 2026-03-18
 	- Fin: 2026-05-04
-	- 8 Rondas (incluyendo 2 canceladas por contingencias ambientales)
+	- 8 Rondas (incluyendo 2 canceladas por preparación de autoridades para contingencias de marzo)
 - **Tareas Urgentes**
 	- DONE Actualizacion de cartas de invitacion y calendario
 	  project:: [[CALAIRE-EA]]
@@ -26,8 +26,8 @@
 	  project:: [[CALAIRE-EA]]
 	  deadline:: 2026-02-17
 - **Rondas**
-	- [[Ronda 1]] (Feb 18-23) - Cancelada por contingencias ambientales
-	- [[Ronda 2]] (Feb 25-Mar 2) - Cancelada por contingencias ambientales
+	- [[Ronda 1]] (Feb 18-23) - Cancelada por preparación de autoridades para contingencias de marzo
+	- [[Ronda 2]] (Feb 25-Mar 2) - Cancelada por preparación de autoridades para contingencias de marzo
 	- [[Ronda 3]] (Mar 18-23) - Universidad de Medellín confirmada
 	- [[Ronda 4]] (Mar 25-30) - Universidad de Medellín confirmada
 	- [[Ronda 5]] (Apr 8-13) - Universidad Pontificia Bolivariana confirmada

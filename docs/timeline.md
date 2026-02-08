@@ -2,8 +2,8 @@
 %%{init: {"theme": "base", "themeVariables": {"cScale0": "#999999", "cScale1": "#eeeeee", "cScale2": "#eeeeee", "cScale3": "#bbbbbb", "cScale4": "#bbbbbb", "cScale5": "#bbbbbb", "cScale6": "#bbbbbb"}}}%%
 timeline
     title Programación Pruebas Piloto EA - Gases Contaminantes Criterio
-    SEMANAS: Feb 16-21 <br>.<br> Ronda 1 (CANCELLED)
-           :  Feb 23-28 <br>.<br> Ronda 2 (CANCELLED)
+    SEMANAS: Feb 16-21 <br> Ronda 1 (CANCELLED)
+           :  Feb 23-28 <br> Ronda 2 (CANCELLED)
            :  Mar 2-7 <br>.<br> .
            :  Mar 9-14 <br>.<br> .
            :  Mar 16-21 <br>.<br> Ronda 3
@@ -79,26 +79,4 @@ timeline
      : Abr 18 <br> Prueba GAS3 - GAS4
      : Abr 25 <br> Prueba GAS3 - GAS4
      : May 2 <br> Prueba GAS3 - GAS4
-    DOMINGO : Feb 22 <br> .<br> .
-     : Mar 1 <br> .<br> .
-     : Mar 8 <br> .<br> .
-     : Mar 15 <br> .<br> .
-     : Mar 22 <br> .<br> .
-     : Mar 29 <br> .<br> .
-     : Abr 5 <br> .<br> .
-     : Abr 12 <br> .<br> .
-     : Abr 19 <br> .<br> .
-     : Abr 26 <br> .<br> .
-     : May 3 <br> .<br> .
-    LUNES (extra) : Feb 23 <br> .<br> .
-     : Mar 2 <br> .<br> .
-     : Mar 9 <br> .<br> .
-     : Mar 16 <br> .<br> .
-     : Mar 23 <br> .<br> .
-     : Mar 30 <br> .<br> .
-     : Abr 6 <br> .<br> .
-     : Abr 13 <br> .<br> .
-     : Abr 20 <br> .<br> .
-     : Abr 27 <br> .<br> .
-     : May 4 <br> .<br> Devolución equipos
-```
+     ```
