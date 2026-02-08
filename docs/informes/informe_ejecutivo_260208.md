@@ -1,0 +1,243 @@
+# Informe Ejecutivo - Proyecto CALAIRE-EA
+
+**Periodo:** Enero 28 - Febrero 8, 2026  
+**Proyecto:** Implementación de Ensayos de Aptitud para Gases Contaminantes Criterio (Proyecto 61134: INM + UNAL)  
+**Fase Actual:** Fase II - Ejecución y Prueba Piloto  
+**Fecha de Emisión:** 8 de febrero de 2026
+
+---
+
+## 1. Resumen Ejecutivo
+
+El proyecto CALAIRE-EA avanza en la fase de preparación operativa para la ejecución de la Prueba Piloto de Ensayos de Aptitud (EA) para gases contaminantes criterio (CO, NOx, SO2, O3). Durante el periodo comprendido entre el 28 de enero y el 8 de febrero de 2026, se han materializado avances significativos en la gestión de participantes, el desarrollo del aplicativo estadístico CALAIRE-APP, y la reestructuración del cronograma operativo.
+
+### Hitos Clave del Periodo
+
+| Fecha | Hito | Impacto |
+|-------|------|---------|
+| Ene 28 | Demostración CALAIRE-APP a consultor ISO 17043 | Inicio validación técnica del núcleo estadístico |
+| Ene 29 | Definición perfil contratista 2026 | Formalización de requerimientos de recursos humanos |
+| Feb 2 | Reprogramación inicial cronograma | Ajuste por restricciones de auditoría CALAIRE |
+| Feb 3 | Confirmación Universidad de Medellín (Rondas 3-4) | Primeras confirmaciones formales de participación |
+| Feb 5 | Confirmación UPB (Ronda 5) | Segunda confirmación institucional recibida |
+| Feb 7 | **Reestructuración mayor del cronograma** | Cancelación rondas febrero, extensión hasta mayo |
+
+La decisión crítica del periodo corresponde a la reestructuración del cronograma de la Prueba Piloto, cancelando las rondas inicialmente programadas para febrero y extendiendo el calendario hasta mayo de 2026. Esta decisión responde a la necesidad de evitar conflictos con el periodo de contingencias ambientales en la región (febrero-marzo), durante el cual SIATA y autoridades como Corantioquia mantienen operaciones críticas de vigilancia ambiental.
+
+---
+
+## 2. Cronograma Prueba Piloto (Actualizado)
+
+### 2.1 Tabla Resumen de Rondas
+
+La Prueba Piloto ha sido reestructurada para ejecutarse en un total de **8 rondas**, con las dos primeras canceladas y el inicio real trasladado al 18 de marzo de 2026.
+
+| Ronda | Periodo | Laboratorio Asignado | Estado |
+|-------|---------|---------------------|--------|
+| ~~Ronda 1~~ | ~~16-21 Feb 2026~~ | — | **CANCELLED** |
+| ~~Ronda 2~~ | ~~23-28 Feb 2026~~ | — | **CANCELLED** |
+| **Ronda 3** | 18-23 Mar 2026 | Universidad de Medellín | Confirmed |
+| **Ronda 4** | 25-30 Mar 2026 | Universidad de Medellín | Confirmed |
+| **Ronda 5** | 8-13 Abr 2026 | Universidad Pontificia Bolivariana | Confirmed |
+| **Ronda 6** | 15-20 Abr 2026 | SIATA | Pending |
+| **Ronda 7** | 22-27 Abr 2026 | Buffer / Politécnico JIC | Planificada |
+| **Ronda 8** | 29 Abr - 4 May 2026 | Buffer | Planificada |
+
+**Duración total:** 18 de marzo - 4 de mayo de 2026 (7 semanas efectivas de ensayos)
+
+### 2.2 Diagrama Gantt de Programación
+
+El siguiente diagrama presenta la secuencia completa de actividades por ronda, incluyendo recepción y acondicionamiento de equipos, ejecución de pruebas GAS1-GAS4, y devolución de equipos.
+
+![Diagrama Gantt - Programación Pruebas Piloto](gantt_piloto.png)
+
+### 2.3 Timeline Semanal Detallado
+
+El timeline muestra la distribución semanal de actividades operativas, destacando los periodos de recepción de equipos (miércoles), ejecución de pruebas (jueves-sábado), y devolución (lunes posterior).
+
+![Timeline Semanal - Pruebas Piloto](timeline_piloto.png)
+
+### Fundamento de la Reestructuración
+
+La decisión de cancelar las rondas de febrero y extender el calendario hasta mayo se fundamenta en el siguiente aprendizaje operativo documentado:
+
+> **Evitar programar rondas en periodos cercanos a contingencias ambientales.** El periodo febrero-marzo constituye una temporada crítica para SIATA y autoridades ambientales como Corantioquia, dedicada a la preparación y respuesta ante contingencias de calidad del aire. Programar ensayos de aptitud durante este periodo comprometería la disponibilidad operativa de participantes clave y las autoridades de referencia.
+
+---
+
+## 3. Gestión de Participantes
+
+### 3.1 Confirmaciones Recibidas
+
+**Universidad de Medellín (UdeM)**  
+- **Rondas asignadas:** 3 y 4 (marzo 2026)  
+- **Fecha de confirmación:** 3 de febrero 2026  
+- **Estado:** Confirmación formal recibida mediante Coordinación de Laboratorios 05  
+- **Observaciones:** Validación exitosa del alcance, cronograma y metodología operativa. Contacto principal designado para coordinación técnica.
+
+**Universidad Pontificia Bolivariana (UPB - Gelima)**  
+- **Ronda asignada:** 5 (abril 2026)  
+- **Fecha de confirmación:** 5 de febrero 2026  
+- **Estado:** Confirmación positiva para segunda semana de abril  
+- **Observaciones:** Participación validada, pendiente actualización documental de asignación de cupo.
+
+### 3.2 Participantes Pendientes de Confirmación
+
+**SIATA (Sistema de Alerta Temprana de Medellín)**  
+- **Ronda asignada:** 6 (15-20 abril 2026) — *reubicado desde Rondas 1-2*  
+- **Estado:** Confirmación pendiente  
+- **Acción requerida:** Comunicación telefónica directa para ratificar disponibilidad operativa en nueva fecha.
+
+**Politécnico Colombiano Jaime Isaza Cadavid**  
+- **Ronda potencial:** 7 (buffer)  
+- **Estado:** En prospectación  
+- **Contacto identificado:** Profesora Myryam  
+- **Acción requerida:** Obtención de información de contacto (correo electrónico) para envío de carta de invitación formal.
+
+### 3.3 Decisiones Clave sobre Participantes
+
+1. **Reubicación SIATA:** Trasladado de febrero a abril para evitar conflictos con contingencias ambientales. Esta decisión prioriza la calidad de la participación sobre el cumplimiento estricto del cronograma inicial.
+
+2. **Extensión de buffer operativo:** Creación de Rondas 7 y 8 como espacios de flexibilidad para incorporar al Politécnico JIC u otros laboratorios de referencia que confirmen participación durante el desarrollo de la prueba piloto.
+
+---
+
+## 4. Hallazgos CALAIRE-APP (Detalle Técnico)
+
+### 4.1 Cronología de Validación
+
+La validación del aplicativo estadístico CALAIRE-APP ha seguido la siguiente secuencia durante el periodo reportado:
+
+| Fecha | Evento | Resultado |
+|-------|--------|-----------|
+| Ene 28 | Demostración funcional a César Yate (consultor ISO 17043) | Sesión grabada para referencia técnica |
+| Feb 4 | Primer análisis comparativo César Yate | Identificación de discrepancias entre cálculos del aplicativo y verificación manual Excel |
+| Feb 5 | Resultados iniciales de validación | Confirmación de discrepancias en homogeneidad, estabilidad y MADe |
+| Feb 7 | Análisis de causa raíz | Determinación de que discrepancias corresponden a **imputación de datos**, no a errores en algoritmos estadísticos |
+
+### 4.2 Hallazgo Técnico: Imputación de Datos
+
+El análisis profundo de las discrepancias reportadas ha revelado que las diferencias entre los cálculos de CALAIRE-APP y la verificación manual se originan principalmente en los procesos de **imputación de datos** (manejo de valores faltantes, tratamiento de outliers, y estrategias de completitud de datasets), y no en el núcleo computacional de los algoritmos estadísticos.
+
+**Implicaciones del hallazgo:**
+
+- **Menor gravedad de lo inicialmente esperado:** Los algoritmos robustos para cálculo de z-score, estadísticos En, y estimadores MADe según ISO 13528:2017 se comportan correctamente.
+- **Núcleo estadístico validado:** La implementación de métodos estadísticos para ensayos de aptitud conforme a la norma internacional mantiene su integridad técnica.
+- **Área de mejora identificada:** Se requiere revisión y documentación de los criterios de imputación de datos aplicados en el preprocesamiento de resultados de laboratorios participantes.
+
+### 4.3 Estado del Desarrollo Técnico
+
+| Componente | Estado | Observaciones |
+|------------|--------|---------------|
+| Cálculo de z-score | Validado | Conforme a ISO 13528 |
+| Estadístico En | Validado | Conforme a ISO 13528 |
+| Estimadores robustos (MADe) | Validado | Conforme a ISO 13528 |
+| Homogeneidad de muestras | En revisión | Discrepancias atribuibles a imputación |
+| Estabilidad temporal | En revisión | Discrepancias atribuibles a imputación |
+| Preprocesamiento de datos | Pendiente ajuste | Criterios de imputación requieren refinamiento |
+
+### 4.4 Próximos Pasos Técnicos
+
+1. **Generación de informe de hallazgos:** Documento técnico detallado para el equipo de desarrollo de CALAIRE-APP, especificando los criterios de imputación identificados y recomendaciones de ajuste.
+2. **Refinamiento de algoritmos de preprocesamiento:** Implementación de criterios explícitos para manejo de datos faltantes y outliers antes de la ejecución de cálculos estadísticos.
+3. **Segunda ronda de validación:** Re-ejecución del análisis comparativo con César Yate tras implementación de ajustes.
+
+---
+
+## 5. Recursos Humanos y Contratación
+
+### 5.1 Perfil Contractual 2026
+
+Se ha formalizado el perfil profesional requerido para el contrato técnico del periodo 2026:
+
+**Denominación del cargo:** Contratista No Egresado: Líder de Proyecto EC/Experto en Calidad de Aire - Ensayos Calidad de Aire Gases Contaminantes
+
+**Requisitos técnicos:**
+- Formación: Ingeniero Químico
+- Especialización: Control Ambiental
+- Experiencia: Sistemas de vigilancia de calidad del aire, implementación ISO/IEC 17025:2017
+
+**Objetivo del contrato:** Establecer servicio profesional de comparaciones interlaboratorios y ensayos de aptitud que permita evaluación competente, imparcial e independiente del desempeño de laboratorios y redes de monitoreo en Colombia y la región.
+
+### 5.2 Postergación de Contratación
+
+El proceso de contratación del técnico principal ha sido **postergado de febrero a marzo-abril de 2026**, alineado con el nuevo cronograma de la prueba piloto. Esta postergación responde a:
+
+1. Sincronización con el inicio real de operaciones (18 de marzo)
+2. Necesidad de completar requerimientos administrativos de la licitación pública
+3. Optimización de recursos: evitar período de contratación inactivo durante febrero
+
+### 5.3 Transición de Roles: Fabián Moreno
+
+Dada la postergación de la contratación principal, se ha definido un escenario de transición para **Fabián Moreno**:
+
+- **Rol actual:** Técnico operativo principal durante la prueba piloto
+- **Rol post-contratación:** Suplencia técnica de respaldo para contingencias operativas
+- **Responsabilidades en transición:**
+  - Operación del calibrador dinámico T700U durante rondas de ensayo
+  - Soporte técnico al nuevo contratista en periodo de inducción
+  - Cobertura de contingencias (vacaciones, incapacidades) del técnico principal
+
+### 5.4 Modalidad de Contratación
+
+La contratación se ejecutará mediante **Licitación Pública**, conforme a las restricciones administrativas de la entidad (régimen de garantías). Pendiente consolidación de requerimientos administrativos por parte de la coordinación de contratación.
+
+---
+
+## 6. Próximos Pasos
+
+### Acciones Inmediatas (Próximos 7 días)
+
+1. **Confirmación SIATA:** Realizar contacto telefónico directo para ratificar participación en Ronda 6 (abril 15-20) tras la reubicación desde febrero.
+
+2. **Contacto Politécnico JIC:** Obtener información de contacto de la profesora Myryam para invitación formal a participación en Ronda 7.
+
+3. **Informe de Hallazgos CALAIRE-APP:** Generar y remitir documento técnico al equipo de desarrollo con especificaciones de ajuste en criterios de imputación de datos.
+
+### Acciones Corto Plazo (Próximas 2-4 semanas)
+
+4. **Alistamiento operativo y metrológico:** Preparar protocolos de encendido y estabilización de analizadores, calibración multipunto por gas objetivo, y validación funcional del calibrador dinámico T700U.
+
+5. **Socialización técnica para participantes:** Diseñar sesión de capacitación sobre metodología operativa de la prueba piloto y mecanismos de resolución de consultas técnicas durante las rondas.
+
+6. **Gestión de contratación:** Consolidar requerimientos administrativos para publicación de licitación pública del perfil técnico 2026.
+
+### Acciones Mediano Plazo (Marzo-Abril)
+
+7. **Auditoría interna SGC:** Ejecutar revisión documental del Sistema de Gestión de Calidad previo al inicio de operaciones.
+
+8. **Segunda validación CALAIRE-APP:** Coordinar con César Yate nueva ronda de análisis comparativo tras implementación de ajustes de imputación.
+
+9. **Preparación logística de equipos:** Verificar disponibilidad de analizadores certificados, gases de referencia, y consumibles para las 8 rondas programadas.
+
+---
+
+## Anexos
+
+### A. Documentos de Referencia
+
+- Diagrama Gantt: `docs/informes/gantt_piloto.png`
+- Timeline Semanal: `docs/informes/timeline_piloto.png`
+- Plan de Reestructuración: `logs/plans/260207_1741_plan_reestructuracion-cronograma-piloto.md`
+- Journals del periodo: `journals/2026_01_28.md` a `journals/2026_02_07.md`
+
+### B. Glosario de Abreviaturas
+
+| Abreviatura | Significado |
+|-------------|-------------|
+| CALAIRE | Laboratorio de Calibración de Gases del IDEAM |
+| EA | Ensayo de Aptitud |
+| ISO 13528 | Norma para Ensayos de Aptitud por Comparación Interlaboratorios |
+| ISO/IEC 17025 | Requisitos generales para laboratorios de ensayo y calibración |
+| ISO 17043 | Requisitos para organismos que realizan EA |
+| MADe | Mediana de las Desviaciones Absolutas (estimador robusto) |
+| SIATA | Sistema de Alerta Temprana de Medellín |
+| UdeM | Universidad de Medellín |
+| UPB | Universidad Pontificia Bolivariana |
+| JIC | Politécnico Colombiano Jaime Isaza Cadavid |
+
+---
+
+**Elaborado por:** Sistema de Gestión de Conocimiento CALAIRE-EA  
+**Fecha de generación:** 8 de febrero de 2026  
+**Próxima actualización:** 22 de febrero de 2026
