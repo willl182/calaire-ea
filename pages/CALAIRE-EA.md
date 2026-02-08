@@ -28,4 +28,7 @@
 	- [[docs/gantt.md]] - Cronograma Gantt.
 	- [[docs/timeline.md]] - Línea de tiempo rondas.
 	- [[docs/memoria_2025.md]] - Memoria de actividades 2025.
+- **Informes Ejecutivos**
+	- [[Informe Ejecutivo Ene 28 - Feb 8 2026]] - Período reportado: 28 Ene - 8 Feb 2026.
+	 
 
