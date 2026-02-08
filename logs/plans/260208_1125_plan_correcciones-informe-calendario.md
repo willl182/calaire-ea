@@ -1,7 +1,7 @@
 # Plan: Correcciones Informe Ejecutivo y Calendario
 
 **Created**: 2026-02-08 11:25
-**Updated**: 2026-02-08 11:25
+**Updated**: 2026-02-08 11:45
 **Status**: completed
 **Slug**: correcciones-informe-calendario
 
@@ -9,7 +9,7 @@
 
 ## Objetivo
 
-Corregir inconsistencias técnicas y de contenido en el Informe Ejecutivo del periodo 28 ene - 8 feb 2026, calendario de prueba piloto y documentación relacionada. Las correcciones se basan en aclaraciones proporcionadas por el usuario sobre lo que validó el consultor César Yate y el motivo de cancelación de las rondas de febrero.
+Corregir inconsistencias técnicas y de contenido en el Informe Ejecutivo del periodo 28 ene - 8 feb 2026, calendario de prueba piloto y documentación relacionada. Las correcciones se basan en aclaraciones proporcionadas por el usuario sobre lo que validó el consultor César Yate y el motivo de cancelación de las rondas de febrero. Además, generar imágenes PNG de los diagramas Mermaid para que carguen correctamente en el informe y la presentación.
 
 ---
 
@@ -106,6 +106,15 @@ Corregir inconsistencias técnicas y de contenido en el Informe Ejecutivo del pe
 |---|---------|--------|-------------|
 | 8.1 | `pages/Fabian Moreno.md` | Eliminar | Líneas 9-10: Eliminar sección completa "## Rol de Suplencia" y su contenido |
 
+### Fase 9: Renderizado de Gráficos Mermaid
+
+**Objetivo:** Generar imágenes PNG de los diagramas Mermaid para que carguen correctamente en el informe y la presentación.
+
+| # | Archivo | Acción | Descripción |
+|---|---------|--------|-------------|
+| 9.1 | `docs/gantt.md` | Renderizar | Generar PNG usando mmdc → `docs/informes/gantt_piloto.png` |
+| 9.2 | `docs/timeline.md` | Renderizar | Generar PNG usando mmdc → `docs/informes/timeline_piloto.png` |
+
 ---
 
 ## Log de Ejecución
@@ -126,3 +135,5 @@ Corregir inconsistencias técnicas y de contenido en el Informe Ejecutivo del pe
 - [x] Fase 7 completada
 - [x] Fase 8 iniciada
 - [x] Fase 8 completada
+- [x] Fase 9 iniciada
+- [x] Fase 9 completada
