@@ -1,8 +1,8 @@
 # Plan: Ajuste de Sección 8.1 - Declaración de No Subcontratación
 
 **Created**: 2026-02-08 18:26
-**Updated**: 2026-02-08 18:26
-**Status**: approved
+**Updated**: 2026-02-08 18:45
+**Status**: completed
 **Slug**: ajuste-no-subcontratacion-comunicacion-detallada
 
 ---
