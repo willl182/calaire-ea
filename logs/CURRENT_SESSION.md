@@ -1,4 +1,4 @@
-# Session State: CALAIRE-EA Knowledge Graph
+# Session State: Revision 2 - openai/gpt-5.2
 
 **Last Updated**: 2026-02-08 11:16
 
@@ -48,7 +48,7 @@ Completar Fase 6 (revisiones) y Fase 7 (consolidación e implementación) del in
 | Informe Hallazgos | Wilson Salas | Generación informe, Refinamiento algoritmos |
 | Alistamiento | Fabián Moreno + Wilson Salas | Protocolos, calibración equipos |
 | Contratación | Área Administrativa | Licitación pública |
-| Auditoría SGC | Coordinación SGC + Wilson Salas | Revisión documental |
+| Auditoría SGC | Jeniffer Ochoa + Wilson Salas | Revisión documental |
 | Validación | Wilson Salas + César Yate | Segunda ronda CALAIRE-APP |
 | Logística equipos | Fabián Moreno | Disponibilidad y certificación |
 

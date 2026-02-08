@@ -139,7 +139,7 @@ Ordenadas por: **Severidad × Consenso**
 | **6.4** | Alistamiento operativo | Fabián Moreno + Wilson Salas | 2026-03-10 | Protocolos validados y equipos calibrados |
 | **6.5** | Socialización técnica | Coordinación Técnica (Wilson Salas) | 2026-03-15 | Sesión de capacitación ejecutada |
 | **6.6** | Gestión de contratación | Área Administrativa | 2026-02-28 | Requisitos consolidados y licitación publicada |
-| **6.7** | Auditoría interna SGC | Coordinación SGC + Wilson Salas | 2026-03-15 | Informe de auditoría emitido |
+| **6.7** | Auditoría interna SGC | Jeniffer Ochoa + Wilson Salas | 2026-03-15 | Informe de auditoría emitido |
 | **6.8** | Segunda validación CALAIRE-APP | Wilson Salas + César Yate | 2026-03-25 | Validación exitosa documentada |
 | **6.9** | Preparación logística equipos | Fabián Moreno | 2026-03-10 | Equipos certificados y disponibles |
 
