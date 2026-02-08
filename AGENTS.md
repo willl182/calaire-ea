@@ -172,6 +172,83 @@ Available templates to insert via `/template` command in Logseq:
 
 ---
 
+## Journal Entry Format
+
+Daily journal entries in `journals/` must follow this standard format consistently.
+
+### Required Structure
+
+```markdown
+# Registro del Día
+  project:: [[CALAIRE-EA]]
+- ## [Nombre de Sección]
+	- **[Título del Evento]:** descripción técnica detallada del evento, incluyendo contexto, impacto y próximos pasos cuando aplique. Usar tercera persona o voz impersonal.
+	  date:: YYYY-MM-DD
+	  category:: [[Categoría]]
+	  status:: [status_value]
+- ## Referencias
+	- [[Página Relevante 1]]
+	- [[Página Relevante 2]]
+```
+
+### Section Categories
+
+Use these standard section names (in Spanish):
+
+| Section Name | Purpose |
+|--------------|---------|
+| `Gestión de Cronograma Prueba Piloto` | Schedule changes, round updates |
+| `Gestión de Participantes Prueba Piloto` | Lab confirmations, invitations |
+| `Recursos Humanos` | Team changes, hiring, roles |
+| `Desarrollo Técnico` | CALAIRE-APP, technical findings |
+| `Gestión Administrativa` | Administrative tasks, communications |
+| `Infraestructura` | Equipment, facilities, space |
+| `Prospectación de Laboratorios` | New lab contacts, outreach |
+| `Aprendizajes y Decisiones` | Lessons learned, key decisions |
+| `Actualizaciones de Documentación` | Graph updates, sync activities |
+| `Referencias` | Links to relevant pages (always last) |
+
+### Block Properties
+
+Each event block should include:
+
+| Property | Format | Values |
+|----------|--------|--------|
+| `date::` | `YYYY-MM-DD` | Date of the event |
+| `category::` | `[[Category]]` | `[[Prueba Piloto]]`, `[[Desarrollo Técnico]]`, `[[Gestión Administrativa]]` |
+| `status::` | lowercase | `confirmed`, `pending`, `in_progress`, `in_review`, `cancelled`, `completed`, `documented`, `in_study` |
+
+### Writing Style for Journals
+
+1. **Format**: Start with `**Título del Evento:**` followed by description
+2. **Voice**: Third person or impersonal (never first person)
+3. **Tone**: Technical and professional
+4. **Detail**: Include context, impact, and next steps
+5. **Links**: Reference relevant MOCs and pages with `[[Page Name]]`
+6. **Never copy user input verbatim**: Always reformulate and enrich
+
+### Example Journal Entry
+
+```markdown
+# Registro del Día
+  project:: [[CALAIRE-EA]]
+- ## Gestión de Participantes Prueba Piloto
+	- **Confirmación Universidad Pontificia Bolivariana (Gelima):** respuesta positiva recibida para participación en [[Ronda 5]] (segunda semana de abril 2026, periodo 8-13 de abril). Se procederá a actualizar documentación de confirmaciones y asignación de cupo en el calendario operativo.
+	  date:: 2026-02-05
+	  category:: [[Prueba Piloto]]
+	  status:: confirmed
+- ## Desarrollo Técnico
+	- **Resultados Iniciales CALAIRE-APP:** César Yate, consultor especialista en ISO 17043, remitió primer análisis de validación comparativa entre cálculos ejecutados en el aplicativo y verificación manual. Los resultados evidencian discrepancias metodológicas que requieren revisión técnica profunda de los algoritmos implementados en [[CALAIRE-APP]].
+	  date:: 2026-02-05
+	  category:: [[Desarrollo Técnico]]
+	  status:: in_review
+- ## Referencias
+	- [[Prueba Piloto]]
+	- [[CALAIRE-APP]]
+```
+
+---
+
 ## Mermaid Diagrams
 
 This graph uses Mermaid for visualizations (Gantt, Timeline). Example pattern:
