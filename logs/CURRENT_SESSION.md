@@ -1,6 +1,6 @@
 # Session State: CALAIRE-EA Knowledge Graph
 
-**Last Updated**: 2026-02-08 09:39
+**Last Updated**: 2026-02-08 09:41
 
 ## Session Objective
 
@@ -10,11 +10,11 @@ Ejecutar sistema de revisión del informe ejecutivo con 5 modelos independientes
 
 **Plan Activo**: `logs/plans/plan_ie_01.md`
 - Status: in_progress
-- Fase 6 en progreso: 2/5 revisiones completadas
+- Fase 6 en progreso: 3/5 revisiones completadas
 
 **Fase 6 - Estado de Revisiones:**
 - [x] Revisión 1 (rev1) - GLM-4.7 - Completada
-- [ ] Revisión 2 (rev2) - Pendiente
+- [x] Revisión 2 (rev2) - openai/gpt-5.2 - Completada
 - [ ] Revisión 3 (rev3) - Pendiente
 - [ ] Revisión 4 (rev4) - Pendiente
 - [x] Revisión 5 (rev5) - Claude Opus 4 - Completada
@@ -24,6 +24,7 @@ Ejecutar sistema de revisión del informe ejecutivo con 5 modelos independientes
 | Archivo | Modelo | Hallazgos | Veredicto |
 |---------|--------|-----------|-----------|
 | `260208_ie_01_rev1.md` | GLM-4.7 | 0 críticos, 0 mayores, 11 menores | Aprobado con observaciones |
+| `260208_ie_01_rev2.md` | openai/gpt-5.2 | 0 críticos, 7 mayores, 13 menores | Aprobado con observaciones |
 | `260208_ie_01_rev5.md` | Claude Opus 4 | 0 críticos, 1 mayor, 13 menores | Aprobado con observaciones |
 
 ## Consensos Preliminares (rev1 + rev5)
@@ -36,7 +37,7 @@ Hallazgos identificados por ambos modelos:
 
 ## Next Steps
 
-1. Ejecutar revisiones 2, 3 y 4 con modelos adicionales
+1. Ejecutar revisiones 3 y 4 con modelos adicionales
 2. Guardar en `docs/informes/260208_ie_01_rev[N].md`
 3. **NO pasar a Fase 7** hasta completar las 5 revisiones
 
