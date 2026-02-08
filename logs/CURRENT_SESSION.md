@@ -1,6 +1,6 @@
 # Session State: CALAIRE-EA Ajuste Comunicación Detallada EA
 
-**Last Updated**: 2026-02-08 17:05
+**Last Updated**: 2026-02-08 18:15
 
 ## Session Objective
 
@@ -32,7 +32,15 @@ Planificar y ejecutar el ajuste de la Comunicación Detallada del Ensayo de Apti
    - Revisado con revisor-fase: hallazgos incorporados
    - Entregable: `logs/plans/260208_1701_fase3_modelos_referencia.md`
 
-- [ ] Fase 4: Redacción de Mejoras
+- [x] Fase 4 completada: Redacción de Mejoras
+   - Redactado borrador Seguridad Industrial (Nueva Sección 9) basado en JRC-ERLAP
+   - Redactado borrador Definición σpt (Ampliar Sección 7) basado en UBA + ISO 13528:2022
+   - Redactado borrador Quejas y Apelaciones (Nueva Sección 10) basado en UBA
+   - Redactado borrador Declaración Subcontratación (Ampliar Sección 8) basado en UCLSB
+   - Revisado con revisor-fase: hallazgos incorporados y corregidos
+   - Entregable: `logs/plans/260208_1739_fase4_borradores_mejoras.md`
+
+- [ ] Fase 5: Implementación
 
 - [ ] Fase 5: Implementación
 
@@ -53,9 +61,11 @@ Planificar y ejecutar el ajuste de la Comunicación Detallada del Ensayo de Apti
 
 ## Next Steps
 
-1. Iniciar Fase 4: Redactar mejoras basado en modelos extraídos
-2. Revisar σpt pendiente: consultar `docs/iso 13528_2022.md` para definición formal
-3. Redactar 4 borradores lineados (Safety, σpt, Quejas/Apelaciones, Subcontratación)
-4. Revisar Fase 4 con revisor-fase
-5. Actualizar plan con log de ejecución
-6. Commit git de cambios de la sesión
+1. Iniciar Fase 5: Implementación de mejoras en documento de Comunicación Detallada
+2. Crear backup del documento actual
+3. Insertar los 4 borradores en sus ubicaciones correspondientes
+4. Renumerar secciones (corregir duplicidad en Sección 8)
+5. Revisar coherencia general del documento
+6. Revisar Fase 5 con revisor-fase
+7. Actualizar plan y sesión con estado final
+8. Commit git de cambios de la sesión
