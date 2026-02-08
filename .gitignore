@@ -3,3 +3,6 @@ bak/
 pages-metadata.edn
 logseq/graphs-txid.edn
 logseq/.recycle/
+prompt.md
+intruccion.md
+*.md~
