@@ -6,21 +6,9 @@ gantt
     Inicio Prueba Piloto: milestone, m1, 2026-03-16, 0d
     section Ronda 1 (CANCELLED) <br> Semana 1 <br> Feb 16-21
     Ronda 1 (CANCELLED) :r1, 2026-02-16, 6d
-    Recepción Equipos: r1_rec, 2026-02-18, 1d
-    Acondicionamiento: r1_ac, 2026-02-18, 1d
-    Inicio Pruebas: r1_ini, 2026-02-19, 1d
-    Continuación Pruebas: r1_cont, 2026-02-20, 1d
-    Fin Pruebas: r1_fin, 2026-02-21, 1d
-    Devolución Equipos: r1_dev, 2026-02-23, 1d
 
     section Ronda 2 (CANCELLED) <br> Semana 2 <br> Feb 23-28
     Ronda 2 (CANCELLED) :r2, 2026-02-23, 6d
-    Recepción Equipos: r2_rec, 2026-02-25, 1d
-    Acondicionamiento: r2_ac, 2026-02-25, 1d
-    Inicio Pruebas: r2_ini, 2026-02-26, 1d
-    Continuación Pruebas: r2_cont, 2026-02-27, 1d
-    Fin Pruebas: r2_fin, 2026-02-28, 1d
-    Devolución Equipos: r2_dev, 2026-03-02, 1d
 
     section Semana 3 <br> Mar 2-7
     Devolución Equipos: r2_dev, 2026-03-02, 1d

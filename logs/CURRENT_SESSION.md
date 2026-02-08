@@ -11,6 +11,9 @@ Corregir inconsistencias técnicas y de contenido en el Informe Ejecutivo del pe
 - [x] Plan de correcciones creado y guardado en `logs/plans/260208_1125_plan_correcciones-informe-calendario.md`
 - [x] Corrección de 5 archivos sobre hallazgos CALAIRE-APP (error de imputación fue de César Yate, no del aplicativo)
 - [x] Hallazgos técnicos guardados en `logs/history/260208_1153_findings.md`
+- [x] Renderizado de diagramas Mermaid a PNG (Gantt: 1616x1276px, Timeline: 1616x1281px)
+- [x] Simplificación de Gantt: eliminadas subactividades de Rondas 1-2 canceladas
+- [x] Hallazgos técnicos guardados en `logs/history/260208_1230_findings.md`
 - [x] Fase 1 completada: docs/timeline.md corregido (eliminado DOMINGO, LUNES extra, ajustado formato SEMANAS)
 - [x] Fase 2 completada: docs/informes/260208_ie_01.md actualizado (César Yate, motivo cancelación, eliminada sección Fabián)
 - [x] Fase 3 completada: docs/informes/260208_ie_01_slides.md actualizado
@@ -56,4 +59,6 @@ Corregir inconsistencias técnicas y de contenido en el Informe Ejecutivo del pe
 
 - [x] Corrección de documentación sobre hallazgos CALAIRE-APP (error de imputación fue de César Yate, no del aplicativo)
 - [x] Guardar hallazgos técnicos en logs/history/
-- [x] Commit de correcciones a git
+- [x] Renderizado de diagramas Mermaid a PNG
+- [x] Simplificación de Gantt (Rondas canceladas sin subactividades)
+- [ ] Commit de cambios a git
