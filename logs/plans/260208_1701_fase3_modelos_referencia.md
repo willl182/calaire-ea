@@ -318,3 +318,106 @@ Para complementar la información extraída, se recomienda consultar:
 ---
 
 **Fin de Fase 3**
+
+---
+
+## Validación de Implementación (Post-Fase 5)
+
+### Verificación de Aplicación de Modelos
+
+| # | Modelo Referencia | Hallazgo Asociado | Sección Implementada | Estado de Aplicación |
+|---|-------------------|-------------------|---------------------|---------------------|
+| 3.1 | JRC-ERLAP (Safety) | Hallazgo #1: Seguridad Industrial | Sección 9 (líneas 206-277) | ✅ Aplicado con adaptación |
+| 3.2 | UBA (Quejas/Apelaciones) | Hallazgo #3: Quejas y Apelaciones | Sección 11 (líneas 283-365) | ✅ Aplicado con adaptación |
+| 3.3 | UBA (σpt) | Hallazgo #2: Definición σpt | Sección 7 (líneas 124-138) | ✅ Aplicado con ISO 13528:2022 |
+| 3.4 | Brno (Horn) | Hallazgo #2: Grupos pequeños | Sección 7 (líneas 130-136, referencia n≥8) | ⚠️ Referenciado, no implementado en Comunicación Detallada |
+| 3.5 | UCLSB (Subcontratación) | Hallazgo #4: Declaración Subcontratación | Sección 8.1 (líneas 159-204) | ✅ Aplicado con adaptación |
+
+---
+
+### Detalle de Adaptaciones Realizadas
+
+#### 3.1 JRC-ERLAP → Sección 9 (Seguridad Industrial)
+
+| Elemento JRC-ERLAP | Adaptación CALAIRE-EA | Líneas |
+|---------------------|----------------------|--------|
+| Número de emergencia (+39 0332 78 9999) | Número de contacto del Laboratorio CALAIRE | 214 |
+| EPP obligatorio (guantes, safety shoes) | EPP completo: guantes, calzado, lentes/gafas, ropa de laboratorio | 220-225 |
+| Regulación italiana (D.lgs. 81/2008) | Decreto Ley 1072 de 2015 (Colombia) | 233-234 |
+| Puntos de encuentro (interno/externo) | Puntos específicos del campus universitario | 263-264 |
+| Extinguidor en área de PT | Extinguidor ABC + estación lavado ojos + detectores de fugas | 254-257 |
+
+**Estado:** ✅ Adapción completa, normativa localizada
+
+---
+
+#### 3.2 UBA → Sección 11 (Quejas y Apelaciones)
+
+| Elemento UBA | Adaptación CALAIRE-EA | Líneas |
+|--------------|----------------------|--------|
+| Plazo de 14 días | 14 días calendario (mantenido) | 289 |
+| Canal de comunicación (correo electrónico) | Correo oficial del Laboratorio CALAIRE | 300 |
+| Dos momentos de aplicación | Confirmación de participación + informe final (mantenido) | 291-292 |
+| Proceso de manejo (3 etapas) | Acuse de recibo, investigación, contacto (ampliado) | 318-329 |
+| Expertos no involucrados | Imparcialidad mediante revisores independientes (mantenido) | 335 |
+| Protección del reclamante ("no disadvantage") | "No resultará en ninguna desventaja ni perjuicio" (mantenido) | 337 |
+| Resolución (cambios editoriales/técnicos) | Cambios editoriales, técnicos, nueva edición (mantenido) | 356-359 |
+
+**Estado:** ✅ Adapción completa, estructura ampliada
+
+---
+
+#### 3.3 UBA + ISO 13528 → Sección 7 (Definición σpt)
+
+| Elemento UBA/ISO 13528 | Adaptación CALAIRE-EA | Líneas |
+|-------------------------|----------------------|--------|
+| Reproducibility standard deviation | Definición σₚₜ según ISO 13528:2022 cláusula 3.4 | 126 |
+| Rondas previas (>6 rondas) | Rondas subsiguientes con datos históricos (mantenido) | 130-132 |
+| Alternativa: ronda actual sin outliers | Estrategia alternativa para casos especiales | 132 |
+| Contexto: primera ronda sin datos históricos | Fitness-for-purpose para Ronda Piloto (añadido) | 134-136 |
+| Evolución del criterio | Revisión anual conforme se acumulen rondas (añadido) | 138 |
+
+**Estado:** ✅ Adapción completa, complementada con ISO 13528:2022
+
+---
+
+#### 3.4 Brno → Referencia (Grupos Pequeños)
+
+| Elemento Brno | Implementación |
+|---------------|---------------|
+| Horn's procedure (n < 8) | Referenciado en Sección 7 (línea 130: n≥8) |
+| Criterio de activación | "Para rondas subsiguientes (n ≥ 8)" |
+
+**Estado:** ⚠️ Referenciado pero no detallado en Comunicación Detallada. Horn procedure se considera parte de procedimientos estadísticos internos (P-PSEA-01, CALAIRE-APP).
+
+---
+
+#### 3.5 UCLSB → Sección 8.1 (Subcontratación)
+
+| Elemento UCLSB | Adaptación CALAIRE-EA | Líneas |
+|----------------|----------------------|--------|
+| Declaración explícita | "Se utilizan servicios de subcontratistas" (mantenido) | 161 |
+| Responsabilidad total | "Responsabilidad total sobre todas las operaciones" (mantenido) | 161 |
+| "Under its procedure" | "Bajo procedimientos formales del SGC" (mantenido) | 163 |
+| "In the presence of members of its team" | "En presencia de miembros del equipo técnico" (mantenido) | 184 |
+| Actividades subcontratadas (homogeneidad, estabilidad) | Mezclas gaseosas, homogeneidad, transporte especializado | 167-169 |
+| Calificación del subcontratista | Criterios de selección: acreditación ISO 17025, experiencia (añadido) | 177-180 |
+
+**Estado:** ✅ Adapción completa, criterios de selección añadidos
+
+---
+
+### Validación de Pendientes σpt
+
+| Pendiente | Estado | Resolución |
+|-----------|--------|------------|
+| Definición formal σpt | ✅ Resuelto | Línea 126, cláusula 3.4 ISO 13528:2022 |
+| Criterio para primera ronda | ✅ Resuelto | Líneas 134-136, fitness-for-purpose con MRC trazables |
+| Fitness for purpose | ✅ Resuelto | Líneas 134-136, valor objetivo derivado de accuracy testing |
+| Aplicación a gases | ✅ Resuelto | Contexto explícito: "gases contaminantes criterio" |
+
+**Estado:** Todos los pendientes σpt resueltos en Fase 4 e implementados en Fase 5
+
+---
+
+**Fin de Fase 3**

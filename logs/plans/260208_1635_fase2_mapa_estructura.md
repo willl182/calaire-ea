@@ -1,6 +1,8 @@
 # Mapa de Estructura - Fase 2
 
 **Created**: 2026-02-08 16:45
+**Updated**: 2026-02-08 18:30
+**Status**: completed
 **Fase**: 2 - Mapeo de Comunicación Actual
 **Documento base**: docs/docs_sgc/M.LCAFMi-## Comunicacion Detallada EAdocx.md
 
@@ -224,3 +226,72 @@
 | **Total** | **138** | **153-159** | **+15-21** |
 
 **Impacto estimado:** El documento crecerá aproximadamente 15-21 líneas (11-15%).
+
+---
+
+## Validación de Implementación (Post-Fase 5)
+
+### Verificación de Inserciones
+
+| # | Inserción | Punto de Inserción Propuesto | Punto de Inserción Realizado | Estado |
+|---|-----------|------------------------------|----------------------------|--------|
+| 1 | Definición σpt | Línea 122-124 (Sección 7) | Líneas 124-138 (Sección 7) | ✅ Correcto |
+| 2 | Subcontratación | Línea 140-141 (Sección 8) | Líneas 159-204 (Sección 8.1) | ✅ Correcto |
+| 3 | Seguridad Industrial | Línea 141-143 (antes de DECLARACIÓN) | Líneas 206-277 (Sección 9) | ✅ Correcto |
+| 4 | Quejas y Apelaciones | Línea 145-147 (después de DECLARACIÓN) | Líneas 283-365 (Sección 11) | ✅ Correcto |
+
+---
+
+### Verificación de Renumeración
+
+**Estructura final implementada:**
+
+| # | Título (Propuesto) | Título (Implementado) | Estado |
+|---|-------------------|----------------------|--------|
+| 1 | OBJETIVO DEL ENSAYO DE APTITUD | OBJETIVO DEL ENSAYO DE APTITUD | ✅ |
+| 2 | ALCANCE Y PARÁMETROS DE MEDICIÓN | ALCANCE Y PARÁMETROS DE MEDICIÓN | ✅ |
+| 3 | ÍTEM DE ENSAYO DE APTITUD | ÍTEM DE ENSAYO DE APTITUD | ✅ |
+| 4 | CRONOGRAMA | CRONOGRAMA | ✅ |
+| 5 | INSTRUCCIONES GENERALES Y TRANSPORTE | INSTRUCCIONES GENERALES Y TRANSPORTE | ✅ |
+| 6 | PROTOCOLO DE MEDICIÓN EN SITIO | PROTOCOLO DE MEDICIÓN EN SITIO | ✅ |
+| 7 | EVALUACIÓN DE DESEMPEÑO (ampliar) | EVALUACIÓN DE DESEMPEÑO | ✅ Ampliada |
+| 8 | CONFIDENCIALIDAD E IMPARCIALIDAD (ampliar) | CONFIDENCIALIDAD E IMPARCIALIDAD | ✅ Ampliada |
+| 8.1 | - | Subcontratación de Actividades | ✅ Nueva |
+| 9 | SEGURIDAD INDUSTRIAL (nueva) | SEGURIDAD INDUSTRIAL | ✅ Nueva |
+| 10 | DECLARACIÓN (renumerar) | DECLARACIÓN | ✅ Renumerada |
+| 11 | QUEJAS Y APELACIONES (nueva) | QUEJAS Y APELACIONES | ✅ Nueva |
+
+---
+
+### Análisis de Longitud Final
+
+| Sección | Líneas estimadas | Líneas implementadas | Variación |
+|---------|------------------|---------------------|-----------|
+| 1 | 3 | 3 | 0 |
+| 2 | 15 | 15 | 0 |
+| 3 | 9 | 9 | 0 |
+| 4 | 8 | 8 | 0 |
+| 5 | 20 | 20 | 0 |
+| 6 | 40 | 40 | 0 |
+| 7 | 28 (+3) | 28 (+3) | ✅ |
+| 8 | 4 (+2) | 46 (+44) | ⚠️ Incluye 8.1 completa |
+| 9 | 8-10 (nueva) | 72 (nueva) | ✅ |
+| 10 | 3 (renumerado) | 3 | ✅ |
+| 11 | 5-7 (nueva) | 83 (nueva) | ✅ |
+| Cierre | 13 | 13 | 0 |
+| **Total** | **153-159** | **340** | ⚠️ Mayor que estimado |
+
+**Nota:** El crecimiento mayor al estimado se debe a que las nuevas secciones (9 y 11) incluyen subsecciones detalladas que no estaban completamente dimensionadas en la fase de planificación.
+
+---
+
+### Validación de Coherencia
+
+- ✅ Referencias cruzadas a secciones internas (ej. F-PSEA-01, F-PSEA-02) preservadas
+- ✅ Imágenes embebidas (image1, image2) intactas
+- ✅ Términos técnicos consistentes (σₚₜ, ζ-score, Eₙ-score)
+- ✅ Numeración de subsecciones correcta (9.1-9.7, 8.1.1-8.1.4, 11.1-11.7)
+
+---
+
+**Fin de Fase 2**

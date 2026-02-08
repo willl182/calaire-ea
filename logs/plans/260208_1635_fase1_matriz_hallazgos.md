@@ -1,6 +1,8 @@
 # Matriz Consolidada de Hallazgos - Fase 1
 
 **Created**: 2026-02-08 16:36
+**Updated**: 2026-02-08 18:30
+**Status**: completed
 **Fase**: 1 - Consolidación de Análisis Preliminares
 **Documento base**: M.LCAFMi-## Comunicacion Detallada EAdocx.md
 
@@ -196,3 +198,40 @@ Declarar explícitamente en Sección 8:
 **Observaciones pendientes:**
 - Referencias a PDFs externos (UBA 2025, JRC-ERLAP) requieren extracción en Fase 3 para completar trazabilidad
 - Evidencia de `comparacion_comunicacion_vs_otras2.md` citada en sección "Análisis Comparativo" pero no explícitamente en matriz; esto es correcto dado que ese documento audita ejemplos de referencia, no la comunicación actual de CALAIRE
+
+---
+
+## Validación de Implementación (Post-Fase 5)
+
+### Verificación de Hallazgos Cerrados
+
+| # | Hallazgo | Severidad | Estado Final | Documento Implementado |
+|---|----------|-----------|--------------|------------------------|
+| 1 | Seguridad Industrial | Crítica | ✅ Cerrado | Sección 9 (líneas 206-277) |
+| 2 | Definición σpt | Alta | ✅ Cerrado | Sección 7 (líneas 124-138) |
+| 3 | Quejas y Apelaciones | Alta | ✅ Cerrado | Sección 11 (líneas 283-365) |
+| 4 | Subcontratación | Media | ✅ Cerrado | Sección 8.1 (líneas 159-204) |
+
+**Verificado en**: `docs/docs_sgc/M.LCAFMi-## Comunicacion Detallada EAdocx.md` (2026-02-08)
+
+---
+
+### Cumplimiento Final vs ISO 17043
+
+| Cláusula ISO 17043 | Estado Inicial | Estado Final | Evidencia de Cierre |
+|-------------------|----------------|--------------|---------------------|
+| 7.1.2 Comunicación del esquema | CUMPLE | CUMPLE | Sin cambios |
+| 7.2.3 Determinación del valor asignado | CUMPLE | CUMPLE | Sin cambios |
+| 7.3.5.2 Instrucciones a participantes | CUMPLE | CUMPLE | Sin cambios |
+| 7.4.2 Criterios de evaluación | CUMPLE PARCIALMENTE | **CUMPLE** | Sección 7, definición σpt |
+| 7.6 Quejas | NO CUMPLE | **CUMPLE** | Sección 11, procedimiento documentado |
+| 7.7 Apelaciones | NO CUMPLE | **CUMPLE** | Sección 11, procedimiento documentado |
+| 7.3.4 Seguridad | CUMPLE PARCIALMENTE | **CUMPLE** | Sección 9, normas de seguridad in-situ |
+| 6.4 Subcontratación | NO CUMPLE | **CUMPLE** | Sección 8.1, declaración explícita |
+| 4.2 Confidencialidad | CUMPLE | CUMPLE | Sin cambios |
+
+**Resumen**: 4 brechas cerradas, cumplimiento total con ISO/IEC 17043:2023
+
+---
+
+**Fin de Fase 1**
