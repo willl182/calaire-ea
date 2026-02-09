@@ -18,6 +18,38 @@ managers. Content is structured markdown files consumed by Logseq.
 ├── journals/           # Daily entries (YYYY_MM_DD.md format)
 ├── pages/              # Permanent notes, MOCs, templates
 ├── docs/               # External documentation, ISO standards, static references
+│   ├── pm/             # Artefactos PMI (Project Charter, EDT, etc.)
+│   ├── instrucciones/  # Guías PMI y artefactos de gestión
+│   ├── auxiliares/     # Archivos operativos, CSV, calendarios
+│   ├── docs_sgc/        # Sistema de Gestión de Calidad
+│   └── pm_ai_plan.md    # Estrategia IA-Driven (referencia)
+├── ref/                # System references (Logseq guide, setup docs)
+└── logseq/             # Logseq configuration
+    ├── config.edn      # Graph settings, queries, macros
+    └── custom.css      # Theme customizations
+```
+/                       # Graph root
+├── journals/           # Daily entries (YYYY_MM_DD.md format)
+├── pages/              # Permanent notes, MOCs, templates
+├── docs/               # External documentation, ISO standards, static references
+│   ├── instrucciones/   # Guías PMI y artefactos de gestión (instrucciones para desarrollo de actividades)
+│   │   ├── guide_pm_charter.md      # Guía detallada Project Charter
+│   │   ├── guide_pm_wbs.md            # Guía detallada EDT/WBS
+│   │   ├── pm_ai_plan.md             # Estrategia IA-Driven PM
+│   │   ├── pm_guia_lista.md          # Guía para elaborar artefactos
+│   │   ├── pm_lista.md                # Lista de documentos prioritarios
+│   │   ├── pm_roadmap.md             # Análisis de brechas
+│   │   └── instrucciones_*.md       # Guías de informes, compliance
+│   ├── auxiliares/      # Archivos operativos, CSV, calendarios y archivos útiles al proyecto
+│   │   ├── gantt.md                  # Diagrama Gantt (Mermaid)
+│   │   ├── timeline.md               # Timeline semanal (Mermaid)
+│   │   ├── tareas_calaire.csv        # Tareas del proyecto (fuente AppSheet)
+│   │   ├── tags_project.csv          # Clasificación de correos
+│   │   ├── planificacion_ronda.csv   # Planificación de rondas piloto
+│   │   ├── doc_calendario_2026.md  # Calendario 2026
+│   │   └── memoria_2025.md          # Memoria de actividades 2025
+│   ├── docs_sgc/         # Sistema de Gestión de Calidad
+│   └── pm_ai_plan.md     # Estrategia IA-Driven (referencia)
 ├── ref/                # System references (Logseq guide, setup docs)
 └── logseq/             # Logseq configuration
     ├── config.edn      # Graph settings, queries, macros
@@ -140,6 +172,61 @@ Available templates to insert via `/template` command in Logseq:
 | `[[Laboratorios]]` | Participant laboratory registry            |
 | `[[Equipo]]`       | Team directory and roles                   |
 | `[[Equipos]]`      | Equipment inventory and calibration assets |
+| `[[Gestión del Proyecto]]` | MOC central de artefactos PMI en docs/instrucciones/ |
+| `[[Gestión del Proyecto]]` | MOC central de artefactos PMI en docs/instrucciones/ |
+ 
+---
+## Gestión de Proyectos PMI (docs/pm/ y docs/instrucciones/)
+
+Esta sección documenta la estructura y convenciones para los artefactos de gestión de proyectos PMI en CALAIRE-EA.
+
+### Estructura de Directorios PMI
+
+| Directorio | Propósito | Contenido |
+|-----------|-----------|-----------|
+| `docs/pm/` | **Artefactos PMI** (NUEVA carpeta) | 01_Project_Charter.md a 10_Lecciones_Aprendidas.md |
+| `docs/instrucciones/` | **Guías PMI** | guide_pm_charter.md, guide_pm_wbs.md, pm_*.md, instrucciones_*.md |
+| `docs/auxiliares/` | **Archivos operativos y CSV** | tareas_calaire.csv, gantt.md, timeline.md, planificacion_ronda.csv |
+
+### Guías Disponibles en docs/instrucciones/
+
+| Guía | Archivo | Propósito |
+|--------|-----------|-----------|
+| Project Charter | `guide_pm_charter.md` | Guía detallada para elaborar Acta de Constitución |
+| EDT/WBS | `guide_pm_wbs.md` | Guía detallada para Estructura de Desglose del Trabajo |
+| Estrategia IA-Driven | `pm_ai_plan.md` | Integración con OpenCode, AppSheet y Pandoc |
+| Elaboración de Artefactos | `pm_guia_lista.md` | Guía para crear los 10 artefactos PMI |
+| Lista Prioritaria | `pm_lista.md` | Lista definitiva de documentos a generar |
+| Análisis de Brechas | `pm_roadmap.md` | Análisis de artefactos faltantes vs existentes |
+
+### Artefactos PMI a Crear (docs/pm/)
+
+| # | Artefacto | Archivo | Ubicación | Estado |
+|---|-----------|-----------|-----------|--------|
+| 1 | Project Charter | `01_Project_Charter.md` | `docs/pm/` | Pendiente |
+| 2 | Registro de Interesados | `02_Registro_Interesados.md` | `docs/pm/` | Pendiente |
+| 3 | EDT/WBS | `03_EDT_WBS.md` | `docs/pm/` | Pendiente |
+| 4 | Diccionario EDT | `04_Diccionario_EDT.md` | `docs/pm/` | Pendiente |
+| 5 | Cronograma | `05_Cronograma.md` | `docs/pm/` | Pendiente |
+| 6 | Presupuesto | `06_Presupuesto.md` | `docs/pm/` | Pendiente (placeholder) |
+| 7 | Registro de Riesgos | `07_Registro_Riesgos.md` | `docs/pm/` | Pendiente |
+| 8 | Plan de Gestión de Calidad | `08_Plan_Gestion_Calidad.md` | `docs/pm/` | Pendiente |
+| 9 | Registro de Incidentes | `09_Registro_Incidentes.md` | `docs/pm/` | Pendiente |
+| 10 | Lecciones Aprendidas | `10_Lecciones_Aprendidas.md` | `docs/pm/` | Pendiente |
+
+### Archivos CSV en docs/auxiliares/
+
+| CSV | Archivo | Fuente | Estado |
+|------|-----------|---------|--------|
+| Tareas del proyecto | `tareas_proyecto.csv` | Extractor de DEADLINE + tareas_calaire.csv | Pendiente |
+| Riesgos identificados | `riesgos_identificados.csv` | Registro de Riesgos | Pendiente |
+| Incidentes QMS | `incidentes_qms.csv` | Registro de Incidentes | Pendiente |
+| Visitas de campo | `visitas_campo.csv` | Bitácora de campo digital | Pendiente |
+
+**Notas:**
+- Los CSV en `docs/auxiliares/` sirven como puente (bridge) entre Logseq y AppSheet
+- El script `sync_appsheet.sh` en `scripts/pm/` sincroniza estos CSV con Google Drive/Dropbox
+- `tareas_calaire.csv` ya existe y será la base para `tareas_proyecto.csv`
 
 ---
 
@@ -315,6 +402,23 @@ Key configurations:
 2. Create slug from topic (kebab-case, 5-7 words max)
 3. Create file: `logs/plans/[TIMESTAMP]_plan_[slug].md`
 4. Use structure from "Plan Creation Workflow" section
+
+### Create PMI artifactos (artefactos de gestión de proyectos)
+1. **Guías de referencia**: Consultar `docs/instrucciones/guide_pm_charter.md` (para Project Charter) o `docs/instrucciones/guide_pm_wbs.md` (para EDT/WBS)
+2. **Crear en ubicación correcta**: Los artefactos PMI deben crearse en `docs/pm/` (NUEVA carpeta):
+   - `01_Project_Charter.md`
+   - `02_Registro_Interesados.md`
+   - `03_EDT_WBS.md`
+   - `04_Diccionario_EDT.md`
+   - `05_Cronograma.md`
+   - `06_Presupuesto.md`
+   - `07_Registro_Riesgos.md`
+   - `08_Plan_Gestion_Calidad.md`
+   - `09_Registro_Incidentes.md`
+   - `10_Lecciones_Aprendidas.md`
+3. **Consolidar existente**: Para el Cronograma (`05_Cronograma.md`), consolidar `docs/auxiliares/gantt.md` y `docs/auxiliares/timeline.md` existentes
+4. **Usar CSV existente**: Tareas en `docs/auxiliares/tareas_calaire.csv` como base para `tareas_proyecto.csv` (creado en `docs/pm/`)
+5. **Enlazar desde MOC**: Actualizar `[[Gestión del Proyecto]]` en `pages/` con enlaces a los artefactos creados en `docs/pm/`
 
 ---
 

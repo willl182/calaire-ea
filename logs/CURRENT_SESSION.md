@@ -1,141 +1,120 @@
 # Session State: CALAIRE-EA Knowledge Graph
 
-**Last Updated**: 2026-02-08 21:38
+**Last Updated**: 2026-02-09 00:05
 
 ## Session Objective
 
-Implementar Fase 4 del plan de ajuste del Sistema de Gestión Documental ISO 17025/17043/13528 para el proyecto CALAIRE-EA (Ensayos de Aptitud para Gases Contaminantes Criterio en Colombia).
+Planificar la implementación del sistema de gestión de proyectos PMI con estrategia AI-Driven para CALAIRE-EA, corrigiendo el stack tecnológico de CALAIRE-APP (R/Shiny, no Python) y actualizando la estructura de directorios para ubicaciones correctas (`docs/pm/` para artefactos PMI).
 
 ## Current State
 
-- [x] Fase 1: Matriz Maestra de Cumplimiento Normativo completada (2026-02-08)
-- [x] Fase 2: Inventario Documental del SGC completado (2026-02-08)
-- [x] Fase 3: Árbol Maestro PSEA y Diccionario de Documentos SGC completados (2026-02-08)
-- [x] Fase 4: Backlog Priorizado y Roadmap de Implementación completados (2026-02-08)
-- [ ] Fase 5: Ejecutar Ajustes por Oleadas (pendiente correcciones de revisor-fase)
-- [ ] Fase 6: Verificar Conformidad y Cierre
-
-### Fase 4 Completada
-
-**Entregables creados:**
-
-1. **Backlog Priorizado de Documentos SGC** (`docs/docs_sgc/Backlog Priorizado de Documentos SGC.md`)
-   - 37 documentos priorizados en 4 niveles (P1-P4)
-   - 52 horas de esfuerzo para Oleada 1 (10 documentos P1)
-   - 44 horas para Oleada 2 (10 documentos P2)
-   - 34 horas para Oleada 3 (10 documentos P3)
-   - 17 horas para Oleada 4 (7 documentos P4)
-   - Total: 147 horas en 6-8 semanas
-
-2. **Roadmap de Implementación por Oleadas** (`docs/docs_sgc/Roadmap de Implementación por Oleadas.md`)
-   - 4 oleadas con cronograma semanal detallado
-   - Hitos de calidad al final de cada oleada
-   - Diagrama Gantt en Mermaid para visualización
-   - Recursos asignados por responsable
-
-**Hallazgos pendientes de corrección (Revisor-fase - Revisión 3):**
-
-1. **[Blocking] Déficit de documentos:** Objetivo de 41 vs 37 planificados (4 faltantes)
-2. **[Required] Colisión de códigos de formatos:** F-PSEA-01 al F-PSEA-04 duplicados en P3 y P4
-3. **[Required] Dependencias cruzadas:** P-PSEA-18 depende de P-PSEA-15 (Oleada 2), P-PSEA-23 depende de P-PSEA-13 (Oleada 3), P-PSEA-09 depende de P-PSEA-06 pero cronograma lo invierte
-4. **[Required] Documentos no planificados en "Recursos Asignados":** P-PSEA-32, P-PSEA-33, P-PSEA-35, P-PSEA-36, P-PSEA-37, P3-F01 al P3-F07
-5. **[Required] Resúmenes inflados por colisión de códigos**
-6. **[Suggestions] Criterios de aceptación vagos:** Sin evidencia verificable específica
-7. **[Suggestions] Cronograma sin buffers ni revisión intermedia**
+- [x] Exploración del grafo para identificar información existente para artefactos PMI
+- [x] Revisión de documentación de PMI (pm_roadmap.md, pm_lista.md, pm_guia_lista.md)
+- [x] Lectura de docs/pm_ai_plan.md para integrar estrategia AI-Driven
+- [x] Verificación del stack tecnológico de CALAIRE-APP (R/Shiny confirmado en MANUAL_COMPLETO_PT_APP.md)
+- [x] Descubrimiento de estructura correcta de carpetas:
+  - **docs/instrucciones/**: Guías PMI (guide_pm_charter.md, guide_pm_wbs.md, pm_*.md)
+  - **docs/auxiliares/**: Archivos operativos CSV (tareas_calaire.csv, tags_project.csv, gantt.md, timeline.md)
+- [x] Creación del plan de implementación en logs/plans/260208_2318_plan_pm-ia-artefactos.md
+- [x] Corrección de referencias incorrectas a Python en archivos:
+  - pages/CALAIRE-APP.md
+  - docs/pm_guia_lista.md
+  - docs/proyecto.md
+  - journals/2026_01_30.md
+  - logs/plans/260208_2318_plan_pm-ia-artefactos.md
+- [x] Actualización del plan para reflejar rutas correctas:
+  - `docs/pm/` → `docs/instrucciones/`
+  - `data/` → `docs/auxiliares/`
+  - Incorporación de guías existentes (guide_pm_charter.md, guide_pm_wbs.md)
+- [x] Corrección final de estructura:
+  - Artefactos PMI → `docs/pm/` (NUEVA carpeta)
+  - Guías PMI → `docs/instrucciones/` (carpeta existente)
+  - Archivos CSV → `docs/auxiliares/` (carpeta existente)
+  - MOC [[Gestión del Proyecto]] añadido
+- [x] Actualización de AGENTS.md con estructura final correcta
+- [ ] Ejecución del plan (Fases 1-7 pendientes)
+- [ ] Git commit
+- [ ] Git push
 
 ## Critical Technical Context
 
-**Estructura del SGC CALAIRE-EA:**
-
-- **DG (Documento General):** Nivel 1 - Políticas, manuales (ej: DG-PSEA-01)
-- **P (Procedimiento):** Nivel 2 - Qué, quién, cuándo, evidencia (ej: P-PSEA-01 al P-PSEA-30)
-- **I (Instructivo):** Nivel 3 - Cómo se ejecuta (eliminados en Fase 3, contenido absorbido por procedimientos)
-- **F (Formato):** Nivel 4 - Registro/evidencia (ej: F-PSEA-01 al F-PSEA-04)
-
-**Jerarquía Normativa:**
+**Estructura Final Correcta:**
 
 ```
-ISO/IEC 17025:2017 (Macro - Sistema de gestión de competencia)
-    └── ISO/IEC 17043:2023 (Operativo - Requisitos específicos para PT)
-            └── ISO 13528:2022 (Metodológico - Métodos estadísticos)
+docs/
+├── pm/                    # Artefactos PMI (NUEVA carpeta)
+│   ├── 01_Project_Charter.md
+│   ├── 02_Registro_Interesados.md
+│   ├── 03_EDT_WBS.md
+│   ├── 04_Diccionario_EDT.md
+│   ├── 05_Cronograma.md
+│   ├── 06_Presupuesto.md
+│   ├── 07_Registro_Riesgos.md
+│   ├── 08_Plan_Gestion_Calidad.md
+│   ├── 09_Registro_Incidentes.md
+│   └── 10_Lecciones_Aprendidas.md
+├── instrucciones/         # Guías PMI (carpeta existente)
+│   ├── guide_pm_charter.md
+│   ├── guide_pm_wbs.md
+│   ├── pm_ai_plan.md
+│   ├── pm_guia_lista.md
+│   └── pm_lista.md
+└── auxiliares/           # Archivos operativos CSV (carpeta existente)
+    ├── gantt.md
+    ├── timeline.md
+    ├── tareas_calaire.csv
+    ├── tags_project.csv
+    └── planificacion_ronda.csv
 ```
 
-**Brechas críticas identificadas:**
+**Stack Tecnológico CALAIRE-APP:**
+- R 4.1.0+ y Shiny (NO Python)
+- Paquete `ptcalc` para cálculos ISO 13528:2022
+- Librerías de desarrollo: testthat, roxygen2, lintr, devtools
+- Repositorio pendiente de migración a GitHub
 
-- ISO 17043 cap. 7: Diseño estadístico, valor asignado, homogeneidad/estabilidad, evaluación de desempeño
-- ISO 17043 cap. 8: Gestión de datos, no conformidades, quejas/apelaciones, mejora continua
-- ISO 13528 cap. 5-9: Métodos estadísticos específicos para PT
+**Fase 7 del Plan es CONDICIONAL:**
+- Requiere migración del repositorio CALAIRE-APP a GitHub
+- No se incluye en el tiempo total de ejecución inmediata (~10 horas para Fases 1-6)
+- Stack: R/Shiny (testthat para pruebas unitarias, Roxygen2 para documentación)
 
-**Procedimientos específicos por gas:**
-
-- P-PSEA-02: NO-NO2
-- P-PSEA-03: CO
-- P-PSEA-04: O3
-- P-PSEA-05: SO2
-
-**Procedimientos nuevos creados (Fase 3):**
-
-- P-PSEA-06: Diseño Estadístico (v0)
-- P-PSEA-07: Informe Resultados (v0)
-- P-PSEA-08: Colusión Falsificación (v0)
-- P-PSEA-09: Planificación Ronda EA (expansión)
-
-**Formatos creados (Fase 3):**
-
-- F-PSEA-01: Calendario Tipo (v0)
-- F-PSEA-02: Cronograma Detallado (v0)
-- F-PSEA-03: Registro Planificación Ronda EA
-- F-PSEA-04: Formato Informe Resultados (v0)
+**Reglas de Navegación para AGENTS.md:**
+- Artefactos PMI → `docs/pm/`
+- Guías PMI → `docs/instrucciones/`
+- Archivos CSV → `docs/auxiliares/`
+- Referenciar guías existentes antes de crear artefactos
+- Consolidar gantt.md + timeline.md existentes en `docs/auxiliares/`
 
 ## Next Steps
 
-1. **Correcciones pendientes de Revisión 3 (Fase 4):**
-   - Alinear el alcance con el objetivo de 41 documentos o ajustar objetivo
-   - Normalizar códigos de formatos (F-PSEA-01 al F-PSEA-04)
-   - Corregir dependencias inter-oleadas (P-PSEA-18, P-PSEA-23, P-PSEA-09)
-   - Ajustar cronograma y Gantt para respetar dependencias
-   - Depurar "Recursos Asignados" en Roadmap
-   - Añadir evidencia verificable en criterios de aceptación
-   - Revisar resúmenes de esfuerzo/cantidad
+1. **Git commit**: Commit cambios con mensaje "AGENTS.md: Actualizar estructura PMI - docs/pm, docs/instrucciones, docs/auxiliares"
+2. **Git push**: Push commits a repositorio remoto
+3. **Revisión de plan**: Usuario debe aprobar plan en `logs/plans/260208_2318_plan_pm-ia-artefactos.md`
+4. **Ejecución Fase 1**: Crear infraestructura en `docs/pm/` (README, Project Charter, Registro Interesados)
+5. **Revisión fase por revisor-fase**: Validar cada fase antes de continuar
 
-2. **Fase 5 - Ejecutar Ajustes por Oleadas:**
-   - Iniciar Oleada 1 con 10 documentos P1 (52 horas)
-   - Revisar fase con revisor-fase después de cada oleada
-   - Actualizar plan con hallazgos
-   - Commit y push después de cada oleada
+**Archivos clave creados/actualizados:**
+- `logs/plans/260208_2318_plan_pm-ia-artefactos.md` - Plan completo de implementación PMI
+- `AGENTS.md` - Actualizado con estructura correcta
+- `logs/history/260208_2355_findings.md` - Hallazgos técnicos
+- `logs/history/260208_2341_findings.md` - Hallazgos sobre estructura de carpetas
 
-3. **Fase 6 - Verificar Conformidad y Cierre:**
-   - Validar que todos los requisitos normativos tienen documento asignado
-   - Crear reporte de conformidad por norma
-   - Crear matriz de trazabilidad final
-   - Crear plan de mantenimiento del SGC
-
-**Archivos clave creados en esta sesión:**
-
-- `docs/docs_sgc/Matriz Maestra de Cumplimiento Normativo.md`
-- `docs/docs_sgc/Inventario Documental del SGC.md`
-- `docs/docs_sgc/Árbol Maestro PSEA.md`
-- `docs/docs_sgc/Diccionario de Documentos SGC.md`
-- `docs/docs_sgc/Backlog Priorizado de Documentos SGC.md`
-- `docs/docs_sgc/Roadmap de Implementación por Oleadas.md`
-- `logs/plans/260208_1932_plan_ajuste-sgc-17025-17043-13528.md`
-
-**Plan activo:**
-`logs/plans/260208_1932_plan_ajuste-sgc-17025-17043-13528.md`
-
-**Estado del plan:** in_progress (Fases 1-4 completadas, Fase 5 pendiente correcciones)
+**Archivos corregidos:**
+- `pages/CALAIRE-APP.md` - Stack tecnológico actualizado
+- `docs/pm_guia_lista.md` - EDT ajustada
+- `docs/proyecto.md` - Tecnología actualizada
+- `journals/2026_01_30.md` - Contexto corregido
 
 ## Sesiones Anteriores
 
-**Sesión de 2026-02-08 20:32 - Sistema de Seguimiento de Tareas y Análisis de Tags:**
-
-- Completado sistema de seguimiento de tareas (Python + CSV + Google Apps Script)
-- Análisis de tags del grafo detectó 12 tags con sintaxis errónea
-- Plan de corrección de tags pendiente aprobación
+**Sesión de 2026-02-08 23:38 - Sistema de Gestión Documental ISO 17025/17043/13528:**
+- Fases 1-4 del plan SGC completadas
+- Fase 5 (Ejecutar Ajustes por Oleadas) pendiente de correcciones de revisor-fase
+- Plan activo: logs/plans/260208_1932_plan_ajuste-sgc-17025-17043-13528.md
 
 **Referencias:**
-- `tools/export_tareas.py` - Script de exportación de tareas
-- `tareas_calaire.csv` - CSV con 28 tareas
-- `tools/alertas_tareas.gs` - Apps Script para alertas automáticas
-- `tools/README_SEGUIMIENTO.md` - Documentación completa
-- `logs/plans/260208_2029_plan_correccion-sintaxis-tags.md` - Plan de corrección de tags
+- `docs/pm_roadmap.md` - Análisis de brechas en artefactos PMI
+- `docs/pm_lista.md` - Lista de documentos a elaborar
+- `docs/pm_guia_lista.md` - Guía para elaboración de artefactos
+- `docs/pm_ai_plan.md` - Estrategia IA-Driven PM
+- `docs/docs_sgc/MANUAL_COMPLETO_PT_APP.md` - Documentación técnica CALAIRE-APP (R/Shiny)
