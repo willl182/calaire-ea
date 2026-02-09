@@ -1,78 +1,90 @@
-# Session State: CALAIRE-EA Ajuste de Protocolo P-PSEA-01
+# Session State: Revisión del Informe de Resultados EA
 
-**Last Updated**: 2026-02-08 18:22
+**Last Updated**: 2026-02-08 19:26
 
 ## Session Objective
 
-Planificar y preparar la actualización del Protocolo General de Ensayo de Aptitud (P-PSEA-01) para cerrar brechas identificadas frente a ISO/IEC 17043:2023 e ISO 13528:2022.
+Planificar y ejecutar la revisión del informe de resultados EA-2025-12-10_13-z-3-3 conforme a ISO/IEC 17043:2023, ISO 13528:2022 y las mejores prácticas de JRC (Barbiere) y UBA. El objetivo es cerrar brechas identificadas en el preanálisis y producir un documento de instrucciones para actualizar la plantilla Rmd que genera los informes futuros.
 
 ## Current State
 
-- [x] Fase 1 completada: Categorización de 5 brechas (3 Blocking, 1 Required, 1 Suggestions)
-- [x] Fase 2 completada: Análisis de estructura actual de P-PSEA-01
-- [x] Fase 3 completada: Extracción de criterios de ISO 13528:2022
-- [x] Fase 4 completada: Plan de mejora aprobado (4 nuevas secciones + 3 modificaciones)
-- [x] Fase 5 completada: Implementación de cambios en P-PSEA-01
-- [x] Revisión final, commit y push
+- [x] Fase 1 completada: Matriz de requisitos normativos creada
+- [x] Fase 1 revisada con subagent `revisor-fase`
+- [x] Hallazgos Fase 1 identificados (citaciones incorrectas, severidad no normalizada, errores formato)
+- [x] Fase 2 completada: Hallazgos específicos del informe por sección
+- [x] Fase 2 revisada con subagent `revisor-fase`
+- [x] Hallazgos Fase 2 identificados (inconsistencia severidades, placeholders no accionables)
+- [x] Fase 3 completada: Documento de instrucciones para Rmd creado
+- [x] Fase 3 revisada con subagent `revisor-fase`
+- [x] Hallazgos Fase 3 identificados (bloques Rmd anidados, notación inconsistente, dependencias faltantes)
+- [x] Documento principal actualizado con hallazgos de revisión
+- [ ] Correcciones pendientes implementadas en documentos
+- [ ] Sesión guardada con `saver`
 
 ## Critical Technical Context
 
-**Documento Objetivo:**
-- P-PSEA-01 Protocolo General EA (`docs/docs_sgc/P-PSEA-01 Protocolo General EA.md`)
-- Formato actual: Markdown estructurado (tabla HTML convertida)
+**Documento Objetivo Principal:**
+- `docs/Instrucciones para Actualización de Plantilla Rmd de Informes EA.md` - Entregable final con instrucciones detalladas para actualizar plantilla Rmd
 
-**Brechas críticas a cerrar:**
+**Brechas Críticas a Cerrar:**
 
-| # | Brecha | Severidad | Referencia |
-|---|--------|-----------|------------|
-| B1 | Algoritmos robustos no especificados | Blocking | ISO 13528 Anexo C |
-| B2 | Criterios H/S cuantitativos ausentes | Blocking | ISO 13528 Anexo B |
-| B3 | Criterio de decisión z vs z' no formalizado | Required | ISO 13528 §9.2.1, §9.5.1 |
-| B4 | Tratamiento de grupos pequeños (n < 5) | Blocking | ISO 17043 §7.2.2.3, ISO 13528 §5.4 |
-| B5 | Compatibilidad metrológica no mencionada | Suggestions | ISO 13528 §7.8 |
+1. **Estabilidad/Homogeneidad:** Fallos en criterios sin acción mitigatoria documentada (ISO 13528 Anexo B)
+2. **Criterio $\sigma_{pt}$:** No se usa fitness for purpose (ISO 13528 8.1.2)
+3. **Grupos pequeños (n < 10):** Política no documentada para valor de referencia (ISO 13528 5.4)
+4. **Compatibilidad metrológica:** No se documentan conclusiones (ISO 13528 7.8)
+5. **Scores alternativos:** No se implementan z', ζ, En (ISO 13528 9.5, 9.6, 9.7)
 
-**Criterios normativos extraídos:**
-- Homogeneidad: ss ≤ 0.3σpt (ISO 13528 B.2.2)
-- z-score: z = (xi - xpt)/σpt (ISO 13528 9.4.1)
-- z'-score: z' = (xi - xpt)/√(σpt² + u²(xpt)) (ISO 13528 9.5.1)
-- ζ-score: ζ = (xi - xpt)/√(u²(xi) + u²(xpt)) (ISO 13528 9.6.1)
-- Compatibilidad: |xdiff| > 2udiff → investigar (ISO 13528 7.8.2)
+**Archivos Generados:**
 
-**Aplicativo CALAIRE-APP:**
-- Software validado que implementa algoritmos de ISO 13528
-- Manual v0.4.0 contiene fórmulas y criterios
-- Debe ser vinculado formalmente en el protocolo
+1. `logs/fase1_matriz_requisitos_normativos.md` - Matriz de requisitos normativos
+2. `logs/fase2_hallazgos_informe_especificos.md` - Hallazgos por sección del informe
+3. `docs/Instrucciones para Actualización de Plantilla Rmd de Informes EA.md` - Instrucciones para Rmd (principal)
+4. `logs/plans/260208_1917_plan_revision-informe-resultados.md` - Plan de trabajo
 
-## Archivos del Plan
+**Hallazgos de Revisión de Fases:**
 
-- **Plan principal:** `.opencode/plans/260208_1706_plan_ajuste-protocolo-psea-01.md`
-- **Status del plan:** approved, in_progress
+**Fase 1 - Matriz Requisitos:**
+- Citación incorrecta ISO 13528 §9.2.1 (debe ser §9.4.1)
+- Severidad no normalizada (mezcla Alta/Media/Baja con Bloqueantes)
+- Error formato: símbolo "|" no escapado en compatibilidad
+- Error tipográfico "compatibla"
 
-## Secciones a Crear en P-PSEA-01
+**Fase 2 - Hallazgos Informe:**
+- Inconsistencia de severidades (Alta/Media/Baja vs Bloqueantes)
+- Resumen de severidades incorrecto (conteos no coinciden)
+- Acciones con placeholders no accionables
+- Referencias normativas inconsistentes (falta año)
+- Duplicación en "Hallazgos Críticos (Bloqueantes)"
+- Notación matemática incorrecta (delimitadores incompletos)
 
-1. **Métodos Estadísticos** - Definir Algoritmo A, MADe, nIQR
-2. **Criterios de Homogeneidad y Estabilidad** - Tabla con criterios cuantitativos
-3. **Contingencias Estadísticas** - Procedimiento n<5, incertidumbre alta
-4. **Validación del Valor Asignado** - Compatibilidad metrológica
-
-## Secciones a Modificar en P-PSEA-01
-
-1. **Definiciones** - Añadir z', ζ-score, umbral de incertidumbre
-2. **Procesamiento de Datos** - Vincular CALAIRE-APP validado
-3. **Referencias** - Añadir ISO 13528:2022, Manual CALAIRE-APP v0.4.0
+**Fase 3 - Instrucciones Rmd:**
+- Bloqueante: Bloques Rmd anidados (triples backticks)
+- Bloqueante: Cierres fences duplicados
+- Alta: Notación matemática inconsistente (compatibilidad metrológica)
+- Alta: Criterio de estabilidad no alineado (texto vs código)
+- Alta: Ejemplos Rmd con funciones no definidas (sin dependencias)
+- Media: Encabezados de tablas truncados o desalineados
 
 ## Next Steps
 
-1. Backup de P-PSEA-01 creado
-2. Conversión de tabla HTML a markdown completada
-3. Inserción de 4 nuevas secciones completada
-4. Modificación de 3 secciones completada
-5. Revisión con subagent `revisor-fase` completada
-6. Commit y push completados
+1. Implementar correcciones en documentos de fase:
+   - Corregir citaciones ISO
+   - Unificar esquema de severidad
+   - Corregir bloques de código Rmd
+   - Alinear criterios de estabilidad
+   - Añadir dependencias para ejemplos Rmd
 
-## Archivos Relevantes
+2. Validar documentos finales con renderizado Markdown/Rmd
 
-- `docs/docs_sgc/P-PSEA-01 Protocolo General EA.md` - Documento a modificar
-- `docs/compliance_protocolo_general.md` - Análisis de brechas original
-- `docs/referencias/iso 13528_2022.md` - Fuente normativa
-- `docs/referencias/iso 17043_2023.md` - Fuente normativa
+3. Actualizar plan de trabajo con correcciones implementadas
+
+4. Guardar sesión con `saver` skill (en proceso)
+
+## Referencias
+
+- `logs/history/260208_1926_findings.md` - Descubrimientos técnicos y archivos clave
+- `logs/history/260208_1926_problems.md` - Registro de problemas y correcciones
+- `logs/plans/260208_1917_plan_revision-informe-resultados.md` - Plan de trabajo original
+- `docs/informes-calaire_vs-jrc_uba.md` - Preanálisis original
+- `docs/referencias/iso 17043_2023.md` - ISO/IEC 17043:2023
+- `docs/referencias/iso 13528_2022.md` - ISO 13528:2022
