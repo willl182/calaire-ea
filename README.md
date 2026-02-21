@@ -4,6 +4,8 @@ Este repositorio contiene el sistema de gestión del conocimiento y seguimiento 
 
 El sistema está construido sobre **Logseq**, utilizando una estructura de grafo para conectar tareas, documentos, reuniones y conocimientos técnicos.
 
+El alcance vigente del proyecto llega hasta el **diseño del servicio** de comparaciones interlaboratorios/ensayos de aptitud, incluyendo alistamiento, prueba piloto y análisis de resultados.
+
 ## Estructura del Repositorio
 
 *   **`journals/`**: Entradas diarias (bitácora de trabajo) con categorías estándar organizativas.
@@ -12,6 +14,18 @@ El sistema está construido sobre **Logseq**, utilizando una estructura de grafo
 *   **`ref/`**: Referencias sobre el uso del sistema (guía de Logseq, setup y plan de estandarización).
 *   **`logs/`**: Sesiones de trabajo del agente AI, hallazgos técnicos y registro de problemas.
 *   **`logseq/`**: Configuración del grafo (queries, custom.css, config.edn).
+
+## Estructura Contractual del Proyecto
+
+El proyecto se ejecuta con trazabilidad de tres frentes contractuales:
+
+| Componente | Ubicación | Rol en el proyecto |
+|------------|-----------|--------------------|
+| **Contrato 1 (2025)** | `docs/contrato_1/` | Base metodológica y documental: estado del arte, protocolos, procedimientos y avance SGC |
+| **Contrato APP (2025, paralelo)** | `docs/contrato_app/` | Desarrollo del aplicativo estadístico CALAIRE-APP en R/Shiny |
+| **Contrato 2 (2026)** | `docs/contrato_2/` | Alistamiento, ejecución de prueba piloto, revisión de resultados y ajustes de diseño |
+
+Referencia ejecutiva consolidada: `ref/proyecto.md`
 
 ## Convenciones
 
@@ -63,6 +77,7 @@ El archivo `docs/tags_project.csv` define etiquetas para clasificar correos de G
 *   `[[QMS]]`: Gestión de calidad y normas ISO 17043/13528.
 *   `[[Laboratorios]]`: Registro de laboratorios participantes (MOC que lista todos los laboratorios con enlaces a sus páginas individuales).
 *   `[[Equipos]]`: Inventario de equipos de medición y calibración.
+*   `[[Equipo]]`: Roles y responsabilidades del equipo del proyecto.
 
 ## Categorías Temáticas (Journal) como MOCs
 

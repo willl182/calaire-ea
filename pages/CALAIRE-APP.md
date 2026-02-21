@@ -1,9 +1,14 @@
 - tags:: [[MOC]], [[Software]]
 - # CALAIRE-APP: Aplicativo Estadístico ISO 13528
 - **Estado**
-	- status:: [[EN PROGRESO]]
-	- deadline:: 2026-02-20
+	- status:: [[OPERATIVO EN AJUSTE]]
+	- fase-proyecto:: [[Etapa 2]]
 	- repo:: [Pending GitHub URL]
+- **Origen Contractual**
+	- Contrato paralelo de desarrollo: Invitación Directa M-1256 (2025).
+	- Desarrollo ejecutado por [[Wilson Salas]].
+	- Carpeta de soporte: `docs/contrato_app/`.
+	- Cierre contractual de desarrollo: Diciembre 2025.
 - **Hallazgos Recientes**
 	- Validación de resultados reportada por César Yate (2026-02-07): el error de imputación de datos fue cometido por César Yate durante la verificación manual, no por el aplicativo CALAIRE-APP. El aplicativo funciona correctamente para preprocesamiento, homogeneidad, estabilidad, nIQR y MADe según ISO 13528:2017.
 	- **Estado validado:** Preprocesamiento ✅, Homogeneidad ✅, Estabilidad ✅, nIQR ✅, MADe ✅
@@ -30,6 +35,8 @@
 	- TODO Migrar repositorio a GitHub del grupo
 		project:: [[CALAIRE-APP]]
 - **Especificaciones Técnicas**
-	- Lenguaje: Python 3
-	- Normativa: ISO 13528:2017
-	- Cálculo: homogeneidad, estabilidad, nIQR, algoritmos robustos (A).
+	- Lenguaje: R 4.1.0+ (Shiny)
+	- Paquete: ptcalc (cálculos estadísticos)
+	- Normativa: ISO 13528:2017, ISO 17043:2023
+	- Cálculo: homogeneidad, estabilidad, nIQR, algoritmos robustos (A)
+	- Uso en Etapa 2: soporte al análisis de resultados de prueba piloto y consolidación técnica del diseño del servicio.

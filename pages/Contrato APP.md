@@ -1,0 +1,15 @@
+- tags:: [[Contract]], [[CALAIRE-APP]]
+- # Contrato APP
+- **Periodo**
+	- year:: 2025
+- **Naturaleza**
+	- Frente paralelo para desarrollo de software estadístico del proyecto.
+- **Alcance**
+	- Desarrollo del aplicativo [[CALAIRE-APP]] en R/Shiny para análisis de resultados e informes de ensayos de aptitud.
+- **Ejecución**
+	- responsible:: [[Wilson Salas]]
+- **Repositorio documental**
+	- `docs/contrato_app/`
+- **Ver también**
+	- [[CALAIRE-EA]]
+	- [[CALAIRE-APP]]

@@ -1,0 +1,29 @@
+- tags:: [[System]], [[AI]], [[MOC]]
+- # Agente AI - Funciones (Tipo OpenCode)
+- **Propósito**
+	- Definir funciones que un agente asistente (tipo OpenCode) puede ejecutar para apoyar la gestión del proyecto [[CALAIRE-EA]] sin reemplazar la responsabilidad técnica del equipo.
+	- Enfoque: trazabilidad contractual, control documental, seguimiento operativo de la [[Prueba Piloto]] y consolidación del diseño del servicio.
+- **Funciones principales**
+	- **Bitácora y narrativa (Logseq):** estructurar notas en `journals/` con secciones estándar, propiedades (`date::`, `category::`, `status::`) y enlaces a MOCs.
+	- **Trazabilidad por contratos:** mantener correspondencia entre objeto/actividades/entregables y evidencia documental en `docs/contrato_1/`, `docs/contrato_app/` y `docs/contrato_2/`.
+	- **Gestión de tareas:** extraer y consolidar TODO/DOING/DONE, detectar vencimientos, proponer priorización por dependencias (alistamiento -> piloto -> revisión de resultados).
+	- **Control documental SGC:** revisar consistencia, versión y estructura de protocolos/procedimientos; alinear redacción con ISO 17043:2023, ISO 13528:2017 y NTC ISO/IEC 17025:2017.
+	- **Auditoría de coherencia del grafo:** detectar enlaces rotos, páginas duplicadas, nombres inconsistentes y proponer consolidaciones.
+	- **Soporte operativo de prueba piloto:** generar checklists por ronda, guiones de reunión y resúmenes de cronograma a partir de `pages/Prueba Piloto.md`.
+	- **Minutas y seguimiento:** convertir apuntes en actas con decisiones `#decision`, acciones en formato TODO y responsables.
+	- **Riesgos e incidentes:** proponer estructura de registro, redactar entradas claras y mantener trazabilidad evento -> impacto -> acción -> evidencia.
+	- **Preparación de entregables:** generar borradores de informes, resúmenes ejecutivos y anexos listos para conversión (Markdown -> PDF/DOCX via Pandoc cuando aplique).
+	- **Soporte a CALAIRE-APP (requerimientos):** estructurar requerimientos, criterios de aceptación y casos de prueba para validación de resultados (sin modificar código salvo solicitud explícita).
+	- **Comunicaciones técnicas:** redactar borradores de correos y respuestas con tono institucional, listas de verificación y adjuntos.
+	- **Reportes de avance:** compilar reportes semanales/mensuales (hechos, pendientes, riesgos, próximos pasos) desde journals y entregables.
+- **Controles y límites recomendados**
+	- No inventar fechas, contactos ni datos sensibles; usar placeholders cuando corresponda.
+	- No alterar control documental del SGC sin criterios de aceptación definidos.
+	- Toda decisión relevante debe registrarse como #decision y enlazarse a [[CALAIRE-EA]].
+	- Evitar cambiar nombres de páginas sin actualizar referencias.
+- **Ver también**
+	- [[CALAIRE-EA]]
+	- [[Prueba Piloto]]
+	- [[QMS]]
+	- [[CALAIRE-APP]]
+	- [[Wilson Salas]]

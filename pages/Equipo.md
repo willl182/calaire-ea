@@ -15,6 +15,9 @@
 		- role:: Profesional infraestructura
 		- focus:: Compras de equipos, soporte de infraestructura.
 - **Tecnico**
+	- [[Wilson Salas]]
+		- role:: Líder técnico
+		- focus:: Dirección técnica transversal del proyecto en Contrato 1 (diseño metodológico y documental), Contrato APP (desarrollo CALAIRE-APP) y Contrato 2 (alistamiento y prueba piloto).
 	- Nuevo contratado - pendiente (técnico principal)
 		- role:: Tecnico instrumental principal
 		- focus:: Pruebas tecnicas, calibracion, operacion de equipos.

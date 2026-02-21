@@ -1,0 +1,14 @@
+- tags:: [[Contract]], [[CALAIRE-EA]]
+- # Contrato 2
+- **Periodo**
+	- year:: 2026
+- **Alcance**
+	- Alistamiento previo, ejecución de prueba piloto, revisión de resultados y ajustes para consolidar el diseño del servicio.
+- **Repositorio documental**
+	- `docs/contrato_2/`
+- **Estado**
+	- status:: [[EN PROGRESO]]
+- **Ver también**
+	- [[CALAIRE-EA]]
+	- [[Prueba Piloto]]
+	- [[Wilson Salas]]

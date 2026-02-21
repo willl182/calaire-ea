@@ -1,0 +1,20 @@
+- tags:: [[Team]], [[Technical Lead]]
+- # Wilson Salas
+- **Perfil**
+	- role:: Líder técnico
+	- expertise:: Calidad de aire, ensayos de aptitud, metrología y análisis estadístico
+	- project:: [[CALAIRE-EA]]
+	- scope:: Diseño y validación técnica del servicio EA/CIL (alistamiento, prueba piloto, revisión de resultados)
+- **Trazabilidad Contractual**
+	- Contrato 1 (2025): desarrollo de estado del arte, protocolos, procedimientos y soporte documental SGC.
+	- Contrato APP (2025, paralelo): desarrollo del aplicativo estadístico [[CALAIRE-APP]] en R/Shiny.
+	- Contrato 2 (2026): alistamiento previo, dirección técnica de prueba piloto, revisión de resultados y ajustes de diseño del servicio.
+- **En qué se está trabajando (actual)**
+	- Dirección técnica del alistamiento y ejecución de la [[Prueba Piloto]] (CO, NOx, SO2, O3).
+	- Revisión y análisis de resultados con soporte de [[CALAIRE-APP]].
+	- Ajustes técnicos y documentales para consolidar el diseño del servicio bajo ISO 17043:2023, ISO 13528:2017 y NTC ISO/IEC 17025:2017.
+- **Referencias**
+	- [[Equipo]]
+	- [[CALAIRE-EA]]
+	- [[CALAIRE-APP]]
+	- [[Prueba Piloto]]

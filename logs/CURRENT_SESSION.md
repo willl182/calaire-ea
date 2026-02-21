@@ -1,120 +1,80 @@
 # Session State: CALAIRE-EA Knowledge Graph
 
-**Last Updated**: 2026-02-09 00:05
+**Last Updated**: 2026-02-21 09:13
 
 ## Session Objective
 
-Planificar la implementación del sistema de gestión de proyectos PMI con estrategia AI-Driven para CALAIRE-EA, corrigiendo el stack tecnológico de CALAIRE-APP (R/Shiny, no Python) y actualizando la estructura de directorios para ubicaciones correctas (`docs/pm/` para artefactos PMI).
+Actualizar la narrativa del proyecto CALAIRE-EA para reflejar con trazabilidad contractual tres frentes: Contrato 1 (base metodológica y documental), Contrato APP (desarrollo paralelo del aplicativo) y Contrato 2 (alistamiento y prueba piloto), dejando explícito que el alcance vigente llega hasta el diseño del servicio.
 
 ## Current State
 
-- [x] Exploración del grafo para identificar información existente para artefactos PMI
-- [x] Revisión de documentación de PMI (pm_roadmap.md, pm_lista.md, pm_guia_lista.md)
-- [x] Lectura de docs/pm_ai_plan.md para integrar estrategia AI-Driven
-- [x] Verificación del stack tecnológico de CALAIRE-APP (R/Shiny confirmado en MANUAL_COMPLETO_PT_APP.md)
-- [x] Descubrimiento de estructura correcta de carpetas:
-  - **docs/instrucciones/**: Guías PMI (guide_pm_charter.md, guide_pm_wbs.md, pm_*.md)
-  - **docs/auxiliares/**: Archivos operativos CSV (tareas_calaire.csv, tags_project.csv, gantt.md, timeline.md)
-- [x] Creación del plan de implementación en logs/plans/260208_2318_plan_pm-ia-artefactos.md
-- [x] Corrección de referencias incorrectas a Python en archivos:
-  - pages/CALAIRE-APP.md
-  - docs/pm_guia_lista.md
-  - docs/proyecto.md
-  - journals/2026_01_30.md
-  - logs/plans/260208_2318_plan_pm-ia-artefactos.md
-- [x] Actualización del plan para reflejar rutas correctas:
-  - `docs/pm/` → `docs/instrucciones/`
-  - `data/` → `docs/auxiliares/`
-  - Incorporación de guías existentes (guide_pm_charter.md, guide_pm_wbs.md)
-- [x] Corrección final de estructura:
-  - Artefactos PMI → `docs/pm/` (NUEVA carpeta)
-  - Guías PMI → `docs/instrucciones/` (carpeta existente)
-  - Archivos CSV → `docs/auxiliares/` (carpeta existente)
-  - MOC [[Gestión del Proyecto]] añadido
-- [x] Actualización de AGENTS.md con estructura final correcta
-- [ ] Ejecución del plan (Fases 1-7 pendientes)
-- [ ] Git commit
-- [ ] Git push
+- [x] Exploración de documentos de contratos (`docs/contrato_1/`, `docs/contrato_app/`, `docs/contrato_2/`)
+- [x] Comprensión de estructura por 3 contratos y 2 etapas (sin fase 3 de lanzamiento operativo)
+- [x] Revisión de memoria 2025 para diferenciar Contrato 1 vs Contrato APP
+- [x] Creación de plan de actualización en `logs/plans/260221_0859_plan_actualizacion-alcance-3-contratos.md`
+- [x] Actualización de `ref/proyecto.md` con estructura contractual por etapas
+- [x] Actualización de `README.md` con línea de tiempo contractual
+- [x] Actualización de `pages/CALAIRE-EA.md` con etapas reales y referencias a contratos
+- [x] Actualización de `pages/CALAIRE-APP.md` con origen contractual (M-1256) y ejecución por Wilson
+- [x] Actualización de `pages/Equipo.md` con rol transversal de Wilson
+- [x] Creación de `pages/Wilson Salas.md` con perfil y en qué estamos trabajando
+- [x] Actualización de `docs/auxiliares/memoria_2025.md` diferenciando contratos
+- [x] Creación de journal diario `journals/2026_02_21.md` con cambios de alcance
+- [x] Creación de páginas de referencia contractual: `pages/Contrato 1.md`, `pages/Contrato APP.md`, `pages/Contrato 2.md`
+- [x] Creación de `pages/Agente AI - Funciones.md` con lista de funciones soportadas
 
 ## Critical Technical Context
 
-**Estructura Final Correcta:**
+**Estructura contractual final correcta:**
 
 ```
 docs/
-├── pm/                    # Artefactos PMI (NUEVA carpeta)
-│   ├── 01_Project_Charter.md
-│   ├── 02_Registro_Interesados.md
-│   ├── 03_EDT_WBS.md
-│   ├── 04_Diccionario_EDT.md
-│   ├── 05_Cronograma.md
-│   ├── 06_Presupuesto.md
-│   ├── 07_Registro_Riesgos.md
-│   ├── 08_Plan_Gestion_Calidad.md
-│   ├── 09_Registro_Incidentes.md
-│   └── 10_Lecciones_Aprendidas.md
-├── instrucciones/         # Guías PMI (carpeta existente)
-│   ├── guide_pm_charter.md
-│   ├── guide_pm_wbs.md
-│   ├── pm_ai_plan.md
-│   ├── pm_guia_lista.md
-│   └── pm_lista.md
-└── auxiliares/           # Archivos operativos CSV (carpeta existente)
-    ├── gantt.md
-    ├── timeline.md
-    ├── tareas_calaire.csv
-    ├── tags_project.csv
-    └── planificacion_ronda.csv
+├── contrato_1/         # Etapa 1 (2025) - Base metodológica y documental
+├── contrato_app/        # Paralelo (2025) - Desarrollo CALAIRE-APP (M-1256)
+└── contrato_2/         # Etapa 2 (2026) - Alistamiento, piloto, revisión, ajustes
 ```
 
-**Stack Tecnológico CALAIRE-APP:**
-- R 4.1.0+ y Shiny (NO Python)
-- Paquete `ptcalc` para cálculos ISO 13528:2022
-- Librerías de desarrollo: testthat, roxygen2, lintr, devtools
-- Repositorio pendiente de migración a GitHub
+**Páginas MOC creadas/actualizadas:**
+- `ref/proyecto.md` - Resumen ejecutivo por contratos
+- `pages/CALAIRE-EA.md` - Vista principal del proyecto
+- `pages/CALAIRE-APP.md` - Trazabilidad del desarrollo
+- `pages/Equipo.md` - Roles del equipo
+- `pages/Wilson Salas.md` - Perfil del líder técnico
+- `pages/Contrato 1.md` - Página de referencia Etapa 1
+- `pages/Contrato APP.md` - Página de referencia contrato app
+- `pages/Contrato 2.md` - Página de referencia Etapa 2
+- `pages/Agente AI - Funciones.md` - Funciones soportadas por agente tipo OpenCode
 
-**Fase 7 del Plan es CONDICIONAL:**
-- Requiere migración del repositorio CALAIRE-APP a GitHub
-- No se incluye en el tiempo total de ejecución inmediata (~10 horas para Fases 1-6)
-- Stack: R/Shiny (testthat para pruebas unitarias, Roxygen2 para documentación)
+**Normativa referenciada:**
+- ISO 17043:2023
+- ISO 13528:2017
+- NTC ISO/IEC 17025:2017
 
-**Reglas de Navegación para AGENTS.md:**
-- Artefactos PMI → `docs/pm/`
-- Guías PMI → `docs/instrucciones/`
-- Archivos CSV → `docs/auxiliares/`
-- Referenciar guías existentes antes de crear artefactos
-- Consolidar gantt.md + timeline.md existentes en `docs/auxiliares/`
+**Alcance oficial del proyecto:**
+- Diseño y validación técnica del servicio (sin lanzamiento operativo posterior)
+- Hasta alistamiento, prueba piloto, revisión de resultados y ajustes
 
 ## Next Steps
 
-1. **Git commit**: Commit cambios con mensaje "AGENTS.md: Actualizar estructura PMI - docs/pm, docs/instrucciones, docs/auxiliares"
-2. **Git push**: Push commits a repositorio remoto
-3. **Revisión de plan**: Usuario debe aprobar plan en `logs/plans/260208_2318_plan_pm-ia-artefactos.md`
-4. **Ejecución Fase 1**: Crear infraestructura en `docs/pm/` (README, Project Charter, Registro Interesados)
-5. **Revisión fase por revisor-fase**: Validar cada fase antes de continuar
+1. Git commit de cambios realizados con mensaje descriptivo
+2. Git push al repositorio remoto
+3. (Opcional) Generar propuesta corta para compartir internamente
+4. (Opcional) Crear página `Gestión del Proyecto` para consolidar MOCs PMI si se requiere
 
 **Archivos clave creados/actualizados:**
-- `logs/plans/260208_2318_plan_pm-ia-artefactos.md` - Plan completo de implementación PMI
-- `AGENTS.md` - Actualizado con estructura correcta
-- `logs/history/260208_2355_findings.md` - Hallazgos técnicos
-- `logs/history/260208_2341_findings.md` - Hallazgos sobre estructura de carpetas
+- `logs/plans/260221_0859_plan_actualizacion-alcance-3-contratos.md` - Plan de actualización ejecutado
+- `ref/proyecto.md` - Marco ejecutivo consolidado
+- `README.md` - Estructura contractual en README
+- `journals/2026_02_21.md` - Registro de cambios
 
-**Archivos corregidos:**
-- `pages/CALAIRE-APP.md` - Stack tecnológico actualizado
-- `docs/pm_guia_lista.md` - EDT ajustada
-- `docs/proyecto.md` - Tecnología actualizada
-- `journals/2026_01_30.md` - Contexto corregido
-
-## Sesiones Anteriores
-
-**Sesión de 2026-02-08 23:38 - Sistema de Gestión Documental ISO 17025/17043/13528:**
-- Fases 1-4 del plan SGC completadas
-- Fase 5 (Ejecutar Ajustes por Oleadas) pendiente de correcciones de revisor-fase
-- Plan activo: logs/plans/260208_1932_plan_ajuste-sgc-17025-17043-13528.md
+**Sesiones anteriores:**
+- Revisión de propuesta técnica y actualización por solicitud de Luz Elena (2026-02-21)
+- Ajuste de contrato 2 con objeto y actividades de la invitación (2026-02-21)
+- Continuación de sesiones previas de ajuste SGC y CALAIRE-APP
 
 **Referencias:**
-- `docs/pm_roadmap.md` - Análisis de brechas en artefactos PMI
-- `docs/pm_lista.md` - Lista de documentos a elaborar
-- `docs/pm_guia_lista.md` - Guía para elaboración de artefactos
-- `docs/pm_ai_plan.md` - Estrategia IA-Driven PM
-- `docs/docs_sgc/MANUAL_COMPLETO_PT_APP.md` - Documentación técnica CALAIRE-APP (R/Shiny)
+- `docs/contrato_1/funciones.md` - Actividades Contrato 1
+- `docs/contrato_app/` - Documentación contrato app
+- `docs/contrato_2/oferta_economica_propuesta.md` - Propuesta económica Contrato 2
+- `docs/obligaciones_especificas.pdf` - Obligaciones específicas Contrato 2
+- `docs/contrato_app/20251023_ Oferta Aplicativo.pdf` - Oferta del contrato app

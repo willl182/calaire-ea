@@ -1,0 +1,11 @@
+- tags:: [[Contract]], [[CALAIRE-EA]]
+- # Contrato 1
+- **Periodo**
+	- year:: 2025
+- **Alcance**
+	- Desarrollo de estado del arte, protocolos, procedimientos y avance documental del SGC para el diseño del servicio de EA/CIL.
+- **Repositorio documental**
+	- `docs/contrato_1/`
+- **Ver también**
+	- [[CALAIRE-EA]]
+	- [[Wilson Salas]]

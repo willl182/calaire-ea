@@ -3,6 +3,7 @@
 - **Visión General**
 	- Proyecto 61134: INM + UNAL
 	- Objetivo: Establecer servicio de Ensayos de Aptitud (EA) para CO, NOx, SO2, O3.
+	- Alcance vigente: diseño y validación técnica del servicio (sin lanzamiento operativo posterior).
 	- Inversión Total: $437M COP
 - **MOCs Principales**
 	- [[Prueba Piloto]] - Coordinación operativa rondas Marzo 2026.
@@ -17,18 +18,24 @@
 	- [[Desarrollo Técnico]] - CALAIRE-APP, protocolos, calibración y capacitación.
 	- [[Infraestructura]] - TI, instalaciones y transporte de equipos.
 	- [[SGC / Calidad]] - Auditorías, ISO 17043/13528 y control documental.
-- **Fases del Proyecto**
-	- Fase I: Diseño (Completada)
-	- Fase II: Ejecución y Piloto (EN PROGRESO)
-		- deadline:: 2026-04-30
-	- Fase III: QMS y Lanzamiento
-		- deadline:: 2026-11-03
+- **Estructura Contractual y Etapas**
+	- Etapa 1 - [[Contrato 1]] (2025)
+		- Estado del arte, protocolos, procedimientos y avance documental SGC.
+		- source:: `docs/contrato_1/`
+		- status:: completed
+	- Frente paralelo - [[Contrato APP]] (2025)
+		- Desarrollo del aplicativo estadístico CALAIRE-APP en R/Shiny, ejecutado por [[Wilson Salas]].
+		- source:: `docs/contrato_app/`
+		- status:: completed
+	- Etapa 2 - [[Contrato 2]] (2026)
+		- Alistamiento previo, prueba piloto, revisión de resultados y ajustes para consolidar el diseño del servicio.
+		- source:: `docs/contrato_2/`
+		- status:: in_progress
 - **Documentación Maestra**
-	- [[docs/proyecto.md]] - Plan detallado.
-	- [[docs/gantt.md]] - Cronograma Gantt.
-	- [[docs/timeline.md]] - Línea de tiempo rondas.
-	- [[docs/memoria_2025.md]] - Memoria de actividades 2025.
+	- [[ref/proyecto.md]] - Resumen ejecutivo consolidado por contratos.
+	- [[docs/auxiliares/gantt.md]] - Cronograma Gantt.
+	- [[docs/auxiliares/timeline.md]] - Línea de tiempo rondas.
+	- [[docs/auxiliares/memoria_2025.md]] - Memoria de actividades 2025.
 - **Informes Ejecutivos**
 	- [[Informe Ejecutivo Ene 28 - Feb 8 2026]] - Período reportado: 28 Ene - 8 Feb 2026.
 	 
-

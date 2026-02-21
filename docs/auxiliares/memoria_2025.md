@@ -1,0 +1,40 @@
+- tags:: [[Document]], [[Report]]
+- # Memoria del Proyecto 2025: Implementación de Ensayos de Aptitud (CALAIRE-EA)
+- **Contexto**
+	- Contratación de Líder Técnico (Ing. Wilson) como "Contratista No Egresado".
+	- Objetivo: Establecer servicio de Ensayos de Aptitud (EA) para CO, NOx, SO2, O3 bajo ISO 17043 e ISO 13528.
+	- Valor mensual: $6.000.000 COP.
+	- Duración: 9 meses (Abril - Diciembre 2025).
+	- Estructura de trabajo 2025: Contrato 1 como eje principal de diseno metodologico/documental y un contrato paralelo para desarrollo del aplicativo estadistico.
+- **Hitos y Actividades Realizadas (2025)**
+	- **Gestión Administrativa**
+		- Formalización contractual (Abril 2025).
+		- Entrega de documentación soporte (Cédula, REDAM, Examen Médico, Seguridad Social).
+		- Registro en SIGEP y declaración de bienes.
+	- **Definición Técnica**
+		- Estudio del estado del arte de EA a nivel mundial.
+		- Identificación de procedimientos y requisitos de trazabilidad metrológica.
+		- Definición de criterios de aceptación estadísticos.
+	- **Desarrollo Metodológico**
+		- Elaboración de protocolos para cada gas (CO, NOx, SO2, O3).
+		- Diseño de instructivos de embalaje y transporte.
+		- Integración documental al SGC (ISO 17025).
+- **Infraestructura y Software**
+		- Apoyo técnico para el costeo del servicio.
+		- Especificaciones para el aplicativo estadístico (software libre).
+		- Desarrollo contractual paralelo del aplicativo CALAIRE-APP en R/Shiny (Invitación M-1256), ejecutado por [[Wilson Salas]] con cierre en diciembre de 2025.
+- **Cierre 2025 por Contratos**
+	- **Contrato 1 (principal):** consolidación del estado del arte, protocolos, procedimientos e integración documental base al SGC para el diseño del servicio.
+	- **Contrato APP (paralelo):** entrega del aplicativo estadístico funcional para análisis y reporte de ensayos de aptitud, habilitando la etapa de alistamiento y prueba piloto 2026.
+- **Entregables Clave 2025**
+	- Informe estado del arte.
+	- Protocolos de EA por gas.
+	- Instructivo de transporte.
+	- Informe de prueba piloto interna.
+	- Documentación SGC (Procedimientos, Instructivos).
+	- Registro de pruebas del aplicativo.
+- **Actores Involucrados**
+	- [[Carmen Zapata]] (Directora)
+	- [[Jeniffer Ochoa]] (Calidad)
+	- [[Luz Elena Valdivieso]] (Gestora CDi)
+	- [[Wilson Salas]] (Líder Técnico)
