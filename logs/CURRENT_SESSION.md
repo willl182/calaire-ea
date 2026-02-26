@@ -1,80 +1,55 @@
 # Session State: CALAIRE-EA Knowledge Graph
 
-**Last Updated**: 2026-02-21 09:13
+**Last Updated**: 2026-02-26 15:06
 
 ## Session Objective
 
-Actualizar la narrativa del proyecto CALAIRE-EA para reflejar con trazabilidad contractual tres frentes: Contrato 1 (base metodológica y documental), Contrato APP (desarrollo paralelo del aplicativo) y Contrato 2 (alistamiento y prueba piloto), dejando explícito que el alcance vigente llega hasta el diseño del servicio.
+Retomar la línea de trabajo sobre ajustes del aplicativo [[CALAIRE-APP]] considerando dos planes de hoy: un plan de corrección por fases (errores + usabilidad + validación) y un plan de implementación documental para ejecución técnica cuando se habilite el repositorio.
 
 ## Current State
 
-- [x] Exploración de documentos de contratos (`docs/contrato_1/`, `docs/contrato_app/`, `docs/contrato_2/`)
-- [x] Comprensión de estructura por 3 contratos y 2 etapas (sin fase 3 de lanzamiento operativo)
-- [x] Revisión de memoria 2025 para diferenciar Contrato 1 vs Contrato APP
-- [x] Creación de plan de actualización en `logs/plans/260221_0859_plan_actualizacion-alcance-3-contratos.md`
-- [x] Actualización de `ref/proyecto.md` con estructura contractual por etapas
-- [x] Actualización de `README.md` con línea de tiempo contractual
-- [x] Actualización de `pages/CALAIRE-EA.md` con etapas reales y referencias a contratos
-- [x] Actualización de `pages/CALAIRE-APP.md` con origen contractual (M-1256) y ejecución por Wilson
-- [x] Actualización de `pages/Equipo.md` con rol transversal de Wilson
-- [x] Creación de `pages/Wilson Salas.md` con perfil y en qué estamos trabajando
-- [x] Actualización de `docs/auxiliares/memoria_2025.md` diferenciando contratos
-- [x] Creación de journal diario `journals/2026_02_21.md` con cambios de alcance
-- [x] Creación de páginas de referencia contractual: `pages/Contrato 1.md`, `pages/Contrato APP.md`, `pages/Contrato 2.md`
-- [x] Creación de `pages/Agente AI - Funciones.md` con lista de funciones soportadas
+- [x] Restauración de contexto (continue)
+- [x] Ingesta de insumo técnico `docs/ajustes_app/Revisión aplicativo estadístico.pdf`
+- [x] Consolidación del plan funcional `logs/plans/260226_1457_plan_ajustes-app-revision-2.md`
+- [x] Consolidación del plan de implementación `logs/plans/260226_1457_plan_implementacion-ajustes-revision-aplicativo-estadistico.md`
+- [x] Reanudación de sesión solicitada por el usuario (2026-02-26 15:06)
+- [ ] Aprobación/priorización de fases por parte del usuario
+- [ ] Acceso al repositorio de la app para ejecutar correcciones de Fase 1 y Fase 2
 
 ## Critical Technical Context
 
-**Estructura contractual final correcta:**
+**Errores confirmados por César (Informe No. 2, 2026-02-23):**
+- Fórmula B.10 de homogeneidad: no maneja radicando negativo (debe ser ss=0)
+- MADe: calcula con datos de homogeneidad en vez de participantes
+- Selección MADe/nIQR vs Algoritmo A: falta lógica para n ≥ 12
 
-```
-docs/
-├── contrato_1/         # Etapa 1 (2025) - Base metodológica y documental
-├── contrato_app/        # Paralelo (2025) - Desarrollo CALAIRE-APP (M-1256)
-└── contrato_2/         # Etapa 2 (2026) - Alistamiento, piloto, revisión, ajustes
-```
+**Cálculos correctos:** nIQR ✅, Estabilidad ✅
 
-**Páginas MOC creadas/actualizadas:**
-- `ref/proyecto.md` - Resumen ejecutivo por contratos
-- `pages/CALAIRE-EA.md` - Vista principal del proyecto
-- `pages/CALAIRE-APP.md` - Trazabilidad del desarrollo
-- `pages/Equipo.md` - Roles del equipo
-- `pages/Wilson Salas.md` - Perfil del líder técnico
-- `pages/Contrato 1.md` - Página de referencia Etapa 1
-- `pages/Contrato APP.md` - Página de referencia contrato app
-- `pages/Contrato 2.md` - Página de referencia Etapa 2
-- `pages/Agente AI - Funciones.md` - Funciones soportadas por agente tipo OpenCode
+**Recomendaciones:** separar zonas de carga, mejorar CSV, tablas claras de cálculos
+
+**Planes activos (hoy):**
+- `logs/plans/260226_1457_plan_ajustes-app-revision-2.md` (status: draft)
+- `logs/plans/260226_1457_plan_implementacion-ajustes-revision-aplicativo-estadistico.md` (status: draft)
 
 **Normativa referenciada:**
+- ISO 13528:2022 (Anexo B, Secciones 9)
 - ISO 17043:2023
-- ISO 13528:2017
 - NTC ISO/IEC 17025:2017
-
-**Alcance oficial del proyecto:**
-- Diseño y validación técnica del servicio (sin lanzamiento operativo posterior)
-- Hasta alistamiento, prueba piloto, revisión de resultados y ajustes
 
 ## Next Steps
 
-1. Git commit de cambios realizados con mensaje descriptivo
-2. Git push al repositorio remoto
-3. (Opcional) Generar propuesta corta para compartir internamente
-4. (Opcional) Crear página `Gestión del Proyecto` para consolidar MOCs PMI si se requiere
+1. Definir priorización entre ambos planes para ejecución inmediata
+2. Obtener acceso al repositorio de la app (código R/Shiny) para ejecutar Fase 1/Fase 2
+3. Coordinar validación cruzada con César para cierre de Fase 3
 
-**Archivos clave creados/actualizados:**
-- `logs/plans/260221_0859_plan_actualizacion-alcance-3-contratos.md` - Plan de actualización ejecutado
-- `ref/proyecto.md` - Marco ejecutivo consolidado
-- `README.md` - Estructura contractual en README
-- `journals/2026_02_21.md` - Registro de cambios
+**Archivos clave:**
+- `logs/plans/260226_1457_plan_ajustes-app-revision-2.md` — Plan funcional de ajustes (draft)
+- `logs/plans/260226_1457_plan_implementacion-ajustes-revision-aplicativo-estadistico.md` — Plan de implementación documental (draft)
+- `docs/ajustes_app/Revisión aplicativo estadístico.pdf` — Informe No. 2 de César
+- `logs/fase2_hallazgos_informe_especificos.md` — Hallazgos previos del informe EA
+- `pages/CALAIRE-APP.md` — Estado de validación del aplicativo
 
 **Sesiones anteriores:**
-- Revisión de propuesta técnica y actualización por solicitud de Luz Elena (2026-02-21)
-- Ajuste de contrato 2 con objeto y actividades de la invitación (2026-02-21)
-- Continuación de sesiones previas de ajuste SGC y CALAIRE-APP
-
-**Referencias:**
-- `docs/contrato_1/funciones.md` - Actividades Contrato 1
-- `docs/contrato_app/` - Documentación contrato app
-- `docs/contrato_2/oferta_economica_propuesta.md` - Propuesta económica Contrato 2
-- `docs/obligaciones_especificas.pdf` - Obligaciones específicas Contrato 2
-- `docs/contrato_app/20251023_ Oferta Aplicativo.pdf` - Oferta del contrato app
+- Actualización de alcance por 3 contratos (2026-02-21)
+- Revisión de propuesta técnica y solicitud de Luz Elena (2026-02-21)
+- Fase 2 hallazgos del informe EA (2026-02-08)
