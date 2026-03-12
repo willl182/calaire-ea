@@ -26,7 +26,7 @@ Prestar servicios profesionales para establecer un servicio de comparaciones int
 
 ## 3. Plazo de Ejecución
 
-**Duración:** 5 meses calendario, contados a partir del acta de inicio o fecha de aceptación de la oferta.
+**Duración:** Desde el acta de inicio o fecha de aceptación de la oferta y, en todo caso, hasta el **31 de julio de 2026**, conforme a la invitación.
 
 **Hitos principales:**
 - Fase 1 – Diagnóstico y planeación: Mes 1
@@ -171,7 +171,7 @@ Nota: el alcance técnico y documental aquí presentado se formula para asegurar
 - **Garantía de cumplimiento:** cumplimiento de plazos acordados con mecanismos de comunicación temprana ante eventualidades.
 
 ### 10.3 Validez de la Oferta
-**[NÚMERO]** días calendario contados desde la fecha de emisión de la presente oferta.
+**60** días calendario contados desde la fecha de emisión de la presente oferta.
 
 ---
 
