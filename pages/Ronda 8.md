@@ -5,12 +5,18 @@
 	- Dias de prueba: 2026-04-30 a 2026-05-02
 	- Recoleccion: 2026-05-04
 - **Ciclo operativo**
-	- Miercoles: recepcion y acondicionamiento.
-	- Jueves a sabado: ejecucion de pruebas.
-	- Lunes: recoleccion de equipos.
+	- Miercoles: recepcion, instalacion y acondicionamiento de equipos de ambos participantes.
+	- Jueves: calibracion multipunto y arranque de mediciones O3, NO y NO2.
+	- Viernes y sabado: continuidad de medicion conforme a la secuencia compleja del formato F-PSEA-02.
+	- Lunes: devolucion, retiro de equipos y cierre logistico.
 - **Estado**
 	- status:: planificada
-- **Laboratorio**
-	- Buffer (sin asignar)
+- **Tipo de ronda**
+	- Ronda doble
+- **Analitos**
+	- O3, NO y NO2
+- **Participantes**
+	- [[SIATA]] (P1)
+	- [[Universidad Pontificia Bolivariana]] (P2)
 - **Referencias**
 	- [[Prueba Piloto]]

@@ -2,15 +2,19 @@
 - # Ronda 7
 - **Fechas**
 	- Inicio (montaje): 2026-04-22
-	- Dias de prueba: 2026-04-23 a 2026-04-25
-	- Recoleccion: 2026-04-27
+	- Dias de prueba: 2026-04-23
+	- Devolucion: 2026-04-24
 - **Ciclo operativo**
-	- Miercoles: recepcion y acondicionamiento.
-	- Jueves a sabado: ejecucion de pruebas.
-	- Lunes: recoleccion de equipos.
+	- Miercoles: recepcion, instalacion y acondicionamiento de equipos del participante.
+	- Jueves: calibracion multipunto, verificacion cero/span y medicion de CO/SO2.
+	- Viernes: retiro de equipos y cierre logistico de la ronda.
 - **Estado**
 	- status:: planificada
-- **Laboratorio**
-	- Buffer / [[Politécnico Colombiano Jaime Isaza Cadavid|Politécnico JIC]] (por confirmar con Profe Myryam)
+- **Tipo de ronda**
+	- Ronda simple
+- **Analitos**
+	- CO y SO2
+- **Participante**
+	- [[SIATA]] (P1)
 - **Referencias**
 	- [[Prueba Piloto]]
