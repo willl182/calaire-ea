@@ -145,17 +145,27 @@ No cubre: el análisis de resultados (→ I-PSEA-11), la evaluación de desempe�
 
 > **Instrucción:** Completar estos tres campos en la plantilla antes del envío. Consultar I-PSEA-07 para σ_pt y P-PSEA-09/DG-PSEA-01 para apelaciones.
 
-**Brecha 1 — σ_pt por analito:**
+**Brecha 1 — Origen de σ_pt:**
 
-Agregar en §8 de la comunicación una tabla con los valores de σ_pt prescrito para la prueba piloto:
+Existen dos enfoques válidos para definir σ_pt en el esquema CALAIRE-EA. Documentar en I-PSEA-07 cuál aplica a cada ronda y citarlo en el informe de resultados:
 
-| Analito | σ_pt (nmol/mol o µmol/mol) | Criterio origen |
+**Opción A — Valor prescrito fijo (pre-ronda):** se establece σ_pt antes de la ronda a partir de requisitos normativos US EPA por analito:
+
+| Analito | σ_pt (nmol/mol) | Criterio origen |
 |---|---|---|
-| O₃ | [___] | [US-EPA / regulatorio / I-PSEA-07] |
-| NO | [___] | |
-| NO₂ | [___] | |
-| SO₂ | [___] | |
-| CO | [___] µmol/mol | |
+| O₃ | [___] | US-EPA / I-PSEA-07 |
+| NO | [___] | US-EPA / I-PSEA-07 |
+| NO₂ | [___] | US-EPA / I-PSEA-07 |
+| SO₂ | [___] | US-EPA / I-PSEA-07 |
+| CO | [___] µmol/mol | US-EPA / I-PSEA-07 |
+
+**Opción B — Valor derivado post-ronda (función lineal del valor asignado):** σ_pt se calcula una vez conocido x_pt, usando la expresión normativa:
+
+> **σ_pt = a · x_pt + b**
+>
+> Donde *a* y *b* son parámetros derivados de los requisitos de incertidumbre US EPA para cada analito (ver I-PSEA-07 §6.x). Este enfoque es el adoptado por esquemas internacionales de referencia (e.g., JRC-ERLAP) y es preferible cuando x_pt no se conoce antes de la ronda.
+
+En ambos casos, σ_pt se publica en el informe de resultados. En la **prueba piloto 2026** se aplicará la Opción B (post-ronda), conforme a lo indicado en la comunicación oficial a participantes.
 
 **Brecha 2 — Apelaciones:**
 

@@ -1,5 +1,7 @@
 - tags:: [[Equipo]]
 - # David Pulgarin
+- mobile:: (+57) 3148748191
+- email:: calaire_med@unal.edu.co
 - role:: Profesional de proyectos
 - focus:: Cartas, coordinacion de la fase final del servicio.
 - project:: [[CALAIRE-EA]]

@@ -1,5 +1,7 @@
 - tags:: [[Team]], [[Technical Lead]]
 - # Wilson Salas
+- mobile:: (+57) 3184767422
+- email:: wilsonsalasc@gmail.com
 - **Perfil**
 	- role:: Líder técnico
 	- expertise:: Calidad de aire, ensayos de aptitud, metrología y análisis estadístico

@@ -27,9 +27,9 @@
 |---|---|
 | **Ronda** | [Ej: Ronda Simple — CO/SO₂ / Ronda Compleja F1 — O₃/NO/NO₂] |
 | **Código de participante asignado** | [P1 / P2] |
-| **Fecha límite de respuesta** | [DD/MM/AAAA] |
-| **Enviar a** | [Email coordinador CALAIRE-EA] |
-| **Coordinador de contacto** | [Nombre] — [Teléfono] — [Email] |
+| **Fecha límite de respuesta** | 14/04/2026 (martes) |
+| **Enviar a** | calaire_med@unal.edu.co |
+| **Coordinador de contacto** | Wilson Salas — (+57) 318 476 7422 — wilsonsalasc@gmail.com |
 
 ---
 

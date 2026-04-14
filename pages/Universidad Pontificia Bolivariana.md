@@ -18,5 +18,7 @@
     - Carta oficial enviada con calendario y procedimientos
     - Confirmación recibida 2026-02-05 para 2da semana de abril (Ronda 5)
     - En la planificación vigente de prueba piloto se asigna como participante P2 para la ronda doble de O3, NO y NO2 junto con [[SIATA]].
-- ## Documentación
+- ## Contacto
+    - Daniel Esteban Villada — danielesteban.villada@upb.edu.co
+## Documentación
     - [[docs/carta_gica_v3.md]] - Carta de invitación enviada

@@ -265,6 +265,8 @@ Similar al zeta-score en concepto, pero utiliza las **incertidumbres expandidas*
 
 La selección dependerá de las condiciones de cada ronda — en particular, de la relación entre la incertidumbre del valor asignado u(xpt) y la desviación estándar de aptitud σpt. Los resultados de la prueba piloto nos permitirán determinar cuál(es) indicador(es) son los más adecuados para el esquema CALAIRE-EA en su operación regular. En el informe de resultados se reportarán los indicadores aplicables con su interpretación.
 
+> **Nota sobre σpt:** El valor de σpt no se comunica previamente a los participantes. Se determina de forma **post-ronda** a partir de los requisitos normativos aplicables (US EPA) para cada analito, y se publica junto con los resultados en el informe final de desempeño.
+
 > **¿Qué pasa si un resultado no es satisfactorio?** No hay penalización. El propósito del ensayo es **identificar oportunidades de mejora**. Un resultado "no satisfactorio" es una señal para revisar calibraciones, procedimientos o condiciones de operación. Al finalizar, cada participante recibirá un **Informe de Desempeño** confidencial con el análisis detallado de sus resultados.
 
 ---
