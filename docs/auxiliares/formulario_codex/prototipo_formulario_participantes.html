@@ -1,0 +1,1645 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CALAIRE-EA | Dashboard de Rondas y Portal de Participantes</title>
+  <style>
+    :root {
+      --bg: #f3eee6;
+      --paper: rgba(255, 251, 246, 0.88);
+      --panel: rgba(255, 255, 255, 0.82);
+      --line: rgba(63, 49, 37, 0.14);
+      --line-strong: rgba(63, 49, 37, 0.28);
+      --ink: #23180f;
+      --muted: #756557;
+      --accent: #af4d31;
+      --accent-dark: #7c301d;
+      --accent-soft: rgba(175, 77, 49, 0.12);
+      --green: #205c49;
+      --amber: #8f5a13;
+      --danger: #b42318;
+      --shadow: 0 18px 48px rgba(70, 45, 28, 0.12);
+      --radius-xl: 28px;
+      --radius-lg: 18px;
+      --radius-md: 12px;
+      --sans: "IBM Plex Sans", "Segoe UI", sans-serif;
+      --serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      font-family: var(--sans);
+      background:
+        radial-gradient(circle at top left, rgba(175, 77, 49, 0.1), transparent 28%),
+        radial-gradient(circle at top right, rgba(32, 92, 73, 0.08), transparent 28%),
+        linear-gradient(180deg, #f8f3ec 0%, var(--bg) 100%);
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(35, 24, 15, 0.018) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(35, 24, 15, 0.018) 1px, transparent 1px);
+      background-size: 24px 24px;
+      mask-image: radial-gradient(circle at center, black 34%, transparent 84%);
+    }
+
+    .shell {
+      width: min(1460px, calc(100% - 28px));
+      margin: 18px auto 36px;
+    }
+
+    .hero,
+    .workspace {
+      display: grid;
+      gap: 20px;
+    }
+
+    .hero {
+      grid-template-columns: 1.4fr 0.8fr;
+      margin-bottom: 20px;
+    }
+
+    .workspace {
+      grid-template-columns: 420px 1fr;
+      align-items: start;
+    }
+
+    .card {
+      background: var(--paper);
+      backdrop-filter: blur(14px);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-main,
+    .hero-side,
+    .panel {
+      padding: 24px;
+    }
+
+    .hero-main {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-main::after {
+      content: "EA";
+      position: absolute;
+      right: 14px;
+      top: 10px;
+      font-family: var(--serif);
+      font-size: clamp(5rem, 12vw, 8rem);
+      line-height: 1;
+      letter-spacing: -0.08em;
+      color: rgba(124, 48, 29, 0.07);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(35, 24, 15, 0.06);
+      color: var(--muted);
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+      font-family: var(--serif);
+      letter-spacing: -0.04em;
+    }
+
+    h1 {
+      margin-top: 12px;
+      max-width: 12ch;
+      font-size: clamp(2.5rem, 6vw, 4.9rem);
+      line-height: 0.94;
+    }
+
+    h2 {
+      font-size: 1.45rem;
+    }
+
+    h3 {
+      font-size: 1.15rem;
+    }
+
+    .lead {
+      max-width: 62ch;
+      margin: 14px 0 0;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .hero-actions,
+    .button-row,
+    .tab-row,
+    .subtab-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .hero-actions {
+      margin-top: 20px;
+    }
+
+    .hero-side {
+      display: grid;
+      gap: 12px;
+      align-content: start;
+    }
+
+    .metric {
+      padding: 16px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+    }
+
+    .metric-label {
+      color: var(--muted);
+      font-size: 0.78rem;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    .metric-value {
+      margin-top: 8px;
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.05em;
+    }
+
+    .panel + .panel {
+      margin-top: 20px;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .helper {
+      margin: 6px 0 0;
+      color: var(--muted);
+      line-height: 1.55;
+      font-size: 0.94rem;
+    }
+
+    .tab,
+    .subtab,
+    .chip,
+    button {
+      appearance: none;
+      border: none;
+      font: inherit;
+      cursor: pointer;
+      transition: transform 160ms ease, background 160ms ease, color 160ms ease, border-color 160ms ease;
+    }
+
+    button,
+    .chip {
+      padding: 11px 15px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #fff8f2;
+      font-weight: 700;
+      box-shadow: 0 14px 28px rgba(175, 77, 49, 0.16);
+    }
+
+    button:hover,
+    .chip:hover {
+      transform: translateY(-1px);
+      background: var(--accent-dark);
+    }
+
+    button.secondary,
+    .chip.secondary {
+      background: rgba(35, 24, 15, 0.08);
+      color: var(--ink);
+      box-shadow: none;
+    }
+
+    button.ghost,
+    .chip.ghost {
+      background: transparent;
+      color: var(--ink);
+      border: 1px solid var(--line);
+      box-shadow: none;
+    }
+
+    .tab-row {
+      margin-bottom: 18px;
+    }
+
+    .tab,
+    .subtab {
+      padding: 12px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.66);
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .tab.active,
+    .subtab.active {
+      background: var(--ink);
+      border-color: var(--ink);
+      color: #fff8f2;
+    }
+
+    .view {
+      display: none;
+    }
+
+    .view.active {
+      display: block;
+    }
+
+    .field-grid {
+      display: grid;
+      gap: 14px;
+    }
+
+    .field-grid.two {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .field-grid.three {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    label {
+      display: grid;
+      gap: 7px;
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+
+    .small-label {
+      font-size: 0.86rem;
+      font-weight: 700;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid rgba(63, 49, 37, 0.16);
+      border-radius: var(--radius-md);
+      background: rgba(255, 255, 255, 0.94);
+      color: var(--ink);
+      font: inherit;
+      transition: border-color 160ms ease, box-shadow 160ms ease;
+    }
+
+    textarea {
+      min-height: 96px;
+      resize: vertical;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 4px rgba(175, 77, 49, 0.12);
+    }
+
+    input.invalid {
+      border-color: var(--danger);
+      background: rgba(180, 35, 24, 0.05);
+    }
+
+    .check-grid {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: 14px;
+    }
+
+    .check-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 14px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      background: rgba(255, 255, 255, 0.62);
+    }
+
+    .check-item input[type="checkbox"] {
+      width: auto;
+      margin: 0;
+      transform: scale(1.15);
+    }
+
+    .selected-gases {
+      margin-top: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .pill {
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent-dark);
+      font-size: 0.84rem;
+      font-weight: 700;
+    }
+
+    .round-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .round-card {
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.66);
+    }
+
+    .round-card.active {
+      border-color: var(--accent);
+      box-shadow: inset 0 0 0 1px rgba(175, 77, 49, 0.22);
+      background: rgba(175, 77, 49, 0.07);
+    }
+
+    .round-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+    }
+
+    .round-code {
+      font-weight: 800;
+      font-size: 1rem;
+      letter-spacing: 0.04em;
+    }
+
+    .round-name {
+      margin-top: 6px;
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+
+    .round-meta {
+      margin-top: 10px;
+      display: grid;
+      gap: 6px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .chip-tag {
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(35, 24, 15, 0.08);
+      color: var(--ink);
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    .list-note {
+      color: var(--muted);
+      line-height: 1.6;
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .config-box {
+      padding: 16px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.62);
+      margin-top: 14px;
+    }
+
+    .table-wrap {
+      overflow: auto;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.72);
+    }
+
+    table {
+      width: 100%;
+      min-width: 920px;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 12px 10px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+    }
+
+    th {
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      background: rgba(246, 238, 228, 0.98);
+      text-align: left;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    .row-label {
+      min-width: 160px;
+      font-weight: 800;
+    }
+
+    .row-sub {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 0.8rem;
+      font-weight: 400;
+    }
+
+    .cell-input {
+      min-width: 120px;
+      padding: 10px 12px;
+    }
+
+    .status-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .status-box {
+      padding: 14px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+    }
+
+    .status-box strong {
+      display: block;
+      margin-top: 6px;
+      font-size: 1.18rem;
+      letter-spacing: -0.04em;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .danger {
+      color: var(--danger);
+    }
+
+    .ok {
+      color: var(--green);
+    }
+
+    .footer-note {
+      margin-top: 16px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: rgba(32, 92, 73, 0.08);
+      color: #27483e;
+      line-height: 1.55;
+      font-size: 0.92rem;
+    }
+
+    .toast {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      max-width: min(420px, calc(100% - 24px));
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: #23180f;
+      color: #fff8f2;
+      box-shadow: var(--shadow);
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 180ms ease, transform 180ms ease;
+      pointer-events: none;
+    }
+
+    .toast.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 1180px) {
+      .hero,
+      .workspace {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .shell {
+        width: min(100% - 16px, 100%);
+        margin: 10px auto 24px;
+      }
+
+      .hero-main,
+      .hero-side,
+      .panel {
+        padding: 18px;
+      }
+
+      .field-grid.two,
+      .field-grid.three,
+      .check-grid,
+      .status-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <article class="card hero-main">
+        <span class="eyebrow">Arquitectura del Flujo</span>
+        <h1>Dashboard de rondas y formulario reactivo para participantes</h1>
+        <p class="lead">
+          Este prototipo separa dos funciones: la configuración operativa de rondas por parte del organizador y el diligenciamiento
+          del reporte por parte del participante. La ronda define contaminantes, número de niveles y unidad sugerida. El formulario
+          del participante se adapta automáticamente a esa configuración.
+        </p>
+        <div class="hero-actions">
+          <button id="seed-demo">Cargar demo</button>
+          <button id="export-rounds" class="secondary">Exportar rondas</button>
+          <button id="import-rounds" class="ghost">Importar rondas</button>
+          <input id="import-file" type="file" accept=".json" hidden>
+        </div>
+      </article>
+      <aside class="card hero-side">
+        <div class="metric">
+          <div class="metric-label">Rondas guardadas</div>
+          <div class="metric-value" id="metric-round-count">0</div>
+        </div>
+        <div class="metric">
+          <div class="metric-label">Ronda activa</div>
+          <div class="metric-value" id="metric-active-round">Ninguna</div>
+        </div>
+        <div class="metric">
+          <div class="metric-label">Registros completos</div>
+          <div class="metric-value" id="metric-complete">0 / 0</div>
+        </div>
+      </aside>
+    </section>
+
+    <div class="tab-row">
+      <button class="tab active" data-view="dashboard">Dashboard del organizador</button>
+      <button class="tab" data-view="participant">Portal del participante</button>
+    </div>
+
+    <section id="dashboard" class="view active">
+      <div class="workspace">
+        <div>
+          <section class="card panel">
+            <div class="section-head">
+              <div>
+                <h2>Configurar ronda</h2>
+                <p class="helper">Defina la identidad de la ronda y su estructura técnica antes de publicarla a los participantes.</p>
+              </div>
+            </div>
+
+            <div class="field-grid">
+              <label>
+                Código de ronda
+                <input id="round-code" type="text" placeholder="R-CO-SO2-01">
+              </label>
+              <label>
+                Nombre de la ronda
+                <input id="round-name" type="text" placeholder="Ronda piloto CO y SO2">
+              </label>
+            </div>
+
+            <div class="field-grid three" style="margin-top: 14px;">
+              <label>
+                Fecha de apertura
+                <input id="round-open-date" type="date">
+              </label>
+              <label>
+                Fecha de cierre
+                <input id="round-close-date" type="date">
+              </label>
+              <label>
+                Estado
+                <select id="round-status">
+                  <option value="draft">draft</option>
+                  <option value="published">published</option>
+                  <option value="closed">closed</option>
+                </select>
+              </label>
+            </div>
+
+            <label style="margin-top: 14px;">
+              Descripción operativa
+              <textarea id="round-description" placeholder="Alcance, condiciones del reporte, observaciones para participantes."></textarea>
+            </label>
+
+            <div class="config-box">
+              <div class="section-head" style="margin-bottom: 10px;">
+                <div>
+                  <h3>Contaminantes incluidos</h3>
+                  <p class="helper">Seleccione solo los gases que aplican a esta ronda.</p>
+                </div>
+              </div>
+              <div class="check-grid">
+                <label class="check-item"><input type="checkbox" value="CO" class="gas-check"> CO</label>
+                <label class="check-item"><input type="checkbox" value="SO2" class="gas-check"> SO2</label>
+                <label class="check-item"><input type="checkbox" value="NO" class="gas-check"> NO</label>
+                <label class="check-item"><input type="checkbox" value="NO2" class="gas-check"> NO2</label>
+                <label class="check-item"><input type="checkbox" value="O3" class="gas-check"> O3</label>
+              </div>
+              <div class="selected-gases" id="selected-gases"></div>
+            </div>
+
+            <div class="config-box">
+              <div class="section-head" style="margin-bottom: 10px;">
+                <div>
+                  <h3>Parámetros del formulario</h3>
+                  <p class="helper">Estos campos se aplicarán a cada contaminante seleccionado.</p>
+                </div>
+              </div>
+              <div class="field-grid three">
+                <label>
+                  Número de niveles
+                  <select id="round-level-count">
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5" selected>5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                  </select>
+                </label>
+                <label>
+                  Unidad sugerida
+                  <select id="round-unit">
+                    <option value="ppm">ppm</option>
+                    <option value="ppb">ppb</option>
+                    <option value="ug/m3">ug/m3</option>
+                  </select>
+                </label>
+                <label>
+                  Segundo promedio
+                  <select id="round-second-average">
+                    <option value="yes">Sí</option>
+                    <option value="no">No</option>
+                  </select>
+                </label>
+              </div>
+            </div>
+
+            <div class="button-row" style="margin-top: 18px;">
+              <button id="save-round">Guardar ronda</button>
+              <button id="new-round" class="secondary">Nueva ronda</button>
+              <button id="delete-round" class="ghost">Eliminar ronda activa</button>
+            </div>
+          </section>
+
+          <section class="card panel">
+            <div class="section-head">
+              <div>
+                <h2>Notas de uso</h2>
+              </div>
+            </div>
+            <ul class="list-note">
+              <li>La ronda guardada define la estructura del formulario del participante.</li>
+              <li>Sin backend, el almacenamiento es local al navegador del organizador.</li>
+              <li>La exportación de rondas en JSON permite mover la configuración a otra instancia publicada.</li>
+              <li>Cuando haya backend, esta misma estructura puede persistirse en base de datos sin cambiar el modelo conceptual.</li>
+            </ul>
+          </section>
+        </div>
+
+        <div>
+          <section class="card panel">
+            <div class="section-head">
+              <div>
+                <h2>Rondas guardadas</h2>
+                <p class="helper">Seleccione una ronda para editarla o dejarla activa para el portal del participante.</p>
+              </div>
+            </div>
+            <div id="round-list" class="round-list"></div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section id="participant" class="view">
+      <div class="workspace">
+        <div>
+          <section class="card panel">
+            <div class="section-head">
+              <div>
+                <h2>Selección de ronda</h2>
+                <p class="helper">El participante solo puede diligenciar con base en una ronda previamente configurada.</p>
+              </div>
+            </div>
+            <label>
+              Ronda disponible
+              <select id="participant-round-select"></select>
+            </label>
+
+            <div id="participant-round-summary" class="config-box">
+              <span class="muted">No hay ronda seleccionada.</span>
+            </div>
+          </section>
+
+          <section class="card panel">
+            <div class="section-head">
+              <div>
+                <h2>Datos del participante</h2>
+              </div>
+            </div>
+
+            <div class="field-grid">
+              <label>
+                Código del participante
+                <input id="participant-code" type="text" placeholder="P01">
+              </label>
+              <label>
+                Nombre del laboratorio
+                <input id="participant-lab" type="text" placeholder="Laboratorio participante">
+              </label>
+            </div>
+
+            <div class="field-grid two" style="margin-top: 14px;">
+              <label>
+                Responsable del envío
+                <input id="participant-responsible" type="text" placeholder="Nombre del profesional">
+              </label>
+              <label>
+                Correo de contacto
+                <input id="participant-email" type="email" placeholder="correo@laboratorio.co">
+              </label>
+            </div>
+
+            <div class="field-grid two" style="margin-top: 14px;">
+              <label>
+                Fecha de reporte
+                <input id="participant-date" type="date">
+              </label>
+              <label>
+                Observación general
+                <input id="participant-general-note" type="text" placeholder="Nota general opcional">
+              </label>
+            </div>
+          </section>
+        </div>
+
+        <div>
+          <section class="card panel">
+            <div class="section-head">
+              <div>
+                <h2>Matriz de resultados del participante</h2>
+                <p class="helper">La tabla cambia según la ronda elegida. Cada pestaña corresponde a un contaminante habilitado.</p>
+              </div>
+            </div>
+
+            <div class="subtab-row" id="participant-gas-tabs"></div>
+
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Nivel</th>
+                    <th>Promedio 1</th>
+                    <th>Incertidumbre 1</th>
+                    <th id="col-promedio-2">Promedio 2</th>
+                    <th id="col-incertidumbre-2">Incertidumbre 2</th>
+                    <th>Unidad</th>
+                    <th>Observaciones</th>
+                  </tr>
+                </thead>
+                <tbody id="participant-table-body"></tbody>
+              </table>
+            </div>
+
+            <div class="status-grid">
+              <div class="status-box">
+                Ronda activa
+                <strong id="status-round">Ninguna</strong>
+              </div>
+              <div class="status-box">
+                Contaminante activo
+                <strong id="status-gas">-</strong>
+              </div>
+              <div class="status-box">
+                Filas completas
+                <strong id="status-complete">0 / 0</strong>
+              </div>
+              <div class="status-box">
+                Validación
+                <strong id="status-validation">Pendiente</strong>
+              </div>
+            </div>
+
+            <div class="button-row" style="margin-top: 18px;">
+              <button id="participant-save-draft" class="secondary">Guardar borrador</button>
+              <button id="participant-validate">Validar</button>
+              <button id="participant-export" class="ghost">Exportar CSV</button>
+            </div>
+
+            <div class="footer-note">
+              Este prototipo aún no envía la información a un servidor. El flujo actual permite configurar la ronda, diligenciar el formulario y exportar un CSV consolidado por participante.
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast"></div>
+
+  <script>
+    const storageKeys = {
+      rounds: "calaire_rounds_v2",
+      activeRoundId: "calaire_active_round_v2",
+      draft: "calaire_participant_draft_v2"
+    };
+
+    const defaultGases = ["CO", "SO2", "NO", "NO2", "O3"];
+
+    const state = {
+      rounds: [],
+      activeRoundId: null,
+      editorRoundId: null,
+      participant: {
+        roundId: null,
+        activeGas: null,
+        meta: {
+          participante_codigo: "",
+          laboratorio: "",
+          responsable: "",
+          correo: "",
+          fecha_reporte: "",
+          observacion_general: ""
+        },
+        rows: {}
+      }
+    };
+
+    const elements = {
+      metricRoundCount: document.getElementById("metric-round-count"),
+      metricActiveRound: document.getElementById("metric-active-round"),
+      metricComplete: document.getElementById("metric-complete"),
+      selectedGases: document.getElementById("selected-gases"),
+      roundList: document.getElementById("round-list"),
+      participantRoundSelect: document.getElementById("participant-round-select"),
+      participantRoundSummary: document.getElementById("participant-round-summary"),
+      participantGasTabs: document.getElementById("participant-gas-tabs"),
+      participantTableBody: document.getElementById("participant-table-body"),
+      statusRound: document.getElementById("status-round"),
+      statusGas: document.getElementById("status-gas"),
+      statusComplete: document.getElementById("status-complete"),
+      statusValidation: document.getElementById("status-validation"),
+      colPromedio2: document.getElementById("col-promedio-2"),
+      colIncertidumbre2: document.getElementById("col-incertidumbre-2"),
+      toast: document.getElementById("toast")
+    };
+
+    const viewTabs = document.querySelectorAll(".tab[data-view]");
+    viewTabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        viewTabs.forEach((item) => item.classList.remove("active"));
+        document.querySelectorAll(".view").forEach((view) => view.classList.remove("active"));
+        tab.classList.add("active");
+        document.getElementById(tab.dataset.view).classList.add("active");
+      });
+    });
+
+    function showToast(message) {
+      elements.toast.textContent = message;
+      elements.toast.classList.add("visible");
+      clearTimeout(showToast.timer);
+      showToast.timer = setTimeout(() => elements.toast.classList.remove("visible"), 2400);
+    }
+
+    function uid() {
+      return `r_${Math.random().toString(36).slice(2, 10)}`;
+    }
+
+    function getRoundFormValues() {
+      const gases = Array.from(document.querySelectorAll(".gas-check:checked")).map((input) => input.value);
+      return {
+        id: state.editorRoundId || uid(),
+        code: document.getElementById("round-code").value.trim(),
+        name: document.getElementById("round-name").value.trim(),
+        openDate: document.getElementById("round-open-date").value,
+        closeDate: document.getElementById("round-close-date").value,
+        status: document.getElementById("round-status").value,
+        description: document.getElementById("round-description").value.trim(),
+        gases,
+        levelCount: Number(document.getElementById("round-level-count").value),
+        unit: document.getElementById("round-unit").value,
+        secondAverage: document.getElementById("round-second-average").value === "yes"
+      };
+    }
+
+    function clearRoundForm() {
+      state.editorRoundId = null;
+      document.getElementById("round-code").value = "";
+      document.getElementById("round-name").value = "";
+      document.getElementById("round-open-date").value = "";
+      document.getElementById("round-close-date").value = "";
+      document.getElementById("round-status").value = "draft";
+      document.getElementById("round-description").value = "";
+      document.getElementById("round-level-count").value = "5";
+      document.getElementById("round-unit").value = "ppm";
+      document.getElementById("round-second-average").value = "yes";
+      document.querySelectorAll(".gas-check").forEach((check) => { check.checked = false; });
+      renderSelectedGases([]);
+    }
+
+    function populateRoundForm(round) {
+      state.editorRoundId = round.id;
+      document.getElementById("round-code").value = round.code || "";
+      document.getElementById("round-name").value = round.name || "";
+      document.getElementById("round-open-date").value = round.openDate || "";
+      document.getElementById("round-close-date").value = round.closeDate || "";
+      document.getElementById("round-status").value = round.status || "draft";
+      document.getElementById("round-description").value = round.description || "";
+      document.getElementById("round-level-count").value = String(round.levelCount || 5);
+      document.getElementById("round-unit").value = round.unit || "ppm";
+      document.getElementById("round-second-average").value = round.secondAverage ? "yes" : "no";
+      document.querySelectorAll(".gas-check").forEach((check) => {
+        check.checked = round.gases.includes(check.value);
+      });
+      renderSelectedGases(round.gases);
+    }
+
+    function renderSelectedGases(gases) {
+      elements.selectedGases.innerHTML = "";
+      if (!gases.length) {
+        elements.selectedGases.innerHTML = '<span class="muted">No hay contaminantes seleccionados.</span>';
+        return;
+      }
+      gases.forEach((gas) => {
+        const span = document.createElement("span");
+        span.className = "pill";
+        span.textContent = gas;
+        elements.selectedGases.appendChild(span);
+      });
+    }
+
+    function saveRoundsToStorage() {
+      localStorage.setItem(storageKeys.rounds, JSON.stringify(state.rounds));
+      localStorage.setItem(storageKeys.activeRoundId, state.activeRoundId || "");
+    }
+
+    function loadRoundsFromStorage() {
+      try {
+        state.rounds = JSON.parse(localStorage.getItem(storageKeys.rounds) || "[]");
+      } catch {
+        state.rounds = [];
+      }
+      state.activeRoundId = localStorage.getItem(storageKeys.activeRoundId) || null;
+    }
+
+    function getActiveRound() {
+      return state.rounds.find((round) => round.id === state.activeRoundId) || null;
+    }
+
+    function validateRound(round) {
+      if (!round.code || !round.name) {
+        showToast("La ronda requiere código y nombre.");
+        return false;
+      }
+      if (!round.gases.length) {
+        showToast("Seleccione al menos un contaminante.");
+        return false;
+      }
+      return true;
+    }
+
+    function saveRound() {
+      const round = getRoundFormValues();
+      if (!validateRound(round)) return;
+
+      const index = state.rounds.findIndex((item) => item.id === round.id);
+      if (index >= 0) {
+        state.rounds[index] = round;
+      } else {
+        state.rounds.unshift(round);
+      }
+
+      state.activeRoundId = round.id;
+      state.editorRoundId = round.id;
+      saveRoundsToStorage();
+      renderRounds();
+      syncParticipantRoundSelection();
+      showToast("Ronda guardada");
+    }
+
+    function deleteActiveRound() {
+      if (!state.activeRoundId) {
+        showToast("No hay ronda activa para eliminar.");
+        return;
+      }
+      state.rounds = state.rounds.filter((round) => round.id !== state.activeRoundId);
+      state.activeRoundId = state.rounds[0]?.id || null;
+      if (state.editorRoundId && !state.rounds.find((round) => round.id === state.editorRoundId)) {
+        state.editorRoundId = null;
+      }
+      saveRoundsToStorage();
+      renderRounds();
+      syncParticipantRoundSelection();
+      clearRoundForm();
+      showToast("Ronda eliminada");
+    }
+
+    function renderRounds() {
+      elements.roundList.innerHTML = "";
+      if (!state.rounds.length) {
+        elements.roundList.innerHTML = '<div class="muted">No hay rondas guardadas todavía.</div>';
+      } else {
+        state.rounds.forEach((round) => {
+          const card = document.createElement("article");
+          card.className = `round-card${round.id === state.activeRoundId ? " active" : ""}`;
+          card.innerHTML = `
+            <div class="round-head">
+              <div class="round-code">${round.code}</div>
+              <div class="muted">${round.status}</div>
+            </div>
+            <div class="round-name">${round.name}</div>
+            <div class="round-meta">
+              <div>Niveles por contaminante: ${round.levelCount}</div>
+              <div>Unidad sugerida: ${round.unit}</div>
+              <div>Segundo promedio: ${round.secondAverage ? "sí" : "no"}</div>
+              <div>Ventana: ${round.openDate || "sin fecha"} → ${round.closeDate || "sin fecha"}</div>
+            </div>
+            <div class="chips">
+              ${round.gases.map((gas) => `<span class="chip-tag">${gas}</span>`).join("")}
+            </div>
+            <div class="button-row" style="margin-top: 12px;">
+              <button class="secondary" data-round-action="edit" data-round-id="${round.id}">Editar</button>
+              <button class="ghost" data-round-action="activate" data-round-id="${round.id}">Activar</button>
+            </div>
+          `;
+          elements.roundList.appendChild(card);
+        });
+      }
+
+      elements.roundList.querySelectorAll("[data-round-action]").forEach((button) => {
+        button.addEventListener("click", () => {
+          const round = state.rounds.find((item) => item.id === button.dataset.roundId);
+          if (!round) return;
+          if (button.dataset.roundAction === "edit") {
+            populateRoundForm(round);
+          } else {
+            state.activeRoundId = round.id;
+            saveRoundsToStorage();
+            renderRounds();
+            syncParticipantRoundSelection();
+            showToast(`Ronda activa: ${round.code}`);
+          }
+        });
+      });
+
+      const activeRound = getActiveRound();
+      elements.metricRoundCount.textContent = String(state.rounds.length);
+      elements.metricActiveRound.textContent = activeRound ? activeRound.code : "Ninguna";
+    }
+
+    function createParticipantRowsForRound(round) {
+      const rows = {};
+      round.gases.forEach((gas) => {
+        rows[gas] = {};
+        for (let level = 1; level <= round.levelCount; level += 1) {
+          rows[gas][level] = {
+            promedio_1: "",
+            incertidumbre_1: "",
+            promedio_2: "",
+            incertidumbre_2: "",
+            unidad: round.unit || "",
+            observaciones: ""
+          };
+        }
+      });
+      return rows;
+    }
+
+    function ensureParticipantShape(round) {
+      if (!round) {
+        state.participant.roundId = null;
+        state.participant.activeGas = null;
+        state.participant.rows = {};
+        return;
+      }
+
+      if (state.participant.roundId !== round.id) {
+        state.participant.roundId = round.id;
+        state.participant.activeGas = round.gases[0] || null;
+        state.participant.rows = createParticipantRowsForRound(round);
+      } else {
+        round.gases.forEach((gas) => {
+          if (!state.participant.rows[gas]) {
+            state.participant.rows[gas] = {};
+          }
+          for (let level = 1; level <= round.levelCount; level += 1) {
+            if (!state.participant.rows[gas][level]) {
+              state.participant.rows[gas][level] = {
+                promedio_1: "",
+                incertidumbre_1: "",
+                promedio_2: "",
+                incertidumbre_2: "",
+                unidad: round.unit || "",
+                observaciones: ""
+              };
+            }
+          }
+        });
+        Object.keys(state.participant.rows).forEach((gas) => {
+          if (!round.gases.includes(gas)) delete state.participant.rows[gas];
+        });
+        if (!round.gases.includes(state.participant.activeGas)) {
+          state.participant.activeGas = round.gases[0] || null;
+        }
+      }
+    }
+
+    function bindParticipantMeta() {
+      const map = {
+        participante_codigo: "participant-code",
+        laboratorio: "participant-lab",
+        responsable: "participant-responsible",
+        correo: "participant-email",
+        fecha_reporte: "participant-date",
+        observacion_general: "participant-general-note"
+      };
+
+      Object.entries(map).forEach(([key, id]) => {
+        const field = document.getElementById(id);
+        field.value = state.participant.meta[key] || "";
+        field.oninput = () => {
+          state.participant.meta[key] = field.value;
+          updateParticipantStatus();
+        };
+      });
+    }
+
+    function roundSummaryHtml(round) {
+      if (!round) {
+        return '<span class="muted">No hay ronda seleccionada.</span>';
+      }
+      return `
+        <div class="round-code">${round.code}</div>
+        <div class="round-name">${round.name}</div>
+        <div class="round-meta">
+          <div>Estado: ${round.status}</div>
+          <div>Número de niveles: ${round.levelCount}</div>
+          <div>Unidad sugerida: ${round.unit}</div>
+          <div>Segundo promedio: ${round.secondAverage ? "sí" : "no"}</div>
+        </div>
+        <div class="chips">
+          ${round.gases.map((gas) => `<span class="chip-tag">${gas}</span>`).join("")}
+        </div>
+        ${round.description ? `<div class="helper" style="margin-top: 12px;">${round.description}</div>` : ""}
+      `;
+    }
+
+    function syncParticipantRoundSelection() {
+      const activeRound = getActiveRound();
+      elements.participantRoundSelect.innerHTML = "";
+
+      if (!state.rounds.length) {
+        const option = document.createElement("option");
+        option.value = "";
+        option.textContent = "No hay rondas configuradas";
+        elements.participantRoundSelect.appendChild(option);
+        elements.participantRoundSummary.innerHTML = roundSummaryHtml(null);
+        ensureParticipantShape(null);
+        renderParticipantGasTabs();
+        renderParticipantTable();
+        updateParticipantStatus();
+        return;
+      }
+
+      state.rounds.forEach((round) => {
+        const option = document.createElement("option");
+        option.value = round.id;
+        option.textContent = `${round.code} · ${round.name}`;
+        elements.participantRoundSelect.appendChild(option);
+      });
+
+      const selectedId = state.participant.roundId && state.rounds.find((round) => round.id === state.participant.roundId)
+        ? state.participant.roundId
+        : activeRound?.id || state.rounds[0].id;
+
+      state.participant.roundId = selectedId;
+      elements.participantRoundSelect.value = selectedId;
+
+      const round = state.rounds.find((item) => item.id === selectedId);
+      ensureParticipantShape(round);
+      elements.participantRoundSummary.innerHTML = roundSummaryHtml(round);
+      renderParticipantGasTabs();
+      renderParticipantTable();
+      updateParticipantStatus();
+    }
+
+    function renderParticipantGasTabs() {
+      elements.participantGasTabs.innerHTML = "";
+      const round = state.rounds.find((item) => item.id === state.participant.roundId);
+      if (!round || !round.gases.length) return;
+
+      round.gases.forEach((gas) => {
+        const button = document.createElement("button");
+        button.className = `subtab${gas === state.participant.activeGas ? " active" : ""}`;
+        button.textContent = gas;
+        button.addEventListener("click", () => {
+          state.participant.activeGas = gas;
+          renderParticipantGasTabs();
+          renderParticipantTable();
+          updateParticipantStatus();
+        });
+        elements.participantGasTabs.appendChild(button);
+      });
+    }
+
+    function numeric(value) {
+      return /^-?\d+([.,]\d+)?$/.test(String(value).trim());
+    }
+
+    function renderParticipantTable() {
+      elements.participantTableBody.innerHTML = "";
+      const round = state.rounds.find((item) => item.id === state.participant.roundId);
+      if (!round || !state.participant.activeGas) {
+        elements.participantTableBody.innerHTML = '<tr><td colspan="7" class="muted">Configure o seleccione una ronda para comenzar.</td></tr>';
+        return;
+      }
+
+      elements.colPromedio2.style.display = round.secondAverage ? "" : "none";
+      elements.colIncertidumbre2.style.display = round.secondAverage ? "" : "none";
+
+      for (let level = 1; level <= round.levelCount; level += 1) {
+        const row = state.participant.rows[state.participant.activeGas][level];
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td class="row-label">Nivel ${level}<span class="row-sub">${state.participant.activeGas} · ${round.code}</span></td>
+          <td><input class="cell-input numeric" data-field="promedio_1" data-level="${level}" value="${row.promedio_1}" placeholder="0.000"></td>
+          <td><input class="cell-input numeric" data-field="incertidumbre_1" data-level="${level}" value="${row.incertidumbre_1}" placeholder="0.000"></td>
+          <td class="optional-col" style="${round.secondAverage ? "" : "display:none;"}"><input class="cell-input numeric" data-field="promedio_2" data-level="${level}" value="${row.promedio_2}" placeholder="0.000"></td>
+          <td class="optional-col" style="${round.secondAverage ? "" : "display:none;"}"><input class="cell-input numeric" data-field="incertidumbre_2" data-level="${level}" value="${row.incertidumbre_2}" placeholder="0.000"></td>
+          <td>
+            <select class="cell-input" data-field="unidad" data-level="${level}">
+              <option value="">Seleccionar</option>
+              ${["ppm", "ppb", "ug/m3"].map((unit) => `<option value="${unit}" ${row.unidad === unit ? "selected" : ""}>${unit}</option>`).join("")}
+            </select>
+          </td>
+          <td><input class="cell-input" data-field="observaciones" data-level="${level}" value="${row.observaciones}" placeholder="Nota técnica opcional"></td>
+        `;
+        elements.participantTableBody.appendChild(tr);
+      }
+
+      elements.participantTableBody.querySelectorAll("input, select").forEach((field) => {
+        field.addEventListener("input", () => {
+          const level = field.dataset.level;
+          const key = field.dataset.field;
+          state.participant.rows[state.participant.activeGas][level][key] = field.value;
+          if (field.classList.contains("numeric")) {
+            field.classList.toggle("invalid", field.value !== "" && !numeric(field.value));
+          }
+          updateParticipantStatus();
+        });
+      });
+    }
+
+    function rowComplete(row, secondAverage) {
+      if (!row.promedio_1 || !row.incertidumbre_1 || !row.unidad) return false;
+      if (secondAverage && (!row.promedio_2 || !row.incertidumbre_2)) return false;
+      return true;
+    }
+
+    function getParticipantTotals() {
+      const round = state.rounds.find((item) => item.id === state.participant.roundId);
+      if (!round) return { done: 0, total: 0 };
+      let done = 0;
+      let total = 0;
+      round.gases.forEach((gas) => {
+        for (let level = 1; level <= round.levelCount; level += 1) {
+          total += 1;
+          if (rowComplete(state.participant.rows[gas][level], round.secondAverage)) done += 1;
+        }
+      });
+      return { done, total };
+    }
+
+    function validateParticipantSilently() {
+      const round = state.rounds.find((item) => item.id === state.participant.roundId);
+      if (!round) return false;
+      if (!state.participant.meta.participante_codigo || !state.participant.meta.laboratorio) return false;
+
+      let valid = true;
+      round.gases.forEach((gas) => {
+        for (let level = 1; level <= round.levelCount; level += 1) {
+          const row = state.participant.rows[gas][level];
+          ["promedio_1", "incertidumbre_1", "promedio_2", "incertidumbre_2"].forEach((key) => {
+            if (row[key] && !numeric(row[key])) valid = false;
+          });
+        }
+      });
+      return valid;
+    }
+
+    function updateParticipantStatus() {
+      const round = state.rounds.find((item) => item.id === state.participant.roundId);
+      const totals = getParticipantTotals();
+      elements.metricComplete.textContent = `${totals.done} / ${totals.total}`;
+      elements.statusRound.textContent = round ? round.code : "Ninguna";
+      elements.statusGas.textContent = state.participant.activeGas || "-";
+      elements.statusComplete.textContent = `${totals.done} / ${totals.total}`;
+      elements.statusValidation.textContent = validateParticipantSilently() ? "Consistente" : "Pendiente";
+    }
+
+    function validateParticipant() {
+      const round = state.rounds.find((item) => item.id === state.participant.roundId);
+      if (!round) {
+        showToast("No hay ronda seleccionada.");
+        return;
+      }
+
+      const missing = [];
+      if (!state.participant.meta.participante_codigo) missing.push("Código del participante");
+      if (!state.participant.meta.laboratorio) missing.push("Laboratorio");
+
+      const numericIssues = [];
+      round.gases.forEach((gas) => {
+        for (let level = 1; level <= round.levelCount; level += 1) {
+          const row = state.participant.rows[gas][level];
+          ["promedio_1", "incertidumbre_1", "promedio_2", "incertidumbre_2"].forEach((key) => {
+            if (row[key] && !numeric(row[key])) numericIssues.push(`${gas} nivel ${level}: ${key}`);
+          });
+        }
+      });
+
+      if (missing.length || numericIssues.length) {
+        const messages = [];
+        if (missing.length) messages.push(`Faltan datos: ${missing.join(", ")}`);
+        if (numericIssues.length) messages.push(`Valores no válidos: ${numericIssues.slice(0, 4).join("; ")}${numericIssues.length > 4 ? "..." : ""}`);
+        showToast(messages.join(" | "));
+        updateParticipantStatus();
+        return;
+      }
+
+      showToast("Validación completada");
+      updateParticipantStatus();
+    }
+
+    function exportParticipantCsv() {
+      const round = state.rounds.find((item) => item.id === state.participant.roundId);
+      if (!round) {
+        showToast("No hay ronda seleccionada.");
+        return;
+      }
+
+      const header = [
+        "round_id",
+        "round_code",
+        "round_name",
+        "participante_codigo",
+        "laboratorio",
+        "responsable",
+        "correo",
+        "fecha_reporte",
+        "observacion_general",
+        "contaminante",
+        "nivel",
+        "promedio_1",
+        "incertidumbre_1",
+        "promedio_2",
+        "incertidumbre_2",
+        "unidad",
+        "observaciones"
+      ];
+
+      const lines = [header.join(",")];
+      round.gases.forEach((gas) => {
+        for (let level = 1; level <= round.levelCount; level += 1) {
+          const row = state.participant.rows[gas][level];
+          const values = [
+            round.id,
+            round.code,
+            round.name,
+            state.participant.meta.participante_codigo,
+            state.participant.meta.laboratorio,
+            state.participant.meta.responsable,
+            state.participant.meta.correo,
+            state.participant.meta.fecha_reporte,
+            state.participant.meta.observacion_general,
+            gas,
+            level,
+            row.promedio_1,
+            row.incertidumbre_1,
+            round.secondAverage ? row.promedio_2 : "",
+            round.secondAverage ? row.incertidumbre_2 : "",
+            row.unidad,
+            row.observaciones
+          ].map(csvEscape);
+          lines.push(values.join(","));
+        }
+      });
+
+      const blob = new Blob([lines.join("\n")], { type: "text/csv;charset=utf-8;" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = `reporte_${state.participant.meta.participante_codigo || "participante"}_${round.code}.csv`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+      showToast("CSV exportado");
+    }
+
+    function csvEscape(value) {
+      const clean = String(value ?? "");
+      if (clean.includes(",") || clean.includes("\"") || clean.includes("\n")) {
+        return `"${clean.replace(/"/g, "\"\"")}"`;
+      }
+      return clean;
+    }
+
+    function saveParticipantDraft() {
+      localStorage.setItem(storageKeys.draft, JSON.stringify(state.participant));
+      showToast("Borrador del participante guardado");
+    }
+
+    function loadParticipantDraft() {
+      try {
+        const draft = JSON.parse(localStorage.getItem(storageKeys.draft) || "null");
+        if (!draft) return;
+        state.participant = draft;
+      } catch {
+        state.participant = {
+          roundId: null,
+          activeGas: null,
+          meta: {
+            participante_codigo: "",
+            laboratorio: "",
+            responsable: "",
+            correo: "",
+            fecha_reporte: "",
+            observacion_general: ""
+          },
+          rows: {}
+        };
+      }
+    }
+
+    function exportRounds() {
+      const payload = {
+        exportedAt: new Date().toISOString(),
+        activeRoundId: state.activeRoundId,
+        rounds: state.rounds
+      };
+      const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json;charset=utf-8;" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "calaire_rondas.json";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+      showToast("Configuración de rondas exportada");
+    }
+
+    function importRounds(file) {
+      const reader = new FileReader();
+      reader.onload = () => {
+        try {
+          const payload = JSON.parse(reader.result);
+          state.rounds = Array.isArray(payload.rounds) ? payload.rounds : [];
+          state.activeRoundId = payload.activeRoundId || state.rounds[0]?.id || null;
+          saveRoundsToStorage();
+          renderRounds();
+          syncParticipantRoundSelection();
+          showToast("Rondas importadas");
+        } catch {
+          showToast("No fue posible importar el archivo JSON.");
+        }
+      };
+      reader.readAsText(file);
+    }
+
+    function seedDemo() {
+      state.rounds = [
+        {
+          id: uid(),
+          code: "R-CO-SO2-01",
+          name: "Ronda piloto CO y SO2",
+          openDate: "2026-04-25",
+          closeDate: "2026-05-10",
+          status: "published",
+          description: "Ronda piloto de demostración para captura de resultados de CO y SO2 con cinco niveles por contaminante.",
+          gases: ["CO", "SO2"],
+          levelCount: 5,
+          unit: "ppm",
+          secondAverage: true
+        },
+        {
+          id: uid(),
+          code: "R-NOX-O3-02",
+          name: "Ronda NO, NO2 y O3",
+          openDate: "2026-05-15",
+          closeDate: "2026-05-30",
+          status: "draft",
+          description: "Configuración preliminar para contaminantes fotoquímicos y NOx.",
+          gases: ["NO", "NO2", "O3"],
+          levelCount: 4,
+          unit: "ppb",
+          secondAverage: false
+        }
+      ];
+      state.activeRoundId = state.rounds[0].id;
+      clearRoundForm();
+      saveRoundsToStorage();
+      renderRounds();
+      syncParticipantRoundSelection();
+      showToast("Se cargó una configuración de demo");
+    }
+
+    document.querySelectorAll(".gas-check").forEach((check) => {
+      check.addEventListener("change", () => {
+        renderSelectedGases(Array.from(document.querySelectorAll(".gas-check:checked")).map((item) => item.value));
+      });
+    });
+
+    document.getElementById("save-round").addEventListener("click", saveRound);
+    document.getElementById("new-round").addEventListener("click", () => {
+      clearRoundForm();
+      showToast("Formulario de ronda reiniciado");
+    });
+    document.getElementById("delete-round").addEventListener("click", deleteActiveRound);
+    document.getElementById("participant-round-select").addEventListener("change", (event) => {
+      state.participant.roundId = event.target.value;
+      const round = state.rounds.find((item) => item.id === state.participant.roundId);
+      ensureParticipantShape(round);
+      elements.participantRoundSummary.innerHTML = roundSummaryHtml(round);
+      renderParticipantGasTabs();
+      renderParticipantTable();
+      updateParticipantStatus();
+    });
+    document.getElementById("participant-save-draft").addEventListener("click", saveParticipantDraft);
+    document.getElementById("participant-validate").addEventListener("click", validateParticipant);
+    document.getElementById("participant-export").addEventListener("click", exportParticipantCsv);
+    document.getElementById("seed-demo").addEventListener("click", seedDemo);
+    document.getElementById("export-rounds").addEventListener("click", exportRounds);
+    document.getElementById("import-rounds").addEventListener("click", () => document.getElementById("import-file").click());
+    document.getElementById("import-file").addEventListener("change", (event) => {
+      if (event.target.files[0]) importRounds(event.target.files[0]);
+      event.target.value = "";
+    });
+
+    loadRoundsFromStorage();
+    loadParticipantDraft();
+    renderSelectedGases([]);
+    bindParticipantMeta();
+    renderRounds();
+    syncParticipantRoundSelection();
+  </script>
+</body>
+</html>

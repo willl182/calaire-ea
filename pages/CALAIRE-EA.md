@@ -31,6 +31,11 @@
 		- Alistamiento previo, prueba piloto, revisión de resultados y ajustes para consolidar el diseño del servicio.
 		- source:: `docs/contrato_2/`
 		- status:: in_progress
+- **Estado Actual del Ecosistema (corte: 2026-04-22)**
+	- **Hub documental (calaire-ea):** grafo Logseq operativo, journals estandarizados, MOCs definidos, SGC con 23 formatos + 14 instructivos + 4 procedimientos creados. F-PSEA-06 auditado (operable, pendiente aprobación formal).
+	- **Motor estadístico (pt_app + ptcalc v0.1.1):** cadena completa validada (Algoritmo A → Homogeneidad → Estabilidad → Incertidumbres → Puntajes z/z'/ζ/En). Pipeline tripartita implementado. Cifras significativas ISO en progreso.
+	- **Portal web (calaire-app):** Next.js 16 + WorkOS + Supabase, 6 etapas completadas, operativo en local, deploy Vercel pendiente.
+	- **Identidad visual:** paleta "Institutional Gold" (`#FDB913`) unificada entre pt_app y calaire-app.
 - **Documentación Maestra**
 	- [[ref/proyecto.md]] - Resumen ejecutivo consolidado por contratos.
 	- [[docs/auxiliares/gantt.md]] - Cronograma Gantt.
@@ -38,4 +43,3 @@
 	- [[docs/auxiliares/memoria_2025.md]] - Memoria de actividades 2025.
 - **Informes Ejecutivos**
 	- [[Informe Ejecutivo Ene 28 - Feb 8 2026]] - Período reportado: 28 Ene - 8 Feb 2026.
-	 

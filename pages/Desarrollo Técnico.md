@@ -14,6 +14,15 @@
 	- Solicitudes de información técnica
 	- Documentación técnica: manuales, guías, especificaciones
 	- Talleres prácticos y ejercicios de simulación
+- ## Hitos Técnicos (Feb–Abr 2026)
+	- **2026-02-05:** Primera auditoría estadística de ptcalc — discrepancia σ_pt identificada (0.00579 vs 0.03982). Error en fórmula ss del Excel de auditoría confirmado.
+	- **2026-03-10:** 9 correcciones estadísticas (H1–H9) implementadas en ptcalc. Fórmula B.10 corregida, MADe separado, umbral Algoritmo A actualizado a `n ≥ 12`.
+	- **2026-03-11:** Plan de validación cruzada A2 formalizado — 15 combinaciones con pipeline tripartita.
+	- **2026-03-30:** Pipeline de validación tripartita POC implementado (APP/R/Python). 5 workbooks generados. Decisiones de diseño fijadas (`u_stab = d_max/√3`, `ALGO_A_TOL = 1e-04`).
+	- **2026-03-31:** Cadena downstream completa validada: Homogeneidad → Estabilidad → Incertidumbres → Puntajes z/z'/ζ/En.
+	- **2026-04-20:** Plan de cifras significativas ISO aprobado. Fases 1-4 implementadas (convergencia Algoritmo A + formateo numérico).
+	- **2026-04-21:** Portal web calaire-app creado desde cero — 6 etapas completadas. Identidad visual "Institutional Gold" unificada.
+	- **2026-04-22:** Deprecación `sample_group` completada (ptcalc v0.1.1). Autenticación multi-proveedor activada. Panel laboratorio de referencia implementado.
 - ## Tags de Correo Asociados
 	- `[[[TECH] Desarrollo App]]`
 	- `[[[TECH] Calibración]]`
