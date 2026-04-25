@@ -11,7 +11,11 @@
     - [[Ronda 4]]: #confirmado (25-30 marzo 2026)
     - [[Ronda 5]]: #pendiente
 - ## Equipos
-    - Pendiente de inventario
+    - CO: Teledyne T300
+    - SO2: Sabio 6020
+    - NOx: Sabio 6040
+    - O3: Sabio 6030
+    - Calibrador dinámico: Sabio 2010D
 - ## Observaciones
     - Respuesta positiva recibida para participar en Rondas 3 y 4 del calendario piloto
     - Estado actualizado en [[Prueba Piloto]] para trazabilidad de confirmaciones por ronda

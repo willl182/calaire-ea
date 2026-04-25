@@ -4,6 +4,7 @@
 - ## Laboratorios Confirmados
     - [[Universidad de Medellín]]
     - [[Universidad Pontificia Bolivariana]]
+    - [[Corantioquia]]
 - ## Laboratorios Contactados
 - ## Candidatos
     - [[SIATA]]
