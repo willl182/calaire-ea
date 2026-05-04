@@ -10,7 +10,7 @@
     - [[Ronda 3]]: pending
     - [[Ronda 4]]: pending
     - [[Ronda 5]]: confirmed
-    - [[Ronda 8]]: planned (P2, O3/NO/NO2)
+    - [[Ronda B]]: planned (P2 condicional, O3/NO/NO2)
 - ## Equipos
     - Pendiente de inventario
 - ## Contacto

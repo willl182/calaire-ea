@@ -10,7 +10,7 @@
 	- Jueves: calibracion multipunto, verificacion cero/span y medicion de CO/SO2.
 	- Viernes: retiro de equipos y cierre logistico de la ronda.
 - **Estado**
-	- status:: planificada
+	- status:: cerrada
 - **Tipo de ronda**
 	- Ronda simple
 - **Analitos**
@@ -22,7 +22,7 @@
 	- [[SIATA]] (P1)
 - **Referencias**
 	- [[Prueba Piloto]]
-- **Aprendizajes**
+- **Aprendizajes** (estado: cerrada)
 	- El analizador del SIATA tardó en calibrar
 	- **Lección:** El tiempo de calibración no debe superar 3h porque retrasa significativamente a los participantes
 	- **Problema logístico:** No ha sido posible empezar con el SIATA a las 7-8am (revisar causas y soluciones)

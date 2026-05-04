@@ -11,7 +11,7 @@
 	- Viernes y sabado: continuidad de medicion conforme a la secuencia compleja del formato F-PSEA-02.
 	- Lunes: devolucion, retiro de equipos y cierre logistico.
 - **Estado**
-	- status:: riesgo_logistico
+	- status:: riesgo_logistico (UPB pendiente)
 - **Observaciones**
 	- UPB tiene equipos ocupados en muestreo actual
 	- Riesgo de conflicto de fechas con UPB
@@ -23,6 +23,6 @@
 	- O3, NO y NO2
 - **Participantes**
 	- [[SIATA]] (P1)
-	- [[Universidad Pontificia Bolivariana]] (P2)
+	- [[Universidad Pontificia Bolivariana]] — participación condicional (pendiente confirmación=logística)
 - **Referencias**
 	- [[Prueba Piloto]]
