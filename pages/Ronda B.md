@@ -1,5 +1,6 @@
-- tags:: [[Ronda]], [[Prueba Piloto]]
-- # Ronda 8
+- tags:: [[Ronda B]], [[Prueba Piloto]]
+- # Ronda B
+- **Nomenclatura actualizada:** Anteriormente Ronda 8. Cambio de nomenclatura: A (esta semana), B (la otra semana), C (mayo).
 - **Fechas**
 	- Inicio (montaje): 2026-04-29
 	- Dias de prueba: 2026-04-30 a 2026-05-02
@@ -10,13 +11,18 @@
 	- Viernes y sabado: continuidad de medicion conforme a la secuencia compleja del formato F-PSEA-02.
 	- Lunes: devolucion, retiro de equipos y cierre logistico.
 - **Estado**
-	- status:: planificada
+	- status:: riesgo_logistico (UPB pendiente)
+- **Observaciones**
+	- UPB tiene equipos ocupados en muestreo actual
+	- Riesgo de conflicto de fechas con UPB
+	- Plan alternativo: ejecutar ronda solo con SIATA si UPB no puede participar
+	- UPB reprogramable a fecha posterior
 - **Tipo de ronda**
 	- Ronda doble
 - **Analitos**
 	- O3, NO y NO2
 - **Participantes**
 	- [[SIATA]] (P1)
-	- [[Universidad Pontificia Bolivariana]] (P2)
+	- [[Universidad Pontificia Bolivariana]] — participación condicional (pendiente confirmación=logística)
 - **Referencias**
 	- [[Prueba Piloto]]
