@@ -2,7 +2,7 @@
 
 **Código:** F-PSEA-09  
 **Nivel:** 4 — Formato / Registro  
-**Estado:** placeholder — copia de trabajo (Ronda Simple)  
+**Estado:** placeholder — copia de trabajo (EA-PP2026-R1)  
 **Oleada:** 1  
 **Prioridad:** 🔴 Crítica  
 

@@ -2,7 +2,7 @@
 
 **Código:** F-PSEA-06  
 **Nivel:** 4 — Formato / Registro  
-**Estado:** placeholder — copia de trabajo (Ronda Compleja Fase 2)  
+**Estado:** NO EJECUTADA en EA-PP2026-R2 — P2 (UPB) diferido a siguiente ronda  
 **Oleada:** 1  
 **Prioridad:** 🔴 Crítica  
 
@@ -27,11 +27,11 @@ Formato para documentar el plan específico de cada ronda de EA. Incluye: identi
 
 ---
 
-## Planificación de Contenido — Ronda Compleja Fase 2
+## Planificación de Contenido — EA-PP2026-R2 (Fase 2)
 
 | Campo | Valor esperado |
 |-------|---------------|
-| **Identificación de ronda** | Ronda Compleja Fase 2 — CALAIRE-EA Piloto |
+| **Identificación de ronda** | EA-PP2026-R2 — Ronda Compleja Fase 2 — CALAIRE-EA Piloto |
 | **Analitos** | CO, SO₂ |
 | **Niveles de concentración** | Reutilización de CRM/niveles de Ronda Simple (permite comparación P1 vs P2) |
 | **Participantes** | 1 (P2 = UPB) |

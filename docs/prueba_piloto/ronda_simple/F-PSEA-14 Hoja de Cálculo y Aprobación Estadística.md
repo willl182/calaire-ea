@@ -2,7 +2,7 @@
 
 **Código:** F-PSEA-14  
 **Nivel:** 4 — Formato / Registro  
-**Estado:** placeholder — copia de trabajo (Ronda Simple)  
+**Estado:** placeholder — copia de trabajo (EA-PP2026-R1)  
 **Oleada:** 1  
 **Prioridad:** 🔴 Crítica  
 
@@ -49,7 +49,7 @@ Registro formal de los cálculos estadísticos realizados para cada ronda y la a
 - [ ] Cálculo de σ_pt para SO₂: δ_E / 3 (documentar δ_E)
 - [ ] Cálculo de z-score P1 para SO₂: z = (x_P1 - x_pt) / σ_pt
 - [ ] Interpretación: |z| ≤ 2.0 → Satisfactorio; 2.0 < |z| < 3.0 → Cuestionable; |z| ≥ 3.0 → No satisfactorio
-- [ ] Gráficos generados (exportados desde CALAIRE-APP)
+- [ ] Gráficos generados (exportados desde pt_app)
 - [ ] Verificación de consistencia de cálculos
 - [ ] Firma de aprobación del estadístico responsable
 - [ ] Aprobación por dirección técnica

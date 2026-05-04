@@ -2,7 +2,7 @@
 
 **Código:** F-PSEA-11  
 **Nivel:** 4 — Formato / Registro  
-**Estado:** placeholder — copia de trabajo (Ronda Compleja Fase 1)  
+**Estado:** placeholder — copia de trabajo (EA-PP2026-R2 — Fase 1)  
 **Oleada:** 1  
 **Prioridad:** 🟠 Alta  
 
@@ -27,28 +27,27 @@ Registro para documentar el envío y recepción de ítems PT (si aplica envío f
 
 ---
 
-## Planificación de Contenido — Ronda Compleja Fase 1
+## Registro de Recepción — EA-PP2026-R2 (Fase 1)
 
-| Campo | Valor esperado |
-|-------|---------------|
-| **Modalidad** | In situ — instalación de equipos de ambos participantes |
-| **Participantes** | P1 = SIATA (3 equipos) + P2 = UPB (3 equipos) |
-| **Total equipos** | 6 analizadores (O₃, NO, NO₂ × 2 participantes) |
-| **Coordinación** | Ventanas de tiempo sincronizadas para ambos participantes |
+> **Nota de ejecución (2026-04-30):** Solo participó P1 (SIATA). P2 (UPB) no asistió. Ver F-PSEA-07 para detalle.
 
-### Campos a completar
+| Campo | Dato registrado |
+|-------|----------------|
+| **Modalidad** | In situ — instalación de equipos de P1 |
+| **Participantes efectivos** | P1 = SIATA (3 equipos: O₃, NO, NO₂) |
+| **P2 (UPB)** | No asistió — diferido a siguiente ronda |
+| **Hora de llegada P1** | Tarde (ronda inició ~9:00 am) |
+| **Impacto en cronograma** | Tiempo de calibración reducido; inicio de medición desplazado |
 
-- [ ] **P1 (SIATA):** fecha/hora llegada, identificación de 3 equipos
+> **Lección para rondas siguientes:** Definir hora de llegada obligatoria no más tarde de las 8:00 am para garantizar tiempo de calibración previo al inicio de mediciones. Comunicar como condición en el paquete pre-ronda.
+
+### Campos pendientes
+
+- [ ] **P1 (SIATA):** hora exacta de llegada, identificación de 3 equipos
   - [ ] Equipo 1: analizador O₃ (marca, modelo, serie)
   - [ ] Equipo 2: analizador NOx (marca, modelo, serie)
-  - [ ] Equipo 3: analizador NO₂ (marca, modelo, serie)
-- [ ] **P2 (UPB):** fecha/hora llegada, identificación de 3 equipos
-  - [ ] Equipo 4: analizador O₃ (marca, modelo, serie)
-  - [ ] Equipo 5: analizador NOx (marca, modelo, serie)
-  - [ ] Equipo 6: analizador NO₂ (marca, modelo, serie)
-- [ ] Verificación de estado de los 6 equipos al arrival
-- [ ] Registro de instalación y conexión al sistema de generación
-- [ ] Acuses de recibo firmados (P1 y P2)
-- [ ] Coordinación de ventanas de medición en paralelo
-- [ ] Observaciones sobre logística multi-participante
+  - [ ] Equipo 3: analizador NO₂/NO (marca, modelo, serie)
+- [ ] Verificación de estado de equipos al ingreso
+- [ ] Registro de instalación y conexión al manifold
+- [ ] Acuse de recibo firmado P1
 - [ ] Firmas de responsables del PEA

@@ -2,7 +2,7 @@
 
 **Código:** F-PSEA-06  
 **Nivel:** 4 — Formato / Registro  
-**Estado:** placeholder — copia de trabajo (Ronda Compleja Fase 1)  
+**Estado:** placeholder — copia de trabajo (EA-PP2026-R2 — Fase 1)  
 **Oleada:** 1  
 **Prioridad:** 🔴 Crítica  
 
@@ -27,14 +27,15 @@ Formato para documentar el plan específico de cada ronda de EA. Incluye: identi
 
 ---
 
-## Planificación de Contenido — Ronda Compleja Fase 1
+## Planificación de Contenido — EA-PP2026-R2 (Fase 1)
 
 | Campo | Valor esperado |
 |-------|---------------|
-| **Identificación de ronda** | Ronda Compleja Fase 1 — CALAIRE-EA Piloto |
+| **Identificación de ronda** | EA-PP2026-R2 — Ronda Compleja Fase 1 — CALAIRE-EA Piloto |
 | **Analitos** | O₃, NO, NO₂ |
 | **Niveles de concentración** | Según P-PSEA-02 (niveles O₃) y P-PSEA-04 (niveles NO/NO₂) |
-| **Participantes** | 2 (P1 = SIATA, P2 = UPB) |
+| **Participantes previstos** | 2 (P1 = SIATA, P2 = UPB) |
+| **Participantes efectivos** | 1 (P1 = SIATA) — UPB diferido a siguiente ronda por requerimiento de cliente |
 | **Método valor asignado** | CRM + dilución dinámica (O₃ por fotólisis/generador; NO/NO₂ desde cilindro CRM) |
 | **σ_pt** | σ_pt = δ_E / 3 (EQA goal approach) |
 | **Algoritmo estadístico** | Algoritmo B (robusto) si n<15; z-score contra valor de referencia |

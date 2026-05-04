@@ -2,7 +2,7 @@
 
 **Código:** F-PSEA-09  
 **Nivel:** 4 — Formato / Registro  
-**Estado:** placeholder — copia de trabajo (Ronda Compleja Fase 1)  
+**Estado:** placeholder — copia de trabajo (EA-PP2026-R2 — Fase 1)  
 **Oleada:** 1  
 **Prioridad:** 🔴 Crítica  
 

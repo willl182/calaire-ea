@@ -2,7 +2,7 @@
 
 **Código:** F-PSEA-07  
 **Nivel:** 4 — Formato / Registro  
-**Estado:** placeholder — copia de trabajo (Ronda Compleja Fase 1)  
+**Estado:** placeholder — copia de trabajo (EA-PP2026-R2 — Fase 1)  
 **Oleada:** 1  
 **Prioridad:** 🔴 Crítica  
 
@@ -27,21 +27,28 @@ Registro maestro de todos los laboratorios participantes en el esquema de EA. In
 
 ---
 
-## Planificación de Contenido — Ronda Compleja Fase 1
+## Registro de Participación — EA-PP2026-R2 (Fase 1)
 
-| Campo | Valor esperado |
-|-------|---------------|
-| **Participantes** | 2 |
-| **P1** | SIATA — código anónimo (mismo que Ronda Simple) |
-| **P2** | UPB — código anónimo por asignar |
-| **Analitos (ambos)** | O₃, NO, NO₂ |
-| **Acreditación** | Verificar estado ONAC de ambos |
+> **Nota de ejecución (2026-04-30):** UPB (P2) no pudo participar en R2 por requerimiento interno de análisis de cliente. Se difiere a la siguiente ronda del esquema. R2 se ejecutó únicamente con P1 (SIATA).
 
-### Campos a completar
+| Campo | Dato registrado |
+|-------|----------------|
+| **Participantes previstos** | 2 (P1 SIATA + P2 UPB) |
+| **Participantes efectivos** | 1 (P1 SIATA) |
+| **P1** | SIATA — código anónimo (mismo que EA-PP2026-R1) |
+| **P2** | UPB — diferido a siguiente ronda (causa: requerimiento de análisis a cliente) |
+| **Analitos ejecutados** | O₃, NO, NO₂ (solo P1) |
 
-- [ ] **P1 (SIATA):** código anónimo, razón social, contacto, acreditación ONAC, estado
-- [ ] **P2 (UPB):** código anónimo, razón social, contacto, acreditación ONAC, estado
-- [ ] Analitos asignados: O₃, NO, NO₂ (para ambos)
-- [ ] Niveles de concentración asignados
-- [ ] Historial de participación (P1 ya participó en Ronda Simple)
-- [ ] Observaciones particulares de cada participante
+### Estado de participantes
+
+| Código | Institución | Estado en R2 | Observación |
+|--------|-------------|--------------|-------------|
+| P1 | SIATA | Participó | Completó medición O₃/NO/NO₂ |
+| P2 | UPB | No participó | Diferido a siguiente ronda — causa externa justificada |
+
+### Campos pendientes
+
+- [ ] Código anónimo asignado a P1 (SIATA)
+- [ ] Datos de contacto y acreditación ONAC de P1
+- [ ] Niveles de concentración ejecutados por analito
+- [ ] Historial: P1 ya participó en EA-PP2026-R1 (CO/SO₂)

@@ -2,7 +2,7 @@
 
 **Código:** F-PSEA-08  
 **Nivel:** 4 — Formato / Registro  
-**Estado:** placeholder — copia de trabajo (Ronda Compleja Fase 2)  
+**Estado:** NO EJECUTADA en EA-PP2026-R2 — P2 (UPB) diferido a siguiente ronda  
 **Oleada:** 1  
 **Prioridad:** 🔴 Crítica  
 

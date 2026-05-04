@@ -31,7 +31,7 @@ Formato para planificar, aprobar y controlar la ejecución de una ronda específ
 
 | Campo | Dato |
 |-------|------|
-| Código interno de ronda | `[POR DEFINIR]` |
+| Código interno de ronda | `EA-PP2026-R1` |
 | Nombre de la ronda | Ronda Simple — CALAIRE-EA Piloto |
 | Tipo de ronda | Ronda piloto de participante único |
 | Semana operativa | 20 al 25 de abril de 2026 |
