@@ -1,0 +1,27 @@
+- tags:: [[Ronda C]], [[Prueba Piloto]]
+- # Ronda C
+- **Nomenclatura actualizada:** Nueva ronda programada para mayo. Cambio de nomenclatura: A (esta semana), B (la otra semana), C (mayo).
+- **Fechas**
+	- Inicio (montaje): 2026-05-27
+	- Dias de prueba: 2026-05-28 a 2026-05-30
+	- Recoleccion: 2026-06-01
+- **Ciclo operativo**
+	- Miercoles: recepcion, instalacion y acondicionamiento de equipos del participante.
+	- Jueves: calibracion multipunto y arranque de mediciones.
+	- Viernes y sabado: continuidad de medicion conforme a la secuencia del formato F-PSEA-02 (4 analitos).
+	- Lunes: devolucion, retiro de equipos y cierre logistico.
+- **Estado**
+	- status:: reprogramacion_pendiente
+- **Observaciones**
+	- UPB potencialmente reprogramada aquí debido a conflicto de muestreo en ronda anterior
+	- Pendiente confirmación de fechas con UPB
+	- Posible ejecución con UPB como participante único
+- **Tipo de ronda**
+	- Ronda compleja (4 analitos)
+- **Analitos**
+	- Por definir (4 analitos en total)
+- **Participantes**
+	- Al menos 1 participante confirmado
+	- Pendiente de confirmación específica
+- **Referencias**
+	- [[Prueba Piloto]]

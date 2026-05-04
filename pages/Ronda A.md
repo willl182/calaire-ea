@@ -1,0 +1,28 @@
+- tags:: [[Ronda A]], [[Prueba Piloto]]
+- # Ronda A
+- **Nomenclatura actualizada:** Anteriormente Ronda 7. Cambio de nomenclatura: A (esta semana), B (la otra semana), C (mayo).
+- **Fechas**
+	- Inicio (montaje): 2026-04-22
+	- Dias de prueba: 2026-04-23
+	- Devolucion: 2026-04-24
+- **Ciclo operativo**
+	- Miercoles: recepcion, instalacion y acondicionamiento de equipos del participante.
+	- Jueves: calibracion multipunto, verificacion cero/span y medicion de CO/SO2.
+	- Viernes: retiro de equipos y cierre logistico de la ronda.
+- **Estado**
+	- status:: planificada
+- **Tipo de ronda**
+	- Ronda simple
+- **Analitos**
+	- CO y SO2
+	- **Concentraciones usadas**
+		- **CO (μg/g):** 0, 6.3, 4.2, 2.8, 1.4
+		- **SO2 (ng/g):** 0, 179, 119, 80, 40
+- **Participante**
+	- [[SIATA]] (P1)
+- **Referencias**
+	- [[Prueba Piloto]]
+- **Aprendizajes**
+	- El analizador del SIATA tardó en calibrar
+	- **Lección:** El tiempo de calibración no debe superar 3h porque retrasa significativamente a los participantes
+	- **Problema logístico:** No ha sido posible empezar con el SIATA a las 7-8am (revisar causas y soluciones)
