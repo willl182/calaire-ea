@@ -1,62 +1,47 @@
-# Session State: CALAIRE-EA — Portal de rondas EA — Gaps de usuarios y vista participante resueltos
+# Session State: CALAIRE-EA Fichas Resumen SGC PEA
 
-**Last Updated**: 2026-04-21 16:33 -05
-
----
+**Last Updated**: 2026-06-13 14:55
 
 ## Session Objective
 
-Completar dos gaps funcionales del portal `calaire-app`: (1) crear usuarios en WorkOS desde la app y (2) mostrar al participante sus rondas asignadas con acceso directo al formulario de carga.
-
----
+Implementar el plan `260613_1431_plan_fichas-resumen-sgc-pea.md` y designar subagentes para elaborar las fichas resumen del sistema documental PEA.
 
 ## Current State
 
-- [x] Etapas 1–5 completadas (ver sesión anterior)
-- [x] **Gap 1 — Crear e invitar usuarios WorkOS:**
-  - `lib/workos.ts` — función `createWorkOSUser(email, firstName?, lastName?)`
-  - `participantes/actions.ts` — acción `createAndInviteAction`: crea usuario en WorkOS (emailVerified: false) y lo inserta en `ronda_participantes`
-  - `participantes/page.tsx` — cuando búsqueda devuelve "no encontrado", aparece formulario de nombre/apellido + botón "Crear e invitar" (en lugar del mensaje estático anterior)
-- [x] **Gap 2 — Vista del participante en `/dashboard`:**
-  - `lib/rondas.ts` — tipo `RondaParticipanteAsignada` y función `listRondasParticipante(userId)` (query `ronda_participantes` JOIN `rondas` + `ronda_contaminantes`)
-  - `dashboard/page.tsx` — componentes `ParticipanteView` y `RondaParticipanteCard`: participantes sin rol admin ven sus rondas asignadas con botón "Ingresar datos →" (activa), "Ver mis envíos" (cerrada) o badge "Próximamente" (borrador)
-- [x] `npm run build` — limpio, sin errores TypeScript
-
----
+- [x] Fase 1 completada: Inventario maestro de fichas creado (`00_inventario_maestro_fichas.md`)
+  - 53 codigos documentales clasificados
+  - 4 clases de ficha definidas (activa, preliminar, diferida, no activo)
+  - 7 fases de elaboracion asignadas
+- [x] Fase 2 completada: Plantilla base de ficha resumen creada (`00_plantilla_ficha_resumen.md`)
+  - 13 campos estandar
+  - Reglas de redaccion
+  - Checklist de calidad de 12 controles
+- [x] Subagentes A-G asignados y ejecutados en paralelo:
+  - A: Arquitectura documental (5 fichas) - COMPLETADO
+  - B: Flujo digital y formatos criticos (8 fichas) - COMPLETADO
+  - C: Procedimientos transversales tecnicos (5 fichas) - COMPLETADO
+  - D: Formatos operativos activos (9 fichas) - COMPLETADO
+  - E: Gestion operativa PEA (13 fichas) - COMPLETADO
+  - F: Procedimientos por analito (4 fichas) - COMPLETADO
+  - G: Control de no activos y cierre (11 fichas) - COMPLETADO
+- [x] Fases 3-9 completadas: 56 fichas resumen creadas en `docs/documentacion_sgc/fichas_resumen/`
+- [x] Plan actualizado a `in_progress` con Fases 1-9 marcadas como completadas
+- [x] README de navegacion creado en `fichas_resumen/`
+- [x] Fase 10: Revision de calidad e integracion (`revisor-fase`) - COMPLETADO
 
 ## Critical Technical Context
 
-- App en: `/home/w182/w421/calaire-app/`
-- Hay **dos repos distintos**:
-  - `/w421/calaire-app` — app activa con `.env.local` real (WorkOS + Supabase conectados)
-  - `/w421/calaire-ea/apps/portal-rondas-ea` — versión paralela dentro del mono-repo de documentación (sin `.env.local`, descontinuada)
-- Usar siempre `/w421/calaire-app` para desarrollo
-- `createWorkOSUser` crea usuario con `emailVerified: false`; el usuario debe activar cuenta por su cuenta (magic link u otro flujo WorkOS)
-- `listRondasParticipante` usa `as unknown as RondaRow` para cast del JOIN anidado de Supabase (limitación del tipado automático)
-- Auto-save formulario: debounce 1500ms; upsert por `ronda_id,workos_user_id,contaminante,nivel`
-- Admins saltan verificación de invitación en `/ronda/[codigo]`
-- CSV export: `/dashboard/rondas/[id]/resultados/export.csv`
-- **Secretos expuestos en chat anterior**: `WORKOS_API_KEY` y `SUPABASE_SERVICE_ROLE_KEY` deben rotarse
-
----
+- **No editar:** `sgc_res.md`, `README.md` (del SGC), ni `P-PSEA-01` en ninguna fase.
+- **Aplicativos son DG:** `calaire-app` = `DG-PSEA-02`; `pt_app` = `DG-PSEA-03`. No son formatos.
+- **Archivos tecnicos internos:** Solo mapear en `P-PSEA-23`, no convertir a `F-PSEA`.
+- **Diferenciacion clave:** `F-PSEA-12` (exportacion desde `calaire-app`) vs `F-PSEA-14` (dataset consolidado oficial).
+- **F-PSEA-04 preliminar:** No definir contenido detallado del informe aun.
+- **H/E si aplica:** Documentar en `F-PSEA-13` and subformatos `F-PSEA-13A-D`.
+- **Instructivos vs Procedimientos:** Instructivos explican uso operativo (`I-PSEA-17`, `I-PSEA-18`); procedimientos definen criterio tecnico (`P-PSEA-06`).
+- **56 fichas resumen creadas** cubriendo todo el universo documental del PEA (53 codigos + 3 subformatos adicionales contados).
 
 ## Next Steps
 
-1. Ejecutar `npm run dev` en `/w421/calaire-app` y probar flujo completo:
-   - Crear ronda → publicar → buscar email inexistente → "Crear e invitar" → verificar usuario aparece en WorkOS
-   - Iniciar sesión con ese usuario nuevo → verificar que ve la ronda en `/dashboard`
-   - Ingresar datos → guardar → revisar resultados como admin
-2. Rotar `WORKOS_API_KEY` y `SUPABASE_SERVICE_ROLE_KEY`
-3. Cuando smoke test pase: deploy en Vercel (guía en `apps/portal-rondas-ea/deploy.md` aplica igual para `calaire-app`)
+1. Realizar commit y push de las 56 fichas resumen y el plan actualizado en estado `completed`.
+2. Proceder con el Cierre Global (actualizar `sgc_res.md`, `README.md` y `P-PSEA-01` en la próxima sesión).
 
----
-
-## Plan Etapas
-
-- [x] Etapa 1 — Setup base ✅ 2026-04-21
-- [x] Etapa 2 — Dashboard coordinador ✅ 2026-04-21
-- [x] Etapa 3 — Gestión de participantes ✅ 2026-04-21
-- [x] Etapa 4 — Formulario reactivo participante ✅ 2026-04-21
-- [x] Etapa 5 — Resultados + exportación CSV ✅ 2026-04-21
-- [x] Etapa 6 — Crear usuarios WorkOS + vista participante ✅ 2026-04-21
-- [ ] Etapa 7 — Smoke test end-to-end + deploy Vercel
