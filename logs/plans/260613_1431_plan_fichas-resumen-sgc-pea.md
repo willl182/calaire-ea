@@ -1,7 +1,7 @@
 # Plan: Elaboracion de Fichas Resumen del SGC PEA
 
 **Created**: 2026-06-13 14:31  
-**Updated**: 2026-06-13 15:03  
+**Updated**: 2026-06-13 15:05  
 **Status**: completed  
 **Slug**: fichas-resumen-sgc-pea
 
@@ -231,7 +231,7 @@ Cada ficha debe usar una estructura uniforme:
 | Subagente | Paquete de trabajo | Documentos |
 |---|---|---|
 | Subagente A - Arquitectura documental | Fichas base y matrices | `P-PSEA-12`, `P-PSEA-13`, `P-PSEA-23`, `DG-PSEA-02`, `DG-PSEA-03`. |
-| Subagente B - Flujo digital y formatos criticos | Aplicativos, instructivos y formatos de datos | `I-PSEA-17`, `I-PSEA-18`, `F-PSEA-07`, `F-PSEA-10`, `F-PSEA-13A-D`, `F-PSEA-14`. |
+| Subagente B - Flujo digital y formatos criticos | Aplicativos, instructivos y formatos de datos | `I-PSEA-10`, `I-PSEA-16`, `I-PSEA-17`, `I-PSEA-18`, `F-PSEA-07`, `F-PSEA-10`, `F-PSEA-13A-D`, `F-PSEA-14`. |
 | Subagente C - Procedimientos transversales tecnicos | Nucleo tecnico-operativo | `P-PSEA-06`, `P-PSEA-07`, `P-PSEA-09`, `P-PSEA-10`, `F-PSEA-04`. |
 | Subagente D - Formatos operativos activos | Planificacion, participantes, item y H/E | `F-PSEA-01`, `F-PSEA-02`, `F-PSEA-05`, `F-PSEA-05A`, `F-PSEA-06`, `F-PSEA-08`, `F-PSEA-09`, `F-PSEA-12`, `F-PSEA-13`. |
 | Subagente E - Gestion operativa PEA | Quejas, apelaciones, TNC/NC/CAPA y controles | `P-PSEA-08`, `P-PSEA-16`, `P-PSEA-20`, `P-PSEA-21`, `P-PSEA-24`, `P-PSEA-25`, `P-PSEA-26`, `P-PSEA-27`, `P-PSEA-28`, `F-PSEA-16`, `F-PSEA-17`, `F-PSEA-21`, `F-PSEA-23`. |
@@ -281,8 +281,8 @@ Cada ficha debe usar una estructura uniforme:
 - [x] Subagentes A-G asignados y documentos de asignacion creados en `docs/documentacion_sgc/fichas_resumen/asignacion_subagente_*.md`.
 - [x] Fase 3 iniciada. Subagente A: 5 fichas base de arquitectura creadas.
 - [x] Fase 3 completada. `P-PSEA-12`, `P-PSEA-13`, `P-PSEA-23`, `DG-PSEA-02`, `DG-PSEA-03`.
-- [x] Fase 4 iniciada. Subagente B: 8 fichas de flujo digital y formatos criticos creadas.
-- [x] Fase 4 completada. `I-PSEA-17`, `I-PSEA-18`, `F-PSEA-07`, `F-PSEA-10`, `F-PSEA-13A-D`, `F-PSEA-14`.
+- [x] Fase 4 iniciada. Subagente B: 11 fichas de flujo digital, instructivos y formatos criticos creadas.
+- [x] Fase 4 completada. `I-PSEA-10`, `I-PSEA-16`, `I-PSEA-17`, `I-PSEA-18`, `F-PSEA-07`, `F-PSEA-10`, `F-PSEA-13A-D`, `F-PSEA-14`.
 - [x] Fase 5 iniciada. Subagente C: 5 fichas de procedimientos transversales tecnicos creadas.
 - [x] Fase 5 completada. `P-PSEA-06`, `P-PSEA-07`, `P-PSEA-09`, `P-PSEA-10`, `F-PSEA-04`.
 - [x] Fase 6 iniciada. Subagente D: 9 fichas de formatos operativos activos creadas.
@@ -295,4 +295,5 @@ Cada ficha debe usar una estructura uniforme:
 - [x] Fase 9 completada. `DG-PSEA-01`, `P-PSEA-01`, `P-PSEA-11`, `P-PSEA-14`, `P-PSEA-15`, `P-PSEA-17`, `P-PSEA-18`, `P-PSEA-19`, `P-PSEA-22`, `F-PSEA-03`, `F-PSEA-11`.
 - [x] Fase 10 iniciada.
 - [x] Fase 10 completada. Se ejecutó la auditoría programática con `audit_fichas.py` y se verificó el cumplimiento de las 10 reglas de calidad. Se corrigieron los subformatos F-PSEA-13 y F-PSEA-13A-D para integrarlos plenamente con P-PSEA-23.
-
+- [x] Revision b integrada. El subagente `revisor-fase` no identifico bloqueos en fichas centrales y marco tres correcciones requeridas: lenguaje de cierre prematuro en `sgc_res.md`, progreso desactualizado en `fichas_resumen/README.md` e inconsistencias de conteo en `00_inventario_maestro_fichas.md`.
+- [x] Correcciones de revision b aplicadas. Se ajusto `sgc_res.md` a arquitectura de trabajo, se actualizo el README de fichas, se corrigio el inventario y se agregaron las fichas omitidas `I-PSEA-10` e `I-PSEA-16`.
