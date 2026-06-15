@@ -5,11 +5,11 @@
 | Campo | Valor |
 |---|---|
 | **Codigo** | `P-PSEA-22` |
-| **Nombre decidido** | Reportes PT |
+| **Nombre decidido** | Riesgos generales del PEA |
 | **Tipo documental** | Procedimiento |
-| **Estado** | Absorber |
+| **Estado** | Por elaborar |
 | **Prioridad** | No priorizar |
-| **Clase de ficha** | Registro de no activo |
+| **Clase de ficha** | Ficha preliminar |
 
 ---
 
@@ -17,7 +17,7 @@
 
 ### Proposito operativo
 
-Codigo absorbido por `P-PSEA-07` (generacion/emision del informe de resultados). El rol de reportes PT queda dentro del procedimiento de generacion del informe; no se mantiene como documento independiente. El codigo puede reservarse para referencia historica pero no se desarrolla como procedimiento activo.
+Idea reservada para un procedimiento de gestion de riesgos generales del PEA. En esta fase se mantiene como concepto sin desarrollar contenido. Su elaboracion se considerara cuando el sistema documental base este estabilizado y se requiera una capa de gestion de riesgos operativos.
 
 ### Rol en el flujo
 
@@ -31,7 +31,7 @@ Codigo absorbido por `P-PSEA-07` (generacion/emision del informe de resultados).
 - [ ] Matriz
 - [x] Soporte documental
 
-Absorbido; no tiene rol operativo independiente.
+Preliminar; no tiene rol operativo actual.
 
 ---
 
@@ -44,7 +44,7 @@ Absorbido; no tiene rol operativo independiente.
 - [ ] Ambos
 - [x] Ninguno
 
-Absorbido; no hay aplicativo asociado independiente.
+No aplica; no hay aplicativo asociado.
 
 ---
 
@@ -54,13 +54,13 @@ Absorbido; no hay aplicativo asociado independiente.
 
 | Codigo / fuente | Descripcion | Rol en el flujo |
 |---|---|---|
-| `P-PSEA-07` | Generacion/emision del informe (absorbe este rol) | Referencia |
+| N/A | No aplica | N/A |
 
 #### Salidas principales
 
 | Codigo / destino | Descripcion | Rol en el flujo |
 |---|---|---|
-| `P-PSEA-07` | Rol absorbido en generacion del informe | Referencia |
+| N/A | No aplica | N/A |
 
 ---
 
@@ -70,8 +70,7 @@ Absorbido; no hay aplicativo asociado independiente.
 
 | Codigo | Relacion | Tipo de vinculo |
 |---|---|---|
-| `P-PSEA-07` | Documento que absorbe este rol | Obligatorio |
-| `F-PSEA-04` | Informe final (producto del rol absorbido) | Referencia |
+| `P-PSEA-23` | Mejora continua (preliminar paralelo) | Referencia |
 
 ---
 
@@ -79,19 +78,18 @@ Absorbido; no hay aplicativo asociado independiente.
 
 #### Limites de alcance
 
-- No se desarrolla ni se mantiene como procedimiento independiente.
-- Su contenido queda dentro de `P-PSEA-07`.
-- El codigo puede reservarse para referencia historica.
+- No se desarrolla contenido en esta fase.
+- No es un procedimiento de riesgos especificos (eso esta cubierto por procedimientos operativos).
+- Es una idea reservada para gestion de riesgos generales del PEA.
 
 #### Riesgos de interpretacion
 
-- **Confundir con activo:** `P-PSEA-22` no es un procedimiento vigente independiente; fue absorbido.
-- **Desarrollar contenido:** No debe crearse contenido para este codigo como documento independiente.
-- **Omitir documento sustituto:** Debe indicarse claramente que `P-PSEA-07` es el documento sustituto.
-- **Mantener referencias antiguas:** Las referencias a `P-PSEA-22` deben actualizarse a `P-PSEA-07`.
+- **Desarrollar prematuramente:** No debe elaborarse contenido hasta que el sistema base este estabilizado.
+- **Confundir con activo:** No es una ficha activa; es preliminar.
+- **Omitir restriccion:** Debe indicarse claramente que no se desarrolla ahora.
 
 ---
 
 ## Criterio minimo de elaboracion
 
-El registro de no activo documenta la decision de absorber `P-PSEA-22` dentro de `P-PSEA-07`, indicando el documento sustituto y sin desarrollar contenido independiente ni confundirse con ficha activa.
+La ficha preliminar registra la idea reservada de riesgos generales del PEA, indicando que no se desarrolla contenido en esta fase y que se evaluara posteriormente, sin confundirse con ficha activa.

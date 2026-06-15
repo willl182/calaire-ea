@@ -5,10 +5,10 @@
 | Campo | Valor |
 |---|---|
 | **Codigo** | `P-PSEA-12` |
-| **Nombre decidido** | Matriz documental basica del PEA |
-| **Tipo documental** | Matriz |
-| **Estado** | Elaborar |
-| **Prioridad** | Alta |
+| **Nombre decidido** | Procedimiento tecnico O3 |
+| **Tipo documental** | Procedimiento |
+| **Estado** | Actualizar |
+| **Prioridad** | Media |
 | **Clase de ficha** | Ficha activa |
 
 ---
@@ -17,20 +17,19 @@
 
 ### Proposito operativo
 
-Controla y lista el universo documental numerado del PEA, incluyendo documentos generales (`DG-PSEA`), procedimientos (`P-PSEA`), instructivos (`I-PSEA`) y formatos/registros (`F-PSEA`) con sus subformatos. Sirve como mapa de referencia para que otros documentos citen el codigo correcto sin duplicar listados.
+Procedimiento tecnico especifico para la evaluacion de aptitud en ozono (O3) dentro del PEA. Documenta las condiciones operativas, metodologias de referencia, particularidades del gas y criterios de aceptacion especificos para este analito. Requiere correccion de referencias internas antiguas y duplicaciones. Debe citar documentos transversales y no duplicar estadistica, H/E, informe ni flujo de datos.
 
 ### Rol en el flujo
 
-- [x] Matriz
+- [x] Criterio tecnico
+- [x] Procedimiento
 - [ ] Entrada
 - [ ] Salida
 - [ ] Registro oficial
 - [ ] Evidencia
-- [ ] Criterio tecnico
 - [ ] Instructivo
+- [ ] Matriz
 - [ ] Soporte documental
-
-Es la matriz maestra de todo lo numerado; se consulta, no se ejecuta.
 
 ---
 
@@ -39,11 +38,11 @@ Es la matriz maestra de todo lo numerado; se consulta, no se ejecuta.
 #### Aplicativo asociado
 
 - [ ] `calaire-app`
-- [ ] `pt_app`
+- [x] `pt_app`
 - [ ] Ambos
-- [x] Ninguno
+- [ ] Ninguno
 
-Es un documento matriz; no depende de aplicativo.
+El analisis estadistico se ejecuta en `pt_app`, pero este procedimiento define criterios especificos del analito.
 
 ---
 
@@ -53,18 +52,17 @@ Es un documento matriz; no depende de aplicativo.
 
 | Codigo / fuente | Descripcion | Rol en el flujo |
 |---|---|---|
-| `mapa_tentativo_sgc_pea.md` | Inventario operativo tentativo | Insumo |
-| `mapa_decisiones_documentales_pea.md` | Decisiones firmes por codigo | Insumo |
-| `sesion_grill_sgc_pea_v1.md` | Decisiones de arquitectura | Insumo |
-| `00_inventario_maestro_fichas.md` | Matriz maestra de fichas | Referencia |
+| `P-PSEA-07` | Diseno estadistico | Referencia obligatoria |
+| `F-PSEA-11` | Registro de H/E | Referencia obligatoria |
+| `P-PSEA-06` | Preparacion del item | Referencia |
+| `F-PSEA-12` | Dataset oficial | Referencia |
 
 #### Salidas principales
 
 | Codigo / destino | Descripcion | Rol en el flujo |
 |---|---|---|
-| Procedimientos `P-PSEA` | Referencia documental para citar codigos | Referencia |
-| Formatos `F-PSEA` | Referencia documental para citar codigos | Referencia |
-| Instructivos `I-PSEA` | Referencia documental para citar codigos | Referencia |
+| `P-PSEA-09` | Informe de resultados | Referencia |
+| `F-PSEA-13` | Informe final | Referencia |
 
 ---
 
@@ -74,10 +72,13 @@ Es un documento matriz; no depende de aplicativo.
 
 | Codigo | Relacion | Tipo de vinculo |
 |---|---|---|
-| `P-PSEA-13` | Cita / Diferencia de alcance | Obligatorio |
-| `P-PSEA-23` | Cita / Flujo de datos | Obligatorio |
-| `DG-PSEA-01` | Referencia al cierre | Referencia |
-| `P-PSEA-01` | Referencia al cierre | Referencia |
+| `P-PSEA-07` | Cita para diseno estadistico | Obligatorio |
+| `F-PSEA-11` | Cita para H/E | Obligatorio |
+| `P-PSEA-09` | Cita para informe | Obligatorio |
+| `P-PSEA-08` | Cita para flujo de datos | Obligatorio |
+| `DG-PSEA-03` | Aplicativo de analisis | Referencia |
+| `I-PSEA-04` | Instructivo de preprocesador | Referencia |
+| `I-PSEA-05` | Instructivo de analisis | Referencia |
 
 ---
 
@@ -85,19 +86,22 @@ Es un documento matriz; no depende de aplicativo.
 
 #### Limites de alcance
 
-- No trata aprobacion, retencion, obsolescencia ni control documental macro.
-- No lista archivos tecnicos internos del preprocesador (van en `P-PSEA-23`).
-- No define contenido de cada documento; solo lista codigo, nombre, estado y familia.
-- No es la matriz de evidencias por ronda (eso es `P-PSEA-13`).
+- No duplica el diseno estadistico (eso es `P-PSEA-07`).
+- No duplica la evaluacion de H/E (eso es `F-PSEA-11` y `P-PSEA-07`).
+- No duplica la generacion del informe (eso es `P-PSEA-09`).
+- No duplica el flujo de datos (eso es `P-PSEA-08`).
+- No es un instructivo de uso de aplicativos.
 
 #### Riesgos de interpretacion
 
-- **Confundir con P-PSEA-13:** `P-PSEA-12` lista documentos del sistema; `P-PSEA-13` lista registros/evidencias generadas por ronda o evento.
-- **Incluir archivos tecnicos internos:** Los archivos tecnicos del preprocesador deben mapearse en `P-PSEA-23`, no en `P-PSEA-12`.
-- **Tratar como procedimiento de control documental macro:** No es un procedimiento de gestion documental institucional; es una matriz especifica del PEA.
+- **Duplicar P-PSEA-07:** El procedimiento debe citar `P-PSEA-07` para estadistica, no replicar definiciones.
+- **Omitir correcciones necesarias:** Debe corregir referencias internas antiguas y duplicaciones existentes.
+- **Omitir particularidades de O3:** Debe conservar las condiciones especificas de este gas (inestabilidad, fotolisis, etc.).
+- **Incluir H/E como procedimiento separado:** La evaluacion de H/E se documenta en `F-PSEA-11` y `P-PSEA-07`; aqui solo se cita.
+- **Confundir con F-PSEA-13:** Este procedimiento no define el formato del informe; cita `P-PSEA-09` y `F-PSEA-13`.
 
 ---
 
 ## Criterio minimo de elaboracion
 
-La matriz documental basica lista todo lo numerado (`DG`, `P`, `I`, `F` y subformatos) con codigo, nombre operativo, familia y estado consolidado, sin ambiguedades respecto a documentos retirados, reservados o absorbidos.
+El procedimiento tecnico para O3 contiene las condiciones especificas del analito, corrige referencias antiguas, y cita `P-PSEA-07`, `F-PSEA-11`, `P-PSEA-09` y `P-PSEA-08` sin duplicar estadistica, H/E, informe ni flujo de datos.

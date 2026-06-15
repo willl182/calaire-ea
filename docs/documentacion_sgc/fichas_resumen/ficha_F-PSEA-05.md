@@ -5,10 +5,10 @@
 | Campo | Valor |
 |---|---|
 | **Codigo** | `F-PSEA-05` |
-| **Nombre decidido** | Registro de participacion |
-| **Tipo documental** | Registro |
+| **Nombre decidido** | Plan de ronda EA |
+| **Tipo documental** | Formato |
 | **Estado** | Mantener / Actualizar |
-| **Prioridad** | Media |
+| **Prioridad** | Media-alta |
 | **Clase de ficha** | Ficha activa |
 
 ---
@@ -17,14 +17,14 @@
 
 ### Proposito operativo
 
-Registro principal de participacion de laboratorios en una ronda de ensayo de aptitud. Documenta la inscripcion, confirmacion, datos de contacto, estado de participacion y resultado final de cada laboratorio. Se genera desde `calaire-app`.
+Documento consolidado del plan de una ronda de ensayo de aptitud. Integra el calendario global (`F-PSEA-01`), el cronograma detallado (`F-PSEA-02`), la ficha digital de ronda (`F-PSEA-06`) y la nota/matriz A-U de ISO/IEC 17043:2023 7.2.1.3. Es el documento maestro de planificacion de cada ronda.
 
 ### Rol en el flujo
 
 - [x] Registro oficial
 - [x] Evidencia
+- [x] Salida
 - [ ] Entrada
-- [ ] Salida
 - [ ] Criterio tecnico
 - [ ] Instructivo
 - [ ] Matriz
@@ -41,7 +41,7 @@ Registro principal de participacion de laboratorios en una ronda de ensayo de ap
 - [ ] Ambos
 - [ ] Ninguno
 
-Registro generado y mantenido en `calaire-app`.
+Se genera desde `calaire-app` integrando multiples formatos.
 
 ---
 
@@ -51,16 +51,18 @@ Registro generado y mantenido en `calaire-app`.
 
 | Codigo / fuente | Descripcion | Rol en el flujo |
 |---|---|---|
-| `calaire-app` | Inscripcion y confirmacion de laboratorios | Origen |
-| `P-PSEA-09` | Planificacion de ronda | Referencia |
+| `F-PSEA-01` | Calendario global de ronda | Insumo |
+| `F-PSEA-02` | Cronograma detallado de ronda | Insumo |
+| `F-PSEA-06` | Ficha digital de ronda | Insumo |
+| `F-PSEA-07` | Preparacion y control del item | Referencia |
+| `P-PSEA-04` | Planificacion de ronda | Referencia |
 
 #### Salidas principales
 
 | Codigo / destino | Descripcion | Rol en el flujo |
 |---|---|---|
-| `F-PSEA-06` | Plan de ronda EA | Referencia |
-| `F-PSEA-12` | Datos exportados para analisis | Referencia |
-| `P-PSEA-20` | Comunicaciones a participantes | Referencia |
+| Participantes | Comunicacion del plan de ronda | Producto |
+| `P-PSEA-14` | Colusion y falsificacion (medidas preventivas) | Referencia |
 
 ---
 
@@ -70,11 +72,13 @@ Registro generado y mantenido en `calaire-app`.
 
 | Codigo | Relacion | Tipo de vinculo |
 |---|---|---|
-| `P-PSEA-09` | Planificacion que define participantes | Obligatorio |
-| `F-PSEA-05A` | Anexo tecnico de equipos por participante | Obligatorio |
-| `F-PSEA-12` | Datos exportados derivados de la participacion | Obligatorio |
-| `DG-PSEA-02` | Aplicativo que gestiona la participacion | Obligatorio |
-| `I-PSEA-10` | Instructivo para participante | Referencia |
+| `P-PSEA-04` | Procedimiento que gobierna la planificacion | Obligatorio |
+| `F-PSEA-01` | Calendario global integrado | Obligatorio |
+| `F-PSEA-02` | Cronograma detallado integrado | Obligatorio |
+| `F-PSEA-06` | Ficha digital integrada | Obligatorio |
+| `F-PSEA-07` | Preparacion del item referenciada | Obligatorio |
+| `P-PSEA-14` | Colusion y falsificacion (medidas preventivas) | Referencia |
+| `DG-PSEA-02` | Aplicativo que genera el plan | Obligatorio |
 
 ---
 
@@ -82,19 +86,20 @@ Registro generado y mantenido en `calaire-app`.
 
 #### Limites de alcance
 
-- No es el anexo tecnico de equipos (eso es `F-PSEA-05A`).
-- No contiene datos reportados (eso es `F-PSEA-09`).
-- No es el informe final (eso es `F-PSEA-04`).
+- No es un procedimiento de planificacion (eso es `P-PSEA-04`); es el formato/registro del plan.
+- No contiene datos reportados por participantes (eso es `F-PSEA-08`).
+- No contiene resultados de aptitud (eso es `F-PSEA-13`).
 - No es un instructivo de uso.
 
 #### Riesgos de interpretacion
 
-- **Confundir con F-PSEA-05A:** `F-PSEA-05` es el registro de participacion; `F-PSEA-05A` es el anexo tecnico de equipos.
-- **Omitir trazabilidad:** Debe vincularse con los datos exportados (`F-PSEA-12`) y el plan de ronda (`F-PSEA-06`).
-- **Incluir resultados de aptitud:** Los resultados de aptitud se reportan en el informe (`F-PSEA-04`), no en el registro de participacion.
+- **Confundir con P-PSEA-04:** `P-PSEA-04` es el procedimiento de planificacion; `F-PSEA-05` es el formato/registro del plan.
+- **Omitir nota A-U:** Debe integrar o referenciar la nota/matriz A-U de ISO/IEC 17043:2023 7.2.1.3.
+- **Omitir H/E:** No debe decir que H/E no aplica; H/E se documenta en `F-PSEA-11`.
+- **Incluir datos de analisis:** El plan de ronda no incluye resultados estadisticos.
 
 ---
 
 ## Criterio minimo de elaboracion
 
-El registro de participacion contiene inscripcion, confirmacion, datos de contacto, estado y resultado final de cada laboratorio, generado desde `calaire-app`, vinculado con `F-PSEA-05A` y `F-PSEA-12`.
+El plan de ronda integra `F-PSEA-01`, `F-PSEA-02`, `F-PSEA-06`, referencia a `F-PSEA-07` y nota A-U, generado desde `calaire-app`, como documento maestro de planificacion sin incluir datos de participantes ni resultados de analisis.

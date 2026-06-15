@@ -2,7 +2,7 @@
 
 **Subagente:** G  
 **Paquete de trabajo:** Documentos diferidos, retirados, reservados o absorbidos  
-**Documentos asignados:** `DG-PSEA-01`, `P-PSEA-01`, `P-PSEA-11`, `P-PSEA-14`, `P-PSEA-15`, `P-PSEA-17`, `P-PSEA-18`, `P-PSEA-19`, `P-PSEA-22`, `F-PSEA-03`, `F-PSEA-11`  
+**Documentos asignados:** `DG-PSEA-01`, `P-PSEA-01`, `P-PSEA-11`, `P-PSEA-22`, `P-PSEA-23`, `P-PSEA-17`, `P-PSEA-18`, `P-PSEA-19`, `P-PSEA-22`, `F-PSEA-03`, `F-PSEA-11`  
 **Fase del plan:** Fase 9
 
 ---
@@ -48,8 +48,8 @@ Dejar trazabilidad de documentos que no deben desarrollarse como fichas activas.
 - **Clase:** Registro de no activo
 - **Prioridad:** No priorizar
 - **Decision:** Retirar / reservar
-- **Razon:** Sustituido por `F-PSEA-06` (plan de ronda).
-- **Documento sustituto:** `F-PSEA-06`.
+- **Razon:** Sustituido por `F-PSEA-05` (plan de ronda).
+- **Documento sustituto:** `F-PSEA-05`.
 
 #### `F-PSEA-11` — No aplicable
 - **Tipo:** Formato
@@ -92,19 +92,19 @@ Dejar trazabilidad de documentos que no deben desarrollarse como fichas activas.
 - **Clase:** Registro de no activo
 - **Prioridad:** No priorizar
 - **Decision:** Absorber
-- **Razon:** No se mantiene como procedimiento independiente; su contenido queda dentro de `P-PSEA-07`.
-- **Documento sustituto:** `P-PSEA-07`.
+- **Razon:** No se mantiene como procedimiento independiente; su contenido queda dentro de `P-PSEA-09`.
+- **Documento sustituto:** `P-PSEA-09`.
 
 ### Fichas preliminares — Ideas reservadas
 
-#### `P-PSEA-14` — Riesgos generales del PEA
+#### `P-PSEA-22` — Riesgos generales del PEA
 - **Tipo:** Procedimiento
 - **Clase:** Ficha preliminar
 - **Prioridad:** No priorizar
 - **Proposito:** Idea reservada para riesgos generales del PEA.
 - **Restriccion:** No desarrollar contenido ahora.
 
-#### `P-PSEA-15` — Mejora continua del PEA
+#### `P-PSEA-23` — Mejora continua del PEA
 - **Tipo:** Procedimiento
 - **Clase:** Ficha preliminar
 - **Prioridad:** No priorizar
@@ -117,8 +117,8 @@ Dejar trazabilidad de documentos que no deben desarrollarse como fichas activas.
 
 1. **No activos no son fichas incompletas:** Un registro de no activo es una decision firme, no una ficha a terminar luego.
 2. **Diferidos no son cancelados:** `DG-PSEA-01` y `P-PSEA-01` se revisan al cierre; se mantienen vigentes pero no se tocan ahora.
-3. **Absorbidos indican sustituto:** `P-PSEA-22` senala explicitamente que su rol queda en `P-PSEA-07`.
-4. **Preliminares son ideas:** `P-PSEA-14` y `P-PSEA-15` registran alcance y restriccion, no contenido de fondo.
+3. **Absorbidos indican sustituto:** `P-PSEA-22` senala explicitamente que su rol queda en `P-PSEA-09`.
+4. **Preliminares son ideas:** `P-PSEA-22` y `P-PSEA-23` registran alcance y restriccion, no contenido de fondo.
 
 ---
 
@@ -127,8 +127,8 @@ Dejar trazabilidad de documentos que no deben desarrollarse como fichas activas.
 - `ficha_DG-PSEA-01.md` (diferida)
 - `ficha_P-PSEA-01.md` (diferida)
 - `ficha_P-PSEA-11.md` (no activo)
-- `ficha_P-PSEA-14.md` (preliminar)
-- `ficha_P-PSEA-15.md` (preliminar)
+- `ficha_P-PSEA-22.md` (preliminar)
+- `ficha_P-PSEA-23.md` (preliminar)
 - `ficha_P-PSEA-17.md` (no activo)
 - `ficha_P-PSEA-18.md` (no activo)
 - `ficha_P-PSEA-19.md` (no activo)

@@ -5,10 +5,10 @@
 | Campo | Valor |
 |---|---|
 | **Codigo** | `P-PSEA-03` |
-| **Nombre decidido** | Procedimiento tecnico CO |
-| **Tipo documental** | Procedimiento |
-| **Estado** | Actualizar |
-| **Prioridad** | Media |
+| **Nombre decidido** | Matriz de registros y evidencias del PEA |
+| **Tipo documental** | Matriz |
+| **Estado** | Elaborar |
+| **Prioridad** | Alta |
 | **Clase de ficha** | Ficha activa |
 
 ---
@@ -17,19 +17,20 @@
 
 ### Proposito operativo
 
-Procedimiento tecnico especifico para la evaluacion de aptitud en monoxido de carbono (CO) dentro del PEA. Documenta las condiciones operativas, metodologias de referencia, particularidades del gas y criterios de aceptacion especificos para este analito. Debe citar documentos transversales y no duplicar estadistica, H/E, informe ni flujo de datos.
+Lista los registros y evidencias generadas por cada ronda o evento del PEA. Identifica que formatos y registros se producen, quien los genera, desde que aplicativo y cual es su destino. Es la contraparte operativa de `P-PSEA-02` (matriz documental).
 
 ### Rol en el flujo
 
-- [x] Criterio tecnico
-- [x] Procedimiento
+- [x] Matriz
+- [x] Evidencia
 - [ ] Entrada
 - [ ] Salida
 - [ ] Registro oficial
-- [ ] Evidencia
+- [ ] Criterio tecnico
 - [ ] Instructivo
-- [ ] Matriz
 - [ ] Soporte documental
+
+Funciona como mapa de evidencias y registro de trazabilidad operativa.
 
 ---
 
@@ -37,12 +38,12 @@ Procedimiento tecnico especifico para la evaluacion de aptitud en monoxido de ca
 
 #### Aplicativo asociado
 
-- [ ] `calaire-app`
+- [x] `calaire-app`
 - [x] `pt_app`
 - [ ] Ambos
 - [ ] Ninguno
 
-El analisis estadistico se ejecuta en `pt_app`, pero este procedimiento define criterios especificos del analito.
+Genera registros desde ambos aplicativos; la matriz los cataloga.
 
 ---
 
@@ -52,17 +53,18 @@ El analisis estadistico se ejecuta en `pt_app`, pero este procedimiento define c
 
 | Codigo / fuente | Descripcion | Rol en el flujo |
 |---|---|---|
-| `P-PSEA-06` | Diseno estadistico | Referencia obligatoria |
-| `F-PSEA-13` | Registro de H/E | Referencia obligatoria |
-| `P-PSEA-10` | Preparacion del item | Referencia |
-| `F-PSEA-14` | Dataset oficial | Referencia |
+| Ronda o evento PEA | Ejecucion de una ronda piloto o EA | Insumo |
+| `F-PSEA-01` a `F-PSEA-12` | Formatos generados durante la ronda | Referencia |
+| `P-PSEA-06` | Preparacion y control del item | Referencia |
+| `P-PSEA-08` | Flujo tecnico de datos | Referencia |
 
 #### Salidas principales
 
 | Codigo / destino | Descripcion | Rol en el flujo |
 |---|---|---|
-| `P-PSEA-07` | Informe de resultados | Referencia |
-| `F-PSEA-04` | Informe final | Referencia |
+| `P-PSEA-02` | Referencia cruzada con matriz documental | Referencia |
+| Auditorias internas | Evidencia de registros generados | Evidencia |
+| `F-PSEA-13` | Informe que consolida evidencias | Salida |
 
 ---
 
@@ -72,13 +74,10 @@ El analisis estadistico se ejecuta en `pt_app`, pero este procedimiento define c
 
 | Codigo | Relacion | Tipo de vinculo |
 |---|---|---|
-| `P-PSEA-06` | Cita para diseno estadistico | Obligatorio |
-| `F-PSEA-13` | Cita para H/E | Obligatorio |
-| `P-PSEA-07` | Cita para informe | Obligatorio |
-| `P-PSEA-23` | Cita para flujo de datos | Obligatorio |
-| `DG-PSEA-03` | Aplicativo de analisis | Referencia |
-| `I-PSEA-17` | Instructivo de preprocesador | Referencia |
-| `I-PSEA-18` | Instructivo de analisis | Referencia |
+| `P-PSEA-02` | Diferencia de alcance / Referencia | Obligatorio |
+| `P-PSEA-08` | Flujo de datos que alimenta registros | Obligatorio |
+| `F-PSEA-11` | Registro de H/E como evidencia | Obligatorio |
+| `F-PSEA-10` | Registro de preprocesamiento como evidencia | Obligatorio |
 
 ---
 
@@ -86,21 +85,19 @@ El analisis estadistico se ejecuta en `pt_app`, pero este procedimiento define c
 
 #### Limites de alcance
 
-- No duplica el diseno estadistico (eso es `P-PSEA-06`).
-- No duplica la evaluacion de H/E (eso es `F-PSEA-13` y `P-PSEA-06`).
-- No duplica la generacion del informe (eso es `P-PSEA-07`).
-- No duplica el flujo de datos (eso es `P-PSEA-23`).
-- No es un instructivo de uso de aplicativos.
+- No lista procedimientos, instructivos ni aplicativos (eso es `P-PSEA-02`).
+- No lista archivos tecnicos internos del preprocesador (van en `P-PSEA-08`).
+- No define criterios de aprobacion, retencion ni obsolescencia.
+- No es un procedimiento de control documental macro.
 
 #### Riesgos de interpretacion
 
-- **Duplicar P-PSEA-06:** El procedimiento debe citar `P-PSEA-06` para estadistica, no replicar definiciones.
-- **Omitir particularidades de CO:** Debe conservar las condiciones especificas de este gas (infrarrojo, interferencias, etc.).
-- **Incluir H/E como procedimiento separado:** La evaluacion de H/E se documenta en `F-PSEA-13` y `P-PSEA-06`; aqui solo se cita.
-- **Confundir con F-PSEA-04:** Este procedimiento no define el formato del informe; cita `P-PSEA-07` y `F-PSEA-04`.
+- **Confundir con P-PSEA-02:** `P-PSEA-03` es evidencia por ronda; `P-PSEA-02` es catalogo de documentos.
+- **Promover archivos tecnicos a F-PSEA:** Los archivos tecnicos internos del preprocesador deben quedar en `P-PSEA-08`, no en esta matriz ni como formatos.
+- **Incluir aplicativos como evidencia:** Los aplicativos (`DG-PSEA-02`, `DG-PSEA-03`) no son registros de ronda.
 
 ---
 
 ## Criterio minimo de elaboracion
 
-El procedimiento tecnico para CO contiene las condiciones especificas del analito, citando `P-PSEA-06`, `F-PSEA-13`, `P-PSEA-07` y `P-PSEA-23` sin duplicar estadistica, H/E, informe ni flujo de datos.
+La matriz de registros y evidencias lista, para cada tipo de ronda o evento, los formatos y registros generados, su aplicativo de origen, su destino y su estado documental, sin incluir archivos tecnicos internos ni aplicativos.

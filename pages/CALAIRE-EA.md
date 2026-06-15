@@ -41,5 +41,29 @@
 	- [[docs/auxiliares/gantt.md]] - Cronograma Gantt.
 	- [[docs/auxiliares/timeline.md]] - Línea de tiempo rondas.
 	- [[docs/auxiliares/memoria_2025.md]] - Memoria de actividades 2025.
-- **Informes Ejecutivos**
+	- [[OSE 88 - Control Operativo]] - Índice operativo para actividades, tareas, fechas y recordatorios de la OSE 88.
+- **Control Operativo OSE 88**
+	- El trabajo se organiza por actividades contractuales `A1` a `A13`, con tareas concretas, hitos temporales y evidencias trazables.
+	- Las actividades contractuales son el marco estable; las tareas ejecutables se registran como `TODO` con `deadline::`; los recordatorios críticos se concentran en el control semanal.
+	- La nomenclatura operativa recomendada para evidencias es `aaaammdd-a##_nombre-archivo`.
+	- [[OSE 88 - Control Operativo]]
+	- [[Actividades OSE 88]]
+- **Reportes Semanales (Journals Consolidados)**
+	- [[Semana 2026-W05]] - 27 ene – 2 feb: Socialización CALAIRE-APP, perfil contractual, Gantt/Timeline Prueba Piloto.
+	- [[Semana 2026-W06]] - 2 feb – 8 feb: Reestructuración cronograma, confirmaciones UdeM/Gelima, corrección SGC subcontratación.
+	- [[Semana 2026-W07]] - 9 feb – 15 feb: Corrección estructura PMI, separación directorios de gestión.
+	- [[Semana 2026-W08]] - 16 feb – 22 feb: Consolidación contractual y trazabilidad de frentes (Contrato 1, APP, Contrato 2).
+	- [[Semana 2026-W09]] - 23 feb – 1 mar: Planes de ajuste CALAIRE-APP Revisión 2.
+	- [[Semana 2026-W11]] - 9 mar – 15 mar: Implementación H1-H9 en ptcalc, plan de validación cruzada tripartita.
+	- [[Semana 2026-W12]] - 16 mar – 22 mar: Consolidación P-PSEA-09 y P-PSEA-06.
+	- [[Semana 2026-W13]] - 23 mar – 29 mar: Revisión SGC vs ISO 17043/13528, inventario de brechas.
+	- [[Semana 2026-W14]] - 30 mar – 5 abr: Cierre pipeline de validación tripartita (5 fases estadísticas).
+	- [[Semana 2026-W15]] - 6 abr – 12 abr: Framework SGC de 4 niveles, F-PSEA-06 operativo, decisión σ_pt post-ronda.
+	- [[Semana 2026-W17]] - 20 abr – 26 abr: Inducción SST, plan cifras significativas, portal calaire-app etapas 1-6, migración a Convex.
+	- [[Semana 2026-W18]] - 27 abr – 3 may: Refinamiento UI/UX, identificadores anónimos, compilación offline.
+	- [[Semana 2026-W19]] - 4 may – 10 may: Preprocesador referencia pt_app, limpieza repositorio, planificación informe piloto.
+	- [[Semana 2026-W20]] - 11 may – 17 may: Validación masiva O₃, Método Laboratorios Expertos, refinamiento informes y heatmap.
+	- [[Semana 2026-W21]] - 18 may – 24 may: Corrección metrológica U_exp manual, guía procedimiento v1.1, consolidación documentación SGC.
+
+**Informes Ejecutivos**
 	- [[Informe Ejecutivo Ene 28 - Feb 8 2026]] - Período reportado: 28 Ene - 8 Feb 2026.

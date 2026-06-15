@@ -5,11 +5,11 @@
 | Campo | Valor |
 |---|---|
 | **Codigo** | `F-PSEA-04` |
-| **Nombre decidido** | Informe final de resultados |
+| **Nombre decidido** | Anexo tecnico de equipos e instrumentos del participante |
 | **Tipo documental** | Formato |
 | **Estado** | Mantener / Actualizar |
-| **Prioridad** | Media-alta |
-| **Clase de ficha** | Ficha preliminar |
+| **Prioridad** | Media |
+| **Clase de ficha** | Ficha activa |
 
 ---
 
@@ -17,18 +17,20 @@
 
 ### Proposito operativo
 
-Formato del informe final de resultados del PEA, generado desde el modulo de analisis de `pt_app`. Presenta los resultados de la evaluacion de aptitud a los participantes, incluyendo valor asignado, `sigma_pt`, desempeno de cada laboratorio, y referencia a criterios estadisticos. Su contenido detallado no se define en esta fase.
+Registra los equipos e instrumentos utilizados por cada laboratorio participante en una ronda de ensayo de aptitud. Es equivalente al archivo `ronda_1_equipos.csv` y alimenta al modulo de analisis de `pt_app` para contextualizar los resultados de cada participante.
 
 ### Rol en el flujo
 
-- [x] Salida
+- [x] Registro oficial
+- [x] Entrada
 - [x] Evidencia
-- [ ] Entrada
-- [ ] Registro oficial
+- [ ] Salida
 - [ ] Criterio tecnico
 - [ ] Instructivo
 - [ ] Matriz
 - [ ] Soporte documental
+
+Es entrada para el analisis y evidencia de trazabilidad instrumental.
 
 ---
 
@@ -36,12 +38,12 @@ Formato del informe final de resultados del PEA, generado desde el modulo de ana
 
 #### Aplicativo asociado
 
-- [ ] `calaire-app`
+- [x] `calaire-app`
 - [x] `pt_app`
 - [ ] Ambos
 - [ ] Ninguno
 
-Generado desde el modulo de analisis de `pt_app`.
+Se captura en `calaire-app` y se consume en `pt_app`.
 
 ---
 
@@ -51,18 +53,15 @@ Generado desde el modulo de analisis de `pt_app`.
 
 | Codigo / fuente | Descripcion | Rol en el flujo |
 |---|---|---|
-| `F-PSEA-14` | Dataset oficial consolidado | Insumo |
-| `F-PSEA-13C` | Resultados de homogeneidad | Insumo |
-| `F-PSEA-13D` | Resultados de estabilidad | Insumo |
-| `P-PSEA-06` | Criterio estadistico aplicado | Referencia |
-| `P-PSEA-07` | Procedimiento de generacion del informe | Referencia |
+| `calaire-app` | Registro de equipos por participante | Origen |
+| `F-PSEA-03` | Registro de participacion | Referencia |
 
 #### Salidas principales
 
 | Codigo / destino | Descripcion | Rol en el flujo |
 |---|---|---|
-| Participantes | Comunicacion de resultados | Producto |
-| `P-PSEA-21` | Control de valores sensibles | Referencia |
+| `pt_app` | Datos de equipos para analisis | Entrada |
+| `F-PSEA-12` | Dataset consolidado (incluye equipos) | Referencia |
 
 ---
 
@@ -72,12 +71,11 @@ Generado desde el modulo de analisis de `pt_app`.
 
 | Codigo | Relacion | Tipo de vinculo |
 |---|---|---|
-| `P-PSEA-07` | Procedimiento que gobierna su generacion | Obligatorio |
-| `P-PSEA-06` | Criterio estadistico que debe presentar | Obligatorio |
-| `DG-PSEA-03` | Aplicativo que lo genera | Obligatorio |
-| `I-PSEA-18` | Instructivo que explica la operacion | Obligatorio |
-| `F-PSEA-14` | Dataset que alimenta el informe | Obligatorio |
-| `P-PSEA-21` | Control de valores sensibles al emitir | Obligatorio |
+| `F-PSEA-03` | Registro de participacion al que pertenece | Obligatorio |
+| `F-PSEA-09` | Datos exportados que incluyen equipos | Obligatorio |
+| `F-PSEA-12` | Dataset consolidado que incluye equipos | Obligatorio |
+| `DG-PSEA-02` | Aplicativo de captura | Obligatorio |
+| `DG-PSEA-03` | Aplicativo de consumo | Obligatorio |
 
 ---
 
@@ -85,20 +83,18 @@ Generado desde el modulo de analisis de `pt_app`.
 
 #### Limites de alcance
 
-- No se define aun el contenido detallado del informe; esta ficha es preliminar.
-- No es el criterio estadistico (eso es `P-PSEA-06`); es la presentacion de resultados.
-- No es el procedimiento de generacion (eso es `P-PSEA-07`); es el formato del producto.
-- No es un instructivo de uso de `pt_app`.
+- No es el registro de participacion (eso es `F-PSEA-03`); es el anexo de equipos.
+- No contiene datos de concentracion (eso es `F-PSEA-08`).
+- No es un instructivo de uso.
 
 #### Riesgos de interpretacion
 
-- **Cerrar prematuramente el contenido:** El contenido detallado del informe se definira en fase posterior; por ahora se documenta su rol y entradas/salidas.
-- **Confundir con P-PSEA-07:** `P-PSEA-07` gobierna el proceso; `F-PSEA-04` es el formato del producto.
-- **Omitir control de valores sensibles:** La emision del informe debe conectar con `P-PSEA-21`.
-- **Incluir datos crudos:** El informe presenta resultados, no datos crudos ni preprocesados.
+- **Confundir con F-PSEA-03:** `F-PSEA-03` es el registro de participacion; `F-PSEA-04` es el anexo tecnico de equipos.
+- **Omitir trazabilidad:** Debe vincularse claramente con el participante y la ronda correspondiente.
+- **No alimentar pt_app:** El anexo debe estar estructurado para que `pt_app` lo consuma automaticamente.
 
 ---
 
 ## Criterio minimo de elaboracion
 
-El formato del informe se identifica como producto final de `pt_app`, con entradas oficiales (`F-PSEA-14`, `F-PSEA-13C`, `F-PSEA-13D`), procedimiento de generacion (`P-PSEA-07`) y criterio estadistico (`P-PSEA-06`), manteniendo su contenido detallado como preliminar hasta nueva fase de definicion.
+El anexo tecnico de equipos contiene identificacion de equipos e instrumentos por participante, vinculado con `F-PSEA-03`, exportable desde `calaire-app` y consumible por `pt_app`, sin duplicar datos de concentracion ni de participacion.

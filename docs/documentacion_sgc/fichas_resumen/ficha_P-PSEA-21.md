@@ -5,7 +5,7 @@
 | Campo | Valor |
 |---|---|
 | **Codigo** | `P-PSEA-21` |
-| **Nombre decidido** | Divulgacion y control de valores sensibles |
+| **Nombre decidido** | Proveedores criticos del PEA |
 | **Tipo documental** | Procedimiento |
 | **Estado** | Mantener / Actualizar |
 | **Prioridad** | Media-alta |
@@ -17,7 +17,7 @@
 
 ### Proposito operativo
 
-Gobierna el control de divulgacion de niveles de concentracion, valor asignado (`x_pt`), desviacion estandar (`sigma_pt`), valores de referencia y resultados agregados de laboratorios antes, durante y despues de una ronda. Conecta con colusion, confidencialidad, comunicaciones y generacion del informe.
+Gobierna la evaluacion, seleccion, seguimiento y control de proveedores y servicios criticos para el PEA. Se acota a proveedores cuyo desempeno afecta directamente la validez de los ensayos de aptitud (cilindros de gas, calibradores, servicios de software, etc.) y respeta los limites de tercerizacion permitidos por ISO/IEC 17043.
 
 ### Rol en el flujo
 
@@ -37,12 +37,12 @@ Gobierna el control de divulgacion de niveles de concentracion, valor asignado (
 
 #### Aplicativo asociado
 
-- [x] `calaire-app`
-- [x] `pt_app`
+- [ ] `calaire-app`
+- [ ] `pt_app`
 - [ ] Ambos
-- [ ] Ninguno
+- [x] Ninguno
 
-Ambos aplicativos contienen valores sensibles; este procedimiento gobierna su control.
+Es un procedimiento de gestion de proveedores; no depende de aplicativo.
 
 ---
 
@@ -52,18 +52,16 @@ Ambos aplicativos contienen valores sensibles; este procedimiento gobierna su co
 
 | Codigo / fuente | Descripcion | Rol en el flujo |
 |---|---|---|
-| `P-PSEA-06` | Valor asignado y `sigma_pt` | Referencia |
-| `F-PSEA-04` | Informe final (control de emision) | Referencia |
-| `P-PSEA-08` | Colusion y falsificacion | Referencia |
-| `P-PSEA-26` | Confidencialidad operativa | Referencia |
+| `F-PSEA-17` | Evaluacion de proveedores criticos | Referencia |
+| `P-PSEA-20` | Competencia y autorizacion de terceros | Referencia |
+| `P-PSEA-06` | Preparacion del item (usa proveedores) | Referencia |
 
 #### Salidas principales
 
 | Codigo / destino | Descripcion | Rol en el flujo |
 |---|---|---|
-| `P-PSEA-20` | Comunicaciones (control de divulgacion) | Referencia |
-| `P-PSEA-25` | Apelaciones (acceso controlado) | Referencia |
-| `F-PSEA-04` | Informe (emision controlada) | Referencia |
+| `F-PSEA-17` | Evaluacion documentada | Referencia |
+| `P-PSEA-06` | Preparacion del item (usa proveedores aprobados) | Referencia |
 
 ---
 
@@ -73,12 +71,10 @@ Ambos aplicativos contienen valores sensibles; este procedimiento gobierna su co
 
 | Codigo | Relacion | Tipo de vinculo |
 |---|---|---|
-| `P-PSEA-06` | Valores sensibles generados | Obligatorio |
-| `P-PSEA-08` | Colusion que compromete valores | Obligatorio |
-| `P-PSEA-26` | Confidencialidad que protege valores | Obligatorio |
-| `P-PSEA-20` | Comunicaciones que divulgan valores | Obligatorio |
-| `P-PSEA-07` | Generacion del informe (control de emision) | Obligatorio |
-| `F-PSEA-04` | Informe final (control de divulgacion) | Obligatorio |
+| `F-PSEA-17` | Evaluacion de proveedores criticos | Obligatorio |
+| `P-PSEA-20` | Competencia de terceros | Obligatorio |
+| `P-PSEA-06` | Preparacion del item que usa proveedores | Obligatorio |
+| `P-PSEA-07` | Criterio estadistico (afectado por proveedores) | Referencia |
 
 ---
 
@@ -86,20 +82,20 @@ Ambos aplicativos contienen valores sensibles; este procedimiento gobierna su co
 
 #### Limites de alcance
 
-- No es un procedimiento de confidencialidad general (eso es `P-PSEA-26`); conecta con el.
-- No es un procedimiento de colusion (eso es `P-PSEA-08`); conecta con el.
-- No es un procedimiento de comunicaciones (eso es `P-PSEA-20`); conecta con el.
-- No define criterios estadisticos (eso es `P-PSEA-06`); gobierna su divulgacion.
+- No cubre compras generales ni servicios administrativos; solo proveedores criticos del PEA.
+- No es un procedimiento de competencia (eso es `P-PSEA-20`); conecta con el.
+- No es un procedimiento de preparacion del item (eso es `P-PSEA-06`); conecta con el.
+- Debe respetar limites de tercerizacion de ISO/IEC 17043.
 
 #### Riesgos de interpretacion
 
-- **Confundir con P-PSEA-26:** `P-PSEA-26` es confidencialidad operativa; `P-PSEA-21` es control especifico de valores sensibles.
-- **Omitir niveles de calaire-app:** Los niveles definidos en `calaire-app` son sensibles antes de la ronda.
-- **Omitir control de resultados agregados:** Los resultados individuales de laboratorios son sensibles hasta la emision oficial.
-- **Divulgar prematuramente:** El procedimiento debe definir claramente el momento de emision autorizada.
+- **Extenderse a compras generales:** Debe mantenerse acotado a proveedores que afectan la validez del EA.
+- **Omitir F-PSEA-17:** Debe vincularse con la evaluacion documentada de proveedores.
+- **Omitir limites de tercerizacion:** ISO/IEC 17043 permite tercerizacion limitada; este procedimiento debe respetar esos limites.
+- **Confundir con P-PSEA-20:** `P-PSEA-20` es competencia interna; `P-PSEA-21` es gestion de proveedores externos.
 
 ---
 
 ## Criterio minimo de elaboracion
 
-El procedimiento define que valores son sensibles, quien puede acceder a ellos, en que momento, por que canal, y conexion con `P-PSEA-06`, `P-PSEA-08`, `P-PSEA-26`, `P-PSEA-20` y `P-PSEA-07`, sin duplicar confidencialidad ni colusion.
+El procedimiento define evaluacion, seleccion y seguimiento de proveedores criticos del PEA, vinculado con `F-PSEA-17`, `P-PSEA-20` y `P-PSEA-06`, respetando limites de tercerizacion de ISO/IEC 17043 y sin extenderse a compras generales.

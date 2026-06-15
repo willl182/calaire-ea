@@ -5,11 +5,11 @@
 | Campo | Valor |
 |---|---|
 | **Codigo** | `P-PSEA-07` |
-| **Nombre decidido** | Generacion/emision del informe de resultados |
+| **Nombre decidido** | Diseno estadistico |
 | **Tipo documental** | Procedimiento |
-| **Estado** | Elaborar / Actualizar |
+| **Estado** | Mantener / Actualizar |
 | **Prioridad** | Alta |
-| **Clase de ficha** | Ficha preliminar |
+| **Clase de ficha** | Ficha activa |
 
 ---
 
@@ -17,12 +17,11 @@
 
 ### Proposito operativo
 
-Gobierna la generacion, revision, aprobacion y emision del informe final de resultados del PEA. Absorbe el rol de `P-PSEA-22` (reportes PT). Define el proceso de produccion del informe desde los datos consolidados hasta su entrega a participantes, sin desarrollar aun el contenido detallado del informe mismo.
+Procedimiento tecnico central que gobierna el valor asignado, `sigma_pt`, incertidumbre, deteccion de outliers, evaluacion de homogeneidad y estabilidad como insumo, criterios de desempeno y reglas de decision para la evaluacion de aptitud en gases contaminantes criterio. Es el nucleo metrologico-estadistico del PEA.
 
 ### Rol en el flujo
 
 - [x] Criterio tecnico
-- [x] Procedimiento
 - [ ] Entrada
 - [ ] Salida
 - [ ] Registro oficial
@@ -30,6 +29,8 @@ Gobierna la generacion, revision, aprobacion y emision del informe final de resu
 - [ ] Instructivo
 - [ ] Matriz
 - [ ] Soporte documental
+
+Define los criterios que los demas procedimientos e instructivos aplican o citan.
 
 ---
 
@@ -42,7 +43,7 @@ Gobierna la generacion, revision, aprobacion y emision del informe final de resu
 - [ ] Ambos
 - [ ] Ninguno
 
-El informe se genera desde `pt_app`, pero el procedimiento gobierna el proceso, no la herramienta.
+El criterio estadistico se implementa en `pt_app`, pero el procedimiento define el criterio, no la herramienta.
 
 ---
 
@@ -52,19 +53,19 @@ El informe se genera desde `pt_app`, pero el procedimiento gobierna el proceso, 
 
 | Codigo / fuente | Descripcion | Rol en el flujo |
 |---|---|---|
-| `F-PSEA-04` | Informe final como producto | Salida controlada |
-| `F-PSEA-14` | Dataset oficial consolidado | Insumo |
-| `F-PSEA-13C` | Resultados de homogeneidad | Insumo |
-| `F-PSEA-13D` | Resultados de estabilidad | Insumo |
-| `P-PSEA-06` | Criterio estadistico aplicado | Referencia |
+| `F-PSEA-12` | Dataset oficial consolidado | Insumo |
+| `F-PSEA-11A` | Datos preprocesados de homogeneidad | Insumo |
+| `F-PSEA-11B` | Datos preprocesados de estabilidad | Insumo |
+| Criterios metrologicos | ISO/IEC 17043, ISO 13528 | Referencia externa |
 
 #### Salidas principales
 
 | Codigo / destino | Descripcion | Rol en el flujo |
 |---|---|---|
-| `F-PSEA-04` | Informe final de resultados | Producto final |
-| `P-PSEA-20` | Comunicaciones para emision | Referencia |
-| `P-PSEA-21` | Control de valores sensibles | Referencia |
+| `F-PSEA-13` | Informe final (usa criterios de este procedimiento) | Referencia |
+| `F-PSEA-11C` | Resultados de homogeneidad (aplican criterios de este procedimiento) | Referencia |
+| `F-PSEA-11D` | Resultados de estabilidad (aplican criterios de este procedimiento) | Referencia |
+| `P-PSEA-10` a `P-PSEA-13` | Procedimientos por analito que citan este procedimiento | Referencia |
 
 ---
 
@@ -74,13 +75,11 @@ El informe se genera desde `pt_app`, pero el procedimiento gobierna el proceso, 
 
 | Codigo | Relacion | Tipo de vinculo |
 |---|---|---|
-| `P-PSEA-22` | Absorbido por este procedimiento | Referencia historica |
-| `F-PSEA-04` | Informe que este procedimiento gobierna | Obligatorio |
-| `P-PSEA-06` | Criterio estadistico que alimenta el informe | Obligatorio |
-| `DG-PSEA-03` | Aplicativo que genera el informe | Obligatorio |
-| `I-PSEA-18` | Instructivo que explica la operacion del modulo | Obligatorio |
-| `P-PSEA-20` | Comunicaciones para emision | Obligatorio |
-| `P-PSEA-21` | Control de valores sensibles en el informe | Obligatorio |
+| `P-PSEA-10` a `P-PSEA-13` | Procedimientos por analito que citan este procedimiento | Obligatorio |
+| `I-PSEA-05` | Instructivo que aplica estos criterios en pt_app | Obligatorio |
+| `P-PSEA-09` | Generacion del informe que usa estos criterios | Obligatorio |
+| `P-PSEA-08` | Flujo tecnico que usa estos criterios | Obligatorio |
+| `DG-PSEA-03` | Aplicativo que implementa estos criterios | Obligatorio |
 
 ---
 
@@ -88,20 +87,21 @@ El informe se genera desde `pt_app`, pero el procedimiento gobierna el proceso, 
 
 #### Limites de alcance
 
-- No desarrolla el contenido detallado del informe final (eso es `F-PSEA-04`, aun preliminar).
-- No es un instructivo de uso de `pt_app` (eso es `I-PSEA-18`).
-- No define criterios estadisticos (eso es `P-PSEA-06`).
-- No es un procedimiento de comunicaciones (eso es `P-PSEA-20`).
+- No es un instructivo de uso de `pt_app` (eso es `I-PSEA-05`).
+- No es un procedimiento de planificacion de ronda (eso es `P-PSEA-04`).
+- No define contenido del informe final (eso es `P-PSEA-09` y `F-PSEA-13`).
+- No es un procedimiento de preparacion del item (eso es `P-PSEA-06`).
+- No es un procedimiento de gestion operativa (eso es `P-PSEA-14`, `P-PSEA-15`, etc.).
 
 #### Riesgos de interpretacion
 
-- **Cerrar prematuramente F-PSEA-04:** El contenido detallado del informe se deja para fase posterior; esta ficha es preliminar.
-- **Confundir con P-PSEA-22:** `P-PSEA-22` fue absorbido; no debe mantenerse como documento independiente.
-- **Omitir control de valores sensibles:** La emision del informe debe conectar con `P-PSEA-21` para controlar divulgacion.
-- **Definir formato del informe:** El formato del informe es `F-PSEA-04`; este procedimiento gobierna su generacion, no su estructura.
+- **Confundir con I-PSEA-05:** `I-PSEA-05` explica como usar la interfaz; `P-PSEA-07` define que calcular y por que.
+- **Duplicar en procedimientos por gas:** `P-PSEA-10` a `P-PSEA-13` deben citar, no replicar, este procedimiento.
+- **Omitir H/E como insumo:** La evaluacion de H/E es un insumo del diseno estadistico; no debe decirse que no aplica.
+- **Cerrar prematuramente criterios:** Los criterios deben ser lo suficientemente estables para citarse, pero abiertos a actualizacion metrologica.
 
 ---
 
 ## Criterio minimo de elaboracion
 
-El procedimiento define el flujo de generacion, revision, aprobacion y emision del informe, absorbiendo el rol de `P-PSEA-22`, citando `P-PSEA-06` para criterios estadisticos y `F-PSEA-04` como producto, sin definir aun el contenido detallado del informe.
+El procedimiento define con precision: valor asignado, `sigma_pt`, incertidumbre, outliers, criterios de desempeno, reglas de decision y tratamiento de H/E como insumo, siendo citable por procedimientos por analito sin duplicacion.

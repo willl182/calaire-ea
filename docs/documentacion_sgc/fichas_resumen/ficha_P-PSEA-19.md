@@ -5,11 +5,11 @@
 | Campo | Valor |
 |---|---|
 | **Codigo** | `P-PSEA-19` |
-| **Nombre decidido** | Imparcialidad |
+| **Nombre decidido** | Confidencialidad operativa interna del PEA |
 | **Tipo documental** | Procedimiento |
-| **Estado** | Retirar |
-| **Prioridad** | No priorizar |
-| **Clase de ficha** | Registro de no activo |
+| **Estado** | Mantener / Actualizar |
+| **Prioridad** | Media-alta |
+| **Clase de ficha** | Ficha activa |
 
 ---
 
@@ -17,21 +17,19 @@
 
 ### Proposito operativo
 
-Codigo retirado del alcance documental propio del PEA. La imparcialidad se maneja por fuera del sistema documental propio del PEA, dentro de la politica institucional y el sistema de gestion macro. No se desarrolla ni se mantiene como procedimiento activo del PEA.
+Gobierna la confidencialidad de datos, participantes y resultados del PEA a nivel operativo. Se diferencia de la politica institucional general; esta acotada especificamente a la informacion generada y manejada durante las rondas de ensayo de aptitud. Conecta con control de valores sensibles y colusion.
 
 ### Rol en el flujo
 
-- [ ] Criterio tecnico
-- [ ] Procedimiento
+- [x] Criterio tecnico
+- [x] Procedimiento
 - [ ] Entrada
 - [ ] Salida
 - [ ] Registro oficial
 - [ ] Evidencia
 - [ ] Instructivo
 - [ ] Matriz
-- [x] Soporte documental
-
-Retirado; no tiene rol operativo en el PEA.
+- [ ] Soporte documental
 
 ---
 
@@ -39,12 +37,12 @@ Retirado; no tiene rol operativo en el PEA.
 
 #### Aplicativo asociado
 
-- [ ] `calaire-app`
-- [ ] `pt_app`
+- [x] `calaire-app`
+- [x] `pt_app`
 - [ ] Ambos
-- [x] Ninguno
+- [ ] Ninguno
 
-Retirado; no hay aplicativo asociado.
+Ambos aplicativos contienen informacion confidencial; este procedimiento gobierna su proteccion.
 
 ---
 
@@ -54,13 +52,16 @@ Retirado; no hay aplicativo asociado.
 
 | Codigo / fuente | Descripcion | Rol en el flujo |
 |---|---|---|
-| N/A | No aplica | N/A |
+| `P-PSEA-16` | Divulgacion y control de valores sensibles | Referencia |
+| `P-PSEA-14` | Colusion y falsificacion | Referencia |
+| `P-PSEA-20` | Competencia y autorizacion | Referencia |
 
 #### Salidas principales
 
 | Codigo / destino | Descripcion | Rol en el flujo |
 |---|---|---|
-| N/A | No aplica | N/A |
+| `P-PSEA-05` | Comunicaciones (control de divulgacion) | Referencia |
+| `F-PSEA-13` | Informe (emision controlada) | Referencia |
 
 ---
 
@@ -70,7 +71,11 @@ Retirado; no hay aplicativo asociado.
 
 | Codigo | Relacion | Tipo de vinculo |
 |---|---|---|
-| Politica institucional | Se maneja por fuera del PEA | Referencia externa |
+| `P-PSEA-16` | Control de valores sensibles | Obligatorio |
+| `P-PSEA-14` | Colusion que rompe confidencialidad | Obligatorio |
+| `P-PSEA-20` | Competencia y autorizacion (quien accede) | Obligatorio |
+| `P-PSEA-05` | Comunicaciones que deben respetar confidencialidad | Obligatorio |
+| `F-PSEA-13` | Informe que debe respetar confidencialidad | Referencia |
 
 ---
 
@@ -78,18 +83,20 @@ Retirado; no hay aplicativo asociado.
 
 #### Limites de alcance
 
-- No se desarrolla ni se mantiene en el PEA.
-- Se maneja dentro de la politica institucional y el sistema macro.
-- No es un procedimiento activo ni reservado.
+- No es la politica institucional de confidencialidad general; es la confidencialidad operativa del PEA.
+- No es un procedimiento de control de valores sensibles (eso es `P-PSEA-16`); conecta con el.
+- No es un procedimiento de colusion (eso es `P-PSEA-14`); conecta con el.
+- No es un procedimiento de competencia (eso es `P-PSEA-20`); conecta con el.
 
 #### Riesgos de interpretacion
 
-- **Confundir con activo:** `P-PSEA-19` no es un procedimiento vigente del PEA; esta retirado.
-- **Desarrollar contenido:** No debe crearse contenido para este codigo en el PEA.
-- **Omitir razon:** Debe indicarse claramente que se maneja por fuera del sistema documental propio.
+- **Confundir con politica institucional:** Este procedimiento es especifico del PEA; no reemplaza la politica institucional.
+- **Omitir conexion con P-PSEA-16:** La confidencialidad operativa debe conectar con el control de valores sensibles.
+- **Omitir roles y autorizaciones:** Debe indicar quienes tienen acceso a que informacion (conecta con `P-PSEA-20`).
+- **Extenderse a talento humano general:** No cubre talento humano general; solo roles tecnicos y operativos del PEA.
 
 ---
 
 ## Criterio minimo de elaboracion
 
-El registro de no activo documenta la decision de retirar `P-PSEA-19` del alcance PEA, indicando que la imparcialidad se maneja por fuera del sistema documental propio, sin desarrollar contenido ni confundirse con ficha activa.
+El procedimiento define confidencialidad operativa especifica del PEA (datos, participantes, resultados), conectando con `P-PSEA-16`, `P-PSEA-14` y `P-PSEA-20`, sin reemplazar politica institucional ni duplicar control de valores sensibles.

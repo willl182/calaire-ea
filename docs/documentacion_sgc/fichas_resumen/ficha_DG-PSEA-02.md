@@ -54,19 +54,19 @@ El documento describe el aplicativo mismo.
 | Codigo / fuente | Descripcion | Rol en el flujo |
 |---|---|---|
 | Requisitos operativos PEA | Funciones requeridas para gestion de rondas | Insumo |
-| `P-PSEA-09` | Planificacion de ronda | Referencia |
-| `P-PSEA-20` | Comunicaciones del PEA | Referencia |
+| `P-PSEA-04` | Planificacion de ronda | Referencia |
+| `P-PSEA-05` | Comunicaciones del PEA | Referencia |
 | Participantes | Datos reportados por laboratorios | Entrada |
 
 #### Salidas principales
 
 | Codigo / destino | Descripcion | Rol en el flujo |
 |---|---|---|
-| `F-PSEA-07` | Ficha digital de ronda | Salida |
-| `F-PSEA-12` | Datos exportados para analisis PT | Salida |
-| `F-PSEA-05` | Registro de participacion | Salida |
-| `F-PSEA-05A` | Anexo tecnico de equipos e instrumentos | Salida |
-| `F-PSEA-09` | Datos reportados por participante | Salida |
+| `F-PSEA-06` | Ficha digital de ronda | Salida |
+| `F-PSEA-09` | Datos exportados para analisis PT | Salida |
+| `F-PSEA-03` | Registro de participacion | Salida |
+| `F-PSEA-04` | Anexo tecnico de equipos e instrumentos | Salida |
+| `F-PSEA-08` | Datos reportados por participante | Salida |
 | `F-PSEA-01` | Calendario global de ronda | Salida |
 | `F-PSEA-02` | Cronograma detallado de ronda | Salida |
 
@@ -78,12 +78,12 @@ El documento describe el aplicativo mismo.
 
 | Codigo | Relacion | Tipo de vinculo |
 |---|---|---|
-| `I-PSEA-10` | Instructivo para participante | Obligatorio |
-| `I-PSEA-16` | Instructivo de administracion de rondas | Obligatorio |
-| `P-PSEA-09` | Planificacion que usa el aplicativo | Obligatorio |
-| `P-PSEA-20` | Comunicaciones que usan el aplicativo | Obligatorio |
-| `P-PSEA-24` | Quejas gestionadas como casos SGC | Obligatorio |
-| `P-PSEA-23` | Flujo tecnico que recibe datos de calaire-app | Obligatorio |
+| `I-PSEA-02` | Instructivo para participante | Obligatorio |
+| `I-PSEA-03` | Instructivo de administracion de rondas | Obligatorio |
+| `P-PSEA-04` | Planificacion que usa el aplicativo | Obligatorio |
+| `P-PSEA-05` | Comunicaciones que usan el aplicativo | Obligatorio |
+| `P-PSEA-17` | Quejas gestionadas como casos SGC | Obligatorio |
+| `P-PSEA-08` | Flujo tecnico que recibe datos de calaire-app | Obligatorio |
 
 ---
 
@@ -92,7 +92,7 @@ El documento describe el aplicativo mismo.
 #### Limites de alcance
 
 - No es un formato `F-PSEA`; es un documento general.
-- No es un instructivo de uso (eso es `I-PSEA-10` e `I-PSEA-16`).
+- No es un instructivo de uso (eso es `I-PSEA-02` e `I-PSEA-03`).
 - No define criterios estadisticos ni de evaluacion de aptitud.
 - No genera el informe final ni el analisis estadistico (eso es `pt_app`).
 - No es un procedimiento de control documental.
@@ -100,7 +100,7 @@ El documento describe el aplicativo mismo.
 #### Riesgos de interpretacion
 
 - **Codificar como formato F-PSEA:** `calaire-app` es un aplicativo; sus registros y exportaciones son formatos, pero el aplicativo mismo es `DG-PSEA-02`.
-- **Confundir con P-PSEA-09:** `P-PSEA-09` gobierna la planificacion; `DG-PSEA-02` documenta la herramienta que la soporta.
+- **Confundir con P-PSEA-04:** `P-PSEA-04` gobierna la planificacion; `DG-PSEA-02` documenta la herramienta que la soporta.
 - **Incluir analisis estadistico:** El analisis PT ocurre en `pt_app` (`DG-PSEA-03`), no en `calaire-app`.
 
 ---

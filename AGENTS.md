@@ -69,6 +69,36 @@ managers. Content is structured markdown files consumed by Logseq.
 
 ---
 
+## Content Classification Tags
+
+Every journal block must be tagged with one classification tag to distinguish content that is **reportable** from content that is **internal or insight-only**.
+
+| Tag | Meaning | When to Apply |
+|-----|---------|---------------|
+| `#internal` | Work done as developer/PL that is invisible to stakeholders: repo cleanup, scripts, skill design, infra setup, config changes, temporary dev tools. **Not reportable** in project meetings. | The actor is the user as dev/PL, and the output is a means to an end that does not appear as a project deliverable. |
+| `#insight` | Discovery, corrected understanding, or lesson learned that changes mental models. **Not a milestone** but important knowledge. | A previous assumption was corrected, a better approach was found, or domain understanding deepened. |
+
+### Application Rules
+
+1. **Default is reportable.** If a block does NOT carry `#internal` or `#insight`, it is assumed reportable by default. No tag needed for standard project events.
+
+2. **`#internal` test:** Would you report this in a project status meeting with stakeholders? If the answer is "no" and it describes technical groundwork, tooling, or personal workflow → `#internal`.
+   - Examples: "Se limpió el repositorio pt_app", "Se diseñó el skill work-history-rebuild", "Se migró la columna k en Supabase", "Se refactorizó is_nonempty_df()".
+
+3. **`#insight` test:** Does this change how you understand the domain or the system going forward? Is it knowledge acquired, not a deliverable produced? → `#insight`.
+   - Examples: "Se determinó que U_exp es manual, no auto-calculada", "Se identificó que agopus46_ppsea09.md ofrecía la estructura más completa".
+
+4. **Mutually exclusive with `#decision`.** If a block is tagged `#decision`, it is by definition a project-level decision and therefore reportable. Do not add `#internal` or `#insight` to `#decision` blocks.
+
+5. **No other classification tags.** The tag vocabulary is strictly: `#internal`, `#insight`, `#decision`, `#MOC`, `#System`, `#Bento`, `#todiscuss`. Do not invent new ones.
+
+### Placement
+
+- Append the tag at the **end** of the block content, separated by a space.
+- Example: `- **Revisión de repo pt_app:** se ejecutó la limpieza de artefactos huérfanos. #internal`
+
+---
+
 ## Content Development Guidelines
 
 ### Input Processing
@@ -450,6 +480,8 @@ This graph uses a memory system via `logs/` directory to persist context between
 |------------|------------------------------------------------------------|
 | `continue` | Session start, user says "continúa", "resumen", "qué sigue"|
 | `saver`    | Session end, complex problem resolved, milestone completed |
+| `tagger-journal` | Tag journal blocks with `#internal` or `#insight` classification |
+| `evaluador-tagging` | Review quality and consistency of applied classification tags |
 
 ### Boot Sequence
 
@@ -555,6 +587,54 @@ Use `task` with `subagent_type: "revisor-fase"` to execute phase reviews. The re
 Task: Revisar Fase 3 - Sistema de Equipos
 Phase: Fase 3
 Context: Se crearon `pages/Equipos.md` y `pages/Calibrador T700.md`, se actualizó `pages/CALAIRE-EA.md`
+```
+
+---
+
+### Subagent: `tagger-journal`
+
+Use `task` with `subagent_type: "tagger-journal"` to classify journal blocks with `#internal` or `#insight` tags.
+
+**Invocation pattern:**
+1. Provide the agent with the file path (`journals/YYYY_MM_DD.md`) and optionally a subset of blocks to review.
+2. The tagger reads the AGENTS.md "Content Classification Tags" rules.
+3. For each block, it decides: `#internal`, `#insight`, or no tag (reportable by default).
+4. It outputs the exact `edit` calls needed to append the tags.
+
+**Decision criteria the tagger must apply:**
+- `#internal`: The actor is the user as developer/PL, and the output is technical groundwork invisible to stakeholders (repo cleanup, scripts, skill design, DB migrations, config changes, refactoring, tooling).
+- `#insight`: A previous assumption was corrected, domain understanding deepened, or a better approach was discovered. Not a deliverable, but knowledge gained.
+- No tag: Standard project events that would be reported in a status meeting (confirmations, QMS reviews, deliverables, decisions already tagged `#decision`).
+
+**Example invocation:**
+```
+Task: Clasificar bloques del journal 2026_05_22
+File: journals/2026_05_22.md
+Context: Los 3 bloques de Desarrollo Técnico describen trabajo del project leader como dev
+```
+
+---
+
+### Subagent: `evaluador-tagging`
+
+Use `task` with `subagent_type: "evaluador-tagging"` to review the quality and consistency of classification tags applied by `tagger-journal` (or by the main agent).
+
+**Invocation pattern:**
+1. Provide the evaluator with the original file path and the list of tags applied.
+2. The evaluator re-reads the classification rules from AGENTS.md.
+3. It audits each tagged block for false positives, false negatives, and inconsistent application.
+4. It produces a structured report with severity tiers (Blocking, Required, Suggestions).
+
+**Evaluation criteria:**
+- **Blocking**: A `#decision` block was incorrectly tagged `#internal` or `#insight`. A clearly reportable milestone was tagged `#internal`. A private dev task was left untagged.
+- **Required**: Inconsistent application of the same pattern across different days. Tag placed in wrong position (not at end of block). Ambiguous blocks that should have been flagged for human review.
+- **Suggestions**: Blocks that could benefit from an `#insight` tag but were left untagged. Over-tagged blocks where `#internal` was applied to something that is actually a minor but reportable task.
+
+**Example invocation:**
+```
+Task: Evaluar calidad del tagging en journals/2026_05_19 a 2026_05_22
+Files: journals/2026_05_19.md, journals/2026_05_21.md, journals/2026_05_22.md
+Context: El tagger clasificó 12 bloques; se requiere auditoría de precisión
 ```
 
 ---

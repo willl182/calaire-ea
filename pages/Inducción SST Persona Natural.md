@@ -13,10 +13,10 @@
 	- **Permiso de ingreso:** el permiso de ingreso se diligencia en la plataforma institucional de permisos de la Sede Medellín. Se estima una respuesta en un plazo operativo de un día o menos, sujeto a validación administrativa.
 	  url:: https://processp.medellin.unal.edu.co/plugin/permisosIngreso/index.html
 	  status:: pending
-	- **Material fuente revisado:** `docs/prueba_piloto/Induccion contratistas OPS versión 3.pdf`
+	- **Material fuente revisado:** `docs/documentacion_sgc/02_prueba_piloto_rondas/05_evidencias_soporte/Induccion contratistas OPS versión 3.pdf`
 	  document:: [[Inducción SST Persona Natural]]
 	  status:: reviewed
-	- **Respuestas de referencia:** el cuadro de preguntas y respuestas de la inducción quedó documentado en `docs/prueba_piloto/induccion_sst_persona_natural_respuestas.md`.
+	- **Respuestas de referencia:** el cuadro de preguntas y respuestas de la inducción quedó documentado en `docs/documentacion_sgc/02_prueba_piloto_rondas/05_evidencias_soporte/induccion_sst_persona_natural_respuestas.md`.
 	  status:: documented
 	- TODO Realizar curso **SST persona natural** en UNVirtual.
 	  project:: [[CALAIRE-EA]]

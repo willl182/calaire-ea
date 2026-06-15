@@ -5,10 +5,10 @@
 | Campo | Valor |
 |---|---|
 | **Codigo** | `P-PSEA-05` |
-| **Nombre decidido** | Procedimiento tecnico SO2 |
+| **Nombre decidido** | Comunicaciones del PEA |
 | **Tipo documental** | Procedimiento |
-| **Estado** | Actualizar |
-| **Prioridad** | Media |
+| **Estado** | Mantener / Actualizar |
+| **Prioridad** | Media-alta |
 | **Clase de ficha** | Ficha activa |
 
 ---
@@ -17,7 +17,7 @@
 
 ### Proposito operativo
 
-Procedimiento tecnico especifico para la evaluacion de aptitud en dioxido de azufre (SO2) dentro del PEA. Documenta las condiciones operativas, metodologias de referencia, particularidades del gas y criterios de aceptacion especificos para este analito. Debe citar documentos transversales y no duplicar estadistica, H/E, informe ni flujo de datos.
+Gobierna los canales, formatos, responsables y registros de comunicaciones oficiales del PEA. Define cuando se usa `calaire-app` (notificaciones automaticas, casos SGC) y cuando se usa correo electronico formal institucional. Conecta con participantes, quejas, apelaciones, informes y control de valores sensibles.
 
 ### Rol en el flujo
 
@@ -37,12 +37,12 @@ Procedimiento tecnico especifico para la evaluacion de aptitud en dioxido de azu
 
 #### Aplicativo asociado
 
-- [ ] `calaire-app`
-- [x] `pt_app`
+- [x] `calaire-app`
+- [ ] `pt_app`
 - [ ] Ambos
 - [ ] Ninguno
 
-El analisis estadistico se ejecuta en `pt_app`, pero este procedimiento define criterios especificos del analito.
+Las comunicaciones principales usan `calaire-app`; algunas usan correo segun aplique.
 
 ---
 
@@ -52,17 +52,19 @@ El analisis estadistico se ejecuta en `pt_app`, pero este procedimiento define c
 
 | Codigo / fuente | Descripcion | Rol en el flujo |
 |---|---|---|
-| `P-PSEA-06` | Diseno estadistico | Referencia obligatoria |
-| `F-PSEA-13` | Registro de H/E | Referencia obligatoria |
-| `P-PSEA-10` | Preparacion del item | Referencia |
-| `F-PSEA-14` | Dataset oficial | Referencia |
+| `I-PSEA-02` | Instructivo para participante | Referencia |
+| `P-PSEA-16` | Divulgacion y control de valores sensibles | Referencia |
+| `P-PSEA-17` | Quejas del PEA | Referencia |
+| `P-PSEA-18` | Apelaciones del PEA | Referencia |
+| `P-PSEA-09` | Generacion del informe | Referencia |
 
 #### Salidas principales
 
 | Codigo / destino | Descripcion | Rol en el flujo |
 |---|---|---|
-| `P-PSEA-07` | Informe de resultados | Referencia |
-| `F-PSEA-04` | Informe final | Referencia |
+| `F-PSEA-13` | Informe final comunicado | Referencia |
+| `F-PSEA-14` | Casos de queja/NC comunicados | Referencia |
+| `F-PSEA-15` | Registro de apelaciones comunicadas | Referencia |
 
 ---
 
@@ -72,13 +74,12 @@ El analisis estadistico se ejecuta en `pt_app`, pero este procedimiento define c
 
 | Codigo | Relacion | Tipo de vinculo |
 |---|---|---|
-| `P-PSEA-06` | Cita para diseno estadistico | Obligatorio |
-| `F-PSEA-13` | Cita para H/E | Obligatorio |
-| `P-PSEA-07` | Cita para informe | Obligatorio |
-| `P-PSEA-23` | Cita para flujo de datos | Obligatorio |
-| `DG-PSEA-03` | Aplicativo de analisis | Referencia |
-| `I-PSEA-17` | Instructivo de preprocesador | Referencia |
-| `I-PSEA-18` | Instructivo de analisis | Referencia |
+| `I-PSEA-02` | Instructivo de comunicaciones a participantes | Obligatorio |
+| `P-PSEA-16` | Control de valores sensibles en comunicaciones | Obligatorio |
+| `P-PSEA-17` | Quejas gestionadas como comunicaciones | Obligatorio |
+| `P-PSEA-18` | Apelaciones gestionadas como comunicaciones | Obligatorio |
+| `P-PSEA-09` | Informe como comunicacion oficial | Obligatorio |
+| `DG-PSEA-02` | Aplicativo de comunicaciones | Obligatorio |
 
 ---
 
@@ -86,21 +87,20 @@ El analisis estadistico se ejecuta en `pt_app`, pero este procedimiento define c
 
 #### Limites de alcance
 
-- No duplica el diseno estadistico (eso es `P-PSEA-06`).
-- No duplica la evaluacion de H/E (eso es `F-PSEA-13` y `P-PSEA-06`).
-- No duplica la generacion del informe (eso es `P-PSEA-07`).
-- No duplica el flujo de datos (eso es `P-PSEA-23`).
-- No es un instructivo de uso de aplicativos.
+- No es un instructivo de uso de `calaire-app` (eso es `I-PSEA-02`).
+- No es un procedimiento de quejas (eso es `P-PSEA-17`); conecta con el.
+- No es un procedimiento de apelaciones (eso es `P-PSEA-18`); conecta con el.
+- No es un procedimiento de control de valores sensibles (eso es `P-PSEA-16`); conecta con el.
 
 #### Riesgos de interpretacion
 
-- **Duplicar P-PSEA-06:** El procedimiento debe citar `P-PSEA-06` para estadistica, no replicar definiciones.
-- **Omitir particularidades de SO2:** Debe conservar las condiciones especificas de este gas (fluorescencia UV, interferencias, etc.).
-- **Incluir H/E como procedimiento separado:** La evaluacion de H/E se documenta en `F-PSEA-13` y `P-PSEA-06`; aqui solo se cita.
-- **Confundir con F-PSEA-04:** Este procedimiento no define el formato del informe; cita `P-PSEA-07` y `F-PSEA-04`.
+- **Omitir canal de correo:** Algunas comunicaciones (apelaciones, comunicaciones formales) van por correo, no solo por `calaire-app`.
+- **Confundir con I-PSEA-02:** `I-PSEA-02` explica como usar el aplicativo; `P-PSEA-05` gobierna que, cuando y por que canal comunicar.
+- **Omitir registro:** Las comunicaciones oficiales deben quedar registradas.
+- **Incluir comunicaciones internas informales:** Este procedimiento gobierna comunicaciones oficiales del PEA.
 
 ---
 
 ## Criterio minimo de elaboracion
 
-El procedimiento tecnico para SO2 contiene las condiciones especificas del analito, citando `P-PSEA-06`, `F-PSEA-13`, `P-PSEA-07` y `P-PSEA-23` sin duplicar estadistica, H/E, informe ni flujo de datos.
+El procedimiento define canales (`calaire-app` vs correo), responsables, registros y conexiones con `P-PSEA-16`, `P-PSEA-17`, `P-PSEA-18` y `P-PSEA-09`, sin duplicar instructivos ni procedimientos de quejas/apelaciones.

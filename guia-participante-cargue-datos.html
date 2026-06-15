@@ -1,0 +1,1068 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>I-PSEA-10 | Instructivo de Reporte de Resultados y Cargue de Datos por Participante</title>
+  <style>
+    @font-face {
+      font-family: "Droid Sans";
+      src: url("./public/fonts/DroidSans-Regular.ttf") format("truetype");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "Droid Sans";
+      src: url("./public/fonts/DroidSans-Bold.ttf") format("truetype");
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    :root {
+      --gold: #fdb913;
+      --gold-dark: #d99a00;
+      --ink: #111827;
+      --muted: #5f6877;
+      --paper: #fbfbf8;
+      --surface: #ffffff;
+      --line: #d8dde5;
+      --line-soft: #eaedf2;
+      --mist: #eef0f3;
+      --green: #15803d;
+      --amber: #a16207;
+      --red: #b91c1c;
+      --blue: #1d4ed8;
+      --shadow: 0 18px 48px rgba(17, 24, 39, .12);
+      --radius: 8px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(17, 24, 39, .04) 1px, transparent 1px) 0 0 / 28px 28px,
+        linear-gradient(180deg, #f1f2f4 0, #e8eaed 42%, #f7f7f2 100%);
+      font-family: "Droid Sans", "Segoe UI", sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: 1rem;
+      top: -4rem;
+      z-index: 10;
+      background: var(--ink);
+      color: white;
+      padding: .6rem .8rem;
+      border-radius: var(--radius);
+    }
+
+    .skip-link:focus {
+      top: 1rem;
+    }
+
+    .document-shell {
+      display: grid;
+      grid-template-columns: 292px minmax(0, 1fr);
+      gap: 2rem;
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 1.25rem;
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 1.25rem;
+      align-self: start;
+      max-height: calc(100vh - 2.5rem);
+      overflow: auto;
+      background: rgba(255, 255, 255, .82);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: 0 10px 32px rgba(17, 24, 39, .08);
+      backdrop-filter: blur(12px);
+    }
+
+    .brand {
+      display: flex;
+      gap: .8rem;
+      align-items: center;
+      padding: 1rem;
+      border-bottom: 4px solid var(--gold);
+    }
+
+    .brand img {
+      width: 46px;
+      height: auto;
+    }
+
+    .brand strong {
+      display: block;
+      font-size: .95rem;
+      line-height: 1.25;
+    }
+
+    .brand span {
+      display: block;
+      color: var(--muted);
+      font-size: .78rem;
+      line-height: 1.35;
+    }
+
+    .nav {
+      padding: .75rem;
+    }
+
+    .nav a {
+      display: block;
+      padding: .48rem .6rem;
+      color: #374151;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: .86rem;
+      line-height: 1.35;
+    }
+
+    .nav a:hover,
+    .nav a:focus {
+      background: #fff6d8;
+      color: var(--ink);
+      outline: none;
+    }
+
+    .main {
+      min-width: 0;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      min-height: 54vh;
+      display: grid;
+      align-items: end;
+      padding: clamp(1.4rem, 3vw, 3rem);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background:
+        linear-gradient(115deg, rgba(17, 24, 39, .90), rgba(17, 24, 39, .66) 45%, rgba(253, 185, 19, .28)),
+        radial-gradient(circle at 78% 18%, rgba(253, 185, 19, .65), transparent 26%),
+        linear-gradient(135deg, #5b6169 0, #d7d9dd 100%);
+      color: white;
+      box-shadow: var(--shadow);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        repeating-linear-gradient(90deg, transparent 0 38px, rgba(255, 255, 255, .10) 38px 39px),
+        repeating-linear-gradient(0deg, transparent 0 38px, rgba(255, 255, 255, .06) 38px 39px);
+      opacity: .45;
+    }
+
+    .hero-content {
+      position: relative;
+      max-width: 850px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: .45rem;
+      margin: 0 0 1rem;
+      padding: .35rem .55rem;
+      background: rgba(253, 185, 19, .96);
+      color: var(--ink);
+      border-radius: 999px;
+      font-size: .78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 13ch;
+      font-size: clamp(2.45rem, 7vw, 5.8rem);
+      line-height: .95;
+      letter-spacing: 0;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 1.2rem 0 0;
+      color: rgba(255, 255, 255, .9);
+      font-size: clamp(1rem, 1.4vw, 1.18rem);
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: .7rem;
+      margin: 1rem 0 0;
+    }
+
+    .meta-item,
+    .quick-card,
+    .content-section,
+    .callout,
+    .flow-step {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+
+    .meta-item {
+      padding: .85rem;
+      min-height: 84px;
+    }
+
+    .meta-item b {
+      display: block;
+      color: var(--muted);
+      font-size: .72rem;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+    }
+
+    .meta-item span {
+      display: block;
+      margin-top: .25rem;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    .quick-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: .85rem;
+      margin: 1rem 0;
+    }
+
+    .quick-card {
+      padding: 1rem;
+      box-shadow: 0 8px 22px rgba(17, 24, 39, .07);
+    }
+
+    .quick-card b {
+      display: block;
+      margin-bottom: .35rem;
+      font-size: .98rem;
+    }
+
+    .quick-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    .content-section {
+      margin: 1rem 0;
+      padding: clamp(1.1rem, 2.4vw, 2rem);
+      box-shadow: 0 8px 22px rgba(17, 24, 39, .06);
+    }
+
+    .section-kicker {
+      display: inline-block;
+      margin-bottom: .5rem;
+      color: var(--gold-dark);
+      font-size: .75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    h2,
+    h3 {
+      margin: 0 0 .7rem;
+      line-height: 1.18;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      font-size: clamp(1.55rem, 2.6vw, 2.2rem);
+    }
+
+    h3 {
+      margin-top: 1.2rem;
+      font-size: 1.15rem;
+    }
+
+    p {
+      margin: .65rem 0;
+    }
+
+    .lead {
+      color: #374151;
+      font-size: 1.05rem;
+    }
+
+    .flow {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: .75rem;
+      margin-top: 1rem;
+    }
+
+    .flow-step {
+      position: relative;
+      padding: 1rem;
+      border-left: 4px solid var(--gold);
+    }
+
+    .flow-step span {
+      display: inline-grid;
+      width: 1.8rem;
+      height: 1.8rem;
+      place-items: center;
+      margin-bottom: .55rem;
+      background: var(--ink);
+      color: white;
+      border-radius: 50%;
+      font-size: .82rem;
+      font-weight: 700;
+    }
+
+    ul,
+    ol {
+      padding-left: 1.3rem;
+    }
+
+    li {
+      margin: .4rem 0;
+    }
+
+    code {
+      padding: .08rem .28rem;
+      background: #f3f4f6;
+      border: 1px solid #e5e7eb;
+      border-radius: 4px;
+      font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+      font-size: .92em;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      margin: .85rem 0 1rem;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      min-width: 690px;
+    }
+
+    th,
+    td {
+      padding: .72rem .8rem;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid var(--line-soft);
+    }
+
+    th {
+      background: #2f3338;
+      color: white;
+      font-size: .78rem;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .callout {
+      margin: 1rem 0;
+      padding: 1rem;
+      border-left: 5px solid var(--gold);
+      background: #fffdf4;
+    }
+
+    .callout.warning {
+      border-left-color: var(--red);
+      background: #fff7f7;
+    }
+
+    .callout.info {
+      border-left-color: var(--blue);
+      background: #f6f9ff;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: .15rem .45rem;
+      border-radius: 999px;
+      background: #eef2f7;
+      font-size: .82rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .badge.ok {
+      background: #e8f7ee;
+      color: var(--green);
+    }
+
+    .badge.pending {
+      background: #fff5d6;
+      color: var(--amber);
+    }
+
+    .badge.error {
+      background: #fee2e2;
+      color: var(--red);
+    }
+
+    .checklist {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: .55rem .9rem;
+      padding: 0;
+      list-style: none;
+    }
+
+    .checklist li {
+      position: relative;
+      margin: 0;
+      padding: .58rem .65rem .58rem 2.15rem;
+      background: #f8fafc;
+      border: 1px solid var(--line-soft);
+      border-radius: 6px;
+    }
+
+    .checklist li::before {
+      content: "";
+      position: absolute;
+      left: .7rem;
+      top: .75rem;
+      width: .82rem;
+      height: .82rem;
+      border: 2px solid var(--gold-dark);
+      border-radius: 3px;
+      background: white;
+    }
+
+    .placeholder {
+      margin: .8rem 0;
+      padding: 1rem;
+      color: #4b5563;
+      background:
+        linear-gradient(135deg, rgba(253, 185, 19, .18), rgba(255, 255, 255, .8)),
+        repeating-linear-gradient(45deg, transparent 0 9px, rgba(17, 24, 39, .04) 9px 10px);
+      border: 1px dashed #b8bec8;
+      border-radius: var(--radius);
+      font-size: .92rem;
+    }
+
+    .footer-note {
+      margin: 1.5rem 0 0;
+      padding: 1rem 0 0;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      font-size: .92rem;
+    }
+
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .6rem;
+      margin-top: 1.2rem;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: .58rem .9rem;
+      color: var(--ink);
+      background: var(--gold);
+      border: 1px solid var(--gold-dark);
+      border-radius: 6px;
+      font: inherit;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .button.secondary {
+      background: white;
+      border-color: var(--line);
+    }
+
+    .button:hover,
+    .button:focus {
+      filter: brightness(.96);
+      outline: 2px solid rgba(253, 185, 19, .45);
+      outline-offset: 2px;
+    }
+
+    @media (max-width: 1050px) {
+      .document-shell {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        position: static;
+        max-height: none;
+      }
+
+      .nav {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .meta-grid,
+      .quick-grid,
+      .flow {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 680px) {
+      body {
+        font-size: 15px;
+      }
+
+      .document-shell {
+        padding: .75rem;
+        gap: .75rem;
+      }
+
+      .nav,
+      .meta-grid,
+      .quick-grid,
+      .flow,
+      .checklist {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: 48vh;
+      }
+
+      h1 {
+        max-width: 10ch;
+      }
+    }
+
+    @media print {
+      body {
+        background: white;
+      }
+
+      .document-shell {
+        display: block;
+        max-width: none;
+        padding: 0;
+      }
+
+      .sidebar,
+      .toolbar,
+      .placeholder {
+        display: none;
+      }
+
+      .hero,
+      .content-section,
+      .meta-item,
+      .quick-card,
+      .callout,
+      .flow-step {
+        box-shadow: none;
+        break-inside: avoid;
+      }
+
+      .hero {
+        min-height: auto;
+        color: var(--ink);
+        background: white;
+      }
+
+      .hero p {
+        color: var(--ink);
+      }
+
+      a {
+        text-decoration: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <div class="document-shell">
+    <aside class="sidebar" aria-label="Navegación de la guía">
+      <div class="brand">
+        <img src="./public/logo.png" alt="Logo Universidad Nacional de Colombia">
+        <div>
+          <strong>CALAIRE-APP</strong>
+          <span>Instructivo de Reporte de Resultados y Cargue de Datos por Participante</span>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="#proposito">1. Propósito</a>
+        <a href="#antes">2. Antes de iniciar</a>
+        <a href="#conceptos">3. Conceptos clave</a>
+        <a href="#ingreso">4. Ingreso</a>
+        <a href="#dashboard">5. Mi dashboard</a>
+        <a href="#estados">6. Estados</a>
+        <a href="#ficha">7. Hoja de registro</a>
+        <a href="#acceso-cargue">8. Acceder a cargar datos</a>
+        <a href="#pantalla-cargue">9. Pantalla de cargue</a>
+        <a href="#factor-k">10. Factor k</a>
+        <a href="#resultados">11. Resultados</a>
+        <a href="#reglas">12. Reglas</a>
+        <a href="#guardado">13. Guardado automático</a>
+        <a href="#revision">14. Revisión</a>
+        <a href="#envio-final">15. Envío final PT</a>
+        <a href="#problemas">16. Problemas frecuentes</a>
+        <a href="#soporte">17. Soporte</a>
+        <a href="#anexos">Anexos</a>
+      </nav>
+    </aside>
+
+    <main id="contenido" class="main">
+      <header class="hero">
+        <div class="hero-content">
+          <p class="eyebrow">I-PSEA-10 · v0.1 · 2026-05-21</p>
+          <h1>Instructivo de Reporte de Resultados y Cargue de Datos</h1>
+          <p>Instrucciones prácticas para registrar la ficha del laboratorio, cargar resultados por contaminante y enviar el informe final de la ronda en CALAIRE-APP Ensayos de Aptitud.</p>
+          <div class="toolbar" aria-label="Acciones del documento">
+            <button class="button" type="button" onclick="window.print()">Imprimir o guardar PDF</button>
+            <a class="button secondary" href="#checklist-final">Ir al checklist final</a>
+          </div>
+        </div>
+      </header>
+
+      <section class="meta-grid" aria-label="Datos del documento">
+        <div class="meta-item"><b>Código</b><span>I-PSEA-10</span></div>
+        <div class="meta-item"><b>Tipo</b><span>Instructivo (I)</span></div>
+        <div class="meta-item"><b>Normas</b><span>17043:2023, 13528:2022</span></div>
+        <div class="meta-item"><b>Dependencia</b><span>P-PSEA-20</span></div>
+        <div class="meta-item"><b>Formatos vinculados</b><span>F-PSEA-05A, F-PSEA-04</span></div>
+        <div class="meta-item"><b>Responsable</b><span>Calaire</span></div>
+        <div class="meta-item"><b>Audiencia</b><span>Laboratorios participantes</span></div>
+        <div class="meta-item"><b>Alcance</b><span>Registro y cargue de resultados</span></div>
+        <div class="meta-item"><b>Aplicación</b><span>CALAIRE-APP</span></div>
+      </section>
+
+      <section class="quick-grid" aria-label="Resumen operativo">
+        <article class="quick-card"><b>1. Ingrese</b><p>Use la cuenta autorizada o el enlace de invitación enviado por Calaire.</p></article>
+        <article class="quick-card"><b>2. Envíe la ficha</b><p>Diligencie la Hoja de Registro del Participante y confirme el envío.</p></article>
+        <article class="quick-card"><b>3. Cargue resultados</b><p>Complete los datos por contaminante, nivel, corrida y grupo cuando aplique.</p></article>
+        <article class="quick-card"><b>4. Envíe el informe</b><p>Revise completitud, observaciones y estados antes del envío final PT.</p></article>
+      </section>
+
+      <section id="proposito" class="content-section">
+        <span class="section-kicker">Objetivo</span>
+        <h2>1. Propósito</h2>
+        <p class="lead">Esta guía acompaña al participante desde el ingreso a la aplicación hasta el envío final de los resultados de la ronda.</p>
+        <p>Explica cómo navegar la aplicación, diligenciar la Hoja de Registro del Participante, cargar los resultados por contaminante, revisar el guardado automático y enviar el informe final PT.</p>
+        <div class="callout info">
+          <strong>Responsabilidad técnica.</strong> Esta guía no reemplaza los procedimientos técnicos internos del laboratorio participante. Cada participante conserva la responsabilidad de calcular sus resultados, incertidumbres y factores de cobertura de acuerdo con su propio sistema de gestión y sus procedimientos metrológicos.
+        </div>
+      </section>
+
+      <section id="antes" class="content-section">
+        <span class="section-kicker">Preparación</span>
+        <h2>2. Antes de iniciar</h2>
+        <p>Antes de ingresar a la aplicación, confirme que cuenta con estos elementos:</p>
+        <ul class="checklist">
+          <li>Acceso a la aplicación con la cuenta autorizada.</li>
+          <li>Ronda asignada por Calaire o invitación válida.</li>
+          <li>Datos crudos y registros trazables de medición.</li>
+          <li>Información del laboratorio, personal, analizadores, instrumentos auxiliares y logística.</li>
+          <li>Resultados calculados para cada combinación de contaminante y nivel.</li>
+          <li>Valores para <code>Dato 1</code>, <code>Dato 2</code>, <code>Dato 3</code>, <code>Promedio</code>, <code>Desv. Est.</code>, <code>u(x)</code>, <code>k</code> y <code>U(X)</code>, según aplique.</li>
+        </ul>
+      </section>
+
+      <section id="conceptos" class="content-section">
+        <span class="section-kicker">Glosario</span>
+        <h2>3. Conceptos clave</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Término</th><th>Significado</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Ronda</strong></td><td>Ejercicio de ensayo de aptitud organizado por Calaire, definido por contaminantes, niveles, corridas y participantes.</td></tr>
+              <tr><td><strong>Combinación</strong></td><td>Instancia única de contaminante, nivel, corrida y grupo, si aplica, para la que se reportan resultados.</td></tr>
+              <tr><td><strong>Corrida</strong></td><td>Identificador de una secuencia o condición de medición configurada para la ronda.</td></tr>
+              <tr><td><strong>Grupo</strong></td><td>Grupo de muestra. Solo aparece cuando la ronda tiene más de un grupo.</td></tr>
+              <tr><td><strong>Nivel</strong></td><td>Concentración o magnitud esperada del contaminante en una combinación dada.</td></tr>
+              <tr><td><strong>Dato/promedio</strong></td><td>Valor resumido reportado en <code>Dato 1</code>, <code>Dato 2</code> o <code>Dato 3</code>. Se obtiene a partir de datos minutales, exigiendo al menos 75 % de datos válidos en una hora.</td></tr>
+              <tr><td><strong>Promedio (<code>xi</code>)</strong></td><td>Valor medio reportado por el participante para la combinación.</td></tr>
+              <tr><td><strong>Desv. Est. (<code>s</code>)</strong></td><td>Dispersión de los datos reportados por el laboratorio.</td></tr>
+              <tr><td><strong>u(x)</strong></td><td>Incertidumbre estándar del valor medio reportado.</td></tr>
+              <tr><td><strong>k</strong></td><td>Factor que relaciona la incertidumbre estándar con la expandida: <code>k = U(X) / u(x)</code>.</td></tr>
+              <tr><td><strong>U(X)</strong></td><td>Incertidumbre expandida del valor medio. Es un campo manual; la aplicación no la calcula automáticamente.</td></tr>
+              <tr><td><strong>OK</strong></td><td>Indicador visual de completitud de la fila. No es un dato técnico ni un campo editable.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="ingreso" class="content-section">
+        <span class="section-kicker">Primer acceso</span>
+        <h2>4. Ingreso a la aplicación</h2>
+        <div class="flow">
+          <div class="flow-step"><span>1</span><strong>Abra el enlace</strong><p>Use el enlace de la aplicación entregado por Calaire.</p></div>
+          <div class="flow-step"><span>2</span><strong>Inicie sesión</strong><p>Ingrese con la cuenta autorizada para participar en la ronda.</p></div>
+          <div class="flow-step"><span>3</span><strong>Acepte invitación</strong><p>Si recibió enlace de invitación, ábralo con la misma cuenta de trabajo.</p></div>
+          <div class="flow-step"><span>4</span><strong>Verifique</strong><p>Confirme que la aplicación muestre <strong>Mi dashboard</strong>.</p></div>
+        </div>
+        <div class="placeholder">Espacio sugerido para captura: pantalla de inicio de sesión o acceso a Mi dashboard.</div>
+        <p>Si no aparecen rondas asignadas, revise que haya ingresado con la cuenta correcta. Si el problema continúa, contacte al coordinador de Calaire.</p>
+      </section>
+
+      <section id="dashboard" class="content-section">
+        <span class="section-kicker">Pantalla principal</span>
+        <h2>5. Mi dashboard</h2>
+        <p>Al ingresar, verá el encabezado <strong>CALAIRE-APP Ensayos de Aptitud</strong>, el subtítulo <strong>Gases Contaminantes Criterio</strong>, el correo del usuario y el perfil <strong>Participante</strong>.</p>
+        <div class="placeholder">Espacio sugerido para captura: Mi dashboard con indicadores y rondas asignadas.</div>
+        <h3>Indicadores resumidos</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Indicador</th><th>Descripción</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Rondas activas</strong></td><td>Número de rondas en estado <code>activa</code>, disponibles para gestión.</td></tr>
+              <tr><td><strong>Fichas pendientes</strong></td><td>Rondas cuya ficha aún no ha sido enviada.</td></tr>
+              <tr><td><strong>Resultados pendientes</strong></td><td>Rondas activas con ficha enviada cuyos resultados PT aún no han sido enviados.</td></tr>
+              <tr><td><strong>En borrador</strong></td><td>Rondas en estado <code>borrador</code>, aún no activadas.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>Mis rondas asignadas</h3>
+        <p>La sección lista las rondas habilitadas para diligenciar ficha y cargar resultados. Cada tarjeta muestra nombre, código, estado de la ronda, estado de la ficha, contaminantes y botones de acción.</p>
+        <div class="callout">Si no hay rondas asignadas, la pantalla muestra: <strong>No tiene rondas asignadas todavía. Contacte al coordinador para que lo agregue.</strong></div>
+      </section>
+
+      <section id="estados" class="content-section">
+        <span class="section-kicker">Control de avance</span>
+        <h2>6. Estados de la ronda y de la ficha</h2>
+        <h3>Estados de la ronda</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Estado</th><th>Qué significa</th><th>Qué debe hacer</th></tr></thead>
+            <tbody>
+              <tr><td><span class="badge">borrador</span></td><td>La ronda aún no permite el cargue de resultados.</td><td>Prepare información y diligencie la ficha si está disponible. Espere activación para cargar resultados.</td></tr>
+              <tr><td><span class="badge ok">activa</span></td><td>La ronda permite cargar datos si la ficha ya fue enviada.</td><td>Diligencie y envíe la ficha; luego cargue resultados y envíe el informe final PT.</td></tr>
+              <tr><td><span class="badge">cerrada</span></td><td>La ronda ya no admite nuevos envíos. Los datos quedan en solo lectura.</td><td>Revise la información disponible o contacte a Calaire si requiere aclaración.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>Estados de la ficha</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Estado</th><th>Qué significa</th><th>Acción esperada</th></tr></thead>
+            <tbody>
+              <tr><td><span class="badge pending">Ficha no iniciada</span></td><td>Todavía no ha empezado la hoja de registro.</td><td>Ingrese por <strong>Diligenciar ficha →</strong>.</td></tr>
+              <tr><td><span class="badge pending">Ficha en borrador</span></td><td>La ficha tiene información parcial guardada.</td><td>Ingrese por <strong>Continuar ficha →</strong>, revise y envíe.</td></tr>
+              <tr><td><span class="badge ok">Ficha enviada ✓</span></td><td>La ficha fue enviada y queda bloqueada para edición.</td><td>Continúe con <strong>Cargar datos</strong> si la ronda está activa, o consulte con <strong>Ver ficha →</strong>.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="ficha" class="content-section">
+        <span class="section-kicker">Registro del laboratorio</span>
+        <h2>7. Diligenciar la Hoja de Registro del Participante</h2>
+        <p>La ficha se abre desde la tarjeta de la ronda. La pantalla muestra el código documental <strong>F-PSEA-05A v0.1</strong> y el título <strong>Hoja de Registro del Participante</strong>.</p>
+        <div class="placeholder">Espacio sugerido para captura: Hoja de Registro del Participante antes de enviar.</div>
+        <h3>Secciones de la ficha</h3>
+        <ol>
+          <li><strong>Datos del participante:</strong> laboratorio, responsable, cargo, ciudad, departamento y teléfono.</li>
+          <li><strong>Personal acompañante:</strong> nombre completo, documento de identidad y rol. Use <strong>+ Agregar acompañante</strong> y <strong>Quitar</strong>.</li>
+          <li><strong>Analizadores declarados:</strong> analito, fabricante, modelo, serie, método EPA, última calibración, verificación, incertidumbre y unidad de salida.</li>
+          <li><strong>Instrumentos auxiliares:</strong> equipo, marca/modelo, número de serie y cantidad.</li>
+          <li><strong>Logística:</strong> transporte, llegada de equipos, estacionamiento, observaciones y justificación de cambio de equipo.</li>
+          <li><strong>Declaraciones:</strong> cinco casillas obligatorias y nombre del responsable autorizado.</li>
+        </ol>
+        <h3>Guardado de campos</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Indicador</th><th>Significado</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Guardando…</strong></td><td>La información se está enviando.</td></tr>
+              <tr><td><strong>✓ Guardado</strong></td><td>El campo se guardó correctamente.</td></tr>
+              <tr><td><strong>Error al guardar</strong></td><td>Hubo un problema. Revise el campo e intente nuevamente.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="callout">Las listas dinámicas se guardan al presionar <strong>Guardar datos temporalmente</strong>. Si navega fuera de la ficha antes de hacerlo, esos cambios podrían perderse.</div>
+        <h3>Envío de la ficha</h3>
+        <ol>
+          <li>Verifique que no aparezca <strong>Complete los siguientes campos obligatorios:</strong>.</li>
+          <li>Presione <strong>Enviar ficha →</strong>.</li>
+          <li>Lea la advertencia <strong>El envío bloqueará el formulario de forma permanente.</strong></li>
+          <li>Confirme el envío.</li>
+        </ol>
+        <div class="callout warning"><strong>Acción irreversible.</strong> Una vez enviada la ficha, los datos de registro quedan bloqueados. Podrá consultarlos mediante <strong>Ver ficha →</strong>, pero no editarlos.</div>
+      </section>
+
+      <section id="acceso-cargue" class="content-section">
+        <span class="section-kicker">Habilitación</span>
+        <h2>8. Acceder a cargar datos</h2>
+        <p>El botón <strong>Cargar datos</strong> se habilita cuando se cumplen estas condiciones: ronda en estado <code>activa</code>, ficha en estado <code>enviada</code> y asignación válida para la ronda.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Mensaje</th><th>Causa</th><th>Acción recomendada</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Complete la ficha para habilitar el ingreso de resultados.</strong></td><td>La ficha no ha sido enviada.</td><td>Completar y enviar la ficha.</td></tr>
+              <tr><td><strong>Diligencie la ficha ahora. La carga de datos se habilita cuando el coordinador active la ronda.</strong></td><td>La ronda está en estado <code>borrador</code>.</td><td>Diligenciar la ficha y esperar activación.</td></tr>
+              <tr><td><strong>La carga de datos no está disponible para esta ronda.</strong></td><td>Ficha enviada, pero ronda no activa o configuración PT incompleta.</td><td>Esperar activación o contactar a Calaire.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Si intenta acceder directamente sin ficha enviada, la aplicación lo redirigirá automáticamente a la Hoja de Registro.</p>
+      </section>
+
+      <section id="pantalla-cargue" class="content-section">
+        <span class="section-kicker">Resultados PT</span>
+        <h2>9. Pantalla de cargue de datos</h2>
+        <div class="placeholder">Espacio sugerido para captura: pantalla de cargue PT con encabezado y barra de progreso.</div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Elemento</th><th>Descripción</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Nombre de la ronda</strong></td><td>Nombre configurado por Calaire.</td></tr>
+              <tr><td><strong>Mi dashboard</strong></td><td>Botón para regresar a la pantalla principal.</td></tr>
+              <tr><td><strong>Estado de la ronda</strong></td><td>Estado actual, como <code>activa</code> o <code>cerrada</code>.</td></tr>
+              <tr><td><strong>Código de la ronda</strong></td><td>Código identificador de la ronda.</td></tr>
+              <tr><td><strong>Código PT</strong></td><td>Identificador PT asignado por Calaire al participante.</td></tr>
+              <tr><td><strong>Réplica</strong></td><td>Número de réplica asignado.</td></tr>
+              <tr><td><strong>Completitud</strong></td><td>Combinaciones completas del total esperado.</td></tr>
+              <tr><td><strong>Observaciones</strong></td><td>Cantidad de errores o validaciones pendientes.</td></tr>
+              <tr><td><strong>Progreso PT</strong></td><td>Barra de progreso porcentual del cargue.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>Mensajes de estado</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Mensaje</th><th>Significado</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Esta ronda está cerrada. Los datos son de solo lectura.</strong></td><td>No se admiten modificaciones.</td></tr>
+              <tr><td><strong>La configuración PT no está completa.</strong></td><td>Calaire no ha terminado de configurar los parámetros PT.</td></tr>
+              <tr><td><strong>No tienes asignado <code>participant_id</code> o <code>replicate</code>.</strong></td><td>El participante no tiene código PT o réplica asignados.</td></tr>
+              <tr><td><strong>Tu informe final PT fue enviado correctamente. Fecha de envío: {fecha}.</strong></td><td>El informe ya fue enviado. Los datos quedan en solo lectura.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="factor-k" class="content-section">
+        <span class="section-kicker">Incertidumbre</span>
+        <h2>10. Configurar el factor de cobertura k</h2>
+        <p>Antes de cargar resultados por contaminante, defina cómo reportará el factor de cobertura <strong>k</strong>.</p>
+        <div class="placeholder">Espacio sugerido para captura: sección de factor de cobertura k con opciones individual y grupal.</div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Modalidad</th><th>Cuándo usarla</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Factor individual</strong></td><td>Cuando necesita ingresar un valor de <code>k</code> diferente para cada combinación, directamente en la tabla.</td></tr>
+              <tr><td><strong>Factor grupal</strong></td><td>Cuando aplica un mismo valor de <code>k</code> a todas las combinaciones. Ingrese el valor y presione <strong>Aplicar a todas las combinaciones</strong>.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="callout"><strong>Importante.</strong> Use el factor definido por su procedimiento interno. <code>U(X)</code> no se calcula automáticamente; debe ingresarse manualmente y ser coherente con <code>u(x)</code> y <code>k</code>.</div>
+      </section>
+
+      <section id="resultados" class="content-section">
+        <span class="section-kicker">Diligenciamiento</span>
+        <h2>11. Cargar resultados por contaminante</h2>
+        <p>La aplicación organiza el cargue por contaminante. Cada bloque muestra el nombre del contaminante, número de combinaciones y estado: <span class="badge ok">✓ Completo</span> o <span class="badge pending">Pendiente</span>.</p>
+        <div class="placeholder">Espacio sugerido para captura: tabla de resultados por contaminante.</div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Columna</th><th>¿Editable?</th><th>Qué debe ingresar o revisar</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Corrida</strong></td><td>No</td><td>Identificador configurado por Calaire.</td></tr>
+              <tr><td><strong>Grupo</strong></td><td>No</td><td>Solo aparece cuando hay más de un grupo de muestra.</td></tr>
+              <tr><td><strong>Dato 1</strong></td><td>Sí</td><td>Primer dato o promedio resumido.</td></tr>
+              <tr><td><strong>Dato 2</strong></td><td>Sí / Deshabilitado</td><td>Segundo dato o promedio resumido. Deshabilitado cuando la combinación requiere menos réplicas.</td></tr>
+              <tr><td><strong>Dato 3</strong></td><td>Sí / Deshabilitado</td><td>Tercer dato o promedio resumido. Deshabilitado cuando la combinación requiere menos réplicas.</td></tr>
+              <tr><td><strong>Promedio</strong></td><td>Sí</td><td>Valor medio reportado para la combinación (<code>xi</code>).</td></tr>
+              <tr><td><strong>Desv. Est.</strong></td><td>Sí</td><td>Desviación estándar de los datos reportados. Debe ser ≥ 0.</td></tr>
+              <tr><td><strong>u(x)</strong></td><td>Sí</td><td>Incertidumbre estándar del valor medio. Debe ser ≥ 0.</td></tr>
+              <tr><td><strong>k</strong></td><td>Sí / Deshabilitado</td><td>Deshabilitado si se usa factor grupal. Debe ser ≥ 0.</td></tr>
+              <tr><td><strong>U(X)</strong></td><td>Sí</td><td>Ingrese manualmente. No se calcula automáticamente. Debe ser ≥ 0.</td></tr>
+              <tr><td><strong>OK</strong></td><td>No</td><td>Indicador visual de completitud. No es editable.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="callout"><strong>Niveles distintos de cero:</strong> ingrese tres datos/promedios. <strong>Nivel cero:</strong> ingrese solo <code>Dato 1</code>; <code>Dato 2</code> y <code>Dato 3</code> aparecerán deshabilitados.</div>
+      </section>
+
+      <section id="reglas" class="content-section">
+        <span class="section-kicker">Validaciones</span>
+        <h2>12. Reglas de diligenciamiento</h2>
+        <ul>
+          <li>Ingrese únicamente valores numéricos en los campos de resultados.</li>
+          <li>No deje vacíos los campos requeridos.</li>
+          <li><code>Desv. Est.</code>, <code>u(x)</code>, <code>k</code> y <code>U(X)</code> deben ser ≥ 0.</li>
+          <li>Verifique que cada valor corresponda al contaminante, corrida, grupo y nivel mostrados.</li>
+          <li><code>Promedio</code>, <code>Desv. Est.</code>, <code>k</code> y <code>U(X)</code> deben ingresarse manualmente.</li>
+          <li>El participante es responsable de la coherencia entre todos los valores ingresados.</li>
+        </ul>
+        <div class="callout info">La aplicación puede mostrar mensajes como <strong>Dato 1 debe ser un número válido.</strong>, <strong>La desviación estándar debe ser ≥ 0.</strong> o <strong>La incertidumbre expandida U(X) debe ser ≥ 0.</strong></div>
+      </section>
+
+      <section id="guardado" class="content-section">
+        <span class="section-kicker">Autoguardado</span>
+        <h2>13. Guardado automático y estados de celda</h2>
+        <p>La aplicación guarda automáticamente los datos cuando una combinación está completa y sin errores, con un retardo breve de aproximadamente 1.2 segundos después de cada edición.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Indicador</th><th>Significado</th></tr></thead>
+            <tbody>
+              <tr><td><span class="badge">guardando…</span></td><td>La información se está enviando al servidor. Espere sin cerrar la ventana.</td></tr>
+              <tr><td><span class="badge ok">✓</span></td><td>La combinación se guardó correctamente o está completa.</td></tr>
+              <tr><td><span class="badge pending">•</span></td><td>Hay un cambio pendiente de guardado. Complete los campos faltantes.</td></tr>
+              <tr><td><span class="badge error">✗</span></td><td>Hay un error que debe corregirse. Pase el cursor sobre la marca para ver el detalle.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="revision" class="content-section">
+        <span class="section-kicker">Control final</span>
+        <h2>14. Revisión antes del envío final PT</h2>
+        <ul class="checklist">
+          <li>Todas las combinaciones de cada contaminante aparecen como <strong>✓ Completo</strong>.</li>
+          <li>La completitud total coincide con el total esperado.</li>
+          <li>La barra <strong>Progreso PT</strong> está al 100 %.</li>
+          <li><strong>Observaciones</strong> es 0.</li>
+          <li>No hay celdas con indicador de error.</li>
+          <li>No hay celdas en estado <strong>guardando…</strong>.</li>
+          <li>Los valores corresponden al contaminante, corrida, grupo y nivel correctos.</li>
+          <li><code>u(x)</code>, <code>k</code> y <code>U(X)</code> fueron revisados y son coherentes.</li>
+        </ul>
+      </section>
+
+      <section id="envio-final" class="content-section">
+        <span class="section-kicker">Cierre de reporte</span>
+        <h2>15. Enviar el informe final PT</h2>
+        <p>El botón <strong>Enviar informe final PT</strong> se habilita cuando todas las combinaciones están completas, guardadas y sin errores. En ese momento la pantalla muestra: <strong>Todas las combinaciones PT están completas y guardadas. Puedes enviar el informe final.</strong></p>
+        <div class="placeholder">Espacio sugerido para captura: botón Enviar informe final PT habilitado con diálogo de confirmación.</div>
+        <p>Presione el botón y confirme la acción. La aplicación registrará la fecha de envío y los datos quedarán en solo lectura. Se mostrará el aviso: <strong>Tu informe final PT fue enviado correctamente. Fecha de envío: {fecha}.</strong></p>
+        <div class="callout warning"><strong>Acción irreversible.</strong> Una vez enviado el informe final PT, los datos no pueden ser modificados por el participante. Si detecta un error después del envío, contacte a Calaire.</div>
+      </section>
+
+      <section id="problemas" class="content-section">
+        <span class="section-kicker">Ayuda rápida</span>
+        <h2>16. Problemas frecuentes</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Situación</th><th>Causa probable</th><th>Acción recomendada</th></tr></thead>
+            <tbody>
+              <tr><td>No aparecen rondas asignadas.</td><td>Invitación no aceptada, cuenta incorrecta o sin asignación vigente.</td><td>Verificar cuenta y contactar al coordinador.</td></tr>
+              <tr><td><strong>Cargar datos</strong> está deshabilitado.</td><td>Ficha no enviada, ronda no activa o configuración PT incompleta.</td><td>Enviar ficha o esperar activación. Si persiste, contactar al coordinador.</td></tr>
+              <tr><td>La aplicación redirige a la ficha.</td><td>La ficha aún no está enviada.</td><td>Completar y enviar la Hoja de Registro.</td></tr>
+              <tr><td>La ronda aparece en borrador.</td><td>Aún no ha sido activada.</td><td>Esperar comunicación de Calaire.</td></tr>
+              <tr><td>La ronda aparece cerrada.</td><td>Ya no admite nuevos ingresos.</td><td>Contactar a Calaire si requiere aclaración.</td></tr>
+              <tr><td>Falta código PT o réplica.</td><td>Asignación incompleta por parte de Calaire.</td><td>Contactar al coordinador.</td></tr>
+              <tr><td><strong>Sin asignación</strong> o <strong>Acceso no autorizado</strong>.</td><td>El participante no tiene asignación o no fue invitado.</td><td>Verificar cuenta o contactar al coordinador.</td></tr>
+              <tr><td>Una celda muestra error.</td><td>Valor no numérico, negativo donde no se permite, o campo requerido vacío.</td><td>Corregir el campo indicado.</td></tr>
+              <tr><td><code>Dato 2</code> o <code>Dato 3</code> está deshabilitado.</td><td>La combinación requiere menos datos o réplicas.</td><td>Diligenciar solo los campos habilitados.</td></tr>
+              <tr><td><code>k</code> está bloqueado por fila.</td><td>Está activa la modalidad <strong>Factor grupal</strong>.</td><td>Revisar o ajustar el valor grupal.</td></tr>
+              <tr><td>El botón de envío final no se habilita.</td><td>Celdas incompletas, errores o guardados pendientes.</td><td>Revisar completitud, observaciones y estados de celda.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="soporte" class="content-section">
+        <span class="section-kicker">Contacto</span>
+        <h2>17. Soporte</h2>
+        <p>Si encuentra una inconsistencia en la asignación, no visualiza su ronda, no tiene código PT o réplica, o no puede completar el envío final después de corregir los errores visibles, contacte al coordinador de Calaire por los canales indicados en la invitación.</p>
+        <p>Incluya en su solicitud:</p>
+        <ul>
+          <li>Cuenta de usuario utilizada.</li>
+          <li>Nombre o código de la ronda.</li>
+          <li>Código PT, si aparece.</li>
+          <li>Captura del mensaje de error o pantalla donde se presenta el problema.</li>
+          <li>Descripción breve de la acción que intentaba realizar.</li>
+        </ul>
+      </section>
+
+      <section id="anexos" class="content-section">
+        <span class="section-kicker">Referencia</span>
+        <h2>Anexos</h2>
+        <h3>Anexo A: campos de la pantalla y responsabilidades</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Campo en pantalla</th><th>¿Lo diligencia el participante?</th><th>Descripción</th></tr></thead>
+            <tbody>
+              <tr><td>Contaminante</td><td>No</td><td>Configurado por Calaire.</td></tr>
+              <tr><td>Corrida</td><td>No</td><td>Configurado por Calaire.</td></tr>
+              <tr><td>Grupo</td><td>No</td><td>Configurado por Calaire. Solo visible cuando hay más de un grupo.</td></tr>
+              <tr><td>Estado</td><td>No</td><td>Indicador automático de la aplicación.</td></tr>
+              <tr><td>Dato 1</td><td><strong>Sí</strong></td><td>Primer dato/promedio resumido.</td></tr>
+              <tr><td>Dato 2</td><td><strong>Sí</strong></td><td>Segundo dato/promedio resumido, cuando aplica.</td></tr>
+              <tr><td>Dato 3</td><td><strong>Sí</strong></td><td>Tercer dato/promedio resumido, cuando aplica.</td></tr>
+              <tr><td>Promedio</td><td><strong>Sí</strong></td><td>Valor medio reportado (<code>xi</code>).</td></tr>
+              <tr><td>Desv. Est.</td><td><strong>Sí</strong></td><td>Desviación estándar de los datos reportados.</td></tr>
+              <tr><td>u(x)</td><td><strong>Sí</strong></td><td>Incertidumbre estándar del valor medio.</td></tr>
+              <tr><td>k</td><td><strong>Sí</strong></td><td>Factor de cobertura individual o grupal.</td></tr>
+              <tr><td>U(X)</td><td><strong>Sí</strong></td><td>Incertidumbre expandida del valor medio. Campo manual.</td></tr>
+              <tr><td>OK</td><td>No</td><td>Indicador automático de completitud. No es un campo de entrada.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Anexo B: guía resumida de cálculo de resultados</h3>
+        <div class="callout info">Esta sección resume expectativas sobre los valores que el participante debe calcular antes de ingresar a la aplicación. No prescribe una metodología única.</div>
+        <p><strong>Datos/promedios:</strong> para niveles distintos de cero se requieren tres datos/promedios; para nivel cero, uno solo. Cada dato/promedio exige al menos 75 % de datos válidos en una hora.</p>
+        <p><strong>Valor medio:</strong> para niveles distintos de cero, es el promedio de los tres datos/promedios válidos. Para nivel cero, corresponde al único dato/promedio reportado en <code>Dato 1</code>.</p>
+        <p><strong>Desviación estándar:</strong> refleja la dispersión de los datos/promedios reportados por el participante.</p>
+        <p><strong>Incertidumbre estándar u(x):</strong> se estima siguiendo el procedimiento interno del laboratorio. Para nivel cero, el componente de repetibilidad debe estimarse a partir de datos minutales o del procedimiento interno.</p>
+        <p><strong>Factor de cobertura k:</strong> se define según el procedimiento de estimación de incertidumbre.</p>
+        <p><strong>Incertidumbre expandida U(X):</strong> se calcula como <code>U(X) = k × u(x)</code>. La aplicación no la calcula automáticamente; el participante debe ingresarla manualmente.</p>
+
+        <h3 id="checklist-final">Anexo C: checklist final del participante</h3>
+        <ul class="checklist">
+          <li>Ingresó con la cuenta correcta.</li>
+          <li>La ronda aparece en <strong>Mi dashboard</strong> y está en estado <code>activa</code>.</li>
+          <li>La Hoja de Registro fue diligenciada y enviada.</li>
+          <li>El botón <strong>Cargar datos</strong> estuvo habilitado.</li>
+          <li>El código PT y la réplica son visibles en el encabezado de cargue.</li>
+          <li>Todos los contaminantes fueron revisados y sus combinaciones están completas.</li>
+          <li><code>Dato 1</code>, <code>Dato 2</code> y <code>Dato 3</code> fueron diligenciados donde estaban habilitados.</li>
+          <li><code>Promedio</code> y <code>Desv. Est.</code> fueron ingresados para cada combinación.</li>
+          <li><code>u(x)</code> fue ingresada para cada combinación.</li>
+          <li><code>k</code> fue definido y revisado.</li>
+          <li><code>U(X)</code> fue ingresada manualmente y es coherente con <code>u(x)</code> y <code>k</code>.</li>
+          <li>La completitud es 100 % y las observaciones son 0.</li>
+          <li>No hay celdas con error ni guardados pendientes.</li>
+          <li>El informe final PT fue enviado exitosamente.</li>
+          <li>Los datos crudos y cálculos internos están conservados y trazables.</li>
+        </ul>
+
+        <p class="footer-note">Documento derivado de P-PSEA-20 (Procedimiento de Comunicación PT). Aplica los formatos F-PSEA-05A (Hoja de Registro del Participante) y F-PSEA-04 (Formato Informe Resultados). Uso exclusivo del participante.</p>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

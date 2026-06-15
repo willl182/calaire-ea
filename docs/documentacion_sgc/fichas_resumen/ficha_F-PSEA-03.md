@@ -5,11 +5,11 @@
 | Campo | Valor |
 |---|---|
 | **Codigo** | `F-PSEA-03` |
-| **Nombre decidido** | No aplicable |
-| **Tipo documental** | Formato |
-| **Estado** | Retirar |
-| **Prioridad** | No priorizar |
-| **Clase de ficha** | Registro de no activo |
+| **Nombre decidido** | Registro de participacion |
+| **Tipo documental** | Registro |
+| **Estado** | Mantener / Actualizar |
+| **Prioridad** | Media |
+| **Clase de ficha** | Ficha activa |
 
 ---
 
@@ -17,20 +17,18 @@
 
 ### Proposito operativo
 
-Codigo retirado del sistema documental del PEA. El antiguo formato `F-PSEA-03` fue sustituido por `F-PSEA-06` (Plan de ronda EA) y ya no tiene aplicacion operativa. No se desarrolla ni se mantiene como formato activo.
+Registro principal de participacion de laboratorios en una ronda de ensayo de aptitud. Documenta la inscripcion, confirmacion, datos de contacto, estado de participacion y resultado final de cada laboratorio. Se genera desde `calaire-app`.
 
 ### Rol en el flujo
 
-- [ ] Registro oficial
+- [x] Registro oficial
+- [x] Evidencia
 - [ ] Entrada
 - [ ] Salida
-- [ ] Evidencia
 - [ ] Criterio tecnico
 - [ ] Instructivo
 - [ ] Matriz
-- [x] Soporte documental
-
-Retirado; no tiene rol operativo.
+- [ ] Soporte documental
 
 ---
 
@@ -38,12 +36,12 @@ Retirado; no tiene rol operativo.
 
 #### Aplicativo asociado
 
-- [ ] `calaire-app`
+- [x] `calaire-app`
 - [ ] `pt_app`
 - [ ] Ambos
-- [x] Ninguno
+- [ ] Ninguno
 
-Retirado; no hay aplicativo asociado.
+Registro generado y mantenido en `calaire-app`.
 
 ---
 
@@ -53,13 +51,16 @@ Retirado; no hay aplicativo asociado.
 
 | Codigo / fuente | Descripcion | Rol en el flujo |
 |---|---|---|
-| N/A | No aplica | N/A |
+| `calaire-app` | Inscripcion y confirmacion de laboratorios | Origen |
+| `P-PSEA-04` | Planificacion de ronda | Referencia |
 
 #### Salidas principales
 
 | Codigo / destino | Descripcion | Rol en el flujo |
 |---|---|---|
-| N/A | No aplica | N/A |
+| `F-PSEA-05` | Plan de ronda EA | Referencia |
+| `F-PSEA-09` | Datos exportados para analisis | Referencia |
+| `P-PSEA-05` | Comunicaciones a participantes | Referencia |
 
 ---
 
@@ -69,7 +70,11 @@ Retirado; no hay aplicativo asociado.
 
 | Codigo | Relacion | Tipo de vinculo |
 |---|---|---|
-| `F-PSEA-06` | Plan de ronda EA (documento sustituto) | Obligatorio |
+| `P-PSEA-04` | Planificacion que define participantes | Obligatorio |
+| `F-PSEA-04` | Anexo tecnico de equipos por participante | Obligatorio |
+| `F-PSEA-09` | Datos exportados derivados de la participacion | Obligatorio |
+| `DG-PSEA-02` | Aplicativo que gestiona la participacion | Obligatorio |
+| `I-PSEA-02` | Instructivo para participante | Referencia |
 
 ---
 
@@ -77,18 +82,19 @@ Retirado; no hay aplicativo asociado.
 
 #### Limites de alcance
 
-- No se desarrolla ni se mantiene como formato activo.
-- Fue sustituido por `F-PSEA-06`.
-- No es un formato reservado; esta retirado.
+- No es el anexo tecnico de equipos (eso es `F-PSEA-04`).
+- No contiene datos reportados (eso es `F-PSEA-08`).
+- No es el informe final (eso es `F-PSEA-13`).
+- No es un instructivo de uso.
 
 #### Riesgos de interpretacion
 
-- **Confundir con activo:** `F-PSEA-03` no es un formato vigente; esta retirado.
-- **Desarrollar contenido:** No debe crearse contenido para este codigo.
-- **Omitir documento sustituto:** Debe indicarse claramente que `F-PSEA-06` es el documento sustituto.
+- **Confundir con F-PSEA-04:** `F-PSEA-03` es el registro de participacion; `F-PSEA-04` es el anexo tecnico de equipos.
+- **Omitir trazabilidad:** Debe vincularse con los datos exportados (`F-PSEA-09`) y el plan de ronda (`F-PSEA-05`).
+- **Incluir resultados de aptitud:** Los resultados de aptitud se reportan en el informe (`F-PSEA-13`), no en el registro de participacion.
 
 ---
 
 ## Criterio minimo de elaboracion
 
-El registro de no activo documenta la decision de retirar `F-PSEA-03`, indicando `F-PSEA-06` como documento sustituto, sin desarrollar contenido ni confundirse con ficha activa.
+El registro de participacion contiene inscripcion, confirmacion, datos de contacto, estado y resultado final de cada laboratorio, generado desde `calaire-app`, vinculado con `F-PSEA-04` y `F-PSEA-09`.

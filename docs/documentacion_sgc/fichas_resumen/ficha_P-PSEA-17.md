@@ -5,11 +5,11 @@
 | Campo | Valor |
 |---|---|
 | **Codigo** | `P-PSEA-17` |
-| **Nombre decidido** | Auditorias internas/externas |
+| **Nombre decidido** | Quejas del PEA |
 | **Tipo documental** | Procedimiento |
-| **Estado** | Retirar |
-| **Prioridad** | No priorizar |
-| **Clase de ficha** | Registro de no activo |
+| **Estado** | Mantener / Actualizar |
+| **Prioridad** | Media-alta |
+| **Clase de ficha** | Ficha activa |
 
 ---
 
@@ -17,21 +17,19 @@
 
 ### Proposito operativo
 
-Codigo retirado del alcance documental propio del PEA. Las auditorias internas y externas pertenecen al sistema de gestion macro de la institucion, no al sistema documental especifico del PEA. No se desarrolla ni se mantiene como procedimiento activo del PEA.
+Gobierna la recepcion, registro, evaluacion, respuesta y seguimiento de quejas de participantes u otras partes interesadas en el PEA. Las quejas se gestionan como casos SGC en `calaire-app` y pueden derivar en trabajo no conforme o acciones correctivas si afectan la conformidad del ensayo.
 
 ### Rol en el flujo
 
-- [ ] Criterio tecnico
-- [ ] Procedimiento
+- [x] Criterio tecnico
+- [x] Procedimiento
 - [ ] Entrada
 - [ ] Salida
 - [ ] Registro oficial
 - [ ] Evidencia
 - [ ] Instructivo
 - [ ] Matriz
-- [x] Soporte documental
-
-Retirado; no tiene rol operativo en el PEA.
+- [ ] Soporte documental
 
 ---
 
@@ -39,12 +37,12 @@ Retirado; no tiene rol operativo en el PEA.
 
 #### Aplicativo asociado
 
-- [ ] `calaire-app`
+- [x] `calaire-app`
 - [ ] `pt_app`
 - [ ] Ambos
-- [x] Ninguno
+- [ ] Ninguno
 
-Retirado; no hay aplicativo asociado.
+Las quejas se gestionan como casos SGC en `calaire-app`.
 
 ---
 
@@ -54,13 +52,17 @@ Retirado; no hay aplicativo asociado.
 
 | Codigo / fuente | Descripcion | Rol en el flujo |
 |---|---|---|
-| N/A | No aplica | N/A |
+| Participantes | Quejas recibidas | Origen |
+| `calaire-app` | Interfaz de registro de casos SGC | Origen |
+| `P-PSEA-05` | Comunicaciones del PEA | Referencia |
 
 #### Salidas principales
 
 | Codigo / destino | Descripcion | Rol en el flujo |
 |---|---|---|
-| N/A | No aplica | N/A |
+| `P-PSEA-15` | TNC/NC/CAPA (si deriva) | Referencia |
+| `F-PSEA-14` | Registro/caso de queja | Referencia |
+| `P-PSEA-08` | Flujo de datos afectado | Referencia |
 
 ---
 
@@ -70,8 +72,11 @@ Retirado; no hay aplicativo asociado.
 
 | Codigo | Relacion | Tipo de vinculo |
 |---|---|---|
-| Sistema macro SGC | Pertenece al sistema de gestion macro | Referencia externa |
-| `P-PSEA-18` | Revision por la direccion (tambien retirado) | Referencia |
+| `P-PSEA-15` | Si la queja deriva en NC/CAPA | Obligatorio |
+| `P-PSEA-05` | Comunicaciones que registran la queja | Obligatorio |
+| `F-PSEA-14` | Registro de caso de queja | Obligatorio |
+| `P-PSEA-08` | Flujo de datos que puede afectarse | Referencia |
+| `DG-PSEA-02` | Aplicativo de gestion de casos | Obligatorio |
 
 ---
 
@@ -79,18 +84,20 @@ Retirado; no hay aplicativo asociado.
 
 #### Limites de alcance
 
-- No se desarrolla ni se mantiene en el PEA.
-- Pertenece al sistema de gestion macro.
-- No es un procedimiento activo ni reservado.
+- No es un procedimiento de apelaciones (eso es `P-PSEA-18`); las quejas son diferentes.
+- No es un procedimiento de colusion (eso es `P-PSEA-14`); conecta con el si la queja lo involucra.
+- No es un procedimiento de comunicaciones (eso es `P-PSEA-05`); conecta con el.
+- No es un procedimiento de TNC/NC/CAPA (eso es `P-PSEA-15`); conecta con el.
 
 #### Riesgos de interpretacion
 
-- **Confundir con activo:** `P-PSEA-17` no es un procedimiento vigente del PEA; esta retirado.
-- **Desarrollar contenido:** No debe crearse contenido para este codigo en el PEA.
-- **Omitir razon:** Debe indicarse claramente que pertenece al sistema macro.
+- **Confundir con apelaciones:** Las quejas (`P-PSEA-17`) se gestionan en `calaire-app`; las apelaciones (`P-PSEA-18`) van por correo formal.
+- **Omitir conexion con P-PSEA-15:** Debe indicar claramente cuando una queja deriva en NC/CAPA.
+- **Omitir registro en calaire-app:** Las quejas deben quedar como casos SGC en el aplicativo.
+- **Tratar como simple reclamo informal:** El procedimiento debe gobernar quejas formales con trazabilidad.
 
 ---
 
 ## Criterio minimo de elaboracion
 
-El registro de no activo documenta la decision de retirar `P-PSEA-17` del alcance PEA, indicando que pertenece al sistema de gestion macro, sin desarrollar contenido ni confundirse con ficha activa.
+El procedimiento define recepcion, registro como caso SGC en `calaire-app`, evaluacion, respuesta, seguimiento y conexion con `P-PSEA-15`, `P-PSEA-05` y `F-PSEA-14`, diferenciando claramente quejas de apelaciones.

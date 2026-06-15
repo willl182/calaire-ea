@@ -5,9 +5,9 @@
 | Campo | Valor |
 |---|---|
 | **Codigo** | `F-PSEA-16` |
-| **Nombre decidido** | Registro/caso de queja o NC segun aplique |
-| **Tipo documental** | Registro |
-| **Estado** | Revisar |
+| **Nombre decidido** | Matriz de competencia/autorizacion |
+| **Tipo documental** | Matriz |
+| **Estado** | Mantener / Actualizar |
 | **Prioridad** | Media |
 | **Clase de ficha** | Ficha preliminar |
 
@@ -17,17 +17,17 @@
 
 ### Proposito operativo
 
-Registro o caso de queja o no conformidad gestionado en `calaire-app` como caso SGC. Documenta la recepcion, evaluacion, respuesta y cierre de quejas que pueden derivar en trabajo no conforme. Su estructura requiere confirmacion y alineacion con `P-PSEA-16` y `P-PSEA-24`.
+Matriz que documenta la competencia, formacion, experiencia y autorizacion de los roles tecnicos y operativos del PEA. Asociada a `P-PSEA-20`, su estructura requiere confirmacion y debe alinearse con los requisitos de competencia definidos en ese procedimiento.
 
 ### Rol en el flujo
 
-- [x] Registro oficial
+- [x] Matriz
 - [x] Evidencia
 - [ ] Entrada
 - [ ] Salida
+- [ ] Registro oficial
 - [ ] Criterio tecnico
 - [ ] Instructivo
-- [ ] Matriz
 - [ ] Soporte documental
 
 ---
@@ -36,12 +36,12 @@ Registro o caso de queja o no conformidad gestionado en `calaire-app` como caso 
 
 #### Aplicativo asociado
 
-- [x] `calaire-app`
+- [ ] `calaire-app`
 - [ ] `pt_app`
 - [ ] Ambos
-- [ ] Ninguno
+- [x] Ninguno
 
-Se gestiona como caso SGC en `calaire-app`.
+No depende de aplicativo; es un documento de gestion.
 
 ---
 
@@ -51,16 +51,15 @@ Se gestiona como caso SGC en `calaire-app`.
 
 | Codigo / fuente | Descripcion | Rol en el flujo |
 |---|---|---|
-| `P-PSEA-24` | Quejas del PEA | Referencia |
-| `P-PSEA-16` | TNC/NC/CAPA (si deriva) | Referencia |
-| `calaire-app` | Interfaz de casos SGC | Origen |
+| `P-PSEA-20` | Competencia y autorizacion operativa | Referencia |
+| Gestion de talento humano | Datos de formacion y experiencia | Insumo |
 
 #### Salidas principales
 
 | Codigo / destino | Descripcion | Rol en el flujo |
 |---|---|---|
-| `P-PSEA-16` | Seguimiento de NC/CAPA | Referencia |
-| `P-PSEA-20` | Comunicaciones de respuesta | Referencia |
+| `P-PSEA-20` | Procedimiento que gobierna la matriz | Referencia |
+| `P-PSEA-19` | Confidencialidad (quien accede) | Referencia |
 
 ---
 
@@ -70,10 +69,9 @@ Se gestiona como caso SGC en `calaire-app`.
 
 | Codigo | Relacion | Tipo de vinculo |
 |---|---|---|
-| `P-PSEA-24` | Procedimiento de quejas | Obligatorio |
-| `P-PSEA-16` | Procedimiento de TNC/NC/CAPA | Obligatorio |
-| `P-PSEA-20` | Comunicaciones | Obligatorio |
-| `DG-PSEA-02` | Aplicativo de gestion de casos | Obligatorio |
+| `P-PSEA-20` | Procedimiento de competencia | Obligatorio |
+| `P-PSEA-19` | Confidencialidad operativa | Referencia |
+| `P-PSEA-21` | Proveedores criticos (competencia de terceros) | Referencia |
 
 ---
 
@@ -81,20 +79,20 @@ Se gestiona como caso SGC en `calaire-app`.
 
 #### Limites de alcance
 
-- No es el procedimiento de quejas (eso es `P-PSEA-24`); es el registro que resulta.
-- No es el procedimiento de TNC/NC/CAPA (eso es `P-PSEA-16`); es el caso documentado.
-- No es un registro de apelaciones (eso es `F-PSEA-17`); las apelaciones van por correo.
+- No es el procedimiento de competencia (eso es `P-PSEA-20`); es la matriz documental.
+- No cubre talento humano general; solo roles tecnicos y operativos del PEA.
 - Su estructura requiere confirmacion; es preliminar.
+- No es un registro de formacion institucional.
 
 #### Riesgos de interpretacion
 
-- **Confundir con P-PSEA-24:** `P-PSEA-24` es el procedimiento; `F-PSEA-16` es el registro/caso.
-- **Gestionar apelaciones aqui:** Las apelaciones (`P-PSEA-25`) no se gestionan en `calaire-app`; van por correo.
-- **Omitir conexion con P-PSEA-16:** El caso debe vincularse con el procedimiento de TNC/NC/CAPA.
+- **Confundir con P-PSEA-20:** `P-PSEA-20` es el procedimiento; `F-PSEA-16` es la matriz.
+- **Extenderse a talento humano general:** Debe mantenerse acotado a roles del PEA.
+- **Omitir autorizaciones:** Debe incluir quien autoriza la emision de informes.
 - **Cerrar estructura prematuramente:** Es preliminar; requiere confirmacion de estructura.
 
 ---
 
 ## Criterio minimo de elaboracion
 
-El registro de caso de queja/NC se gestiona en `calaire-app`, con estructura preliminar por confirmar, vinculado con `P-PSEA-24`, `P-PSEA-16` y `P-PSEA-20`, sin gestionar apelaciones ni cerrar estructura antes de validacion.
+La matriz de competencia/autorizacion documenta roles tecnicos/operativos del PEA, vinculada con `P-PSEA-20`, con estructura preliminar por confirmar, sin extenderse a talento humano general.

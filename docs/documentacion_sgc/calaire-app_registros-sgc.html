@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Guía visual interactiva de los 9 registros y formatos del Sistema de Gestión de Calidad (SGC) en calaire-app. Fases, modos de verificación, estados y arquitectura." />
+  <title>Registros del SGC — calaire-app</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-deep: #0b0e14;
+      --bg-surface: #111827;
+      --bg-card: #1a2233;
+      --bg-card-hover: #1f2a3f;
+      --bg-glass: rgba(17, 24, 39, 0.65);
+      --border-subtle: rgba(255, 255, 255, 0.06);
+      --border-accent: rgba(99, 102, 241, 0.35);
+      --text-primary: #f1f5f9;
+      --text-secondary: #94a3b8;
+      --text-muted: #64748b;
+      --accent: #6366f1;
+      --accent-light: #818cf8;
+      --accent-glow: rgba(99, 102, 241, 0.25);
+      --green: #10b981;
+      --green-bg: rgba(16, 185, 129, 0.12);
+      --red: #f43f5e;
+      --red-bg: rgba(244, 63, 94, 0.12);
+      --amber: #f59e0b;
+      --amber-bg: rgba(245, 158, 11, 0.12);
+      --slate: #94a3b8;
+      --slate-bg: rgba(148, 163, 184, 0.12);
+      --cyan: #22d3ee;
+      --cyan-bg: rgba(34, 211, 238, 0.10);
+      --violet: #a78bfa;
+      --violet-bg: rgba(167, 139, 250, 0.10);
+      --rose: #fb7185;
+      --rose-bg: rgba(251, 113, 133, 0.10);
+      --phase-planeacion: #6366f1;
+      --phase-convocatoria: #8b5cf6;
+      --phase-ejecucion: #06b6d4;
+      --phase-evaluacion: #f59e0b;
+      --phase-cierre: #10b981;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --radius-xl: 20px;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.3);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.4);
+      --shadow-lg: 0 8px 32px rgba(0,0,0,0.5);
+      --shadow-glow: 0 0 40px var(--accent-glow);
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+      --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    body { font-family: var(--font-sans); background: var(--bg-deep); color: var(--text-primary); line-height: 1.7; min-height: 100vh; }
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 20% 10%, rgba(99, 102, 241, 0.08) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 50% at 80% 80%, rgba(16, 185, 129, 0.06) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 40% at 50% 50%, rgba(139, 92, 246, 0.04) 0%, transparent 60%);
+      pointer-events: none; z-index: 0;
+    }
+    ::selection { background: var(--accent); color: #fff; }
+    a { color: var(--accent-light); text-decoration: none; transition: color var(--transition); }
+    a:hover { color: var(--cyan); }
+
+    .wrapper { position: relative; z-index: 1; max-width: 1200px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+
+    /* ═══ HERO ═══ */
+    .hero { text-align: center; padding: 4rem 0 3rem; animation: fadeInUp 0.8s ease-out; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.4rem 1rem; background: var(--accent-glow); border: 1px solid var(--border-accent);
+      border-radius: 999px; font-size: 0.75rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-light); margin-bottom: 1.5rem;
+    }
+    .hero-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); animation: pulse-dot 2s ease-in-out infinite; }
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.15;
+      background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-light) 60%, var(--cyan) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 1rem;
+    }
+    .hero p { color: var(--text-secondary); font-size: 1.1rem; max-width: 680px; margin: 0 auto; }
+
+    /* ═══ STATS ═══ */
+    .stats-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; margin: 2.5rem 0 3rem; animation: fadeInUp 0.8s 0.15s ease-out both; }
+    .stat-card { background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.25rem; text-align: center; transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition); }
+    .stat-card:hover { transform: translateY(-2px); border-color: var(--border-accent); box-shadow: var(--shadow-glow); }
+    .stat-value { font-size: 2rem; font-weight: 800; font-feature-settings: 'tnum'; line-height: 1.1; }
+    .stat-label { font-size: 0.75rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); margin-top: 0.25rem; }
+
+    /* ═══ TOC ═══ */
+    .toc { background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 1.75rem 2rem; margin-bottom: 3rem; animation: fadeInUp 0.8s 0.25s ease-out both; }
+    .toc-title { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 1rem; }
+    .toc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 0.5rem; }
+    .toc-link { display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 0.75rem; border-radius: var(--radius-sm); font-size: 0.9rem; font-weight: 500; color: var(--text-secondary); transition: all var(--transition); }
+    .toc-link:hover { background: rgba(99, 102, 241, 0.08); color: var(--accent-light); transform: translateX(4px); }
+    .toc-link .toc-num { font-size: 0.7rem; font-weight: 700; background: var(--accent-glow); color: var(--accent-light); border-radius: 4px; padding: 0.15rem 0.45rem; font-family: var(--font-mono); }
+
+    /* ═══ SECTIONS ═══ */
+    .section { margin-bottom: 3.5rem; animation: fadeInUp 0.6s ease-out both; }
+    .section-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border-subtle); }
+    .section-icon { width: 40px; height: 40px; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0; }
+    .section-header h2 { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.02em; }
+    .section-header h2 span { color: var(--text-muted); font-weight: 400; margin-left: 0.25rem; }
+    .section-desc { color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 0.92rem; }
+
+    /* ═══ PHASE CARDS ═══ */
+    .phases-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+    .phase-card { position: relative; background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.25rem; overflow: hidden; transition: all var(--transition); }
+    .phase-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+    .phase-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+    .phase-card[data-phase="planeacion"]::before { background: var(--phase-planeacion); }
+    .phase-card[data-phase="convocatoria"]::before { background: var(--phase-convocatoria); }
+    .phase-card[data-phase="ejecucion"]::before { background: var(--phase-ejecucion); }
+    .phase-card[data-phase="evaluacion"]::before { background: var(--phase-evaluacion); }
+    .phase-card[data-phase="cierre"]::before { background: var(--phase-cierre); }
+    .phase-number { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 0.35rem; }
+    .phase-name { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .phase-desc { font-size: 0.8rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 0.75rem; }
+    .phase-formats { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+    .phase-tag { font-family: var(--font-mono); font-size: 0.65rem; font-weight: 600; padding: 0.2rem 0.5rem; border-radius: 4px; background: var(--accent-glow); color: var(--accent-light); }
+
+    /* ═══ MODE LEGEND ═══ */
+    .mode-legend { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+    .mode-item { background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.25rem; transition: all var(--transition); }
+    .mode-item:hover { border-color: var(--border-accent); transform: translateY(-1px); }
+    .mode-badge { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.75rem; font-weight: 700; padding: 0.3rem 0.7rem; border-radius: 6px; margin-bottom: 0.75rem; }
+    .mode-badge.nativo { background: var(--green-bg); color: var(--green); }
+    .mode-badge.calculado { background: var(--cyan-bg); color: var(--cyan); }
+    .mode-badge.archivo { background: var(--violet-bg); color: var(--violet); }
+    .mode-badge.externo { background: var(--rose-bg); color: var(--rose); }
+    .mode-item h4 { font-size: 0.95rem; font-weight: 600; margin-bottom: 0.5rem; }
+    .mode-item p { font-size: 0.82rem; color: var(--text-secondary); line-height: 1.6; }
+    .mode-formats { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.75rem; }
+
+    /* ═══ FORMAT CARDS ═══ */
+    .format-cards { display: flex; flex-direction: column; gap: 1.25rem; }
+    .format-card { background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); overflow: hidden; transition: all var(--transition); }
+    .format-card:hover { border-color: var(--border-accent); box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+    .format-card-header { display: flex; align-items: center; gap: 1rem; padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--border-subtle); cursor: pointer; user-select: none; }
+    .format-card-header:hover { background: var(--bg-card-hover); }
+    .format-code { font-family: var(--font-mono); font-size: 0.8rem; font-weight: 600; padding: 0.3rem 0.65rem; border-radius: 6px; white-space: nowrap; flex-shrink: 0; }
+    .format-code.mode-nativo { background: var(--green-bg); color: var(--green); border: 1px solid rgba(16, 185, 129, 0.2); }
+    .format-code.mode-calculado { background: var(--cyan-bg); color: var(--cyan); border: 1px solid rgba(34, 211, 238, 0.2); }
+    .format-code.mode-archivo { background: var(--violet-bg); color: var(--violet); border: 1px solid rgba(167, 139, 250, 0.2); }
+    .format-code.mode-externo { background: var(--rose-bg); color: var(--rose); border: 1px solid rgba(251, 113, 133, 0.2); }
+    .format-title { flex: 1; font-size: 1rem; font-weight: 600; }
+    .format-phase-badge { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; padding: 0.25rem 0.6rem; border-radius: 999px; white-space: nowrap; }
+    .format-phase-badge[data-phase="planeacion"] { background: rgba(99,102,241,0.15); color: var(--phase-planeacion); }
+    .format-phase-badge[data-phase="convocatoria"] { background: rgba(139,92,246,0.15); color: var(--phase-convocatoria); }
+    .format-phase-badge[data-phase="ejecucion"] { background: rgba(6,182,212,0.15); color: var(--phase-ejecucion); }
+    .format-phase-badge[data-phase="evaluacion"] { background: rgba(245,158,11,0.15); color: var(--phase-evaluacion); }
+    .format-phase-badge[data-phase="cierre"] { background: rgba(16,185,129,0.15); color: var(--phase-cierre); }
+    .format-toggle { width: 28px; height: 28px; border-radius: 50%; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; font-size: 0.8rem; color: var(--text-muted); transition: transform var(--transition), background var(--transition); }
+    .format-card.open .format-toggle { transform: rotate(180deg); background: var(--accent-glow); color: var(--accent-light); }
+    .format-card-body { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+    .format-card.open .format-card-body { max-height: 700px; }
+    .format-content { padding: 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    @media (max-width: 700px) { .format-content { grid-template-columns: 1fr; } }
+    .format-section h4 { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 0.5rem; }
+    .format-section p { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.65; }
+    .format-section .code-block { font-family: var(--font-mono); font-size: 0.78rem; background: rgba(0,0,0,0.3); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 0.75rem 1rem; color: var(--accent-light); line-height: 1.8; overflow-x: auto; }
+    .format-meta { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 0.75rem; padding-top: 0.75rem; border-top: 1px solid var(--border-subtle); }
+    .meta-chip { display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.75rem; padding: 0.3rem 0.7rem; border-radius: 999px; background: rgba(255,255,255,0.04); border: 1px solid var(--border-subtle); color: var(--text-secondary); }
+    .meta-chip .dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+    .meta-chip .dot.green { background: var(--green); }
+    .meta-chip .dot.red { background: var(--red); }
+
+    /* ═══ STATUS ═══ */
+    .status-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+    .status-card { background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.25rem; display: flex; align-items: flex-start; gap: 0.75rem; transition: all var(--transition); }
+    .status-card:hover { transform: translateY(-1px); box-shadow: var(--shadow-sm); }
+    .status-dot { width: 18px; height: 18px; border-radius: 50%; flex-shrink: 0; margin-top: 2px; }
+    .status-dot.completo { background: var(--green); box-shadow: 0 0 12px rgba(16, 185, 129, 0.4); }
+    .status-dot.pendiente { background: var(--red); box-shadow: 0 0 12px rgba(244, 63, 94, 0.4); }
+    .status-dot.no-aplica { background: var(--slate); box-shadow: 0 0 12px rgba(148, 163, 184, 0.3); }
+    .status-dot.advertencia { background: var(--amber); box-shadow: 0 0 12px rgba(245, 158, 11, 0.4); }
+    .status-info h4 { font-size: 0.95rem; font-weight: 600; margin-bottom: 0.25rem; }
+    .status-info p { font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5; }
+    .status-info code { font-family: var(--font-mono); font-size: 0.72rem; background: rgba(0,0,0,0.3); padding: 0.15rem 0.4rem; border-radius: 4px; color: var(--accent-light); }
+
+    /* ═══ FORMULA ═══ */
+    .formula-box { background: var(--bg-card); border: 1px solid var(--border-accent); border-radius: var(--radius-md); padding: 1.5rem 2rem; text-align: center; margin: 1.5rem 0; box-shadow: var(--shadow-glow); }
+    .formula-box .formula { font-family: var(--font-mono); font-size: 1.1rem; font-weight: 600; color: var(--accent-light); letter-spacing: 0.02em; }
+    .formula-box .formula-desc { font-size: 0.82rem; color: var(--text-muted); margin-top: 0.5rem; }
+
+    /* ═══ TABLE ═══ */
+    .data-table-wrapper { overflow-x: auto; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); margin-bottom: 1.5rem; }
+    .data-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+    .data-table thead { background: rgba(99, 102, 241, 0.08); }
+    .data-table th { padding: 0.85rem 1rem; text-align: left; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); border-bottom: 1px solid var(--border-subtle); white-space: nowrap; }
+    .data-table td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border-subtle); color: var(--text-secondary); }
+    .data-table tbody tr { transition: background var(--transition); }
+    .data-table tbody tr:hover { background: rgba(99, 102, 241, 0.04); }
+    .data-table tbody tr:last-child td { border-bottom: none; }
+    .data-table .mono { font-family: var(--font-mono); font-size: 0.78rem; color: var(--accent-light); }
+
+    /* ═══ WORKFLOW ═══ */
+    .workflow { position: relative; padding: 0 0 0 2rem; }
+    .workflow::before { content: ''; position: absolute; left: 15px; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, var(--phase-planeacion), var(--phase-convocatoria), var(--phase-ejecucion), var(--phase-evaluacion), var(--phase-cierre)); border-radius: 2px; }
+    .workflow-step { position: relative; margin-bottom: 2rem; padding-left: 1.75rem; }
+    .workflow-step::before { content: ''; position: absolute; left: -2rem; top: 6px; width: 12px; height: 12px; border-radius: 50%; border: 2px solid; background: var(--bg-deep); z-index: 1; }
+    .workflow-step[data-phase="planeacion"]::before { border-color: var(--phase-planeacion); }
+    .workflow-step[data-phase="convocatoria"]::before { border-color: var(--phase-convocatoria); }
+    .workflow-step[data-phase="ejecucion"]::before { border-color: var(--phase-ejecucion); }
+    .workflow-step[data-phase="evaluacion"]::before { border-color: var(--phase-evaluacion); }
+    .workflow-step[data-phase="cierre"]::before { border-color: var(--phase-cierre); }
+    .workflow-step h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.35rem; }
+    .workflow-step p { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; }
+    .workflow-step .wf-formats { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.5rem; }
+    .workflow-step .wf-tag { font-family: var(--font-mono); font-size: 0.65rem; font-weight: 600; padding: 0.15rem 0.45rem; border-radius: 4px; background: rgba(255,255,255,0.06); color: var(--text-secondary); }
+
+    /* ═══ CALLOUT ═══ */
+    .callout { border-radius: var(--radius-md); padding: 1rem 1.25rem; margin: 1.5rem 0; display: flex; gap: 0.75rem; align-items: flex-start; }
+    .callout-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 0.1rem; }
+    .callout p { font-size: 0.88rem; line-height: 1.6; }
+    .callout.info { background: rgba(99, 102, 241, 0.08); border: 1px solid rgba(99, 102, 241, 0.2); }
+    .callout.warning { background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.2); }
+    .callout.success { background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.2); }
+
+    /* ═══ JUSTIFICATION ═══ */
+    .justification-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; }
+    .just-card { background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.25rem; }
+    .just-card h4 { font-family: var(--font-mono); font-size: 0.85rem; font-weight: 600; color: var(--accent-light); margin-bottom: 0.5rem; }
+    .just-card p { font-size: 0.82rem; color: var(--text-secondary); line-height: 1.6; }
+    .just-icon { font-size: 1.2rem; margin-bottom: 0.5rem; }
+
+    /* ═══ ARCHITECTURE ═══ */
+    .arch-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+    .arch-card { background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.25rem; transition: all var(--transition); }
+    .arch-card:hover { border-color: var(--border-accent); }
+    .arch-card h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .arch-card p { font-size: 0.82rem; color: var(--text-secondary); line-height: 1.6; }
+    .arch-card .file-list { list-style: none; margin-top: 0.75rem; }
+    .arch-card .file-list li { font-family: var(--font-mono); font-size: 0.75rem; padding: 0.35rem 0; color: var(--text-muted); border-bottom: 1px solid var(--border-subtle); }
+    .arch-card .file-list li:last-child { border-bottom: none; }
+    .arch-card .file-list li span { color: var(--accent-light); }
+
+    /* ═══ FOOTER ═══ */
+    .page-footer { text-align: center; padding: 3rem 0 1rem; border-top: 1px solid var(--border-subtle); margin-top: 3rem; }
+    .page-footer p { font-size: 0.78rem; color: var(--text-muted); }
+    .page-footer .footer-brand { font-weight: 700; color: var(--accent-light); }
+
+    /* ═══ ANIMATIONS ═══ */
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes pulse-dot { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ═══ RESPONSIVE ═══ */
+    @media (max-width: 768px) {
+      .wrapper { padding: 1rem; }
+      .hero { padding: 2.5rem 0 2rem; }
+      .hero h1 { font-size: 1.8rem; }
+      .format-content { grid-template-columns: 1fr; }
+      .toc-grid { grid-template-columns: 1fr; }
+      .format-card-header { flex-wrap: wrap; gap: 0.5rem; }
+      .format-phase-badge { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+
+    <!-- ═══ HERO ═══ -->
+    <header class="hero" id="top">
+      <div class="hero-badge">Sistema de Gestión de Calidad · ISO 17043</div>
+      <h1>Registros y Formatos del SGC</h1>
+      <p>Guía visual de los registros obligatorios que garantizan la trazabilidad, estandarización y cierre documental de cada ronda de Ensayo de Aptitud en <strong>calaire-app</strong>.</p>
+    </header>
+
+    <!-- ═══ STATS ═══ -->
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="stat-value" style="color: var(--accent-light)">9</div>
+        <div class="stat-label">Formatos / Registros</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" style="color: var(--phase-convocatoria)">5</div>
+        <div class="stat-label">Fases del ciclo</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" style="color: var(--cyan)">4</div>
+        <div class="stat-label">Modos de verificación</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" style="color: var(--green)">4</div>
+        <div class="stat-label">Estados posibles</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" style="color: var(--amber)">100%</div>
+        <div class="stat-label">Meta de cobertura</div>
+      </div>
+    </div>
+
+    <!-- ═══ TOC ═══ -->
+    <nav class="toc" aria-label="Índice de contenidos">
+      <div class="toc-title">Índice de Contenidos</div>
+      <div class="toc-grid">
+        <a href="#fases" class="toc-link"><span class="toc-num">01</span> Las 5 Fases del Ciclo SGC</a>
+        <a href="#modos" class="toc-link"><span class="toc-num">02</span> Modos de Verificación</a>
+        <a href="#formatos" class="toc-link"><span class="toc-num">03</span> Los 9 Formatos en Detalle</a>
+        <a href="#estados" class="toc-link"><span class="toc-num">04</span> El Semáforo Documental</a>
+        <a href="#workflow" class="toc-link"><span class="toc-num">05</span> Flujo de Trabajo por Fase</a>
+        <a href="#justificaciones" class="toc-link"><span class="toc-num">06</span> Justificaciones y Excepciones</a>
+        <a href="#tablero" class="toc-link"><span class="toc-num">07</span> Tablero de Cobertura</a>
+        <a href="#arquitectura" class="toc-link"><span class="toc-num">08</span> Arquitectura Técnica</a>
+      </div>
+    </nav>
+
+    <!-- ══════════════════════════════════════════
+         SECTION 1: FASES
+         ══════════════════════════════════════════ -->
+    <section class="section reveal" id="fases">
+      <div class="section-header">
+        <div class="section-icon" style="background: var(--accent-glow); color: var(--accent-light);">🔄</div>
+        <h2>Las 5 Fases del Ciclo SGC</h2>
+      </div>
+      <p class="section-desc">Cada ronda de Ensayo de Aptitud atraviesa 5 fases documentales secuenciales. Cada fase tiene formatos asignados que deben completarse para que la ronda alcance el 100% de cobertura.</p>
+      <div class="phases-grid">
+        <div class="phase-card" data-phase="planeacion">
+          <div class="phase-number">Fase 1</div>
+          <div class="phase-name">Planeación</div>
+          <div class="phase-desc">Calendario global de rondas, cronograma detallado, planificación del ensayo y plan operativo.</div>
+          <div class="phase-formats">
+            <span class="phase-tag">F-PSEA-01</span>
+            <span class="phase-tag">F-PSEA-02</span>
+            <span class="phase-tag">F-PSEA-06</span>
+            <span class="phase-tag">F-PSEA-11</span>
+          </div>
+        </div>
+        <div class="phase-card" data-phase="convocatoria">
+          <div class="phase-number">Fase 2</div>
+          <div class="phase-name">Convocatoria</div>
+          <div class="phase-desc">Inscripción de participantes mediante la ficha de aceptación, con registro de personas e instrumentos.</div>
+          <div class="phase-formats">
+            <span class="phase-tag">F-PSEA-05/05A</span>
+          </div>
+        </div>
+        <div class="phase-card" data-phase="ejecucion">
+          <div class="phase-number">Fase 3</div>
+          <div class="phase-name">Ejecución</div>
+          <div class="phase-desc">Asignación de niveles, carga de datos del calibrador y recepción de resultados del participante.</div>
+          <div class="phase-formats">
+            <span class="phase-tag">F-PSEA-08</span>
+            <span class="phase-tag">F-PSEA-09</span>
+          </div>
+        </div>
+        <div class="phase-card" data-phase="evaluacion">
+          <div class="phase-number">Fase 4</div>
+          <div class="phase-name">Evaluación</div>
+          <div class="phase-desc">Procesamiento y análisis estadístico de aptitud mediante pt_app.</div>
+          <div class="phase-formats">
+            <span class="phase-tag">F-PSEA-10/13</span>
+          </div>
+        </div>
+        <div class="phase-card" data-phase="cierre">
+          <div class="phase-number">Fase 5</div>
+          <div class="phase-name">Cierre</div>
+          <div class="phase-desc">Informe de resultados generado por pt_app y comunicación oficial a participantes.</div>
+          <div class="phase-formats">
+            <span class="phase-tag">F-PSEA-14</span>
+          </div>
+        </div>
+      </div>
+      <div class="callout info">
+        <span class="callout-icon">ℹ️</span>
+        <p>Una ronda no puede considerarse «cerrada» desde la perspectiva del SGC hasta que <strong>todos</strong> los formatos de sus fases activas estén completos. El sistema identifica explícitamente los documentos <strong>bloqueantes</strong> que impiden el avance.</p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         SECTION 2: MODOS DE VERIFICACIÓN
+         ══════════════════════════════════════════ -->
+    <section class="section reveal" id="modos">
+      <div class="section-header">
+        <div class="section-icon" style="background: var(--cyan-bg); color: var(--cyan);">⚙️</div>
+        <h2>Modos de Verificación <span>— Cómo se valida cada formato</span></h2>
+      </div>
+      <p class="section-desc">Los 9 formatos se clasifican en 4 modos que determinan <strong>cómo</strong> el sistema comprueba su existencia y validez. Cada modo implica una acción diferente.</p>
+      <div class="mode-legend">
+        <div class="mode-item">
+          <div class="mode-badge nativo">● Nativo (UI)</div>
+          <h4>Generados en el Aplicativo</h4>
+          <p>El coordinador crea y guarda el registro directamente en formularios nativos de calaire-app: calendarios, tablas, editores de plan. El sistema verifica que el flujo esté finalizado y/o que exista un <em>snapshot</em> histórico.</p>
+          <div class="mode-formats">
+            <span class="phase-tag">F-PSEA-01</span>
+            <span class="phase-tag">F-PSEA-02</span>
+            <span class="phase-tag">F-PSEA-06</span>
+            <span class="phase-tag">F-PSEA-11</span>
+          </div>
+        </div>
+        <div class="mode-item">
+          <div class="mode-badge calculado">● Nativo Calculado</div>
+          <h4>Calculados Automáticamente</h4>
+          <p>El sistema evalúa la completitud <strong>en tiempo real</strong> analizando el estado operativo de la ronda: inscripciones de participantes, fichas enviadas, resultados recibidos. Puede admitir justificación escrita.</p>
+          <div class="mode-formats">
+            <span class="phase-tag">F-PSEA-05/05A</span>
+            <span class="phase-tag">F-PSEA-09</span>
+          </div>
+        </div>
+        <div class="mode-item">
+          <div class="mode-badge archivo">● Archivo (Carga)</div>
+          <h4>Cargas al Storage</h4>
+          <p>El coordinador sube archivos (PDF, datos del calibrador, información de niveles) al storage de Convex. La verificación es binaria: ¿existe el archivo vigente? Sí → Completo. No → Pendiente.</p>
+          <div class="mode-formats">
+            <span class="phase-tag">F-PSEA-08</span>
+          </div>
+        </div>
+        <div class="mode-item">
+          <div class="mode-badge externo">● Externo (pt_app)</div>
+          <h4>Aplicativo Estadístico Externo</h4>
+          <p>Los registros provienen de <strong>pt_app</strong>, el aplicativo de análisis y procesamiento estadístico de ensayos de aptitud. calaire-app consume o referencia los resultados generados por pt_app.</p>
+          <div class="mode-formats">
+            <span class="phase-tag">F-PSEA-10/13</span>
+            <span class="phase-tag">F-PSEA-14</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         SECTION 3: LOS 9 FORMATOS EN DETALLE
+         ══════════════════════════════════════════ -->
+    <section class="section reveal" id="formatos">
+      <div class="section-header">
+        <div class="section-icon" style="background: var(--violet-bg); color: var(--violet);">📋</div>
+        <h2>Los 9 Formatos <span>— En Detalle</span></h2>
+      </div>
+      <p class="section-desc">Haz clic en cada formato para expandir su detalle: función en el SGC, cómo se verifica y su lógica de evaluación.</p>
+
+      <div class="format-cards" id="formatCards">
+
+        <!-- ── F-PSEA-01 ── -->
+        <div class="format-card" data-format="F-PSEA-01">
+          <div class="format-card-header" onclick="toggleCard(this)">
+            <span class="format-code mode-nativo">F-PSEA-01</span>
+            <span class="format-title">Calendario de rondas</span>
+            <span class="format-phase-badge" data-phase="planeacion">Planeación</span>
+            <span class="format-toggle">▾</span>
+          </div>
+          <div class="format-card-body">
+            <div class="format-content">
+              <div class="format-section">
+                <h4>Función en el SGC</h4>
+                <p>Registro maestro de la programación anual o periódica de todas las rondas de ensayo de aptitud. Presenta una <strong>vista tipo calendario/Gantt</strong> que permite visualizar la distribución temporal de las rondas, identificar traslapes y planificar recursos.</p>
+              </div>
+              <div class="format-section">
+                <h4>Verificación en el Aplicativo</h4>
+                <p>El coordinador crea y gestiona el calendario directamente en la interfaz nativa de calaire-app. El sistema valida que el calendario de rondas esté configurado y que las rondas activas tengan fechas asignadas.</p>
+              </div>
+              <div class="format-meta">
+                <span class="meta-chip"><span class="dot green"></span> Crítico: Sí</span>
+                <span class="meta-chip">Modo: Nativo UI</span>
+                <span class="meta-chip">Vista: Calendario / Gantt</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── F-PSEA-02 ── -->
+        <div class="format-card" data-format="F-PSEA-02">
+          <div class="format-card-header" onclick="toggleCard(this)">
+            <span class="format-code mode-nativo">F-PSEA-02</span>
+            <span class="format-title">Cronograma detallado de la ronda</span>
+            <span class="format-phase-badge" data-phase="planeacion">Planeación</span>
+            <span class="format-toggle">▾</span>
+          </div>
+          <div class="format-card-body">
+            <div class="format-content">
+              <div class="format-section">
+                <h4>Función en el SGC</h4>
+                <p>Desglose detallado de <strong>hitos, fechas clave y actividades</strong> de una ronda específica, presentado en formato de tabla. Permite al equipo conocer los plazos de cada etapa: convocatoria, distribución de muestras, recepción de resultados, evaluación y cierre.</p>
+              </div>
+              <div class="format-section">
+                <h4>Verificación en el Aplicativo</h4>
+                <p>El coordinador crea el cronograma como una tabla interactiva dentro del aplicativo, vinculada a la ronda. El sistema verifica que los hitos principales estén definidos con fechas.</p>
+              </div>
+              <div class="format-meta">
+                <span class="meta-chip"><span class="dot green"></span> Crítico: Sí</span>
+                <span class="meta-chip">Modo: Nativo UI</span>
+                <span class="meta-chip">Vista: Tabla de hitos</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── F-PSEA-05/05A ── -->
+        <div class="format-card" data-format="F-PSEA-05">
+          <div class="format-card-header" onclick="toggleCard(this)">
+            <span class="format-code mode-calculado">F-PSEA-05/05A</span>
+            <span class="format-title">Ficha del participante</span>
+            <span class="format-phase-badge" data-phase="convocatoria">Convocatoria</span>
+            <span class="format-toggle">▾</span>
+          </div>
+          <div class="format-card-body">
+            <div class="format-content">
+              <div class="format-section">
+                <h4>Función en el SGC</h4>
+                <p>Registro unificado de <strong>aceptación y confirmación de participación</strong> en la ronda. El diligenciamiento de la ficha es la prueba formal de que el participante acepta las condiciones del ensayo. Registra las <strong>personas</strong> responsables y los <strong>instrumentos/métodos</strong> que utilizarán.</p>
+              </div>
+              <div class="format-section">
+                <h4>Verificación en el Aplicativo</h4>
+                <p>El sistema calcula automáticamente la cobertura: verifica que todos los participantes esperados hayan diligenciado su ficha de inscripción. Permite <strong>justificación escrita</strong> si la cobertura no es del 100%.</p>
+                <div class="code-block">
+                  fichasEnviadas >= participantesEsperados<br>
+                  || justificaciónVigente → 'completo'
+                </div>
+              </div>
+              <div class="format-meta">
+                <span class="meta-chip"><span class="dot green"></span> Crítico: Sí</span>
+                <span class="meta-chip">Modo: Nativo Calculado</span>
+                <span class="meta-chip">✅ Admite justificación</span>
+                <span class="meta-chip">Registra personas + instrumentos</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── F-PSEA-06 ── -->
+        <div class="format-card" data-format="F-PSEA-06">
+          <div class="format-card-header" onclick="toggleCard(this)">
+            <span class="format-code mode-nativo">F-PSEA-06</span>
+            <span class="format-title">Planificación de la ronda</span>
+            <span class="format-phase-badge" data-phase="planeacion">Planeación</span>
+            <span class="format-toggle">▾</span>
+          </div>
+          <div class="format-card-body">
+            <div class="format-content">
+              <div class="format-section">
+                <h4>Función en el SGC</h4>
+                <p>Establece el diseño completo del ensayo de aptitud: objetivos, matrices, analitos, participantes esperados, cronogramas y criterios de evaluación. Es el <strong>documento fundacional</strong> de la ronda, estructurado en bloques conforme a la norma ISO/IEC 17043.</p>
+              </div>
+              <div class="format-section">
+                <h4>Verificación en el Aplicativo</h4>
+                <p>El coordinador completa un <strong>editor nativo de bloques interactivos</strong>. El sistema valida que el plan esté marcado como finalizado y que exista al menos un <em>snapshot</em> histórico.</p>
+                <div class="code-block">
+                  estado = (planFinalizado && snapshotsPlan > 0)<br>
+                  &nbsp;&nbsp;? 'completo' : 'pendiente'
+                </div>
+              </div>
+              <div class="format-meta">
+                <span class="meta-chip"><span class="dot green"></span> Crítico: Sí</span>
+                <span class="meta-chip">Modo: Nativo UI</span>
+                <span class="meta-chip">Bloques editables (a–u)</span>
+                <span class="meta-chip">Snapshot inmutable</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── F-PSEA-08 ── -->
+        <div class="format-card" data-format="F-PSEA-08">
+          <div class="format-card-header" onclick="toggleCard(this)">
+            <span class="format-code mode-archivo">F-PSEA-08</span>
+            <span class="format-title">Asignación de niveles / Calibrador dinámico</span>
+            <span class="format-phase-badge" data-phase="ejecucion">Ejecución</span>
+            <span class="format-toggle">▾</span>
+          </div>
+          <div class="format-card-body">
+            <div class="format-content">
+              <div class="format-section">
+                <h4>Función en el SGC</h4>
+                <p>Registra la <strong>asignación de niveles de la ronda</strong> y la información del calibrador dinámico utilizado. Documenta los parámetros de referencia y los datos de calibración que sustentan la trazabilidad metrológica del ensayo.</p>
+              </div>
+              <div class="format-section">
+                <h4>Verificación en el Aplicativo</h4>
+                <p>El coordinador debe completar <strong>dos campos de carga</strong>: la información del calibrador dinámico y los datos asociados. El sistema verifica la presencia de los archivos vigentes.</p>
+                <div class="code-block">
+                  evidenciasVigentes['F-PSEA-08']<br>
+                  &nbsp;&nbsp;? 'completo' : 'pendiente'<br>
+                  // Dos archivos: info calibrador + datos
+                </div>
+              </div>
+              <div class="format-meta">
+                <span class="meta-chip"><span class="dot green"></span> Crítico: Sí</span>
+                <span class="meta-chip">Modo: Archivo (Carga)</span>
+                <span class="meta-chip">2 campos: calibrador + datos</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── F-PSEA-09 ── -->
+        <div class="format-card" data-format="F-PSEA-09">
+          <div class="format-card-header" onclick="toggleCard(this)">
+            <span class="format-code mode-calculado">F-PSEA-09</span>
+            <span class="format-title">Recepción de datos/resultados del participante</span>
+            <span class="format-phase-badge" data-phase="ejecucion">Ejecución</span>
+            <span class="format-toggle">▾</span>
+          </div>
+          <div class="format-card-body">
+            <div class="format-content">
+              <div class="format-section">
+                <h4>Función en el SGC</h4>
+                <p>Registro de la <strong>recepción de datos y resultados</strong> enviados por cada participante de la ronda. El aplicativo actúa como receptor y validador de los envíos, asegurando que cada participante haya entregado sus resultados dentro de los plazos.</p>
+              </div>
+              <div class="format-section">
+                <h4>Verificación en el Aplicativo</h4>
+                <p>calaire-app recibe los resultados del participante y calcula automáticamente el estado de cobertura: verifica que el 100% de los envíos esperados se hayan recibido.</p>
+                <div class="code-block">
+                  enviosRecibidos >= enviosEsperados<br>
+                  || justificaciónVigente → 'completo'
+                </div>
+              </div>
+              <div class="format-meta">
+                <span class="meta-chip"><span class="dot green"></span> Crítico: Sí</span>
+                <span class="meta-chip">Modo: Nativo Calculado</span>
+                <span class="meta-chip">✅ Admite justificación</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── F-PSEA-10/13 ── -->
+        <div class="format-card" data-format="F-PSEA-10-13">
+          <div class="format-card-header" onclick="toggleCard(this)">
+            <span class="format-code mode-externo">F-PSEA-10/13</span>
+            <span class="format-title">pt_app — Procesamiento estadístico de aptitud</span>
+            <span class="format-phase-badge" data-phase="evaluacion">Evaluación</span>
+            <span class="format-toggle">▾</span>
+          </div>
+          <div class="format-card-body">
+            <div class="format-content">
+              <div class="format-section">
+                <h4>Función en el SGC</h4>
+                <p>Registro unificado del <strong>análisis y procesamiento estadístico de ensayos de aptitud</strong>. Abarca el cálculo de z-scores, valores asignados, incertidumbres, evaluación de desempeño y revisión de datos. Generado por <strong>pt_app</strong>, el aplicativo estadístico especializado.</p>
+              </div>
+              <div class="format-section">
+                <h4>Verificación en el Aplicativo</h4>
+                <p>calaire-app referencia los resultados generados por pt_app. El sistema verifica que el procesamiento estadístico haya sido ejecutado y que los resultados estén disponibles para la ronda.</p>
+                <div class="code-block">
+                  ptAppProcesado && resultadosDisponibles<br>
+                  &nbsp;&nbsp;? 'completo' : 'pendiente'
+                </div>
+              </div>
+              <div class="format-meta">
+                <span class="meta-chip"><span class="dot green"></span> Crítico: Sí</span>
+                <span class="meta-chip">Modo: Externo (pt_app)</span>
+                <span class="meta-chip">Análisis + Revisión unificados</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── F-PSEA-11 ── -->
+        <div class="format-card" data-format="F-PSEA-11">
+          <div class="format-card-header" onclick="toggleCard(this)">
+            <span class="format-code mode-nativo">F-PSEA-11</span>
+            <span class="format-title">Plan operativo de ronda</span>
+            <span class="format-phase-badge" data-phase="planeacion">Planeación</span>
+            <span class="format-toggle">▾</span>
+          </div>
+          <div class="format-card-body">
+            <div class="format-content">
+              <div class="format-section">
+                <h4>Función en el SGC</h4>
+                <p>Detalla la <strong>operativa logística</strong> de la ronda: distribución de muestras, instructivos de manejo, asignación de códigos de participante, asignación de recursos y responsabilidades operativas. Complementa la planificación (F-PSEA-06) con los detalles de ejecución.</p>
+              </div>
+              <div class="format-section">
+                <h4>Verificación en el Aplicativo</h4>
+                <p>Se genera como un registro nativo vinculado a la planificación de la ronda. El sistema verifica que el plan operativo esté finalizado y que exista un snapshot.</p>
+                <div class="code-block">
+                  estado = (planOperativoFinalizado && snapshots > 0)<br>
+                  &nbsp;&nbsp;? 'completo' : 'pendiente'
+                </div>
+              </div>
+              <div class="format-meta">
+                <span class="meta-chip"><span class="dot green"></span> Crítico: Sí</span>
+                <span class="meta-chip">Modo: Nativo UI</span>
+                <span class="meta-chip">Incluye asignación de códigos</span>
+                <span class="meta-chip">Vinculado a F-PSEA-06</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── F-PSEA-14 ── -->
+        <div class="format-card" data-format="F-PSEA-14">
+          <div class="format-card-header" onclick="toggleCard(this)">
+            <span class="format-code mode-externo">F-PSEA-14</span>
+            <span class="format-title">Informe de resultados</span>
+            <span class="format-phase-badge" data-phase="cierre">Cierre</span>
+            <span class="format-toggle">▾</span>
+          </div>
+          <div class="format-card-body">
+            <div class="format-content">
+              <div class="format-section">
+                <h4>Función en el SGC</h4>
+                <p>Documento final consolidado que contiene los <strong>resultados del ensayo de aptitud</strong>, evaluaciones de desempeño individuales, conclusiones y recomendaciones. Generado por <strong>pt_app</strong> y comunicado a los participantes. Cierra el ciclo documental de la ronda.</p>
+              </div>
+              <div class="format-section">
+                <h4>Verificación en el Aplicativo</h4>
+                <p>calaire-app verifica que el informe de resultados haya sido generado por pt_app y esté disponible. Puede incluir la publicación de resultados y la comunicación oficial a participantes.</p>
+                <div class="code-block">
+                  informeGenerado && publicado<br>
+                  &nbsp;&nbsp;? 'completo' : 'pendiente'
+                </div>
+              </div>
+              <div class="format-meta">
+                <span class="meta-chip"><span class="dot green"></span> Crítico: Sí</span>
+                <span class="meta-chip">Modo: Externo (pt_app)</span>
+                <span class="meta-chip">Cierre del ciclo documental</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /format-cards -->
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         SECTION 4: SEMÁFORO DOCUMENTAL
+         ══════════════════════════════════════════ -->
+    <section class="section reveal" id="estados">
+      <div class="section-header">
+        <div class="section-icon" style="background: var(--green-bg); color: var(--green);">🚦</div>
+        <h2>El Semáforo Documental <span>— Estados del Checklist</span></h2>
+      </div>
+      <p class="section-desc">Cada uno de los 9 ítems del checklist se encuentra en uno de cuatro estados visuales, representados en el tablero como un sistema de semáforo.</p>
+      <div class="status-grid">
+        <div class="status-card">
+          <div class="status-dot completo"></div>
+          <div class="status-info">
+            <h4>🟢 Completo</h4>
+            <p>Documento presente, validado y sin advertencias. Contribuye al progreso. No genera bloqueos.</p>
+            <code>bg-emerald-500</code>
+          </div>
+        </div>
+        <div class="status-card">
+          <div class="status-dot pendiente"></div>
+          <div class="status-info">
+            <h4>🔴 Pendiente</h4>
+            <p>Documento falta o no cumple condiciones de verificación. <strong>Bloqueante</strong> si es crítico. Impide cobertura 100%.</p>
+            <code>bg-rose-500</code>
+          </div>
+        </div>
+        <div class="status-card">
+          <div class="status-dot no-aplica"></div>
+          <div class="status-info">
+            <h4>⚪ No Aplica</h4>
+            <p>Formato no aplica a esta ronda y se ha documentado el motivo. No suma ni resta. Estado válido para cierre.</p>
+            <code>bg-slate-300</code>
+          </div>
+        </div>
+        <div class="status-card">
+          <div class="status-dot advertencia"></div>
+          <div class="status-info">
+            <h4>🟡 Advertencia</h4>
+            <p>Documento presente pero con condiciones especiales. Contribuye al progreso pero señala un <strong>riesgo operativo</strong>.</p>
+            <code>bg-amber-500</code>
+          </div>
+        </div>
+      </div>
+      <div class="formula-box">
+        <div class="formula">Progreso = ( Completos + No Aplica ) / 9 × 100</div>
+        <div class="formula-desc">Un ítem es <strong>bloqueante</strong> cuando es crítico (todos lo son) y su estado es «pendiente».</div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         SECTION 5: FLUJO DE TRABAJO
+         ══════════════════════════════════════════ -->
+    <section class="section reveal" id="workflow">
+      <div class="section-header">
+        <div class="section-icon" style="background: rgba(6, 182, 212, 0.12); color: var(--cyan);">🔁</div>
+        <h2>Flujo de Trabajo <span>— Por Fase</span></h2>
+      </div>
+      <p class="section-desc">Ciclo de vida de una ronda desde la perspectiva documental del SGC. Cada fase desbloquea la siguiente.</p>
+
+      <div class="workflow">
+        <div class="workflow-step" data-phase="planeacion">
+          <h4 style="color: var(--phase-planeacion)">Fase 1 — Planeación</h4>
+          <p>El coordinador registra la ronda en el <strong>Calendario de Rondas</strong> (F-PSEA-01, vista Gantt). Define el <strong>Cronograma Detallado</strong> (F-PSEA-02, tabla de hitos). Completa la <strong>Planificación de la Ronda</strong> (F-PSEA-06, editor de bloques) y elabora el <strong>Plan Operativo</strong> (F-PSEA-11) con logística, códigos y asignaciones.</p>
+          <div class="wf-formats">
+            <span class="wf-tag">F-PSEA-01 → Calendario</span>
+            <span class="wf-tag">F-PSEA-02 → Cronograma</span>
+            <span class="wf-tag">F-PSEA-06 → Planificación</span>
+            <span class="wf-tag">F-PSEA-11 → Plan Operativo</span>
+          </div>
+        </div>
+        <div class="workflow-step" data-phase="convocatoria">
+          <h4 style="color: var(--phase-convocatoria)">Fase 2 — Convocatoria</h4>
+          <p>Los participantes diligencian su <strong>Ficha de Participante</strong> (F-PSEA-05/05A): esto constituye la aceptación formal de participación y registra las personas e instrumentos/métodos que utilizarán. El sistema calcula automáticamente la cobertura de inscripción.</p>
+          <div class="wf-formats">
+            <span class="wf-tag">F-PSEA-05/05A → Fichas (aceptación + instrumentos)</span>
+          </div>
+        </div>
+        <div class="workflow-step" data-phase="ejecucion">
+          <h4 style="color: var(--phase-ejecucion)">Fase 3 — Ejecución</h4>
+          <p>Se asignan los <strong>niveles de la ronda</strong> y se cargan la información del <strong>calibrador dinámico</strong> y los datos asociados (F-PSEA-08). calaire-app <strong>recibe los datos/resultados</strong> de cada participante (F-PSEA-09) y registra la cobertura de recepción.</p>
+          <div class="wf-formats">
+            <span class="wf-tag">F-PSEA-08 → Niveles + Calibrador (archivos)</span>
+            <span class="wf-tag">F-PSEA-09 → Recepción datos participante</span>
+          </div>
+        </div>
+        <div class="workflow-step" data-phase="evaluacion">
+          <h4 style="color: var(--phase-evaluacion)">Fase 4 — Evaluación</h4>
+          <p><strong>pt_app</strong> ejecuta el análisis y procesamiento estadístico de aptitud (F-PSEA-10/13): z-scores, valores asignados, incertidumbres, evaluación de desempeño y revisión de datos. calaire-app referencia los resultados disponibles.</p>
+          <div class="wf-formats">
+            <span class="wf-tag">F-PSEA-10/13 → pt_app (análisis completo)</span>
+          </div>
+        </div>
+        <div class="workflow-step" data-phase="cierre">
+          <h4 style="color: var(--phase-cierre)">Fase 5 — Cierre</h4>
+          <p>pt_app genera el <strong>Informe de Resultados</strong> (F-PSEA-14) con evaluaciones, conclusiones y recomendaciones. Se comunica a los participantes. Con los 9 formatos completos, la ronda alcanza <strong>100% de cobertura SGC ✅</strong>.</p>
+          <div class="wf-formats">
+            <span class="wf-tag">F-PSEA-14 → Informe de resultados (pt_app)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         SECTION 6: JUSTIFICACIONES
+         ══════════════════════════════════════════ -->
+    <section class="section reveal" id="justificaciones">
+      <div class="section-header">
+        <div class="section-icon" style="background: var(--amber-bg); color: var(--amber);">📝</div>
+        <h2>Justificaciones y Excepciones</h2>
+      </div>
+      <p class="section-desc">Algunos formatos calculados permiten una <strong>justificación escrita</strong> cuando la condición no se cumple pero existe una razón válida documentada. La justificación registra automáticamente responsable, fecha y motivo.</p>
+
+      <div class="justification-grid">
+        <div class="just-card">
+          <div class="just-icon">✅</div>
+          <h4>F-PSEA-05/05A — Ficha del participante</h4>
+          <p><strong>Admite justificación.</strong> Ejemplo: «Un participante se retiró antes del inicio de la ronda». El diligenciamiento de la ficha es prueba de aceptación; si no se completa al 100%, se documenta la razón.</p>
+        </div>
+        <div class="just-card">
+          <div class="just-icon">✅</div>
+          <h4>F-PSEA-09 — Recepción de datos</h4>
+          <p><strong>Admite justificación.</strong> Ejemplo: «Participante X no envió resultados por fuerza mayor documentada». Se documenta la razón de la recepción incompleta.</p>
+        </div>
+        <div class="just-card">
+          <div class="just-icon">❌</div>
+          <h4>Formatos Nativos UI</h4>
+          <p><strong>No admiten justificación.</strong> Los formatos F-PSEA-01, 02, 06 y 11 deben completarse operativamente en la interfaz del aplicativo. No hay excepción posible.</p>
+        </div>
+        <div class="just-card">
+          <div class="just-icon">🔗</div>
+          <h4>Formatos Externos (pt_app)</h4>
+          <p>Los formatos F-PSEA-10/13 y F-PSEA-14 dependen de <strong>pt_app</strong>. Su completitud se determina por la disponibilidad de los resultados del procesamiento estadístico externo.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         SECTION 7: TABLERO DE COBERTURA
+         ══════════════════════════════════════════ -->
+    <section class="section reveal" id="tablero">
+      <div class="section-header">
+        <div class="section-icon" style="background: rgba(139, 92, 246, 0.12); color: var(--violet);">📊</div>
+        <h2>Tablero de Cobertura <span>— Vista Principal</span></h2>
+      </div>
+      <p class="section-desc">La vista principal del SGC (<code>/dashboard/sgc</code>) presenta una <strong>tabla cruzada</strong> donde las filas son rondas y las columnas son los 9 formatos, agrupados por fase. Cada celda muestra un dot semáforo.</p>
+
+      <div class="data-table-wrapper">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th rowspan="2" style="min-width: 160px;">Ronda</th>
+              <th colspan="4" style="text-align:center; color: var(--phase-planeacion); border-left: 2px solid var(--phase-planeacion);">Planeación</th>
+              <th colspan="1" style="text-align:center; color: var(--phase-convocatoria); border-left: 2px solid var(--phase-convocatoria);">Convoc.</th>
+              <th colspan="2" style="text-align:center; color: var(--phase-ejecucion); border-left: 2px solid var(--phase-ejecucion);">Ejecución</th>
+              <th colspan="1" style="text-align:center; color: var(--phase-evaluacion); border-left: 2px solid var(--phase-evaluacion);">Evaluación</th>
+              <th colspan="1" style="text-align:center; color: var(--phase-cierre); border-left: 2px solid var(--phase-cierre);">Cierre</th>
+              <th rowspan="2" style="text-align:center;">%</th>
+            </tr>
+            <tr>
+              <th style="border-left: 2px solid var(--phase-planeacion); font-size: 0.6rem;">01</th>
+              <th style="font-size: 0.6rem;">02</th>
+              <th style="font-size: 0.6rem;">06</th>
+              <th style="font-size: 0.6rem;">11</th>
+              <th style="border-left: 2px solid var(--phase-convocatoria); font-size: 0.6rem;">05/A</th>
+              <th style="border-left: 2px solid var(--phase-ejecucion); font-size: 0.6rem;">08</th>
+              <th style="font-size: 0.6rem;">09</th>
+              <th style="border-left: 2px solid var(--phase-evaluacion); font-size: 0.6rem;">10/13</th>
+              <th style="border-left: 2px solid var(--phase-cierre); font-size: 0.6rem;">14</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>R-2024-01</strong><br><span style="font-size: 0.72rem; color: var(--text-muted);">Plaguicidas Q1</span></td>
+              <td style="text-align:center">🟢</td>
+              <td style="text-align:center">🟢</td>
+              <td style="text-align:center">🟢</td>
+              <td style="text-align:center">🟢</td>
+              <td style="text-align:center">🟢</td>
+              <td style="text-align:center">🟢</td>
+              <td style="text-align:center">🟢</td>
+              <td style="text-align:center">🟢</td>
+              <td style="text-align:center">🟢</td>
+              <td style="text-align:center; font-weight: 700; color: var(--green);">100%</td>
+            </tr>
+            <tr>
+              <td><strong>R-2024-02</strong><br><span style="font-size: 0.72rem; color: var(--text-muted);">Alimentos Q1</span></td>
+              <td style="text-align:center">🟢</td>
+              <td style="text-align:center">🟢</td>
+              <td style="text-align:center">🟢</td>
+              <td style="text-align:center">🟢</td>
+              <td style="text-align:center">🟢</td>
+              <td style="text-align:center">🔴</td>
+              <td style="text-align:center">🔴</td>
+              <td style="text-align:center">🔴</td>
+              <td style="text-align:center">🔴</td>
+              <td style="text-align:center; font-weight: 700; color: var(--amber);">56%</td>
+            </tr>
+            <tr>
+              <td><strong>R-2024-03</strong><br><span style="font-size: 0.72rem; color: var(--text-muted);">Aguas Q2</span></td>
+              <td style="text-align:center">🟢</td>
+              <td style="text-align:center">🟢</td>
+              <td style="text-align:center">🔴</td>
+              <td style="text-align:center">🔴</td>
+              <td style="text-align:center">🔴</td>
+              <td style="text-align:center">🔴</td>
+              <td style="text-align:center">🔴</td>
+              <td style="text-align:center">🔴</td>
+              <td style="text-align:center">🔴</td>
+              <td style="text-align:center; font-weight: 700; color: var(--red);">22%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 1rem;"><strong>Interacciones del tablero:</strong></p>
+      <ul style="color: var(--text-secondary); font-size: 0.85rem; padding-left: 1.5rem; margin-bottom: 1.5rem; line-height: 2;">
+        <li><strong>Hover</strong> sobre cada dot → tooltip con nombre del formato y observaciones.</li>
+        <li><strong>Clic</strong> sobre un dot → navega al expediente SGC de la ronda en ese formato.</li>
+        <li><strong>Buscador</strong> → filtra rondas por código o nombre (case-insensitive).</li>
+        <li><strong>Toggle</strong> «Ocultar rondas cerradas» → checkbox para filtrar rondas cerradas.</li>
+        <li><strong>Columnas sticky</strong> → primera columna (ronda) y última columna (%) fijas durante scroll.</li>
+      </ul>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         SECTION 8: ARQUITECTURA
+         ══════════════════════════════════════════ -->
+    <section class="section reveal" id="arquitectura">
+      <div class="section-header">
+        <div class="section-icon" style="background: rgba(244, 63, 94, 0.12); color: var(--red);">🏗️</div>
+        <h2>Arquitectura Técnica <span>— Archivos Clave</span></h2>
+      </div>
+      <p class="section-desc">El SGC se implementa como una capa de control documental reactiva con Convex como backend. Los cambios en participantes, envíos o archivos se reflejan <strong>instantáneamente</strong> en el tablero.</p>
+
+      <div class="arch-grid">
+        <div class="arch-card">
+          <h4>📦 Definiciones</h4>
+          <p>Catálogo de los 9 formatos con fases, modos y criticidad.</p>
+          <ul class="file-list">
+            <li><span>lib/sgc/catalog.ts</span> — Catálogo de formatos</li>
+            <li><span>lib/sgc/checklist.ts</span> — Lógica de cálculo</li>
+            <li><span>lib/sgc/index.ts</span> — API pública del SGC</li>
+          </ul>
+        </div>
+        <div class="arch-card">
+          <h4>⚡ Backend (Convex)</h4>
+          <p>Queries reactivas y mutations para el módulo SGC.</p>
+          <ul class="file-list">
+            <li><span>convex/sgc.ts</span> — Queries y mutations</li>
+            <li><span>convex/schema.ts</span> — Tablas SGC</li>
+          </ul>
+        </div>
+        <div class="arch-card">
+          <h4>🖥️ Frontend (UI)</h4>
+          <p>Componentes React del dashboard SGC y expediente por ronda.</p>
+          <ul class="file-list">
+            <li><span>TableroCoberturaRondas.tsx</span> — Tabla cruzada</li>
+            <li><span>SgcTabs.tsx</span> — Sistema de pestañas</li>
+            <li><span>ExpedienteSgc.tsx</span> — Panel por ronda</li>
+            <li><span>SgcResumenClient.tsx</span> — Tarjetas + tabs</li>
+            <li><span>MatrizInteractiva.tsx</span> — Matriz documental</li>
+          </ul>
+        </div>
+        <div class="arch-card">
+          <h4>🔬 Externo (pt_app)</h4>
+          <p>Aplicativo estadístico de análisis y procesamiento de ensayos de aptitud.</p>
+          <ul class="file-list">
+            <li><span>F-PSEA-10/13</span> — Procesamiento estadístico</li>
+            <li><span>F-PSEA-14</span> — Informe de resultados</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout success" style="margin-top: 1.5rem;">
+        <span class="callout-icon">✅</span>
+        <p>La integración con <strong>Convex</strong> garantiza que cualquier cambio en el estado operativo de una ronda se refleje instantáneamente en el progreso documental, convirtiendo al SGC en una <strong>herramienta viva de gestión de calidad</strong>, no en un mero repositorio de archivos.</p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         TABLA RESUMEN FINAL
+         ══════════════════════════════════════════ -->
+    <section class="section reveal" id="resumen">
+      <div class="section-header">
+        <div class="section-icon" style="background: var(--accent-glow); color: var(--accent-light);">📑</div>
+        <h2>Tabla Resumen <span>— Los 9 Formatos</span></h2>
+      </div>
+      <div class="data-table-wrapper">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Código</th>
+              <th>Nombre</th>
+              <th>Fase</th>
+              <th>Modo</th>
+              <th>Qué verifica el sistema</th>
+              <th>Justif.</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td class="mono">F-PSEA-01</td>
+              <td>Calendario de rondas</td>
+              <td>Planeación</td>
+              <td><span class="mode-badge nativo" style="font-size:0.65rem;">Nativo UI</span></td>
+              <td>Rondas programadas con fechas en calendario/Gantt</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td class="mono">F-PSEA-02</td>
+              <td>Cronograma detallado de la ronda</td>
+              <td>Planeación</td>
+              <td><span class="mode-badge nativo" style="font-size:0.65rem;">Nativo UI</span></td>
+              <td>Hitos y fechas clave definidos en tabla</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td class="mono">F-PSEA-05/05A</td>
+              <td>Ficha del participante</td>
+              <td>Convocatoria</td>
+              <td><span class="mode-badge calculado" style="font-size:0.65rem;">Calculado</span></td>
+              <td>100% de fichas diligenciadas (aceptación + instrumentos)</td>
+              <td>✅</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td class="mono">F-PSEA-06</td>
+              <td>Planificación de la ronda</td>
+              <td>Planeación</td>
+              <td><span class="mode-badge nativo" style="font-size:0.65rem;">Nativo UI</span></td>
+              <td>Plan finalizado + snapshot histórico</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td class="mono">F-PSEA-08</td>
+              <td>Asignación de niveles / Calibrador dinámico</td>
+              <td>Ejecución</td>
+              <td><span class="mode-badge archivo" style="font-size:0.65rem;">Archivo</span></td>
+              <td>Archivos cargados: info calibrador + datos</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td class="mono">F-PSEA-09</td>
+              <td>Recepción de datos/resultados</td>
+              <td>Ejecución</td>
+              <td><span class="mode-badge calculado" style="font-size:0.65rem;">Calculado</span></td>
+              <td>100% de envíos de participantes recibidos</td>
+              <td>✅</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td class="mono">F-PSEA-10/13</td>
+              <td>pt_app — Procesamiento estadístico</td>
+              <td>Evaluación</td>
+              <td><span class="mode-badge externo" style="font-size:0.65rem;">Externo</span></td>
+              <td>Procesamiento ejecutado en pt_app</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td class="mono">F-PSEA-11</td>
+              <td>Plan operativo de ronda</td>
+              <td>Planeación</td>
+              <td><span class="mode-badge nativo" style="font-size:0.65rem;">Nativo UI</span></td>
+              <td>Plan operativo finalizado + snapshot</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td class="mono">F-PSEA-14</td>
+              <td>Informe de resultados</td>
+              <td>Cierre</td>
+              <td><span class="mode-badge externo" style="font-size:0.65rem;">Externo</span></td>
+              <td>Informe generado por pt_app y publicado</td>
+              <td>—</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer class="page-footer">
+      <p><span class="footer-brand">calaire-app</span> · Sistema de Gestión de Calidad · ISO/IEC 17043</p>
+      <p style="margin-top: 0.35rem;">Generado el <span id="footerDate"></span> · Basado en documentación interna del SGC</p>
+    </footer>
+
+  </div>
+
+  <script>
+    function toggleCard(headerEl) {
+      const card = headerEl.closest('.format-card');
+      card.classList.toggle('open');
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    const now = new Date();
+    const months = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+    document.getElementById('footerDate').textContent = `${now.getDate()} de ${months[now.getMonth()]} de ${now.getFullYear()}`;
+
+    if (window.innerWidth > 900) {
+      document.querySelectorAll('.format-card').forEach(card => card.classList.add('open'));
+    }
+  </script>
+</body>
+</html>

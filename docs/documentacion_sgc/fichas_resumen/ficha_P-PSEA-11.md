@@ -5,11 +5,11 @@
 | Campo | Valor |
 |---|---|
 | **Codigo** | `P-PSEA-11` |
-| **Nombre decidido** | No aplicable |
+| **Nombre decidido** | Procedimiento tecnico CO |
 | **Tipo documental** | Procedimiento |
-| **Estado** | Reservar |
-| **Prioridad** | No priorizar |
-| **Clase de ficha** | Registro de no activo |
+| **Estado** | Actualizar |
+| **Prioridad** | Media |
+| **Clase de ficha** | Ficha activa |
 
 ---
 
@@ -17,21 +17,19 @@
 
 ### Proposito operativo
 
-Codigo reservado para un procedimiento de envio/recepcion fisica de items de ensayo. No aplica al PEA de gases contaminantes criterio porque el item se genera in situ mediante calibrador dinamico y cilindro, no se envia ni recibe fisicamente. El codigo se mantiene disponible para uso futuro si el alcance del PEA cambia.
+Procedimiento tecnico especifico para la evaluacion de aptitud en monoxido de carbono (CO) dentro del PEA. Documenta las condiciones operativas, metodologias de referencia, particularidades del gas y criterios de aceptacion especificos para este analito. Debe citar documentos transversales y no duplicar estadistica, H/E, informe ni flujo de datos.
 
 ### Rol en el flujo
 
-- [ ] Criterio tecnico
-- [ ] Procedimiento
+- [x] Criterio tecnico
+- [x] Procedimiento
 - [ ] Entrada
 - [ ] Salida
 - [ ] Registro oficial
 - [ ] Evidencia
 - [ ] Instructivo
 - [ ] Matriz
-- [x] Soporte documental
-
-Registro de no activo; no tiene rol operativo actual.
+- [ ] Soporte documental
 
 ---
 
@@ -40,11 +38,11 @@ Registro de no activo; no tiene rol operativo actual.
 #### Aplicativo asociado
 
 - [ ] `calaire-app`
-- [ ] `pt_app`
+- [x] `pt_app`
 - [ ] Ambos
-- [x] Ninguno
+- [ ] Ninguno
 
-No aplica; no hay aplicativo asociado.
+El analisis estadistico se ejecuta en `pt_app`, pero este procedimiento define criterios especificos del analito.
 
 ---
 
@@ -54,13 +52,17 @@ No aplica; no hay aplicativo asociado.
 
 | Codigo / fuente | Descripcion | Rol en el flujo |
 |---|---|---|
-| N/A | No aplica | N/A |
+| `P-PSEA-07` | Diseno estadistico | Referencia obligatoria |
+| `F-PSEA-11` | Registro de H/E | Referencia obligatoria |
+| `P-PSEA-06` | Preparacion del item | Referencia |
+| `F-PSEA-12` | Dataset oficial | Referencia |
 
 #### Salidas principales
 
 | Codigo / destino | Descripcion | Rol en el flujo |
 |---|---|---|
-| N/A | No aplica | N/A |
+| `P-PSEA-09` | Informe de resultados | Referencia |
+| `F-PSEA-13` | Informe final | Referencia |
 
 ---
 
@@ -70,8 +72,13 @@ No aplica; no hay aplicativo asociado.
 
 | Codigo | Relacion | Tipo de vinculo |
 |---|---|---|
-| `P-PSEA-10` | Preparacion y control del item (reemplaza esta funcion) | Obligatorio |
-| `F-PSEA-11` | No aplicable (formato paralelo) | Referencia |
+| `P-PSEA-07` | Cita para diseno estadistico | Obligatorio |
+| `F-PSEA-11` | Cita para H/E | Obligatorio |
+| `P-PSEA-09` | Cita para informe | Obligatorio |
+| `P-PSEA-08` | Cita para flujo de datos | Obligatorio |
+| `DG-PSEA-03` | Aplicativo de analisis | Referencia |
+| `I-PSEA-04` | Instructivo de preprocesador | Referencia |
+| `I-PSEA-05` | Instructivo de analisis | Referencia |
 
 ---
 
@@ -79,18 +86,21 @@ No aplica; no hay aplicativo asociado.
 
 #### Limites de alcance
 
-- No se desarrolla como procedimiento activo.
-- No aplica al modelo operativo actual del PEA de gases.
-- Se mantiene reservado, no retirado, para posible uso futuro.
+- No duplica el diseno estadistico (eso es `P-PSEA-07`).
+- No duplica la evaluacion de H/E (eso es `F-PSEA-11` y `P-PSEA-07`).
+- No duplica la generacion del informe (eso es `P-PSEA-09`).
+- No duplica el flujo de datos (eso es `P-PSEA-08`).
+- No es un instructivo de uso de aplicativos.
 
 #### Riesgos de interpretacion
 
-- **Confundir con activo:** `P-PSEA-11` no es un procedimiento vigente; esta reservado.
-- **Crear contenido:** No debe desarrollarse contenido para un procedimiento de envio/recepcion.
-- **Omitir documento sustituto:** La funcion de envio/recepcion esta cubierta por `P-PSEA-10` (preparacion in situ).
+- **Duplicar P-PSEA-07:** El procedimiento debe citar `P-PSEA-07` para estadistica, no replicar definiciones.
+- **Omitir particularidades de CO:** Debe conservar las condiciones especificas de este gas (infrarrojo, interferencias, etc.).
+- **Incluir H/E como procedimiento separado:** La evaluacion de H/E se documenta en `F-PSEA-11` y `P-PSEA-07`; aqui solo se cita.
+- **Confundir con F-PSEA-13:** Este procedimiento no define el formato del informe; cita `P-PSEA-09` y `F-PSEA-13`.
 
 ---
 
 ## Criterio minimo de elaboracion
 
-El registro de no activo documenta la decision de reservar `P-PSEA-11` por ausencia de envio fisico de items, indicando `P-PSEA-10` como documento sustituto, sin desarrollar contenido ni confundirse con ficha activa.
+El procedimiento tecnico para CO contiene las condiciones especificas del analito, citando `P-PSEA-07`, `F-PSEA-11`, `P-PSEA-09` y `P-PSEA-08` sin duplicar estadistica, H/E, informe ni flujo de datos.

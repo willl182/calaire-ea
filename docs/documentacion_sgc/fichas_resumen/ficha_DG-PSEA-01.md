@@ -17,7 +17,7 @@
 
 ### Proposito operativo
 
-Documento general que describe el protocolo de participacion en los ensayos de aptitud del PEA. Se mantiene vigente conceptualmente pero se revisara al final del ciclo de estabilizacion del sistema documental, cuando las fichas base (`P-PSEA-12`, `P-PSEA-13`, `P-PSEA-23`) y los aplicativos (`DG-PSEA-02`, `DG-PSEA-03`) ya esten definidos. No se interviene en esta fase.
+Documento general que describe el protocolo de participacion en los ensayos de aptitud del PEA. Se mantiene vigente conceptualmente pero se revisara al final del ciclo de estabilizacion del sistema documental, cuando las fichas base (`P-PSEA-02`, `P-PSEA-03`, `P-PSEA-08`) y los aplicativos (`DG-PSEA-02`, `DG-PSEA-03`) ya esten definidos. No se interviene en esta fase.
 
 ### Rol en el flujo
 
@@ -53,9 +53,9 @@ Documento general marco; no depende de aplicativo.
 
 | Codigo / fuente | Descripcion | Rol en el flujo |
 |---|---|---|
-| `P-PSEA-12` | Matriz documental (al cierre) | Referencia |
-| `P-PSEA-13` | Matriz de evidencias (al cierre) | Referencia |
-| `P-PSEA-23` | Flujo de datos (al cierre) | Referencia |
+| `P-PSEA-02` | Matriz documental (al cierre) | Referencia |
+| `P-PSEA-03` | Matriz de evidencias (al cierre) | Referencia |
+| `P-PSEA-08` | Flujo de datos (al cierre) | Referencia |
 
 #### Salidas principales
 
@@ -72,7 +72,7 @@ Documento general marco; no depende de aplicativo.
 | Codigo | Relacion | Tipo de vinculo |
 |---|---|---|
 | `P-PSEA-01` | Protocolo general EA (documento marco paralelo) | Obligatorio |
-| `P-PSEA-12` | Matriz documental que se citara al cierre | Referencia |
+| `P-PSEA-02` | Matriz documental que se citara al cierre | Referencia |
 | `DG-PSEA-02` | Aplicativo que se citara al cierre | Referencia |
 | `DG-PSEA-03` | Aplicativo que se citara al cierre | Referencia |
 

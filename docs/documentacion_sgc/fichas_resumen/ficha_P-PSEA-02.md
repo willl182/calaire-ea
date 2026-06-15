@@ -5,10 +5,10 @@
 | Campo | Valor |
 |---|---|
 | **Codigo** | `P-PSEA-02` |
-| **Nombre decidido** | Procedimiento tecnico NO/NO2 |
-| **Tipo documental** | Procedimiento |
-| **Estado** | Actualizar |
-| **Prioridad** | Media |
+| **Nombre decidido** | Matriz documental basica del PEA |
+| **Tipo documental** | Matriz |
+| **Estado** | Elaborar |
+| **Prioridad** | Alta |
 | **Clase de ficha** | Ficha activa |
 
 ---
@@ -17,19 +17,20 @@
 
 ### Proposito operativo
 
-Procedimiento tecnico especifico para la evaluacion de aptitud en oxido de nitrogeno (NO/NO2) dentro del PEA. Documenta las condiciones operativas, metodologias de referencia, particularidades del gas y criterios de aceptacion especificos para este analito. Debe citar documentos transversales y no duplicar estadistica, H/E, informe ni flujo de datos.
+Controla y lista el universo documental numerado del PEA, incluyendo documentos generales (`DG-PSEA`), procedimientos (`P-PSEA`), instructivos (`I-PSEA`) y formatos/registros (`F-PSEA`) con sus subformatos. Sirve como mapa de referencia para que otros documentos citen el codigo correcto sin duplicar listados.
 
 ### Rol en el flujo
 
-- [x] Criterio tecnico
-- [x] Procedimiento
+- [x] Matriz
 - [ ] Entrada
 - [ ] Salida
 - [ ] Registro oficial
 - [ ] Evidencia
+- [ ] Criterio tecnico
 - [ ] Instructivo
-- [ ] Matriz
 - [ ] Soporte documental
+
+Es la matriz maestra de todo lo numerado; se consulta, no se ejecuta.
 
 ---
 
@@ -38,11 +39,11 @@ Procedimiento tecnico especifico para la evaluacion de aptitud en oxido de nitro
 #### Aplicativo asociado
 
 - [ ] `calaire-app`
-- [x] `pt_app`
+- [ ] `pt_app`
 - [ ] Ambos
-- [ ] Ninguno
+- [x] Ninguno
 
-El analisis estadistico se ejecuta en `pt_app`, pero este procedimiento define criterios especificos del analito.
+Es un documento matriz; no depende de aplicativo.
 
 ---
 
@@ -52,17 +53,18 @@ El analisis estadistico se ejecuta en `pt_app`, pero este procedimiento define c
 
 | Codigo / fuente | Descripcion | Rol en el flujo |
 |---|---|---|
-| `P-PSEA-06` | Diseno estadistico | Referencia obligatoria |
-| `F-PSEA-13` | Registro de H/E | Referencia obligatoria |
-| `P-PSEA-10` | Preparacion del item | Referencia |
-| `F-PSEA-14` | Dataset oficial | Referencia |
+| `mapa_tentativo_sgc_pea.md` | Inventario operativo tentativo | Insumo |
+| `mapa_decisiones_documentales_pea.md` | Decisiones firmes por codigo | Insumo |
+| `sesion_grill_sgc_pea_v1.md` | Decisiones de arquitectura | Insumo |
+| `00_inventario_maestro_fichas.md` | Matriz maestra de fichas | Referencia |
 
 #### Salidas principales
 
 | Codigo / destino | Descripcion | Rol en el flujo |
 |---|---|---|
-| `P-PSEA-07` | Informe de resultados | Referencia |
-| `F-PSEA-04` | Informe final | Referencia |
+| Procedimientos `P-PSEA` | Referencia documental para citar codigos | Referencia |
+| Formatos `F-PSEA` | Referencia documental para citar codigos | Referencia |
+| Instructivos `I-PSEA` | Referencia documental para citar codigos | Referencia |
 
 ---
 
@@ -72,13 +74,10 @@ El analisis estadistico se ejecuta en `pt_app`, pero este procedimiento define c
 
 | Codigo | Relacion | Tipo de vinculo |
 |---|---|---|
-| `P-PSEA-06` | Cita para diseno estadistico | Obligatorio |
-| `F-PSEA-13` | Cita para H/E | Obligatorio |
-| `P-PSEA-07` | Cita para informe | Obligatorio |
-| `P-PSEA-23` | Cita para flujo de datos | Obligatorio |
-| `DG-PSEA-03` | Aplicativo de analisis | Referencia |
-| `I-PSEA-17` | Instructivo de preprocesador | Referencia |
-| `I-PSEA-18` | Instructivo de analisis | Referencia |
+| `P-PSEA-03` | Cita / Diferencia de alcance | Obligatorio |
+| `P-PSEA-08` | Cita / Flujo de datos | Obligatorio |
+| `DG-PSEA-01` | Referencia al cierre | Referencia |
+| `P-PSEA-01` | Referencia al cierre | Referencia |
 
 ---
 
@@ -86,21 +85,19 @@ El analisis estadistico se ejecuta en `pt_app`, pero este procedimiento define c
 
 #### Limites de alcance
 
-- No duplica el diseno estadistico (eso es `P-PSEA-06`).
-- No duplica la evaluacion de H/E (eso es `F-PSEA-13` y `P-PSEA-06`).
-- No duplica la generacion del informe (eso es `P-PSEA-07`).
-- No duplica el flujo de datos (eso es `P-PSEA-23`).
-- No es un instructivo de uso de aplicativos.
+- No trata aprobacion, retencion, obsolescencia ni control documental macro.
+- No lista archivos tecnicos internos del preprocesador (van en `P-PSEA-08`).
+- No define contenido de cada documento; solo lista codigo, nombre, estado y familia.
+- No es la matriz de evidencias por ronda (eso es `P-PSEA-03`).
 
 #### Riesgos de interpretacion
 
-- **Duplicar P-PSEA-06:** El procedimiento debe citar `P-PSEA-06` para estadistica, no replicar definiciones.
-- **Omitir particularidades de NO/NO2:** Debe conservar las condiciones especificas de este gas (reactividad, conversion NO-NO2, etc.).
-- **Incluir H/E como procedimiento separado:** La evaluacion de H/E se documenta en `F-PSEA-13` y `P-PSEA-06`; aqui solo se cita.
-- **Confundir con F-PSEA-04:** Este procedimiento no define el formato del informe; cita `P-PSEA-07` y `F-PSEA-04`.
+- **Confundir con P-PSEA-03:** `P-PSEA-02` lista documentos del sistema; `P-PSEA-03` lista registros/evidencias generadas por ronda o evento.
+- **Incluir archivos tecnicos internos:** Los archivos tecnicos del preprocesador deben mapearse en `P-PSEA-08`, no en `P-PSEA-02`.
+- **Tratar como procedimiento de control documental macro:** No es un procedimiento de gestion documental institucional; es una matriz especifica del PEA.
 
 ---
 
 ## Criterio minimo de elaboracion
 
-El procedimiento tecnico para NO/NO2 contiene las condiciones especificas del analito, citando `P-PSEA-06`, `F-PSEA-13`, `P-PSEA-07` y `P-PSEA-23` sin duplicar estadistica, H/E, informe ni flujo de datos.
+La matriz documental basica lista todo lo numerado (`DG`, `P`, `I`, `F` y subformatos) con codigo, nombre operativo, familia y estado consolidado, sin ambiguedades respecto a documentos retirados, reservados o absorbidos.

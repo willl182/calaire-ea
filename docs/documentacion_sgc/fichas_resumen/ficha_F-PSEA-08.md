@@ -5,8 +5,8 @@
 | Campo | Valor |
 |---|---|
 | **Codigo** | `F-PSEA-08` |
-| **Nombre decidido** | Preparacion y control del item |
-| **Tipo documental** | Formato |
+| **Nombre decidido** | Datos reportados por participante |
+| **Tipo documental** | Registro |
 | **Estado** | Mantener / Actualizar |
 | **Prioridad** | Media |
 | **Clase de ficha** | Ficha activa |
@@ -17,13 +17,13 @@
 
 ### Proposito operativo
 
-Dossier o registro de la preparacion y control del item de ensayo gaseoso. Documenta las condiciones de generacion, niveles de concentracion, controles realizados, trazabilidad del calibrador dinamico y del cilindro, y evidencia de que el item cumple con los requisitos para la ronda. Se genera desde la operacion tecnica y se referencia en `P-PSEA-10`.
+Registro donde cada participante reporta sus datos de medicion para una ronda de ensayo de aptitud. Es el registro primario de datos crudos de participantes y se captura en `calaire-app`. Alimenta la exportacion oficial (`F-PSEA-09`) y eventualmente el dataset consolidado (`F-PSEA-12`).
 
 ### Rol en el flujo
 
 - [x] Registro oficial
+- [x] Entrada
 - [x] Evidencia
-- [ ] Entrada
 - [ ] Salida
 - [ ] Criterio tecnico
 - [ ] Instructivo
@@ -41,7 +41,7 @@ Dossier o registro de la preparacion y control del item de ensayo gaseoso. Docum
 - [ ] Ambos
 - [ ] Ninguno
 
-Los niveles se definen en `calaire-app`; el registro se genera desde la operacion tecnica.
+Se captura en `calaire-app` por cada participante.
 
 ---
 
@@ -51,18 +51,17 @@ Los niveles se definen en `calaire-app`; el registro se genera desde la operacio
 
 | Codigo / fuente | Descripcion | Rol en el flujo |
 |---|---|---|
-| `P-PSEA-10` | Preparacion y control del item (procedimiento) | Referencia |
-| `calaire-app` | Niveles de concentracion definidos | Insumo |
-| Calibrador dinamico | Datos de generacion de concentraciones | Insumo tecnico |
-| Cilindro de gas | Datos de trazabilidad | Insumo tecnico |
+| Participantes | Datos de medicion reportados por laboratorios | Origen |
+| `calaire-app` | Interfaz de captura | Origen |
+| `F-PSEA-03` | Registro de participacion | Referencia |
 
 #### Salidas principales
 
 | Codigo / destino | Descripcion | Rol en el flujo |
 |---|---|---|
-| `F-PSEA-06` | Plan de ronda (referencia al item) | Referencia |
-| `F-PSEA-13` | Registro de H/E del item | Referencia |
-| `P-PSEA-06` | Criterio estadistico de H/E | Referencia |
+| `F-PSEA-09` | Datos exportados para analisis PT | Referencia |
+| `F-PSEA-12` | Dataset consolidado (usa estos datos) | Referencia |
+| `P-PSEA-07` | Analisis estadistico | Referencia |
 
 ---
 
@@ -72,11 +71,11 @@ Los niveles se definen en `calaire-app`; el registro se genera desde la operacio
 
 | Codigo | Relacion | Tipo de vinculo |
 |---|---|---|
-| `P-PSEA-10` | Procedimiento que gobierna la preparacion | Obligatorio |
-| `F-PSEA-13` | Registro de H/E del item | Obligatorio |
-| `F-PSEA-06` | Plan de ronda que referencia al item | Obligatorio |
-| `P-PSEA-06` | Criterio estadistico de H/E | Referencia |
-| `DG-PSEA-02` | Aplicativo donde se definen niveles | Obligatorio |
+| `F-PSEA-03` | Registro de participacion | Obligatorio |
+| `F-PSEA-09` | Datos exportados derivados | Obligatorio |
+| `F-PSEA-12` | Dataset consolidado | Obligatorio |
+| `I-PSEA-02` | Instructivo para participante | Obligatorio |
+| `DG-PSEA-02` | Aplicativo de captura | Obligatorio |
 
 ---
 
@@ -84,20 +83,20 @@ Los niveles se definen en `calaire-app`; el registro se genera desde la operacio
 
 #### Limites de alcance
 
-- No es el procedimiento de preparacion (eso es `P-PSEA-10`); es el registro/dossier.
-- No es el registro de H/E (eso es `F-PSEA-13`); es el registro de preparacion del item.
-- No contiene datos de participantes.
-- No es un instructivo de uso de equipos.
+- No es el registro de participacion (eso es `F-PSEA-03`); es el registro de datos.
+- No es la exportacion oficial (eso es `F-PSEA-09`); es la captura individual.
+- No es el dataset consolidado (eso es `F-PSEA-12`).
+- No es un instructivo de uso.
 
 #### Riesgos de interpretacion
 
-- **Confundir con P-PSEA-10:** `P-PSEA-10` es el procedimiento; `F-PSEA-08` es el registro que resulta.
-- **Confundir con F-PSEA-13:** `F-PSEA-08` documenta preparacion; `F-PSEA-13` documenta H/E.
-- **Omitir trazabilidad:** Debe incluir trazabilidad del calibrador dinamico y del cilindro.
-- **Omitir niveles de calaire-app:** Los niveles deben referenciarse a los definidos en `calaire-app`.
+- **Confundir con F-PSEA-09:** `F-PSEA-08` es la captura individual; `F-PSEA-09` es la exportacion oficial consolidada.
+- **Confundir con F-PSEA-12:** `F-PSEA-12` es el dataset consolidado en `pt_app`; `F-PSEA-08` es la captura en `calaire-app`.
+- **Omitir trazabilidad:** Cada dato debe vincularse con el participante y la ronda correspondiente.
+- **Incluir analisis estadistico:** Este registro contiene datos crudos, no resultados.
 
 ---
 
 ## Criterio minimo de elaboracion
 
-El dossier de preparacion del item contiene condiciones de generacion, niveles, controles, trazabilidad del calibrador y cilindro, vinculado con `P-PSEA-10` y `F-PSEA-13`, sin duplicar procedimientos ni criterios estadisticos.
+El registro de datos reportados contiene las mediciones individuales por participante, capturadas en `calaire-app`, vinculadas con `F-PSEA-03`, y constituyen la fuente primaria para `F-PSEA-09` y `F-PSEA-12`.

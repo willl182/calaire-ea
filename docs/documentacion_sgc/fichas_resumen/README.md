@@ -49,11 +49,11 @@
 |---|---|---|
 | Fase 1: Inventario maestro | Completado | `00_inventario_maestro_fichas.md` |
 | Fase 2: Plantilla base | Completado | `00_plantilla_ficha_resumen.md` |
-| Fase 3: Arquitectura documental | Completado | `P-PSEA-12`, `P-PSEA-13`, `P-PSEA-23`, `DG-PSEA-02`, `DG-PSEA-03` |
-| Fase 4: Flujo digital y formatos criticos | Completado | `I-PSEA-10`, `I-PSEA-16`, `I-PSEA-17`, `I-PSEA-18`, `F-PSEA-07`, `F-PSEA-10`, `F-PSEA-13A-D`, `F-PSEA-14` |
-| Fase 5: Procedimientos transversales | Completado | `P-PSEA-06`, `P-PSEA-07`, `P-PSEA-09`, `P-PSEA-10`, `F-PSEA-04` |
-| Fase 6: Formatos operativos activos | Completado | `F-PSEA-01`, `F-PSEA-02`, `F-PSEA-05`, `F-PSEA-05A`, `F-PSEA-06`, `F-PSEA-08`, `F-PSEA-09`, `F-PSEA-12`, `F-PSEA-13` |
-| Fase 7: Gestion operativa | Completado | `P-PSEA-08`, `P-PSEA-16`, `P-PSEA-20`, `P-PSEA-21`, `P-PSEA-24`, `P-PSEA-25`, `P-PSEA-26`, `P-PSEA-27`, `P-PSEA-28`, `F-PSEA-16`, `F-PSEA-17`, `F-PSEA-21`, `F-PSEA-23` |
-| Fase 8: Procedimientos por analito | Completado | `P-PSEA-02`, `P-PSEA-03`, `P-PSEA-04`, `P-PSEA-05` |
-| Fase 9: No activos y cierre | Completado | `DG-PSEA-01`, `P-PSEA-01`, `P-PSEA-11`, `P-PSEA-14`, `P-PSEA-15`, `P-PSEA-17`, `P-PSEA-18`, `P-PSEA-19`, `P-PSEA-22`, `F-PSEA-03`, `F-PSEA-11` |
+| Fase 3: Arquitectura documental | Completado | `P-PSEA-02`, `P-PSEA-03`, `P-PSEA-08`, `DG-PSEA-02`, `DG-PSEA-03` |
+| Fase 4: Flujo digital y formatos criticos | Completado | `I-PSEA-02`, `I-PSEA-03`, `I-PSEA-04`, `I-PSEA-05`, `F-PSEA-06`, `F-PSEA-10`, `F-PSEA-11A-D`, `F-PSEA-12` |
+| Fase 5: Procedimientos transversales | Completado | `P-PSEA-07`, `P-PSEA-09`, `P-PSEA-04`, `P-PSEA-06`, `F-PSEA-13` |
+| Fase 6: Formatos operativos activos | Completado | `F-PSEA-01`, `F-PSEA-02`, `F-PSEA-03`, `F-PSEA-04`, `F-PSEA-05`, `F-PSEA-07`, `F-PSEA-08`, `F-PSEA-09`, `F-PSEA-11` |
+| Fase 7: Gestion operativa | Completado | `P-PSEA-14`, `P-PSEA-15`, `P-PSEA-05`, `P-PSEA-16`, `P-PSEA-17`, `P-PSEA-18`, `P-PSEA-19`, `P-PSEA-20`, `P-PSEA-21`, `F-PSEA-14`, `F-PSEA-15`, `F-PSEA-16`, `F-PSEA-17` |
+| Fase 8: Procedimientos por analito | Completado | `P-PSEA-10`, `P-PSEA-11`, `P-PSEA-12`, `P-PSEA-13` |
+| Fase 9: No activos y cierre | Completado | `DG-PSEA-01`, `P-PSEA-01`, `P-PSEA-11`, `P-PSEA-22`, `P-PSEA-23`, `P-PSEA-17`, `P-PSEA-18`, `P-PSEA-19`, `P-PSEA-22`, `F-PSEA-03`, `F-PSEA-11` |
 | Fase 10: Revision de calidad | En revision | Auditoria de consistencia e integracion (`revision b`) |

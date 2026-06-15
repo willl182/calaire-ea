@@ -5,10 +5,10 @@
 | Campo | Valor |
 |---|---|
 | **Codigo** | `F-PSEA-06` |
-| **Nombre decidido** | Plan de ronda EA |
+| **Nombre decidido** | Ficha digital de ronda EA |
 | **Tipo documental** | Formato |
-| **Estado** | Mantener / Actualizar |
-| **Prioridad** | Media-alta |
+| **Estado** | Elaborar / Actualizar |
+| **Prioridad** | Alta |
 | **Clase de ficha** | Ficha activa |
 
 ---
@@ -17,18 +17,20 @@
 
 ### Proposito operativo
 
-Documento consolidado del plan de una ronda de ensayo de aptitud. Integra el calendario global (`F-PSEA-01`), el cronograma detallado (`F-PSEA-02`), la ficha digital de ronda (`F-PSEA-07`) y la nota/matriz A-U de ISO/IEC 17043:2023 7.2.1.3. Es el documento maestro de planificacion de cada ronda.
+Registra y exporta desde `calaire-app` la informacion estructurada de una ronda de ensayo de aptitud, incluyendo identificacion, participantes, cronograma, item de ensayo, niveles de concentracion y puntos A-U requeridos por ISO/IEC 17043:2023 7.2.1.3. Es el insumo principal para el `F-PSEA-05` (Plan de ronda).
 
 ### Rol en el flujo
 
-- [x] Registro oficial
-- [x] Evidencia
 - [x] Salida
+- [x] Evidencia
 - [ ] Entrada
+- [ ] Registro oficial
 - [ ] Criterio tecnico
 - [ ] Instructivo
 - [ ] Matriz
 - [ ] Soporte documental
+
+Es una salida exportable del aplicativo y evidencia de planificacion.
 
 ---
 
@@ -41,7 +43,7 @@ Documento consolidado del plan de una ronda de ensayo de aptitud. Integra el cal
 - [ ] Ambos
 - [ ] Ninguno
 
-Se genera desde `calaire-app` integrando multiples formatos.
+Se genera, diligencia y exporta desde `calaire-app`.
 
 ---
 
@@ -51,18 +53,16 @@ Se genera desde `calaire-app` integrando multiples formatos.
 
 | Codigo / fuente | Descripcion | Rol en el flujo |
 |---|---|---|
-| `F-PSEA-01` | Calendario global de ronda | Insumo |
-| `F-PSEA-02` | Cronograma detallado de ronda | Insumo |
-| `F-PSEA-07` | Ficha digital de ronda | Insumo |
-| `F-PSEA-08` | Preparacion y control del item | Referencia |
-| `P-PSEA-09` | Planificacion de ronda | Referencia |
+| `calaire-app` | Datos de ronda ingresados en el aplicativo | Origen |
+| `P-PSEA-04` | Planificacion de ronda | Referencia |
+| `F-PSEA-01` | Calendario global | Referencia |
+| `F-PSEA-02` | Cronograma detallado | Referencia |
 
 #### Salidas principales
 
 | Codigo / destino | Descripcion | Rol en el flujo |
 |---|---|---|
-| Participantes | Comunicacion del plan de ronda | Producto |
-| `P-PSEA-08` | Colusion y falsificacion (medidas preventivas) | Referencia |
+| `F-PSEA-05` | Plan de ronda EA | Entrada principal |
 
 ---
 
@@ -72,13 +72,11 @@ Se genera desde `calaire-app` integrando multiples formatos.
 
 | Codigo | Relacion | Tipo de vinculo |
 |---|---|---|
-| `P-PSEA-09` | Procedimiento que gobierna la planificacion | Obligatorio |
-| `F-PSEA-01` | Calendario global integrado | Obligatorio |
-| `F-PSEA-02` | Cronograma detallado integrado | Obligatorio |
-| `F-PSEA-07` | Ficha digital integrada | Obligatorio |
-| `F-PSEA-08` | Preparacion del item referenciada | Obligatorio |
-| `P-PSEA-08` | Colusion y falsificacion (medidas preventivas) | Referencia |
-| `DG-PSEA-02` | Aplicativo que genera el plan | Obligatorio |
+| `P-PSEA-04` | Planificacion que genera la ficha | Obligatorio |
+| `F-PSEA-05` | Plan de ronda que absorbe esta ficha | Obligatorio |
+| `F-PSEA-01` | Calendario referenciado en la ficha | Referencia |
+| `F-PSEA-02` | Cronograma referenciado en la ficha | Referencia |
+| `DG-PSEA-02` | Aplicativo que genera la ficha | Obligatorio |
 
 ---
 
@@ -86,20 +84,19 @@ Se genera desde `calaire-app` integrando multiples formatos.
 
 #### Limites de alcance
 
-- No es un procedimiento de planificacion (eso es `P-PSEA-09`); es el formato/registro del plan.
-- No contiene datos reportados por participantes (eso es `F-PSEA-09`).
-- No contiene resultados de aptitud (eso es `F-PSEA-04`).
-- No es un instructivo de uso.
+- No es el plan de ronda completo (eso es `F-PSEA-05`); es un insumo estructurado.
+- No contiene datos reportados por participantes (eso es `F-PSEA-08`).
+- No contiene anexos tecnicos de equipos (eso es `F-PSEA-04`).
+- No es un instructivo de uso del aplicativo.
 
 #### Riesgos de interpretacion
 
-- **Confundir con P-PSEA-09:** `P-PSEA-09` es el procedimiento de planificacion; `F-PSEA-06` es el formato/registro del plan.
-- **Omitir nota A-U:** Debe integrar o referenciar la nota/matriz A-U de ISO/IEC 17043:2023 7.2.1.3.
-- **Omitir H/E:** No debe decir que H/E no aplica; H/E se documenta en `F-PSEA-13`.
-- **Incluir datos de analisis:** El plan de ronda no incluye resultados estadisticos.
+- **Confundir con F-PSEA-05:** `F-PSEA-06` es la ficha digital generada por el aplicativo; `F-PSEA-05` es el plan de ronda consolidado que la integra con otros elementos.
+- **Omitir puntos A-U:** La ficha debe incluir o referenciar los puntos A-U de ISO/IEC 17043:2023 7.2.1.3.
+- **Incluir datos de analisis:** Los datos estadisticos y resultados de aptitud no van en esta ficha; van en `F-PSEA-13` y `F-PSEA-12`.
 
 ---
 
 ## Criterio minimo de elaboracion
 
-El plan de ronda integra `F-PSEA-01`, `F-PSEA-02`, `F-PSEA-07`, referencia a `F-PSEA-08` y nota A-U, generado desde `calaire-app`, como documento maestro de planificacion sin incluir datos de participantes ni resultados de analisis.
+La ficha digital contiene o referencia: identificacion de ronda, participantes, cronograma, item de ensayo, niveles, puntos A-U, y se exporta desde `calaire-app` como insumo de `F-PSEA-05`.

@@ -5,10 +5,10 @@
 | Campo | Valor |
 |---|---|
 | **Codigo** | `P-PSEA-04` |
-| **Nombre decidido** | Procedimiento tecnico O3 |
+| **Nombre decidido** | Planificacion de ronda EA |
 | **Tipo documental** | Procedimiento |
 | **Estado** | Actualizar |
-| **Prioridad** | Media |
+| **Prioridad** | Alta |
 | **Clase de ficha** | Ficha activa |
 
 ---
@@ -17,7 +17,7 @@
 
 ### Proposito operativo
 
-Procedimiento tecnico especifico para la evaluacion de aptitud en ozono (O3) dentro del PEA. Documenta las condiciones operativas, metodologias de referencia, particularidades del gas y criterios de aceptacion especificos para este analito. Requiere correccion de referencias internas antiguas y duplicaciones. Debe citar documentos transversales y no duplicar estadistica, H/E, informe ni flujo de datos.
+Gobierna la planificacion de una ronda de ensayo de aptitud, incluyendo definicion de alcance, seleccion de participantes, calendario, cronograma, item de ensayo, niveles de concentracion y matriz de criterios de ISO/IEC 17043:2023 7.2.1.3 (nota/matriz A-U). La planificacion se soporta en `calaire-app` y en formatos exportables.
 
 ### Rol en el flujo
 
@@ -37,12 +37,12 @@ Procedimiento tecnico especifico para la evaluacion de aptitud en ozono (O3) den
 
 #### Aplicativo asociado
 
-- [ ] `calaire-app`
-- [x] `pt_app`
+- [x] `calaire-app`
+- [ ] `pt_app`
 - [ ] Ambos
 - [ ] Ninguno
 
-El analisis estadistico se ejecuta en `pt_app`, pero este procedimiento define criterios especificos del analito.
+La planificacion se ejecuta principalmente en `calaire-app`.
 
 ---
 
@@ -52,17 +52,20 @@ El analisis estadistico se ejecuta en `pt_app`, pero este procedimiento define c
 
 | Codigo / fuente | Descripcion | Rol en el flujo |
 |---|---|---|
-| `P-PSEA-06` | Diseno estadistico | Referencia obligatoria |
-| `F-PSEA-13` | Registro de H/E | Referencia obligatoria |
-| `P-PSEA-10` | Preparacion del item | Referencia |
-| `F-PSEA-14` | Dataset oficial | Referencia |
+| `F-PSEA-01` | Calendario global de ronda | Insumo |
+| `F-PSEA-02` | Cronograma detallado de ronda | Insumo |
+| `F-PSEA-05` | Plan de ronda EA | Producto |
+| `F-PSEA-06` | Ficha digital de ronda | Insumo / Producto |
+| `F-PSEA-07` | Preparacion y control del item | Referencia |
+| ISO/IEC 17043:2023 7.2.1.3 | Nota/matriz A-U | Referencia externa |
 
 #### Salidas principales
 
 | Codigo / destino | Descripcion | Rol en el flujo |
 |---|---|---|
-| `P-PSEA-07` | Informe de resultados | Referencia |
-| `F-PSEA-04` | Informe final | Referencia |
+| `F-PSEA-05` | Plan de ronda consolidado | Producto |
+| `F-PSEA-06` | Ficha digital de ronda | Producto |
+| `P-PSEA-06` | Preparacion y control del item | Referencia |
 
 ---
 
@@ -72,13 +75,12 @@ El analisis estadistico se ejecuta en `pt_app`, pero este procedimiento define c
 
 | Codigo | Relacion | Tipo de vinculo |
 |---|---|---|
-| `P-PSEA-06` | Cita para diseno estadistico | Obligatorio |
-| `F-PSEA-13` | Cita para H/E | Obligatorio |
-| `P-PSEA-07` | Cita para informe | Obligatorio |
-| `P-PSEA-23` | Cita para flujo de datos | Obligatorio |
-| `DG-PSEA-03` | Aplicativo de analisis | Referencia |
-| `I-PSEA-17` | Instructivo de preprocesador | Referencia |
-| `I-PSEA-18` | Instructivo de analisis | Referencia |
+| `DG-PSEA-02` | Aplicativo que soporta la planificacion | Obligatorio |
+| `I-PSEA-03` | Instructivo de administracion de rondas | Obligatorio |
+| `P-PSEA-06` | Preparacion del item que debe planificarse | Obligatorio |
+| `F-PSEA-05` | Plan de ronda que este procedimiento produce | Obligatorio |
+| `F-PSEA-06` | Ficha digital que este procedimiento produce | Obligatorio |
+| `P-PSEA-14` | Colusion y falsificacion (medidas preventivas en plan) | Referencia |
 
 ---
 
@@ -86,22 +88,20 @@ El analisis estadistico se ejecuta en `pt_app`, pero este procedimiento define c
 
 #### Limites de alcance
 
-- No duplica el diseno estadistico (eso es `P-PSEA-06`).
-- No duplica la evaluacion de H/E (eso es `F-PSEA-13` y `P-PSEA-06`).
-- No duplica la generacion del informe (eso es `P-PSEA-07`).
-- No duplica el flujo de datos (eso es `P-PSEA-23`).
-- No es un instructivo de uso de aplicativos.
+- No es un instructivo de uso de `calaire-app` (eso es `I-PSEA-03`).
+- No define criterios estadisticos (eso es `P-PSEA-07`).
+- No es un procedimiento de preparacion del item (eso es `P-PSEA-06`).
+- No incluye comunicaciones a participantes (eso es `P-PSEA-05`).
 
 #### Riesgos de interpretacion
 
-- **Duplicar P-PSEA-06:** El procedimiento debe citar `P-PSEA-06` para estadistica, no replicar definiciones.
-- **Omitir correcciones necesarias:** Debe corregir referencias internas antiguas y duplicaciones existentes.
-- **Omitir particularidades de O3:** Debe conservar las condiciones especificas de este gas (inestabilidad, fotolisis, etc.).
-- **Incluir H/E como procedimiento separado:** La evaluacion de H/E se documenta en `F-PSEA-13` y `P-PSEA-06`; aqui solo se cita.
-- **Confundir con F-PSEA-04:** Este procedimiento no define el formato del informe; cita `P-PSEA-07` y `F-PSEA-04`.
+- **Confundir con F-PSEA-05:** `F-PSEA-05` es el plan de ronda como formato/registro; `P-PSEA-04` es el procedimiento que gobierna como planificar.
+- **Omitir nota A-U:** La planificacion debe incluir o referenciar la nota/matriz A-U de ISO/IEC 17043:2023 7.2.1.3.
+- **Describir funciones de calaire-app:** Las funciones del aplicativo se documentan en `DG-PSEA-02` e `I-PSEA-03`; este procedimiento gobierna la actividad de planificacion.
+- **Incluir analisis estadistico:** El analisis ocurre despues de la planificacion y ejecucion, bajo `P-PSEA-07` y `P-PSEA-09`.
 
 ---
 
 ## Criterio minimo de elaboracion
 
-El procedimiento tecnico para O3 contiene las condiciones especificas del analito, corrige referencias antiguas, y cita `P-PSEA-06`, `F-PSEA-13`, `P-PSEA-07` y `P-PSEA-23` sin duplicar estadistica, H/E, informe ni flujo de datos.
+El procedimiento define los pasos de planificacion, alcance, participantes, calendario, item, niveles y nota A-U, citando `calaire-app` como soporte y `F-PSEA-05` como producto, sin duplicar instructivos ni criterios estadisticos.

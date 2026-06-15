@@ -9,7 +9,7 @@
 ## Instrucciones de uso para subagentes
 
 1. Copiar esta plantilla para cada documento asignado.
-2. Nombrar el archivo: `ficha_[CODIGO].md` (ejemplo: `ficha_P-PSEA-06.md`).
+2. Nombrar el archivo: `ficha_[CODIGO].md` (ejemplo: `ficha_P-PSEA-07.md`).
 3. Llenar todos los campos obligatorios marcados con `*`.
 4. Respetar las reglas de redaccion y el checklist de calidad al final.
 5. No editar `sgc_res.md`, `README.md` ni `P-PSEA-01`.
@@ -122,15 +122,15 @@
 
 ### Alcance
 - No duplicar contenido que pertenece a otro documento.
-- Si un procedimiento por analito debe citar `P-PSEA-06`, usar "Cita `P-PSEA-06` para..." en lugar de replicar la definicion.
+- Si un procedimiento por analito debe citar `P-PSEA-07`, usar "Cita `P-PSEA-07` para..." en lugar de replicar la definicion.
 - No incluir procedimientos de aprobacion, retencion, obsolescencia ni control documental macro.
 
 ### No duplicacion
 - `calaire-app` y `pt_app` son documentos generales (`DG-PSEA-02`, `DG-PSEA-03`), no formatos.
-- Los archivos tecnicos internos del preprocesador se mapean en `P-PSEA-23`, no se convierten en `F-PSEA`.
+- Los archivos tecnicos internos del preprocesador se mapean en `P-PSEA-08`, no se convierten en `F-PSEA`.
 - `F-PSEA-10` es un registro, no el aplicativo.
-- `F-PSEA-12` es la exportacion desde `calaire-app`; `F-PSEA-14` es el dataset consolidado desde `pt_app`.
-- `P-PSEA-06` es procedimiento tecnico; `I-PSEA-17` e `I-PSEA-18` son instructivos de uso.
+- `F-PSEA-09` es la exportacion desde `calaire-app`; `F-PSEA-12` es el dataset consolidado desde `pt_app`.
+- `P-PSEA-07` es procedimiento tecnico; `I-PSEA-04` e `I-PSEA-05` son instructivos de uso.
 
 ### Trazabilidad documental
 - Toda referencia a un codigo documental debe existir en el inventario maestro.
@@ -146,12 +146,12 @@
 - [ ] Codigo, nombre, tipo, estado, prioridad y clase estan completos.
 - [ ] Aplicativo asociado es correcto (ninguno, `calaire-app`, `pt_app` o ambos).
 - [ ] Entradas y salidas indican codigo documental o fuente concreta.
-- [ ] No se confunde `F-PSEA-12` con `F-PSEA-14`.
+- [ ] No se confunde `F-PSEA-09` con `F-PSEA-12`.
 - [ ] No se trata `F-PSEA-10` como aplicativo.
-- [ ] No se afirma que H/E no aplica; H/E se documenta en `F-PSEA-13` y subformatos.
+- [ ] No se afirma que H/E no aplica; H/E se documenta en `F-PSEA-11` y subformatos.
 - [ ] Si la ficha es preliminar, se indica claramente la restriccion de contenido.
 - [ ] Si el documento es retirado/reservado/absorbido, se indica decision, razon y documento sustituto.
 - [ ] No se propone aprobacion, retencion, obsolescencia ni control documental macro.
 - [ ] No se edita `sgc_res.md`, `README.md` ni `P-PSEA-01`.
-- [ ] Procedimientos por analito (`P-PSEA-02` a `P-PSEA-05`) citan transversales y no duplican estadistica, H/E, informe ni flujo de datos.
+- [ ] Procedimientos por analito (`P-PSEA-10` a `P-PSEA-13`) citan transversales y no duplican estadistica, H/E, informe ni flujo de datos.
 - [ ] La ficha se guarda con nombre: `ficha_[CODIGO].md` en `docs/documentacion_sgc/fichas_resumen/`.

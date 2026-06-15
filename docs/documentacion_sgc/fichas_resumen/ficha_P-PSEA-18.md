@@ -5,11 +5,11 @@
 | Campo | Valor |
 |---|---|
 | **Codigo** | `P-PSEA-18` |
-| **Nombre decidido** | Revision por la direccion |
+| **Nombre decidido** | Apelaciones del PEA |
 | **Tipo documental** | Procedimiento |
-| **Estado** | Retirar |
-| **Prioridad** | No priorizar |
-| **Clase de ficha** | Registro de no activo |
+| **Estado** | Mantener / Actualizar |
+| **Prioridad** | Media-alta |
+| **Clase de ficha** | Ficha activa |
 
 ---
 
@@ -17,21 +17,19 @@
 
 ### Proposito operativo
 
-Codigo retirado del alcance documental propio del PEA. La revision por la direccion pertenece al sistema de gestion macro de la institucion, no al sistema documental especifico del PEA. No se desarrolla ni se mantiene como procedimiento activo del PEA.
+Gobierna la recepcion, registro, evaluacion, respuesta y seguimiento de apelaciones de participantes en el PEA. Las apelaciones se reciben por correo formal institucional al correo del grupo y no se gestionan como casos en `calaire-app`. Conecta con comunicaciones, TNC/NC/CAPA y control de valores sensibles.
 
 ### Rol en el flujo
 
-- [ ] Criterio tecnico
-- [ ] Procedimiento
+- [x] Criterio tecnico
+- [x] Procedimiento
 - [ ] Entrada
 - [ ] Salida
 - [ ] Registro oficial
 - [ ] Evidencia
 - [ ] Instructivo
 - [ ] Matriz
-- [x] Soporte documental
-
-Retirado; no tiene rol operativo en el PEA.
+- [ ] Soporte documental
 
 ---
 
@@ -44,7 +42,7 @@ Retirado; no tiene rol operativo en el PEA.
 - [ ] Ambos
 - [x] Ninguno
 
-Retirado; no hay aplicativo asociado.
+Las apelaciones se reciben por correo formal institucional; no se gestionan en `calaire-app`.
 
 ---
 
@@ -54,13 +52,17 @@ Retirado; no hay aplicativo asociado.
 
 | Codigo / fuente | Descripcion | Rol en el flujo |
 |---|---|---|
-| N/A | No aplica | N/A |
+| Participantes | Apelaciones recibidas por correo | Origen |
+| Correo institucional | Canal oficial de recepcion | Origen |
+| `P-PSEA-05` | Comunicaciones del PEA | Referencia |
 
 #### Salidas principales
 
 | Codigo / destino | Descripcion | Rol en el flujo |
 |---|---|---|
-| N/A | No aplica | N/A |
+| `P-PSEA-15` | TNC/NC/CAPA (si deriva) | Referencia |
+| `F-PSEA-15` | Registro de apelaciones | Referencia |
+| `P-PSEA-16` | Control de valores sensibles | Referencia |
 
 ---
 
@@ -70,8 +72,11 @@ Retirado; no hay aplicativo asociado.
 
 | Codigo | Relacion | Tipo de vinculo |
 |---|---|---|
-| Sistema macro SGC | Pertenece al sistema de gestion macro | Referencia externa |
-| `P-PSEA-17` | Auditorias (tambien retirado) | Referencia |
+| `P-PSEA-15` | Si la apelacion deriva en NC/CAPA | Obligatorio |
+| `P-PSEA-05` | Comunicaciones que registran la apelacion | Obligatorio |
+| `F-PSEA-15` | Registro de apelaciones | Obligatorio |
+| `P-PSEA-16` | Control de valores sensibles en apelaciones | Obligatorio |
+| `P-PSEA-17` | Quejas (diferenciadas de apelaciones) | Referencia |
 
 ---
 
@@ -79,18 +84,20 @@ Retirado; no hay aplicativo asociado.
 
 #### Limites de alcance
 
-- No se desarrolla ni se mantiene en el PEA.
-- Pertenece al sistema de gestion macro.
-- No es un procedimiento activo ni reservado.
+- No se gestiona en `calaire-app` (eso es `P-PSEA-17`); va por correo formal.
+- No es un procedimiento de quejas (eso es `P-PSEA-17`); las apelaciones son diferentes.
+- No es un procedimiento de colusion (eso es `P-PSEA-14`); conecta con el si la apelacion lo involucra.
+- No es un procedimiento de TNC/NC/CAPA (eso es `P-PSEA-15`); conecta con el.
 
 #### Riesgos de interpretacion
 
-- **Confundir con activo:** `P-PSEA-18` no es un procedimiento vigente del PEA; esta retirado.
-- **Desarrollar contenido:** No debe crearse contenido para este codigo en el PEA.
-- **Omitir razon:** Debe indicarse claramente que pertenece al sistema macro.
+- **Confundir con quejas:** Las apelaciones (`P-PSEA-18`) van por correo formal; las quejas (`P-PSEA-17`) se gestionan en `calaire-app`.
+- **Gestionar en calaire-app:** Las apelaciones no deben gestionarse como casos en `calaire-app` por ahora.
+- **Omitir conexion con P-PSEA-15:** Debe indicar claramente cuando una apelacion deriva en NC/CAPA.
+- **Omitir registro documental:** Las apelaciones deben quedar registradas en `F-PSEA-15`.
 
 ---
 
 ## Criterio minimo de elaboracion
 
-El registro de no activo documenta la decision de retirar `P-PSEA-18` del alcance PEA, indicando que pertenece al sistema de gestion macro, sin desarrollar contenido ni confundirse con ficha activa.
+El procedimiento define recepcion por correo formal institucional, registro en `F-PSEA-15`, evaluacion, respuesta, seguimiento y conexion con `P-PSEA-15`, `P-PSEA-05` y `P-PSEA-16`, diferenciando claramente apelaciones de quejas y sin gestionar en `calaire-app`.

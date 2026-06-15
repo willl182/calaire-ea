@@ -1,0 +1,739 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mapa de Navegacion SGC PEA</title>
+  <style>
+    :root {
+      --ink: #17211d;
+      --muted: #65736d;
+      --line: #d7ded8;
+      --paper: #f7f4ec;
+      --panel: #fffdfa;
+      --sea: #0e6b63;
+      --sea-2: #dff1ec;
+      --leaf: #6d8f35;
+      --amber: #b66b1f;
+      --clay: #a74938;
+      --violet: #56508f;
+      --blue: #2d6f98;
+      --shadow: 0 18px 55px rgba(23, 33, 29, .12);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(14,107,99,.05) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(14,107,99,.05) 1px, transparent 1px),
+        var(--paper);
+      background-size: 26px 26px;
+      font-family: "Aptos", "Segoe UI", sans-serif;
+    }
+
+    header {
+      min-height: 26vh;
+      padding: 34px clamp(18px, 4vw, 58px) 22px;
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(135deg, rgba(255,253,250,.94), rgba(223,241,236,.88));
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      gap: 10px;
+      align-items: center;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0;
+      text-transform: uppercase;
+      color: var(--sea);
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 34px;
+      height: 2px;
+      background: var(--sea);
+    }
+
+    h1 {
+      max-width: 980px;
+      margin: 14px 0 12px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(36px, 6vw, 74px);
+      line-height: .96;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      max-width: 940px;
+      margin: 0;
+      color: #42504a;
+      font-size: clamp(16px, 2vw, 20px);
+      line-height: 1.55;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: minmax(280px, 360px) minmax(0, 1fr);
+      gap: 18px;
+      padding: 18px;
+      min-height: 74vh;
+    }
+
+    aside, .workspace {
+      background: rgba(255,253,250,.92);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    aside {
+      position: sticky;
+      top: 18px;
+      align-self: start;
+      max-height: calc(100vh - 36px);
+      overflow: auto;
+      padding: 18px;
+    }
+
+    .workspace {
+      min-width: 0;
+      overflow: hidden;
+    }
+
+    .control-label {
+      display: block;
+      margin: 16px 0 8px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    input[type="search"] {
+      width: 100%;
+      height: 42px;
+      padding: 0 12px;
+      border: 1px solid #bfcac3;
+      background: white;
+      color: var(--ink);
+      font: inherit;
+      outline: none;
+    }
+
+    input[type="search"]:focus {
+      border-color: var(--sea);
+      box-shadow: 0 0 0 3px rgba(14,107,99,.16);
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    button {
+      min-height: 36px;
+      border: 1px solid #bdc7c1;
+      background: #fff;
+      color: var(--ink);
+      font: 700 13px/1 "Aptos", "Segoe UI", sans-serif;
+      cursor: pointer;
+      transition: transform .16s ease, background .16s ease, color .16s ease;
+    }
+
+    button:hover { transform: translateY(-1px); }
+    button.active {
+      background: var(--sea);
+      border-color: var(--sea);
+      color: white;
+    }
+
+    .chip { padding: 0 12px; }
+
+    .link-chip {
+      display: inline-flex;
+      min-height: 36px;
+      align-items: center;
+      border: 1px solid #bdc7c1;
+      background: #fff;
+      color: var(--ink);
+      font: 700 13px/1 "Aptos", "Segoe UI", sans-serif;
+      text-decoration: none;
+      transition: transform .16s ease, background .16s ease, color .16s ease;
+    }
+
+    .link-chip:hover { transform: translateY(-1px); }
+
+    .route-list {
+      display: grid;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .route-button {
+      width: 100%;
+      height: auto;
+      min-height: 48px;
+      padding: 10px 12px;
+      text-align: left;
+      background: #fbfaf7;
+    }
+
+    .route-button span {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-weight: 500;
+      line-height: 1.35;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    .stat {
+      padding: 10px;
+      border: 1px solid var(--line);
+      background: #fbfaf7;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 24px;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255,253,250,.96);
+    }
+
+    .toolbar .hint {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .diagram-shell {
+      position: relative;
+      min-height: 800px;
+      overflow: auto;
+      background:
+        radial-gradient(circle at 18% 12%, rgba(109,143,53,.13), transparent 28%),
+        radial-gradient(circle at 88% 80%, rgba(45,111,152,.12), transparent 28%),
+        rgba(255,253,250,.7);
+    }
+
+    svg {
+      display: block;
+      width: 100%;
+      height: 1350px;
+    }
+
+    .edge {
+      stroke: #aab5ae;
+      stroke-width: 1.4;
+      fill: none;
+      opacity: .52;
+      marker-end: url(#arrow);
+    }
+
+    .edge.active {
+      stroke: var(--sea);
+      stroke-width: 3;
+      opacity: 1;
+    }
+
+    .node {
+      cursor: pointer;
+      transition: opacity .16s ease;
+    }
+
+    .node rect {
+      rx: 8;
+      stroke-width: 1.4;
+      filter: drop-shadow(0 9px 18px rgba(23,33,29,.12));
+    }
+
+    .node text {
+      pointer-events: none;
+      fill: var(--ink);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .node .small {
+      fill: #51615a;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .node.dim, .edge.dim { opacity: .13; }
+
+    .node.active rect {
+      stroke: #092f2b;
+      stroke-width: 3;
+    }
+
+    .family-dg rect { fill: #dff1ec; stroke: #0e6b63; }
+    .family-p rect { fill: #edf2d8; stroke: #6d8f35; }
+    .family-i rect { fill: #e8e7f5; stroke: #56508f; }
+    .family-f rect { fill: #fff0d8; stroke: #b66b1f; }
+    .family-out rect { fill: #f2e2df; stroke: #a74938; }
+
+    .detail {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      width: min(440px, calc(100vw - 36px));
+      max-height: calc(100vh - 36px);
+      overflow: auto;
+      padding: 18px;
+      border: 1px solid #bfcac3;
+      background: rgba(255,253,250,.98);
+      box-shadow: var(--shadow);
+      transform: translateY(calc(100% + 30px));
+      transition: transform .22s ease;
+      z-index: 5;
+    }
+
+    .detail.open { transform: translateY(0); }
+    .detail h2 {
+      margin: 0 0 8px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 30px;
+      letter-spacing: 0;
+    }
+
+    .detail p {
+      color: #3f4e48;
+      line-height: 1.5;
+    }
+
+    .detail .context-note {
+      margin-top: 12px;
+      padding: 10px 12px;
+      border-left: 3px solid var(--sea);
+      background: #edf4f1;
+      color: #31413a;
+      font-size: 13px;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 12px 0;
+    }
+
+    .pill {
+      padding: 6px 9px;
+      border: 1px solid var(--line);
+      background: #fbfaf7;
+      color: #35433d;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .detail ul {
+      padding-left: 18px;
+      line-height: 1.5;
+    }
+
+    .close {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 34px;
+      min-height: 34px;
+    }
+
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 12px 16px;
+      border-top: 1px solid var(--line);
+      background: rgba(255,253,250,.96);
+    }
+
+    .legend span {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .column-label {
+      fill: #65736d;
+      font-size: 13px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .swatch {
+      width: 14px;
+      height: 14px;
+      border: 1px solid currentColor;
+    }
+
+    @media (max-width: 900px) {
+      main { grid-template-columns: 1fr; }
+      aside {
+        position: static;
+        max-height: none;
+      }
+      .diagram-shell { min-height: 520px; }
+      svg { width: 1180px; height: 1000px; }
+      .detail {
+        right: 10px;
+        bottom: 10px;
+        width: calc(100vw - 20px);
+        max-height: 58vh;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="eyebrow">CALAIRE-EA · Sistema documental PEA</div>
+    <h1>Mapa interactivo de navegacion del SGC</h1>
+    <p class="lead">Vista operacional de las relaciones entre documentos generales, procedimientos, instructivos y formatos del Proveedor de Ensayos de Aptitud. El mapa prioriza trazabilidad documental, flujo digital de datos y puntos de actualizacion definidos durante la revision del SGC PEA.</p>
+  </header>
+
+  <main>
+    <aside>
+      <label class="control-label" for="search">Buscar documento o relacion</label>
+      <input id="search" type="search" placeholder="Ej. F-PSEA-12, pt_app, informe">
+
+      <div class="control-label">Familia documental</div>
+      <div class="chips" id="familyFilters"></div>
+
+      <div class="control-label">Estado</div>
+      <div class="chips" id="stateFilters"></div>
+
+      <div class="control-label">Rutas criticas</div>
+      <div class="route-list" id="routes"></div>
+
+      <div class="stats">
+        <div class="stat"><strong id="visibleCount">0</strong><span>visibles</span></div>
+        <div class="stat"><strong id="edgeCount">0</strong><span>relaciones</span></div>
+        <div class="stat"><strong id="selectedCount">0</strong><span>ruta</span></div>
+      </div>
+    </aside>
+
+    <section class="workspace">
+      <div class="toolbar">
+        <div class="hint">Seleccione un nodo para ver su rol documental y resaltar sus dependencias directas.</div>
+        <div class="chips">
+          <a class="chip link-chip" href="fichas_resumen/index.html" target="_blank" rel="noopener">Indice de fichas</a>
+          <button class="chip" id="reset">Limpiar vista</button>
+          <button class="chip" id="fitData">Flujo de datos</button>
+          <button class="chip" id="fitUpdate">Orden de elaboracion</button>
+        </div>
+      </div>
+      <div class="diagram-shell">
+        <svg id="map" viewBox="0 0 1400 1350" role="img" aria-label="Mapa de navegacion documental SGC PEA">
+          <defs>
+            <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 0 L 10 5 L 0 10 z" fill="#8f9b94"></path>
+            </marker>
+          </defs>
+          <text class="column-label" x="70" y="26">Procedimientos</text>
+          <text class="column-label" x="520" y="26">Documentos / instructivos</text>
+          <text class="column-label" x="980" y="26">Formatos / registros</text>
+        </svg>
+      </div>
+      <div class="legend">
+        <span><i class="swatch" style="background:#dff1ec;color:#0e6b63"></i>Documentos generales</span>
+        <span><i class="swatch" style="background:#edf2d8;color:#6d8f35"></i>Procedimientos</span>
+        <span><i class="swatch" style="background:#e8e7f5;color:#56508f"></i>Instructivos</span>
+        <span><i class="swatch" style="background:#fff0d8;color:#b66b1f"></i>Formatos y registros</span>
+        <span><i class="swatch" style="background:#f2e2df;color:#a74938"></i>Retirado, reservado o fuera de alcance</span>
+      </div>
+    </section>
+  </main>
+
+  <section class="detail" id="detail" aria-live="polite">
+    <button class="close" id="closeDetail" title="Cerrar">x</button>
+    <h2 id="detailTitle"></h2>
+    <div class="meta" id="detailMeta"></div>
+    <p id="detailText"></p>
+    <div id="detailLinks"></div>
+  </section>
+
+  <script>
+    const nodes = [
+      { id: "P-PSEA-01", label: "Protocolo general EA", family: "P", state: "Mantener", x: 70, y: 45, w: 250, h: 54, text: "Procedimiento/protocolo marco del ensayo de aptitud. Debe citar el flujo digital, aplicativos e instructivos cuando el mapa este estabilizado." },
+      { id: "P-PSEA-10", label: "NO/NO2", family: "P", state: "Actualizar", x: 70, y: 105, w: 250, h: 54, text: "Procedimiento para ensayo de aptitud de oxidos de nitrogeno (NO/NO2). Debe aligerarse para conservar particularidades tecnicas y citar transversales." },
+      { id: "P-PSEA-11", label: "CO", family: "P", state: "Actualizar", x: 70, y: 165, w: 250, h: 54, text: "Procedimiento para ensayo de aptitud de monoxido de carbono (CO). Debe aligerarse para conservar particularidades tecnicas y citar transversales." },
+      { id: "P-PSEA-12", label: "O3", family: "P", state: "Actualizar", x: 70, y: 225, w: 250, h: 54, text: "Procedimiento para ensayo de aptitud de ozono (O3). Debe aligerarse para conservar particularidades tecnicas y citar transversales." },
+      { id: "P-PSEA-13", label: "SO2", family: "P", state: "Actualizar", x: 70, y: 285, w: 250, h: 54, text: "Procedimiento para ensayo de aptitud de dioxido de azufre (SO2). Debe aligerarse para conservar particularidades tecnicas y citar transversales." },
+      { id: "P-PSEA-07", label: "Diseno estadistico", family: "P", state: "Actualizar", x: 70, y: 345, w: 250, h: 54, text: "Procedimiento tecnico central para valor asignado, sigma_pt, incertidumbre, outliers, H/E, desempeno y reglas de decision." },
+      { id: "P-PSEA-09", label: "Informe de resultados", family: "P", state: "Elaborar", x: 70, y: 405, w: 250, h: 54, text: "Procedimiento que gobierna la generacion y emision del informe final desde pt_app. Absorbe el rol de P-PSEA-22." },
+      { id: "P-PSEA-14", label: "Colusion y falsificacion", family: "P", state: "Actualizar", x: 70, y: 465, w: 250, h: 54, text: "Procedimiento independiente para prevenir, detectar y tratar indicios de colusion o falsificacion." },
+      { id: "P-PSEA-04", label: "Planificacion de ronda EA", family: "P", state: "Actualizar", x: 70, y: 525, w: 250, h: 54, text: "Procedimiento transversal para planificar la ronda usando calaire-app, cronogramas, plan de ronda y ficha digital." },
+      { id: "P-PSEA-06", label: "Preparacion y control del item", family: "P", state: "Actualizar", x: 70, y: 585, w: 250, h: 54, text: "Procedimiento para generar concentraciones con calibrador dinamico y cilindro; registra el control del item gaseoso." },
+      { id: "P-PSEA-02", label: "Matriz documental del PEA", family: "P", state: "Elaborar", x: 70, y: 645, w: 250, h: 54, text: "Matriz basica de documentos DG, P, I, F y subformatos con estado y relacion documental. No cubre control documental macro." },
+      { id: "P-PSEA-03", label: "Matriz de registros y evidencias", family: "P", state: "Elaborar", x: 70, y: 705, w: 250, h: 54, text: "Matriz operativa de evidencias generadas por ronda, evento o periodo. Lista registros, no procedimientos ni aplicativos." },
+      { id: "P-PSEA-15", label: "TNC / NC / CAPA", family: "P", state: "Actualizar", x: 70, y: 765, w: 250, h: 54, text: "Procedimiento para trabajo no conforme, no conformidades y acciones correctivas del PEA." },
+      { id: "P-PSEA-05", label: "Comunicaciones", family: "P", state: "Actualizar", x: 70, y: 825, w: 250, h: 54, text: "Procedimiento para comunicaciones del PEA." },
+      { id: "P-PSEA-16", label: "Valores sensibles", family: "P", state: "Actualizar", x: 70, y: 885, w: 250, h: 54, text: "Procedimiento para manejo de valores sensibles en el PEA." },
+      { id: "P-PSEA-08", label: "Flujo tecnico de datos digitales", family: "P", state: "Elaborar", x: 70, y: 945, w: 250, h: 54, text: "Mapa del flujo digital: captura, exportacion, preprocesamiento, consolidacion, analisis, archivos tecnicos e informe." },
+      { id: "P-PSEA-17", label: "Quejas", family: "P", state: "Actualizar", x: 70, y: 1005, w: 250, h: 54, text: "Procedimiento para registro y tratamiento de quejas en el PEA." },
+      { id: "P-PSEA-18", label: "Apelaciones", family: "P", state: "Actualizar", x: 70, y: 1065, w: 250, h: 54, text: "Procedimiento para apelaciones en el PEA." },
+      { id: "P-PSEA-19", label: "Confidencialidad", family: "P", state: "Actualizar", x: 70, y: 1125, w: 250, h: 54, text: "Procedimiento para confidencialidad en el PEA." },
+      { id: "P-PSEA-20", label: "Competencia", family: "P", state: "Actualizar", x: 70, y: 1185, w: 250, h: 54, text: "Procedimiento para competencia del PEA." },
+      { id: "P-PSEA-21", label: "Proveedores criticos", family: "P", state: "Actualizar", x: 70, y: 1245, w: 250, h: 54, text: "Procedimiento para gestion de proveedores criticos del PEA." },
+
+      { id: "DG-PSEA-01", label: "Protocolo general de participacion", family: "DG", state: "Mantener", x: 520, y: 45, w: 250, h: 54, text: "Documento general de participacion EA. Se revisa al cierre junto con P-PSEA-01 para citar flujo digital, aplicativos e instructivos estabilizados." },
+      { id: "DG-PSEA-02", label: "calaire-app", family: "DG", state: "Actualizar", x: 520, y: 155, w: 250, h: 54, text: "Aplicativo de gestion de rondas, participantes, cronogramas, ficha de ronda, captura/exportacion de datos y casos SGC de quejas." },
+      { id: "DG-PSEA-03", label: "pt_app", family: "DG", state: "Elaborar", x: 520, y: 265, w: 250, h: 54, text: "Aplicativo para preprocesamiento, consolidacion, analisis estadistico, homogeneidad/estabilidad e informe final. No se codifica como formato." },
+
+      { id: "I-PSEA-02", label: "Participante en calaire-app", family: "I", state: "Actualizar", x: 520, y: 405, w: 250, h: 54, text: "Instructivo para que el participante use calaire-app y registre sus datos." },
+      { id: "I-PSEA-03", label: "Administracion de rondas", family: "I", state: "Actualizar", x: 520, y: 475, w: 250, h: 54, text: "Instructivo para administracion interna de rondas en calaire-app y sus exportaciones." },
+      { id: "I-PSEA-04", label: "Preprocesador pt_app", family: "I", state: "Elaborar", x: 520, y: 650, w: 250, h: 54, text: "Instructivo operativo para ejecutar el preprocesamiento y registrar entradas, salidas, version y responsable." },
+      { id: "I-PSEA-05", label: "Analisis PT en pt_app", family: "I", state: "Elaborar", x: 520, y: 720, w: 250, h: 54, text: "Instructivo operativo para ejecutar el modulo de analisis PT y generar salidas e informe." },
+
+      { id: "F-PSEA-01", label: "Calendario global de ronda", family: "F", state: "Actualizar", x: 980, y: 45, w: 250, h: 50, text: "Calendario general exportable desde calaire-app; alimenta la planificacion y visualizaciones tipo Gantt." },
+      { id: "F-PSEA-02", label: "Cronograma detallado", family: "F", state: "Actualizar", x: 980, y: 105, w: 250, h: 50, text: "Cronograma diligenciable/exportable de actividades detalladas de la ronda." },
+      { id: "F-PSEA-13", label: "Informe final de resultados", family: "F", state: "Actualizar", x: 980, y: 165, w: 250, h: 50, text: "Informe final generado desde pt_app. Su contenido detallado queda pendiente en esta fase." },
+      { id: "F-PSEA-04", label: "Equipos e instrumentos", family: "F", state: "Actualizar", x: 980, y: 225, w: 250, h: 50, text: "Anexo tecnico de equipos e instrumentos del participante; insumo del flujo hacia pt_app." },
+      { id: "F-PSEA-05", label: "Plan de ronda EA", family: "F", state: "Actualizar", x: 980, y: 285, w: 250, h: 50, text: "Plan tecnico-operativo de la ronda. Debe indicar que H/E se documenta en F-PSEA-11." },
+      { id: "F-PSEA-06", label: "Ficha digital de ronda", family: "F", state: "Elaborar", x: 980, y: 345, w: 250, h: 50, text: "Exportacion estructurada desde calaire-app; insumo del plan de ronda e incluye matriz/nota A-U." },
+      { id: "F-PSEA-07", label: "Control del item gaseoso", family: "F", state: "Actualizar", x: 980, y: 405, w: 250, h: 50, text: "Dossier/registro de preparacion, niveles y control del item de ensayo gaseoso." },
+      { id: "F-PSEA-08", label: "Datos reportados", family: "F", state: "Actualizar", x: 980, y: 465, w: 250, h: 50, text: "Registro de datos reportados por el participante en calaire-app." },
+      { id: "F-PSEA-10", label: "Registro de preprocesamiento", family: "F", state: "Elaborar", x: 980, y: 525, w: 250, h: 50, text: "Registro de ejecucion del preprocesador: entradas, salidas, fecha, version, responsable, ruta y observaciones." },
+      { id: "F-PSEA-09", label: "Exportacion para analisis PT", family: "F", state: "Actualizar", x: 980, y: 585, w: 250, h: 50, text: "Exportacion oficial desde calaire-app hacia pt_app. No es el dataset consolidado ronda_<n>_completa.csv." },
+      { id: "F-PSEA-11", label: "Homogeneidad y estabilidad", family: "F", state: "Actualizar", x: 980, y: 645, w: 250, h: 50, text: "Registro principal de H/E del item de ensayo; integra datos y resultados generados/exportados desde pt_app." },
+      { id: "F-PSEA-11A", label: "Subformato H/E A", family: "F", state: "Elaborar", x: 980, y: 705, w: 250, h: 50, text: "Datos preprocesados y resultados de homogeneidad/estabilidad A." },
+      { id: "F-PSEA-11B", label: "Subformato H/E B", family: "F", state: "Elaborar", x: 980, y: 765, w: 250, h: 50, text: "Datos preprocesados y resultados de homogeneidad/estabilidad B." },
+      { id: "F-PSEA-11C", label: "Subformato H/E C", family: "F", state: "Elaborar", x: 980, y: 825, w: 250, h: 50, text: "Datos preprocesados y resultados de homogeneidad/estabilidad C." },
+      { id: "F-PSEA-11D", label: "Subformato H/E D", family: "F", state: "Elaborar", x: 980, y: 885, w: 250, h: 50, text: "Datos preprocesados y resultados de homogeneidad/estabilidad D." },
+      { id: "F-PSEA-12", label: "Dataset oficial consolidado", family: "F", state: "Elaborar", x: 980, y: 945, w: 250, h: 50, text: "Datos oficiales consolidados para evaluacion de aptitud; equivalente a ronda_<n>_completa.csv." }
+    ];
+
+    const edges = [
+      ["P-PSEA-01", "DG-PSEA-01"], ["P-PSEA-01", "P-PSEA-02"], ["P-PSEA-01", "P-PSEA-04"], ["P-PSEA-01", "P-PSEA-07"], ["P-PSEA-01", "P-PSEA-09"],
+      ["P-PSEA-02", "P-PSEA-03"], ["P-PSEA-03", "P-PSEA-08"],
+      ["P-PSEA-04", "DG-PSEA-02"], ["P-PSEA-04", "I-PSEA-03"], ["P-PSEA-04", "F-PSEA-06"], ["P-PSEA-04", "F-PSEA-01"], ["P-PSEA-04", "F-PSEA-02"], ["P-PSEA-04", "F-PSEA-05"],
+      ["F-PSEA-06", "F-PSEA-05"], ["F-PSEA-01", "F-PSEA-05"], ["F-PSEA-02", "F-PSEA-05"], ["P-PSEA-04", "P-PSEA-06"],
+      ["P-PSEA-06", "F-PSEA-07"], ["P-PSEA-06", "F-PSEA-11"], ["P-PSEA-06", "P-PSEA-07"],
+      ["P-PSEA-07", "F-PSEA-11"], ["P-PSEA-07", "F-PSEA-11A"], ["P-PSEA-07", "F-PSEA-11B"], ["P-PSEA-07", "F-PSEA-11C"], ["P-PSEA-07", "F-PSEA-11D"], ["P-PSEA-07", "F-PSEA-12"], ["P-PSEA-07", "F-PSEA-13"], ["P-PSEA-07", "P-PSEA-09"],
+      ["P-PSEA-08", "DG-PSEA-02"], ["P-PSEA-08", "DG-PSEA-03"], ["P-PSEA-08", "I-PSEA-04"], ["P-PSEA-08", "F-PSEA-08"], ["P-PSEA-08", "F-PSEA-04"], ["P-PSEA-08", "F-PSEA-09"], ["P-PSEA-08", "F-PSEA-10"], ["P-PSEA-08", "F-PSEA-12"],
+      ["DG-PSEA-02", "I-PSEA-02"], ["I-PSEA-02", "F-PSEA-08"], ["I-PSEA-03", "F-PSEA-09"], ["I-PSEA-03", "F-PSEA-04"], ["F-PSEA-08", "F-PSEA-09"],
+      ["F-PSEA-09", "DG-PSEA-03"], ["F-PSEA-04", "DG-PSEA-03"], ["DG-PSEA-03", "I-PSEA-04"], ["DG-PSEA-03", "I-PSEA-05"],
+      ["I-PSEA-04", "F-PSEA-10"], ["I-PSEA-04", "F-PSEA-11A"], ["I-PSEA-04", "F-PSEA-11B"], ["I-PSEA-04", "F-PSEA-11C"], ["I-PSEA-04", "F-PSEA-11D"], ["I-PSEA-04", "F-PSEA-12"],
+      ["F-PSEA-11A", "F-PSEA-11"], ["F-PSEA-11B", "F-PSEA-11"], ["F-PSEA-11C", "F-PSEA-11"], ["F-PSEA-11D", "F-PSEA-11"],
+      ["F-PSEA-12", "I-PSEA-05"], ["F-PSEA-11", "I-PSEA-05"], ["I-PSEA-05", "F-PSEA-13"], ["P-PSEA-09", "F-PSEA-13"],
+      ["P-PSEA-10", "P-PSEA-06"], ["P-PSEA-11", "P-PSEA-06"], ["P-PSEA-12", "P-PSEA-06"], ["P-PSEA-13", "P-PSEA-06"],
+      ["P-PSEA-10", "P-PSEA-07"], ["P-PSEA-11", "P-PSEA-07"], ["P-PSEA-12", "P-PSEA-07"], ["P-PSEA-13", "P-PSEA-07"],
+      ["P-PSEA-10", "P-PSEA-09"], ["P-PSEA-11", "P-PSEA-09"], ["P-PSEA-12", "P-PSEA-09"], ["P-PSEA-13", "P-PSEA-09"],
+      ["P-PSEA-14", "P-PSEA-15"], ["P-PSEA-14", "P-PSEA-05"], ["P-PSEA-14", "P-PSEA-16"], ["P-PSEA-14", "P-PSEA-17"], ["P-PSEA-14", "P-PSEA-18"], ["P-PSEA-14", "P-PSEA-19"], ["P-PSEA-14", "P-PSEA-20"], ["P-PSEA-14", "P-PSEA-21"],
+      ["P-PSEA-05", "F-PSEA-13"], ["P-PSEA-16", "F-PSEA-13"], ["P-PSEA-17", "F-PSEA-13"], ["P-PSEA-18", "F-PSEA-13"], ["P-PSEA-19", "F-PSEA-13"], ["P-PSEA-20", "F-PSEA-13"], ["P-PSEA-21", "F-PSEA-13"]
+    ];
+
+    const routes = [
+      { id: "data", label: "Flujo oficial de datos", hint: "P-PSEA-08 > calaire-app > pt_app > informe", nodes: ["P-PSEA-08", "DG-PSEA-02", "I-PSEA-02", "F-PSEA-08", "F-PSEA-09", "DG-PSEA-03", "I-PSEA-04", "F-PSEA-10", "F-PSEA-12", "I-PSEA-05", "F-PSEA-13"] },
+      { id: "he", label: "Homogeneidad y estabilidad", hint: "P-PSEA-06 + P-PSEA-07 > H/E > analisis", nodes: ["P-PSEA-06", "F-PSEA-07", "P-PSEA-07", "F-PSEA-11", "F-PSEA-11A", "F-PSEA-11B", "F-PSEA-11C", "F-PSEA-11D", "I-PSEA-05", "F-PSEA-13"] },
+      { id: "planning", label: "Planificacion de ronda", hint: "P-PSEA-04 > ficha, calendario, plan", nodes: ["P-PSEA-04", "DG-PSEA-02", "I-PSEA-03", "F-PSEA-06", "F-PSEA-01", "F-PSEA-02", "F-PSEA-05", "P-PSEA-06"] },
+      { id: "update", label: "Orden de elaboracion", hint: "procedimientos > formatos > instructivos > DG cierre", nodes: ["P-PSEA-01", "P-PSEA-02", "P-PSEA-03", "P-PSEA-08", "P-PSEA-04", "P-PSEA-06", "P-PSEA-07", "P-PSEA-09", "P-PSEA-10", "P-PSEA-11", "P-PSEA-12", "P-PSEA-13", "F-PSEA-06", "F-PSEA-10", "F-PSEA-11A", "F-PSEA-11B", "F-PSEA-11C", "F-PSEA-11D", "F-PSEA-12", "I-PSEA-04", "I-PSEA-05", "DG-PSEA-03", "DG-PSEA-01"] }
+    ];
+
+    const familyNames = { DG: "DG", P: "P", I: "I", F: "F", OUT: "Fuera" };
+    const fichaGroups = {};
+    const svg = document.getElementById("map");
+    const detail = document.getElementById("detail");
+    const selected = new Set();
+    let activeFamily = "Todos";
+    let activeState = "Todos";
+    let activeRoute = null;
+    let activeNode = null;
+
+    function center(n) { return { x: n.x + n.w / 2, y: n.y + n.h / 2 }; }
+    function pathBetween(a, b) {
+      const ac = center(a);
+      const bc = center(b);
+      const dx = Math.max(Math.abs(bc.x - ac.x) * .42, 40);
+      return `M ${ac.x} ${ac.y} C ${ac.x + dx} ${ac.y}, ${bc.x - dx} ${bc.y}, ${bc.x} ${bc.y}`;
+    }
+    function familyClass(f) { return f === "OUT" ? "family-out" : `family-${f.toLowerCase()}`; }
+    function fichaCodes(id) { return fichaGroups[id] || [id]; }
+    function fichaFile(code) { return `fichas_resumen/ficha_${code}.html`; }
+
+    function draw() {
+      [...svg.querySelectorAll(".edge,.node")].forEach(el => el.remove());
+      const byId = Object.fromEntries(nodes.map(n => [n.id, n]));
+      edges.forEach(([from, to]) => {
+        const a = byId[from], b = byId[to];
+        const p = document.createElementNS("http://www.w3.org/2000/svg", "path");
+        p.setAttribute("d", pathBetween(a, b));
+        p.setAttribute("class", "edge");
+        p.dataset.from = from;
+        p.dataset.to = to;
+        svg.appendChild(p);
+      });
+      nodes.forEach(n => {
+        const g = document.createElementNS("http://www.w3.org/2000/svg", "g");
+        g.setAttribute("class", `node ${familyClass(n.family)}`);
+        g.dataset.id = n.id;
+        g.setAttribute("tabindex", "0");
+        g.setAttribute("role", "button");
+        g.setAttribute("aria-label", `${n.id} ${n.label}`);
+        g.innerHTML = `
+          <title>${n.id} · ${n.label}</title>
+          <rect x="${n.x}" y="${n.y}" width="${n.w}" height="${n.h}"></rect>
+          <text x="${n.x + 14}" y="${n.y + 24}">${n.id}</text>
+          <text class="small" x="${n.x + 14}" y="${n.y + 44}">${escapeText(n.label, 25)}</text>
+        `;
+        g.addEventListener("click", () => selectNode(n.id));
+        g.addEventListener("keydown", e => { if (e.key === "Enter") selectNode(n.id); });
+        svg.appendChild(g);
+      });
+      update();
+    }
+
+    function escapeText(text, max) {
+      return text.length > max ? `${text.slice(0, max - 1)}...` : text;
+    }
+
+    function renderControls() {
+      const familyBox = document.getElementById("familyFilters");
+      ["Todos", ...Object.keys(familyNames)].forEach(f => {
+        const b = document.createElement("button");
+        b.className = "chip";
+        b.textContent = f === "Todos" ? "Todos" : familyNames[f];
+        b.onclick = () => { activeFamily = f; activeRoute = null; update(); };
+        familyBox.appendChild(b);
+      });
+      const states = ["Todos", ...new Set(nodes.map(n => n.state))];
+      const stateBox = document.getElementById("stateFilters");
+      states.forEach(s => {
+        const b = document.createElement("button");
+        b.className = "chip";
+        b.textContent = s;
+        b.onclick = () => { activeState = s; activeRoute = null; update(); };
+        stateBox.appendChild(b);
+      });
+      const routeBox = document.getElementById("routes");
+      routes.forEach(r => {
+        const b = document.createElement("button");
+        b.className = "route-button";
+        b.innerHTML = `${r.label}<span>${r.hint}</span>`;
+        b.onclick = () => { activeRoute = activeRoute === r.id ? null : r.id; update(); };
+        routeBox.appendChild(b);
+      });
+    }
+
+    function selectNode(id) {
+      activeNode = id;
+      activeRoute = null;
+      const node = nodes.find(n => n.id === id);
+      const related = edges.filter(e => e.includes(id)).flat();
+      document.getElementById("detailTitle").textContent = `${node.id} · ${node.label}`;
+      document.getElementById("detailMeta").innerHTML = `
+        <span class="pill">${familyNames[node.family] || node.family}</span>
+        <span class="pill">${node.state}</span>
+      `;
+      document.getElementById("detailText").textContent = node.text;
+      const incoming = edges.filter(e => e[1] === id).map(e => e[0]);
+      const outgoing = edges.filter(e => e[0] === id).map(e => e[1]);
+      const fichas = fichaCodes(id);
+      document.getElementById("detailLinks").innerHTML = `
+        <p><strong>Entradas documentales:</strong> ${incoming.length ? incoming.join(", ") : "Sin entradas directas en el mapa."}</p>
+        <p><strong>Salidas o documentos relacionados:</strong> ${outgoing.length ? outgoing.join(", ") : "Sin salidas directas en el mapa."}</p>
+        <p><strong>Ficha resumen:</strong></p>
+        <ul>
+          ${fichas.map(code => `<li><a href="${fichaFile(code)}" target="_blank" rel="noopener">${code} · abrir ficha HTML</a></li>`).join("")}
+        </ul>
+        <p class="context-note">Vista enfocada en nodo seleccionado. Use una ruta critica o limpiar vista para volver al contexto completo del flujo.</p>
+      `;
+      selected.clear();
+      related.forEach(x => selected.add(x));
+      detail.classList.add("open");
+      update();
+    }
+
+    function matchesFilters(n) {
+      const q = document.getElementById("search").value.trim().toLowerCase();
+      const text = `${n.id} ${n.label} ${n.family} ${n.state} ${n.text}`.toLowerCase();
+      const familyOk = activeFamily === "Todos" || n.family === activeFamily;
+      const stateOk = activeState === "Todos" || n.state === activeState;
+      const searchOk = !q || text.includes(q);
+      return familyOk && stateOk && searchOk;
+    }
+
+    function update() {
+      const route = routes.find(r => r.id === activeRoute);
+      const routeSet = route ? new Set(route.nodes) : null;
+      const visible = new Set(nodes.filter(matchesFilters).map(n => n.id));
+      if (routeSet) {
+        visible.clear();
+        routeSet.forEach(id => visible.add(id));
+      }
+      if (selected.size) {
+        visible.clear();
+        selected.forEach(id => visible.add(id));
+      }
+
+      document.querySelectorAll(".node").forEach(g => {
+        const id = g.dataset.id;
+        g.classList.toggle("dim", !visible.has(id));
+        g.classList.toggle("active", id === activeNode || (routeSet && routeSet.has(id)));
+      });
+      let edgeVisible = 0;
+      document.querySelectorAll(".edge").forEach(p => {
+        const isActive = visible.has(p.dataset.from) && visible.has(p.dataset.to);
+        if (isActive) edgeVisible++;
+        p.classList.toggle("dim", !isActive);
+        p.classList.toggle("active", isActive && (selected.size || routeSet));
+      });
+      document.querySelectorAll("#familyFilters button").forEach(b => b.classList.toggle("active", b.textContent === (activeFamily === "Todos" ? "Todos" : familyNames[activeFamily])));
+      document.querySelectorAll("#stateFilters button").forEach(b => b.classList.toggle("active", b.textContent === activeState));
+      document.querySelectorAll("#routes button").forEach((b, i) => b.classList.toggle("active", routes[i].id === activeRoute));
+      document.getElementById("visibleCount").textContent = visible.size;
+      document.getElementById("edgeCount").textContent = edgeVisible;
+      document.getElementById("selectedCount").textContent = routeSet ? routeSet.size : selected.size;
+    }
+
+    document.getElementById("search").addEventListener("input", () => { activeRoute = null; selected.clear(); activeNode = null; update(); });
+    document.getElementById("reset").addEventListener("click", () => {
+      document.getElementById("search").value = "";
+      activeFamily = "Todos";
+      activeState = "Todos";
+      activeRoute = null;
+      activeNode = null;
+      selected.clear();
+      detail.classList.remove("open");
+      update();
+    });
+    document.getElementById("fitData").addEventListener("click", () => { activeRoute = "data"; selected.clear(); activeNode = null; update(); });
+    document.getElementById("fitUpdate").addEventListener("click", () => { activeRoute = "update"; selected.clear(); activeNode = null; update(); });
+    document.getElementById("closeDetail").addEventListener("click", () => { detail.classList.remove("open"); selected.clear(); activeNode = null; update(); });
+
+    renderControls();
+    draw();
+  </script>
+</body>
+</html>

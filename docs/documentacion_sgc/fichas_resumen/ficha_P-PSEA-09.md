@@ -5,11 +5,11 @@
 | Campo | Valor |
 |---|---|
 | **Codigo** | `P-PSEA-09` |
-| **Nombre decidido** | Planificacion de ronda EA |
+| **Nombre decidido** | Generacion/emision del informe de resultados |
 | **Tipo documental** | Procedimiento |
-| **Estado** | Actualizar |
+| **Estado** | Elaborar / Actualizar |
 | **Prioridad** | Alta |
-| **Clase de ficha** | Ficha activa |
+| **Clase de ficha** | Ficha preliminar |
 
 ---
 
@@ -17,7 +17,7 @@
 
 ### Proposito operativo
 
-Gobierna la planificacion de una ronda de ensayo de aptitud, incluyendo definicion de alcance, seleccion de participantes, calendario, cronograma, item de ensayo, niveles de concentracion y matriz de criterios de ISO/IEC 17043:2023 7.2.1.3 (nota/matriz A-U). La planificacion se soporta en `calaire-app` y en formatos exportables.
+Gobierna la generacion, revision, aprobacion y emision del informe final de resultados del PEA. Absorbe el rol de `P-PSEA-22` (reportes PT). Define el proceso de produccion del informe desde los datos consolidados hasta su entrega a participantes, sin desarrollar aun el contenido detallado del informe mismo.
 
 ### Rol en el flujo
 
@@ -37,12 +37,12 @@ Gobierna la planificacion de una ronda de ensayo de aptitud, incluyendo definici
 
 #### Aplicativo asociado
 
-- [x] `calaire-app`
-- [ ] `pt_app`
+- [ ] `calaire-app`
+- [x] `pt_app`
 - [ ] Ambos
 - [ ] Ninguno
 
-La planificacion se ejecuta principalmente en `calaire-app`.
+El informe se genera desde `pt_app`, pero el procedimiento gobierna el proceso, no la herramienta.
 
 ---
 
@@ -52,20 +52,19 @@ La planificacion se ejecuta principalmente en `calaire-app`.
 
 | Codigo / fuente | Descripcion | Rol en el flujo |
 |---|---|---|
-| `F-PSEA-01` | Calendario global de ronda | Insumo |
-| `F-PSEA-02` | Cronograma detallado de ronda | Insumo |
-| `F-PSEA-06` | Plan de ronda EA | Producto |
-| `F-PSEA-07` | Ficha digital de ronda | Insumo / Producto |
-| `F-PSEA-08` | Preparacion y control del item | Referencia |
-| ISO/IEC 17043:2023 7.2.1.3 | Nota/matriz A-U | Referencia externa |
+| `F-PSEA-13` | Informe final como producto | Salida controlada |
+| `F-PSEA-12` | Dataset oficial consolidado | Insumo |
+| `F-PSEA-11C` | Resultados de homogeneidad | Insumo |
+| `F-PSEA-11D` | Resultados de estabilidad | Insumo |
+| `P-PSEA-07` | Criterio estadistico aplicado | Referencia |
 
 #### Salidas principales
 
 | Codigo / destino | Descripcion | Rol en el flujo |
 |---|---|---|
-| `F-PSEA-06` | Plan de ronda consolidado | Producto |
-| `F-PSEA-07` | Ficha digital de ronda | Producto |
-| `P-PSEA-10` | Preparacion y control del item | Referencia |
+| `F-PSEA-13` | Informe final de resultados | Producto final |
+| `P-PSEA-05` | Comunicaciones para emision | Referencia |
+| `P-PSEA-16` | Control de valores sensibles | Referencia |
 
 ---
 
@@ -75,12 +74,13 @@ La planificacion se ejecuta principalmente en `calaire-app`.
 
 | Codigo | Relacion | Tipo de vinculo |
 |---|---|---|
-| `DG-PSEA-02` | Aplicativo que soporta la planificacion | Obligatorio |
-| `I-PSEA-16` | Instructivo de administracion de rondas | Obligatorio |
-| `P-PSEA-10` | Preparacion del item que debe planificarse | Obligatorio |
-| `F-PSEA-06` | Plan de ronda que este procedimiento produce | Obligatorio |
-| `F-PSEA-07` | Ficha digital que este procedimiento produce | Obligatorio |
-| `P-PSEA-08` | Colusion y falsificacion (medidas preventivas en plan) | Referencia |
+| `P-PSEA-22` | Absorbido por este procedimiento | Referencia historica |
+| `F-PSEA-13` | Informe que este procedimiento gobierna | Obligatorio |
+| `P-PSEA-07` | Criterio estadistico que alimenta el informe | Obligatorio |
+| `DG-PSEA-03` | Aplicativo que genera el informe | Obligatorio |
+| `I-PSEA-05` | Instructivo que explica la operacion del modulo | Obligatorio |
+| `P-PSEA-05` | Comunicaciones para emision | Obligatorio |
+| `P-PSEA-16` | Control de valores sensibles en el informe | Obligatorio |
 
 ---
 
@@ -88,20 +88,20 @@ La planificacion se ejecuta principalmente en `calaire-app`.
 
 #### Limites de alcance
 
-- No es un instructivo de uso de `calaire-app` (eso es `I-PSEA-16`).
-- No define criterios estadisticos (eso es `P-PSEA-06`).
-- No es un procedimiento de preparacion del item (eso es `P-PSEA-10`).
-- No incluye comunicaciones a participantes (eso es `P-PSEA-20`).
+- No desarrolla el contenido detallado del informe final (eso es `F-PSEA-13`, aun preliminar).
+- No es un instructivo de uso de `pt_app` (eso es `I-PSEA-05`).
+- No define criterios estadisticos (eso es `P-PSEA-07`).
+- No es un procedimiento de comunicaciones (eso es `P-PSEA-05`).
 
 #### Riesgos de interpretacion
 
-- **Confundir con F-PSEA-06:** `F-PSEA-06` es el plan de ronda como formato/registro; `P-PSEA-09` es el procedimiento que gobierna como planificar.
-- **Omitir nota A-U:** La planificacion debe incluir o referenciar la nota/matriz A-U de ISO/IEC 17043:2023 7.2.1.3.
-- **Describir funciones de calaire-app:** Las funciones del aplicativo se documentan en `DG-PSEA-02` e `I-PSEA-16`; este procedimiento gobierna la actividad de planificacion.
-- **Incluir analisis estadistico:** El analisis ocurre despues de la planificacion y ejecucion, bajo `P-PSEA-06` y `P-PSEA-07`.
+- **Cerrar prematuramente F-PSEA-13:** El contenido detallado del informe se deja para fase posterior; esta ficha es preliminar.
+- **Confundir con P-PSEA-22:** `P-PSEA-22` fue absorbido; no debe mantenerse como documento independiente.
+- **Omitir control de valores sensibles:** La emision del informe debe conectar con `P-PSEA-16` para controlar divulgacion.
+- **Definir formato del informe:** El formato del informe es `F-PSEA-13`; este procedimiento gobierna su generacion, no su estructura.
 
 ---
 
 ## Criterio minimo de elaboracion
 
-El procedimiento define los pasos de planificacion, alcance, participantes, calendario, item, niveles y nota A-U, citando `calaire-app` como soporte y `F-PSEA-06` como producto, sin duplicar instructivos ni criterios estadisticos.
+El procedimiento define el flujo de generacion, revision, aprobacion y emision del informe, absorbiendo el rol de `P-PSEA-22`, citando `P-PSEA-07` para criterios estadisticos y `F-PSEA-13` como producto, sin definir aun el contenido detallado del informe.

@@ -5,9 +5,9 @@
 | Campo | Valor |
 |---|---|
 | **Codigo** | `F-PSEA-12` |
-| **Nombre decidido** | Datos de participantes exportados para analisis PT |
-| **Tipo documental** | Exportacion |
-| **Estado** | Mantener / Actualizar |
+| **Nombre decidido** | Datos oficiales consolidados para evaluacion de aptitud |
+| **Tipo documental** | Registro |
+| **Estado** | Elaborar |
 | **Prioridad** | Alta |
 | **Clase de ficha** | Ficha activa |
 
@@ -17,20 +17,20 @@
 
 ### Proposito operativo
 
-Exportacion oficial de datos de participantes desde `calaire-app` hacia `pt_app` para analisis de ensayo de aptitud. Incluye datos reportados, informacion de participantes y equipos, pero no es el dataset consolidado final (eso es `F-PSEA-14`). Es la interfaz formal entre los dos aplicativos.
+Dataset oficial consolidado para la evaluacion de aptitud, generado por el preprocesador de `pt_app` y equivalente a `ronda_<n>_completa.csv`. Es la entrada unica y autorizada para el modulo de analisis PT y para la generacion del informe final. Integra datos de participantes, equipos y resultados en un formato estandarizado.
 
 ### Rol en el flujo
 
+- [x] Registro oficial
 - [x] Salida
 - [x] Entrada
-- [ ] Registro oficial
 - [ ] Evidencia
 - [ ] Criterio tecnico
 - [ ] Instructivo
 - [ ] Matriz
 - [ ] Soporte documental
 
-Es salida de `calaire-app` y entrada oficial de `pt_app`.
+Es simultaneamente salida del preprocesamiento y entrada oficial del analisis.
 
 ---
 
@@ -38,12 +38,12 @@ Es salida de `calaire-app` y entrada oficial de `pt_app`.
 
 #### Aplicativo asociado
 
-- [x] `calaire-app`
+- [ ] `calaire-app`
 - [x] `pt_app`
 - [ ] Ambos
 - [ ] Ninguno
 
-Ambos aplicativos intervienen: `calaire-app` genera, `pt_app` consume.
+Generado por el preprocesador de `pt_app`.
 
 ---
 
@@ -53,17 +53,18 @@ Ambos aplicativos intervienen: `calaire-app` genera, `pt_app` consume.
 
 | Codigo / fuente | Descripcion | Rol en el flujo |
 |---|---|---|
-| `F-PSEA-09` | Datos reportados por participante | Insumo |
-| `F-PSEA-05` | Registro de participacion | Insumo |
-| `F-PSEA-05A` | Anexo tecnico de equipos | Insumo |
-| `calaire-app` | Interfaz de exportacion | Origen |
+| `F-PSEA-09` | Datos de participantes exportados desde `calaire-app` | Entrada oficial |
+| `F-PSEA-04` | Anexo tecnico de equipos e instrumentos | Entrada oficial |
+| Archivos tecnicos internos | Datos de ronda, niveles, H/E crudos | Insumo tecnico |
+| `F-PSEA-10` | Registro de preprocesamiento | Referencia |
 
 #### Salidas principales
 
 | Codigo / destino | Descripcion | Rol en el flujo |
 |---|---|---|
-| `pt_app` | Entrada para preprocesamiento y analisis | Entrada oficial |
-| `P-PSEA-23` | Flujo tecnico que documenta este paso | Referencia |
+| `pt_app` (modulo analisis) | Dataset para evaluacion de aptitud | Entrada oficial |
+| `F-PSEA-13` | Informe final de resultados | Referencia |
+| `P-PSEA-07` | Analisis estadistico | Referencia |
 
 ---
 
@@ -73,13 +74,12 @@ Ambos aplicativos intervienen: `calaire-app` genera, `pt_app` consume.
 
 | Codigo | Relacion | Tipo de vinculo |
 |---|---|---|
-| `F-PSEA-09` | Datos reportados que se exportan | Obligatorio |
-| `F-PSEA-05` | Participacion que se exporta | Obligatorio |
-| `F-PSEA-05A` | Equipos que se exportan | Obligatorio |
-| `F-PSEA-14` | Dataset consolidado que resulta despues | Obligatorio |
-| `P-PSEA-23` | Flujo tecnico que gobierna este paso | Obligatorio |
-| `DG-PSEA-02` | Aplicativo de origen | Obligatorio |
-| `DG-PSEA-03` | Aplicativo de destino | Obligatorio |
+| `P-PSEA-08` | Flujo tecnico que define el paso | Obligatorio |
+| `F-PSEA-10` | Registro de preprocesamiento | Obligatorio |
+| `F-PSEA-09` | Exportacion desde calaire-app que alimenta el dataset | Obligatorio |
+| `F-PSEA-04` | Equipos e instrumentos que alimentan el dataset | Obligatorio |
+| `P-PSEA-07` | Criterio estadistico que usa este dataset | Obligatorio |
+| `P-PSEA-09` | Generacion del informe que usa este dataset | Obligatorio |
 
 ---
 
@@ -87,20 +87,20 @@ Ambos aplicativos intervienen: `calaire-app` genera, `pt_app` consume.
 
 #### Limites de alcance
 
-- No es el dataset consolidado final (eso es `F-PSEA-14`); es la exportacion desde `calaire-app`.
-- No es el registro de preprocesamiento (eso es `F-PSEA-10`).
-- No contiene resultados de H/E (eso es `F-PSEA-13C` y `F-PSEA-13D`).
+- No es la exportacion desde `calaire-app` (eso es `F-PSEA-09`); es la consolidacion en `pt_app`.
+- No es el informe final (eso es `F-PSEA-13`); es el dataset que lo alimenta.
+- No contiene resultados de H/E (eso es `F-PSEA-11C` y `F-PSEA-11D`); puede referenciarlos.
 - No es un instructivo de uso.
 
 #### Riesgos de interpretacion
 
-- **Confundir con F-PSEA-14:** `F-PSEA-12` es la exportacion desde `calaire-app`; `F-PSEA-14` es el dataset consolidado desde `pt_app`.
-- **Confundir con F-PSEA-09:** `F-PSEA-09` es la captura individual; `F-PSEA-12` es la exportacion consolidada.
-- **Omitir trazabilidad:** La exportacion debe tener fecha, version y responsable.
-- **Usar como dataset final:** Solo `F-PSEA-14` es el dataset oficial para analisis; `F-PSEA-12` es la exportacion previa.
+- **Confundir con F-PSEA-09:** `F-PSEA-09` es la exportacion cruda desde `calaire-app`; `F-PSEA-12` es el dataset consolidado y validado en `pt_app`.
+- **Confundir con F-PSEA-13:** `F-PSEA-12` es datos; `F-PSEA-13` es el informe interpretativo.
+- **Omitir trazabilidad:** Debe vincularse con `F-PSEA-10` (registro de preprocesamiento) y `P-PSEA-08` (flujo de datos).
+- **Usar datos no consolidados:** Solo el dataset oficial consolidado debe alimentar el analisis; no usar exportaciones parciales.
 
 ---
 
 ## Criterio minimo de elaboracion
 
-La exportacion oficial contiene datos de participantes, equipos y registros, generada desde `calaire-app`, con fecha, version y responsable, como entrada oficial de `pt_app`, diferenciada claramente de `F-PSEA-14`.
+El dataset oficial consolidado contiene datos de participantes, equipos y resultados en formato estandarizado, con trazabilidad a `F-PSEA-09`, `F-PSEA-04`, `F-PSEA-10` y `P-PSEA-08`, y se identifica como `ronda_<n>_completa.csv`, sin confundirse con `F-PSEA-09` ni con `F-PSEA-13`.

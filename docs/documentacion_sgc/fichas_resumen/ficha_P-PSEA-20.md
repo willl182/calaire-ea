@@ -5,7 +5,7 @@
 | Campo | Valor |
 |---|---|
 | **Codigo** | `P-PSEA-20` |
-| **Nombre decidido** | Comunicaciones del PEA |
+| **Nombre decidido** | Competencia y autorizacion operativa del PEA |
 | **Tipo documental** | Procedimiento |
 | **Estado** | Mantener / Actualizar |
 | **Prioridad** | Media-alta |
@@ -17,7 +17,7 @@
 
 ### Proposito operativo
 
-Gobierna los canales, formatos, responsables y registros de comunicaciones oficiales del PEA. Define cuando se usa `calaire-app` (notificaciones automaticas, casos SGC) y cuando se usa correo electronico formal institucional. Conecta con participantes, quejas, apelaciones, informes y control de valores sensibles.
+Gobierna los requisitos de competencia, autorizacion, formacion y experiencia de los roles tecnicos y operativos del PEA. Se acota a las funciones especificas del ensayo de aptitud (planificacion, operacion de aplicativos, analisis estadistico, emision de informes) y no cubre talento humano general de la institucion.
 
 ### Rol en el flujo
 
@@ -37,12 +37,12 @@ Gobierna los canales, formatos, responsables y registros de comunicaciones ofici
 
 #### Aplicativo asociado
 
-- [x] `calaire-app`
+- [ ] `calaire-app`
 - [ ] `pt_app`
 - [ ] Ambos
-- [ ] Ninguno
+- [x] Ninguno
 
-Las comunicaciones principales usan `calaire-app`; algunas usan correo segun aplique.
+Es un procedimiento de gestion de recursos humanos tecnicos; no depende de aplicativo.
 
 ---
 
@@ -52,19 +52,17 @@ Las comunicaciones principales usan `calaire-app`; algunas usan correo segun apl
 
 | Codigo / fuente | Descripcion | Rol en el flujo |
 |---|---|---|
-| `I-PSEA-10` | Instructivo para participante | Referencia |
-| `P-PSEA-21` | Divulgacion y control de valores sensibles | Referencia |
-| `P-PSEA-24` | Quejas del PEA | Referencia |
-| `P-PSEA-25` | Apelaciones del PEA | Referencia |
-| `P-PSEA-07` | Generacion del informe | Referencia |
+| `F-PSEA-16` | Matriz de competencia/autorizacion | Referencia |
+| `P-PSEA-19` | Confidencialidad operativa | Referencia |
+| `P-PSEA-21` | Proveedores criticos (competencia de terceros) | Referencia |
 
 #### Salidas principales
 
 | Codigo / destino | Descripcion | Rol en el flujo |
 |---|---|---|
-| `F-PSEA-04` | Informe final comunicado | Referencia |
-| `F-PSEA-16` | Casos de queja/NC comunicados | Referencia |
-| `F-PSEA-17` | Registro de apelaciones comunicadas | Referencia |
+| `F-PSEA-16` | Matriz de competencia/autorizacion | Referencia |
+| `P-PSEA-07` | Analisis estadistico (requiere competencia) | Referencia |
+| `P-PSEA-09` | Emision de informe (requiere autorizacion) | Referencia |
 
 ---
 
@@ -74,12 +72,11 @@ Las comunicaciones principales usan `calaire-app`; algunas usan correo segun apl
 
 | Codigo | Relacion | Tipo de vinculo |
 |---|---|---|
-| `I-PSEA-10` | Instructivo de comunicaciones a participantes | Obligatorio |
-| `P-PSEA-21` | Control de valores sensibles en comunicaciones | Obligatorio |
-| `P-PSEA-24` | Quejas gestionadas como comunicaciones | Obligatorio |
-| `P-PSEA-25` | Apelaciones gestionadas como comunicaciones | Obligatorio |
-| `P-PSEA-07` | Informe como comunicacion oficial | Obligatorio |
-| `DG-PSEA-02` | Aplicativo de comunicaciones | Obligatorio |
+| `F-PSEA-16` | Matriz de competencia/autorizacion | Obligatorio |
+| `P-PSEA-19` | Confidencialidad operativa (quien accede) | Obligatorio |
+| `P-PSEA-21` | Proveedores criticos (competencia de terceros) | Obligatorio |
+| `P-PSEA-07` | Analisis que requiere competencia estadistica | Referencia |
+| `P-PSEA-09` | Informe que requiere autorizacion | Referencia |
 
 ---
 
@@ -87,20 +84,20 @@ Las comunicaciones principales usan `calaire-app`; algunas usan correo segun apl
 
 #### Limites de alcance
 
-- No es un instructivo de uso de `calaire-app` (eso es `I-PSEA-10`).
-- No es un procedimiento de quejas (eso es `P-PSEA-24`); conecta con el.
-- No es un procedimiento de apelaciones (eso es `P-PSEA-25`); conecta con el.
-- No es un procedimiento de control de valores sensibles (eso es `P-PSEA-21`); conecta con el.
+- No cubre talento humano general de la institucion; solo roles tecnicos y operativos del PEA.
+- No es un procedimiento de confidencialidad (eso es `P-PSEA-19`); conecta con el.
+- No es un procedimiento de proveedores (eso es `P-PSEA-21`); conecta con el.
+- No es un instructivo de formacion.
 
 #### Riesgos de interpretacion
 
-- **Omitir canal de correo:** Algunas comunicaciones (apelaciones, comunicaciones formales) van por correo, no solo por `calaire-app`.
-- **Confundir con I-PSEA-10:** `I-PSEA-10` explica como usar el aplicativo; `P-PSEA-20` gobierna que, cuando y por que canal comunicar.
-- **Omitir registro:** Las comunicaciones oficiales deben quedar registradas.
-- **Incluir comunicaciones internas informales:** Este procedimiento gobierna comunicaciones oficiales del PEA.
+- **Extenderse a talento humano general:** Debe mantenerse acotado a roles del PEA.
+- **Omitir matriz F-PSEA-16:** Debe vincularse con la matriz de competencia/autorizacion.
+- **Confundir con P-PSEA-19:** `P-PSEA-19` es confidencialidad; `P-PSEA-20` es competencia.
+- **Omitir autorizacion para emision:** Debe indicar quien autoriza la emision del informe (`P-PSEA-09`).
 
 ---
 
 ## Criterio minimo de elaboracion
 
-El procedimiento define canales (`calaire-app` vs correo), responsables, registros y conexiones con `P-PSEA-21`, `P-PSEA-24`, `P-PSEA-25` y `P-PSEA-07`, sin duplicar instructivos ni procedimientos de quejas/apelaciones.
+El procedimiento define requisitos de competencia y autorizacion para roles tecnicos/operativos del PEA, vinculado con `F-PSEA-16`, `P-PSEA-19` y `P-PSEA-21`, sin extenderse a talento humano general ni duplicar confidencialidad.

@@ -5,11 +5,11 @@
 | Campo | Valor |
 |---|---|
 | **Codigo** | `P-PSEA-15` |
-| **Nombre decidido** | Mejora continua del PEA |
+| **Nombre decidido** | Trabajo no conforme, no conformidades y acciones correctivas |
 | **Tipo documental** | Procedimiento |
-| **Estado** | Por elaborar |
-| **Prioridad** | No priorizar |
-| **Clase de ficha** | Ficha preliminar |
+| **Estado** | Mantener / Actualizar |
+| **Prioridad** | Media-alta |
+| **Clase de ficha** | Ficha activa |
 
 ---
 
@@ -17,21 +17,19 @@
 
 ### Proposito operativo
 
-Idea reservada para un procedimiento de mejora continua del PEA. En esta fase se mantiene como concepto sin desarrollar contenido. Su elaboracion se considerara cuando el sistema documental base este estabilizado y se requiera una capa de mejora continua operativa.
+Gobierna la identificacion, registro, evaluacion, decision y seguimiento de trabajo no conforme (TNC), no conformidades (NC) y acciones correctivas (CAPA) dentro del PEA. Conecta con quejas, apelaciones, colusion y el flujo de datos cuando un resultado o proceso afecta la conformidad del ensayo.
 
 ### Rol en el flujo
 
-- [ ] Criterio tecnico
-- [ ] Procedimiento
+- [x] Criterio tecnico
+- [x] Procedimiento
 - [ ] Entrada
 - [ ] Salida
 - [ ] Registro oficial
 - [ ] Evidencia
 - [ ] Instructivo
 - [ ] Matriz
-- [x] Soporte documental
-
-Preliminar; no tiene rol operativo actual.
+- [ ] Soporte documental
 
 ---
 
@@ -39,12 +37,12 @@ Preliminar; no tiene rol operativo actual.
 
 #### Aplicativo asociado
 
-- [ ] `calaire-app`
+- [x] `calaire-app`
 - [ ] `pt_app`
 - [ ] Ambos
-- [x] Ninguno
+- [ ] Ninguno
 
-No aplica; no hay aplicativo asociado.
+Los casos de quejas/NC pueden gestionarse en `calaire-app` como casos SGC.
 
 ---
 
@@ -54,13 +52,17 @@ No aplica; no hay aplicativo asociado.
 
 | Codigo / fuente | Descripcion | Rol en el flujo |
 |---|---|---|
-| N/A | No aplica | N/A |
+| `P-PSEA-14` | Colusion y falsificacion (si deriva en NC) | Referencia |
+| `P-PSEA-17` | Quejas del PEA | Referencia |
+| `P-PSEA-18` | Apelaciones del PEA | Referencia |
+| `F-PSEA-13` | Informe afectado (si aplica) | Referencia |
 
 #### Salidas principales
 
 | Codigo / destino | Descripcion | Rol en el flujo |
 |---|---|---|
-| N/A | No aplica | N/A |
+| `F-PSEA-14` | Registro/caso de queja o NC | Referencia |
+| `P-PSEA-08` | Flujo de datos afectado | Referencia |
 
 ---
 
@@ -70,7 +72,12 @@ No aplica; no hay aplicativo asociado.
 
 | Codigo | Relacion | Tipo de vinculo |
 |---|---|---|
-| `P-PSEA-14` | Riesgos generales (preliminar paralelo) | Referencia |
+| `P-PSEA-14` | Colusion que puede derivar en NC | Obligatorio |
+| `P-PSEA-17` | Quejas que pueden derivar en NC | Obligatorio |
+| `P-PSEA-18` | Apelaciones que pueden derivar en NC | Obligatorio |
+| `P-PSEA-08` | Flujo de datos que puede afectarse | Obligatorio |
+| `F-PSEA-14` | Registro de caso de queja o NC | Obligatorio |
+| `F-PSEA-13` | Informe que puede requerir correccion | Referencia |
 
 ---
 
@@ -78,19 +85,20 @@ No aplica; no hay aplicativo asociado.
 
 #### Limites de alcance
 
-- No se desarrolla contenido en esta fase.
-- No es un procedimiento de acciones correctivas (eso es `P-PSEA-16`); es mejora continua proactiva.
-- Es una idea reservada para mejora continua del PEA.
+- No es un procedimiento de auditoria (fuera del alcance PEA).
+- No es un procedimiento de colusion (eso es `P-PSEA-14`); conecta con el.
+- No es un procedimiento de quejas (eso es `P-PSEA-17`); conecta con el.
+- No es un procedimiento de apelaciones (eso es `P-PSEA-18`); conecta con el.
 
 #### Riesgos de interpretacion
 
-- **Desarrollar prematuramente:** No debe elaborarse contenido hasta que el sistema base este estabilizado.
-- **Confundir con P-PSEA-16:** `P-PSEA-16` es TNC/NC/CAPA; `P-PSEA-15` es mejora continua proactiva.
-- **Confundir con activo:** No es una ficha activa; es preliminar.
-- **Omitir restriccion:** Debe indicarse claramente que no se desarrolla ahora.
+- **Duplicar P-PSEA-14:** La deteccion de colusion es `P-PSEA-14`; la NC que resulta es `P-PSEA-15`.
+- **Omitir conexion con quejas/apelaciones:** Debe conectar claramente con `P-PSEA-17` y `P-PSEA-18`.
+- **Omitir flujo de datos:** Una NC puede afectar datos, registros o informes; debe conectar con `P-PSEA-08`.
+- **Cerrar prematuramente sin seguimiento:** Debe incluir seguimiento de CAPA.
 
 ---
 
 ## Criterio minimo de elaboracion
 
-La ficha preliminar registra la idea reservada de mejora continua del PEA, indicando que no se desarrolla contenido en esta fase y que se evaluara posteriormente, diferenciandose de `P-PSEA-16` y sin confundirse con ficha activa.
+El procedimiento define TNC/NC/CAPA especifico del PEA, conectando con `P-PSEA-14`, `P-PSEA-17`, `P-PSEA-18`, `P-PSEA-08` y `F-PSEA-14`, sin duplicar colusion, quejas ni apelaciones.

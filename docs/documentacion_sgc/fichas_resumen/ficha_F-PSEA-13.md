@@ -5,11 +5,11 @@
 | Campo | Valor |
 |---|---|
 | **Codigo** | `F-PSEA-13` |
-| **Nombre decidido** | Homogeneidad y estabilidad del item |
-| **Tipo documental** | Registro |
+| **Nombre decidido** | Informe final de resultados |
+| **Tipo documental** | Formato |
 | **Estado** | Mantener / Actualizar |
-| **Prioridad** | Alta |
-| **Clase de ficha** | Ficha activa |
+| **Prioridad** | Media-alta |
+| **Clase de ficha** | Ficha preliminar |
 
 ---
 
@@ -17,14 +17,14 @@
 
 ### Proposito operativo
 
-Registro principal de la evaluacion de homogeneidad y estabilidad del item de ensayo gaseoso. Integra los resultados de los subformatos `F-PSEA-13C` (resultados de homogeneidad) y `F-PSEA-13D` (resultados de estabilidad), y sirve como evidencia de que el item cumple con los criterios metrologicos para la ronda. No debe afirmarse que H/E no aplica.
+Formato del informe final de resultados del PEA, generado desde el modulo de analisis de `pt_app`. Presenta los resultados de la evaluacion de aptitud a los participantes, incluyendo valor asignado, `sigma_pt`, desempeno de cada laboratorio, y referencia a criterios estadisticos. Su contenido detallado no se define en esta fase.
 
 ### Rol en el flujo
 
-- [x] Registro oficial
+- [x] Salida
 - [x] Evidencia
 - [ ] Entrada
-- [ ] Salida
+- [ ] Registro oficial
 - [ ] Criterio tecnico
 - [ ] Instructivo
 - [ ] Matriz
@@ -41,7 +41,7 @@ Registro principal de la evaluacion de homogeneidad y estabilidad del item de en
 - [ ] Ambos
 - [ ] Ninguno
 
-Los resultados de H/E se generan en `pt_app`.
+Generado desde el modulo de analisis de `pt_app`.
 
 ---
 
@@ -51,19 +51,18 @@ Los resultados de H/E se generan en `pt_app`.
 
 | Codigo / fuente | Descripcion | Rol en el flujo |
 |---|---|---|
-| `F-PSEA-13C` | Resultados de homogeneidad | Insumo |
-| `F-PSEA-13D` | Resultados de estabilidad | Insumo |
-| `F-PSEA-08` | Preparacion y control del item | Referencia |
-| `P-PSEA-06` | Criterio estadistico de H/E | Referencia |
-| `P-PSEA-10` | Preparacion del item | Referencia |
-| `P-PSEA-23` | Flujo de datos del PEA | Referencia |
+| `F-PSEA-12` | Dataset oficial consolidado | Insumo |
+| `F-PSEA-11C` | Resultados de homogeneidad | Insumo |
+| `F-PSEA-11D` | Resultados de estabilidad | Insumo |
+| `P-PSEA-07` | Criterio estadistico aplicado | Referencia |
+| `P-PSEA-09` | Procedimiento de generacion del informe | Referencia |
 
 #### Salidas principales
 
 | Codigo / destino | Descripcion | Rol en el flujo |
 |---|---|---|
-| `F-PSEA-04` | Informe final (referencia H/E) | Referencia |
-| `P-PSEA-02` a `P-PSEA-05` | Procedimientos por analito (citan H/E) | Referencia |
+| Participantes | Comunicacion de resultados | Producto |
+| `P-PSEA-16` | Control de valores sensibles | Referencia |
 
 ---
 
@@ -73,13 +72,12 @@ Los resultados de H/E se generan en `pt_app`.
 
 | Codigo | Relacion | Tipo de vinculo |
 |---|---|---|
-| `F-PSEA-13C` | Resultados de homogeneidad integrados | Obligatorio |
-| `F-PSEA-13D` | Resultados de estabilidad integrados | Obligatorio |
-| `F-PSEA-08` | Preparacion del item referenciada | Obligatorio |
-| `P-PSEA-06` | Criterio estadistico aplicado | Obligatorio |
-| `P-PSEA-10` | Procedimiento de preparacion del item | Obligatorio |
-| `P-PSEA-23` | Flujo tecnico de datos digitales | Obligatorio |
-| `P-PSEA-02` a `P-PSEA-05` | Procedimientos por analito que citan H/E | Referencia |
+| `P-PSEA-09` | Procedimiento que gobierna su generacion | Obligatorio |
+| `P-PSEA-07` | Criterio estadistico que debe presentar | Obligatorio |
+| `DG-PSEA-03` | Aplicativo que lo genera | Obligatorio |
+| `I-PSEA-05` | Instructivo que explica la operacion | Obligatorio |
+| `F-PSEA-12` | Dataset que alimenta el informe | Obligatorio |
+| `P-PSEA-16` | Control de valores sensibles al emitir | Obligatorio |
 
 ---
 
@@ -87,20 +85,20 @@ Los resultados de H/E se generan en `pt_app`.
 
 #### Limites de alcance
 
-- No contiene datos preprocesados (eso es `F-PSEA-13A` y `F-PSEA-13B`); contiene resultados.
-- No define criterios estadisticos (eso es `P-PSEA-06`); aplica los criterios.
-- No es el dossier de preparacion del item (eso es `F-PSEA-08`).
-- No es un instructivo de uso.
+- No se define aun el contenido detallado del informe; esta ficha es preliminar.
+- No es el criterio estadistico (eso es `P-PSEA-07`); es la presentacion de resultados.
+- No es el procedimiento de generacion (eso es `P-PSEA-09`); es el formato del producto.
+- No es un instructivo de uso de `pt_app`.
 
 #### Riesgos de interpretacion
 
-- **Afirmar que H/E no aplica:** H/E si aplica y se documenta en este registro y sus subformatos.
-- **Confundir con F-PSEA-13A/B:** `F-PSEA-13A` y `F-PSEA-13B` contienen datos preprocesados; `F-PSEA-13` integra resultados.
-- **Confundir con F-PSEA-08:** `F-PSEA-08` documenta preparacion; `F-PSEA-13` documenta evaluacion de H/E.
-- **Omitir criterio estadistico:** Debe indicar claramente el criterio aplicado (cita `P-PSEA-06`).
+- **Cerrar prematuramente el contenido:** El contenido detallado del informe se definira en fase posterior; por ahora se documenta su rol y entradas/salidas.
+- **Confundir con P-PSEA-09:** `P-PSEA-09` gobierna el proceso; `F-PSEA-13` es el formato del producto.
+- **Omitir control de valores sensibles:** La emision del informe debe conectar con `P-PSEA-16`.
+- **Incluir datos crudos:** El informe presenta resultados, no datos crudos ni preprocesados.
 
 ---
 
 ## Criterio minimo de elaboracion
 
-El registro principal de H/E integra `F-PSEA-13C` y `F-PSEA-13D`, referencia `F-PSEA-08` y `P-PSEA-10`, aplica criterios de `P-PSEA-06`, y se cita desde procedimientos por analito, sin afirmar que H/E no aplica.
+El formato del informe se identifica como producto final de `pt_app`, con entradas oficiales (`F-PSEA-12`, `F-PSEA-11C`, `F-PSEA-11D`), procedimiento de generacion (`P-PSEA-09`) y criterio estadistico (`P-PSEA-07`), manteniendo su contenido detallado como preliminar hasta nueva fase de definicion.

@@ -1,0 +1,10 @@
+- tags:: [[MOC]], [[Project]]
+- # Actividades OSE 88
+- **Fuente contractual**
+	- [[docs/cuentas/actividades_88.md]]
+- **Índice operativo**
+	- [[OSE 88 - Control Operativo]]
+- **Sistema de cobro**
+	- [[OSE 88 - Sistema de Cobro]]
+- **Uso**
+	- Esta página actúa como acceso rápido al marco de actividades A1 a A13 y a la matriz de tareas, fechas y recordatorios asociada a la OSE 88.

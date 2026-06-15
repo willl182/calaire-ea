@@ -51,19 +51,19 @@ Se genera durante la ejecucion del preprocesador en `pt_app`.
 
 | Codigo / fuente | Descripcion | Rol en el flujo |
 |---|---|---|
-| `F-PSEA-12` | Datos de participantes exportados | Insumo |
-| `F-PSEA-05A` | Anexo tecnico de equipos | Insumo |
+| `F-PSEA-09` | Datos de participantes exportados | Insumo |
+| `F-PSEA-04` | Anexo tecnico de equipos | Insumo |
 | Archivos tecnicos internos | Datos de ronda, niveles, H/E crudos | Insumo tecnico |
-| `I-PSEA-17` | Instructivo de preprocesamiento | Referencia |
+| `I-PSEA-04` | Instructivo de preprocesamiento | Referencia |
 
 #### Salidas principales
 
 | Codigo / destino | Descripcion | Rol en el flujo |
 |---|---|---|
 | `preprocesamiento_log.csv` | Archivo tecnico de log | Referencia |
-| `F-PSEA-13A` | Datos preprocesados de homogeneidad | Salida |
-| `F-PSEA-13B` | Datos preprocesados de estabilidad | Salida |
-| `F-PSEA-14` | Dataset oficial consolidado | Salida |
+| `F-PSEA-11A` | Datos preprocesados de homogeneidad | Salida |
+| `F-PSEA-11B` | Datos preprocesados de estabilidad | Salida |
+| `F-PSEA-12` | Dataset oficial consolidado | Salida |
 
 ---
 
@@ -73,12 +73,12 @@ Se genera durante la ejecucion del preprocesador en `pt_app`.
 
 | Codigo | Relacion | Tipo de vinculo |
 |---|---|---|
-| `P-PSEA-23` | Flujo tecnico que gobierna el paso | Obligatorio |
-| `I-PSEA-17` | Instructivo que explica la operacion | Obligatorio |
+| `P-PSEA-08` | Flujo tecnico que gobierna el paso | Obligatorio |
+| `I-PSEA-04` | Instructivo que explica la operacion | Obligatorio |
 | `DG-PSEA-03` | Aplicativo que ejecuta el preprocesamiento | Obligatorio |
-| `F-PSEA-14` | Dataset que resulta del preprocesamiento | Obligatorio |
-| `F-PSEA-13A` | Subformato de homogeneidad generado | Obligatorio |
-| `F-PSEA-13B` | Subformato de estabilidad generado | Obligatorio |
+| `F-PSEA-12` | Dataset que resulta del preprocesamiento | Obligatorio |
+| `F-PSEA-11A` | Subformato de homogeneidad generado | Obligatorio |
+| `F-PSEA-11B` | Subformato de estabilidad generado | Obligatorio |
 
 ---
 
@@ -87,15 +87,15 @@ Se genera durante la ejecucion del preprocesador en `pt_app`.
 #### Limites de alcance
 
 - No es el aplicativo `pt_app` (eso es `DG-PSEA-03`); es un registro de su ejecucion.
-- No es el criterio estadistico de preprocesamiento (eso es `P-PSEA-06`).
-- No contiene datos crudos de participantes (eso es `F-PSEA-12`).
-- No es el dataset consolidado final (eso es `F-PSEA-14`).
+- No es el criterio estadistico de preprocesamiento (eso es `P-PSEA-07`).
+- No contiene datos crudos de participantes (eso es `F-PSEA-09`).
+- No es el dataset consolidado final (eso es `F-PSEA-12`).
 
 #### Riesgos de interpretacion
 
 - **Tratar como aplicativo:** `F-PSEA-10` es un registro; el aplicativo es `DG-PSEA-03`.
 - **Omitir preprocesamiento_log.csv:** El registro debe referenciar `preprocesamiento_log.csv` como soporte tecnico.
-- **Confundir con F-PSEA-14:** `F-PSEA-10` documenta la ejecucion del preprocesamiento; `F-PSEA-14` es el dataset consolidado que resulta.
+- **Confundir con F-PSEA-12:** `F-PSEA-10` documenta la ejecucion del preprocesamiento; `F-PSEA-12` es el dataset consolidado que resulta.
 - **No documentar version y responsable:** Cada ejecucion debe quedar trazada con fecha, version y responsable.
 
 ---

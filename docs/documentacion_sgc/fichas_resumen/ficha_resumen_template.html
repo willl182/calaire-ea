@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>$pagetitle$</title>
+  <link rel="stylesheet" href="ficha_resumen.css">
+  <script defer src="ficha_names.js"></script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <div class="eyebrow">CALAIRE-EA · Ficha resumen SGC PEA</div>
+      <h1>$title$</h1>
+      $if(ficha_name)$
+      <p class="hero-name">$ficha_name$</p>
+      $endif$
+      <div class="hero-meta" aria-label="Metadatos de la ficha">
+        $if(ficha_type)$
+        <span><strong>Tipo</strong>$ficha_type$</span>
+        $endif$
+        $if(ficha_state)$
+        <span><strong>Estado</strong>$ficha_state$</span>
+        $endif$
+        $if(ficha_priority)$
+        <span><strong>Prioridad</strong>$ficha_priority$</span>
+        $endif$
+        $if(ficha_class)$
+        <span><strong>Clase</strong>$ficha_class$</span>
+        $endif$
+      </div>
+      <div class="hero-actions">
+        <a class="button primary" href="../mapa_navegacion_sgc_pea.html">Volver al mapa</a>
+        $if(source)$
+        <a class="button" href="$source$">Ver Markdown fuente</a>
+        $endif$
+      </div>
+    </header>
+    <main class="layout">
+      <nav class="toc-panel" aria-label="Tabla de contenido">
+        <p class="toc-title">Contenido</p>
+        $toc$
+      </nav>
+      <article class="content">
+        $body$
+      </article>
+    </main>
+    <footer class="footer">
+      Version HTML generada desde las fichas Markdown del SGC PEA.
+    </footer>
+  </div>
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const names = window.fichaNames || {};
+      document.querySelectorAll("article code, nav code").forEach(code => {
+        const value = code.textContent.trim();
+        const name = names[value];
+        if (!name || code.parentElement?.classList.contains("doc-ref")) return;
+
+        const wrapper = document.createElement("span");
+        wrapper.className = "doc-ref";
+        code.replaceWith(wrapper);
+        wrapper.appendChild(code);
+
+        const label = document.createElement("span");
+        label.className = "doc-ref-name";
+        label.textContent = name;
+        wrapper.appendChild(label);
+      });
+    });
+  </script>
+</body>
+</html>

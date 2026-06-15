@@ -4,7 +4,7 @@
 
 La planificación vigente de la prueba piloto se estructura sobre dos rondas activas y una asignación fija de participantes. El participante `P1` corresponde a **SIATA** y el participante `P2` corresponde a **Universidad Pontificia Bolivariana (UPB)**. Esta definición permite separar el piloto en una ronda corta de validación operativa y una ronda doble orientada a la secuencia multicomponente.
 
-La ronda simple está destinada a la medición simultánea de **CO/SO2** con un solo participante, utilizando la secuencia tipo `Secuencia Simple` del archivo `docs/docs_sgc/ppiloto/F-PSEA-02 Cronograma Detallado_PPILOTO.xlsx`. La ronda doble está destinada a la medición de **O3, NO y NO2** con participación concurrente de `P1` y `P2`, utilizando la secuencia `Secuencia Compleja` del mismo formato controlado.
+La ronda simple está destinada a la medición simultánea de **CO/SO2** con un solo participante, utilizando la secuencia tipo `Secuencia Simple` del archivo `docs/documentacion_sgc/02_prueba_piloto_rondas/00_planificacion/F-PSEA-02 Cronograma Detallado_PPILOTO.xlsx`. La ronda doble está destinada a la medición de **O3, NO y NO2** con participación concurrente de `P1` y `P2`, utilizando la secuencia `Secuencia Compleja` del mismo formato controlado.
 
 ## Secuencias de referencia
 
@@ -45,9 +45,9 @@ La segunda alternativa invierte el orden: la **ronda doble O3, NO y NO2 con SIAT
 
 ## Artefactos de apoyo
 
-- `docs/prueba_piloto/gantt_a.md`
-- `docs/prueba_piloto/gantt_b.md`
-- `docs/prueba_piloto/timeline_rondas_a.md`
-- `docs/prueba_piloto/timeline_rondas_b.md`
-- `docs/prueba_piloto/timeline_calendario_a.md`
-- `docs/prueba_piloto/timeline_calendario_b.md`
+- `docs/documentacion_sgc/02_prueba_piloto_rondas/05_evidencias_soporte/gantt_a.md`
+- `docs/documentacion_sgc/02_prueba_piloto_rondas/05_evidencias_soporte/gantt_b.md`
+- `docs/documentacion_sgc/02_prueba_piloto_rondas/05_evidencias_soporte/timeline_rondas_a.md`
+- `docs/documentacion_sgc/02_prueba_piloto_rondas/05_evidencias_soporte/timeline_rondas_b.md`
+- `docs/documentacion_sgc/02_prueba_piloto_rondas/05_evidencias_soporte/timeline_calendario_a.md`
+- `docs/documentacion_sgc/02_prueba_piloto_rondas/05_evidencias_soporte/timeline_calendario_b.md`

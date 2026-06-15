@@ -5,9 +5,9 @@
 | Campo | Valor |
 |---|---|
 | **Codigo** | `F-PSEA-17` |
-| **Nombre decidido** | Registro de apelaciones |
+| **Nombre decidido** | Evaluacion de proveedores criticos |
 | **Tipo documental** | Registro |
-| **Estado** | Revisar |
+| **Estado** | Mantener / Actualizar |
 | **Prioridad** | Media |
 | **Clase de ficha** | Ficha preliminar |
 
@@ -17,7 +17,7 @@
 
 ### Proposito operativo
 
-Registro de apelaciones recibidas por correo formal institucional. Documenta la recepcion, contenido, evaluacion, respuesta y cierre de cada apelacion. No se gestiona en `calaire-app`; su estructura requiere confirmacion y alineacion con `P-PSEA-25`.
+Registro de evaluacion de proveedores y servicios criticos para el PEA. Documenta criterios de evaluacion, resultados, seguimiento y decisiones de aprobacion o rechazo de proveedores. Asociado a `P-PSEA-21`, su estructura requiere confirmacion.
 
 ### Rol en el flujo
 
@@ -41,7 +41,7 @@ Registro de apelaciones recibidas por correo formal institucional. Documenta la 
 - [ ] Ambos
 - [x] Ninguno
 
-Se gestiona por correo formal institucional; no depende de aplicativo.
+No depende de aplicativo; es un documento de gestion.
 
 ---
 
@@ -51,15 +51,16 @@ Se gestiona por correo formal institucional; no depende de aplicativo.
 
 | Codigo / fuente | Descripcion | Rol en el flujo |
 |---|---|---|
-| `P-PSEA-25` | Apelaciones del PEA | Referencia |
-| Correo institucional | Canal de recepcion | Origen |
+| `P-PSEA-21` | Proveedores criticos del PEA | Referencia |
+| `P-PSEA-20` | Competencia de terceros | Referencia |
+| Proveedores | Datos de desempeno y evaluacion | Insumo |
 
 #### Salidas principales
 
 | Codigo / destino | Descripcion | Rol en el flujo |
 |---|---|---|
-| `P-PSEA-16` | Si deriva en NC/CAPA | Referencia |
-| `P-PSEA-20` | Comunicaciones de respuesta | Referencia |
+| `P-PSEA-21` | Procedimiento que gobierna el registro | Referencia |
+| `P-PSEA-06` | Preparacion del item (usa proveedores aprobados) | Referencia |
 
 ---
 
@@ -69,10 +70,9 @@ Se gestiona por correo formal institucional; no depende de aplicativo.
 
 | Codigo | Relacion | Tipo de vinculo |
 |---|---|---|
-| `P-PSEA-25` | Procedimiento de apelaciones | Obligatorio |
-| `P-PSEA-16` | TNC/NC/CAPA si deriva | Obligatorio |
-| `P-PSEA-20` | Comunicaciones | Obligatorio |
-| `P-PSEA-21` | Control de valores sensibles | Obligatorio |
+| `P-PSEA-21` | Procedimiento de proveedores criticos | Obligatorio |
+| `P-PSEA-20` | Competencia de terceros | Obligatorio |
+| `P-PSEA-06` | Preparacion del item | Referencia |
 
 ---
 
@@ -80,20 +80,20 @@ Se gestiona por correo formal institucional; no depende de aplicativo.
 
 #### Limites de alcance
 
-- No se gestiona en `calaire-app` (eso es `F-PSEA-16` para quejas).
-- No es el procedimiento de apelaciones (eso es `P-PSEA-25`); es el registro.
+- No es el procedimiento de proveedores (eso es `P-PSEA-21`); es el registro de evaluacion.
+- No cubre compras generales; solo proveedores criticos del PEA.
 - Su estructura requiere confirmacion; es preliminar.
-- No es un registro de quejas (eso es `F-PSEA-16`); las apelaciones son diferentes.
+- No es un contrato ni un acuerdo de confidencialidad.
 
 #### Riesgos de interpretacion
 
-- **Confundir con P-PSEA-25:** `P-PSEA-25` es el procedimiento; `F-PSEA-17` es el registro.
-- **Gestionar en calaire-app:** Las apelaciones no se gestionan en `calaire-app`.
-- **Omitir conexion con P-PSEA-16:** Debe indicar cuando una apelacion deriva en NC/CAPA.
+- **Confundir con P-PSEA-21:** `P-PSEA-21` es el procedimiento; `F-PSEA-17` es el registro.
+- **Extenderse a compras generales:** Debe mantenerse acotado a proveedores que afectan la validez del EA.
+- **Omitir limites de tercerizacion:** Debe respetar los limites de ISO/IEC 17043.
 - **Cerrar estructura prematuramente:** Es preliminar; requiere confirmacion de estructura.
 
 ---
 
 ## Criterio minimo de elaboracion
 
-El registro de apelaciones documenta recepcion por correo formal, evaluacion y respuesta, vinculado con `P-PSEA-25`, `P-PSEA-16` y `P-PSEA-20`, con estructura preliminar por confirmar, sin gestion en `calaire-app`.
+El registro de evaluacion de proveedores documenta criterios, resultados y decisiones para proveedores criticos del PEA, vinculado con `P-PSEA-21` y `P-PSEA-20`, con estructura preliminar por confirmar, sin extenderse a compras generales.

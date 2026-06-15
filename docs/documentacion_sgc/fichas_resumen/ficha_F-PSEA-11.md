@@ -5,11 +5,11 @@
 | Campo | Valor |
 |---|---|
 | **Codigo** | `F-PSEA-11` |
-| **Nombre decidido** | No aplicable por ahora |
-| **Tipo documental** | Formato |
-| **Estado** | Reservar |
-| **Prioridad** | No priorizar |
-| **Clase de ficha** | Registro de no activo |
+| **Nombre decidido** | Homogeneidad y estabilidad del item |
+| **Tipo documental** | Registro |
+| **Estado** | Mantener / Actualizar |
+| **Prioridad** | Alta |
+| **Clase de ficha** | Ficha activa |
 
 ---
 
@@ -17,20 +17,18 @@
 
 ### Proposito operativo
 
-Codigo reservado para un formato relacionado con envio/recepcion fisica de items de ensayo. No aplica al PEA de gases contaminantes criterio porque el item se genera in situ mediante calibrador dinamico y cilindro, no se envia ni recibe fisicamente. El codigo se mantiene disponible para uso futuro si el alcance del PEA cambia.
+Registro principal de la evaluacion de homogeneidad y estabilidad del item de ensayo gaseoso. Integra los resultados de los subformatos `F-PSEA-11C` (resultados de homogeneidad) y `F-PSEA-11D` (resultados de estabilidad), y sirve como evidencia de que el item cumple con los criterios metrologicos para la ronda. No debe afirmarse que H/E no aplica.
 
 ### Rol en el flujo
 
-- [ ] Registro oficial
+- [x] Registro oficial
+- [x] Evidencia
 - [ ] Entrada
 - [ ] Salida
-- [ ] Evidencia
 - [ ] Criterio tecnico
 - [ ] Instructivo
 - [ ] Matriz
-- [x] Soporte documental
-
-Reservado; no tiene rol operativo actual.
+- [ ] Soporte documental
 
 ---
 
@@ -39,11 +37,11 @@ Reservado; no tiene rol operativo actual.
 #### Aplicativo asociado
 
 - [ ] `calaire-app`
-- [ ] `pt_app`
+- [x] `pt_app`
 - [ ] Ambos
-- [x] Ninguno
+- [ ] Ninguno
 
-No aplica; no hay aplicativo asociado.
+Los resultados de H/E se generan en `pt_app`.
 
 ---
 
@@ -53,13 +51,19 @@ No aplica; no hay aplicativo asociado.
 
 | Codigo / fuente | Descripcion | Rol en el flujo |
 |---|---|---|
-| N/A | No aplica | N/A |
+| `F-PSEA-11C` | Resultados de homogeneidad | Insumo |
+| `F-PSEA-11D` | Resultados de estabilidad | Insumo |
+| `F-PSEA-07` | Preparacion y control del item | Referencia |
+| `P-PSEA-07` | Criterio estadistico de H/E | Referencia |
+| `P-PSEA-06` | Preparacion del item | Referencia |
+| `P-PSEA-08` | Flujo de datos del PEA | Referencia |
 
 #### Salidas principales
 
 | Codigo / destino | Descripcion | Rol en el flujo |
 |---|---|---|
-| N/A | No aplica | N/A |
+| `F-PSEA-13` | Informe final (referencia H/E) | Referencia |
+| `P-PSEA-10` a `P-PSEA-13` | Procedimientos por analito (citan H/E) | Referencia |
 
 ---
 
@@ -69,8 +73,13 @@ No aplica; no hay aplicativo asociado.
 
 | Codigo | Relacion | Tipo de vinculo |
 |---|---|---|
-| `P-PSEA-11` | No aplicable (procedimiento paralelo) | Referencia |
-| `F-PSEA-08` | Preparacion y control del item (funcion sustituta) | Referencia |
+| `F-PSEA-11C` | Resultados de homogeneidad integrados | Obligatorio |
+| `F-PSEA-11D` | Resultados de estabilidad integrados | Obligatorio |
+| `F-PSEA-07` | Preparacion del item referenciada | Obligatorio |
+| `P-PSEA-07` | Criterio estadistico aplicado | Obligatorio |
+| `P-PSEA-06` | Procedimiento de preparacion del item | Obligatorio |
+| `P-PSEA-08` | Flujo tecnico de datos digitales | Obligatorio |
+| `P-PSEA-10` a `P-PSEA-13` | Procedimientos por analito que citan H/E | Referencia |
 
 ---
 
@@ -78,18 +87,20 @@ No aplica; no hay aplicativo asociado.
 
 #### Limites de alcance
 
-- No se desarrolla como formato activo.
-- No aplica al modelo operativo actual del PEA de gases.
-- Se mantiene reservado, no retirado, para posible uso futuro.
+- No contiene datos preprocesados (eso es `F-PSEA-11A` y `F-PSEA-11B`); contiene resultados.
+- No define criterios estadisticos (eso es `P-PSEA-07`); aplica los criterios.
+- No es el dossier de preparacion del item (eso es `F-PSEA-07`).
+- No es un instructivo de uso.
 
 #### Riesgos de interpretacion
 
-- **Confundir con activo:** `F-PSEA-11` no es un formato vigente; esta reservado.
-- **Desarrollar contenido:** No debe crearse contenido para un formato de envio/recepcion.
-- **Omitir documento sustituto:** La funcion de envio/recepcion esta cubierta por `F-PSEA-08` (preparacion in situ).
+- **Afirmar que H/E no aplica:** H/E si aplica y se documenta en este registro y sus subformatos.
+- **Confundir con F-PSEA-11A/B:** `F-PSEA-11A` y `F-PSEA-11B` contienen datos preprocesados; `F-PSEA-11` integra resultados.
+- **Confundir con F-PSEA-07:** `F-PSEA-07` documenta preparacion; `F-PSEA-11` documenta evaluacion de H/E.
+- **Omitir criterio estadistico:** Debe indicar claramente el criterio aplicado (cita `P-PSEA-07`).
 
 ---
 
 ## Criterio minimo de elaboracion
 
-El registro de no activo documenta la decision de reservar `F-PSEA-11` por ausencia de envio fisico de items, indicando `F-PSEA-08` como documento sustituto, sin desarrollar contenido ni confundirse con ficha activa.
+El registro principal de H/E integra `F-PSEA-11C` y `F-PSEA-11D`, referencia `F-PSEA-07` y `P-PSEA-06`, aplica criterios de `P-PSEA-07`, y se cita desde procedimientos por analito, sin afirmar que H/E no aplica.

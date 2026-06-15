@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Análisis de Conectividad del SGC PEA — Vista Ejecutiva</title>
+  <style>
+    :root {
+      --bg: #f7f9fc;
+      --fg: #1f2937;
+      --muted: #5d6b7f;
+      --card: #ffffff;
+      --border: #dce4ef;
+      --accent: #1e4b7a;
+      --accent-light: #eaf2fb;
+      --ok: #0d6831;
+      --ok-bg: #e7f5ed;
+      --warn: #b45309;
+      --warn-bg: #fff7ed;
+      --fail: #b42318;
+      --fail-bg: #fef2f2;
+      --crit: #7f1d1d;
+      --crit-bg: #fee2e2;
+      --info: #1d4ed8;
+      --info-bg: #eff6ff;
+      --radius: 10px;
+      --shadow: 0 2px 6px rgba(15, 23, 42, 0.06);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(90deg, #102a43 0%, var(--accent) 100%);
+      color: #fff;
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0 0 0.5rem;
+      font-size: 1.9rem;
+      font-weight: 700;
+    }
+
+    header p {
+      margin: 0 auto;
+      max-width: 800px;
+      opacity: 0.92;
+      font-size: 1.05rem;
+    }
+
+    .meta {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+      font-size: 0.9rem;
+    }
+
+    .meta span {
+      background: rgba(255,255,255,0.15);
+      padding: 0.25rem 0.8rem;
+      border-radius: 999px;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+
+    section {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 1.75rem;
+      margin-bottom: 1.75rem;
+      border: 1px solid var(--border);
+    }
+
+    h2 {
+      margin-top: 0;
+      color: var(--accent);
+      font-size: 1.4rem;
+      border-bottom: 2px solid var(--accent-light);
+      padding-bottom: 0.5rem;
+    }
+
+    h3 {
+      color: #1f3a56;
+      margin-top: 1.5rem;
+      font-size: 1.15rem;
+    }
+
+    p { margin: 0.75rem 0; }
+
+    .dashboard {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+
+    .metric {
+      background: var(--accent-light);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      text-align: center;
+      border: 1px solid var(--border);
+    }
+
+    .metric .number {
+      display: block;
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--accent);
+    }
+
+    .metric .label {
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .metric.critical { background: var(--crit-bg); }
+    .metric.critical .number { color: var(--crit); }
+
+    .metric.warning { background: var(--warn-bg); }
+    .metric.warning .number { color: var(--warn); }
+
+    .metric.ok { background: var(--ok-bg); }
+    .metric.ok .number { color: var(--ok); }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+
+    .badge-ok { background: var(--ok-bg); color: var(--ok); }
+    .badge-warn { background: var(--warn-bg); color: var(--warn); }
+    .badge-fail { background: var(--fail-bg); color: var(--fail); }
+    .badge-crit { background: var(--crit-bg); color: var(--crit); }
+    .badge-info { background: var(--info-bg); color: var(--info); }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.95rem;
+    }
+
+    th, td {
+      padding: 0.75rem 0.6rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    th {
+      background: #f1f5f9;
+      color: #334155;
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    tr:hover { background: #fafbfc; }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      font-size: 0.9em;
+      background: #eef2f7;
+      padding: 0.15rem 0.35rem;
+      border-radius: 4px;
+      color: #0f172a;
+    }
+
+    ul, ol {
+      padding-left: 1.4rem;
+      margin: 0.75rem 0;
+    }
+
+    li { margin: 0.4rem 0; }
+
+    .callout {
+      border-left: 5px solid var(--accent);
+      background: var(--accent-light);
+      padding: 1rem 1.25rem;
+      border-radius: 0 var(--radius) var(--radius) 0;
+      margin: 1rem 0;
+    }
+
+    .callout.critical {
+      border-left-color: var(--crit);
+      background: var(--crit-bg);
+    }
+
+    .callout.warning {
+      border-left-color: var(--warn);
+      background: var(--warn-bg);
+    }
+
+    .callout.ok {
+      border-left-color: var(--ok);
+      background: var(--ok-bg);
+    }
+
+    .toc {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 1rem 0 0;
+    }
+
+    .toc a {
+      text-decoration: none;
+      color: var(--accent);
+      background: var(--accent-light);
+      padding: 0.35rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      border: 1px solid var(--border);
+    }
+
+    .toc a:hover {
+      background: #dbeafe;
+    }
+
+    .sources {
+      font-size: 0.95rem;
+    }
+
+    .sources code {
+      word-break: break-all;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.85rem;
+      padding: 2rem 1rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.45rem; }
+      .dashboard { grid-template-columns: repeat(2, 1fr); }
+      table { font-size: 0.85rem; }
+      th, td { padding: 0.55rem 0.4rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Análisis de Conectividad del SGC PEA</h1>
+  <p>Evaluación documental del Sistema de Gestión de Calidad del Programa de Ensayos de Aptitud, con énfasis en las reglas de arquitectura: cada instructivo debe anclarse a un procedimiento y cada procedimiento debe generar al menos un formato o registro.</p>
+  <div class="meta">
+    <span>Fecha: 2026-06-13</span>
+    <span>Estado: Consolidado</span>
+    <span>Fuentes: 5 documentos de referencia</span>
+  </div>
+</header>
+
+<main>
+
+  <section>
+    <h2>Contenido</h2>
+    <nav class="toc">
+      <a href="#resumen">Resumen ejecutivo</a>
+      <a href="#estado-general">Estado general</a>
+      <a href="#instructivos">Instructivos</a>
+      <a href="#procedimientos">Procedimientos</a>
+      <a href="#formatos">Formatos y registros</a>
+      <a href="#flujos">Flujos críticos</a>
+      <a href="#riesgos">Matriz de riesgos</a>
+      <a href="#recomendaciones">Recomendaciones</a>
+      <a href="#fuentes">Fuentes</a>
+    </nav>
+  </section>
+
+  <section id="resumen">
+    <h2>Resumen ejecutivo</h2>
+    <p>El mapa de navegación del SGC PEA contiene <strong>53 conexiones</strong> entre 52 documentos. La arquitectura general está bien diseñada, pero el mapa visual no refleja completamente el sistema real: faltan nodos de formato y varias aristas de gobierno entre procedimientos e instructivos.</p>
+
+    <div class="dashboard">
+      <div class="metric">
+        <span class="number">22</span>
+        <span class="label">Procedimientos</span>
+      </div>
+      <div class="metric">
+        <span class="number">4</span>
+        <span class="label">Instructivos</span>
+      </div>
+      <div class="metric">
+        <span class="number">20</span>
+        <span class="label">Formatos/Registros</span>
+      </div>
+      <div class="metric">
+        <span class="number">3</span>
+        <span class="label">Documentos generales</span>
+      </div>
+      <div class="metric warning">
+        <span class="number">2</span>
+        <span class="label">Instructivos sin anclaje</span>
+      </div>
+      <div class="metric critical">
+        <span class="number">5</span>
+        <span class="label">Procedimientos sin salida</span>
+      </div>
+      <div class="metric critical">
+        <span class="number">5</span>
+        <span class="label">Formatos ausentes en mapa</span>
+      </div>
+      <div class="metric ok">
+        <span class="number">3</span>
+        <span class="label">DG con anclaje correcto</span>
+      </div>
+    </div>
+
+    <div class="callout critical">
+      <strong>Conclusión principal:</strong> el sistema documental está diseñado correctamente en los textos de arquitectura, pero el mapa visual es un subconjunto incompleto. La prioridad es materializar en el mapa HTML las conexiones y nodos que ya existen en el diseño tentativo y en la operación de <code>calaire-app</code>.
+    </div>
+  </section>
+
+  <section id="estado-general">
+    <h2>1. Estado general del mapa</h2>
+    <p>El mapa HTML organiza la información en tres columnas conceptuales: <strong>Procedimientos → Documentos/Instructivos → Formatos/Registros</strong>. Sin embargo, las conexiones reales no respetan del todo esta lógica de flujo.</p>
+    <ul>
+      <li><strong>Procedimientos por analito</strong> (P-PSEA-02 a 05): no generan formatos propios, lo cual es aceptable si queda documentado en la matriz documental P-PSEA-12.</li>
+      <li><strong>Procedimientos transversales</strong> (P-PSEA-06, 07, 09, 10, 23): sí producen o gobiernan formatos y cumplen su función.</li>
+      <li><strong>Procedimientos de gestión operativa</strong> (P-PSEA-16, 24, 25, 27, 28): carecen de salidas visibles en el mapa.</li>
+      <li><strong>Documentos generales</strong> (DG-PSEA-01 a 03): todos están correctamente anclados a procedimientos.</li>
+    </ul>
+  </section>
+
+  <section id="instructivos">
+    <h2>2. Instructivos: anclaje a procedimientos</h2>
+    <p>La regla exige que cada instructivo esté gobernado por al menos un procedimiento. De los cuatro instructivos activos, dos cumplen, uno es parcial y dos fallan.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Código</th>
+          <th>Instructivo</th>
+          <th>Anclaje actual</th>
+          <th>Estado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>I-PSEA-10</code></td>
+          <td>Participante en calaire-app</td>
+          <td>Conectado a <code>DG-PSEA-02</code> (aplicativo), no a un procedimiento</td>
+          <td><span class="badge badge-fail">Falla</span></td>
+        </tr>
+        <tr>
+          <td><code>I-PSEA-16</code></td>
+          <td>Administración de rondas</td>
+          <td>Anclado a <code>P-PSEA-09</code></td>
+          <td><span class="badge badge-ok">Cumple</span></td>
+        </tr>
+        <tr>
+          <td><code>I-PSEA-17</code></td>
+          <td>Preprocesador pt_app</td>
+          <td>Anclado a <code>P-PSEA-23</code>, aunque opera bajo el aplicativo</td>
+          <td><span class="badge badge-warn">Parcial</span></td>
+        </tr>
+        <tr>
+          <td><code>I-PSEA-18</code></td>
+          <td>Análisis PT en pt_app</td>
+          <td>Conectado a formatos y al aplicativo, no a un procedimiento</td>
+          <td><span class="badge badge-fail">Falla</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout warning">
+      <strong>Hallazgo clave:</strong> <code>I-PSEA-10</code> e <code>I-PSEA-18</code> son los dos casos de anclaje ausente. Se recomienda anclar <code>I-PSEA-10</code> a <code>P-PSEA-20</code> (comunicaciones) o a <code>P-PSEA-09</code> (planificación), y <code>I-PSEA-18</code> a <code>P-PSEA-06</code> (diseño estadístico) y/o <code>P-PSEA-07</code> (informe de resultados).
+    </div>
+  </section>
+
+  <section id="procedimientos">
+    <h2>3. Procedimientos: salidas a formatos y registros</h2>
+    <p>Cada procedimiento debe producir o gobernar al menos un formato o registro (<code>F-PSEA</code>). A continuación se resume el estado de los 22 procedimientos del mapa.</p>
+
+    <h3>3.1 Procedimientos técnicos por analito</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Código</th>
+          <th>Salidas actuales</th>
+          <th>¿Tiene formato propio?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><code>P-PSEA-02</code> (NO/NO₂)</td><td>P-PSEA-10, P-PSEA-06, P-PSEA-07</td><td><span class="badge badge-warn">No</span></td></tr>
+        <tr><td><code>P-PSEA-03</code> (CO)</td><td>P-PSEA-10, P-PSEA-06, P-PSEA-07</td><td><span class="badge badge-warn">No</span></td></tr>
+        <tr><td><code>P-PSEA-04</code> (O₃)</td><td>P-PSEA-10, P-PSEA-06, P-PSEA-07</td><td><span class="badge badge-warn">No</span></td></tr>
+        <tr><td><code>P-PSEA-05</code> (SO₂)</td><td>P-PSEA-10, P-PSEA-06, P-PSEA-07</td><td><span class="badge badge-warn">No</span></td></tr>
+      </tbody>
+    </table>
+    <p>Esta situación es conceptualmente aceptable si el diseño intencional queda explreso en <code>P-PSEA-12</code> (matriz documental): los procedimientos por gas citan transversales y no generan registros propios.</p>
+
+    <h3>3.2 Procedimientos marco y transversales</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Código</th>
+          <th>Salidas actuales</th>
+          <th>¿Tiene salida directa?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><code>P-PSEA-01</code></td><td>DG-PSEA-01, P-PSEA-12, P-PSEA-09, P-PSEA-06, P-PSEA-07</td><td><span class="badge badge-warn">No</span> (marco)</td></tr>
+        <tr><td><code>P-PSEA-06</code></td><td>F-PSEA-13, 13A-D, 14, 04, P-PSEA-07</td><td><span class="badge badge-ok">Sí</span></td></tr>
+        <tr><td><code>P-PSEA-07</code></td><td>F-PSEA-04</td><td><span class="badge badge-ok">Sí</span></td></tr>
+        <tr><td><code>P-PSEA-08</code></td><td>P-PSEA-16, 20-28</td><td><span class="badge badge-warn">No</span> (riesgo medio)</td></tr>
+        <tr><td><code>P-PSEA-09</code></td><td>DG-PSEA-02, I-PSEA-16, F-PSEA-07, 01, 02, 06, P-PSEA-10</td><td><span class="badge badge-ok">Sí</span></td></tr>
+        <tr><td><code>P-PSEA-10</code></td><td>F-PSEA-08, 13, P-PSEA-06</td><td><span class="badge badge-ok">Sí</span></td></tr>
+        <tr><td><code>P-PSEA-12</code></td><td>P-PSEA-13</td><td><span class="badge badge-warn">No</span> (debería generar matriz)</td></tr>
+        <tr><td><code>P-PSEA-13</code></td><td>P-PSEA-23</td><td><span class="badge badge-warn">No</span> (debería generar matriz)</td></tr>
+        <tr><td><code>P-PSEA-16</code></td><td>Ninguna en el mapa</td><td><span class="badge badge-crit">No</span> (crítico)</td></tr>
+        <tr><td><code>P-PSEA-20</code></td><td>F-PSEA-04</td><td><span class="badge badge-ok">Sí</span></td></tr>
+        <tr><td><code>P-PSEA-21</code></td><td>F-PSEA-04</td><td><span class="badge badge-ok">Sí</span></td></tr>
+        <tr><td><code>P-PSEA-23</code></td><td>DG-PSEA-02, DG-PSEA-03, I-PSEA-17, F-PSEA-09, 05A, 12, 10, 14</td><td><span class="badge badge-ok">Sí</span></td></tr>
+        <tr><td><code>P-PSEA-24</code></td><td>Ninguna en el mapa</td><td><span class="badge badge-crit">No</span> (crítico)</td></tr>
+        <tr><td><code>P-PSEA-25</code></td><td>Ninguna en el mapa</td><td><span class="badge badge-crit">No</span> (crítico)</td></tr>
+        <tr><td><code>P-PSEA-26</code></td><td>F-PSEA-04</td><td><span class="badge badge-ok">Sí</span></td></tr>
+        <tr><td><code>P-PSEA-27</code></td><td>Ninguna en el mapa</td><td><span class="badge badge-crit">No</span> (crítico)</td></tr>
+        <tr><td><code>P-PSEA-28</code></td><td>Ninguna en el mapa</td><td><span class="badge badge-crit">No</span> (crítico)</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout critical">
+      <strong>Procedimientos operativos críticos sin salida:</strong> <code>P-PSEA-16</code> (TNC/NC/CAPA), <code>P-PSEA-24</code> (quejas), <code>P-PSEA-25</code> (apelaciones), <code>P-PSEA-27</code> (competencia) y <code>P-PSEA-28</code> (proveedores). Cada uno ya tiene asignado un formato en el diseño tentativo; solo falta representarlo en el mapa.
+    </div>
+  </section>
+
+  <section id="formatos">
+    <h2>4. Formatos y registros: presencia en el mapa</h2>
+    <p>Se revisó la presencia y el anclaje de los 20 formatos/registros definidos. Cinco no aparecen en el mapa visual aunque existen en los documentos de diseño.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Código</th>
+          <th>¿En el mapa?</th>
+          <th>Anclaje</th>
+          <th>Estado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><code>F-PSEA-01</code></td><td>Sí</td><td>P-PSEA-09</td><td><span class="badge badge-ok">OK</span></td></tr>
+        <tr><td><code>F-PSEA-02</code></td><td>Sí</td><td>P-PSEA-09</td><td><span class="badge badge-ok">OK</span></td></tr>
+        <tr><td><code>F-PSEA-03</code></td><td>No</td><td>Retirado</td><td><span class="badge badge-info">N/A</span></td></tr>
+        <tr><td><code>F-PSEA-04</code></td><td>Sí</td><td>P-PSEA-06, 07, 20-28</td><td><span class="badge badge-ok">OK</span></td></tr>
+        <tr><td><code>F-PSEA-05</code></td><td><strong>No</strong></td><td>Sugerido: P-PSEA-09 o P-PSEA-20</td><td><span class="badge badge-warn">Falta en mapa</span></td></tr>
+        <tr><td><code>F-PSEA-05A</code></td><td>Sí</td><td>P-PSEA-23</td><td><span class="badge badge-ok">OK</span></td></tr>
+        <tr><td><code>F-PSEA-06</code></td><td>Sí</td><td>P-PSEA-09</td><td><span class="badge badge-ok">OK</span></td></tr>
+        <tr><td><code>F-PSEA-07</code></td><td>Sí</td><td>P-PSEA-09</td><td><span class="badge badge-ok">OK</span></td></tr>
+        <tr><td><code>F-PSEA-08</code></td><td>Sí</td><td>P-PSEA-10</td><td><span class="badge badge-ok">OK</span></td></tr>
+        <tr><td><code>F-PSEA-09</code></td><td>Sí</td><td>P-PSEA-23</td><td><span class="badge badge-ok">OK</span></td></tr>
+        <tr><td><code>F-PSEA-10</code></td><td>Sí</td><td>P-PSEA-23, I-PSEA-17</td><td><span class="badge badge-ok">OK</span></td></tr>
+        <tr><td><code>F-PSEA-11</code></td><td>No</td><td>Reservado</td><td><span class="badge badge-info">N/A</span></td></tr>
+        <tr><td><code>F-PSEA-12</code></td><td>Sí</td><td>P-PSEA-23</td><td><span class="badge badge-ok">OK</span></td></tr>
+        <tr><td><code>F-PSEA-13</code></td><td>Sí</td><td>P-PSEA-06, P-PSEA-10</td><td><span class="badge badge-ok">OK</span></td></tr>
+        <tr><td><code>F-PSEA-13A-D</code></td><td>Sí</td><td>P-PSEA-06, I-PSEA-17</td><td><span class="badge badge-ok">OK</span></td></tr>
+        <tr><td><code>F-PSEA-14</code></td><td>Sí</td><td>P-PSEA-06, I-PSEA-17</td><td><span class="badge badge-ok">OK</span></td></tr>
+        <tr><td><code>F-PSEA-16</code></td><td><strong>No</strong></td><td>Debería anclarse a P-PSEA-16 y P-PSEA-24</td><td><span class="badge badge-crit">Falta en mapa</span></td></tr>
+        <tr><td><code>F-PSEA-17</code></td><td><strong>No</strong></td><td>Debería anclarse a P-PSEA-25, P-PSEA-20</td><td><span class="badge badge-crit">Falta en mapa</span></td></tr>
+        <tr><td><code>F-PSEA-21</code></td><td><strong>No</strong></td><td>Debería anclarse a P-PSEA-27</td><td><span class="badge badge-crit">Falta en mapa</span></td></tr>
+        <tr><td><code>F-PSEA-23</code></td><td><strong>No</strong></td><td>Debería anclarse a P-PSEA-28</td><td><span class="badge badge-crit">Falta en mapa</span></td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout warning">
+      <strong>Nota sobre F-PSEA-05:</strong> en el mapa tentativo y en <code>calaire-app</code> se maneja como <code>F-PSEA-05/05A</code> (registro de participación unificado). El mapa HTML solo muestra <code>F-PSEA-05A</code>, lo que genera inconsistencia semántica con la operación real.
+    </div>
+  </section>
+
+  <section id="flujos">
+    <h2>5. Flujos de datos críticos</h2>
+    <p>El mapa define cuatro rutas críticas. Dos de ellas presentan fallas de anclaje en el instructivo <code>I-PSEA-18</code>; las otras dos son coherentes.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Ruta</th>
+          <th>Secuencia resumida</th>
+          <th>Estado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>1. Flujo oficial de datos</strong></td>
+          <td>P-PSEA-23 → DG-PSEA-02 → I-PSEA-10 → F-PSEA-09 → F-PSEA-12 → DG-PSEA-03 → I-PSEA-17 → F-PSEA-10 → F-PSEA-14 → I-PSEA-18 → F-PSEA-04</td>
+          <td><span class="badge badge-fail">Rota</span> (I-PSEA-18 sin anclaje)</td>
+        </tr>
+        <tr>
+          <td><strong>2. Homogeneidad y estabilidad</strong></td>
+          <td>P-PSEA-10 → F-PSEA-08 → P-PSEA-06 → F-PSEA-13 → F-PSEA-13A-D → I-PSEA-18 → F-PSEA-04</td>
+          <td><span class="badge badge-fail">Rota</span> (I-PSEA-18 sin anclaje)</td>
+        </tr>
+        <tr>
+          <td><strong>3. Planificación</strong></td>
+          <td>P-PSEA-09 → DG-PSEA-02 → I-PSEA-16 → F-PSEA-07 → F-PSEA-01 → F-PSEA-02 → F-PSEA-06 → P-PSEA-10</td>
+          <td><span class="badge badge-ok">Coherente</span></td>
+        </tr>
+        <tr>
+          <td><strong>4. Orden de elaboración</strong></td>
+          <td>P-PSEA-01 → P-PSEA-12 → P-PSEA-13 → P-PSEA-23 → P-PSEA-09 → P-PSEA-10 → P-PSEA-06 → P-PSEA-07 → P-PSEA-02-05 → formatos → instructivos → DG cierre</td>
+          <td><span class="badge badge-ok">Lógica de priorización</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="riesgos">
+    <h2>6. Matriz de inconsistencias y riesgos</h2>
+    <p>Las siguientes inconsistencias deben atenderse para cerrar las brechas de conectividad del mapa.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Inconsistencia</th>
+          <th>Severidad</th>
+          <th>Impacto</th>
+          <th>Corrección</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td><code>I-PSEA-10</code> no anclado a procedimiento</td><td><span class="badge badge-warn">Alta</span></td><td>El instructivo del participante carece de gobierno procedimental.</td><td>Añadir <code>P-PSEA-20 → I-PSEA-10</code> o <code>P-PSEA-09 → I-PSEA-10</code>.</td></tr>
+        <tr><td>2</td><td><code>I-PSEA-18</code> no anclado a procedimiento</td><td><span class="badge badge-warn">Alta</span></td><td>El instructivo de análisis PT carece de gobierno procedimental.</td><td>Añadir <code>P-PSEA-06 → I-PSEA-18</code> y/o <code>P-PSEA-07 → I-PSEA-18</code>.</td></tr>
+        <tr><td>3</td><td><code>P-PSEA-16</code> sin salida a <code>F-PSEA-16</code></td><td><span class="badge badge-crit">Crítica</span></td><td>No hay registro de NC/CAPA.</td><td>Agregar nodo <code>F-PSEA-16</code> y arista <code>P-PSEA-16 → F-PSEA-16</code>.</td></tr>
+        <tr><td>4</td><td><code>P-PSEA-24</code> sin salida a <code>F-PSEA-16</code></td><td><span class="badge badge-crit">Crítica</span></td><td>No hay registro de quejas.</td><td>Agregar arista <code>P-PSEA-24 → F-PSEA-16</code>.</td></tr>
+        <tr><td>5</td><td><code>P-PSEA-25</code> sin salida a <code>F-PSEA-17</code></td><td><span class="badge badge-crit">Crítica</span></td><td>No hay registro de apelaciones.</td><td>Agregar nodo <code>F-PSEA-17</code> y arista <code>P-PSEA-25 → F-PSEA-17</code>.</td></tr>
+        <tr><td>6</td><td><code>P-PSEA-27</code> sin salida a <code>F-PSEA-21</code></td><td><span class="badge badge-warn">Alta</span></td><td>No hay registro de competencia.</td><td>Agregar nodo <code>F-PSEA-21</code> y arista <code>P-PSEA-27 → F-PSEA-21</code>.</td></tr>
+        <tr><td>7</td><td><code>P-PSEA-28</code> sin salida a <code>F-PSEA-23</code></td><td><span class="badge badge-warn">Alta</span></td><td>No hay registro de proveedores.</td><td>Agregar nodo <code>F-PSEA-23</code> y arista <code>P-PSEA-28 → F-PSEA-23</code>.</td></tr>
+        <tr><td>8</td><td><code>F-PSEA-05</code> ausente del mapa</td><td><span class="badge badge-warn">Media</span></td><td>El registro de participación no se visualiza.</td><td>Decidir unificación con <code>F-PSEA-05A</code> o mantenerlo separado.</td></tr>
+        <tr><td>9</td><td><code>P-PSEA-08</code> sin salida a registro de colusión</td><td><span class="badge badge-warn">Media</span></td><td>No hay evidencia documental de detección.</td><td>Añadir <code>P-PSEA-08 → F-PSEA-06</code> o crear formato específico.</td></tr>
+        <tr><td>10</td><td><code>P-PSEA-12</code> y <code>P-PSEA-13</code> sin salida a matriz</td><td><span class="badge badge-warn">Media</span></td><td>Las matrices no generan registros visibles.</td><td>Definir si la matriz es autoevidencia o requiere formato.</td></tr>
+        <tr><td>11</td><td><code>P-PSEA-02</code> a <code>05</code> sin salida directa</td><td><span class="badge badge-ok">Baja</span></td><td>Los procedimientos por gas no dejan registro propio.</td><td>Documentar en <code>P-PSEA-12</code> que citan transversales.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="recomendaciones">
+    <h2>7. Recomendaciones de corrección</h2>
+
+    <h3>A. Correcciones mínimas obligatorias</h3>
+    <ol>
+      <li>Añadir arista <code>P-PSEA-20 → I-PSEA-10</code> (anclar instructivo del participante).</li>
+      <li>Añadir arista <code>P-PSEA-06 → I-PSEA-18</code> (anclar instructivo de análisis PT).</li>
+      <li>Añadir arista <code>P-PSEA-07 → I-PSEA-18</code> (refuerzo de anclaje).</li>
+      <li>Añadir nodo <code>F-PSEA-16</code> y arista <code>P-PSEA-16 → F-PSEA-16</code>.</li>
+      <li>Añadir arista <code>P-PSEA-24 → F-PSEA-16</code>.</li>
+      <li>Añadir nodo <code>F-PSEA-17</code> y arista <code>P-PSEA-25 → F-PSEA-17</code>.</li>
+      <li>Añadir nodo <code>F-PSEA-21</code> y arista <code>P-PSEA-27 → F-PSEA-21</code>.</li>
+      <li>Añadir nodo <code>F-PSEA-23</code> y arista <code>P-PSEA-28 → F-PSEA-23</code>.</li>
+    </ol>
+
+    <h3>B. Nodos faltantes por agregar</h3>
+    <ul>
+      <li><code>F-PSEA-05</code>: registro de participación (posiblemente unificado como <code>F-PSEA-05/05A</code>).</li>
+      <li><code>F-PSEA-16</code>: registro/caso de queja o no conformidad.</li>
+      <li><code>F-PSEA-17</code>: registro de apelaciones.</li>
+      <li><code>F-PSEA-21</code>: matriz de competencia/autorización.</li>
+      <li><code>F-PSEA-23</code>: evaluación de proveedores críticos.</li>
+    </ul>
+
+    <h3>C. Ajustes de flujo y consistencia</h3>
+    <ul>
+      <li>Conectar <code>P-PSEA-08 → F-PSEA-06</code> para reflejar medidas preventivas de colusión en el plan de ronda.</li>
+      <li>Definir si <code>P-PSEA-12</code> y <code>P-PSEA-13</code> son autoevidencia o generan un formato PDF/Excel.</li>
+      <li>Alinear el mapa con <code>calaire-app</code>: reflejar <code>F-PSEA-05/05A</code> o mantener la separación con conexiones claras.</li>
+    </ul>
+  </section>
+
+  <section id="fuentes">
+    <h2>8. Fuentes analizadas</h2>
+    <ul class="sources">
+      <li><code>docs/documentacion_sgc/mapa_navegacion_sgc_pea.html</code> — mapa visual SVG del SGC PEA.</li>
+      <li><code>docs/rev_conex_sgc.md</code> — revisión de conexiones y recomendaciones.</li>
+      <li><code>docs/documentacion_sgc/sesion_grill_sgc_pea_v1.md</code> — decisiones de arquitectura documental.</li>
+      <li><code>docs/documentacion_sgc/mapa_tentativo_sgc_pea.md</code> — vista rápida del sistema.</li>
+      <li><code>docs/documentacion_sgc/mapa_decisiones_documentales_pea.md</code> — decisiones documentales.</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  Documento generado a partir de <code>docs/documentacion_sgc/analisis_sgc.md</code> · Proyecto CALAIRE-EA · 2026-06-13
+</footer>
+
+</body>
+</html>

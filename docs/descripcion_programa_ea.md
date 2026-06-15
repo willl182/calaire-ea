@@ -269,10 +269,10 @@ Participante ingresa resultados
 Cada ronda se ejecuta con el conjunto de formatos F-PSEA-05 a F-PSEA-14, almacenados en su subcarpeta:
 
 ```
-docs/prueba_piloto/
-  ├── ronda_simple/           ← CO/SO₂, P1
-  ├── ronda_compleja_fase1/   ← O₃/NO/NO₂, P1+P2
-  └── ronda_compleja_fase2/   ← CO/SO₂, P2
+docs/documentacion_sgc/02_prueba_piloto_rondas/
+  ├── 01_ronda_simple/           ← CO/SO₂, P1
+  ├── 02_ronda_compleja_fase1/   ← O₃/NO/NO₂, P1+P2
+  └── 03_ronda_compleja_fase2/   ← CO/SO₂, P2
 ```
 
 ---
@@ -307,8 +307,9 @@ docs/prueba_piloto/
 |-----------|-----------|
 | Hub documental y SGC (Logseq) | `pages/CALAIRE-EA.md`, `pages/QMS.md` |
 | Ecosistema de software | `pages/CALAIRE-APP.md` |
-| Árbol Maestro PSEA (SGC completo) | `docs/docs_sgc/202510 Documentacion SGC/Árbol Maestro PSEA.md` |
-| Índice de formatos prueba piloto | `docs/prueba_piloto/indice_documentos.md` |
+| Documentación consolidada SGC y prueba piloto | `docs/documentacion_sgc/README.md` |
+| Árbol Maestro PSEA (SGC completo) | `docs/documentacion_sgc/01_bloque_general/05_matrices_inventarios/Árbol Maestro PSEA.md` |
+| Índice de formatos prueba piloto | `docs/documentacion_sgc/02_prueba_piloto_rondas/00_planificacion/indice_documentos.md` |
 | Cronograma Gantt | `docs/auxiliares/gantt.md` |
 | Línea de tiempo rondas | `docs/auxiliares/timeline.md` |
 | Evolución general del proyecto | `260423_evolucion_general_proyecto.md` |

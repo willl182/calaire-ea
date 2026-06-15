@@ -1,0 +1,79 @@
+- tags:: [[MOC]], [[Project]]
+- # OSE 88 - Sistema de Cobro
+- **Propósito**
+	- Definir el flujo operativo interno para capturar evidencias, organizar actividades, consolidar soportes y alimentar el documento de cobro `docs/cuentas/formato InformeFinal_OSE_88.docx`.
+- **Principios de diseño**
+	- La fuente cronológica de verdad es el journal diario.
+	- La fuente estructurada de trabajo son las carpetas por actividad `A01` a `A13`.
+	- El documento oficial de cobro se arma desde un borrador Markdown y se exporta a DOCX cuando corresponda.
+	- La trazabilidad se mantiene por actividad, por evidencia y por fecha.
+	- El agente puede proponer y compilar, pero los elementos críticos de cobro se revisan antes de marcarse como listos.
+- **Estructura operativa**
+	- `docs/cuentas/ose_88/`
+		- `payment/`
+			- `current.md`
+			- `manifest.md`
+			- `snapshots/`
+		- `activities/`
+			- `A01/`
+				- `index.md`
+				- `current.md`
+				- `snapshots/`
+				- `evidence/`
+				- `deliverables/`
+			- `A02/`
+			- `A03/`
+			- `A04/`
+			- `A05/`
+			- `A06/`
+			- `A07/`
+			- `A08/`
+			- `A09/`
+			- `A10/`
+			- `A11/`
+			- `A12/`
+			- `A13/`
+- **Contenido mínimo por actividad**
+	- `index.md`
+		- Metadatos de la actividad.
+		- Estado actual.
+		- Lista corta de evidencias relevantes.
+		- Resumen narrativo breve.
+		- Señalización de relevancia para cobro.
+	- `current.md`
+		- Borrador vivo de la actividad.
+		- Texto generado desde journals y etiquetas.
+		- Ediciones manuales menores preservadas.
+		- Conflictos visibles cuando una edición manual contradice una evidencia registrada.
+	- `snapshots/`
+		- Copias fechadas del estado del borrador.
+		- Capturas al cierre de la semana y después de actualizaciones mayores.
+	- `evidence/`
+		- Archivos de soporte, actas, correos, listas, formatos y anexos.
+	- `deliverables/`
+		- Insumos finales o parciales asociados a la actividad y a los entregables `E1` a `E7`.
+- **Nomenclatura**
+	- Evidencias: `yyyymmdd-a##_nombre-archivo`
+	- Snapshots: `yyyymmdd_nombre-archivo_s`
+	- Actividades: `A01` a `A13`
+	- Entregables: `E1` a `E7`
+- **Etiquetado**
+	- Se usará una combinación mínima de etiquetas de actividad y entregable.
+	- Ejemplo: `#A5 #E2`
+	- La captura diaria puede incluir una etiqueta de proceso si hace falta, pero la base operativa sigue siendo actividad + entregable.
+- **Criterio de listo para cobro**
+	- Debe existir evidencia trazable.
+	- Debe existir vínculo con la actividad correspondiente.
+	- Debe existir correspondencia con el entregable cuando aplique.
+	- Debe existir revisión humana antes de considerar el bloque listo.
+- **Flujo de trabajo**
+	- Captura en journal diario.
+	- Clasificación por actividad mediante etiquetas.
+	- Actualización de `index.md` y `current.md`.
+	- Preservación de ediciones manuales relevantes.
+	- Consolidación del `payment/current.md`.
+	- Revisión final.
+	- Exportación a `docs/cuentas/formato InformeFinal_OSE_88.docx`.
+- **Relación con el control operativo**
+	- [[OSE 88 - Control Operativo]]
+	- [[Actividades OSE 88]]

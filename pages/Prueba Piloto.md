@@ -31,9 +31,10 @@
 - **Rondas**
 	- [[Ronda 7]] (Apr 22-27) - Ronda simple CO/SO2 para [[SIATA]]
 	- [[Ronda 8]] (Apr 29-May 4) - Ronda doble O3, NO, NO2 para [[SIATA]] y [[Universidad Pontificia Bolivariana]]
+	- Fase posterior diferida - CO/SO2 para [[Universidad Pontificia Bolivariana]]
 - **Confirmaciones de Laboratorios**
 	- [[SIATA]] :: Definido como P1 para las dos rondas activas del piloto
-	- [[Universidad Pontificia Bolivariana]] :: Definida como P2 para la ronda doble O3, NO, NO2
+	- [[Universidad Pontificia Bolivariana]] :: Definida como P2 con alcance técnico para CO, SO2, O3, NO y NO2; participación planificada en O3, NO, NO2 y fase posterior diferida para CO/SO2
 - **Logística**
 	- Equipos a transportar: Analizadores CO, NOx, SO2, O3.
 	- Responsable transporte: por confirmar en plan operativo de recepción y devolución
@@ -49,6 +50,7 @@
 	- F-PSEA-06 (Plan de Ronda EA): draft operativo completado para ronda simple, 4 auditorías cruzadas ejecutadas, dictamen `no_aprobable` por inconsistencia σ_pt interdocumental. Backlog C4-01 a C4-04 definido.
 	- I-PSEA-09 (Instrucciones a Participantes): skeleton con 3 brechas identificadas.
 	- Decisión σ_pt: enfoque post-ronda adoptado (fitness-for-purpose, fórmula JRC-ERLAP).
+	- [[docs/documentacion_sgc/02_prueba_piloto_rondas/04_informes_operativos/informe_operativo_prueba_piloto.md]] :: informe operativo draft de ejecución de rondas piloto, incluyendo trazabilidad de invitación, planificación, ejecución, resultados preliminares, lecciones aprendidas y registros fotográficos.
 - **Referencias de planificación**
 	- [[SIATA]]
 	- [[Universidad Pontificia Bolivariana]]
