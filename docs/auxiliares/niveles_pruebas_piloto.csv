@@ -1,0 +1,26 @@
+ronda,contaminante,unidad,nivel,concentracion,nota
+Ronda A,CO,µmol/mol,1,0,cero
+Ronda A,CO,µmol/mol,2,6.3,
+Ronda A,CO,µmol/mol,3,4.2,
+Ronda A,CO,µmol/mol,4,2.8,
+Ronda A,CO,µmol/mol,5,1.4,
+Ronda A,SO2,nmol/mol,1,0,cero
+Ronda A,SO2,nmol/mol,2,179,
+Ronda A,SO2,nmol/mol,3,119,
+Ronda A,SO2,nmol/mol,4,80,
+Ronda A,SO2,nmol/mol,5,40,
+Ronda B,O3,nmol/mol,1,0,cero
+Ronda B,O3,nmol/mol,2,180,
+Ronda B,O3,nmol/mol,3,121,
+Ronda B,O3,nmol/mol,4,80,
+Ronda B,O3,nmol/mol,5,40,
+Ronda B,NO,nmol/mol,1,0,cero
+Ronda B,NO,nmol/mol,2,179,
+Ronda B,NO,nmol/mol,3,119,
+Ronda B,NO,nmol/mol,4,79,
+Ronda B,NO,nmol/mol,5,37,
+Ronda B,NO2,nmol/mol,1,0,cero
+Ronda B,NO2,nmol/mol,2,140,
+Ronda B,NO2,nmol/mol,3,105,
+Ronda B,NO2,nmol/mol,4,60,
+Ronda B,NO2,nmol/mol,5,30,

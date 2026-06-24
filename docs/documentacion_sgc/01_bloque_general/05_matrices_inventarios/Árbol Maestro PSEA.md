@@ -217,11 +217,11 @@ graph TD
     P83 --> P833[Documentación de casos]
 ```
 
-#### P-PSEA-09: Procedimiento de Planificación Ronda EA
+#### P-PSEA-09: Generación/emisión del informe de resultados
 
 ```mermaid
 graph TD
-    P9[P-PSEA-09 Procedimiento de Planificacion Ronda EA]
+    P9[P-PSEA-09 Generacion emision del informe de resultados]
     
     P9 --> P91[Planificación de rondas]
     P9 --> P92[Calendario operativo]

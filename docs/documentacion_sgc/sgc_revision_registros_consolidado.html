@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Revision consolidada del mapa documental SGC PEA, formatos naturales y registros calaire-app.">
+  <title>SGC PEA · Revision consolidada</title>
+  <style>
+    :root {
+      --ink: #17211d;
+      --muted: #63736d;
+      --paper: #f4f1e8;
+      --panel: #fffdf8;
+      --line: #d8d1c4;
+      --teal: #0d6b63;
+      --teal-soft: #dceee9;
+      --blue: #2a6286;
+      --blue-soft: #dfeaf1;
+      --olive: #687d2f;
+      --olive-soft: #edf2d9;
+      --amber: #a7671e;
+      --amber-soft: #fff0d6;
+      --red: #9e3f32;
+      --red-soft: #f8dfd9;
+      --violet: #54528d;
+      --violet-soft: #e8e7f5;
+      --shadow: 0 24px 70px rgba(23, 33, 29, .14);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(13,107,99,.055) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(13,107,99,.055) 1px, transparent 1px),
+        var(--paper);
+      background-size: 26px 26px;
+      font-family: Avenir, "Trebuchet MS", Verdana, sans-serif;
+    }
+
+    a { color: inherit; }
+    code { font-family: "Courier New", monospace; font-weight: 700; }
+
+    .page {
+      max-width: 1480px;
+      margin: 0 auto;
+    }
+
+    header {
+      min-height: 54vh;
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(280px, .85fr);
+      gap: clamp(20px, 5vw, 76px);
+      align-items: end;
+      padding: 42px clamp(18px, 5vw, 76px) 30px;
+      border-bottom: 1px solid var(--line);
+      background:
+        linear-gradient(135deg, rgba(255,253,248,.98), rgba(220,238,233,.92)),
+        var(--panel);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      gap: 12px;
+      align-items: center;
+      color: var(--teal);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 44px;
+      height: 2px;
+      background: var(--teal);
+    }
+
+    h1 {
+      max-width: 1000px;
+      margin: 14px 0 14px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(42px, 7vw, 92px);
+      line-height: .92;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      max-width: 900px;
+      margin: 0;
+      color: #405149;
+      font-size: clamp(16px, 2vw, 20px);
+      line-height: 1.55;
+    }
+
+    .hero-panel {
+      border: 1px solid var(--line);
+      background: rgba(255,253,248,.78);
+      box-shadow: var(--shadow);
+      padding: 18px;
+    }
+
+    .hero-panel h2 {
+      margin: 0 0 10px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 26px;
+      line-height: 1.05;
+    }
+
+    .hero-panel p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 12px clamp(18px, 5vw, 76px);
+      border-bottom: 1px solid var(--line);
+      background: rgba(255,253,248,.96);
+      backdrop-filter: blur(12px);
+    }
+
+    .nav a {
+      min-height: 36px;
+      display: inline-flex;
+      align-items: center;
+      padding: 0 12px;
+      border: 1px solid #bdc7c1;
+      background: #fff;
+      color: var(--ink);
+      font-size: 13px;
+      font-weight: 900;
+      text-decoration: none;
+    }
+
+    .nav a.primary {
+      border-color: var(--teal);
+      background: var(--teal);
+      color: white;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 18px;
+      padding: 18px;
+    }
+
+    section {
+      border: 1px solid var(--line);
+      background: rgba(255,253,248,.96);
+      box-shadow: var(--shadow);
+      padding: clamp(16px, 3vw, 30px);
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(28px, 4vw, 48px);
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+
+    .section-lead {
+      max-width: 960px;
+      margin: 0 0 16px;
+      color: #405149;
+      font-size: 16px;
+      line-height: 1.55;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .metric {
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: #fbfaf6;
+    }
+
+    .metric strong {
+      display: block;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 34px;
+      line-height: 1;
+    }
+
+    .metric span {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 900;
+      line-height: 1.35;
+      text-transform: uppercase;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+      gap: 16px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .card {
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: #fbfaf6;
+    }
+
+    .card strong {
+      display: block;
+      margin-bottom: 7px;
+      font-size: 17px;
+    }
+
+    .card p {
+      margin: 0;
+      color: #42504a;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .tag {
+      display: inline-flex;
+      min-height: 24px;
+      align-items: center;
+      margin: 0 6px 8px 0;
+      padding: 0 8px;
+      border: 1px solid currentColor;
+      font-size: 12px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .ok { color: var(--olive); background: var(--olive-soft); }
+    .warn { color: var(--amber); background: var(--amber-soft); }
+    .stop { color: var(--red); background: var(--red-soft); }
+    .info { color: var(--teal); background: var(--teal-soft); }
+    .pt { color: var(--violet); background: var(--violet-soft); }
+    .app { color: var(--blue); background: var(--blue-soft); }
+
+    .flow {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .flow-step {
+      position: relative;
+      min-height: 178px;
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: #fbfaf6;
+    }
+
+    .flow-step::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -11px;
+      width: 11px;
+      height: 1px;
+      background: var(--line);
+    }
+
+    .flow-step:last-child::after { display: none; }
+
+    .flow-step b {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--teal);
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+
+    .flow-step p {
+      margin: 0;
+      color: #42504a;
+      font-size: 14px;
+      line-height: 1.48;
+    }
+
+    .table-wrap {
+      overflow: auto;
+      margin-top: 14px;
+      border: 1px solid var(--line);
+    }
+
+    table {
+      width: 100%;
+      min-width: 980px;
+      border-collapse: collapse;
+      background: #fffefa;
+    }
+
+    th, td {
+      padding: 10px;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    th {
+      background: #efe8da;
+      color: #34433d;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+
+    tr:last-child td { border-bottom: 0; }
+
+    .rail {
+      display: grid;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .rail-item {
+      display: grid;
+      grid-template-columns: 120px minmax(0, 1fr);
+      gap: 10px;
+      align-items: start;
+      padding: 12px;
+      border: 1px solid var(--line);
+      background: #fbfaf6;
+    }
+
+    .rail-item b {
+      color: var(--teal);
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+
+    .rail-item p {
+      margin: 0;
+      color: #42504a;
+      line-height: 1.5;
+    }
+
+    footer {
+      padding: 0 18px 28px;
+      color: var(--muted);
+      font-size: 12px;
+      text-align: center;
+    }
+
+    @media (max-width: 1040px) {
+      header, .split { grid-template-columns: 1fr; }
+      .metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .flow { grid-template-columns: 1fr; }
+      .flow-step::after { display: none; }
+    }
+
+    @media (max-width: 620px) {
+      .metrics { grid-template-columns: 1fr; }
+      .rail-item { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div>
+        <div class="eyebrow">CALAIRE-EA · SGC PEA</div>
+        <h1>Revision consolidada del mapa documental y registros digitales</h1>
+        <p class="lead">Una sola lectura para decisiones documentales: que codigos estan vigentes, que versiones editables existen, que registros controla calaire-app y que queda por completar en anexos de homogeneidad/estabilidad.</p>
+      </div>
+      <div class="hero-panel">
+        <h2>Resultado de rev1</h2>
+        <p>La revision queda cerrada bajo criterio de formato natural: procedimientos y documentos narrativos en DOCX; registros de datos en XLSX maestro con CSV operativo cuando aplica. Los nueve faltantes fueron implementados, con <code>F-PSEA-11</code> parcial por anexos aun no definidos.</p>
+      </div>
+    </header>
+
+    <nav class="nav" aria-label="Navegacion principal">
+      <a class="primary" href="#estado">Estado</a>
+      <a class="primary" href="#flujo">Flujo digital</a>
+      <a class="primary" href="#matriz">Matriz</a>
+      <a href="#brechas">Brechas</a>
+      <a href="#decisiones">Decisiones</a>
+      <a href="rev1.md" target="_blank" rel="noopener">rev1.md</a>
+      <a href="mapa_navegacion_sgc_pea.html" target="_blank" rel="noopener">Mapa interactivo</a>
+    </nav>
+
+    <main>
+      <section id="estado">
+        <h2>Estado documental consolidado</h2>
+        <p class="section-lead">La revision separa tres cosas que antes estaban mezcladas: documentos narrativos, registros tabulares con maestro XLSX y soporte tecnico de aplicativos. Esa separacion evita forzar a DOCX archivos que por naturaleza son CSV/XLSX.</p>
+        <div class="metrics">
+          <div class="metric"><strong>3/3</strong><span>Documentos generales con DOCX</span></div>
+          <div class="metric"><strong>21/21</strong><span>Procedimientos con DOCX</span></div>
+          <div class="metric"><strong>5/5</strong><span>Instructivos con DOCX</span></div>
+          <div class="metric"><strong>8</strong><span>XLSX maestros tabulares</span></div>
+          <div class="metric"><strong>1</strong><span>Informe final DOCX</span></div>
+        </div>
+        <div class="cards">
+          <div class="card"><span class="tag ok">Creado</span><strong><code>P-PSEA-05</code> Comunicaciones del PEA</strong><p>Se creo archivo base en `.md` y `.docx` para cerrar la brecha del procedimiento.</p></div>
+          <div class="card"><span class="tag ok">Originales</span><strong><code>P-PSEA-10</code> a <code>P-PSEA-13</code></strong><p>Los procedimientos por gas quedan como DOCX originales activos: <code>0P-PSEA-02</code> a <code>0P-PSEA-05</code> copiados y renombrados a la numeracion vigente.</p></div>
+          <div class="card"><span class="tag warn">No forzar DOCX</span><strong><code>F-PSEA-01</code> y <code>F-PSEA-02</code></strong><p>Son formatos controlados en hoja de calculo. Su ausencia en `.docx` no es una brecha documental.</p></div>
+          <div class="card"><span class="tag ok">Implementado</span><strong><code>F-PSEA-04</code>, <code>F-PSEA-07</code> a <code>F-PSEA-13</code></strong><p>Se copiaron las fuentes definidas y se crearon XLSX maestros con encabezado para datos; el informe queda como DOCX.</p></div>
+        </div>
+      </section>
+
+      <section id="flujo">
+        <h2>Flujo digital vigente</h2>
+        <p class="section-lead">El mapa actualizado define una cadena documental donde calaire-app administra la ronda y la transferencia de datos, mientras pt_app gobierna preprocesamiento, analisis, H/E, dataset oficial e informe.</p>
+        <div class="flow">
+          <div class="flow-step"><b>Planificar</b><p><code>P-PSEA-04</code>, <code>DG-PSEA-02</code>, <code>F-PSEA-01</code>, <code>F-PSEA-02</code>, <code>F-PSEA-05</code> y <code>F-PSEA-06</code>.</p></div>
+          <div class="flow-step"><b>Registrar</b><p><code>I-PSEA-02</code>, <code>I-PSEA-03</code>, <code>F-PSEA-04</code>, <code>F-PSEA-05A</code> y <code>F-PSEA-08</code>.</p></div>
+          <div class="flow-step"><b>Exportar</b><p><code>F-PSEA-09</code> formaliza la salida oficial desde calaire-app hacia pt_app.</p></div>
+          <div class="flow-step"><b>Procesar</b><p><code>DG-PSEA-03</code>, <code>I-PSEA-04</code>, <code>I-PSEA-05</code>, <code>F-PSEA-10</code>, <code>F-PSEA-11A-D</code> y <code>F-PSEA-12</code>.</p></div>
+          <div class="flow-step"><b>Cerrar</b><p><code>P-PSEA-09</code> y <code>F-PSEA-13</code> gobiernan generacion y emision del informe final.</p></div>
+          <div class="flow-step"><b>Aplicar por gas</b><p><code>P-PSEA-10</code> a <code>P-PSEA-13</code> conservan los procedimientos originales para NO/NO2, CO, O3 y SO2.</p></div>
+        </div>
+      </section>
+
+      <section id="matriz">
+        <h2>Matriz de codigos y cobertura</h2>
+        <p class="section-lead">Esta matriz fusiona la lectura del mapa de navegacion con la revision actualizada de formatos. Los registros tabulares con maestro XLSX se controlan en CSV/XLSX; no se fuerzan a DOCX.</p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Familia</th>
+                <th>Codigos</th>
+                <th>Cobertura editable</th>
+                <th>Control vigente</th>
+                <th>Decision documental</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><span class="tag info">DG</span></td><td><code>DG-PSEA-01</code> a <code>DG-PSEA-03</code></td><td><span class="tag ok">Completa</span></td><td>Documentos generales del protocolo y aplicativos.</td><td>Mantener y actualizar referencias al flujo digital.</td></tr>
+              <tr><td><span class="tag info">P</span></td><td><code>P-PSEA-01</code> a <code>P-PSEA-21</code></td><td><span class="tag ok">Completa</span></td><td>Procedimientos tecnicos, transversales y de gestion operativa.</td><td>Mantener <code>P-PSEA-05</code> como procedimiento de comunicaciones.</td></tr>
+              <tr><td><span class="tag info">I</span></td><td><code>I-PSEA-01</code> a <code>I-PSEA-05</code></td><td><span class="tag ok">Completa</span></td><td>Instructivos de embalaje, calaire-app y pt_app.</td><td>Mantener <code>I-PSEA-01</code> diferenciado del item gaseoso.</td></tr>
+              <tr><td><span class="tag info">F</span></td><td><code>F-PSEA-01</code>, <code>02</code>, <code>04</code> a <code>13</code>, <code>11A-D</code>, <code>14</code> a <code>17</code></td><td><span class="tag ok">Implementada</span></td><td>Formatos maestros, evidencias por ronda y casos SGC en formato natural.</td><td>Completar anexos pendientes de <code>F-PSEA-11</code> cuando existan fuentes.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="brechas">
+        <h2>Maestros base implementados</h2>
+        <div class="split">
+          <div>
+            <p class="section-lead">Los elementos que estaban pendientes ya fueron materializados con archivos base. El siguiente trabajo es revision formal de estructura y definicion de anexos pendientes, no generacion artificial de DOCX.</p>
+            <div class="rail">
+              <div class="rail-item"><b>Hecho 1</b><p><code>P-PSEA-05 Comunicaciones del PEA</code> creado en `.md` y `.docx`.</p></div>
+              <div class="rail-item"><b>Hecho 2</b><p><code>F-PSEA-04</code> creado desde <code>ronda_1_equipos.csv</code>.</p></div>
+              <div class="rail-item"><b>Hecho 3</b><p><code>F-PSEA-07</code> a <code>F-PSEA-13</code> implementados desde las fuentes definidas o plantillas simples, conservando CSV como fuente/exportacion operativa cuando corresponde.</p></div>
+            </div>
+          </div>
+          <div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr><th>Codigo</th><th>Nombre vigente</th><th>Estado</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td><code>F-PSEA-04</code></td><td>Anexo tecnico de equipos e instrumentos</td><td><span class="tag ok">XLSX maestro</span></td></tr>
+                  <tr><td><code>F-PSEA-07</code></td><td>Preparacion y control del item</td><td><span class="tag ok">XLSX maestro</span></td></tr>
+                  <tr><td><code>F-PSEA-08</code></td><td>Datos reportados por participante</td><td><span class="tag ok">XLSX maestro</span></td></tr>
+                  <tr><td><code>F-PSEA-09</code></td><td>Datos exportados para analisis PT</td><td><span class="tag ok">XLSX maestro</span></td></tr>
+                  <tr><td><code>F-PSEA-10</code></td><td>Registro de preprocesamiento</td><td><span class="tag ok">XLSX maestro</span></td></tr>
+                  <tr><td><code>F-PSEA-11</code></td><td>Homogeneidad y estabilidad</td><td><span class="tag warn">XLSX parcial</span></td></tr>
+                  <tr><td><code>F-PSEA-12</code></td><td>Datos oficiales consolidados</td><td><span class="tag ok">XLSX maestro</span></td></tr>
+                  <tr><td><code>F-PSEA-13</code></td><td>Informe final de resultados</td><td><span class="tag ok">DOCX maestro</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="decisiones">
+        <h2>Decisiones incorporadas en esta version</h2>
+        <div class="cards">
+          <div class="card"><span class="tag app">calaire-app</span><strong>La lista antigua de 9 registros queda sustituida</strong><p>El tablero debe mostrar bloques del flujo vigente, no la agrupacion previa que usaba <code>F-PSEA-14</code> como informe.</p></div>
+          <div class="card"><span class="tag pt">pt_app</span><strong><code>F-PSEA-13</code> cierra el ciclo tecnico</strong><p>El informe final pertenece a <code>F-PSEA-13</code>; <code>F-PSEA-14</code> queda reservado para caso de queja o no conformidad.</p></div>
+          <div class="card"><span class="tag info">Control</span><strong>Formato natural manda</strong><p>XLSX maestro, CSV operativo y DOCX se usan segun el tipo real de registro; la pagina marca explicitamente esa diferencia.</p></div>
+          <div class="card"><span class="tag ok">Uso</span><strong>Un solo lenguaje visual</strong><p>Esta pagina reemplaza la union por iframes y consolida la revision como una pieza unica de navegacion.</p></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      Consolidado actualizado a partir de mapa_navegacion_sgc_pea.html, rev1.md y calaire-app_registros-sgc.html.
+    </footer>
+  </div>
+</body>
+</html>

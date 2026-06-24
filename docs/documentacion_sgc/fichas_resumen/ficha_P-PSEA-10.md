@@ -7,7 +7,7 @@
 | **Codigo** | `P-PSEA-10` |
 | **Nombre decidido** | Procedimiento tecnico NO/NO2 |
 | **Tipo documental** | Procedimiento |
-| **Estado** | Actualizar |
+| **Estado** | Implementado |
 | **Prioridad** | Media |
 | **Clase de ficha** | Ficha activa |
 
@@ -17,7 +17,7 @@
 
 ### Proposito operativo
 
-Procedimiento tecnico especifico para la evaluacion de aptitud en oxido de nitrogeno (NO/NO2) dentro del PEA. Documenta las condiciones operativas, metodologias de referencia, particularidades del gas y criterios de aceptacion especificos para este analito. Debe citar documentos transversales y no duplicar estadistica, H/E, informe ni flujo de datos.
+Procedimiento tecnico especifico para la evaluacion de aptitud en oxidos de nitrogeno (NO/NO2) dentro del PEA. El documento activo es el `.docx` original suministrado como `0P-PSEA-02 Procedimiento NO-NO2.docx`, copiado y renombrado como `P-PSEA-10 Procedimiento tecnico NO-NO2.docx`. No debe sustituirse por una transcripcion generada ni por una ficha resumen.
 
 ### Rol en el flujo
 
@@ -43,6 +43,12 @@ Procedimiento tecnico especifico para la evaluacion de aptitud en oxido de nitro
 - [ ] Ninguno
 
 El analisis estadistico se ejecuta en `pt_app`, pero este procedimiento define criterios especificos del analito.
+
+#### Fuente controlada
+
+| Fuente original | Archivo activo |
+|---|---|
+| `0P-PSEA-02 Procedimiento NO-NO2.docx` | `01_bloque_general/02_procedimientos/P-PSEA-10 Procedimiento tecnico NO-NO2.docx` |
 
 ---
 
@@ -91,11 +97,13 @@ El analisis estadistico se ejecuta en `pt_app`, pero este procedimiento define c
 - No duplica la generacion del informe (eso es `P-PSEA-09`).
 - No duplica el flujo de datos (eso es `P-PSEA-08`).
 - No es un instructivo de uso de aplicativos.
+- No se reconstruye desde fichas, transcripciones `.md` ni texto generado.
 
 #### Riesgos de interpretacion
 
 - **Duplicar P-PSEA-07:** El procedimiento debe citar `P-PSEA-07` para estadistica, no replicar definiciones.
-- **Omitir particularidades de NO/NO2:** Debe conservar las condiciones especificas de este gas (reactividad, conversion NO-NO2, etc.).
+- **Reemplazar el original:** El riesgo principal es sustituir el `.docx` original por una version generada. La accion correcta es conservar el original renombrado.
+- **Omitir particularidades de NO/NO2:** El archivo original conserva las condiciones especificas de este gas (reactividad, conversion NO-NO2, etc.).
 - **Incluir H/E como procedimiento separado:** La evaluacion de H/E se documenta en `F-PSEA-11` y `P-PSEA-07`; aqui solo se cita.
 - **Confundir con F-PSEA-13:** Este procedimiento no define el formato del informe; cita `P-PSEA-09` y `F-PSEA-13`.
 
@@ -103,4 +111,4 @@ El analisis estadistico se ejecuta en `pt_app`, pero este procedimiento define c
 
 ## Criterio minimo de elaboracion
 
-El procedimiento tecnico para NO/NO2 contiene las condiciones especificas del analito, citando `P-PSEA-07`, `F-PSEA-11`, `P-PSEA-09` y `P-PSEA-08` sin duplicar estadistica, H/E, informe ni flujo de datos.
+El procedimiento tecnico para NO/NO2 queda controlado como DOCX original activo: `0P-PSEA-02 Procedimiento NO-NO2.docx` copiado byte-a-byte y renombrado como `P-PSEA-10 Procedimiento tecnico NO-NO2.docx`.

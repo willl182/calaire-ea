@@ -221,5 +221,5 @@ El informe queda en estado draft porque depende del cierre de registros fuente, 
 - `docs/prueba_piloto/I-PSEA-07 Diseño Estadístico.md`
 - `docs/prueba_piloto/I-PSEA-08 Valor Asignado.md`
 - `docs/prueba_piloto/I-PSEA-09 Instrucciones a Participantes.md`
-- `docs/prueba_piloto/ronda_simple/F-PSEA-06 Plan de Ronda EA.md`
-- `docs/prueba_piloto/ronda_compleja_fase1/F-PSEA-06 Plan de Ronda EA.md`
+- `docs/prueba_piloto/ronda_simple/F-PSEA-06 Ficha digital de ronda EA.md`
+- `docs/prueba_piloto/ronda_compleja_fase1/F-PSEA-06 Ficha digital de ronda EA.md`

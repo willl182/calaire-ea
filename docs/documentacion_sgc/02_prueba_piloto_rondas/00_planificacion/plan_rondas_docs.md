@@ -15,7 +15,7 @@ La nomenclatura de archivo debe seguir las plantillas ubicadas en `docs/document
 | Instructivo | `I-PSEA-01 Plantilla Instructivo.doc` | Describe cómo ejecutar una actividad técnica específica | `I-PSEA-## Nombre Instructivo.docx` |
 | Formato / registro | `F-PSEA-01 Plantilla Formato_Excel.xlsx` | Captura evidencia objetiva o datos operativos de una ronda | `F-PSEA-## Nombre Formato.xlsx` |
 
-**Criterio de aplicación:** el código documental no debe cambiar entre versiones ni entre formatos de trabajo. Las copias operativas por ronda deben conservar el código maestro y agregar un sufijo de contexto solo después del título, por ejemplo `F-PSEA-06 Plan de Ronda EA_Ronda 7.xlsx`. Los archivos Markdown usados en el grafo son borradores de trabajo o transcripciones; el archivo controlado del SGC debe quedar en Word o Excel según la plantilla base.
+**Criterio de aplicación:** el código documental no debe cambiar entre versiones ni entre formatos de trabajo. Las copias operativas por ronda deben conservar el código maestro y agregar un sufijo de contexto solo después del título, por ejemplo `F-PSEA-06 Ficha digital de ronda EA_Ronda 7.xlsx`. Los archivos Markdown usados en el grafo son borradores de trabajo o transcripciones; el archivo controlado del SGC debe quedar en Word o Excel según la plantilla base.
 
 ### Estado actual
 
@@ -51,7 +51,7 @@ La nomenclatura de archivo debe seguir las plantillas ubicadas en `docs/document
 
 | Código | Documento | Archivo objetivo | Qué falta | Est. horas |
 |---|---|---|---|---|
-| P-PSEA-09 | Procedimiento de Planificación de Ronda EA | `P-PSEA-09 Procedimiento de Planificacion Ronda EA.docx` | Expandir literales a)–u) de §7.2.1.3; resolver duplicidad de versiones | 4h |
+| P-PSEA-09 | Generación/emisión del informe de resultados | `P-PSEA-09 Generacion emision del informe de resultados.docx` | Expandir literales a)–u) de §7.2.1.3; resolver duplicidad de versiones | 4h |
 | P-PSEA-06 | Procedimiento de Diseño Estadístico | `P-PSEA-06 Procedimiento de Diseño Estadistico.docx` | Fijar σ_pt, modelo u(x_pt), scoring para n bajo; revisión editorial | 6h |
 | P-PSEA-07 | Procedimiento de Informe de Resultados | `P-PSEA-07 Procedimiento de Informe de Resultados.docx` | Contenido mínimo §7.4.3, plazos, informes corregidos | 3h |
 | P-PSEA-02–05 | Procedimientos por analito | `P-PSEA-02 Procedimiento de Ensayo de Aptitud para NO-NO2.docx`; `P-PSEA-03 Procedimiento de Ensayo de Aptitud para CO.docx`; `P-PSEA-04 Procedimiento de Ensayo de Aptitud para O3.docx`; `P-PSEA-05 Procedimiento de Ensayo de Aptitud para SO2.docx` | Verificar coherencia con secuencia piloto, niveles, CRM y criterios de evaluación | 2h c/u (8h) |
@@ -94,15 +94,15 @@ Estos son las "recetas" operativas paso a paso — son los que el personal del P
 | Código | Formato | Archivo objetivo maestro | Contenido clave | Tipo archivo | Est. horas |
 |---|---|---|---|---|---|
 | **F-PSEA-05** | Confirmación de Participación | `F-PSEA-05 Confirmacion de Participacion.xlsx` | Datos participante, analitos aceptados, acuerdo | .xlsx | 2h |
-| **F-PSEA-06** | Plan de Ronda EA | `F-PSEA-06 Plan de Ronda EA.xlsx` | Participantes, analitos, niveles, CRM, responsables, fechas | .xlsx | 3h |
+| **F-PSEA-06** | Ficha digital de ronda EA | `F-PSEA-06 Ficha digital de ronda EA.xlsx` | Participantes, analitos, niveles, CRM, responsables, fechas | .xlsx | 3h |
 | **F-PSEA-07** | Lista Maestra de Participantes | `F-PSEA-07 Lista Maestra de Participantes.xlsx` | Código anónimo, contacto, estado confirmación | .xlsx | 1h |
 | **F-PSEA-08** | Registro de Preparación del Ítem | `F-PSEA-08 Registro de Preparacion del Item.xlsx` | CRM, certificado, dilución, caudales, concentración, T/P/HR | .xlsx | 3h |
 | **F-PSEA-09** | Registro de Homogeneidad | `F-PSEA-09 Registro de Homogeneidad.xlsx` | ≥10 mediciones, método referencia, réplicas, s_hom, criterio | .xlsx | 2h |
 | **F-PSEA-10** | Registro de Estabilidad | `F-PSEA-10 Registro de Estabilidad.xlsx` | Mediciones inicio/fin, criterio \|x̄_i − x̄_f\| ≤ 0,3×σ_pt | .xlsx | 2h |
 | **F-PSEA-11** | Registro de Envío y Recepción | `F-PSEA-11 Registro de Envio y Recepcion.xlsx` | Equipos instalados, confirmación, condiciones | .xlsx | 2h |
 | **F-PSEA-12** | Reporte del Participante | `F-PSEA-12 Reporte del Participante.xlsx` | Resultado, incertidumbre, método, equipo, observaciones | .xlsx | 3h |
-| **F-PSEA-13** | Hoja de Revisión de Datos | `F-PSEA-13 Hoja de Revision de Datos.xlsx` | Checklist: unidades, plausibilidad, cifras, exclusiones | .xlsx | 2h |
-| **F-PSEA-14** | Hoja de Cálculo y Aprobación Estadística | `F-PSEA-14 Hoja de Calculo y Aprobacion Estadistica.xlsx` | x_pt, σ_pt, z-score, aprobación, firma | .xlsx | 3h |
+| **F-PSEA-13** | Informe final de resultados | `F-PSEA-13 Informe final de resultados.xlsx` | Checklist: unidades, plausibilidad, cifras, exclusiones | .xlsx | 2h |
+| **F-PSEA-14** | Registro/caso de queja o NC según aplique | `F-PSEA-14 Registro caso de queja o NC segun aplique.xlsx` | x_pt, σ_pt, z-score, aprobación, firma | .xlsx | 3h |
 
 ### Bloque C — Formatos de cierre/soporte
 

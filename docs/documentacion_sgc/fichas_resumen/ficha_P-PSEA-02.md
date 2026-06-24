@@ -7,7 +7,7 @@
 | **Codigo** | `P-PSEA-02` |
 | **Nombre decidido** | Matriz documental basica del PEA |
 | **Tipo documental** | Matriz |
-| **Estado** | Elaborar |
+| **Estado** | Elaborado |
 | **Prioridad** | Alta |
 | **Clase de ficha** | Ficha activa |
 
@@ -101,3 +101,10 @@ Es un documento matriz; no depende de aplicativo.
 ## Criterio minimo de elaboracion
 
 La matriz documental basica lista todo lo numerado (`DG`, `P`, `I`, `F` y subformatos) con codigo, nombre operativo, familia y estado consolidado, sin ambiguedades respecto a documentos retirados, reservados o absorbidos.
+
+## Evidencia de elaboracion
+
+| Campo | Valor |
+|---|---|
+| **Archivo maestro** | `01_bloque_general/02_procedimientos/P-PSEA-02 Matriz documental basica del PEA.md` |
+| **Resultado** | Se materializa la matriz documental basica del PEA con catalogo de documentos `DG`, `P`, `I`, `F`, subformatos, estados y reglas de mantenimiento. |

@@ -1,0 +1,2 @@
+run_id,round_id,input_file,input_rows,valid_rows,excluded_rows,warning_count,error_count,pt_app_version,preprocessor_version,ruleset_version,executed_at,executed_by,output_files,status,reviewed_by,approved_by,observations
+PRE-PP2026-R1-001,PP2026-R1,F-PSEA-09_PP2026-R1_export.csv,20,20,0,0,0,pt_app-v0,preprocesador-v0,reglas-v0,2026-04-24 08:00:00,pt_app,F-PSEA-12_PP2026-R1.csv,aprobado,,,Registro ejemplo de ejecucion de preprocesamiento.

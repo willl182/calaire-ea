@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>P-PSEA-03 - Matriz de registros y evidencias del PEA</title>
+  <title>P-PSEA-03 - Control de registros y evidencias del PEA</title>
   <link rel="stylesheet" href="ficha_resumen.css">
   <script defer src="ficha_names.js"></script>
 </head>
@@ -12,11 +12,12 @@
     <header class="hero">
       <div class="eyebrow">CALAIRE-EA · Ficha resumen SGC PEA</div>
       <h1>P-PSEA-03</h1>
-            <p class="hero-name">Matriz de registros y evidencias del
+            <p class="hero-name">Control de registros y evidencias del
 PEA</p>
             <div class="hero-meta" aria-label="Metadatos de la ficha">
-                <span><strong>Tipo</strong>Matriz</span>
-                        <span><strong>Estado</strong>Elaborar</span>
+                <span><strong>Tipo</strong>Procedimiento con matrices
+anexas</span>
+                        <span><strong>Estado</strong>Elaborado</span>
                         <span><strong>Prioridad</strong>Alta</span>
                         <span><strong>Clase</strong>Ficha activa</span>
               </div>
@@ -55,6 +56,9 @@ PEA</p>
         <li><a href="#criterio-minimo-de-elaboracion"
         id="toc-criterio-minimo-de-elaboracion">Criterio minimo de
         elaboracion</a></li>
+        <li><a href="#evidencia-de-elaboracion"
+        id="toc-evidencia-de-elaboracion">Evidencia de
+        elaboracion</a></li>
         </ul></li>
         </ul>
       </nav>
@@ -75,15 +79,15 @@ PEA</p>
         </tr>
         <tr>
         <td><strong>Nombre decidido</strong></td>
-        <td>Matriz de registros y evidencias del PEA</td>
+        <td>Control de registros y evidencias del PEA</td>
         </tr>
         <tr>
         <td><strong>Tipo documental</strong></td>
-        <td>Matriz</td>
+        <td>Procedimiento con matrices anexas</td>
         </tr>
         <tr>
         <td><strong>Estado</strong></td>
-        <td>Elaborar</td>
+        <td>Elaborado</td>
         </tr>
         <tr>
         <td><strong>Prioridad</strong></td>
@@ -98,13 +102,18 @@ PEA</p>
         <hr />
         <h2 id="proposito-y-rol">Proposito y rol</h2>
         <h3 id="proposito-operativo">Proposito operativo</h3>
-        <p>Lista los registros y evidencias generadas por cada ronda o
-        evento del PEA. Identifica que formatos y registros se producen,
-        quien los genera, desde que aplicativo y cual es su destino. Es
-        la contraparte operativa de <code>P-PSEA-02</code> (matriz
-        documental).</p>
+        <p>Establece como se identifican, clasifican y trackean los
+        registros y evidencias generadas por cada ronda o evento del
+        PEA. Incluye una matriz resumen dentro del procedimiento y una
+        matriz operativa como anexo para el seguimiento detallado de
+        registros, evidencias y anexos tecnicos que quedan como
+        evidencia, incluidos los CSV del flujo digital cuando deban
+        conservarse. Es la contraparte operativa de
+        <code>P-PSEA-02</code> (matriz documental).</p>
         <h3 id="rol-en-el-flujo">Rol en el flujo</h3>
         <ul class="task-list">
+        <li><label><input type="checkbox" checked="" />Criterio
+        tecnico</label></li>
         <li><label><input type="checkbox"
         checked="" />Matriz</label></li>
         <li><label><input type="checkbox"
@@ -113,14 +122,13 @@ PEA</p>
         <li><label><input type="checkbox" />Salida</label></li>
         <li><label><input type="checkbox" />Registro
         oficial</label></li>
-        <li><label><input type="checkbox" />Criterio
-        tecnico</label></li>
         <li><label><input type="checkbox" />Instructivo</label></li>
         <li><label><input type="checkbox" />Soporte
         documental</label></li>
         </ul>
-        <p>Funciona como mapa de evidencias y registro de trazabilidad
-        operativa.</p>
+        <p>Funciona como procedimiento de control operativo de
+        registros/evidencias y como punto de trazabilidad para las
+        matrices anexas.</p>
         <hr />
         <h2 id="aplicativos-y-tecnologia">Aplicativos y tecnologia</h2>
         <h4 id="aplicativo-asociado">Aplicativo asociado</h4>
@@ -132,8 +140,8 @@ PEA</p>
         <li><label><input type="checkbox" />Ambos</label></li>
         <li><label><input type="checkbox" />Ninguno</label></li>
         </ul>
-        <p>Genera registros desde ambos aplicativos; la matriz los
-        cataloga.</p>
+        <p>Recibe registros desde ambos aplicativos; el procedimiento
+        define como se controlan y las matrices los catalogan.</p>
         <hr />
         <h2 id="flujo-de-datos">Flujo de datos</h2>
         <h4 id="entradas-principales">Entradas principales</h4>
@@ -163,7 +171,7 @@ PEA</p>
         </tr>
         <tr>
         <td><code>P-PSEA-08</code></td>
-        <td>Flujo tecnico de datos</td>
+        <td>Flujo tecnico de datos y anexos CSV</td>
         <td>Referencia</td>
         </tr>
         </tbody>
@@ -179,14 +187,20 @@ PEA</p>
         </thead>
         <tbody>
         <tr>
+        <td>Matriz resumen de registros/evidencias</td>
+        <td>Vista consolidada dentro del procedimiento</td>
+        <td>Salida de control</td>
+        </tr>
+        <tr>
+        <td>Matriz operativa anexa</td>
+        <td>Seguimiento detallado por ronda, evento, formato o CSV
+        conservado como evidencia</td>
+        <td>Anexo operativo</td>
+        </tr>
+        <tr>
         <td><code>P-PSEA-02</code></td>
         <td>Referencia cruzada con matriz documental</td>
         <td>Referencia</td>
-        </tr>
-        <tr>
-        <td>Auditorias internas</td>
-        <td>Evidencia de registros generados</td>
-        <td>Evidencia</td>
         </tr>
         <tr>
         <td><code>F-PSEA-13</code></td>
@@ -214,7 +228,8 @@ PEA</p>
         </tr>
         <tr>
         <td><code>P-PSEA-08</code></td>
-        <td>Flujo de datos que alimenta registros</td>
+        <td>Flujo de datos y anexos CSV, de los cuales algunos alimentan
+        registros/evidencias</td>
         <td>Obligatorio</td>
         </tr>
         <tr>
@@ -233,13 +248,13 @@ PEA</p>
         <h2 id="limites-y-riesgos">Limites y riesgos</h2>
         <h4 id="limites-de-alcance">Limites de alcance</h4>
         <ul>
-        <li>No lista procedimientos, instructivos ni aplicativos (eso es
-        <code>P-PSEA-02</code>).</li>
-        <li>No lista archivos tecnicos internos del preprocesador (van
-        en <code>P-PSEA-08</code>).</li>
-        <li>No define criterios de aprobacion, retencion ni
-        obsolescencia.</li>
-        <li>No es un procedimiento de control documental macro.</li>
+        <li>No lista procedimientos, instructivos ni aplicativos como
+        catalogo documental (eso es <code>P-PSEA-02</code>).</li>
+        <li>No describe el flujo tecnico interno de los CSV ni del
+        preprocesador (eso va en <code>P-PSEA-08</code>).</li>
+        <li>No reemplaza el control documental institucional ni la
+        gestion macro de versiones.</li>
+        <li>No define criterios estadisticos ni reglas de decision.</li>
         </ul>
         <h4 id="riesgos-de-interpretacion">Riesgos de
         interpretacion</h4>
@@ -248,19 +263,52 @@ PEA</p>
         <code>P-PSEA-03</code> es evidencia por ronda;
         <code>P-PSEA-02</code> es catalogo de documentos.</li>
         <li><strong>Promover archivos tecnicos a F-PSEA:</strong> Los
-        archivos tecnicos internos del preprocesador deben quedar en
-        <code>P-PSEA-08</code>, no en esta matriz ni como formatos.</li>
+        archivos tecnicos internos del preprocesador se describen como
+        anexos de flujo en <code>P-PSEA-08</code>;
+        <code>P-PSEA-03</code> solo los trackea cuando quedan como
+        registros o evidencias conservadas.</li>
         <li><strong>Incluir aplicativos como evidencia:</strong> Los
         aplicativos (<code>DG-PSEA-02</code>, <code>DG-PSEA-03</code>)
         no son registros de ronda.</li>
+        <li><strong>Reducir el procedimiento a una tabla:</strong> La
+        matriz resumen y la matriz operativa son anexos de control; el
+        documento principal debe conservar reglas de identificacion,
+        responsabilidad, seguimiento y cierre de
+        registros/evidencias.</li>
         </ul>
         <hr />
         <h2 id="criterio-minimo-de-elaboracion">Criterio minimo de
         elaboracion</h2>
-        <p>La matriz de registros y evidencias lista, para cada tipo de
-        ronda o evento, los formatos y registros generados, su
-        aplicativo de origen, su destino y su estado documental, sin
-        incluir archivos tecnicos internos ni aplicativos.</p>
+        <p>El procedimiento define como se controlan los registros y
+        evidencias del PEA, incluye una matriz resumen para consulta
+        rapida y remite a una matriz operativa anexa donde se trackean,
+        por ronda o evento, los formatos, registros, evidencias y anexos
+        CSV conservados como evidencia, sin duplicar el flujo tecnico
+        descrito en <code>P-PSEA-08</code> ni el catalogo documental de
+        <code>P-PSEA-02</code>.</p>
+        <h2 id="evidencia-de-elaboracion">Evidencia de elaboracion</h2>
+        <table>
+        <thead>
+        <tr>
+        <th>Campo</th>
+        <th>Valor</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td><strong>Archivo maestro</strong></td>
+        <td><code>01_bloque_general/02_procedimientos/P-PSEA-03 Control de registros y evidencias del PEA.md</code></td>
+        </tr>
+        <tr>
+        <td><strong>Resultado</strong></td>
+        <td>Se materializa el procedimiento de control de registros y
+        evidencias con matriz resumen, campos minimos para matriz
+        operativa por ronda y controles especificos para
+        <code>F-PSEA-02</code>, <code>F-PSEA-03</code> y anexos
+        digitales.</td>
+        </tr>
+        </tbody>
+        </table>
       </article>
     </main>
     <footer class="footer">

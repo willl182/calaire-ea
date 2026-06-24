@@ -1,0 +1,749 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Revision de mapeo documental SGC PEA</title>
+  <style>
+    :root {
+      --paper: #f6f1e8;
+      --panel: #fffdf8;
+      --ink: #1b2521;
+      --muted: #65746e;
+      --line: #d8d0c2;
+      --teal: #0f6a62;
+      --teal-soft: #dceee8;
+      --olive: #6f7f2f;
+      --olive-soft: #edf2da;
+      --amber: #a86922;
+      --amber-soft: #fff0d6;
+      --red: #9d3f32;
+      --red-soft: #f8dfd9;
+      --blue: #2d6586;
+      --blue-soft: #dfeaf1;
+      --shadow: 0 20px 55px rgba(27, 37, 33, .12);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(15, 106, 98, .055) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(15, 106, 98, .055) 1px, transparent 1px),
+        var(--paper);
+      background-size: 26px 26px;
+      font-family: Avenir, "Trebuchet MS", Verdana, sans-serif;
+    }
+
+    header {
+      padding: 34px clamp(18px, 5vw, 72px) 26px;
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(135deg, rgba(255, 253, 248, .98), rgba(220, 238, 232, .92));
+    }
+
+    .eyebrow {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      color: var(--teal);
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 40px;
+      height: 2px;
+      background: var(--teal);
+    }
+
+    h1 {
+      max-width: 1100px;
+      margin: 14px 0 10px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(34px, 5.5vw, 70px);
+      line-height: .98;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      max-width: 980px;
+      margin: 0;
+      color: #405149;
+      font-size: clamp(16px, 2vw, 20px);
+      line-height: 1.55;
+    }
+
+    .shell {
+      display: grid;
+      grid-template-columns: minmax(250px, 330px) minmax(0, 1fr);
+      gap: 18px;
+      padding: 18px;
+    }
+
+    aside, section, .panel {
+      background: rgba(255, 253, 248, .94);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    aside {
+      position: sticky;
+      top: 18px;
+      align-self: start;
+      padding: 16px;
+      max-height: calc(100vh - 36px);
+      overflow: auto;
+    }
+
+    nav a {
+      display: block;
+      padding: 10px 11px;
+      border: 1px solid transparent;
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    nav a:hover {
+      border-color: var(--line);
+      background: #fbf6eb;
+    }
+
+    main {
+      display: grid;
+      gap: 18px;
+      min-width: 0;
+    }
+
+    section {
+      padding: clamp(16px, 3vw, 28px);
+      overflow: hidden;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(25px, 3vw, 38px);
+      line-height: 1.05;
+    }
+
+    h3 {
+      margin: 22px 0 10px;
+      font-size: 17px;
+      line-height: 1.25;
+    }
+
+    p {
+      color: #405149;
+      line-height: 1.58;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .stat {
+      min-height: 118px;
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: #fbf7ef;
+    }
+
+    .stat strong {
+      display: block;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 38px;
+      line-height: 1;
+    }
+
+    .stat span {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 900;
+      line-height: 1.3;
+      text-transform: uppercase;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 26px;
+      padding: 0 9px;
+      border: 1px solid var(--line);
+      background: #fff;
+      font-size: 12px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .tag.ok { background: var(--teal-soft); color: var(--teal); border-color: #b8d8cf; }
+    .tag.warn { background: var(--amber-soft); color: var(--amber); border-color: #e3c186; }
+    .tag.stop { background: var(--red-soft); color: var(--red); border-color: #e3aea5; }
+    .tag.info { background: var(--blue-soft); color: var(--blue); border-color: #b8cedc; }
+
+    .official-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .official-list div {
+      padding: 12px;
+      border: 1px solid var(--line);
+      background: #fbf7ef;
+    }
+
+    code {
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      font-size: .92em;
+    }
+
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      justify-content: space-between;
+      margin: 16px 0;
+      padding: 12px;
+      border: 1px solid var(--line);
+      background: #fbf7ef;
+    }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+
+    input[type="search"], select, input[type="text"], textarea {
+      border: 1px solid #bfc8c2;
+      background: white;
+      color: var(--ink);
+      font: inherit;
+    }
+
+    input[type="search"], select, input[type="text"] {
+      min-height: 38px;
+      padding: 0 10px;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 64px;
+      padding: 8px;
+      resize: vertical;
+    }
+
+    button {
+      min-height: 38px;
+      padding: 0 12px;
+      border: 1px solid #aeb9b3;
+      background: white;
+      color: var(--ink);
+      font: 900 13px/1 Avenir, "Trebuchet MS", Verdana, sans-serif;
+      cursor: pointer;
+    }
+
+    button.primary {
+      border-color: var(--teal);
+      background: var(--teal);
+      color: white;
+    }
+
+    button:hover { transform: translateY(-1px); }
+
+    .table-wrap {
+      overflow: auto;
+      border: 1px solid var(--line);
+      background: white;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 1060px;
+    }
+
+    th, td {
+      padding: 10px;
+      border-bottom: 1px solid #e7e0d4;
+      vertical-align: top;
+      text-align: left;
+      font-size: 13px;
+      line-height: 1.42;
+    }
+
+    th {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      background: #f0eadf;
+      color: #3f4d47;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+
+    tbody tr:hover { background: #fffaf0; }
+
+    .path {
+      max-width: 330px;
+      word-break: break-word;
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      font-size: 12px;
+    }
+
+    .decision-grid {
+      display: grid;
+      grid-template-columns: 150px 150px minmax(220px, 1fr);
+      gap: 8px;
+    }
+
+    .small-note {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    .callout {
+      margin-top: 14px;
+      padding: 14px;
+      border-left: 5px solid var(--amber);
+      background: var(--amber-soft);
+      color: #5c411e;
+      line-height: 1.55;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .card {
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: #fbf7ef;
+    }
+
+    .card strong { display: block; margin-bottom: 7px; }
+
+    .check {
+      width: 18px;
+      height: 18px;
+    }
+
+    footer {
+      padding: 20px 18px 34px;
+      color: var(--muted);
+      font-size: 12px;
+      text-align: center;
+    }
+
+    @media (max-width: 980px) {
+      .shell { grid-template-columns: 1fr; }
+      aside { position: static; max-height: none; }
+      .grid, .official-list, .cards { grid-template-columns: 1fr; }
+      .decision-grid { grid-template-columns: 1fr; }
+    }
+
+    @media print {
+      body { background: white; }
+      header, aside, section { box-shadow: none; }
+      .shell { display: block; padding: 0; }
+      aside, .toolbar button, .toolbar input, .toolbar select { display: none; }
+      section { border: 0; page-break-inside: avoid; }
+      .table-wrap { overflow: visible; }
+      table { min-width: 0; font-size: 10px; }
+      th, td { font-size: 10px; padding: 6px; }
+      textarea, input, select { border: 0; background: transparent; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="eyebrow">SGC PEA / Revision documental</div>
+    <h1>Mapa de decisiones para ordenar archivos, codigos y evidencias</h1>
+    <p class="lead">Version HTML basada en <code>mapa_navegacion_sgc_pea.html</code> y en el inventario documental existente. El checklist permite diligenciar decisiones, responsables y notas, y exportar el resultado para seguimiento.</p>
+  </header>
+
+  <div class="shell">
+    <aside>
+      <nav>
+        <a href="#resumen">Resumen ejecutivo</a>
+        <a href="#oficial">Codigos oficiales</a>
+        <a href="#checklist">Checklist exportable</a>
+        <a href="#faltantes">Faltantes maestros</a>
+        <a href="#no-listados">No listados</a>
+        <a href="#metodo">Metodo de decision</a>
+      </nav>
+      <p class="small-note">Los cambios que se diligencien en el checklist se guardan en este navegador mediante localStorage. Use los botones de exportacion para conservar el acta de decision.</p>
+    </aside>
+
+    <main>
+      <section id="resumen">
+        <h2>Resumen ejecutivo</h2>
+        <div class="grid">
+          <div class="stat"><strong>44</strong><span>codigos oficiales en el mapa HTML</span></div>
+          <div class="stat"><strong>20</strong><span>archivos o grupos con cambio recomendado</span></div>
+          <div class="stat"><strong>6</strong><span>codigos oficiales sin maestro activo</span></div>
+          <div class="stat"><strong>9</strong><span>codigos activos no listados</span></div>
+        </div>
+        <div class="callout">
+          Fuente de verdad: <code>mapa_navegacion_sgc_pea.html</code>. La prioridad es resolver primero los conflictos de numeracion antigua antes de redactar o actualizar contenido tecnico.
+        </div>
+      </section>
+
+      <section id="oficial">
+        <h2>Codigos oficiales vigentes</h2>
+        <div class="official-list">
+          <div><span class="tag ok">DG</span><p><code>DG-PSEA-01</code>, <code>DG-PSEA-02</code>, <code>DG-PSEA-03</code></p></div>
+          <div><span class="tag ok">P</span><p><code>P-PSEA-01</code> a <code>P-PSEA-21</code></p></div>
+          <div><span class="tag ok">I</span><p><code>I-PSEA-02</code>, <code>I-PSEA-03</code>, <code>I-PSEA-04</code>, <code>I-PSEA-05</code></p></div>
+          <div><span class="tag ok">F</span><p><code>F-PSEA-01</code>, <code>F-PSEA-02</code>, <code>F-PSEA-04</code> a <code>F-PSEA-13</code>, <code>F-PSEA-11A</code> a <code>F-PSEA-11D</code></p></div>
+        </div>
+        <p><span class="tag stop">No oficiales en mapa</span> <code>F-PSEA-03</code>, <code>I-PSEA-01</code>, <code>F-PSEA-05A</code>, <code>F-PSEA-14</code> a <code>F-PSEA-17</code>, <code>P-PSEA-22</code>, <code>P-PSEA-23</code>.</p>
+      </section>
+
+      <section id="checklist">
+        <h2>Checklist de mapeo de archivos</h2>
+        <p>Use este checklist como acta de trabajo. Cada fila puede marcarse como revisada, asignarse una decision, indicar responsable y registrar observaciones. La exportacion conserva lo diligenciado.</p>
+
+        <div class="toolbar">
+          <div class="filters">
+            <input id="search" type="search" placeholder="Buscar codigo, archivo o accion">
+            <select id="typeFilter" aria-label="Filtro por tipo">
+              <option value="">Todos los tipos</option>
+              <option value="renombrar">Renombrar</option>
+              <option value="faltante">Crear faltante</option>
+              <option value="no-listado">No listado</option>
+              <option value="duplicidad">Duplicidad/ubicacion</option>
+              <option value="clasificar">Clasificar soporte</option>
+            </select>
+            <select id="decisionFilter" aria-label="Filtro por decision">
+              <option value="">Todas las decisiones</option>
+              <option value="pendiente">Pendiente</option>
+              <option value="aprobar">Aprobar recomendacion</option>
+              <option value="renombrar">Renombrar/consolidar</option>
+              <option value="retirar">Retirar/reservar</option>
+              <option value="crear">Crear documento</option>
+              <option value="mantener">Mantener</option>
+              <option value="carpeta_aparte">Carpeta aparte</option>
+              <option value="revisar">Revisar con equipo</option>
+            </select>
+          </div>
+          <div class="filters">
+            <button class="primary" id="exportCsv">Exportar CSV</button>
+            <button id="exportJson">Exportar JSON</button>
+            <button id="copySummary">Copiar resumen</button>
+            <button id="resetData">Limpiar diligenciamiento</button>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Listo</th>
+                <th>Tipo</th>
+                <th>Archivo / asunto</th>
+                <th>Diagnostico</th>
+                <th>Recomendacion</th>
+                <th>Decision diligenciable</th>
+              </tr>
+            </thead>
+            <tbody id="checklistBody"></tbody>
+          </table>
+        </div>
+        <p class="small-note" id="rowCount"></p>
+      </section>
+
+      <section id="faltantes">
+        <h2>Faltantes maestros</h2>
+        <div class="cards">
+          <div class="card"><span class="tag warn">Crear</span><strong><code>DG-PSEA-02</code> calaire-app</strong><p>Consolidar documentos sueltos de funcionalidad, registros y flujo del aplicativo.</p></div>
+          <div class="card"><span class="tag warn">Crear</span><strong><code>DG-PSEA-03</code> pt_app</strong><p>Documentar preprocesamiento, consolidacion, analisis estadistico, H/E e informe final.</p></div>
+          <div class="card"><span class="tag warn">Crear</span><strong><code>F-PSEA-11A</code> a <code>F-PSEA-11D</code></strong><p>Crear subformatos maestros de homogeneidad y estabilidad; hoy solo existen fichas derivadas.</p></div>
+        </div>
+      </section>
+
+      <section id="no-listados">
+        <h2>Codigos no listados por el mapa HTML</h2>
+        <p>Estos codigos existen en archivos activos o historicos, pero no aparecen en la fuente vigente. Deben tratarse como decisiones, no como simples renombres automaticos.</p>
+        <div class="cards">
+          <div class="card"><span class="tag stop">Activos</span><strong><code>I-PSEA-01</code>, <code>F-PSEA-03</code>, <code>F-PSEA-05A</code></strong><p><code>I-PSEA-01</code> debe mantenerse porque aplica a equipos de participantes. Los demas requieren decision de retiro, absorcion o anexo operativo.</p></div>
+          <div class="card"><span class="tag stop">Activos</span><strong><code>F-PSEA-14</code> a <code>F-PSEA-17</code></strong><p>Relacionados con quejas/NC, apelaciones, competencia y proveedores; el mapa los asocia conceptualmente a procedimientos, pero no los conserva como formatos oficiales.</p></div>
+          <div class="card"><span class="tag stop">Activos</span><strong><code>P-PSEA-22</code>, <code>P-PSEA-23</code></strong><p>Riesgos generales y mejora continua no aparecen en el mapa vigente. Deben retirarse, reservarse o escalarse al sistema macro.</p></div>
+        </div>
+      </section>
+
+      <section id="metodo">
+        <h2>Metodo de decision sugerido</h2>
+        <div class="cards">
+          <div class="card"><span class="tag info">1</span><strong>Confirmar fuente de verdad</strong><p>Validar que el equipo acepta el HTML de navegacion como mapa vigente para codigos y nombres.</p></div>
+          <div class="card"><span class="tag info">2</span><strong>Resolver numeracion antigua</strong><p>Renombrar o retirar primero los archivos con codigos que hoy significan otra cosa.</p></div>
+          <div class="card"><span class="tag info">3</span><strong>Crear faltantes criticos</strong><p>Producir los maestros faltantes antes de regenerar fichas resumen o inventarios.</p></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    Archivo generado para decision documental. No ejecuta cambios sobre los documentos del repositorio.
+  </footer>
+
+  <script>
+    const STORAGE_KEY = "sgc-pea-checklist-v1";
+
+    const rows = [
+      { id: "r01", type: "renombrar", item: "01_bloque_general/02_procedimientos/P-PSEA-02 Procedimiento NO-NO2_v2.docx", diagnosis: "Usa numeracion antigua. En el mapa vigente P-PSEA-02 es la matriz documental del PEA.", recommendation: "Renombrar/consolidar como P-PSEA-10 Procedimiento tecnico NO-NO2." },
+      { id: "r02", type: "renombrar", item: "01_bloque_general/02_procedimientos/P-PSEA-03 Procedimiento CO_v2.docx", diagnosis: "Usa numeracion antigua. En el mapa vigente P-PSEA-03 es la matriz de registros y evidencias.", recommendation: "Renombrar/consolidar como P-PSEA-11 Procedimiento tecnico CO." },
+      { id: "r03", type: "renombrar", item: "01_bloque_general/02_procedimientos/P-PSEA-04 Procedimiento O3_v2.docx", diagnosis: "Usa numeracion antigua y entra en conflicto con P-PSEA-04 Planificacion de ronda EA.md.", recommendation: "Renombrar/consolidar como P-PSEA-12 Procedimiento tecnico O3." },
+      { id: "r04", type: "renombrar", item: "01_bloque_general/02_procedimientos/P-PSEA-05 Procedimiento SO2_v2.docx", diagnosis: "Usa numeracion antigua. En el mapa vigente P-PSEA-05 es comunicaciones.", recommendation: "Renombrar/consolidar como P-PSEA-13 Procedimiento tecnico SO2." },
+      { id: "r05", type: "renombrar", item: "01_bloque_general/02_procedimientos/P-PSEA-06 Procedimiento Diseno Estadistico_v0.docx", diagnosis: "Usa numeracion antigua. En el mapa vigente P-PSEA-06 es preparacion y control del item.", recommendation: "Renombrar/consolidar como P-PSEA-07 Diseno estadistico." },
+      { id: "r06", type: "renombrar", item: "01_bloque_general/02_procedimientos/P-PSEA-07 Procedimiento Informe Resultados_v0.docx", diagnosis: "Usa numeracion antigua. En el mapa vigente P-PSEA-07 es diseno estadistico.", recommendation: "Renombrar/consolidar como P-PSEA-09 Informe de resultados." },
+      { id: "r07", type: "renombrar", item: "01_bloque_general/02_procedimientos/P-PSEA-08 Proc Colusion Falsificacion_v0.docx", diagnosis: "Usa numeracion antigua. En el mapa vigente P-PSEA-08 es flujo tecnico de datos digitales.", recommendation: "Renombrar/consolidar como P-PSEA-14 Colusion y falsificacion." },
+      { id: "r08", type: "renombrar", item: "01_bloque_general/02_procedimientos/P-PSEA-09 Procedimiento Planificacion Ronda EA.docx", diagnosis: "En el mapa HTML la planificacion es P-PSEA-04, no P-PSEA-09.", recommendation: "Consolidar con P-PSEA-04 Planificacion de ronda EA." },
+      { id: "r09", type: "renombrar", item: "01_bloque_general/02_procedimientos/P-PSEA-09 Procedimiento de Planificacion Ronda EA.docx", diagnosis: "Duplicado de planificacion con codigo incorrecto frente al mapa HTML.", recommendation: "Consolidar en P-PSEA-04 o retirar duplicado." },
+      { id: "r10", type: "renombrar", item: "01_bloque_general/04_formatos_maestros/F-PSEA-04 Formato Informe Resultados_v0.docx", diagnosis: "En el mapa vigente F-PSEA-04 es equipos e instrumentos; el informe final es F-PSEA-13.", recommendation: "Renombrar/consolidar como F-PSEA-13 Informe final de resultados." },
+      { id: "r11", type: "no-listado", item: "01_bloque_general/04_formatos_maestros/F-PSEA-03 Registro Planificacion Ronda EA.xlsx", diagnosis: "F-PSEA-03 no existe en el mapa HTML.", recommendation: "Retirar/reservar o absorber en F-PSEA-05 / F-PSEA-06 segun contenido." },
+      { id: "r12", type: "no-listado", item: "02_prueba_piloto_rondas/00_planificacion/F-PSEA-05A Hoja de Registro del Participante.xlsx", diagnosis: "F-PSEA-05A no existe en el mapa HTML.", recommendation: "Decidir si se absorbe en F-PSEA-08 o se recodifica como F-PSEA-04 si corresponde a equipos." },
+      { id: "r13", type: "no-listado", item: "F-PSEA-05A-P1.xlsx / F-PSEA-05A-P1_DIL.xlsx / F-PSEA-05A-P2.xlsx", diagnosis: "Subformatos operativos no reconocidos por el mapa HTML.", recommendation: "Mantener como anexos operativos sin codigo maestro o recodificar bajo formato oficial." },
+      { id: "r14", type: "no-listado", item: "F-PSEA-14 Registro caso de queja o NC segun aplique.md", diagnosis: "F-PSEA-14 no existe en el mapa HTML.", recommendation: "Integrar al flujo de P-PSEA-15, P-PSEA-17 y casos SGC; no conservar como formato oficial sin decision." },
+      { id: "r15", type: "no-listado", item: "F-PSEA-15 Registro de apelaciones.md", diagnosis: "F-PSEA-15 no existe en el mapa HTML.", recommendation: "Asociar a P-PSEA-18; no conservar como formato oficial sin decision." },
+      { id: "r16", type: "no-listado", item: "F-PSEA-16 Matriz de competencia autorizacion.md", diagnosis: "F-PSEA-16 no existe en el mapa HTML.", recommendation: "Asociar a P-PSEA-20; no conservar como formato oficial sin decision." },
+      { id: "r17", type: "no-listado", item: "F-PSEA-17 Evaluacion de proveedores criticos.md", diagnosis: "F-PSEA-17 no existe en el mapa HTML.", recommendation: "Asociar a P-PSEA-21; no conservar como formato oficial sin decision." },
+      { id: "r18", type: "no-listado", item: "P-PSEA-22 Riesgos generales del PEA.md", diagnosis: "P-PSEA-22 no existe en el mapa HTML.", recommendation: "Retirar, reservar fuera del mapa o absorber en gestion transversal del SGC." },
+      { id: "r19", type: "no-listado", item: "P-PSEA-23 Mejora continua del PEA.md", diagnosis: "P-PSEA-23 no existe en el mapa HTML.", recommendation: "Retirar, reservar fuera del mapa o gestionar como parte del sistema macro de mejora." },
+      { id: "r20", type: "no-listado", item: "I-PSEA-01 Instructivo de Embalaje_v1.docx", diagnosis: "I-PSEA-01 no existe en el mapa HTML, pero debe permanecer por decision del equipo.", recommendation: "Mantener. El procedimiento aplica al embalaje/manejo de equipos de los participantes, no a items de ensayo; debe quedar documentado y diferenciado del flujo de preparacion del item gaseoso." },
+      { id: "r21", type: "faltante", item: "DG-PSEA-02 calaire-app", diagnosis: "No existe archivo maestro codificado; hay documentos sueltos sobre el aplicativo.", recommendation: "Crear documento maestro DG-PSEA-02 con gestion de rondas, participantes, cronogramas, ficha, datos, exportaciones y casos SGC." },
+      { id: "r22", type: "faltante", item: "DG-PSEA-03 pt_app", diagnosis: "No existe archivo maestro codificado.", recommendation: "Crear documento maestro DG-PSEA-03 para preprocesamiento, consolidacion, analisis PT, H/E e informe final." },
+      { id: "r23", type: "faltante", item: "F-PSEA-11A Subformato H/E A", diagnosis: "Solo existe ficha resumen derivada; no hay formato maestro activo.", recommendation: "Crear formato maestro." },
+      { id: "r24", type: "faltante", item: "F-PSEA-11B Subformato H/E B", diagnosis: "Solo existe ficha resumen derivada; no hay formato maestro activo.", recommendation: "Crear formato maestro." },
+      { id: "r25", type: "faltante", item: "F-PSEA-11C Subformato H/E C", diagnosis: "Solo existe ficha resumen derivada; no hay formato maestro activo.", recommendation: "Crear formato maestro." },
+      { id: "r26", type: "faltante", item: "F-PSEA-11D Subformato H/E D", diagnosis: "Solo existe ficha resumen derivada; no hay formato maestro activo.", recommendation: "Crear formato maestro." },
+      { id: "r27", type: "duplicidad", item: "P-PSEA-01 en .docx y .md", diagnosis: "Hay dos archivos activos para el mismo codigo.", recommendation: "Definir maestro unico y dejar el otro como fuente historica o editable." },
+      { id: "r28", type: "duplicidad", item: "P-PSEA-10 en 02_prueba_piloto_rondas/00_planificacion", diagnosis: "Procedimiento oficial ubicado como documento operativo de ronda.", recommendation: "Mover o consolidar como procedimiento maestro." },
+      { id: "r29", type: "duplicidad", item: "P-PSEA-20 en 02_prueba_piloto_rondas/00_planificacion", diagnosis: "Procedimiento oficial ubicado como documento operativo de ronda.", recommendation: "Mover o consolidar como procedimiento maestro de gestion." },
+      { id: "r30", type: "duplicidad", item: "F-PSEA-01 y F-PSEA-02: plantillas, maestros y copias piloto", diagnosis: "Mezcla de formato maestro y registros diligenciados.", recommendation: "Separar plantilla/base, maestro y evidencias de ronda." },
+      { id: "r31", type: "duplicidad", item: "F-PSEA-05 a F-PSEA-13 duplicados por ronda", diagnosis: "Copias en planificacion y rondas simples/complejas.", recommendation: "Conservar un maestro por codigo y tratar copias como evidencias." },
+      { id: "r32", type: "duplicidad", item: "F-PSEA-06 copia en raiz", diagnosis: "Existe copia fuera de carpeta de maestros o ronda.", recommendation: "Eliminar o reubicar si no es el maestro." },
+      { id: "r33", type: "clasificar", item: "calaire-app_func_docs_sgc.md / calaire-app_reg_docs_sgc.md / calaire-app_registros-sgc.html", diagnosis: "Documentan partes de calaire-app, pero no estan codificados.", recommendation: "No tocarlos. Mantenerlos en carpeta aparte como documentacion de soporte de calaire-app, sin absorberlos ni codificarlos como documentos independientes del SGC." },
+      { id: "r34", type: "clasificar", item: "ronda_1_completa.csv / ronda_1_equipos.csv / ronda_1_estabilidad.csv / ronda_1_homogeneidad.csv", diagnosis: "Evidencias o datasets tecnicos de ronda.", recommendation: "Mapear como registros asociados a F-PSEA-12, F-PSEA-04 y F-PSEA-11A-D." },
+      { id: "r35", type: "clasificar", item: "Planificacion_R1_PP (1).md y copia en 01_bloque_general", diagnosis: "Documento operativo duplicado.", recommendation: "Consolidar como evidencia de ronda o absorber en F-PSEA-05 / F-PSEA-02." },
+      { id: "r36", type: "clasificar", item: "analisis_sgc.md / sgc_res.md / mapa_tentativo_sgc_pea.md / mapa_decisiones_documentales_pea.md", diagnosis: "Documentos de analisis y arquitectura, no documentos controlados del SGC.", recommendation: "Mantener como documentos de trabajo; no codificar como P/I/F salvo decision." },
+      { id: "r37", type: "clasificar", item: "sesion_grill_sgc_pea_v1.md / sesion_grill_sgc_pea_v2.md", diagnosis: "Evidencia interna de diseno documental.", recommendation: "Mantener como soporte historico; no codificar como documento SGC." },
+      { id: "r38", type: "clasificar", item: "02_prueba_piloto_rondas/04_informes_operativos/*", diagnosis: "Informes operativos del proyecto o piloto.", recommendation: "Clasificar como evidencia de gestion de prueba piloto; no como F-PSEA-13 salvo que sea informe final EA." },
+      { id: "r39", type: "clasificar", item: "02_prueba_piloto_rondas/05_evidencias_soporte/* y 06_ronda_fase3/*", diagnosis: "Evidencias, Gantt y timelines.", recommendation: "Mantener como soportes operativos; no confundir con formatos maestros." }
+    ];
+
+    const state = loadState();
+    const body = document.getElementById("checklistBody");
+    const search = document.getElementById("search");
+    const typeFilter = document.getElementById("typeFilter");
+    const decisionFilter = document.getElementById("decisionFilter");
+    const rowCount = document.getElementById("rowCount");
+
+    function loadState() {
+      try {
+        return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
+      } catch (error) {
+        return {};
+      }
+    }
+
+    function saveState() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    }
+
+    function rowState(id) {
+      if (!state[id]) {
+        state[id] = { done: false, decision: "pendiente", responsible: "", notes: "" };
+      }
+      return state[id];
+    }
+
+    function typeLabel(type) {
+      const labels = {
+        "renombrar": "Renombrar",
+        "faltante": "Crear faltante",
+        "no-listado": "No listado",
+        "duplicidad": "Duplicidad",
+        "clasificar": "Clasificar"
+      };
+      return labels[type] || type;
+    }
+
+    function tagClass(type) {
+      if (type === "renombrar") return "warn";
+      if (type === "faltante") return "info";
+      if (type === "no-listado") return "stop";
+      if (type === "duplicidad") return "warn";
+      return "ok";
+    }
+
+    function render() {
+      const q = search.value.trim().toLowerCase();
+      const tf = typeFilter.value;
+      const df = decisionFilter.value;
+      body.innerHTML = "";
+
+      const filtered = rows.filter(row => {
+        const saved = rowState(row.id);
+        const haystack = `${row.type} ${row.item} ${row.diagnosis} ${row.recommendation} ${saved.decision} ${saved.responsible} ${saved.notes}`.toLowerCase();
+        return (!q || haystack.includes(q)) && (!tf || row.type === tf) && (!df || saved.decision === df);
+      });
+
+      for (const row of filtered) {
+        const saved = rowState(row.id);
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td><input class="check" type="checkbox" ${saved.done ? "checked" : ""} data-field="done" data-id="${row.id}"></td>
+          <td><span class="tag ${tagClass(row.type)}">${typeLabel(row.type)}</span></td>
+          <td class="path">${escapeHtml(row.item)}</td>
+          <td>${escapeHtml(row.diagnosis)}</td>
+          <td>${escapeHtml(row.recommendation)}</td>
+          <td>
+            <div class="decision-grid">
+              <select data-field="decision" data-id="${row.id}">
+                ${decisionOptions(saved.decision)}
+              </select>
+              <input type="text" placeholder="Responsable" value="${escapeAttr(saved.responsible)}" data-field="responsible" data-id="${row.id}">
+              <textarea placeholder="Notas / acuerdo / condicion" data-field="notes" data-id="${row.id}">${escapeHtml(saved.notes)}</textarea>
+            </div>
+          </td>
+        `;
+        body.appendChild(tr);
+      }
+
+      rowCount.textContent = `${filtered.length} filas visibles de ${rows.length} decisiones posibles.`;
+    }
+
+    function decisionOptions(value) {
+      const options = [
+        ["pendiente", "Pendiente"],
+        ["aprobar", "Aprobar recomendacion"],
+        ["renombrar", "Renombrar/consolidar"],
+        ["retirar", "Retirar/reservar"],
+        ["crear", "Crear documento"],
+        ["mantener", "Mantener"],
+        ["carpeta_aparte", "Carpeta aparte"],
+        ["revisar", "Revisar con equipo"]
+      ];
+      return options.map(([val, label]) => `<option value="${val}" ${value === val ? "selected" : ""}>${label}</option>`).join("");
+    }
+
+    function escapeHtml(value) {
+      return String(value).replace(/[&<>"']/g, char => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        "\"": "&quot;",
+        "'": "&#039;"
+      })[char]);
+    }
+
+    function escapeAttr(value) {
+      return escapeHtml(value).replace(/\n/g, " ");
+    }
+
+    document.addEventListener("input", event => {
+      const target = event.target;
+      const id = target.dataset.id;
+      const field = target.dataset.field;
+      if (!id || !field) return;
+      const saved = rowState(id);
+      if (field === "done") {
+        saved.done = target.checked;
+      } else {
+        saved[field] = target.value;
+      }
+      saveState();
+      if (field === "decision") render();
+    });
+
+    document.addEventListener("change", event => {
+      const target = event.target;
+      if (target.dataset.field === "done") {
+        rowState(target.dataset.id).done = target.checked;
+        saveState();
+      }
+    });
+
+    [search, typeFilter, decisionFilter].forEach(control => control.addEventListener("input", render));
+
+    document.getElementById("exportCsv").addEventListener("click", () => {
+      const header = ["id", "tipo", "archivo_asunto", "diagnostico", "recomendacion", "listo", "decision", "responsable", "notas"];
+      const lines = [header.join(",")];
+      for (const row of rows) {
+        const saved = rowState(row.id);
+        lines.push([
+          row.id,
+          typeLabel(row.type),
+          row.item,
+          row.diagnosis,
+          row.recommendation,
+          saved.done ? "si" : "no",
+          saved.decision,
+          saved.responsible,
+          saved.notes
+        ].map(csvCell).join(","));
+      }
+      download("checklist_mapeo_sgc_pea.csv", lines.join("\n"), "text/csv;charset=utf-8");
+    });
+
+    document.getElementById("exportJson").addEventListener("click", () => {
+      const payload = rows.map(row => ({ ...row, ...rowState(row.id), typeLabel: typeLabel(row.type) }));
+      download("checklist_mapeo_sgc_pea.json", JSON.stringify(payload, null, 2), "application/json;charset=utf-8");
+    });
+
+    document.getElementById("copySummary").addEventListener("click", async () => {
+      const summary = rows.map(row => {
+        const saved = rowState(row.id);
+        return `- [${saved.done ? "x" : " "}] ${typeLabel(row.type)} | ${row.item} | Decision: ${saved.decision} | Responsable: ${saved.responsible || "pendiente"} | Notas: ${saved.notes || "sin notas"}`;
+      }).join("\n");
+      await navigator.clipboard.writeText(summary);
+      alert("Resumen copiado al portapapeles.");
+    });
+
+    document.getElementById("resetData").addEventListener("click", () => {
+      if (!confirm("Esto borra las decisiones guardadas en este navegador. Continuar?")) return;
+      localStorage.removeItem(STORAGE_KEY);
+      for (const key of Object.keys(state)) delete state[key];
+      render();
+    });
+
+    function csvCell(value) {
+      const text = String(value ?? "").replace(/\r?\n/g, " ").replace(/"/g, '""');
+      return `"${text}"`;
+    }
+
+    function download(filename, content, mime) {
+      const blob = new Blob([content], { type: mime });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    }
+
+    render();
+  </script>
+</body>
+</html>

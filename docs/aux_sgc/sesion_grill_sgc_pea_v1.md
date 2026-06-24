@@ -224,7 +224,7 @@ No debe tratar aprobacion, retencion, obsolescencia ni control documental macro.
 
 ## Documentos creados o actualizados en esta etapa
 
-- `docs/documentacion_sgc/F-PSEA-06 Plan de Ronda EA.md`
+- `docs/documentacion_sgc/F-PSEA-06 Ficha digital de ronda EA.md`
 - `docs/documentacion_sgc/mapa_decisiones_documentales_pea.md`
 - `docs/documentacion_sgc/sesion_grill_sgc_pea_v1.md`
 - `logs/CURRENT_SESSION.md`

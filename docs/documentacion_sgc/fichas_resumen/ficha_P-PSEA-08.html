@@ -15,7 +15,8 @@
             <p class="hero-name">Flujo tecnico de datos digitales del
 PEA</p>
             <div class="hero-meta" aria-label="Metadatos de la ficha">
-                <span><strong>Tipo</strong>Procedimiento</span>
+                <span><strong>Tipo</strong>Procedimiento con matriz
+resumen y matriz operativa anexa</span>
                         <span><strong>Estado</strong>Elaborar /
 Actualizar</span>
                         <span><strong>Prioridad</strong>Alta</span>
@@ -42,6 +43,9 @@ Actualizar</span>
         id="toc-proposito-operativo">Proposito operativo</a></li>
         <li><a href="#rol-en-el-flujo" id="toc-rol-en-el-flujo">Rol en
         el flujo</a></li>
+        <li><a href="#estructura-documental-esperada"
+        id="toc-estructura-documental-esperada">Estructura documental
+        esperada</a></li>
         </ul></li>
         <li><a href="#aplicativos-y-tecnologia"
         id="toc-aplicativos-y-tecnologia">Aplicativos y
@@ -80,7 +84,8 @@ Actualizar</span>
         </tr>
         <tr>
         <td><strong>Tipo documental</strong></td>
-        <td>Procedimiento</td>
+        <td>Procedimiento con matriz resumen y matriz operativa
+        anexa</td>
         </tr>
         <tr>
         <td><strong>Estado</strong></td>
@@ -123,6 +128,17 @@ Actualizar</span>
         </ul>
         <p>Es el documento de referencia tecnica que gobierna la
         arquitectura de datos del PEA.</p>
+        <h3 id="estructura-documental-esperada">Estructura documental
+        esperada</h3>
+        <p><code>P-PSEA-08</code> debe desarrollarse como procedimiento
+        tecnico, no como tabla aislada. El cuerpo principal define el
+        flujo, responsabilidades, puntos de control y reglas de
+        trazabilidad de datos. Dentro del procedimiento debe incluirse
+        una matriz resumen de CSV simples para consulta rapida. Como
+        anexo, debe mantenerse una matriz operativa detallada con todos
+        los CSV simples relevantes del flujo, su condicion de
+        conservacion y su relacion con formatos oficiales o
+        evidencias.</p>
         <hr />
         <h2 id="aplicativos-y-tecnologia">Aplicativos y tecnologia</h2>
         <h4 id="aplicativo-asociado">Aplicativo asociado</h4>
@@ -164,10 +180,11 @@ Actualizar</span>
         <td>Entrada oficial</td>
         </tr>
         <tr>
-        <td>Archivos tecnicos internos</td>
+        <td>Anexos CSV de <code>P-PSEA-08</code></td>
         <td><code>datos_ronda.csv</code>,
-        <code>niveles_calaire.csv</code>, etc.</td>
-        <td>Insumo tecnico</td>
+        <code>niveles_calaire.csv</code>, archivos de configuracion y
+        demas CSV operativos del flujo digital</td>
+        <td>Insumo tecnico controlado</td>
         </tr>
         </tbody>
         </table>
@@ -209,6 +226,34 @@ Actualizar</span>
         </tr>
         </tbody>
         </table>
+        <h4 id="anexos-csv-del-procedimiento">Anexos CSV del
+        procedimiento</h4>
+        <p>Los CSV simples que soportan la ejecucion tecnica del flujo
+        digital se tratan como anexos operativos de
+        <code>P-PSEA-08</code>. Por trazabilidad de datos conforme al
+        enfoque de ISO/IEC 17043, este procedimiento debe identificar
+        todos los CSV simples relevantes del flujo, incluyendo entradas,
+        archivos intermedios, archivos de configuracion, salidas
+        tecnicas y datasets consolidados. Para cada CSV debe quedar
+        claro su nombre, funcion, punto de generacion o consumo,
+        aplicativo asociado, relacion con formatos oficiales y condicion
+        de conservacion. Solo los CSV que quedan como evidencia oficial
+        o soporte trazable de una ronda/evento se registran ademas en
+        <code>P-PSEA-03</code>.</p>
+        <p>La matriz operativa anexa se limita a archivos
+        <code>.csv</code> simples. No incluye archivos
+        <code>.xlsx</code>, <code>.json</code>, <code>.rds</code>,
+        <code>.html</code>, <code>.qmd</code> ni otros artefactos
+        digitales; esos archivos se controlan mediante el formato
+        oficial, instructivo o documento especifico que corresponda.</p>
+        <p>La matriz resumen del procedimiento debe clasificar cada CSV
+        simple con una condicion de conservacion minima:
+        <code>evidencia_oficial</code>, <code>soporte_trazable</code>,
+        <code>intermedio_reproducible</code> o <code>transitorio</code>.
+        La matriz operativa anexa desarrolla el detalle tecnico de cada
+        archivo, incluyendo ruta o ubicacion, responsable, version o
+        fecha de generacion, ronda/evento asociado, formato relacionado
+        y observaciones de trazabilidad.</p>
         <hr />
         <h2 id="relaciones-documentales">Relaciones documentales</h2>
         <h4 id="documentos-relacionados">Documentos relacionados</h4>
@@ -258,8 +303,9 @@ Actualizar</span>
         </tr>
         <tr>
         <td><code>P-PSEA-03</code></td>
-        <td>Matriz de evidencias que valida registros</td>
-        <td>Referencia</td>
+        <td>Procedimiento que trackea los CSV y salidas del flujo cuando
+        quedan como registros o evidencias</td>
+        <td>Obligatorio</td>
         </tr>
         </tbody>
         </table>
@@ -274,7 +320,13 @@ Actualizar</span>
         <li>No define criterios estadisticos; cita
         <code>P-PSEA-07</code> para eso.</li>
         <li>No convierte archivos tecnicos internos en formatos
-        <code>F-PSEA</code>; solo los mapea y controla.</li>
+        <code>F-PSEA</code>; los declara como anexos CSV del flujo
+        cuando aplique y remite a <code>P-PSEA-03</code> solo aquellos
+        que queden como registros o evidencias conservadas.</li>
+        <li>No sustituye la matriz operativa de <code>P-PSEA-03</code>;
+        su matriz operativa anexa gobierna el flujo tecnico de archivos,
+        mientras <code>P-PSEA-03</code> gobierna el tracking de
+        evidencias conservadas.</li>
         </ul>
         <h4 id="riesgos-de-interpretacion">Riesgos de
         interpretacion</h4>
@@ -286,9 +338,10 @@ Actualizar</span>
         <li><strong>Promover archivos tecnicos a F-PSEA:</strong>
         Archivos como <code>datos_ronda.csv</code>,
         <code>niveles_calaire.csv</code>,
-        <code>preprocesamiento_log.csv</code> deben mapearse aqui; solo
-        <code>preprocesamiento_log.csv</code> se referencia en
-        <code>F-PSEA-10</code>.</li>
+        <code>preprocesamiento_log.csv</code> deben mapearse como anexos
+        CSV de <code>P-PSEA-08</code>; solo los que correspondan se
+        reflejan en formatos oficiales como <code>F-PSEA-10</code> o
+        <code>F-PSEA-12</code>.</li>
         <li><strong>Confundir F-PSEA-09 con F-PSEA-12:</strong>
         <code>F-PSEA-09</code> es exportacion desde
         <code>calaire-app</code>; <code>F-PSEA-12</code> es dataset
@@ -296,15 +349,23 @@ Actualizar</span>
         <li><strong>Tratar P-PSEA-08 como instructivo:</strong> Es
         procedimiento tecnico de flujo de datos, no manual de
         usuario.</li>
+        <li><strong>Duplicar control de evidencias:</strong>
+        <code>P-PSEA-08</code> identifica y contextualiza todos los CSV
+        relevantes para trazabilidad de datos; <code>P-PSEA-03</code>
+        solo trackea los que quedan como registros o evidencias
+        conservadas.</li>
         </ul>
         <hr />
         <h2 id="criterio-minimo-de-elaboracion">Criterio minimo de
         elaboracion</h2>
         <p>El procedimiento mapea con claridad: (1) que datos entran a
-        cada aplicativo, (2) que archivos tecnicos internos se generan,
-        (3) que formatos oficiales salen, (4) cual es la secuencia de
-        transformacion, y (5) donde se diferencia el flujo oficial de
-        capacidades internas alternativas.</p>
+        cada aplicativo, (2) que anexos CSV o archivos tecnicos internos
+        se generan, (3) que formatos oficiales salen, (4) cual es la
+        secuencia de transformacion, (5) donde se diferencia el flujo
+        oficial de capacidades internas alternativas, (6) cuales CSV
+        quedan como evidencia oficial o soporte trazable para ser
+        trackeados en <code>P-PSEA-03</code>, y (7) como se separa la
+        matriz resumen interna de la matriz operativa anexa.</p>
       </article>
     </main>
     <footer class="footer">

@@ -233,6 +233,48 @@
       font-size: 13px;
     }
 
+    .audit-strip {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      padding: 14px;
+      border-bottom: 1px solid var(--line);
+      background: #fffdfa;
+    }
+
+    .audit-card {
+      min-width: 0;
+      padding: 12px;
+      border: 1px solid var(--line);
+      background: #fbfaf7;
+    }
+
+    .audit-card strong {
+      display: block;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 24px;
+      line-height: 1;
+    }
+
+    .audit-card span {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+      line-height: 1.3;
+      text-transform: uppercase;
+    }
+
+    .audit-note {
+      padding: 0 14px 14px;
+      border-bottom: 1px solid var(--line);
+      background: #fffdfa;
+      color: #42504a;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
     .diagram-shell {
       position: relative;
       min-height: 800px;
@@ -404,6 +446,7 @@
         position: static;
         max-height: none;
       }
+      .audit-strip { grid-template-columns: 1fr 1fr; }
       .diagram-shell { min-height: 520px; }
       svg { width: 1180px; height: 1000px; }
       .detail {
@@ -448,10 +491,20 @@
         <div class="hint">Seleccione un nodo para ver su rol documental y resaltar sus dependencias directas.</div>
         <div class="chips">
           <a class="chip link-chip" href="fichas_resumen/index.html" target="_blank" rel="noopener">Indice de fichas</a>
+          <a class="chip link-chip" href="rev1.md" target="_blank" rel="noopener">Revision formatos</a>
           <button class="chip" id="reset">Limpiar vista</button>
           <button class="chip" id="fitData">Flujo de datos</button>
           <button class="chip" id="fitUpdate">Orden de elaboracion</button>
         </div>
+      </div>
+      <div class="audit-strip" aria-label="Resumen de cobertura de formatos">
+        <div class="audit-card"><strong>3/3</strong><span>Documentos generales con DOCX</span></div>
+        <div class="audit-card"><strong>21/21</strong><span>Procedimientos con DOCX</span></div>
+        <div class="audit-card"><strong>5/5</strong><span>Instructivos con DOCX</span></div>
+        <div class="audit-card"><strong>9</strong><span>Faltantes implementados</span></div>
+      </div>
+      <div class="audit-note">
+        Revision 1 actualizada: <strong>P-PSEA-05</strong> se cerro como procedimiento DOCX; <strong>F-PSEA-04</strong>, <strong>F-PSEA-07</strong>, <strong>F-PSEA-08</strong>, <strong>F-PSEA-09</strong>, <strong>F-PSEA-10</strong>, <strong>F-PSEA-11</strong> y <strong>F-PSEA-12</strong> se controlan como XLSX maestro con CSV operativo cuando aplica; <strong>F-PSEA-13</strong> como informe DOCX. <code>F-PSEA-11</code> queda parcial por anexos aun no definidos.
       </div>
       <div class="diagram-shell">
         <svg id="map" viewBox="0 0 1400 1350" role="img" aria-label="Mapa de navegacion documental SGC PEA">
@@ -486,21 +539,21 @@
   <script>
     const nodes = [
       { id: "P-PSEA-01", label: "Protocolo general EA", family: "P", state: "Mantener", x: 70, y: 45, w: 250, h: 54, text: "Procedimiento/protocolo marco del ensayo de aptitud. Debe citar el flujo digital, aplicativos e instructivos cuando el mapa este estabilizado." },
-      { id: "P-PSEA-10", label: "NO/NO2", family: "P", state: "Actualizar", x: 70, y: 105, w: 250, h: 54, text: "Procedimiento para ensayo de aptitud de oxidos de nitrogeno (NO/NO2). Debe aligerarse para conservar particularidades tecnicas y citar transversales." },
-      { id: "P-PSEA-11", label: "CO", family: "P", state: "Actualizar", x: 70, y: 165, w: 250, h: 54, text: "Procedimiento para ensayo de aptitud de monoxido de carbono (CO). Debe aligerarse para conservar particularidades tecnicas y citar transversales." },
-      { id: "P-PSEA-12", label: "O3", family: "P", state: "Actualizar", x: 70, y: 225, w: 250, h: 54, text: "Procedimiento para ensayo de aptitud de ozono (O3). Debe aligerarse para conservar particularidades tecnicas y citar transversales." },
-      { id: "P-PSEA-13", label: "SO2", family: "P", state: "Actualizar", x: 70, y: 285, w: 250, h: 54, text: "Procedimiento para ensayo de aptitud de dioxido de azufre (SO2). Debe aligerarse para conservar particularidades tecnicas y citar transversales." },
-      { id: "P-PSEA-07", label: "Diseno estadistico", family: "P", state: "Actualizar", x: 70, y: 345, w: 250, h: 54, text: "Procedimiento tecnico central para valor asignado, sigma_pt, incertidumbre, outliers, H/E, desempeno y reglas de decision." },
-      { id: "P-PSEA-09", label: "Informe de resultados", family: "P", state: "Elaborar", x: 70, y: 405, w: 250, h: 54, text: "Procedimiento que gobierna la generacion y emision del informe final desde pt_app. Absorbe el rol de P-PSEA-22." },
-      { id: "P-PSEA-14", label: "Colusion y falsificacion", family: "P", state: "Actualizar", x: 70, y: 465, w: 250, h: 54, text: "Procedimiento independiente para prevenir, detectar y tratar indicios de colusion o falsificacion." },
-      { id: "P-PSEA-04", label: "Planificacion de ronda EA", family: "P", state: "Actualizar", x: 70, y: 525, w: 250, h: 54, text: "Procedimiento transversal para planificar la ronda usando calaire-app, cronogramas, plan de ronda y ficha digital." },
-      { id: "P-PSEA-06", label: "Preparacion y control del item", family: "P", state: "Actualizar", x: 70, y: 585, w: 250, h: 54, text: "Procedimiento para generar concentraciones con calibrador dinamico y cilindro; registra el control del item gaseoso." },
-      { id: "P-PSEA-02", label: "Matriz documental del PEA", family: "P", state: "Elaborar", x: 70, y: 645, w: 250, h: 54, text: "Matriz basica de documentos DG, P, I, F y subformatos con estado y relacion documental. No cubre control documental macro." },
-      { id: "P-PSEA-03", label: "Matriz de registros y evidencias", family: "P", state: "Elaborar", x: 70, y: 705, w: 250, h: 54, text: "Matriz operativa de evidencias generadas por ronda, evento o periodo. Lista registros, no procedimientos ni aplicativos." },
-      { id: "P-PSEA-15", label: "TNC / NC / CAPA", family: "P", state: "Actualizar", x: 70, y: 765, w: 250, h: 54, text: "Procedimiento para trabajo no conforme, no conformidades y acciones correctivas del PEA." },
-      { id: "P-PSEA-05", label: "Comunicaciones", family: "P", state: "Actualizar", x: 70, y: 825, w: 250, h: 54, text: "Procedimiento para comunicaciones del PEA." },
-      { id: "P-PSEA-16", label: "Valores sensibles", family: "P", state: "Actualizar", x: 70, y: 885, w: 250, h: 54, text: "Procedimiento para manejo de valores sensibles en el PEA." },
-      { id: "P-PSEA-08", label: "Flujo tecnico de datos digitales", family: "P", state: "Elaborar", x: 70, y: 945, w: 250, h: 54, text: "Mapa del flujo digital: captura, exportacion, preprocesamiento, consolidacion, analisis, archivos tecnicos e informe." },
+      { id: "P-PSEA-02", label: "Matriz documental del PEA", family: "P", state: "Elaborado", x: 70, y: 105, w: 250, h: 54, text: "Matriz basica de documentos DG, P, I, F y subformatos con estado, ubicacion y relacion documental. No cubre control documental macro ni evidencias por ronda." },
+      { id: "P-PSEA-03", label: "Control de registros y evidencias", family: "P", state: "Elaborado", x: 70, y: 165, w: 250, h: 54, text: "Procedimiento con matriz resumen y matriz operativa anexa para evidencias generadas por ronda, evento o periodo. Lista registros/evidencias, no documentos maestros ni aplicativos." },
+      { id: "P-PSEA-04", label: "Planificacion de ronda EA", family: "P", state: "Actualizar", x: 70, y: 225, w: 250, h: 54, text: "Procedimiento transversal para planificar la ronda usando calaire-app, cronogramas, plan de ronda y ficha digital." },
+      { id: "P-PSEA-05", label: "Comunicaciones", family: "P", state: "Implementado", x: 70, y: 285, w: 250, h: 54, text: "Procedimiento para comunicaciones del PEA, creado como base editable en MD y DOCX." },
+      { id: "P-PSEA-06", label: "Preparacion y control del item", family: "P", state: "Actualizar", x: 70, y: 345, w: 250, h: 54, text: "Procedimiento para generar concentraciones con calibrador dinamico y cilindro; registra el control del item gaseoso." },
+      { id: "P-PSEA-07", label: "Diseno estadistico", family: "P", state: "Actualizar", x: 70, y: 405, w: 250, h: 54, text: "Procedimiento tecnico central para valor asignado, sigma_pt, incertidumbre, outliers, H/E, desempeno y reglas de decision." },
+      { id: "P-PSEA-08", label: "Flujo tecnico de datos digitales", family: "P", state: "Elaborar", x: 70, y: 465, w: 250, h: 54, text: "Mapa del flujo digital: captura, exportacion, preprocesamiento, consolidacion, analisis, archivos tecnicos e informe." },
+      { id: "P-PSEA-09", label: "Informe de resultados", family: "P", state: "Elaborar", x: 70, y: 525, w: 250, h: 54, text: "Procedimiento que gobierna la generacion y emision del informe final desde pt_app. Absorbe el rol de P-PSEA-22." },
+      { id: "P-PSEA-10", label: "NO/NO2", family: "P", state: "Implementado", x: 70, y: 585, w: 250, h: 54, text: "Procedimiento original para ensayo de aptitud de oxidos de nitrogeno (NO/NO2). DOCX activo copiado desde 0P-PSEA-02 Procedimiento NO-NO2.docx." },
+      { id: "P-PSEA-11", label: "CO", family: "P", state: "Implementado", x: 70, y: 645, w: 250, h: 54, text: "Procedimiento original para ensayo de aptitud de monoxido de carbono (CO). DOCX activo copiado desde 0P-PSEA-03 Procedimiento CO_v2.docx." },
+      { id: "P-PSEA-12", label: "O3", family: "P", state: "Implementado", x: 70, y: 705, w: 250, h: 54, text: "Procedimiento original para ensayo de aptitud de ozono (O3). DOCX activo copiado desde 0P-PSEA-04 Procedimiento O3_v2.docx." },
+      { id: "P-PSEA-13", label: "SO2", family: "P", state: "Implementado", x: 70, y: 765, w: 250, h: 54, text: "Procedimiento original para ensayo de aptitud de dioxido de azufre (SO2). DOCX activo copiado desde 0P-PSEA-05 Procedimiento SO2_v2.docx." },
+      { id: "P-PSEA-14", label: "Colusion y falsificacion", family: "P", state: "Actualizar", x: 70, y: 825, w: 250, h: 54, text: "Procedimiento independiente para prevenir, detectar y tratar indicios de colusion o falsificacion." },
+      { id: "P-PSEA-15", label: "TNC / NC / CAPA", family: "P", state: "Actualizar", x: 70, y: 885, w: 250, h: 54, text: "Procedimiento para trabajo no conforme, no conformidades y acciones correctivas del PEA." },
+      { id: "P-PSEA-16", label: "Valores sensibles", family: "P", state: "Actualizar", x: 70, y: 945, w: 250, h: 54, text: "Procedimiento para manejo de valores sensibles en el PEA." },
       { id: "P-PSEA-17", label: "Quejas", family: "P", state: "Actualizar", x: 70, y: 1005, w: 250, h: 54, text: "Procedimiento para registro y tratamiento de quejas en el PEA." },
       { id: "P-PSEA-18", label: "Apelaciones", family: "P", state: "Actualizar", x: 70, y: 1065, w: 250, h: 54, text: "Procedimiento para apelaciones en el PEA." },
       { id: "P-PSEA-19", label: "Confidencialidad", family: "P", state: "Actualizar", x: 70, y: 1125, w: 250, h: 54, text: "Procedimiento para confidencialidad en el PEA." },
@@ -518,20 +571,20 @@
 
       { id: "F-PSEA-01", label: "Calendario global de ronda", family: "F", state: "Actualizar", x: 980, y: 45, w: 250, h: 50, text: "Calendario general exportable desde calaire-app; alimenta la planificacion y visualizaciones tipo Gantt." },
       { id: "F-PSEA-02", label: "Cronograma detallado", family: "F", state: "Actualizar", x: 980, y: 105, w: 250, h: 50, text: "Cronograma diligenciable/exportable de actividades detalladas de la ronda." },
-      { id: "F-PSEA-13", label: "Informe final de resultados", family: "F", state: "Actualizar", x: 980, y: 165, w: 250, h: 50, text: "Informe final generado desde pt_app. Su contenido detallado queda pendiente en esta fase." },
-      { id: "F-PSEA-04", label: "Equipos e instrumentos", family: "F", state: "Actualizar", x: 980, y: 225, w: 250, h: 50, text: "Anexo tecnico de equipos e instrumentos del participante; insumo del flujo hacia pt_app." },
+      { id: "F-PSEA-13", label: "Informe final de resultados", family: "F", state: "Implementado", x: 980, y: 165, w: 250, h: 50, text: "Informe final generado desde pt_app. Maestro DOCX copiado desde EA-PP2026-R1-1-z-4-2a.docx." },
+      { id: "F-PSEA-04", label: "Equipos e instrumentos", family: "F", state: "Implementado", x: 980, y: 225, w: 250, h: 50, text: "Anexo tecnico de equipos e instrumentos del participante; maestro XLSX creado con encabezado a partir de ronda_1_equipos.csv; se conserva CSV operativo." },
       { id: "F-PSEA-05", label: "Plan de ronda EA", family: "F", state: "Actualizar", x: 980, y: 285, w: 250, h: 50, text: "Plan tecnico-operativo de la ronda. Debe indicar que H/E se documenta en F-PSEA-11." },
       { id: "F-PSEA-06", label: "Ficha digital de ronda", family: "F", state: "Elaborar", x: 980, y: 345, w: 250, h: 50, text: "Exportacion estructurada desde calaire-app; insumo del plan de ronda e incluye matriz/nota A-U." },
-      { id: "F-PSEA-07", label: "Control del item gaseoso", family: "F", state: "Actualizar", x: 980, y: 405, w: 250, h: 50, text: "Dossier/registro de preparacion, niveles y control del item de ensayo gaseoso." },
-      { id: "F-PSEA-08", label: "Datos reportados", family: "F", state: "Actualizar", x: 980, y: 465, w: 250, h: 50, text: "Registro de datos reportados por el participante en calaire-app." },
-      { id: "F-PSEA-10", label: "Registro de preprocesamiento", family: "F", state: "Elaborar", x: 980, y: 525, w: 250, h: 50, text: "Registro de ejecucion del preprocesador: entradas, salidas, fecha, version, responsable, ruta y observaciones." },
-      { id: "F-PSEA-09", label: "Exportacion para analisis PT", family: "F", state: "Actualizar", x: 980, y: 585, w: 250, h: 50, text: "Exportacion oficial desde calaire-app hacia pt_app. No es el dataset consolidado ronda_<n>_completa.csv." },
-      { id: "F-PSEA-11", label: "Homogeneidad y estabilidad", family: "F", state: "Actualizar", x: 980, y: 645, w: 250, h: 50, text: "Registro principal de H/E del item de ensayo; integra datos y resultados generados/exportados desde pt_app." },
+      { id: "F-PSEA-07", label: "Control del item gaseoso", family: "F", state: "Implementado", x: 980, y: 405, w: 250, h: 50, text: "Registro de preparacion, niveles y control del item de ensayo gaseoso; maestro XLSX copiado desde el cronograma detallado." },
+      { id: "F-PSEA-08", label: "Datos reportados", family: "F", state: "Implementado", x: 980, y: 465, w: 250, h: 50, text: "Maestro XLSX con encabezado para datos reportados por el participante en calaire-app; se conserva CSV operativo." },
+      { id: "F-PSEA-10", label: "Registro de preprocesamiento", family: "F", state: "Implementado", x: 980, y: 525, w: 250, h: 50, text: "Maestro XLSX con encabezado para registrar ejecucion del preprocesador: entradas, salidas, fecha, version, responsable, ruta y observaciones." },
+      { id: "F-PSEA-09", label: "Exportacion para analisis PT", family: "F", state: "Implementado", x: 980, y: 585, w: 250, h: 50, text: "Maestro XLSX con encabezado para la exportacion oficial desde calaire-app hacia pt_app. No es el dataset consolidado ronda_<n>_completa.csv." },
+      { id: "F-PSEA-11", label: "Homogeneidad y estabilidad", family: "F", state: "Parcial", x: 980, y: 645, w: 250, h: 50, text: "Registro principal de H/E del item de ensayo. Ya existen XLSX maestros y CSV operativos de homogeneidad y estabilidad; quedan anexos adicionales por definir." },
       { id: "F-PSEA-11A", label: "Subformato H/E A", family: "F", state: "Elaborar", x: 980, y: 705, w: 250, h: 50, text: "Datos preprocesados y resultados de homogeneidad/estabilidad A." },
       { id: "F-PSEA-11B", label: "Subformato H/E B", family: "F", state: "Elaborar", x: 980, y: 765, w: 250, h: 50, text: "Datos preprocesados y resultados de homogeneidad/estabilidad B." },
       { id: "F-PSEA-11C", label: "Subformato H/E C", family: "F", state: "Elaborar", x: 980, y: 825, w: 250, h: 50, text: "Datos preprocesados y resultados de homogeneidad/estabilidad C." },
       { id: "F-PSEA-11D", label: "Subformato H/E D", family: "F", state: "Elaborar", x: 980, y: 885, w: 250, h: 50, text: "Datos preprocesados y resultados de homogeneidad/estabilidad D." },
-      { id: "F-PSEA-12", label: "Dataset oficial consolidado", family: "F", state: "Elaborar", x: 980, y: 945, w: 250, h: 50, text: "Datos oficiales consolidados para evaluacion de aptitud; equivalente a ronda_<n>_completa.csv." }
+      { id: "F-PSEA-12", label: "Dataset oficial consolidado", family: "F", state: "Implementado", x: 980, y: 945, w: 250, h: 50, text: "Datos oficiales consolidados para evaluacion de aptitud; maestro XLSX creado con encabezado a partir de ronda_1_completa.csv; se conserva CSV operativo." }
     ];
 
     const edges = [
@@ -560,6 +613,24 @@
       { id: "planning", label: "Planificacion de ronda", hint: "P-PSEA-04 > ficha, calendario, plan", nodes: ["P-PSEA-04", "DG-PSEA-02", "I-PSEA-03", "F-PSEA-06", "F-PSEA-01", "F-PSEA-02", "F-PSEA-05", "P-PSEA-06"] },
       { id: "update", label: "Orden de elaboracion", hint: "procedimientos > formatos > instructivos > DG cierre", nodes: ["P-PSEA-01", "P-PSEA-02", "P-PSEA-03", "P-PSEA-08", "P-PSEA-04", "P-PSEA-06", "P-PSEA-07", "P-PSEA-09", "P-PSEA-10", "P-PSEA-11", "P-PSEA-12", "P-PSEA-13", "F-PSEA-06", "F-PSEA-10", "F-PSEA-11A", "F-PSEA-11B", "F-PSEA-11C", "F-PSEA-11D", "F-PSEA-12", "I-PSEA-04", "I-PSEA-05", "DG-PSEA-03", "DG-PSEA-01"] }
     ];
+
+    const docxCoverage = {
+      "P-PSEA-05": { status: "DOCX implementado", note: "Se creo procedimiento base en MD y DOCX para Comunicaciones del PEA." },
+      "P-PSEA-10": { status: "DOCX original activo", note: "Copia byte-a-byte de 0P-PSEA-02 Procedimiento NO-NO2.docx, renombrada como P-PSEA-10 Procedimiento tecnico NO-NO2.docx." },
+      "P-PSEA-11": { status: "DOCX original activo", note: "Copia byte-a-byte de 0P-PSEA-03 Procedimiento CO_v2.docx, renombrada como P-PSEA-11 Procedimiento tecnico CO.docx." },
+      "P-PSEA-12": { status: "DOCX original activo", note: "Copia byte-a-byte de 0P-PSEA-04 Procedimiento O3_v2.docx, renombrada como P-PSEA-12 Procedimiento tecnico O3.docx." },
+      "P-PSEA-13": { status: "DOCX original activo", note: "Copia byte-a-byte de 0P-PSEA-05 Procedimiento SO2_v2.docx, renombrada como P-PSEA-13 Procedimiento tecnico SO2.docx." },
+      "F-PSEA-01": { status: "No aplica DOCX", note: "Formato maestro controlado en XLSX." },
+      "F-PSEA-02": { status: "No aplica DOCX", note: "Formato maestro controlado en XLSX." },
+      "F-PSEA-04": { status: "XLSX implementado", note: "Se creo XLSX maestro con encabezado a partir de ronda_1_equipos.csv; se conserva CSV operativo y MD descriptivo." },
+      "F-PSEA-07": { status: "XLSX implementado", note: "Se copio F-PSEA-02 Cronograma Detallado_v0.xlsx como formato natural XLSX; se conserva MD descriptivo." },
+      "F-PSEA-08": { status: "XLSX implementado", note: "Se creo XLSX maestro con encabezado para datos reportados por participante; se conserva CSV operativo y MD descriptivo." },
+      "F-PSEA-09": { status: "XLSX implementado", note: "Se creo XLSX maestro con encabezado para exportacion a pt_app; se conserva CSV operativo y MD descriptivo." },
+      "F-PSEA-10": { status: "XLSX implementado", note: "Se creo XLSX maestro con encabezado para registro de preprocesamiento; se conserva CSV operativo y MD descriptivo." },
+      "F-PSEA-11": { status: "XLSX parcial", note: "Se crearon XLSX maestros para homogeneidad y estabilidad a partir de los CSV operativos; otros anexos siguen por definir." },
+      "F-PSEA-12": { status: "XLSX implementado", note: "Se creo XLSX maestro con encabezado a partir de ronda_1_completa.csv; se conserva CSV operativo y MD descriptivo." },
+      "F-PSEA-13": { status: "DOCX implementado", note: "Se copio EA-PP2026-R1-1-z-4-2a.docx como informe final maestro." }
+    };
 
     const familyNames = { DG: "DG", P: "P", I: "I", F: "F", OUT: "Fuera" };
     const fichaGroups = {};
@@ -655,6 +726,7 @@
       document.getElementById("detailMeta").innerHTML = `
         <span class="pill">${familyNames[node.family] || node.family}</span>
         <span class="pill">${node.state}</span>
+        <span class="pill">${docxCoverage[id]?.status || "Formato activo"}</span>
       `;
       document.getElementById("detailText").textContent = node.text;
       const incoming = edges.filter(e => e[1] === id).map(e => e[0]);
@@ -667,6 +739,7 @@
         <ul>
           ${fichas.map(code => `<li><a href="${fichaFile(code)}" target="_blank" rel="noopener">${code} · abrir ficha HTML</a></li>`).join("")}
         </ul>
+        <p><strong>Revision formatos:</strong> ${docxCoverage[id]?.note || "Archivo maestro activo encontrado para este codigo en la auditoria actualizada."}</p>
         <p class="context-note">Vista enfocada en nodo seleccionado. Use una ruta critica o limpiar vista para volver al contexto completo del flujo.</p>
       `;
       selected.clear();
