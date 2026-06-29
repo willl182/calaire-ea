@@ -37,6 +37,7 @@
 	- **Portal web (calaire-app):** Next.js 16 + WorkOS + Supabase, 6 etapas completadas, operativo en local, deploy Vercel pendiente.
 	- **Identidad visual:** paleta "Institutional Gold" (`#FDB913`) unificada entre pt_app y calaire-app.
 - **Documentación Maestra**
+	- [[doc_calaire-ea.md]] - Documento explicativo integral sobre ensayos de aptitud para gases contaminantes criterio, SGC y aplicativos.
 	- [[ref/proyecto.md]] - Resumen ejecutivo consolidado por contratos.
 	- [[docs/auxiliares/gantt.md]] - Cronograma Gantt.
 	- [[docs/auxiliares/timeline.md]] - Línea de tiempo rondas.

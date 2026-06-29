@@ -325,7 +325,7 @@
   <header>
     <div class="eyebrow">calaire-app · SGC PEA</div>
     <h1>Registros del SGC alineados al mapa documental vigente</h1>
-    <p class="lead">Actualizacion basada en <code>mapa_navegacion_sgc_pea.html</code> y <code>rev1.md</code>. Esta vista separa lo que calaire-app captura o exporta, lo que pt_app procesa y lo que aun falta consolidar como maestro documental.</p>
+    <p class="lead">Actualizacion al 2026-06-27 basada en <code>mapa_navegacion_sgc_pea.html</code>, <code>rev1.md</code> y la normalizacion documental con plantillas institucionales. Esta vista separa lo que calaire-app captura o exporta, lo que pt_app procesa y lo que permanece como maestro documental controlado.</p>
     <div class="metrics">
       <div class="metric"><strong>16</strong><span>formatos y subformatos del flujo tecnico</span></div>
       <div class="metric"><strong>2</strong><span>formatos maestros controlados en Excel</span></div>
@@ -374,6 +374,9 @@
         <div class="callout">
           <strong>Procedimientos por gas:</strong> <code>P-PSEA-10</code> a <code>P-PSEA-13</code> quedan como DOCX originales activos, copiados desde las fuentes <code>0P-PSEA-02</code> a <code>0P-PSEA-05</code>. No son transcripciones generadas.
         </div>
+        <div class="callout">
+          <strong>Control vigente:</strong> <code>P-PSEA-22</code> y <code>P-PSEA-23</code> quedan fuera del mapa activo. El flujo tecnico de datos digitales se controla en <code>P-PSEA-08</code>.
+        </div>
       </section>
 
       <section id="matriz">
@@ -412,7 +415,7 @@
       <section id="maestros">
         <h2>Cobertura de maestros documentales</h2>
         <div class="grid">
-          <div class="card"><span class="tag master">OK</span><strong>Maestros con DOCX</strong><p><code>F-PSEA-05</code>, <code>F-PSEA-05A</code>, <code>F-PSEA-06</code>, <code>F-PSEA-11A</code>, <code>F-PSEA-11B</code>, <code>F-PSEA-11C</code>, <code>F-PSEA-11D</code>, <code>F-PSEA-14</code>, <code>F-PSEA-15</code>, <code>F-PSEA-16</code>, <code>F-PSEA-17</code>.</p></div>
+          <div class="card"><span class="tag master">OK</span><strong>Maestros con DOCX</strong><p><code>F-PSEA-05</code>, <code>F-PSEA-05A</code>, <code>F-PSEA-06</code>, <code>F-PSEA-11A</code>, <code>F-PSEA-11B</code>, <code>F-PSEA-11C</code>, <code>F-PSEA-11D</code>, <code>F-PSEA-14</code>, <code>F-PSEA-15</code>, <code>F-PSEA-16</code>, <code>F-PSEA-17</code>. Los DOCX controlados fueron normalizados con plantillas institucionales.</p></div>
           <div class="card"><span class="tag master">Originales</span><strong>Procedimientos por gas</strong><p><code>P-PSEA-10</code>, <code>P-PSEA-11</code>, <code>P-PSEA-12</code> y <code>P-PSEA-13</code> son copias DOCX byte-a-byte de los originales <code>0P-PSEA-02</code> a <code>0P-PSEA-05</code>.</p></div>
           <div class="card"><span class="tag xls">OK</span><strong>Maestros tabulares</strong><p><code>F-PSEA-01</code>, <code>F-PSEA-02</code>, <code>F-PSEA-04</code>, <code>F-PSEA-07</code>, <code>F-PSEA-08</code>, <code>F-PSEA-09</code>, <code>F-PSEA-10</code>, <code>F-PSEA-11</code> y <code>F-PSEA-12</code> se controlan como XLSX maestro; los CSV quedan como fuente/exportacion operativa.</p></div>
           <div class="card"><span class="tag master">Implementado</span><strong>Informe final en DOCX</strong><p><code>F-PSEA-13</code> queda como documento narrativo maestro, copiado desde <code>EA-PP2026-R1-1-z-4-2a.docx</code>.</p></div>
@@ -450,14 +453,14 @@
           <div class="card"><span class="tag gap">1</span><strong>Actualizar catalogo de calaire-app</strong><p>Eliminar la lista antigua de 9 formatos y modelar bloques de cobertura segun el mapa vigente.</p></div>
           <div class="card"><span class="tag gap">2</span><strong>Corregir codigos en UI</strong><p>Reemplazar <code>F-PSEA-14</code> como informe por <code>F-PSEA-13</code>; reservar <code>F-PSEA-14</code> para queja/NC.</p></div>
           <div class="card"><span class="tag gap">3</span><strong>Diferenciar formato natural</strong><p>Mostrar XLSX maestro, CSV operativo o DOCX segun corresponda; no reportar como brecha que un registro tabular no tenga Word.</p></div>
-          <div class="card"><span class="tag master">4</span><strong>Maestros implementados</strong><p>Revisar formato final y completar anexos pendientes, especialmente para <code>F-PSEA-11</code>.</p></div>
+          <div class="card"><span class="tag master">4</span><strong>Maestros implementados</strong><p>Continuar solo con revision visual/fina de formato y completar anexos pendientes, especialmente para <code>F-PSEA-11</code>.</p></div>
         </div>
       </section>
     </main>
   </div>
 
   <footer>
-    Actualizado con base en mapa_navegacion_sgc_pea.html y rev1.md.
+    Actualizado al 2026-06-27 con base en mapa_navegacion_sgc_pea.html, rev1.md y normalizacion de plantillas del SGC.
   </footer>
 </body>
 </html>

@@ -1,7 +1,7 @@
 # Resumen actualizado del SGC PEA
 
-**Fecha de actualizacion:** 2026-06-23  
-**Fuentes:** `goals_mapeo_sgc.md`, `rev1.md`, `mapa_navegacion_sgc_pea.html`, `calaire-app_registros-sgc.html` y `sgc_revision_registros_consolidado.html`.
+**Fecha de actualizacion:** 2026-06-27  
+**Fuentes:** `goals_mapeo_sgc.md`, `rev1.md`, `logs/CURRENT_SESSION.md`, `mapa_navegacion_sgc_pea.html`, `calaire-app_registros-sgc.html` y `sgc_revision_registros_consolidado.html`.
 
 ---
 
@@ -15,6 +15,8 @@ Tras la ultima definicion de fuentes, los faltantes principales fueron materiali
 
 Correccion posterior: los procedimientos por gas `P-PSEA-10` a `P-PSEA-13` no se reconstruyen ni se transcriben. Quedan controlados como copias DOCX de los originales suministrados con prefijo `0P-PSEA-*`, renombradas a la numeracion activa.
 
+Actualizacion del 2026-06-27: los documentos controlados del SGC fueron normalizados con plantillas institucionales. Los DOCX se generaron con referencia de plantilla mediante Pandoc y los XLSX maestros se alinearon con la plantilla Excel disponible. La revision fina pendiente es visual/formal, no de cobertura documental.
+
 ---
 
 ## Cobertura documental
@@ -22,7 +24,7 @@ Correccion posterior: los procedimientos por gas `P-PSEA-10` a `P-PSEA-13` no se
 | Familia | Estado | Resultado |
 |---|---|---|
 | `DG-PSEA` | Completo | `DG-PSEA-01`, `DG-PSEA-02` y `DG-PSEA-03` tienen version `.docx` activa. |
-| `P-PSEA` | Completo como base documental | `P-PSEA-05` tiene base `.md`/`.docx`; `P-PSEA-10` a `P-PSEA-13` quedan como DOCX originales activos renombrados desde las fuentes `0P-PSEA-*`. |
+| `P-PSEA` | Completo como base documental | Cobertura `21/21`: `P-PSEA-05` tiene base `.md`/`.docx`; `P-PSEA-10` a `P-PSEA-13` quedan como DOCX originales activos renombrados desde las fuentes `0P-PSEA-*`; `P-PSEA-22` y `P-PSEA-23` quedan fuera del mapa activo. |
 | `I-PSEA` | Completo | `I-PSEA-01` a `I-PSEA-05` tienen version `.docx`. |
 | `F-PSEA` | Base documental implementada | `F-PSEA-04`, `F-PSEA-07`, `F-PSEA-08`, `F-PSEA-09`, `F-PSEA-10`, `F-PSEA-11`, `F-PSEA-12` y `F-PSEA-13` quedaron materializados: XLSX maestro para datos tabulares, CSV operativo cuando aplica y DOCX para informe. |
 
@@ -49,6 +51,7 @@ Correccion posterior: los procedimientos por gas `P-PSEA-10` a `P-PSEA-13` no se
 5. **Cierre e informe:** `P-PSEA-09` y `F-PSEA-13`.
 6. **Casos SGC si aplican:** `F-PSEA-14` a `F-PSEA-17`, asociados a quejas/NC, apelaciones, competencia y proveedores criticos.
 7. **Procedimientos por gas:** `P-PSEA-10` a `P-PSEA-13` se mantienen como procedimientos DOCX originales para NO/NO2, CO, O3 y SO2.
+8. **Codigos retirados:** `P-PSEA-22` y `P-PSEA-23` quedan fuera del mapa activo; el flujo tecnico de datos digitales permanece controlado en `P-PSEA-08`.
 
 ---
 
@@ -79,6 +82,15 @@ Correccion posterior: los procedimientos por gas `P-PSEA-10` a `P-PSEA-13` no se
 
 ---
 
+## Codigos P-PSEA retirados del mapa activo
+
+| Codigo | Estado | Ubicacion de retiro |
+|---|---|---|
+| `P-PSEA-22` | Retirado/reservado fuera del mapa activo. | `para_quitar/02_prueba_piloto_rondas/00_planificacion/P-PSEA-22 Riesgos generales del PEA.md` |
+| `P-PSEA-23` | Retirado del mapa activo; era un placeholder de mejora continua con alcance pendiente. | `para_quitar/01_bloque_general/06_procedimientos_gestion/P-PSEA-23 Mejora continua del PEA.docx` |
+
+---
+
 ## Fuentes base definidas para los formatos pendientes
 
 | Codigo | Fuente definida | Estado |
@@ -102,6 +114,15 @@ Correccion posterior: los procedimientos por gas `P-PSEA-10` a `P-PSEA-13` no se
 
 ---
 
+## Normalizacion de plantillas aplicada
+
+| Tipo documental | Metodo aplicado | Estado |
+|---|---|---|
+| DOCX controlados | Generacion con Pandoc usando `--reference-doc` institucional. | Implementado; pendiente solo revision visual/fina en Word o LibreOffice cuando se requiera. |
+| XLSX maestros | Uso de plantilla Excel institucional con hoja `Datos` para las filas provenientes de CSV fuente. | Implementado para los formatos tabulares maestros. |
+
+---
+
 ## Riesgos de control
 
 - Declarar cerrado un codigo por existir una copia de ronda, aunque falte el maestro controlado.
@@ -114,7 +135,7 @@ Correccion posterior: los procedimientos por gas `P-PSEA-10` a `P-PSEA-13` no se
 
 ## Proximo bloque de trabajo recomendado
 
-1. Revisar las plantillas XLSX generadas y completar metadatos de control si se requiere.
+1. Revisar visualmente las plantillas DOCX/XLSX generadas y completar metadatos de control si se requiere.
 2. Revisar duplicados de procedimientos tecnicos por analito en `06_procedimientos_gestion/`.
 3. Completar anexos aun no definidos para `F-PSEA-11`.
 4. Mantener `calaire-app_registros-sgc.html` como referencia funcional para ajustar catalogos del aplicativo.
