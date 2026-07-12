@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>DG-PSEA-02 Aplicativo calaire-app</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<h1 id="dg-psea-02-aplicativo-calaire-app">DG-PSEA-02: Aplicativo
+calaire-app</h1>
+<h2 id="1-objetivo">1. Objetivo</h2>
+<p>Documentar el alcance, funciones, entradas, salidas, controles y
+limites del aplicativo <code>calaire-app</code> como sistema digital del
+PEA para la gestion de rondas de ensayo de aptitud, participantes,
+cronogramas, comunicaciones, captura de datos, registros SGC y
+exportaciones oficiales hacia el flujo posterior de analisis.</p>
+<p>El aplicativo debe permitir demostrar que la informacion operativa de
+la ronda se mantiene integra, trazable, confidencial y disponible para
+la revision tecnica y estadistica posterior.</p>
+<h2 id="2-alcance">2. Alcance</h2>
+<p>Aplica al uso de <code>calaire-app</code> durante las fases de
+planificacion, ejecucion de ronda, comunicacion operativa, recoleccion
+de datos, cierre de captura, control documental SGC y exportacion de
+informacion oficial del ensayo de aptitud para gases contaminantes
+criterio.</p>
+<p>Incluye:</p>
+<ul>
+<li>Gestion de rondas de ensayo de aptitud.</li>
+<li>Registro, confirmacion y administracion de participantes.</li>
+<li>Configuracion de calendarios, cronogramas, analitos, niveles y
+ventanas de reporte.</li>
+<li>Generacion o consolidacion de la ficha basica de ronda
+(<code>F-PSEA-05</code>) y la planificacion completa
+(<code>F-PSEA-06</code>).</li>
+<li>Captura de datos reportados por los participantes
+(<code>F-PSEA-08</code>).</li>
+<li>Registro de participacion y carga de datos del participante
+(<code>F-PSEA-03</code>), con exportacion de equipos e instrumentos
+(<code>F-PSEA-04</code>).</li>
+<li>Control de usuarios, roles, permisos y acceso a informacion de
+participantes.</li>
+<li>Trazabilidad de registros, modificaciones, cierres, comunicaciones,
+notificaciones y exportaciones.</li>
+<li>Exportacion oficial de datos hacia <code>pt_app</code>
+(<code>F-PSEA-09</code>).</li>
+<li>Registro operativo de casos SGC de quejas, no conformidades,
+comunicaciones o incidencias cuando aplique.</li>
+<li>Evidencia de validacion funcional, control de cambios, respaldo,
+recuperacion y tratamiento de incidentes del aplicativo.</li>
+</ul>
+<p>No incluye:</p>
+<ul>
+<li>Definicion de criterios estadisticos, valor asignado,
+<code>sigma_pt</code>, incertidumbre ni reglas de desempeno.</li>
+<li>Preprocesamiento estadistico, evaluacion de homogeneidad/estabilidad
+ni emision del informe final.</li>
+<li>Aprobacion metodologica del esquema o de la ronda.</li>
+<li>Sustitucion de los procedimientos de comunicacion, planificacion,
+confidencialidad, trabajo no conforme, quejas o control documental del
+PEA.</li>
+</ul>
+<h2 id="3-ficha-del-aplicativo">3. Ficha del aplicativo</h2>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descripcion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aplicativo</td>
+<td><code>calaire-app</code></td>
+</tr>
+<tr>
+<td>Uso previsto</td>
+<td>Planificacion operativa, gestion de participantes, captura
+controlada de datos, generacion de ficha digital, control documental
+SGC, exportacion oficial hacia <code>pt_app</code> y registro operativo
+de casos SGC cuando aplique.</td>
+</tr>
+<tr>
+<td>Rol en el SGC</td>
+<td>Aplicativo critico para control de informacion, confidencialidad,
+trazabilidad, comunicaciones y transferencia de datos oficiales.</td>
+</tr>
+<tr>
+<td>Requisitos relacionados</td>
+<td>ISO/IEC 17043:2023: confidencialidad, comunicacion del esquema,
+instrucciones, manejo de resultados, registros, datos y sistemas de
+informacion. ISO 13528:2022: revision inicial de datos, trazabilidad de
+datos y control de herramientas que soportan el analisis.</td>
+</tr>
+<tr>
+<td>Instructivos de uso</td>
+<td><code>I-PSEA-02</code>, <code>I-PSEA-03</code></td>
+</tr>
+<tr>
+<td>Procedimientos relacionados</td>
+<td><code>P-PSEA-03</code>, <code>P-PSEA-04</code>,
+<code>P-PSEA-05</code>, <code>P-PSEA-08</code>, <code>P-PSEA-14</code>,
+<code>P-PSEA-15</code>, <code>P-PSEA-17</code>,
+<code>P-PSEA-19</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-evidencia-visual-del-aplicativo">4. Evidencia visual del
+aplicativo</h2>
+<p>Las siguientes capturas se conservan en la subcarpeta
+<code>capturas</code> como evidencia funcional del aplicativo. Las
+imagenes fueron organizadas para soportar este documento
+descriptivo.</p>
+<table>
+<thead>
+<tr>
+<th>Evidencia</th>
+<th>Archivo</th>
+<th>Control SGC soportado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Resumen SGC global</td>
+<td><code>capturas/01-resumen-sgc.png</code></td>
+<td>Seguimiento del estado general del SGC y visibilidad de registros
+por ronda.</td>
+</tr>
+<tr>
+<td>Panel SGC de ronda y publicaciones</td>
+<td><code>capturas/02-panel-ronda-sgc-publicaciones.png</code></td>
+<td>Comunicacion controlada del esquema, publicaciones e instrucciones
+de ronda.</td>
+</tr>
+<tr>
+<td>Comunicaciones SGC</td>
+<td><code>capturas/03-comunicaciones-sgc.png</code></td>
+<td>Registro de comunicaciones operativas y trazabilidad de
+mensajes.</td>
+</tr>
+<tr>
+<td>Plantillas SGC</td>
+<td><code>capturas/04-plantillas-sgc.png</code></td>
+<td>Control de plantillas y documentos usados para comunicacion o
+publicacion.</td>
+</tr>
+<tr>
+<td>Notificaciones y destinatarios</td>
+<td><code>capturas/05-notificaciones-destinatarios.png</code></td>
+<td>Evidencia de destinatarios, notificaciones y control de
+divulgacion.</td>
+</tr>
+<tr>
+<td>Captura nativa <code>F-PSEA-08</code></td>
+<td><code>capturas/06-f-psea-08-captura-datos.png</code></td>
+<td>Captura estructurada de resultados de participantes.</td>
+</tr>
+<tr>
+<td>Casos SGC unificados</td>
+<td><code>capturas/07-casos-sgc.png</code></td>
+<td>Registro operativo de quejas, no conformidades o incidencias.</td>
+</tr>
+<tr>
+<td>Matriz documental maestra</td>
+<td><code>capturas/08-matriz-documental-maestra.png</code></td>
+<td>Control documental del SGC y relacion de documentos aplicables.</td>
+</tr>
+<tr>
+<td>Cobertura por ronda</td>
+<td><code>capturas/09-cobertura-por-ronda.png</code></td>
+<td>Verificacion de cobertura documental y registros por ronda.</td>
+</tr>
+<tr>
+<td>Matriz documental filtrada</td>
+<td><code>capturas/10-matriz-documental.png</code></td>
+<td>Consulta y trazabilidad de documentos SGC aplicables.</td>
+</tr>
+</tbody>
+</table>
+<p><img src="capturas/01-resumen-sgc.png" alt="Resumen SGC" /></p>
+<p><img src="capturas/02-panel-ronda-sgc-publicaciones.png"
+alt="Panel SGC de ronda y publicaciones" /></p>
+<p><img src="capturas/06-f-psea-08-captura-datos.png"
+alt="Captura nativa F-PSEA-08" /></p>
+<p><img src="capturas/07-casos-sgc.png"
+alt="Casos SGC unificados" /></p>
+<p><img src="capturas/08-matriz-documental-maestra.png"
+alt="Matriz documental maestra" /></p>
+<h2 id="5-requisitos-minimos-del-aplicativo">5. Requisitos minimos del
+aplicativo</h2>
+<table>
+<thead>
+<tr>
+<th>Requisito SGC</th>
+<th>Control esperado en <code>calaire-app</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Confidencialidad de participantes</td>
+<td>Acceso por rol, proteccion de identidad, visibilidad limitada por
+participante y restriccion de datos de otros laboratorios.</td>
+</tr>
+<tr>
+<td>Comunicacion e instrucciones de ronda</td>
+<td>Publicacion o registro de calendario, cronograma, ficha digital,
+instrucciones, notificaciones y cambios controlados.</td>
+</tr>
+<tr>
+<td>Captura comparable de resultados</td>
+<td>Campos estructurados, unidades definidas, validaciones basicas,
+ventanas de reporte y bloqueo o trazabilidad de cambios posteriores al
+cierre.</td>
+</tr>
+<tr>
+<td>Trazabilidad de datos</td>
+<td>Registro de ronda, participante, usuario, fecha/hora, identificador
+de ficha, origen del dato, estado del registro y exportacion
+asociada.</td>
+</tr>
+<tr>
+<td>Integridad de datos</td>
+<td>Controles para evitar sobrescritura no trazada, duplicados no
+autorizados, perdida de informacion o modificaciones sin
+justificacion.</td>
+</tr>
+<tr>
+<td>Transferencia a <code>pt_app</code></td>
+<td>Exportacion oficial identificada como <code>F-PSEA-09</code>, con
+identificador de ronda, fecha/hora, responsable y estado de
+aprobacion.</td>
+</tr>
+<tr>
+<td>Tratamiento de desviaciones</td>
+<td>Registro de incidentes, correcciones, reaperturas, quejas o no
+conformidades conforme a los procedimientos SGC aplicables.</td>
+</tr>
+<tr>
+<td>Control documental</td>
+<td>Matriz documental, plantillas, versiones y cobertura por ronda para
+evidenciar documentos aplicables y registros requeridos.</td>
+</tr>
+<tr>
+<td>Validacion y cambios</td>
+<td>Evidencia de pruebas funcionales, revision de cambios y aprobacion
+antes de uso oficial o despues de modificaciones relevantes.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-matriz-de-cumplimiento-isoiec-170432023">6. Matriz de
+cumplimiento ISO/IEC 17043:2023</h2>
+<table>
+<thead>
+<tr>
+<th>Bloque ISO/IEC 17043</th>
+<th>Como aporta <code>calaire-app</code></th>
+<th>Evidencia o registro</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Imparcialidad y confidencialidad</td>
+<td>Restringe el acceso por rol y soporta codificacion de participantes
+para evitar divulgacion no autorizada.</td>
+<td>Usuarios, permisos, codigos de participante, registros de acceso
+cuando aplique.</td>
+</tr>
+<tr>
+<td>Comunicacion del esquema</td>
+<td>Centraliza publicaciones, instrucciones, cronogramas, plantillas y
+notificaciones.</td>
+<td>Panel SGC de ronda, comunicaciones, destinatarios y plantillas.</td>
+</tr>
+<tr>
+<td>Planificacion de ronda</td>
+<td>Permite registrar configuracion de ronda, participantes, fechas,
+analitos, niveles y responsables.</td>
+<td>Ficha basica <code>F-PSEA-05</code>, planificacion
+<code>F-PSEA-06</code>, calendario, cronograma y estado de ronda.</td>
+</tr>
+<tr>
+<td>Instrucciones a participantes</td>
+<td>Mantiene instrucciones y documentos de reporte asociados a la
+ronda.</td>
+<td>Publicaciones de ronda, plantillas y comunicaciones
+controladas.</td>
+</tr>
+<tr>
+<td>Recepcion y manejo de resultados</td>
+<td>Captura resultados de participantes en formularios estructurados y
+vinculados a ronda.</td>
+<td><code>F-PSEA-08</code>, estado de envio, fecha/hora y
+participante.</td>
+</tr>
+<tr>
+<td>Registros, datos y sistemas de informacion</td>
+<td>Conserva registros que permiten reconstruir la operacion de la ronda
+y la transferencia de datos.</td>
+<td>Bitacora, matriz documental, cobertura por ronda y
+exportaciones.</td>
+</tr>
+<tr>
+<td>Quejas, trabajo no conforme y acciones</td>
+<td>Permite asociar casos SGC a rondas, participantes o comunicaciones
+cuando aplique.</td>
+<td>Casos SGC, comentarios, estado, responsable y seguimiento.</td>
+</tr>
+<tr>
+<td>Control de documentos y cambios</td>
+<td>Relaciona documentos SGC, plantillas, versiones y cobertura
+documental por ronda.</td>
+<td>Matriz documental maestra y cobertura por ronda.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-matriz-de-cumplimiento-iso-135282022">7. Matriz de
+cumplimiento ISO 13528:2022</h2>
+<p><code>calaire-app</code> no ejecuta el calculo estadistico principal.
+Su aporte a ISO 13528 consiste en entregar datos completos, trazables y
+revisables para que el analisis posterior sea tecnicamente
+defendible.</p>
+<table>
+<thead>
+<tr>
+<th>Bloque ISO 13528</th>
+<th>Como aporta <code>calaire-app</code></th>
+<th>Limite del aplicativo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Diseno estadistico del esquema</td>
+<td>Conserva la configuracion operativa de ronda, analitos, niveles y
+datos esperados.</td>
+<td>La justificacion estadistica del diseno se controla en el plan y en
+<code>pt_app</code> o documentos tecnicos.</td>
+</tr>
+<tr>
+<td>Revision inicial de datos</td>
+<td>Facilita revision de completitud, formatos, unidades, duplicados,
+datos faltantes y consistencia basica antes de exportar.</td>
+<td>No decide exclusiones estadisticas ni tratamiento de valores
+atipicos.</td>
+</tr>
+<tr>
+<td>Valor asignado e incertidumbre</td>
+<td>Conserva los datos reportados y referencias de ronda que alimentan
+el analisis.</td>
+<td>No determina valor asignado, incertidumbre ni
+<code>sigma_pt</code>.</td>
+</tr>
+<tr>
+<td>Scores e interpretacion</td>
+<td>Entrega la base de datos oficial para calculo posterior.</td>
+<td>No emite z-score, z-prime, zeta-score ni clasificacion final de
+desempeno.</td>
+</tr>
+<tr>
+<td>Validacion de herramientas</td>
+<td>Debe contar con pruebas funcionales para captura, permisos,
+exportaciones y control documental.</td>
+<td>La validacion estadistica de formulas y rutinas corresponde al
+sistema o herramienta de analisis.</td>
+</tr>
+<tr>
+<td>Trazabilidad de calculo</td>
+<td>Asegura origen, estado, usuario, fecha y ronda de cada dato
+reportado.</td>
+<td>La trazabilidad de calculos estadisticos inicia despues de la
+exportacion oficial.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="8-responsabilidades-y-uso">8. Responsabilidades y uso</h2>
+<table>
+<thead>
+<tr>
+<th>Rol</th>
+<th>Responsabilidad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Coordinador de ronda</td>
+<td>Configurar o aprobar ronda, calendario, cronograma, ficha digital,
+participantes, comunicaciones y cierre operativo en
+<code>calaire-app</code>.</td>
+</tr>
+<tr>
+<td>Administrador del aplicativo</td>
+<td>Gestionar usuarios, permisos, parametrizacion, versiones del
+aplicativo, respaldos, trazabilidad tecnica y casos SGC
+habilitados.</td>
+</tr>
+<tr>
+<td>Participante</td>
+<td>Confirmar participacion, consultar informacion de ronda y registrar
+datos, equipos e instrumentos dentro de los plazos definidos.</td>
+</tr>
+<tr>
+<td>Analista PT</td>
+<td>Recibir y verificar que la exportacion oficial
+(<code>F-PSEA-09</code>) sea la entrada autorizada para el flujo en
+<code>pt_app</code>.</td>
+</tr>
+<tr>
+<td>Responsable de calidad</td>
+<td>Verificar controles de confidencialidad, registros, documentos,
+cambios, incidentes y evidencias del aplicativo frente al SGC.</td>
+</tr>
+<tr>
+<td>Revisor tecnico</td>
+<td>Revisar consistencia de datos exportados cuando existan alertas,
+correcciones, reaperturas o incidencias que puedan afectar la validez de
+la ronda.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="9-entradas-y-salidas">9. Entradas y salidas</h2>
+<h3 id="entradas">Entradas</h3>
+<table>
+<thead>
+<tr>
+<th>Entrada</th>
+<th>Uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Requisitos operativos PEA</td>
+<td>Funciones requeridas para gestion de rondas, participantes,
+comunicaciones y captura.</td>
+</tr>
+<tr>
+<td><code>P-PSEA-04</code></td>
+<td>Base para configurar la planificacion de ronda.</td>
+</tr>
+<tr>
+<td><code>P-PSEA-05</code></td>
+<td>Base para controlar comunicaciones operativas.</td>
+</tr>
+<tr>
+<td><code>F-PSEA-05</code></td>
+<td>Ficha basica de ronda EA, cuando se use como resumen de
+configuracion.</td>
+</tr>
+<tr>
+<td><code>F-PSEA-06</code></td>
+<td>Planificacion de ronda EA, cuando se use como base completa de
+configuracion.</td>
+</tr>
+<tr>
+<td>Participantes</td>
+<td>Datos de contacto, confirmacion, equipos, instrumentos y resultados
+reportados.</td>
+</tr>
+<tr>
+<td>Configuracion de ronda</td>
+<td>Analitos, niveles, fechas, instrucciones, estado de ronda y
+responsables.</td>
+</tr>
+<tr>
+<td>Registros SGC</td>
+<td>Quejas, no conformidades, comunicaciones o incidentes asociados a la
+ronda.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="salidas">Salidas</h3>
+<table>
+<thead>
+<tr>
+<th>Salida</th>
+<th>Descripcion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>F-PSEA-01</code></td>
+<td>Calendario global de ronda.</td>
+</tr>
+<tr>
+<td><code>F-PSEA-02</code></td>
+<td>Cronograma detallado de ronda.</td>
+</tr>
+<tr>
+<td><code>F-PSEA-03</code></td>
+<td>Registro de participacion y carga de datos del participante.</td>
+</tr>
+<tr>
+<td><code>F-PSEA-04</code></td>
+<td>Equipos e instrumentos exportados desde F-PSEA-03.</td>
+</tr>
+<tr>
+<td><code>F-PSEA-05</code></td>
+<td>Ficha basica de ronda EA.</td>
+</tr>
+<tr>
+<td><code>F-PSEA-06</code></td>
+<td>Planificacion de ronda EA.</td>
+</tr>
+<tr>
+<td><code>F-PSEA-08</code></td>
+<td>Datos reportados por participante.</td>
+</tr>
+<tr>
+<td><code>F-PSEA-09</code></td>
+<td>Datos de participantes exportados para analisis PT.</td>
+</tr>
+<tr>
+<td><code>F-PSEA-14</code></td>
+<td>Caso SGC de queja o no conformidad, si aplica.</td>
+</tr>
+<tr>
+<td>Bitacora del aplicativo</td>
+<td>Evidencia de usuarios, cambios, exportaciones, cierres, reaperturas,
+incidentes y respaldos cuando aplique.</td>
+</tr>
+<tr>
+<td>Registro de validacion/cambio</td>
+<td>Evidencia de pruebas, version aprobada, cambios liberados y
+evaluacion de impacto.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="10-campos-minimos-y-trazabilidad">10. Campos minimos y
+trazabilidad</h2>
+<p>Cada ronda configurada en <code>calaire-app</code> debe registrar
+como minimo:</p>
+<ul>
+<li>Codigo y nombre de la ronda.</li>
+<li>Identificador de configuracion de la ronda.</li>
+<li>Periodo de ejecucion, ventanas de medicion y fechas limite de
+reporte.</li>
+<li>Analito(s), nivel(es) y magnitudes solicitadas.</li>
+<li>Laboratorios participantes, estado de confirmacion y codigo interno
+de participante.</li>
+<li>Responsable de la ronda y responsable de la configuracion.</li>
+<li>Identificador de la ficha basica de ronda (<code>F-PSEA-05</code>) y
+de la planificacion completa (<code>F-PSEA-06</code>).</li>
+<li>Estado de ronda: borrador, publicada, en captura, cerrada,
+exportada, anulada o equivalente.</li>
+<li>Historial de cambios relevantes con fecha, usuario, justificacion y
+aprobacion cuando aplique.</li>
+</ul>
+<p>Cada participante debe registrar como minimo:</p>
+<ul>
+<li>Identificacion del laboratorio y codigo de participante usado para
+proteger su identidad en el flujo de evaluacion.</li>
+<li>Contacto operativo autorizado.</li>
+<li>Registro de participacion (<code>F-PSEA-03</code>) y equipos e
+instrumentos asociados (<code>F-PSEA-04</code>).</li>
+<li>Datos reportados por analito y nivel (<code>F-PSEA-08</code>).</li>
+<li>Usuario, fecha/hora y estado de envio de los datos.</li>
+<li>Correcciones, reemplazos o reaperturas autorizadas, con
+justificacion y responsable.</li>
+</ul>
+<p>Cada exportacion oficial hacia <code>pt_app</code> debe registrar
+como minimo:</p>
+<ul>
+<li>Identificador de ronda.</li>
+<li>Consecutivo o identificador de exportacion.</li>
+<li>Fecha y hora de generacion.</li>
+<li>Responsable que genera y/o aprueba la exportacion.</li>
+<li>Alcance de datos incluidos.</li>
+<li>Estado de aprobacion para analisis.</li>
+<li>Referencia al archivo conservado como <code>F-PSEA-09</code>.</li>
+<li>Observaciones sobre datos faltantes, correcciones, exclusiones o
+alertas de consistencia.</li>
+</ul>
+<h2 id="11-validacion-cambios-y-mantenimiento">11. Validacion, cambios y
+mantenimiento</h2>
+<p><code>calaire-app</code> debe validarse antes de su uso oficial en
+una ronda y despues de cambios que puedan afectar captura, permisos,
+exportaciones, reglas de validacion, estructura de datos, reportes,
+seguridad o disponibilidad.</p>
+<p>La evidencia minima de validacion o cambio debe incluir:</p>
+<ul>
+<li>Version del aplicativo, modulo o componente evaluado.</li>
+<li>Alcance de la prueba.</li>
+<li>Casos de prueba y resultado esperado.</li>
+<li>Datos de prueba usados, cuando aplique.</li>
+<li>Resultado obtenido y decision de aceptacion.</li>
+<li>Responsable de ejecucion, revision y aprobacion.</li>
+<li>Evaluacion de impacto sobre rondas abiertas, datos ya capturados o
+exportaciones emitidas.</li>
+<li>Acciones correctivas o restricciones de uso si se detectan
+fallas.</li>
+</ul>
+<p>Los cambios no deben liberarse para uso oficial si no existe
+aprobacion del responsable autorizado. Cuando un cambio afecte datos ya
+reportados, exportaciones oficiales o confidencialidad, debe evaluarse
+si corresponde registrar trabajo no conforme, no conformidad, accion
+correctiva o comunicacion controlada.</p>
+<h2 id="12-controles-operativos">12. Controles operativos</h2>
+<ul>
+<li>El acceso al aplicativo debe estar acotado por rol y revisarse ante
+altas, bajas, cambios de funciones o cierre de ronda.</li>
+<li>Las credenciales de participantes son personales o institucionales
+controladas y no deben permitir acceso a datos de otros
+participantes.</li>
+<li>La identidad de participantes debe protegerse en las exportaciones y
+reportes segun las reglas del PEA.</li>
+<li>Los cambios en calendario, cronograma, ficha digital o instrucciones
+deben quedar trazables y comunicarse por el canal definido.</li>
+<li>La captura de resultados debe cerrarse segun el cronograma aprobado;
+cualquier reapertura debe quedar justificada.</li>
+<li>Las exportaciones hacia <code>pt_app</code> deben identificarse,
+conservarse como <code>F-PSEA-09</code> y no sobrescribirse sin
+trazabilidad.</li>
+<li>Los datos exportados deben someterse a una revision de completitud y
+consistencia antes de su uso analitico.</li>
+<li>Las fallas de disponibilidad, perdida de datos, errores de permisos,
+exposicion de informacion o exportaciones incorrectas deben registrarse
+y evaluarse por impacto en la validez de la ronda.</li>
+<li>Deben existir respaldos o mecanismos de recuperacion proporcionales
+al riesgo de perdida de informacion oficial.</li>
+<li>La documentacion tecnica interna del aplicativo debe mantenerse como
+soporte controlado, aunque no sustituye este documento general.</li>
+</ul>
+<h2 id="13-documentos-relacionados">13. Documentos relacionados</h2>
+<table>
+<thead>
+<tr>
+<th>Codigo</th>
+<th>Relacion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>I-PSEA-02</code></td>
+<td>Instructivo de uso de <code>calaire-app</code> por
+participante.</td>
+</tr>
+<tr>
+<td><code>I-PSEA-03</code></td>
+<td>Instructivo de administracion de rondas en
+<code>calaire-app</code>.</td>
+</tr>
+<tr>
+<td><code>P-PSEA-03</code></td>
+<td>Control de registros y evidencias del PEA.</td>
+</tr>
+<tr>
+<td><code>P-PSEA-04</code></td>
+<td>Procedimiento de planificacion de ronda que usa el aplicativo.</td>
+</tr>
+<tr>
+<td><code>P-PSEA-05</code></td>
+<td>Procedimiento de comunicaciones que usa el aplicativo.</td>
+</tr>
+<tr>
+<td><code>P-PSEA-08</code></td>
+<td>Flujo tecnico de datos digitales del PEA.</td>
+</tr>
+<tr>
+<td><code>P-PSEA-14</code></td>
+<td>Control de colusion y falsificacion, cuando los datos del aplicativo
+generen alertas.</td>
+</tr>
+<tr>
+<td><code>P-PSEA-15</code></td>
+<td>Trabajo no conforme, no conformidades y acciones correctivas.</td>
+</tr>
+<tr>
+<td><code>P-PSEA-17</code></td>
+<td>Procedimiento de quejas del PEA gestionadas como casos SGC.</td>
+</tr>
+<tr>
+<td><code>P-PSEA-19</code></td>
+<td>Confidencialidad operativa interna del PEA.</td>
+</tr>
+<tr>
+<td><code>DG-PSEA-03</code></td>
+<td>Aplicativo <code>pt_app</code> que recibe las exportaciones
+oficiales.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="14-limites">14. Limites</h2>
+<ul>
+<li>No es un formato <code>F-PSEA</code>.</li>
+<li>No es un instructivo de uso; la operacion se documenta en
+<code>I-PSEA-02</code> e <code>I-PSEA-03</code>.</li>
+<li>No define criterios estadisticos, valor asignado,
+<code>sigma_pt</code>, incertidumbre ni reglas de desempeno.</li>
+<li>No genera el informe final de resultados ni el analisis
+estadistico.</li>
+<li>No reemplaza procedimientos de planificacion, comunicaciones,
+confidencialidad, quejas, trabajo no conforme ni control
+documental.</li>
+<li>No convierte la documentacion tecnica del software en registro
+oficial de ronda salvo que sea referenciada por <code>P-PSEA-03</code> o
+<code>P-PSEA-08</code>.</li>
+</ul>
+<p><strong>Nota:</strong> La documentacion tecnica interna de
+<code>calaire-app</code> se mantiene como soporte del aplicativo y no
+sustituye este documento codificado.</p>
+</body>
+</html>

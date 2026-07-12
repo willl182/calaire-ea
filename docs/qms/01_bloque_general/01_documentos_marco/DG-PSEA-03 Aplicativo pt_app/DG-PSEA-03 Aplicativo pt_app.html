@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>DG-PSEA-03 Aplicativo pt_app</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<h1 id="dg-psea-03-aplicativo-pt_app">DG-PSEA-03: Aplicativo
+<code>pt_app</code></h1>
+<h2 id="1-objetivo">1. Objetivo</h2>
+<p>Documentar el alcance, uso previsto, entradas, salidas, controles,
+evidencias y limites del aplicativo <code>pt_app</code> como herramienta
+analitica del Programa de Ensayos de Aptitud (PEA) para gases
+contaminantes criterio.</p>
+<p>El aplicativo soporta el preprocesamiento, consolidacion de datos,
+revision inicial, analisis estadistico, evaluacion de homogeneidad y
+estabilidad, calculo de valores asignados, puntajes de desempeno,
+salidas tecnicas e informe final. Su uso debe permitir demostrar que los
+datos, transformaciones, criterios estadisticos, versiones, resultados y
+decisiones tecnicas permanecen trazables, revisables y adecuados para
+evaluaciones de desempeno tecnicamente defendibles.</p>
+<h2 id="2-alcance">2. Alcance</h2>
+<p>Aplica al aplicativo <code>pt_app</code> durante las fases de
+recepcion de exportaciones oficiales, preprocesamiento, revision inicial
+de datos, consolidacion, analisis estadistico, evaluacion de
+homogeneidad/estabilidad y generacion de informe del ensayo de
+aptitud.</p>
+<p>Incluye:</p>
+<ul>
+<li>Carga de datos oficiales exportados desde <code>calaire-app</code> y
+datasets consolidados.</li>
+<li>Preprocesamiento de datos crudos, participantes, referencia,
+homogeneidad y estabilidad.</li>
+<li>Revision de completitud, unidades, consistencia, duplicados,
+formatos, incertidumbres y datos faltantes.</li>
+<li>Consolidacion del dataset oficial para evaluacion de aptitud.</li>
+<li>Implementacion de criterios estadisticos definidos por el PEA.</li>
+<li>Calculo de valor asignado por referencia, consenso, Algoritmo A y
+metodo de expertos, cuando aplique.</li>
+<li>Calculo de <code>sigma_pt</code>, incertidumbres, diferencias,
+compatibilidad metrologica y puntajes <code>z</code>, <code>z'</code>,
+<code>zeta</code> y <code>En</code>.</li>
+<li>Evaluacion de homogeneidad y estabilidad del item de ensayo.</li>
+<li>Generacion de tablas, graficos, archivos exportables e informe final
+en Word.</li>
+<li>Evidencia de validacion de software, pruebas con datos conocidos,
+control de cambios, revision tecnica y tratamiento de incidentes.</li>
+</ul>
+<p>No incluye:</p>
+<ul>
+<li>Captura directa oficial de resultados de participantes.</li>
+<li>Definicion metodologica primaria de criterios estadisticos, valor
+asignado, <code>sigma_pt</code>, incertidumbre o reglas de
+decision.</li>
+<li>Aprobacion editorial, revision tecnica formal ni emision oficial del
+informe.</li>
+<li>Gestion integral de quejas, apelaciones, trabajo no conforme o
+acciones correctivas, aunque puede generar evidencia para dichos
+procesos.</li>
+<li>Reemplazo de competencia estadistica, revision tecnica ni
+autorizacion documental.</li>
+</ul>
+<h2 id="3-ficha-del-aplicativo">3. Ficha del aplicativo</h2>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descripcion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aplicativo</td>
+<td><code>pt_app</code></td>
+</tr>
+<tr>
+<td>Plataforma</td>
+<td>Aplicacion web R/Shiny con modulos reactivos y calculos en R.</td>
+</tr>
+<tr>
+<td>Archivo principal</td>
+<td><code>app.R</code></td>
+</tr>
+<tr>
+<td>Uso previsto</td>
+<td>Preprocesar datos oficiales, consolidar datasets, ejecutar calculos
+estadisticos aprobados, evaluar homogeneidad/estabilidad, generar
+salidas tecnicas e informe final.</td>
+</tr>
+<tr>
+<td>Rol en el SGC</td>
+<td>Aplicativo critico para validez estadistica, trazabilidad de
+calculos, integridad de datos y generacion de evidencias para
+informe.</td>
+</tr>
+<tr>
+<td>Normas relacionadas</td>
+<td>ISO/IEC 17043:2023 e ISO 13528:2022.</td>
+</tr>
+<tr>
+<td>Documentos SGC relacionados</td>
+<td><code>sgc_17043.md</code>, <code>sgc_13528.md</code>,
+<code>P-PSEA-03</code>, <code>P-PSEA-07</code>, <code>P-PSEA-08</code>,
+<code>P-PSEA-09</code>, <code>P-PSEA-15</code>, <code>P-PSEA-16</code>,
+<code>P-PSEA-19</code>, <code>P-PSEA-20</code>, <code>I-PSEA-04</code>,
+<code>I-PSEA-05</code>.</td>
+</tr>
+<tr>
+<td>Evidencia visual</td>
+<td>Carpeta <code>capturas/</code>, generada con Playwright y Chromium
+<code>/usr/bin/chromium</code>.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-arquitectura-funcional">4. Arquitectura funcional</h2>
+<p>El aplicativo separa la operacion en modulos de analisis:</p>
+<table>
+<thead>
+<tr>
+<th>Modulo</th>
+<th>Proposito</th>
+<th>Evidencia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Carga de datos</td>
+<td>Recibir archivos de homogeneidad, estabilidad, consolidados de
+participantes y referencia CALAIRE.</td>
+<td>Figura 1 y Figura 2</td>
+</tr>
+<tr>
+<td>Preprocesador</td>
+<td>Ejecutar flujo crudos CALAIRE -&gt; <code>pt_app</code>, exportacion
+a <code>calaire-app</code>, importacion y consolidacion final.</td>
+<td>Figura 3</td>
+</tr>
+<tr>
+<td>Homogeneidad y estabilidad</td>
+<td>Evaluar datos de entrada, distribuciones, validacion, resultados de
+homogeneidad, estabilidad e incertidumbre asociada.</td>
+<td>Figuras 4 a 7</td>
+</tr>
+<tr>
+<td>Valores atipicos</td>
+<td>Revisar valores extremos mediante resumen y visualizacion.</td>
+<td>Figura 8</td>
+</tr>
+<tr>
+<td>Valor asignado</td>
+<td>Calcular Algoritmo A, consenso, referencia, expertos y
+compatibilidad metrologica.</td>
+<td>Figuras 9 a 11</td>
+</tr>
+<tr>
+<td>Puntajes EA</td>
+<td>Calcular y visualizar puntajes <code>z</code>, <code>z'</code>,
+<code>zeta</code> y <code>En</code>.</td>
+<td>Figuras 12 a 14</td>
+</tr>
+<tr>
+<td>Informe global</td>
+<td>Consolidar resultados, parametros y mapas de evaluacion por
+metodo.</td>
+<td>Figura 15</td>
+</tr>
+<tr>
+<td>Participantes</td>
+<td>Presentar resultados detallados por participante.</td>
+<td>Figura 16</td>
+</tr>
+<tr>
+<td>Generacion de informes</td>
+<td>Configurar identificacion, parametros, vista previa y descarga del
+informe final en Word.</td>
+<td>Figura 17</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-entradas-controladas">5. Entradas controladas</h2>
+<table>
+<thead>
+<tr>
+<th>Entrada</th>
+<th>Uso en <code>pt_app</code></th>
+<th>Control requerido</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>F-PSEA-09</code> / datos de participantes exportados</td>
+<td>Base oficial para evaluacion de aptitud.</td>
+<td>Deben corresponder a exportacion oficial aprobada y conservar
+identificacion de ronda.</td>
+</tr>
+<tr>
+<td><code>F-PSEA-12</code> / datos consolidados de ronda</td>
+<td>Entrada principal para calculo de valor asignado, puntajes e
+informe.</td>
+<td>Deben estar versionados y trazables a fuente, fecha y
+responsable.</td>
+</tr>
+<tr>
+<td><code>F-PSEA-11A</code> / datos preprocesados de homogeneidad</td>
+<td>Evaluacion de suficiencia de homogeneidad del item.</td>
+<td>Deben conservar muestras, replicas, analito, nivel y unidades.</td>
+</tr>
+<tr>
+<td><code>F-PSEA-11B</code> / datos preprocesados de estabilidad</td>
+<td>Evaluacion de estabilidad durante el periodo de ronda.</td>
+<td>Deben conservar fechas, replicas, analito, nivel y unidades.</td>
+</tr>
+<tr>
+<td>Referencia CALAIRE</td>
+<td>Valor de referencia separado o incluido como participante
+<code>ref</code>.</td>
+<td>Debe identificarse como referencia y protegerse contra divulgacion
+indebida.</td>
+</tr>
+<tr>
+<td><code>F-PSEA-04</code> / tabla de equipos e instrumentacion</td>
+<td>Anexo tecnico para informe.</td>
+<td>Debe mantenerse asociada al participante y a la ronda.</td>
+</tr>
+<tr>
+<td><code>F-PSEA-05</code> / <code>F-PSEA-06</code> / ficha basica y
+planificacion de ronda</td>
+<td>Definen configuracion, analitos, niveles, criterios y condiciones
+aplicables.</td>
+<td>Deben estar aprobados antes de aplicar calculos oficiales.</td>
+</tr>
+<tr>
+<td>Parametros de informe</td>
+<td>Identificacion, responsables, fecha, metrica, metodo, factor
+<code>k</code>.</td>
+<td>Deben revisarse antes de emision.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-salidas-controladas">6. Salidas controladas</h2>
+<table>
+<thead>
+<tr>
+<th>Salida</th>
+<th>Descripcion</th>
+<th>Uso SGC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>F-PSEA-10</code> / registro de preprocesamiento</td>
+<td>Datos listos para intercambio <code>pt_app</code> /
+<code>calaire-app</code> y bitacora de preparacion.</td>
+<td>Evidencia de flujo tecnico de datos.</td>
+</tr>
+<tr>
+<td><code>F-PSEA-12</code> / dataset consolidado</td>
+<td>Datos oficiales de evaluacion.</td>
+<td>Base de calculo y trazabilidad de resultados.</td>
+</tr>
+<tr>
+<td><code>F-PSEA-11C</code> / resultados de homogeneidad</td>
+<td>Tablas, criterios y conclusiones por metodo.</td>
+<td>Evidencia de aptitud del item.</td>
+</tr>
+<tr>
+<td><code>F-PSEA-11D</code> / resultados de estabilidad</td>
+<td>Tablas, criterios y conclusiones por metodo.</td>
+<td>Evidencia de mantenimiento del item durante la ronda.</td>
+</tr>
+<tr>
+<td>Contribuciones de incertidumbre</td>
+<td><code>u_hom</code>, <code>u_stab</code> y componentes usados en
+evaluacion.</td>
+<td>Soporte para incertidumbre del valor asignado.</td>
+</tr>
+<tr>
+<td>Valores asignados</td>
+<td>Referencia, consenso, Algoritmo A y expertos.</td>
+<td>Base de comparacion de desempeno.</td>
+</tr>
+<tr>
+<td>Puntajes de desempeno</td>
+<td><code>z</code>, <code>z'</code>, <code>zeta</code>, <code>En</code>
+y clasificaciones.</td>
+<td>Evaluacion de participantes.</td>
+</tr>
+<tr>
+<td>Informe global</td>
+<td>Resumen de parametros, resultados y mapas de desempeno.</td>
+<td>Revision tecnica previa al informe.</td>
+</tr>
+<tr>
+<td><code>F-PSEA-13</code> / informe final Word</td>
+<td>Documento descargable para emision controlada.</td>
+<td>Insumo para expediente de ronda, revision y autorizacion.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-matriz-de-cumplimiento-isoiec-170432023">7. Matriz de
+cumplimiento ISO/IEC 17043:2023</h2>
+<table>
+<thead>
+<tr>
+<th>Eje ISO/IEC 17043</th>
+<th>Referencia SGC</th>
+<th>Requisito de control</th>
+<th>Implementacion/evidencia en <code>pt_app</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Diseno y planificacion del esquema</td>
+<td><code>sgc_17043.md</code>, secciones 8.3 y 8.4</td>
+<td>La evaluacion debe responder a objetivos, criterios y metodos
+preestablecidos.</td>
+<td>La app no define el criterio; implementa criterios aprobados
+mediante modulos parametrizados de valor asignado, puntajes e
+informe.</td>
+</tr>
+<tr>
+<td>Manejo de items</td>
+<td><code>sgc_17043.md</code>, seccion 8.5</td>
+<td>Debe demostrarse que los items son adecuados para el proposito.</td>
+<td>Modulos de homogeneidad, estabilidad y contribuciones de
+incertidumbre documentan suficiencia del item.</td>
+</tr>
+<tr>
+<td>Recepcion y validacion de datos</td>
+<td><code>sgc_17043.md</code>, seccion 8.7</td>
+<td>Deben controlarse formato, transferencia, unidades, consistencia y
+resultados incompletos.</td>
+<td>Modulo de carga y validacion muestra estado de archivos, vistas
+previas y mensajes de revision.</td>
+</tr>
+<tr>
+<td>Analisis estadistico</td>
+<td><code>sgc_17043.md</code>, secciones 8.4 y 8.7</td>
+<td>Los metodos deben ser apropiados, documentados y aplicados de forma
+consistente.</td>
+<td>Se implementan metodos robustos, consenso, Algoritmo A, referencia,
+expertos y puntajes normalizados.</td>
+</tr>
+<tr>
+<td>Evaluacion de desempeno</td>
+<td><code>sgc_17043.md</code>, seccion 8.8</td>
+<td>Los criterios deben ser preestablecidos y aplicados
+consistentemente.</td>
+<td>Modulo de puntajes clasifica desempeno por participante, analito,
+nivel y metodo.</td>
+</tr>
+<tr>
+<td>Informe</td>
+<td><code>sgc_17043.md</code>, seccion 8.8</td>
+<td>El informe debe ser claro, controlado y revisable antes de
+emision.</td>
+<td>Modulo de generacion de informes permite configurar identificacion,
+responsables, metrica, metodo y descarga Word.</td>
+</tr>
+<tr>
+<td>Confidencialidad</td>
+<td><code>sgc_17043.md</code>, seccion 5.2</td>
+<td>Debe protegerse identidad y datos sensibles de participantes.</td>
+<td>El aplicativo opera con codigos de participante; la divulgacion
+oficial queda sujeta a revision y autorizacion SGC.</td>
+</tr>
+<tr>
+<td>Registros y trazabilidad</td>
+<td><code>sgc_17043.md</code>, seccion 9</td>
+<td>Debe poder reconstruirse la ronda, entradas, calculos, revisiones y
+salidas.</td>
+<td>Archivos de entrada, salidas CSV/Word, capturas, parametros, indice
+tecnico e informe global permiten reconstruccion tecnica.</td>
+</tr>
+<tr>
+<td>Sistemas informaticos</td>
+<td><code>sgc_17043.md</code>, seccion 9</td>
+<td>El software que analiza o reporta datos debe estar controlado y
+validado proporcionalmente al riesgo.</td>
+<td>Repositorio versionado, pruebas, datos conocidos, capturas y script
+reproducible soportan validacion y control de cambios.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="8-matriz-de-cumplimiento-iso-135282022">8. Matriz de
+cumplimiento ISO 13528:2022</h2>
+<table>
+<thead>
+<tr>
+<th>Eje ISO 13528</th>
+<th>Referencia SGC</th>
+<th>Requisito estadistico</th>
+<th>Implementacion/evidencia en <code>pt_app</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revision inicial de datos</td>
+<td><code>sgc_13528.md</code>, seccion 7.2</td>
+<td>Detectar errores de unidad, formato, transcripcion, duplicados,
+faltantes y valores extremos antes del calculo.</td>
+<td>Carga de datos, vistas previas, validacion y modulo de valores
+atipicos.</td>
+</tr>
+<tr>
+<td>Homogeneidad</td>
+<td><code>sgc_13528.md</code>, seccion 7.1</td>
+<td>Evaluar si variacion entre items afecta la evaluacion.</td>
+<td>Modulo de homogeneidad con resumen, ANOVA, criterios MADe/nIQR y
+exportacion CSV.</td>
+</tr>
+<tr>
+<td>Estabilidad</td>
+<td><code>sgc_13528.md</code>, seccion 7.1</td>
+<td>Evaluar si el item se mantiene apto durante la ronda.</td>
+<td>Modulo de estabilidad con comparaciones, criterios MADe/nIQR y
+exportacion CSV.</td>
+</tr>
+<tr>
+<td>Valor asignado</td>
+<td><code>sgc_13528.md</code>, seccion 8</td>
+<td>Justificar y calcular el valor usado como referencia de
+desempeno.</td>
+<td>Valor de referencia, consenso MADe/nIQR, Algoritmo A y metodo de
+expertos.</td>
+</tr>
+<tr>
+<td>Incertidumbre del valor asignado</td>
+<td><code>sgc_13528.md</code>, secciones 4.2 y 7.1</td>
+<td>Considerar incertidumbre propia y contribuciones relevantes.</td>
+<td>Tablas de <code>u_hom</code>, <code>u_stab</code>,
+<code>u(x_pt)</code> y <code>U(x_pt)_def</code>.</td>
+</tr>
+<tr>
+<td><code>sigma_pt</code></td>
+<td><code>sgc_13528.md</code>, secciones 4.3 y 9</td>
+<td>Definir criterio de dispersion para evaluar aptitud.</td>
+<td>Parametros de consenso, robustos y expertos usados en calculo de
+puntajes.</td>
+</tr>
+<tr>
+<td>Valores atipicos</td>
+<td><code>sgc_13528.md</code>, seccion 7.3</td>
+<td>Minimizar influencia sin exclusiones discrecionales no
+justificadas.</td>
+<td>Resumen de Grubbs y metodos robustos que reducen influencia de
+extremos.</td>
+</tr>
+<tr>
+<td>Puntajes</td>
+<td><code>sgc_13528.md</code>, seccion 10</td>
+<td>Evaluar desempeno con indicadores adecuados al proposito.</td>
+<td>Calculo de <code>z</code>, <code>z'</code>, <code>zeta</code> y
+<code>En</code>, con tablas y graficos por participante.</td>
+</tr>
+<tr>
+<td>Validacion de software</td>
+<td><code>sgc_13528.md</code>, seccion 5</td>
+<td>Verificar rutinas con datos conocidos y pruebas de regresion ante
+cambios.</td>
+<td>Evidencias existentes: <code>tests/testthat/</code>,
+<code>validation_1/outputs/</code>,
+<code>VALIDACION DEFINITIVA/validation_1/outputs/</code> y
+<code>Entregables_pt_app/09_informe_final/tests/test_09_reproducibilidad.R</code>;
+este expediente agrega capturas y script reproducible.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="9-trazabilidad-minima-por-ejecucion">9. Trazabilidad minima por
+ejecucion</h2>
+<p>Cada uso oficial del aplicativo debe dejar evidencia de:</p>
+<ul>
+<li>Identificador de ronda y esquema.</li>
+<li>Fecha y hora de ejecucion.</li>
+<li>Version del aplicativo, repositorio o commit usado.</li>
+<li>Archivos de entrada y su origen.</li>
+<li>Archivos de salida generados.</li>
+<li>Parametros estadisticos aplicados: metodo, <code>x_pt</code>,
+<code>sigma_pt</code>, incertidumbre, factor <code>k</code>, metrica e
+intervalos/criterios.</li>
+<li>Resultados de homogeneidad y estabilidad.</li>
+<li>Tratamiento de datos atipicos, faltantes, corregidos o
+excluidos.</li>
+<li>Responsable del analisis y revisor tecnico.</li>
+<li>Advertencias, restricciones y decisiones de continuidad.</li>
+</ul>
+<h2 id="10-validacion-cambios-y-mantenimiento">10. Validacion, cambios y
+mantenimiento</h2>
+<p><code>pt_app</code> debe validarse antes de uso oficial y despues de
+cambios que puedan afectar lectura, transformaciones, filtros, calculos,
+graficos, plantillas de informe, estructura de datos, dependencias,
+permisos, exportaciones o almacenamiento de resultados.</p>
+<p>La evidencia minima de validacion o cambio debe incluir:</p>
+<ul>
+<li>Version del aplicativo, modulo, script o paquete evaluado.</li>
+<li>Metodo estadistico o funcion cubierta por la prueba.</li>
+<li>Datos de prueba con resultado esperado.</li>
+<li>Resultado obtenido y diferencia frente al esperado.</li>
+<li>Verificacion de formulas, rutinas o parametros criticos.</li>
+<li>Prueba de regresion frente a una version previamente aceptada si
+cambian calculos.</li>
+<li>Evaluacion de impacto sobre rondas abiertas, informes preliminares,
+datos consolidados o informes emitidos.</li>
+<li>Responsable de ejecucion, revision y aprobacion.</li>
+<li>Restricciones de uso o acciones cuando la prueba no sea
+satisfactoria.</li>
+</ul>
+<p>Los cambios no deben liberarse para uso oficial sin aprobacion del
+responsable autorizado. Una falla que pueda afectar resultados emitidos
+debe tratarse como potencial trabajo no conforme y activar los
+procedimientos aplicables.</p>
+<h2 id="11-controles-operativos">11. Controles operativos</h2>
+<ul>
+<li>El dataset oficial consolidado debe ser la unica entrada autorizada
+para resultados oficiales.</li>
+<li>Los criterios estadisticos aplicados deben corresponder al criterio
+aprobado y al plan/ficha de ronda vigente.</li>
+<li>Las salidas tecnicas intermedias deben diferenciarse de resultados
+finales revisados.</li>
+<li>La generacion de informe debe estar trazable al dataset, version del
+aplicativo, criterio estadistico y revision tecnica.</li>
+<li>Los archivos preliminares, resultados antes de revision y valores
+sensibles deben protegerse contra divulgacion no autorizada.</li>
+<li>Las decisiones sobre inclusion, exclusion o correccion de datos
+deben quedar documentadas antes de emitir resultados.</li>
+<li>Las versiones obsoletas del aplicativo o scripts no deben usarse
+para resultados oficiales salvo autorizacion y justificacion
+documentada.</li>
+<li>Deben existir respaldos o mecanismos de recuperacion proporcionales
+al riesgo de perdida de datos, calculos e informes.</li>
+</ul>
+<h2 id="12-evidencia-visual-del-aplicativo">12. Evidencia visual del
+aplicativo</h2>
+<p>Las siguientes capturas se conservan en la subcarpeta
+<code>capturas</code> como evidencia funcional del aplicativo.</p>
+<p><img src="capturas/01_inicio_carga_datos.png"
+alt="Figura 1. Pantalla inicial de carga de datos" /></p>
+<p><img src="capturas/02_carga_datos_estado.png"
+alt="Figura 2. Estado posterior a carga de archivos de ejemplo" /></p>
+<p><img src="capturas/03_preprocesador_modal.png"
+alt="Figura 3. Modal del preprocesador de datos" /></p>
+<p><img src="capturas/04_homogeneidad_vista_previa.png"
+alt="Figura 4. Vista previa de homogeneidad y estabilidad" /></p>
+<p><img src="capturas/05_homogeneidad_resultados.png"
+alt="Figura 5. Resultados de evaluacion de homogeneidad" /></p>
+<p><img src="capturas/06_estabilidad_resultados.png"
+alt="Figura 6. Resultados de evaluacion de estabilidad" /></p>
+<p><img src="capturas/07_incertidumbre_he.png"
+alt="Figura 7. Contribuciones a la incertidumbre por H/E" /></p>
+<p><img src="capturas/08_valores_atipicos.png"
+alt="Figura 8. Modulo de valores atipicos" /></p>
+<p><img src="capturas/09_valor_asignado_algoritmo_a.png"
+alt="Figura 9. Valor asignado por Algoritmo A" /></p>
+<p><img src="capturas/10_valor_asignado_consenso.png"
+alt="Figura 10. Valor asignado por consenso" /></p>
+<p><img src="capturas/11_compatibilidad_metrologica.png"
+alt="Figura 11. Compatibilidad metrologica" /></p>
+<p><img src="capturas/12_puntajes_resumen.png"
+alt="Figura 12. Resumen de puntajes EA" /></p>
+<p><img src="capturas/13_puntajes_z.png"
+alt="Figura 13. Puntajes Z" /></p>
+<p><img src="capturas/14_puntajes_en.png"
+alt="Figura 14. Puntajes En" /></p>
+<p><img src="capturas/15_informe_global.png"
+alt="Figura 15. Informe global" /></p>
+<p><img src="capturas/16_participantes.png"
+alt="Figura 16. Vista por participantes" /></p>
+<p><img src="capturas/17_generacion_informes.png"
+alt="Figura 17. Generacion de informes" /></p>
+<h2 id="13-documentos-relacionados">13. Documentos relacionados</h2>
+<table>
+<thead>
+<tr>
+<th>Codigo/documento</th>
+<th>Relacion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sgc_17043.md</code></td>
+<td>Guia conceptual de requisitos del SGC basados en ISO/IEC
+17043:2023.</td>
+</tr>
+<tr>
+<td><code>sgc_13528.md</code></td>
+<td>Guia conceptual de requisitos estadisticos basados en ISO
+13528:2022.</td>
+</tr>
+<tr>
+<td><code>DG-PSEA-02</code></td>
+<td>Aplicativo <code>calaire-app</code>, fuente de datos oficiales para
+<code>pt_app</code>.</td>
+</tr>
+<tr>
+<td><code>I-PSEA-04</code></td>
+<td>Instructivo de uso del preprocesador de <code>pt_app</code>.</td>
+</tr>
+<tr>
+<td><code>I-PSEA-05</code></td>
+<td>Instructivo de uso del modulo de analisis PT de
+<code>pt_app</code>.</td>
+</tr>
+<tr>
+<td><code>P-PSEA-03</code></td>
+<td>Control de registros y evidencias del PEA.</td>
+</tr>
+<tr>
+<td><code>P-PSEA-07</code></td>
+<td>Criterio estadistico que gobierna el analisis.</td>
+</tr>
+<tr>
+<td><code>P-PSEA-08</code></td>
+<td>Flujo tecnico de datos digitales del PEA.</td>
+</tr>
+<tr>
+<td><code>P-PSEA-09</code></td>
+<td>Generacion y emision del informe de resultados.</td>
+</tr>
+<tr>
+<td><code>P-PSEA-15</code></td>
+<td>Trabajo no conforme, no conformidades y acciones correctivas.</td>
+</tr>
+<tr>
+<td><code>P-PSEA-16</code></td>
+<td>Divulgacion y control de valores sensibles.</td>
+</tr>
+<tr>
+<td><code>P-PSEA-19</code></td>
+<td>Confidencialidad operativa interna del PEA.</td>
+</tr>
+<tr>
+<td><code>P-PSEA-20</code></td>
+<td>Competencia y autorizacion operativa del PEA.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="14-limites">14. Limites</h2>
+<ul>
+<li>Este documento no es un formato <code>F-PSEA</code>.</li>
+<li>Este documento no sustituye los instructivos de operacion.</li>
+<li>El aplicativo implementa criterios aprobados; no aprueba por si
+mismo el diseno estadistico.</li>
+<li>La app no reemplaza revision tecnica, competencia estadistica ni
+autorizacion formal del informe.</li>
+<li>La existencia de capturas demuestra funcionamiento observado, no
+reemplaza validacion estadistica completa.</li>
+<li>La gestion de quejas, apelaciones, trabajo no conforme y acciones
+correctivas se realiza por los procedimientos del SGC.</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,2 @@
+round_id,export_id,exported_at,exported_by,source_system,target_system,source_record,export_file,schema_version,n_participants,n_records,pollutants_included,checksum,status,observations
+PP2026-R1,EXP-PP2026-R1-001,2026-04-23 23:59:00,calaire-app,calaire-app,pt_app,F-PSEA-08,F-PSEA-09_PP2026-R1_export.csv,v0,1,20,co|so2,,validado,Exportacion oficial ejemplo para analisis PT.
