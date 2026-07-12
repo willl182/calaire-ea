@@ -7,6 +7,8 @@
 **Normative basis:** ISO/IEC 17043:2023, ISO 13528:2022, and applicable ISO/IEC 17025 controls  
 **Status:** Final proposal for implementation and a paid pre-accreditation round
 
+**QMS source of truth:** `docs/qms/`
+
 ---
 
 ## 1. Executive summary
@@ -30,6 +32,12 @@ This proposal authorizes the design and controlled launch of a repeatable, comme
 5. Evidence suitable for a future ISO/IEC 17043 accreditation application.
 
 This document defines the service model. It does not replace the applicable standards, approved technical procedures, round plan or statistical plan.
+
+### 2.1 Document precedence and QMS boundary
+
+`docs/qms/` is the sole active source of truth for the CALAIRE-EA QMS. Approved procedures, instructions, master formats, matrices and round records under that directory control technical and quality-system operation. Former QMS copies, auxiliary analyses and archived material outside `docs/qms/` are non-controlling references unless an approved QMS document explicitly incorporates them.
+
+This proposal controls the intended commercial service design. It must be implemented through, and remain consistent with, the approved QMS. If this proposal conflicts with an approved QMS document on technical execution, statistical evaluation, quality control, confidentiality, complaints, appeals or report authorization, the QMS document controls and the proposal must be corrected through change control. Commercial artifacts may reference QMS documents but may not silently restate or modify their controlled requirements.
 
 ## 3. Final launch decisions
 

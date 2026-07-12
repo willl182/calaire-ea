@@ -1,7 +1,7 @@
 # MVP Blueprint for CALAIRE-EA Gas PT Commercial Service Artifacts
 
 **Source proposal:** `DEF_ptservice_prop.md`  
-**QMS source:** `docs/documentacion_sgc/` and supporting files under `docs/`  
+**QMS source of truth:** `docs/qms/`
 **Purpose:** Create the minimum commercial artifact system required to turn the existing CALAIRE-EA technical PT scheme into a clear, contractable and repeatable paid service  
 **Out of scope:** Recreating round plans, technical procedures, homogeneity/stability records, statistical workbooks, result datasets or final technical-report controls already covered by the QMS
 
@@ -37,6 +37,17 @@ Close billing, feedback and renewal
 
 The technical workflow begins after commercial confirmation and remains governed by the PSEA documents. The commercial artifacts must reference that system rather than duplicate it.
 
+### 1.1 Source hierarchy
+
+The artifact project uses this precedence:
+
+1. Approved QMS documents and records in `docs/qms/`.
+2. `DEF_ptservice_prop.md` for the approved commercial service design.
+3. This blueprint for creating the commercial artifact layer.
+4. Archived, pilot, analysis and historical files only as non-controlling source material.
+
+No file outside `docs/qms/` may be treated as the current QMS master merely because it has the same PSEA code or a later filesystem timestamp. When a commercial artifact needs technical wording, its owner must cite or link the applicable document in `docs/qms/`; copying technical clauses into a commercial template is discouraged because it creates parallel requirements.
+
 ## 2. Commercial rules to freeze before drafting
 
 All commercial artifacts must use the same rules:
@@ -61,9 +72,9 @@ These rules should be held in one short approved commercial decision sheet. Broc
 
 ## 3. Existing QMS coverage: what should not be rebuilt
 
-The document repository already contains a substantial QMS. The commercial layer should integrate with it.
+The source-of-truth directory `docs/qms/` already contains a substantial QMS. The commercial layer must integrate with it.
 
-| Existing area | Evidence found in `docs/` | Blueprint decision |
+| Existing area | Controlling evidence in `docs/qms/` | Blueprint decision |
 |---|---|---|
 | General PT protocol and responsibilities | `P-PSEA-01 Protocolo General EA_v2.docx` | Reuse; do not create a new technical service procedure. |
 | Document and record control | `P-PSEA-02`, `P-PSEA-03`, inventories and master matrices | Use existing coding, approval and retention system. |
@@ -97,6 +108,8 @@ Useful source material includes:
 - `docs/auxiliares/formulario_codex/` for registration-flow prototypes;
 - `F-PSEA-05A` and `F-PSEA-04` for participant and equipment fields;
 - existing proposal/contract files as layout references, not as automatically approved service terms.
+
+These sources are drafting aids only. They do not override the QMS masters in `docs/qms/`.
 
 Pilot wording that says participation is free or that reports cannot support regular participation must not be copied into the paid-service offer.
 
@@ -577,7 +590,7 @@ Within an approved post-round interval, send a controlled message that:
 
 ## 19. Commercial artifact interfaces with the QMS
 
-| Commercial output | Existing QMS recipient/input |
+| Commercial output | Existing QMS recipient/input under `docs/qms/` |
 |---|---|
 | Confirmed participant and selected gases | `P-PSEA-04` round planning and `F-PSEA-05` plan |
 | Participant identity and equipment information | `F-PSEA-05A`, `F-PSEA-04`, `calaire-app` |
@@ -711,7 +724,7 @@ commercial_service/
     └── CS-15_renewal
 ```
 
-Technical round records stay in the existing PSEA/QMS structure. Do not copy them into the commercial folder.
+Technical round records stay in the PSEA/QMS structure under `docs/qms/`. Do not copy them into the commercial folder.
 
 ## 23. MVP definition of done
 

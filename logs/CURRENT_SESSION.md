@@ -1,39 +1,33 @@
 # Session State: CALAIRE-EA Commercial PT Service
 
-**Last Updated**: 2026-07-12 16:26 -05
+**Last Updated**: 2026-07-12 16:34 -05
 
 ## Session Objective
 
-Consolidate the definitive gaseous-air-pollutant PT service proposal and define an MVP blueprint for the commercial artifacts that wrap the existing PSEA QMS.
+Align the definitive service proposal, commercial artifact blueprint and QMS navigation map with `docs/qms/` as the sole active QMS source of truth.
 
 ## Current State
 
-- [x] Reconciled the competing PT service proposals and analyses.
-- [x] Created `DEF_ptservice_prop.md` as the definitive service proposal.
-- [x] Created `ptservice_art_prop.md` as a commercial-only MVP artifact blueprint.
-- [x] Audited `docs/` and confirmed that technical round planning, execution, statistics, reporting, complaints, appeals, confidentiality, competence and suppliers are already substantially covered by the PSEA QMS.
-- [x] Defined 15 pending commercial artifacts (`CS-01` through `CS-15`).
-- [x] Added spare-parts, maintenance and consumable costs for the CALAIRE O3, SO2, CO and NOx analyzers, dynamic calibrator and zero-air generator.
-- [x] Added the required decision between a multi-component certified mixture, individual gas cylinders or a justified hybrid.
-- [x] Added current planning capacity: four participants/analyzers for an individual gas; simultaneous CO/SO2 maximum three participants and six participant analyzers.
-- [ ] Populate real lifecycle, cylinder, staffing and facility costs in CS-04.
-- [ ] Create the 15 actual controlled commercial artifacts.
+- [x] `DEF_ptservice_prop.md` now defines `docs/qms/` as the controlling QMS directory and establishes document precedence.
+- [x] `ptservice_art_prop.md` now references only `docs/qms/` for QMS masters and clearly separates commercial artifacts from technical QMS controls.
+- [x] `docs/qms/mapa_navegacion_sgc_pea.html` includes a visible source-of-truth banner, canonical folder paths and the active `EA-<codigo-ronda>` record structure.
+- [x] Broken dependencies on archived `fichas_resumen` links were removed from the navigation-map detail panel.
+- [x] The navigation map was rendered through the collaborative preview: title/header loaded, source banner displayed and 50 nodes rendered without JavaScript errors.
+- [x] Former auxiliary/QMS working trees were reorganized under `docs/z_archivos_para_descartar/` by the user.
+- [ ] Create the 15 controlled commercial artifacts defined in `ptservice_art_prop.md`.
 
 ## Critical Technical Context
 
-- A round may include one, several or all five gases: CO, SO2, NO, NO2 and O3.
-- Assigned value is the CALAIRE-EA reference value with fewer than 12 technically valid results; at 12 or more, use approved robust participant consensus with reference validation.
-- Do not use a1-a7 or an aggregate pass/fail grade.
-- Working commercial benchmark is approximately EUR 1,600 excluding taxes per participant/analyzer for all five gases.
-- Current capacity assumptions are configuration-specific and must be operationally verified before sales: four individual-gas positions; simultaneous CO/SO2 allows three participants with two analyzers each, six analyzers total.
-- Price modeling must include lifecycle costs for reference analyzers and shared generation equipment.
-- Certified-gas supply strategy must be jointly approved on technical suitability and commercial cost/risk.
-- Technical artifacts must remain in the existing PSEA QMS; do not duplicate them in the commercial service folder.
+- `docs/qms/` is the only active source of truth for QMS procedures, instructions, master forms, matrices and round evidence.
+- Files under `docs/z_archivos_para_descartar/`, historical pilot folders, analyses or duplicate paths are non-controlling unless incorporated by an approved document in `docs/qms/`.
+- QMS technical and quality requirements override conflicting proposal or commercial-template text.
+- The definitive proposal controls commercial intent; the blueprint controls the commercial-artifact build route.
+- Commercial artifacts should cite/link QMS masters rather than copy technical requirements.
+- Service rules remain: one/several/all five gases; reference value below 12 valid results and robust consensus at 12 or more; no a1-a7 grade; approximately EUR 1,600 five-gas benchmark.
 
 ## Next Steps
 
-1. Create and approve CS-01, the commercial decision sheet.
-2. Inventory equipment models and obtain maintenance, consumable, spare-part and gas-cylinder quotations.
-3. Build CS-04 and test the EUR 1,600 benchmark against verified capacity.
-4. Approve or revise the current capacity assumptions.
-5. Create the remaining customer-facing and contracting artifacts in blueprint order.
+1. Create CS-01 using only approved QMS references under `docs/qms/`.
+2. Build CS-04 with equipment lifecycle, cylinder-strategy and verified-capacity inputs.
+3. Create CS-02 through CS-15 in blueprint order.
+4. Update QMS masters through formal change control if commercial implementation reveals a conflict.
