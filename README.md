@@ -10,7 +10,8 @@ El alcance vigente del proyecto llega hasta el **diseño del servicio** de compa
 
 *   **`journals/`**: Entradas diarias (bitácora de trabajo) con categorías estándar organizativas.
 *   **`pages/`**: Notas permanentes, MOCs (Maps of Content), templates y gestión de conocimiento.
-*   **`docs/`**: Documentación externa, referencias estáticas y sistema de clasificación de correos (`tags_project.csv`).
+*   **`docs/`**: Documentación externa, referencias estáticas y sistema de clasificación de correos (`tags_project.csv`). Subcarpetas: `reportes/` (historiales y avances), `sgc/` (normativa y procedimientos).
+*   **`assets/`**: Imágenes y diagramas del grafo (mermaid, logo).
 *   **`ref/`**: Referencias sobre el uso del sistema (guía de Logseq, setup y plan de estandarización).
 *   **`logs/`**: Sesiones de trabajo del agente AI, hallazgos técnicos y registro de problemas.
 *   **`logseq/`**: Configuración del grafo (queries, custom.css, config.edn).
@@ -33,6 +34,11 @@ Referencia ejecutiva consolidada: `ref/proyecto.md`
     *   Contenido: Español.
     *   Propiedades/Tags estructurales: Inglés (e.g., `priority::`, `deadline::`, `type::`).
 *   **Flujo de Trabajo**: `TODO` -> `DOING` -> `DONE`.
+*   **Regla de ubicación** (evita drift en la raíz):
+    *   Pasó algo hoy → entrada de **journal** (`journals/`).
+    *   Documento/entregable estable → **`docs/`** (nunca la raíz).
+    *   Imagen/diagrama → **`assets/`**.
+    *   Desarrollo se hace en **repo aparte**; solo se **reporta** en el journal bajo *Desarrollo Técnico* con `repo::` y `commit::`. El código y herramientas de agentes viven fuera del grafo (`../calaire-ea_dev/`).
 
 ## Organización de Journals
 

@@ -6,4 +6,11 @@ logseq/.recycle/
 prompt.md
 intruccion.md
 *.md~
+
+# --- artefactos de dev/agentes AI: viven fuera del grafo (../calaire-ea_dev/) ---
 /.agent
+/.opencode
+/.antigravitycli
+/.codex
+/AGENTS.md
+/tools/
