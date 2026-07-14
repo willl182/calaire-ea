@@ -18,7 +18,7 @@ Discover service
       ↓
 Understand scope and conditions
       ↓
-Select one, several or all five gases
+Select one or more of four blocks: CO, SO₂, O₃ and NO/NO₂
       ↓
 Receive a controlled quotation
       ↓
@@ -54,15 +54,15 @@ All commercial artifacts must use the same rules:
 
 | Topic | Controlling commercial rule |
 |---|---|
-| Selectable scope | A participant may select one gas, several gases or all five gases: CO, SO₂, NO, NO₂ and O₃. |
-| Complete-package benchmark | Approximately €1,600 excluding taxes per participant/analyzer for all five gases. |
-| Other packages | Single- and multi-gas prices derive from a common participation fee plus gas-specific fees. |
+| Selectable scope | A participant may select one or more of four blocks: CO, SO₂, O₃ and NO/NO₂. NO and NO₂ are contracted as one NOx block. |
+| Flat proposal benchmark | Approximately COP 5,928,000 excluding taxes per participating organization for one to four blocks; indicative, not approved for release. |
+| Package rule | The provisional price is flat for one to four selected blocks. |
 | Assigned value | Fewer than 12 technically valid results: CALAIRE-EA reference value. Twelve or more: robust participant consensus. |
 | Evaluation | z or z′, with ζ and En where uncertainty information is usable. |
 | Aggregate grading | No a1–a7 grade and no overall pass/fail grade. |
 | Accreditation wording | The pre-accreditation service may describe its design basis but may not claim that CALAIRE-EA or the round is accredited. |
 | Standard participation unit | One registered analyzer/measurement system under one participant code. |
-| Additional analyzer | Separately priced unless the approved offer explicitly includes it. |
+| Additional analyzer | May be accepted without surcharge when residual capacity exists; it may not displace another organization's first position. |
 | Individual-gas capacity | Current planning maximum: 4 participants/analyzers for a gas operated individually. |
 | Simultaneous CO/SO₂ capacity | Current planning maximum: 3 participants with up to 2 analyzers each; 6 participant analyzers total. |
 | Confirmation | Registration is not confirmed until scope/capacity review and accepted payment or purchase order. |
@@ -80,7 +80,7 @@ The source-of-truth directory `docs/qms/` already contains a substantial QMS. Th
 | Document and record control | `P-PSEA-02`, `P-PSEA-03`, inventories and master matrices | Use existing coding, approval and retention system. |
 | Round planning | `P-PSEA-04`, `F-PSEA-01`, `F-PSEA-02`, `F-PSEA-05`, `F-PSEA-06` | Commercial confirmation becomes an input to the existing planning process. |
 | Participant communication | `P-PSEA-05 Comunicaciones del PEA.md` and prior communications | Complete/approve the QMS procedure as planned; create commercial message templates under it. |
-| Participant registration and equipment data | `F-PSEA-05A`, `F-PSEA-04`, `calaire-app`, participant-form prototypes | Reuse technical fields; add only missing commercial/legal fields. |
+| Participant registration and equipment data | `F-PSEA-03` participant registration, `F-PSEA-04` technical/equipment annex, `calaire-app`, participant-form prototypes | Reuse technical fields; add only missing commercial/legal fields. |
 | Participant instructions | `DG-PSEA-01`, `I-PSEA-01`, `I-PSEA-02`, `comunicacion_2_participantes.md` | Reuse after commercial confirmation; separate public offer from detailed technical guide. |
 | Technical execution and item control | `P-PSEA-06`, `P-PSEA-10`–`13`, `F-PSEA-07`, `F-PSEA-11` series | Fully out of scope for this commercial artifact project. |
 | Statistical design and data | `P-PSEA-07`, `P-PSEA-08`, `F-PSEA-08`–`12`, `pt_app` documents | Do not recreate; commercial documents state only participant-facing evaluation rules. |
@@ -106,7 +106,7 @@ Useful source material includes:
 - `docs/descripcion_programa_ea.md` for programme description;
 - `docs/calendario_ppiloto.md` and existing calendars for scheduling lessons;
 - `docs/auxiliares/formulario_codex/` for registration-flow prototypes;
-- `F-PSEA-05A` and `F-PSEA-04` for participant and equipment fields;
+- `F-PSEA-03` and `F-PSEA-04` for participant registration and equipment fields;
 - existing proposal/contract files as layout references, not as automatically approved service terms.
 
 These sources are drafting aids only. They do not override the QMS masters in `docs/qms/`.
@@ -147,7 +147,7 @@ Prevent contradictions among the brochure, quote, registration form, terms and c
 - selectable gases and reporting units;
 - package definitions;
 - standard participation unit and additional-analyzer rule;
-- working five-gas benchmark of approximately €1,600 excluding taxes;
+- working flat benchmark of approximately COP 5,928,000 excluding taxes per participating organization;
 - current capacity limits for individual-gas and simultaneous CO/SO₂ configurations;
 - approved lifecycle-cost allocation for CALAIRE analyzers and shared generation equipment;
 - approved multi-component-mixture, individual-cylinder or hybrid gas strategy;
@@ -177,7 +177,7 @@ Give a prospective customer enough information to decide whether to request a qu
 2. Who should participate.
 3. Why participation is valuable.
 4. Selectable gases: CO, SO₂, NO, NO₂ and O₃.
-5. Single-, multi- and complete-gas packages.
+5. One-to-four-block participation under the provisional flat fee.
 6. Facility-based participation model.
 7. What the standard fee includes.
 8. Approximate schedule from registration to final report.
@@ -190,7 +190,7 @@ Give a prospective customer enough information to decide whether to request a qu
 
 The brochure must:
 
-- state that one, several or all five gases may be selected;
+- state that one or more of the four blocks may be selected;
 - avoid a1–a7 and aggregate pass/fail grading;
 - avoid claiming accreditation;
 - distinguish the paid service from the free pilot;
@@ -231,12 +231,14 @@ The round notice should not duplicate the detailed PSEA technical instructions.
 Use:
 
 ```text
-Participant price = common participation fee
-                  + selected gas fees
-                  + additional analyzer/add-on fees
+Participant price = flat round fee per participating organization
+                  for one to four selected blocks
 ```
 
-The complete five-gas price starts at approximately **€1,600 excluding taxes per participant/analyzer**. This is the available benchmark and must remain visible in the pricing model.
+The proposal benchmark is approximately **COP 5,928,000 excluding taxes per
+participating organization** for one to four blocks. It is an indicative
+conversion of the available UBA bundle benchmark and must be tested against
+actual direct and full cost before release.
 
 ### 8.2 Minimum workbook tabs
 
@@ -308,18 +310,17 @@ The workbook must calculate at least:
 
 - individual-gas revenue with 1, 2, 3 and 4 paid positions;
 - simultaneous CO/SO₂ revenue with 1, 2 and 3 participants and up to 6 analyzers;
-- complete five-gas revenue constrained by the lowest applicable capacity;
+- complete four-block revenue constrained by the lowest applicable capacity;
 - mixed selections where participants purchase different gases;
 - the impact of reserving any position for reference or operational needs.
 
-The €1,600 benchmark must not be tested using an assumed 8–15 participants when current physical capacity is four. Minimum enrollment and viability must be configuration-specific.
+The COP 5,928,000 benchmark must not be tested using an assumed 8–15 participants when current physical capacity is four. Minimum enrollment and viability must be configuration-specific.
 
 ### 8.6 Commercial logic
 
-- A multi-gas package should reward aggregation.
-- Four gases should not normally cost the same as or more than five.
-- Single-gas pricing must still recover the common participation cost.
-- An additional analyzer should not automatically receive a full discount because it consumes connection capacity and reporting work.
+- The proposal uses the same price for one to four blocks.
+- An additional analyzer has no surcharge during the proposal stage but requires residual capacity.
+- The cost model must show contribution or shortfall separately for each selected-block scenario.
 - Closed institutional rounds require a separate full-cost quotation.
 - Management must explicitly record whether the first paid round targets profit, full cost recovery or strategic subsidy.
 
@@ -337,12 +338,12 @@ Verify demand before committing dates and costs.
 
 - organization and contact;
 - country/city;
-- one, several or all desired gases;
+- one or more desired blocks among CO, SO₂, O₃ and NO/NO₂;
 - number and type of analyzers;
 - preferred period;
 - procurement method and approximate lead time;
 - ability to transport equipment to Medellín;
-- interest at the approximate five-gas benchmark;
+- interest at the approximate COP 5,928,000 flat benchmark;
 - need for quotation in COP, EUR or another currency;
 - interest in an institutional/closed round;
 - authorization for commercial follow-up.
@@ -378,7 +379,7 @@ Every revision retains the same quote family with a revision number. A change in
 
 ### Reuse rather than duplicate
 
-Use the existing `calaire-app`, `F-PSEA-05A` and `F-PSEA-04` fields for technical and equipment data. Add a commercial section rather than creating a second technical registration system.
+Use the existing `calaire-app`, `F-PSEA-03` participant-registration fields and `F-PSEA-04` technical/equipment fields. Add a commercial section rather than creating a second technical registration system.
 
 ### Commercial/legal fields to add
 
@@ -592,18 +593,29 @@ Within an approved post-round interval, send a controlled message that:
 
 | Commercial output | Existing QMS recipient/input under `docs/qms/` |
 |---|---|
-| Confirmed participant and selected gases | `P-PSEA-04` round planning and `F-PSEA-05` plan |
-| Participant identity and equipment information | `F-PSEA-05A`, `F-PSEA-04`, `calaire-app` |
+| Confirmed participant and selected gases | `P-PSEA-04` round planning and `F-PSEA-03` participant registration (renumerado: antiguo `F-PSEA-05`) |
+| Participant identity and equipment information | `F-PSEA-04` technical/equipment annex (renumerado: antiguo `F-PSEA-05A`), `calaire-app` |
 | Confirmed schedule and contacts | `P-PSEA-05` communications |
 | Disclosure consent | `P-PSEA-19` confidentiality control |
 | Conflict identified during contract review | Existing impartiality/nonconforming-work controls |
 | Customer technical instructions | `DG-PSEA-01`, `I-PSEA-01`, `I-PSEA-02` |
 | Submitted results and evaluation | `P-PSEA-07`, `P-PSEA-08`, `pt_app` flow |
-| Technical report | `P-PSEA-09`, `F-PSEA-13` |
-| Complaint or appeal | `P-PSEA-17`, `P-PSEA-18`, `F-PSEA-14`, `F-PSEA-15` |
+| Technical report | `P-PSEA-09`, `F-PSEA-13` (renumerado: antiguo `F-PSEA-04`) |
+| Complaint or appeal | `P-PSEA-17` complaints, `P-PSEA-18` appeals, `F-PSEA-14` complaint / NC / CAPA register (renumerado: antiguo `F-PSEA-16`), `F-PSEA-15` appeals register (renumerado: antiguo `F-PSEA-17`) |
 | Customer feedback requiring action | Relevant PSEA improvement/nonconforming-work route |
 
 The handoff should be a controlled export or approved participant list, not manual retyping across multiple spreadsheets.
+
+### 19.1 Code renumbering note (2026-06-14)
+
+The SGC PEA approved and applied a functional code renumbering on 2026-06-14 (`docs/sgc/matriz_equivalencias_codigos_sgc_pea.md`). Several QMS codes used in this blueprint changed meaning or number. The table above is updated to the vigente codes. The complete equivalence map used by the commercial artifacts lives in `commercial_service/00_control/qms_code_equivalence.md` and must be consulted whenever an artifact references a `P-PSEA-XX`, `F-PSEA-XX`, `I-PSEA-XX` or `DG-PSEA-XX` code.
+
+The most consequential changes for the commercial layer:
+
+- `F-PSEA-05A` (technical/equipment annex) **no longer exists**; the same content is at `F-PSEA-04`.
+- `F-PSEA-04` (final report) **no longer points to the report**; the final report is now at `F-PSEA-13`.
+- `P-PSEA-17`, `P-PSEA-18`, `P-PSEA-19` changed meaning entirely (now = complaints, appeals, confidentiality respectively) and must not be confused with the retired SGC-macro codes of the same number.
+- `P-PSEA-15` now = NC/CAPA (was continuous improvement, reserved).
 
 ## 20. Build plan
 
@@ -630,7 +642,7 @@ Create CS-02 through CS-05:
 - populate spares, maintenance and consumable provisions for the O₃, SO₂, CO and NOx analyzers, dynamic calibrator and zero-air generator;
 - compare multi-component-mixture, individual-cylinder and hybrid certified-gas strategies;
 - model the four-position individual-gas and three-participant/six-analyzer simultaneous CO/SO₂ limits;
-- derive single-, multi- and five-gas prices;
+- validate the flat one-to-four-block proposal price against actual costs;
 - draft catalogue and round notice;
 - test interest with a short prospect list;
 - revise offer based on concrete procurement feedback.
@@ -650,8 +662,8 @@ Create CS-06 through CS-11:
 
 Test the flow using:
 
-1. one gas and one analyzer;
-2. all five gases;
+1. one block and one analyzer;
+2. all four blocks with up to four analyzers;
 3. two analyzers;
 4. international quotation;
 5. wait-listed customer;
@@ -730,9 +742,9 @@ Technical round records stay in the PSEA/QMS structure under `docs/qms/`. Do not
 
 The commercial artifact system is ready when:
 
-1. A prospect can see that one, several or all five gases are selectable.
-2. The approximately €1,600 five-gas benchmark is reflected in an approved price model.
-3. Single- and multi-gas prices are coherent and commercially approved.
+1. A prospect can see that one or more of four blocks are selectable.
+2. The approximately COP 5,928,000 flat benchmark is reflected in the price model and clearly marked as provisional.
+3. The same provisional price applies coherently to one through four blocks.
 4. Equipment spares, maintenance and consumables are included for all identified CALAIRE analyzers and shared generation equipment.
 5. The multi-component-mixture, individual-cylinder or hybrid gas strategy is approved.
 6. Capacity and revenue use the current four-position individual-gas and three-participant/six-analyzer simultaneous CO/SO₂ limits, unless verification approves a revision.
@@ -755,7 +767,7 @@ The commercial artifact system is ready when:
 2. Assign owners for service, commercial/finance, quality and round coordination.
 3. Create CS-01 and freeze the commercial rules.
 4. Review and approve the still-pending `P-PSEA-05` communication procedure because it is the main QMS interface.
-5. Build CS-04 around the approximately €1,600 five-gas benchmark.
+5. Build CS-04 around the approximately COP 5,928,000 flat benchmark and direct-cost floor.
 6. Inventory the CALAIRE O₃, SO₂, CO and NOx analyzers, dynamic calibrator and zero-air generator and obtain lifecycle-cost evidence.
 7. Approve the multi-component-mixture, individual-cylinder or hybrid certified-gas strategy.
 8. Verify the four-position individual-gas and three-participant/six-analyzer simultaneous CO/SO₂ capacity.

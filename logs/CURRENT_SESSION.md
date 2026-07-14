@@ -1,33 +1,44 @@
-# Session State: CALAIRE-EA Commercial PT Service
+# Session State: CALAIRE-EA Commercial Service
 
-**Last Updated**: 2026-07-12 16:34 -05
+**Last Updated**: 2026-07-14 14:26 -05
 
 ## Session Objective
 
-Align the definitive service proposal, commercial artifact blueprint and QMS navigation map with `docs/qms/` as the sole active QMS source of truth.
+Freeze the commercial proposal decisions through a structured management
+interview and align the CS artifact set with those decisions.
 
 ## Current State
 
-- [x] `DEF_ptservice_prop.md` now defines `docs/qms/` as the controlling QMS directory and establishes document precedence.
-- [x] `ptservice_art_prop.md` now references only `docs/qms/` for QMS masters and clearly separates commercial artifacts from technical QMS controls.
-- [x] `docs/qms/mapa_navegacion_sgc_pea.html` includes a visible source-of-truth banner, canonical folder paths and the active `EA-<codigo-ronda>` record structure.
-- [x] Broken dependencies on archived `fichas_resumen` links were removed from the navigation-map detail panel.
-- [x] The navigation map was rendered through the collaborative preview: title/header loaded, source banner displayed and 50 nodes rendered without JavaScript errors.
-- [x] Former auxiliary/QMS working trees were reorganized under `docs/z_archivos_para_descartar/` by the user.
-- [ ] Create the 15 controlled commercial artifacts defined in `ptservice_art_prop.md`.
+- [x] CS-01 v0.3 proposal decisions approved by Carmen Elena Zapata.
+- [x] Provider, executing unit, team, language, COP policy, payment hierarchy,
+  cancellations, confidentiality and complaint handling defined.
+- [x] Four blocks established: CO, SO₂, O₃ and NO/NO₂.
+- [x] Flat indicative fee established at COP 5,928,000 before taxes per
+  participating organization for one to four blocks.
+- [x] Commercial templates and blueprint aligned; old gas/analyzer pricing
+  references removed.
+- [x] P-PSEA-17 restored as the complaints procedure and P-PSEA-18 assigned a
+  14-calendar-day appeal window.
+- [ ] Real costs, capacity evidence, institutional finance/legal approval and
+  CS-10 implementation remain release gates.
 
 ## Critical Technical Context
 
-- `docs/qms/` is the only active source of truth for QMS procedures, instructions, master forms, matrices and round evidence.
-- Files under `docs/z_archivos_para_descartar/`, historical pilot folders, analyses or duplicate paths are non-controlling unless incorporated by an approved document in `docs/qms/`.
-- QMS technical and quality requirements override conflicting proposal or commercial-template text.
-- The definitive proposal controls commercial intent; the blueprint controls the commercial-artifact build route.
-- Commercial artifacts should cite/link QMS masters rather than copy technical requirements.
-- Service rules remain: one/several/all five gases; reference value below 12 valid results and robust consensus at 12 or more; no a1-a7 grade; approximately EUR 1,600 five-gas benchmark.
+- Proposal approval is not market-release approval.
+- Never publish or quote COP 5,928,000 until CS-04 proves the direct-cost floor
+  and the University validates taxes and billing.
+- One primary analyzer per selected block; an additional analyzer may enter
+  without surcharge only from residual capacity and may not displace another
+  organization's first position.
+- Existing reference supply is a certified CO/SO₂/NOx multicomponent cylinder;
+  O₃ is generated photometrically. Certificate suitability still needs proof.
+- Preserve all local work. The worktree was already dirty when this milestone
+  began.
 
 ## Next Steps
 
-1. Create CS-01 using only approved QMS references under `docs/qms/`.
-2. Build CS-04 with equipment lifecycle, cylinder-strategy and verified-capacity inputs.
-3. Create CS-02 through CS-15 in blueprint order.
-4. Update QMS masters through formal change control if commercial implementation reveals a conflict.
+1. Populate CS-04 from inventory, maintenance history and supplier quotations.
+2. Verify capacity and the multicomponent-cylinder certificate.
+3. Obtain University finance/tax and legal review of CS-06/CS-08.
+4. Implement CS-10 as a protected institutional Excel workbook.
+5. Simulate the complete commercial workflow with synthetic records.

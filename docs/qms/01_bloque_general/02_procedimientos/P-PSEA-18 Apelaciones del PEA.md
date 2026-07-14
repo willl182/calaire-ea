@@ -53,7 +53,8 @@ El responsable de calidad verifica que la apelacion:
 - Identifique al participante y la ronda afectada.
 - Indique la decision apelada.
 - Presente fundamento tecnico o documental.
-- Se reciba dentro del plazo definido por el PEA.
+- Se reciba dentro de los 14 días calendario siguientes a la entrega del
+  informe borrador al participante.
 - Incluya evidencias disponibles, cuando aplique.
 
 Si la solicitud no corresponde a una apelacion, debe redirigirse al procedimiento aplicable: queja, aclaracion, no conformidad o comunicacion ordinaria.
