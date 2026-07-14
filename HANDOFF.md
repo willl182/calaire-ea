@@ -15,7 +15,7 @@ formal CS-01 revision.
 
 1. Read `logs/CURRENT_SESSION.md`.
 2. Read `logs/260714_rundown.md`.
-3. Use `commercial_service/00_control/CS-01_commercial_decisions.md` as the
+3. Use `servicio_comercial/00_control/CS-01_decisiones_comerciales.md` as the
    commercial source of truth.
 4. Consult `ptservice_art_prop.md` for artifact interfaces and build order.
 5. Review `logs/history/260714_1426_findings.md` and
@@ -43,8 +43,10 @@ formal CS-01 revision.
    CO/SO₂/NOx multicomponent cylinder.
 3. Obtain University finance/tax approval for billing, taxes and refunds.
 4. Obtain legal approval of CS-08, especially dispute resolution and liability.
-5. Implement CS-10 as a protected institutional Excel workbook.
-6. Run the synthetic end-to-end workflow before publication.
+5. Place the implemented CS-10 workbook in protected institutional storage,
+   change its initial protection password and obtain owner approval.
+6. Run the complete synthetic end-to-end workflow before publication; the
+   CS-10-only synthetic control test already passes.
 
 ## Guardrails
 
@@ -63,4 +65,3 @@ formal CS-01 revision.
 - `grill-with-docs`: resolve any new decision that arises from cost, legal or
   technical evidence.
 - `saver`: refresh session memory after the next material milestone.
-

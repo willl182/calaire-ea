@@ -608,7 +608,7 @@ The handoff should be a controlled export or approved participant list, not manu
 
 ### 19.1 Code renumbering note (2026-06-14)
 
-The SGC PEA approved and applied a functional code renumbering on 2026-06-14 (`docs/sgc/matriz_equivalencias_codigos_sgc_pea.md`). Several QMS codes used in this blueprint changed meaning or number. The table above is updated to the vigente codes. The complete equivalence map used by the commercial artifacts lives in `commercial_service/00_control/qms_code_equivalence.md` and must be consulted whenever an artifact references a `P-PSEA-XX`, `F-PSEA-XX`, `I-PSEA-XX` or `DG-PSEA-XX` code.
+The SGC PEA approved and applied a functional code renumbering on 2026-06-14 (`docs/sgc/matriz_equivalencias_codigos_sgc_pea.md`). Several QMS codes used in this blueprint changed meaning or number. The table above is updated to the vigente codes. The complete equivalence map used by the commercial artifacts lives in `servicio_comercial/00_control/equivalencia_codigos_sgc.md` and must be consulted whenever an artifact references a `P-PSEA-XX`, `F-PSEA-XX`, `I-PSEA-XX` or `DG-PSEA-XX` code.
 
 The most consequential changes for the commercial layer:
 
@@ -708,32 +708,32 @@ Create CS-12 through CS-15 and test:
 ## 22. Minimal folder structure
 
 ```text
-commercial_service/
+servicio_comercial/
 ├── 00_control/
-│   ├── CS-01_commercial_decisions
-│   ├── artifact_register
-│   └── release_change_log
-├── 01_market/
-│   ├── CS-02_catalogue
-│   ├── CS-03_programme_round_notice
-│   └── CS-05_expressions_of_interest
-├── 02_pricing_restricted/
-│   ├── CS-04_cost_price_model
-│   └── approved_price_lists
-├── 03_sales_contracting/
-│   ├── CS-06_quotes
-│   ├── CS-07_registrations
-│   ├── CS-08_terms
-│   └── CS-09_contract_reviews
-├── 04_enrollment_restricted/
-│   ├── CS-10_tracker
-│   └── CS-11_confirmations
-├── 05_changes_finance/
-│   └── CS-12_change_cancellation_refund
-└── 06_delivery_retention/
-    ├── CS-13_report_delivery
-    ├── CS-14_feedback
-    └── CS-15_renewal
+│   ├── CS-01_decisiones_comerciales
+│   ├── registro_artefactos
+│   └── registro_cambios_versiones
+├── 01_mercado/
+│   ├── CS-02_catalogo
+│   ├── CS-03_programa_convocatoria_ronda
+│   └── CS-05_expresiones_de_interes
+├── 02_precios_restringidos/
+│   ├── CS-04_modelo_costos_precios
+│   └── listas_precios_aprobadas
+├── 03_ventas_contratacion/
+│   ├── CS-06_cotizaciones
+│   ├── CS-07_inscripciones
+│   ├── CS-08_terminos
+│   └── CS-09_revisiones_contrato
+├── 04_inscripcion_restringida/
+│   ├── CS-10_seguimiento
+│   └── CS-11_confirmaciones
+├── 05_cambios_finanzas/
+│   └── CS-12_cambios_cancelaciones_reembolsos
+└── 06_entrega_retencion/
+    ├── CS-13_entrega_informes
+    ├── CS-14_retroalimentacion
+    └── CS-15_renovacion
 ```
 
 Technical round records stay in the PSEA/QMS structure under `docs/qms/`. Do not copy them into the commercial folder.
