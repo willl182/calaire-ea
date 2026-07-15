@@ -25,7 +25,7 @@ Cada verificación **debe estar firmada** (iniciales) por el revisor; "—" o un
 | 7 | El equipo parece compatible según los datos enviados (modelo, fechas de calibración) | `F-PSEA-04` anexo técnico/equipamiento (post-renumeración) y `calaire-app` | | |
 | 8 | Coincidencia de precios, moneda, impuestos y cronograma de pagos | Cotización CS-06 vs. registro vs. PO | | |
 | 9 | PO no anula silenciosamente las reglas de cancelación, confidencialidad o informes (diferencia cláusula por cláusula frente a CS-08) | Texto del PO revisado con respecto al CS-08 | | |
-| 10 | PO no anula silenciosamente la regla de valor asignado, los indicadores de evaluación o la calificación no-a1-a7 (CS-08 cláusulas 12 y 13) | Texto de orden de compra revisado | | |
+| 10 | PO no anula silenciosamente la regla de valor asignado, los indicadores de evaluación o la ausencia de calificación agregada (CS-08 cláusulas 12 y 13) | Texto de orden de compra revisado | | |
 | 11 | Es posible realizar informes específicos del cliente o requisitos lingüísticos | Confirmación de operaciones | | |
 | 12 | El riesgo de conflicto de intereses o de imparcialidad se refiere al control del SGC existente | Registro de imparcialidad/revisión de la gestión | | |
 | 13 | **El consentimiento de divulgación se registra Y tiene un alcance correcto** (divulgación regulatoria, divulgación de marketing, divulgación transfronteriza: tres consentimientos separados) | Formulario de inscripción (CS-07) | | |
@@ -72,5 +72,5 @@ Un solo "Acepto la divulgación" es **insuficiente**: cada sucursal debe verific
 | Versión | Fecha | Aprobador | Notas |
 |---|---|---|---|
 | 0.1 BORRADOR | [RELLENO] | [RELLENO] | Plantilla inicial |
-| 0.2 BORRADOR | 2026-07-14 | [RELLENO] | Se agregó verificación de capacidad residual, ramas de consentimiento de divulgación granular, verificación de protección de datos, requisito de firma por verificación, revisión de texto de orden de compra duplicada (valor asignado + no-a1-a7). |
+| 0.2 BORRADOR | 2026-07-14 | [RELLENO] | Se agregó verificación de capacidad residual, ramas de consentimiento de divulgación granular, verificación de protección de datos, requisito de firma por verificación, revisión de texto de orden de compra duplicada (valor asignado + sin calificación agregada). |
 | 0.2.1 CORRECCIÓN | 2026-07-14 | [RELLENO] | Terminología corregida ("verificación" en lugar de "cheque"); estado actualizado a BORRADOR. |

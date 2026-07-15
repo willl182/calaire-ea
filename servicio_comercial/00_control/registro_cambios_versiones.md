@@ -25,7 +25,7 @@ Los dos son complementarios, no redundantes: el registro responde "¿cuál es el
 | Fecha de lanzamiento | ID(es) de artefactos | Versión | Resumen de cambios | Autor | Aprobador | Efectividad |
 |---|---|---|---|---|---|---|
 | [RELLENO] | CS-01 | 0,1 | Borrador inicial creado a partir del plano de MVP | [RELLENO] | [RELLENO] | Tras la aprobación |
-| 2026-07-14 | CS-01, CS-04, CS-11, CS-13 | 0,2 | Código QMS que renumera la conciliación; Guía de evidencia CS-01; CS-04 factor de uso redondo + Tab 6.A + Tab 10; Corrección del código QMS del paquete de incorporación CS-11; Recordatorio de uso de informe estándar CS-13 + enlace CS-12 + manejo sin recepción | [RELLENO] | [RELLENO] | Tras la aprobación |
+| 2026-07-14 | CS-01, CS-04, CS-11, CS-13 | 0,2 | Código QMS que renumera la conciliación; Guía de evidencia CS-01; CS-04 factor de uso redondo + Tab 6.A; Corrección del código QMS del paquete de incorporación CS-11; Recordatorio de uso de informe estándar CS-13 + enlace CS-12 + manejo sin recepción | [RELLENO] | [RELLENO] | Tras la aprobación |
 | 2026-07-14 | CS-02, CS-03, CS-05, CS-06, CS-07, CS-08, CS-09, CS-10, CS-11, CS-12, CS-14, CS-15 | 0,2 | Mejoras menores por artefacto: idioma, versión, fechas de calibración, tablas de pago, ramas de consentimiento, lista de espera, autorización dual, anonimato, SLA, sincronización CS-05. Vea el registro de cambios en línea de cada artefacto. | [RELLENO] | [RELLENO] | Tras la aprobación |
 | 2026-07-14 | 00_control (nuevo) | 1.0 | Se agregaron `equivalencia_codigos_sgc.md` y `mapa_viaje.md` para admitir lectores de artefactos | [RELLENO] | [RELLENO] | Inmediato |
 | 2026-07-14 | 02_precios_restringidos, 04_inscripcion_restringida (new) | 1.0 | Added `PROPIETARIOS.md` per restricted folder | [FILL] | [FILL] | Immediate |
@@ -39,7 +39,7 @@ Los dos son complementarios, no redundantes: el registro responde "¿cuál es el
 | Fecha prevista | ID de artefacto | Cambio propuesto | Responsable | Bloqueador |
 |---|---|---|---|---|
 | [RELLENO] | CS-01 | Aprobar reglas comerciales (cerrar todos los marcadores `[FILL]` con el visto bueno de la gerencia) | Gerente de servicio | Aprobación de la dirección |
-| [RELLENO] | CS-04 | Complete los supuestos de costos, provisiones del ciclo de vida, comparación de cilindros, derivación de referencia de la pestaña 6.A, fijación de precios institucionales de la pestaña 10 | Finanzas / comercial | aprobación CS-01; inventario de equipos + historial de mantenimiento |
+| [RELLENO] | CS-04 | Complete los supuestos de costos, provisiones del ciclo de vida, comparación de cilindros, derivación de referencia de la pestaña 6.A | Finanzas / comercial | aprobación CS-01; inventario de equipos + historial de mantenimiento |
 | [RELLENO] | CS-02 | Borrador de contenido del catálogo (cerrar todos los marcadores narrativos `[FILL]`) | Líder comercial | Aprobación CS-01 |
 | [RELLENO] | CS-03 | Aviso de borrador de ronda para el próximo programa | Coordinador de ronda | Confirmación del calendario |
 | [RELLENO] | CS-08 | Revisión jurídica de las cláusulas 18 (fuerza mayor, resolución de conflictos, responsabilidad) y 19 (protección de datos) | Gestión/jurídico | Contratación de asesoría jurídica |

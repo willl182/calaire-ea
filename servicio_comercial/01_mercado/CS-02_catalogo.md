@@ -94,7 +94,7 @@ en el aviso de ronda aprobado.
 
 - Con menos de 12 resultados técnicamente válidos se usa el valor de referencia de CALAIRE-EA; con 12 o más se usa consenso robusto de participantes.
 - Se emplean z o z′ y, cuando la información de incertidumbre es utilizable, ζ y En.
-- No se asigna calificación agregada a1–a7 ni un aprobado/reprobado global.
+- No se asigna calificación agregada ni un aprobado/reprobado global.
 
 ### 10. Confidencialidad
 
@@ -131,7 +131,7 @@ después de aprobar la viabilidad, el precio, las condiciones y la fecha.
 ## Mandatory wording controls
 
 - [x] Indica que se puede seleccionar uno o más de los cuatro bloques.
-- [x] Evita a1–a7 y la calificación global de aprobado/reprobado.
+- [x] Evita la calificación global de aprobado/reprobado.
 - [x] Avoids claiming accreditation.
 - [x] Presenta esto como una propuesta de viabilidad de servicio pago, no como un piloto gratuito lanzado.
 - [x] Avoids publishing concentration levels.

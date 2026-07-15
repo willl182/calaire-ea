@@ -205,7 +205,6 @@ El rastreador CS-10 es el núcleo operativo; casi todos los artefactos escriben 
 | Data protection (Ley 1581/2012) | CS-05 (consent), CS-06 (international cross-border), CS-08 (clause 19), CS-15 (marketing consent) |
 | Capacity (4 individual / 3+6 simultaneous) | CS-01, CS-04, CS-09, CS-10, CS-11 |
 | Redacción previa a la acreditación | CS-01, CS-02, CS-03, CS-06, CS-08, CS-13, CS-15 (en cualquier lugar de cara al cliente) |
-| No a1–a7 grading | CS-01, CS-02, CS-08, CS-13, participation statement |
 | Currency / FX | CS-01, CS-04, CS-06, CS-10, CS-12 |
 | Pago/evidencia de orden de compra | CS-07, CS-09, CS-10, CS-12 |
 | Recordatorio estándar de uso de informes | CS-01, CS-08, CS-13 (debe coincidir exactamente) |

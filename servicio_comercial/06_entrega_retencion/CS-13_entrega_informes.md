@@ -96,7 +96,7 @@ Si aún no está cubierto por el informe del SGC, se podrá emitir una declaraci
 - [ ] No debe declarar ni implicar competencia técnica.
 - [ ] No debe sustituir el informe detallado de desempeño.
 - [ ] No debe publicar partituras confidenciales.
-- [ ] No debe utilizar a1–a7 ni una calificación general.
+- [ ] No debe utilizar una calificación general.
 
 ### Plantilla
 

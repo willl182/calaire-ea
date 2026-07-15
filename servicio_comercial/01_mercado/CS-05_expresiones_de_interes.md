@@ -41,8 +41,7 @@ Esto no es un registro y no crea ningún lugar reservado. El formulario debe dec
 | 13 | Interés en participar bajo un modelo de tarifa plana por organización para uno a cuatro bloques; el valor todavía está en evaluación y no constituye oferta | Sí / No / Depende del valor aprobado | Validar aceptación de la arquitectura sin publicar un precio no aprobado |
 | 14 | ¿Su proceso de compra admite cotización y facturación en COP? | Sí / No / Requiere revisión | Identificar barreras de compra; la moneda aprobada es únicamente COP |
 | 15 | Idioma preferido para comunicaciones comerciales | Selección única (español/inglés/otro) | Soporte multilingüe |
-| 16 | Interés en una ronda institucional/cerrada | Sí / No | Activador de cotización separada |
-| 17 | Autorización para seguimiento comercial (con texto de consentimiento explícito) | Casilla de verificación (obligatoria) | Cumplimiento de la protección de datos — ver texto abajo |
+| 16 | Autorización para seguimiento comercial (con texto de consentimiento explícito) | Casilla de verificación (obligatoria) | Cumplimiento de la protección de datos — ver texto abajo |
 
 ## Texto de consentimiento (pregunta 17, debe ser visible y no verificado previamente)
 

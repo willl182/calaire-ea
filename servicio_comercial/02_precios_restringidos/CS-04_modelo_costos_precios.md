@@ -200,34 +200,6 @@ escenario a pesar de que el precio propuesto al cliente es fijo.
 | Aprobador (técnico) | [LLENAR NOMBRE, FECHA, FIRMA] |
 | Aprobador (dirección) | [RELLENO: NOMBRE, FECHA, FIRMA] |
 
-### Pestaña 10 — Ronda institucional cerrada (cotización de costo total)
-
-Esta pestaña cubre rondas dedicadas a un solo patrocinador o un grupo cerrado de participantes que requieren una cotización de costo total (apartado 8.6 del plan). Se estructura de manera distinta a la lista pública: no hay paquetes estándar; todo se calcula desde los componentes individuales.
-
-| Item | Cálculo |
-|---|---|
-| Identificación del patrocinador | [RELLENO] |
-| Alcance de la ronda (gases, configuración, capacidad reservada) | [RELLENO] |
-| Costo común (pestaña 2 asignación de ronda × 1 ronda) | [CALC] |
-| Costo específico del gas (pestaña 3 × cantidad de analizadores reservados) | [CÁLCULO] |
-| Ciclo de vida del equipo (Pestaña 4 asignación de rondas × horas reservadas) | [CALC] |
-| Prima de uso exclusivo (capacidad no compartida con ronda pública) | [RELLENO] |
-| Requisitos personalizados (informes adicionales, idioma personalizado, días exclusivos de instalaciones) | [RELLENO] |
-| Apoyo en viajes/in situ (si el patrocinador requiere personal de CALAIRE) | [RELLENO] |
-| Subtotal de costos | [CÁLCULO] |
-| Margen (según el objetivo de precios) | [RELLENO] |
-| Precio institucional indicativo (sin impuestos) | [CALC] |
-| Condiciones de pago (normalmente 50 % del pedido + 50 % de pre-ronda para instituciones) | [RELLENO] |
-| Firma de aprobación del patrocinador | [RELLENO] |
-| Aprobación interna (comercial/financiera + gestión) | [RELLENO] |
-
-**Reglas de Tab 10:**
-
-- No usar precios de lista pública; todo se calcula como costo más margen.
-- La "prima de uso exclusivo" es obligatoria: el patrocinador paga por la capacidad que no se ofrece a otros clientes.
-- Requiere doble aprobación (comercial/financiera + gestión) por el tamaño relativo.
-- El patrocinador normalmente paga ≥ 50 % al confirmar la orden; la variante "Institucional/cerrada" de CS-06 lo refleja.
-
 ## Lista de precios orientada al cliente
 
 La lista externa (consulte `listas_precios_aprobadas.md`) muestra solo los precios aprobados, la moneda, los impuestos, las inclusiones, la tarifa del analizador adicional, la validez y los requisitos de cotización. Los detalles de costos internos y márgenes siguen siendo restringidos.
@@ -236,7 +208,6 @@ La lista externa (consulte `listas_precios_aprobadas.md`) muestra solo los preci
 
 - [ ] La tarifa fija se muestra consistentemente para uno a cuatro bloques seleccionados.
 - [ ] Se acepta un analizador adicional sólo con capacidad residual y no desplaza una primera posición.
-- [ ] Las rondas institucionales cerradas requieren una cotización del costo total por separado (Pestaña 10).
 - [ ] Se documentan el objetivo de la propuesta y el costo mínimo directo del CS-01.
 - [ ] El punto de referencia de COP 5.928.000 se compara con la capacidad verificada, no con una ronda supuesta de 8 a 15 participantes.
 - [] El factor de uso redondo se completa para cada activo en la pestaña 4.
@@ -248,5 +219,5 @@ La lista externa (consulte `listas_precios_aprobadas.md`) muestra solo los preci
 | Versión | Fecha | Aprobador | Notas |
 |---|---|---|---|
 | 0.1 BORRADOR | [RELLENO] | [RELLENO] | Estructura inicial del CS-01 |
-| 0.2 BORRADOR | 2026-07-14 | [RELLENO] | Se agregó el factor de uso redondo, Pestaña 6.A, derivación de referencia, Pestaña 10 institucional cerrada, política de tipo de cambio, columna de flujo de efectivo, filas de paquetes de gas de 2/3/4. |
+| 0.2 BORRADOR | 2026-07-14 | [RELLENO] | Se agregó el factor de uso redondo, Pestaña 6.A, derivación de referencia, política de tipo de cambio, columna de flujo de efectivo, filas de paquetes de gas de 2/3/4. |
 | 0.3 PROPUESTA | 2026-07-14 | Pendiente de revisión financiera/comercial | Se agregaron cantidades de mano de obra provisionales aprobadas y se consolidaron los insumos de viabilidad faltantes; No hay precio aprobado. |

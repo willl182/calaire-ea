@@ -37,8 +37,6 @@ importación o exportación.
 - Se requiere una cotización formal para cada pedido.
 - Se requiere una cotización formal para cada pedido.
 - Moneda: COP.
-- Las rondas institucionales cerradas requieren una cotización del costo total por separado.
-- Las rondas institucionales cerradas requieren una cotización separada a costo completo.
 
 ## Aprobación
 | Versión | Fecha | Aprobador | Notas |

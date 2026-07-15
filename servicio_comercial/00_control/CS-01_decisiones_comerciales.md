@@ -51,7 +51,6 @@ Fuente única de verdad para alcance, precio, condiciones y reclamos. Evita cont
 - Participación en un solo bloque: uno de CO, SO₂, O₃ o NO/NO₂.
 - Participación multibloque: dos o tres bloques seleccionados.
 - Participación completa: los cuatro bloques (CO, SO₂, O₃ y NO/NO₂).
-- Paquete institucional cerrado: ronda dedicada a un único patrocinador; cotización de costo total fuera de la lista de precios pública (ver CS-04 Tab 10).
 
 **Standard participation unit:** una organización registrada bajo un código de
 participante, con derecho a inscribir hasta un analizador por cada bloque
@@ -96,7 +95,6 @@ Precio del participante = tarifa fija por ronda y organización participante
 - La tarifa provisional no cambia entre uno y cuatro bloques seleccionados.
 - El bloque NO/NO₂ se contrata y opera como una sola unidad con un analizador NOx.
 - La tarifa incluye hasta un analizador por bloque contratado.
-- Las rondas institucionales cerradas requieren una cotización de costo total por separado (CS-04 Tab 10).
 
 ## 4. Capacity limits
 
@@ -214,7 +212,7 @@ debe comparar una nueva mezcla equivalente contra cilindros individuales.
 | Menos de 12 resultados técnicamente válidos | Valor de referencia de CALAIRE-EA |
 | Doce o más resultados técnicamente válidos | Sólido consenso de los participantes |
 | Indicadores de evaluación | z o z′, con ζ y En donde se puede utilizar información sobre la incertidumbre |
-| Calificación agregada | Sin calificación de a1 a a7 y sin calificación general de aprobado/suspendido |
+| Calificación agregada | Sin calificación general de aprobado/suspendido |
 
 ## 11. Servicios incluidos y excluidos
 

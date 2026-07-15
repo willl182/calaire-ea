@@ -148,7 +148,6 @@ Sólo para la variante de plantilla "Internacional":
 | Standard | One to four selected blocks | Default flat-fee template |
 | Participación completa | Bloques de CO, SO₂, O₃ y NO/NO₂ | Utiliza puntos de referencia planos aprobados |
 | Internacional | Cliente fuera de Colombia | Agrega campos de cambio de divisas, impuestos de importación y transferencia de datos transfronterizos |
-| Institucional / cerrado | Solicitud de ronda dedicada | Cotización separada del costo total (CS-04 Tab 10) |
 
 ## Approval
 

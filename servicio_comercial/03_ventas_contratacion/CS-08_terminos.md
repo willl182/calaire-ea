@@ -102,7 +102,7 @@ y el tratamiento de trabajo no conforme aplicable.
 ### 13. Indicadores de evaluación y ausencia de calificación agregada
 
 > La evaluación utiliza z o z′, siendo ζ y En donde se puede utilizar la información sobre la incertidumbre.
-> No hay calificación agregada de a1 a a7 ni calificación general de aprobado/reprobado.
+> No hay calificación agregada ni calificación general de aprobado/reprobado.
 
 ### 14. Revisión de borradores, quejas y apelaciones
 
