@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CALAIRE-EA · Ensayos de Aptitud — Gases Criterio</title>
+<style>
+  :root{
+    --bg:#f4f5f7; --ink:#14181f; --muted:#5b6472; --line:#e4e7ec;
+    --card:#ffffff; --brand:#1f6feb; --mint:#d7f5e3; --mintink:#0f7a48;
+    --sun:#fff2cc; --sunink:#8a6100; --lav:#ece7ff; --lavink:#5b3ecb;
+    --sky:#e2effc; --r:22px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1180px;margin:0 auto;padding:28px 22px 80px}
+  header.top{display:flex;justify-content:space-between;align-items:center;padding:6px 4px 30px}
+  .logo{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:-.02em;font-size:19px}
+  .logo .dot{width:34px;height:34px;border-radius:11px;background:conic-gradient(from 210deg,#1f6feb,#0f7a48,#8a6100,#1f6feb);display:grid;place-items:center;color:#fff;font-size:14px}
+  nav a{color:var(--muted);text-decoration:none;font-size:14px;margin-left:22px;font-weight:600}
+  nav a:hover{color:var(--ink)}
+  .pill{display:inline-flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:7px 15px;font-size:12.5px;font-weight:700;color:var(--muted)}
+  .pill .live{width:8px;height:8px;border-radius:50%;background:#f2a900;box-shadow:0 0 0 4px #fff2cc}
+
+  .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px}
+  .hero{grid-column:span 8;padding:38px}
+  .hero h1{font-size:46px;line-height:1.05;letter-spacing:-.03em;font-weight:800;margin:16px 0 14px}
+  .hero h1 em{font-style:normal;color:var(--brand)}
+  .hero p{color:var(--muted);font-size:17px;max-width:52ch}
+  .cta{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}
+  .btn{border:none;cursor:pointer;font-weight:700;font-size:15px;border-radius:13px;padding:13px 22px;text-decoration:none;display:inline-block}
+  .btn.p{background:var(--ink);color:#fff}
+  .btn.p:hover{background:#000}
+  .btn.g{background:#eef1f5;color:var(--ink)}
+  .side{grid-column:span 4;background:linear-gradient(150deg,#1f6feb,#153a7e);color:#fff;display:flex;flex-direction:column;justify-content:space-between}
+  .side .big{font-size:52px;font-weight:800;letter-spacing:-.03em;line-height:1}
+  .side small{opacity:.8;font-size:13px;display:block;margin-top:8px}
+  .side ul{list-style:none;margin-top:auto;padding-top:22px;font-size:13.5px}
+  .side li{padding:7px 0;border-top:1px solid rgba(255,255,255,.18);opacity:.92}
+
+  .gases{grid-column:span 6}
+  .ggrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+  .gas{border-radius:16px;padding:16px;font-weight:700}
+  .gas b{font-size:22px;display:block;letter-spacing:-.02em}
+  .gas span{font-size:12px;font-weight:600;opacity:.8}
+  .gas.co{background:var(--mint);color:var(--mintink)}
+  .gas.so{background:var(--sun);color:var(--sunink)}
+  .gas.o3{background:var(--lav);color:var(--lavink)}
+  .gas.no{background:var(--sky);color:var(--brand)}
+  .val{grid-column:span 6;display:flex;flex-direction:column;gap:14px}
+  .val h3,.gases h3,.flow h3,.arte h3{font-size:13px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:800}
+  .valrow{display:flex;gap:13px;align-items:flex-start}
+  .valrow .ic{flex:none;width:38px;height:38px;border-radius:11px;background:var(--mint);color:var(--mintink);display:grid;place-items:center;font-weight:800}
+  .valrow p{font-size:14px;color:var(--muted)}
+  .valrow b{color:var(--ink)}
+
+  .flow{grid-column:span 12}
+  .steps{display:flex;gap:10px;margin-top:18px;overflow:auto;padding-bottom:4px}
+  .step{flex:1;min-width:130px;background:#fafbfc;border:1px solid var(--line);border-radius:15px;padding:15px}
+  .step .n{font-size:12px;font-weight:800;color:var(--brand)}
+  .step p{font-size:13px;font-weight:600;margin-top:6px}
+  .arte{grid-column:span 12}
+  .agrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-top:16px}
+  .a{border:1px solid var(--line);border-radius:13px;padding:12px 13px;background:#fafbfc}
+  .a .c{font-size:12px;font-weight:800;color:var(--brand)}
+  .a p{font-size:12.5px;color:var(--muted);margin-top:3px;font-weight:600}
+  footer{margin-top:34px;color:var(--muted);font-size:12.5px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;border-top:1px solid var(--line);padding-top:20px}
+  .note{background:var(--sun);color:var(--sunink);border-radius:12px;padding:10px 14px;font-size:12.5px;font-weight:600;margin-top:14px;display:inline-block}
+  @media(max-width:860px){.hero,.side,.gases,.val{grid-column:span 12}.hero h1{font-size:36px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="logo"><span class="dot">EA</span>CALAIRE-EA</div>
+    <nav>
+      <a href="#servicio">Servicio</a>
+      <a href="#bloques">Bloques</a>
+      <a href="#flujo">Flujo</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <div class="grid">
+    <div class="card hero" id="servicio">
+      <span class="pill"><span class="live"></span>Propuesta de servicio · etapa previa a acreditación</span>
+      <h1>Ensayos de aptitud para <em>gases criterio</em>, ejecutados en CALAIRE.</h1>
+      <p>Compare el desempeño de sus analizadores mediante bloques controlados para CO, SO₂, O₃ y NO/NO₂. Ronda ejecutada en la Universidad Nacional de Colombia, Sede Medellín, con los procedimientos vigentes del sistema de gestión.</p>
+      <div class="cta">
+        <a class="btn p" href="#contacto">Manifestar interés</a>
+        <a class="btn g" href="#bloques">Ver bloques</a>
+      </div>
+      <span class="note">Manifestar interés no inscribe, no reserva cupo ni obliga a contratar.</span>
+    </div>
+
+    <div class="card side">
+      <div>
+        <div class="big">4</div>
+        <small>bloques de gases seleccionables por organización</small>
+      </div>
+      <ul>
+        <li>Hasta 4 analizadores por bloque individual</li>
+        <li>Operación simultánea CO/SO₂: 3 organizaciones, 6 analizadores</li>
+        <li>Modalidad en instalaciones de CALAIRE</li>
+        <li>Informe técnico digital + constancia de participación</li>
+      </ul>
+    </div>
+
+    <div class="card gases" id="bloques">
+      <h3>Bloques seleccionables</h3>
+      <div class="ggrid">
+        <div class="gas co"><b>CO</b><span>Monóxido de carbono</span></div>
+        <div class="gas so"><b>SO₂</b><span>Dióxido de azufre</span></div>
+        <div class="gas o3"><b>O₃</b><span>Ozono</span></div>
+        <div class="gas no"><b>NO/NO₂</b><span>Bloque único · analizador NOx</span></div>
+      </div>
+      <span class="note">Tarifa plana por organización para seleccionar entre uno y cuatro bloques. Valor de referencia solo como benchmark de viabilidad.</span>
+    </div>
+
+    <div class="card val">
+      <h3>Valor de participar</h3>
+      <div class="valrow"><div class="ic">✓</div><p><b>Comparación documentada</b> del desempeño del sistema de medición frente a otros participantes.</p></div>
+      <div class="valrow"><div class="ic">↗</div><p><b>Oportunidades de mejora</b> identificadas; complementa sus controles internos de calidad.</p></div>
+      <div class="valrow"><div class="ic">z</div><p>Evaluación con <b>z o z′</b> y, cuando la incertidumbre es utilizable, ζ y En. Sin calificación a1–a7 ni aprobado/reprobado global.</p></div>
+    </div>
+
+    <div class="card flow" id="flujo">
+      <h3>Flujo previsto — del interés al informe</h3>
+      <div class="steps">
+        <div class="step"><div class="n">01</div><p>Expresión de interés</p></div>
+        <div class="step"><div class="n">02</div><p>Cotización controlada</p></div>
+        <div class="step"><div class="n">03</div><p>Registro y términos</p></div>
+        <div class="step"><div class="n">04</div><p>Revisión de capacidad y pago</p></div>
+        <div class="step"><div class="n">05</div><p>Confirmación comercial</p></div>
+        <div class="step"><div class="n">06</div><p>Instrucciones técnicas SGC</p></div>
+        <div class="step"><div class="n">07</div><p>Ejecución de la ronda</p></div>
+        <div class="step"><div class="n">08</div><p>Informe final digital</p></div>
+      </div>
+    </div>
+
+    <div class="card arte">
+      <h3>15 artefactos comerciales · CS-01 a CS-15</h3>
+      <div class="agrid">
+        <div class="a"><div class="c">CS-01</div><p>Decisiones comerciales</p></div>
+        <div class="a"><div class="c">CS-02</div><p>Catálogo</p></div>
+        <div class="a"><div class="c">CS-03</div><p>Aviso de ronda</p></div>
+        <div class="a"><div class="c">CS-04</div><p>Modelo de costos</p></div>
+        <div class="a"><div class="c">CS-05</div><p>Expresión de interés</p></div>
+        <div class="a"><div class="c">CS-06</div><p>Cotización</p></div>
+        <div class="a"><div class="c">CS-07</div><p>Inscripción</p></div>
+        <div class="a"><div class="c">CS-08</div><p>Términos</p></div>
+        <div class="a"><div class="c">CS-09</div><p>Revisión de contrato</p></div>
+        <div class="a"><div class="c">CS-10</div><p>Seguimiento (tracker)</p></div>
+        <div class="a"><div class="c">CS-11</div><p>Confirmación</p></div>
+        <div class="a"><div class="c">CS-12</div><p>Cambios / reembolsos</p></div>
+        <div class="a"><div class="c">CS-13</div><p>Entrega de informe</p></div>
+        <div class="a"><div class="c">CS-14</div><p>Retroalimentación</p></div>
+        <div class="a"><div class="c">CS-15</div><p>Renovación</p></div>
+      </div>
+    </div>
+  </div>
+
+  <footer id="contacto">
+    <div>Expresiones de interés → <b style="color:var(--ink)">calaire_med@unal.edu.co</b></div>
+    <div>CALAIRE-EA · Universidad Nacional de Colombia, Sede Medellín · Propuesta previa a acreditación</div>
+  </footer>
+</div>
+</body>
+</html>

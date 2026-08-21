@@ -1,0 +1,4 @@
+E09 evidence generation completed.
+Validation cases: 11 PASS, 1 OPEN_RISK.
+Inputs: synthetic, deterministic, non-sensitive.
+Precision: full numeric precision in CSV; rounded only in documents.

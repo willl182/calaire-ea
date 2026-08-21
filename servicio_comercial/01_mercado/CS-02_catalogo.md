@@ -1,20 +1,18 @@
 # CS-02 — Catálogo de servicios / Folleto
 
-**Estado:** CONTENIDO DE LA PROPUESTA COMPLETO: datos de publicación y aprobación de lanzamiento pendientes
-**Propietario:** Líder comercial
-**Requerido antes:** Lanzamiento de marketing
+**Propietario:** Profesional de proyectos
 **Última revisión:** 2026-07-14 (copia de la propuesta completa y campos consolidados pendientes de publicación)
-**QMS code reference:** ver `00_control/equivalencia_codigos_sgc.md`. Confidentiality references use `P-PSEA-19` (vigente = Confidencialidad operativa interna).
+**Referencia de códigos del SGC:** ver `00_control/equivalencia_codigos_sgc.md`. Las referencias de confidencialidad usan `P-PSEA-19` (vigente = Confidencialidad operativa interna).
 
 ## Objetivo
 
-Brinde a un cliente potencial suficiente información para decidir si solicita una cotización sin abrumarlo con detalles de procedimientos técnicos.
+Brindar a un cliente potencial información suficiente para decidir si solicita una cotización, sin abrumarlo con detalles de procedimientos técnicos.
 
-## Format
+## Formato
 
 Una página web concisa más un PDF de dos a cuatro páginas, ambos con el mismo texto aprobado.
 
-## Proposal copy
+## Texto de la propuesta
 
 ### 1. Qué es el servicio
 
@@ -116,19 +114,19 @@ Manifestar interés no constituye inscripción, no reserva cupo y no obliga a
 contratar. La cotización y el formulario definitivo se habilitarán únicamente
 después de aprobar la viabilidad, el precio, las condiciones y la fecha.
 
-## Única sección pending para publicación
+## Única sección pendiente para publicación
 
 | Campo | Valor |
 |---|---|
 | Publication languages | Español |
-| Fecha de revisión | [FILL: normalmente 12 meses desde la publicación o tras cualquier cambio CS-01] |
-| Versión | [FILL — incremento en cada cambio sustancial] |
-| Efectivo desde | [RELLENO] |
-| Propietario de la última reseña | [LLENAR NOMBRE] |
-| URL of web version | [FILL] |
-| PDF filename pattern | `CS-02_catalogue_v[VERSION]_[LANG].pdf` |
+| Fecha de revisión | [POR DILIGENCIAR — normalmente 12 meses desde la publicación o tras cualquier cambio CS-01] |
+| Versión | [POR DILIGENCIAR — incremento en cada cambio sustancial] |
+| Efectivo desde | [POR DILIGENCIAR] |
+| Responsable de la última revisión | [POR DILIGENCIAR — nombre] |
+| URL de la versión web | [POR DILIGENCIAR] |
+| Patrón del nombre de archivo PDF | `CS-02_catalogo_v[VERSIÓN]_[IDIOMA].pdf` |
 
-## Mandatory wording controls
+## Controles obligatorios de redacción
 
 - [x] Indica que se puede seleccionar uno o más de los cuatro bloques.
 - [x] Evita la calificación global de aprobado/reprobado.
@@ -136,10 +134,3 @@ después de aprobar la viabilidad, el precio, las condiciones y la fecha.
 - [x] Presenta esto como una propuesta de viabilidad de servicio pago, no como un piloto gratuito lanzado.
 - [x] Avoids publishing concentration levels.
 - [x] Identifica los costos a cargo del participante por separado, incluido el riesgo de transporte y equipo.
-
-## Approval
-
-| Versión | Fecha | Aprobador | Notas |
-|---|---|---|---|
-| 0.1 BORRADOR | 2026-07-12 | No registrado | Estructura inicial del CS-01 |
-| 0.2 PROPUESTA | 2026-07-14 | Pendiente de aprobación comercial/de gestión | Copia de la propuesta completada; sólo quedan pendientes los metadatos de control de publicación. |

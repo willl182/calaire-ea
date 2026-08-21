@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Servicios Comerciales</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0a0a0f;
+            --surface: #12121a;
+            --surface-2: #1a1a25;
+            --text: #f5f5f7;
+            --muted: #9ca3af;
+            --primary: #6366f1;
+            --accent: #22d3ee;
+            --gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #22d3ee 100%);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        .glow {
+            position: fixed;
+            width: 600px; height: 600px;
+            border-radius: 50%;
+            filter: blur(120px);
+            opacity: .18;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .glow-1 { top: -200px; right: -200px; background: var(--primary); }
+        .glow-2 { bottom: -200px; left: -200px; background: var(--accent); }
+        nav {
+            position: fixed; top: 0; left: 0; right: 0;
+            z-index: 100;
+            padding: 1.2rem 5%;
+            display: flex; justify-content: space-between; align-items: center;
+            background: rgba(10,10,15,.7);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255,255,255,.05);
+        }
+        .logo { font-size: 1.5rem; font-weight: 800; letter-spacing: -1px; }
+        .logo span { background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { color: var(--muted); text-decoration: none; font-weight: 500; transition: color .3s; }
+        .nav-links a:hover { color: var(--text); }
+        .btn {
+            padding: .8rem 1.6rem; border-radius: 999px; border: none; cursor: pointer;
+            font-weight: 600; transition: transform .2s, box-shadow .2s; text-decoration: none; display: inline-block;
+        }
+        .btn-primary { background: var(--gradient); color: white; box-shadow: 0 10px 30px rgba(99,102,241,.3); }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 15px 40px rgba(99,102,241,.4); }
+        .btn-outline { background: transparent; color: var(--text); border: 1px solid rgba(255,255,255,.15); }
+        .menu-toggle { display: none; background: none; border: none; color: var(--text); font-size: 1.5rem; cursor: pointer; }
+        header {
+            min-height: 100vh; display: flex; align-items: center;
+            padding: 8rem 5% 5rem; position: relative; z-index: 1;
+        }
+        .hero { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; max-width: 1400px; margin: 0 auto; }
+        .hero h1 { font-size: clamp(2.8rem, 5vw, 4.5rem); line-height: 1.05; letter-spacing: -2px; margin-bottom: 1.5rem; }
+        .hero p { color: var(--muted); font-size: 1.15rem; max-width: 540px; margin-bottom: 2rem; }
+        .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+        .hero-visual {
+            position: relative; height: 500px;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .glass-card {
+            background: rgba(255,255,255,.03);
+            border: 1px solid rgba(255,255,255,.08);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 2rem;
+            position: absolute;
+            box-shadow: 0 25px 50px rgba(0,0,0,.3);
+        }
+        .glass-card.main { width: 320px; height: 380px; z-index: 2; }
+        .glass-card.floating { width: 220px; padding: 1.5rem; z-index: 3; }
+        .floating-1 { top: 40px; right: 20px; animation: float 5s ease-in-out infinite; }
+        .floating-2 { bottom: 60px; left: 0; animation: float 6s ease-in-out infinite reverse; }
+        .stat { font-size: 2rem; font-weight: 800; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .stat-label { color: var(--muted); font-size: .85rem; }
+        @keyframes float { 0%,100%{transform:translateY(0)}50%{transform:translateY(-15px)} }
+        .trusted { padding: 3rem 5%; border-top: 1px solid rgba(255,255,255,.05); border-bottom: 1px solid rgba(255,255,255,.05); position: relative; z-index: 1; }
+        .trusted p { text-align: center; color: var(--muted); margin-bottom: 1.5rem; font-size: .9rem; text-transform: uppercase; letter-spacing: 1px; }
+        .logos { display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; opacity: .5; }
+        .logos span { font-weight: 700; font-size: 1.2rem; color: var(--text); }
+        section { padding: 6rem 5%; position: relative; z-index: 1; }
+        .section-title { text-align: center; max-width: 700px; margin: 0 auto 4rem; }
+        .section-title h2 { font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -1.5px; margin-bottom: 1rem; }
+        .section-title p { color: var(--muted); font-size: 1.1rem; }
+        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; max-width: 1200px; margin: 0 auto; }
+        .feature {
+            background: var(--surface); border: 1px solid rgba(255,255,255,.05);
+            border-radius: 20px; padding: 2rem; transition: transform .3s, border-color .3s;
+        }
+        .feature:hover { transform: translateY(-5px); border-color: rgba(99,102,241,.4); }
+        .feature-icon {
+            width: 50px; height: 50px; border-radius: 14px; background: var(--gradient);
+            display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 1.2rem;
+        }
+        .feature h3 { font-size: 1.2rem; margin-bottom: .5rem; }
+        .feature p { color: var(--muted); font-size: .95rem; }
+        .pricing { background: var(--surface); }
+        .pricing-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; max-width: 1100px; margin: 0 auto; }
+        .price-card {
+            background: var(--bg); border: 1px solid rgba(255,255,255,.08);
+            border-radius: 24px; padding: 2.5rem 2rem; text-align: center; position: relative;
+        }
+        .price-card.popular { border-color: var(--primary); transform: scale(1.03); }
+        .badge {
+            position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+            background: var(--gradient); color: white; padding: .4rem 1rem; border-radius: 999px;
+            font-size: .75rem; font-weight: 700;
+        }
+        .price { font-size: 3.5rem; font-weight: 800; margin: 1rem 0; }
+        .price span { font-size: 1rem; color: var(--muted); font-weight: 400; }
+        .price-card ul { list-style: none; margin: 2rem 0; text-align: left; }
+        .price-card li { padding: .6rem 0; color: var(--muted); border-bottom: 1px solid rgba(255,255,255,.05); }
+        .price-card li::before { content: "✓"; color: var(--accent); margin-right: .7rem; font-weight: 700; }
+        footer { background: var(--surface); padding: 3rem 5%; text-align: center; color: var(--muted); border-top: 1px solid rgba(255,255,255,.05); }
+        @media (max-width: 900px) {
+            .hero { grid-template-columns: 1fr; text-align: center; }
+            .hero p { margin: 0 auto 2rem; }
+            .hero-btns { justify-content: center; }
+            .hero-visual { order: -1; height: 400px; }
+            .nav-links { display: none; }
+            .menu-toggle { display: block; }
+        }
+    </style>
+</head>
+<body>
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+    <nav>
+        <div class="logo">NOVA<span>.</span></div>
+        <ul class="nav-links">
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#precios">Precios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <a href="#contacto" class="btn btn-primary">Empezar ahora</a>
+        <button class="menu-toggle">☰</button>
+    </nav>
+    <header>
+        <div class="hero">
+            <div>
+                <h1>Impulsa tu negocio con servicios comerciales de élite</h1>
+                <p>Estrategia, tecnología y ejecución perfecta para escalar tu empresa. Soluciones a medida que generan resultados medibles desde el primer día.</p>
+                <div class="hero-btns">
+                    <a href="#contacto" class="btn btn-primary">Solicitar propuesta</a>
+                    <a href="#servicios" class="btn btn-outline">Ver servicios</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="glass-card main"></div>
+                <div class="glass-card floating floating-1">
+                    <div class="stat">+340%</div>
+                    <div class="stat-label">Crecimiento promedio</div>
+                </div>
+                <div class="glass-card floating floating-2">
+                    <div class="stat">98%</div>
+                    <div class="stat-label">Clientes satisfechos</div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="trusted">
+        <p>Confían en nosotros</p>
+        <div class="logos">
+            <span>ACME</span><span>VERTEX</span><span>NEXUS</span><span>PULSE</span><span>ORBIT</span>
+        </div>
+    </div>
+    <section id="servicios">
+        <div class="section-title">
+            <h2>Servicios diseñados para vender más</h2>
+            <p>Combinamos consultoría estratégica, digitalización comercial y ejecución operativa para maximizar tus ingresos.</p>
+        </div>
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">📈</div>
+                <h3>Estrategia comercial</h3>
+                <p>Planificamos tu canal de ventas, segmentación y propuesta de valor para conquistar mercados.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🤝</div>
+                <h3>Captación de clientes</h3>
+                <p>Sistemas de prospección, funnels de conversión y nurturing que llenan tu pipeline de oportunidades.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">⚡</div>
+                <h3>Automatización de ventas</h3>
+                <p>CRM, workflows y reportes inteligentes para que tu equipo venda más en menos tiempo.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🎯</div>
+                <h3>Publicidad performance</h3>
+                <p>Campañas en meta ads, google y linkedin optimizadas por ROI, no por impresiones.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📊</div>
+                <h3>Analytics e inteligencia</h3>
+                <p>Dashboards y análisis predictivo para tomar decisiones comerciales con datos reales.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🚀</div>
+                <h3>Escalamiento</h3>
+                <p>Metodologías probadas para replicar tu éxito en nuevos mercados y segmentos.</p>
+            </div>
+        </div>
+    </section>
+    <section id="precios" class="pricing">
+        <div class="section-title">
+            <h2>Planes claros, resultados reales</h2>
+            <p>Elige el plan que se ajuste a tu etapa de crecimiento.</p>
+        </div>
+        <div class="pricing-cards">
+            <div class="price-card">
+                <h3>Starter</h3>
+                <div class="price">$999<span>/mes</span></div>
+                <ul>
+                    <li>Diagnóstico comercial</li>
+                    <li>1 funnel de conversión</li>
+                    <li>Reporte mensual</li>
+                    <li>Soporte por email</li>
+                </ul>
+                <a href="#contacto" class="btn btn-outline">Elegir plan</a>
+            </div>
+            <div class="price-card popular">
+                <span class="badge">MÁS POPULAR</span>
+                <h3>Growth</h3>
+                <div class="price">$2,499<span>/mes</span></div>
+                <ul>
+                    <li>Estrategia completa</li>
+                    <li>3 funnels + automatización</li>
+                    <li>Ads management</li>
+                    <li>Dashboard en tiempo real</li>
+                    <li>Soporte prioritario</li>
+                </ul>
+                <a href="#contacto" class="btn btn-primary">Elegir plan</a>
+            </div>
+            <div class="price-card">
+                <h3>Enterprise</h3>
+                <div class="price">Custom</div>
+                <ul>
+                    <li>Equipo dedicado</li>
+                    <li>Plan a medida</li>
+                    <li>Integraciones avanzadas</li>
+                    <li>SLA garantizado</li>
+                </ul>
+                <a href="#contacto" class="btn btn-outline">Contactar</a>
+            </div>
+        </div>
+    </section>
+    <footer id="contacto">
+        <p><strong>NOVA.</strong> Servicios comerciales de próxima generación.</p>
+        <p style="margin-top:.5rem; opacity:.6;">hola@nova-servicios.com · +52 55 1234 5678</p>
+        <p style="margin-top:1.5rem; font-size:.8rem;">© 2026 Nova. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

@@ -1,17 +1,15 @@
 # CS-07 — Formulario de inscripción / pedido
 
-**Estado:** BORRADOR — contenido redactado; aprobación pendiente
-**Propietario:** Coordinador de ronda
-**Requerido antes de:** Aceptación del pedido
-**Última revisión:** 2026-07-14 (marca de tiempo/IP/canal agregado, prioridad de la lista de espera, estado de cotización revisado, referencia del código QMS aclarada para datos técnicos)
+**Propietario:** Profesional de proyectos
+**Última revisión:** 2026-07-14 (marca de tiempo/IP/canal agregado, prioridad de la lista de espera, estado de cotización revisado, referencia del código SGC aclarada para datos técnicos)
 
 ## Objetivo
 
-Captura de comprador, alcance seleccionado y datos administrativos. Reutiliza los campos técnicos de aplicaciones/QMS existentes en lugar de duplicarlos.
+Captura de comprador, alcance seleccionado y datos administrativos. Reutiliza los campos técnicos de aplicaciones/SGC existentes en lugar de duplicarlos.
 
-## Reuse rather than duplicate
+## Reutilizar en lugar de duplicar
 
-Utilice la `calaire-app` existente y los campos técnicos del QMS para los datos de registro y equipos. Las referencias actuales de los campos del SGC (post-renumeración 2026-06-14) son:
+Utilice la `calaire-app` existente y los campos técnicos del SGC para los datos de registro y equipos. Las referencias actuales de los campos del SGC (post-renumeración 2026-06-14) son:
 
 - Datos de equipos e instrumentos: `F-PSEA-04` (antiguo `F-PSEA-05A`)
 - Registro de participantes: `F-PSEA-03` (antiguo `F-PSEA-05`)
@@ -60,19 +58,12 @@ Solo los participantes **"confirmados"** pasan a la planificación formal de la 
 
 ## Lista de verificación de la inscripción
 
-- [] Campos técnicos completados (a través de `calaire-app` y los campos QMS mencionados anteriormente).
+- [] Campos técnicos completados (a través de `calaire-app` y los campos SGC mencionados anteriormente).
 - [ ] Campos comerciales completados.
-- [ ] Terms accepted.
-- [ ] Disclosure consent recorded.
+- [ ] Términos aceptados.
+- [ ] Consentimiento de divulgación registrado.
 - [ ] Consentimiento de comercialización registrado por separado con texto explícito de la Ley 1581.
 - [ ] Número de cotización válido y que coincide con la selección (y que aún no ha sido aceptado por otra parte).
-- [ ] Acceptance timestamp / channel recorded.
+- [ ] Marca de tiempo / canal de aceptación registrados.
 - [ ] Se inició la revisión del contrato (CS-09).
 - [ ] Si estado = En lista de espera, se registra la prioridad de la lista de espera (CS-10) y se notifica al cliente.
-
-## Aprobación
-
-| Versión | Fecha | Aprobador | Notas |
-|---|---|---|---|
-| 0.1 BORRADOR | [RELLENO] | [RELLENO] | Plantilla inicial |
-| 0.2 BORRADOR | 2026-07-14 | [RELLENO] | Se agregó marca de tiempo de aceptación/IP/canal, prioridad de lista de espera, rama de revisión de cotización, referencias de código QMS actualizadas. |

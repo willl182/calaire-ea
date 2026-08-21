@@ -126,7 +126,7 @@ def build_book(ctx, synthetic=False):
 
     readme = sheets.getByName("LEAME")
     readme.getCellRangeByName("A1:H1").merge(True)
-    set_text(readme, 0, 0, "CS-10 — Enrollment and Revenue Tracker")
+    set_text(readme, 0, 0, "CS-10 — Seguimiento de inscripciones e ingresos")
     style_title(readme, "A1:H1")
     notes = [
         ("Clasificación", "RESTRINGIDO — identidad, datos comerciales y pagos"),
@@ -148,19 +148,19 @@ def build_book(ctx, synthetic=False):
     readme.getCellRangeByName("A1:H14").IsTextWrapped = True
 
     headers = [
-        "Prospect/customer ID", "Organization", "Country", "Preferred language", "Round ID",
-        "CO analyzers", "SO₂ analyzers", "O₃ analyzers", "NO/NO₂ analyzers", "Analyzer count",
-        "Quote number", "Quote revision", "Quote value COP", "Current committed value COP",
-        "Quote expiry", "Quote acceptance deadline", "Payment / PO deadline", "Registration date",
-        "Acceptance timestamp", "Acceptance channel", "Accredited laboratory", "Eligibility complete",
-        "Contract-review status", "Contract-review date", "Contract reviewer",
-        "PO/payment/invoice status", "Amount received COP", "Amount outstanding COP", "% paid",
-        "Next installment due", "Invoice number", "Participant code", "Operating configuration",
-        "Commercial status", "Wait-list group", "Wait-list timestamp", "Wait-list rank",
-        "Last available slot", "Capacity alert", "Payment alert", "Cancellation/refund status",
-        "Cancellation date", "Refund/credit note reference", "FX exposure", "Owner", "Next action",
-        "Communication link/location", "EoI date", "EoI expiry date", "Stale-EoI flag",
-        "Marketing consent", "CS-09 reference", "CS-12 reference", "Notes",
+        "ID del cliente potencial/cliente", "Organización", "País", "Idioma preferido", "ID de ronda",
+        "Analizadores de CO", "Analizadores de SO₂", "Analizadores de O₃", "Analizadores de NO/NO₂", "Cantidad de analizadores",
+        "Número de cotización", "Revisión de cotización", "Valor cotizado (COP)", "Valor comprometido actual (COP)",
+        "Vencimiento de cotización", "Fecha límite de aceptación", "Fecha límite de pago/orden de compra", "Fecha de inscripción",
+        "Fecha y hora de aceptación", "Canal de aceptación", "Laboratorio acreditado", "Elegibilidad completa",
+        "Estado de revisión del contrato", "Fecha de revisión del contrato", "Revisor del contrato",
+        "Estado de orden/pago/factura", "Valor recibido (COP)", "Saldo pendiente (COP)", "% pagado",
+        "Vencimiento de próxima cuota", "Número de factura", "Código de participante", "Configuración operativa",
+        "Estado comercial", "Grupo de lista de espera", "Fecha y hora de lista de espera", "Posición en lista de espera",
+        "Último cupo disponible", "Alerta de capacidad", "Alerta de pago", "Estado de cancelación/reembolso",
+        "Fecha de cancelación", "Referencia de reembolso/nota crédito", "Exposición cambiaria", "Responsable", "Próxima acción",
+        "Enlace/ubicación de comunicación", "Fecha de expresión de interés", "Vencimiento de expresión de interés", "Indicador de interés obsoleto",
+        "Consentimiento de mercadeo", "Referencia CS-09", "Referencia CS-12", "Notas",
     ]
     tr = sheets.getByName("Tracker")
     for c, h in enumerate(headers):
@@ -180,13 +180,21 @@ def build_book(ctx, synthetic=False):
         set_formula(tr, 37, r-1, f'=IF(A{r}="";"";IF(AI{r}<>"Confirmed";"No";IF(AG{r}="Simultaneous CO/SO₂";IF(OR(COUNTIFS($E$2:$E$201;E{r};$AI$2:$AI$201;"Confirmed";$AG$2:$AG$201;"Simultaneous CO/SO₂")=3;SUMIFS($J$2:$J$201;$E$2:$E$201;E{r};$AI$2:$AI$201;"Confirmed";$AG$2:$AG$201;"Simultaneous CO/SO₂")=6);"Yes";"No");IF(OR(AND(F{r}>0;SUMIFS($F$2:$F$201;$E$2:$E$201;E{r};$AI$2:$AI$201;"Confirmed")=4);AND(G{r}>0;SUMIFS($G$2:$G$201;$E$2:$E$201;E{r};$AI$2:$AI$201;"Confirmed")=4);AND(H{r}>0;SUMIFS($H$2:$H$201;$E$2:$E$201;E{r};$AI$2:$AI$201;"Confirmed")=4);AND(I{r}>0;SUMIFS($I$2:$I$201;$E$2:$E$201;E{r};$AI$2:$AI$201;"Confirmed")=4));"Yes";"No"))))')
         set_formula(tr, 38, r-1, f'=IF(A{r}="";"";IF(AI{r}<>"Confirmed";"";IF(AG{r}="Simultaneous CO/SO₂";IF(OR(COUNTIFS($E$2:$E$201;E{r};$AI$2:$AI$201;"Confirmed";$AG$2:$AG$201;"Simultaneous CO/SO₂")>3;SUMIFS($J$2:$J$201;$E$2:$E$201;E{r};$AI$2:$AI$201;"Confirmed";$AG$2:$AG$201;"Simultaneous CO/SO₂")>6);"OVER CAPACITY";"OK");IF(OR(SUMIFS($F$2:$F$201;$E$2:$E$201;E{r};$AI$2:$AI$201;"Confirmed")>4;SUMIFS($G$2:$G$201;$E$2:$E$201;E{r};$AI$2:$AI$201;"Confirmed")>4;SUMIFS($H$2:$H$201;$E$2:$E$201;E{r};$AI$2:$AI$201;"Confirmed")>4;SUMIFS($I$2:$I$201;$E$2:$E$201;E{r};$AI$2:$AI$201;"Confirmed")>4);"OVER CAPACITY";"OK"))))')
         set_formula(tr, 39, r-1, f'=IF(A{r}="";"";IF(AND(AC{r}<1;Q{r}<TODAY();AI{r}="Accepted pending payment/PO");"DEADLINE EXPIRED";IF(AND(AC{r}<1;AD{r}<>"";AD{r}<TODAY());"OVERDUE";"OK")))')
-        set_text(tr, 43, r-1, "No aplica — COP only")
+        set_text(tr, 43, r-1, "No aplica — solo COP")
         set_formula(tr, 48, r-1, f'=IF(AV{r}="";"";AV{r}+60)')
         set_formula(tr, 49, r-1, f'=IF(A{r}="";"";IF(AND(AV{r}<>"";AW{r}<TODAY();OR(AI{r}="Interest";AI{r}="Quoted"));"Yes";"No"))')
         # Commercial status is column AH; AI is the calculated wait-list group.
         for c in (37, 38, 39, 49):
             cell = tr.getCellByPosition(c, r-1)
             cell.Formula = cell.Formula.replace("$AI$2:$AI$201", "$AH$2:$AH$201").replace(f"AI{r}", f"AH{r}")
+            for source, target in {
+                "Confirmed": "Confirmado", "Simultaneous CO/SO₂": "CO/SO₂ simultáneos",
+                "Accepted pending payment/PO": "Aceptado pendiente de pago/orden",
+                "Interest": "Interés", "Quoted": "Cotizado", "Yes": "Sí",
+                "OVER CAPACITY": "CAPACIDAD EXCEDIDA", "DEADLINE EXPIRED": "PLAZO VENCIDO",
+                "OVERDUE": "VENCIDO",
+            }.items():
+                cell.Formula = cell.Formula.replace(source, target)
 
     # Formats and validation.
     for rng in ["O2:S201", "X2:X201", "AD2:AD201", "AJ2:AJ201", "AP2:AP201", "AW2:AX201"]:
@@ -195,14 +203,14 @@ def build_book(ctx, synthetic=False):
     tr.getCellRangeByName("AA2:AB201").NumberFormat = doc.NumberFormats.getStandardFormat(4, doc.CharLocale)
     tr.getCellRangeByName("AC2:AC201").NumberFormat = doc.NumberFormats.getStandardFormat(10, doc.CharLocale)
     list_validation(doc, tr, "D2:D201", ["Español"])
-    list_validation(doc, tr, "T2:T201", ["Institutional email", "Signed quote", "Accepted PO"])
-    list_validation(doc, tr, "U2:V201", ["Yes", "No"])
-    list_validation(doc, tr, "W2:W201", ["Pending", "Passed", "Failed"])
-    list_validation(doc, tr, "Z2:Z201", ["Pending", "Partial", "Received", "Invoiced", "Paid", "Overdue"])
-    list_validation(doc, tr, "AG2:AG201", ["Individual gas", "Simultaneous CO/SO₂"])
-    list_validation(doc, tr, "AH2:AH201", ["Interest", "Quoted", "Registered", "Under review", "Quote-revision in progress", "Accepted pending payment/PO", "Confirmed", "Wait-listed", "Rejected", "Withdrawn"])
-    list_validation(doc, tr, "AO2:AO201", ["", "Open", "Cancelled", "Refunded", "Disputed"])
-    list_validation(doc, tr, "AY2:AY201", ["Yes", "No", "Not requested"])
+    list_validation(doc, tr, "T2:T201", ["Correo institucional", "Cotización firmada", "Orden de compra aceptada"])
+    list_validation(doc, tr, "U2:V201", ["Sí", "No"])
+    list_validation(doc, tr, "W2:W201", ["Pendiente", "Aprobada", "Rechazada"])
+    list_validation(doc, tr, "Z2:Z201", ["Pendiente", "Parcial", "Recibido", "Facturado", "Pagado", "Vencido"])
+    list_validation(doc, tr, "AG2:AG201", ["Gas individual", "CO/SO₂ simultáneos"])
+    list_validation(doc, tr, "AH2:AH201", ["Interés", "Cotizado", "Inscrito", "En revisión", "Revisión de cotización en curso", "Aceptado pendiente de pago/orden", "Confirmado", "En lista de espera", "Rechazado", "Retirado"])
+    list_validation(doc, tr, "AO2:AO201", ["", "Abierto", "Cancelado", "Reembolsado", "En disputa"])
+    list_validation(doc, tr, "AY2:AY201", ["Sí", "No", "No solicitado"])
     # Input cells unlocked; formula/control cells remain locked.
     unlock(tr, "A2:I201")
     unlock(tr, "K2:Z201")
@@ -222,53 +230,53 @@ def build_book(ctx, synthetic=False):
     tr.protect(PASSWORD)
 
     # Dashboards / required views.
-    make_view(sheets.getByName("Pipeline"), "Pipeline", "Interest through quotation; exclude Stale-EoI = Yes.", [
-        ("Active interests", '=COUNTIFS(Tracker.AH2:AH201;"Interest";Tracker.AX2:AX201;"No")'),
-        ("Active quotes", '=COUNTIFS(Tracker.AH2:AH201;"Quoted";Tracker.AX2:AX201;"No")'),
-        ("Quote revision in progress", '=COUNTIF(Tracker.AH2:AH201;"Quote-revision in progress")'),
-        ("Stale EoI", '=COUNTIF(Tracker.AX2:AX201;"Yes")'),
+    make_view(sheets.getByName("Pipeline"), "Flujo de oportunidades", "Interés hasta cotización; excluye intereses obsoletos.", [
+        ("Intereses activos", '=COUNTIFS(Tracker.AH2:AH201;"Interés";Tracker.AX2:AX201;"No")'),
+        ("Cotizaciones activas", '=COUNTIFS(Tracker.AH2:AH201;"Cotizado";Tracker.AX2:AX201;"No")'),
+        ("Revisiones de cotización en curso", '=COUNTIF(Tracker.AH2:AH201;"Revisión de cotización en curso")'),
+        ("Intereses obsoletos", '=COUNTIF(Tracker.AX2:AX201;"Sí")'),
     ])
-    make_view(sheets.getByName("Enrollment"), "Enrollment", "Confirmed capacity for the round entered in B3.", [])
+    make_view(sheets.getByName("Enrollment"), "Inscripción", "Capacidad confirmada para la ronda indicada en B3.", [])
     en = sheets.getByName("Enrollment")
-    set_text(en, 0, 2, "Round ID")
+    set_text(en, 0, 2, "ID de ronda")
     unlock(en, "B3")
-    for c, h in enumerate(["Metric", "Confirmed", "Limit", "Residual", "Alert"]): set_text(en, c, 4, h)
+    for c, h in enumerate(["Indicador", "Confirmado", "Límite", "Residual", "Alerta"]): set_text(en, c, 4, h)
     style_header(en, "A5:E5")
-    metrics = [("CO analyzers", "F", 4), ("SO₂ analyzers", "G", 4), ("O₃ analyzers", "H", 4), ("NO/NO₂ analyzers", "I", 4)]
+    metrics = [("Analizadores de CO", "F", 4), ("Analizadores de SO₂", "G", 4), ("Analizadores de O₃", "H", 4), ("Analizadores de NO/NO₂", "I", 4)]
     for i, (label, letter, limit) in enumerate(metrics, 5):
         set_text(en, 0, i, label); set_formula(en, 1, i, f'=SUMIFS(Tracker.{letter}2:{letter}201;Tracker.E2:E201;$B$3;Tracker.AH2:AH201;"Confirmed")'); set_text(en, 2, i, limit); set_formula(en, 3, i, f'=C{i+1}-B{i+1}'); set_formula(en, 4, i, f'=IF(D{i+1}<0;"OVER CAPACITY";IF(D{i+1}=0;"LAST SLOT";"OK"))')
-    set_text(en, 0, 10, "Simultaneous CO/SO₂ organizations")
+    set_text(en, 0, 10, "Organizaciones con CO/SO₂ simultáneos")
     set_formula(en, 1, 10, '=COUNTIFS(Tracker.E2:E201;$B$3;Tracker.AH2:AH201;"Confirmed";Tracker.AG2:AG201;"Simultaneous CO/SO₂")')
     set_text(en, 2, 10, 3); set_formula(en, 3, 10, "=C11-B11"); set_formula(en, 4, 10, '=IF(D11<0;"OVER CAPACITY";IF(D11=0;"LAST SLOT";"OK"))')
-    set_text(en, 0, 11, "Simultaneous CO/SO₂ analyzers")
+    set_text(en, 0, 11, "Analizadores de CO/SO₂ simultáneos")
     set_formula(en, 1, 11, '=SUMIFS(Tracker.J2:J201;Tracker.E2:E201;$B$3;Tracker.AH2:AH201;"Confirmed";Tracker.AG2:AG201;"Simultaneous CO/SO₂")')
     set_text(en, 2, 11, 6); set_formula(en, 3, 11, "=C12-B12"); set_formula(en, 4, 11, '=IF(D12<0;"OVER CAPACITY";IF(D12=0;"LAST SLOT";"OK"))')
 
-    make_view(sheets.getByName("Viability"), "Viability", "Confirmed revenue versus threshold. Enter round and approved CS-04 threshold.", [])
+    make_view(sheets.getByName("Viability"), "Viabilidad", "Ingresos confirmados frente al umbral. Indique la ronda y el umbral aprobado en CS-04.", [])
     vi = sheets.getByName("Viability")
     for row, (label, formula) in enumerate([
-        ("Round ID", ""), ("Approved minimum revenue COP", ""),
-        ("Confirmed organizations", '=COUNTIFS(Tracker.E2:E201;B3;Tracker.AH2:AH201;"Confirmed")'),
-        ("Confirmed committed revenue COP", '=SUMIFS(Tracker.N2:N201;Tracker.E2:E201;B3;Tracker.AH2:AH201;"Confirmed")'),
-        ("Gap / surplus COP", "=B6-B4"), ("Decision", '=IF(B4="";"PENDING CS-04";IF(B6>=B4;"MEETS THRESHOLD";"BELOW THRESHOLD"))')
+        ("ID de ronda", ""), ("Ingreso mínimo aprobado (COP)", ""),
+        ("Organizaciones confirmadas", '=COUNTIFS(Tracker.E2:E201;B3;Tracker.AH2:AH201;"Confirmado")'),
+        ("Ingreso comprometido confirmado (COP)", '=SUMIFS(Tracker.N2:N201;Tracker.E2:E201;B3;Tracker.AH2:AH201;"Confirmado")'),
+        ("Brecha/superávit (COP)", "=B6-B4"), ("Decisión", '=IF(B4="";"PENDIENTE CS-04";IF(B6>=B4;"CUMPLE EL UMBRAL";"POR DEBAJO DEL UMBRAL"))')
     ], 2):
         set_text(vi, 0, row, label)
         if formula: set_formula(vi, 1, row, formula)
     unlock(vi, "B3:B4")
 
-    make_view(sheets.getByName("Receivables"), "Receivables", "Cash and overdue summary from tracker rows.", [
+    make_view(sheets.getByName("Receivables"), "Cuentas por cobrar", "Resumen de caja y vencimientos de los registros del rastreador.", [
         ("Committed COP", "=SUM(Tracker.N2:N201)"), ("Received COP", "=SUM(Tracker.AA2:AA201)"),
         ("Outstanding COP", "=SUM(Tracker.AB2:AB201)"), ("Overdue accounts", '=COUNTIF(Tracker.AN2:AN201;"OVERDUE")'),
         ("Expired payment/PO deadlines", '=COUNTIF(Tracker.AN2:AN201;"DEADLINE EXPIRED")'),
     ])
-    make_view(sheets.getByName("Exceptions"), "Exceptions", "Wait-listed, rejected, withdrawn, cancelled, refunded or disputed records.", [
+    make_view(sheets.getByName("Exceptions"), "Excepciones", "Registros en lista de espera, rechazados, retirados, cancelados, reembolsados o en disputa.", [
         ("Wait-listed", '=COUNTIF(Tracker.AH2:AH201;"Wait-listed")'), ("Rejected", '=COUNTIF(Tracker.AH2:AH201;"Rejected")'),
         ("Withdrawn", '=COUNTIF(Tracker.AH2:AH201;"Withdrawn")'), ("Cancelled", '=COUNTIF(Tracker.AO2:AO201;"Cancelled")'),
         ("Refunded", '=COUNTIF(Tracker.AO2:AO201;"Refunded")'), ("Disputed", '=COUNTIF(Tracker.AO2:AO201;"Disputed")'),
     ])
 
     lists = sheets.getByName("Lists")
-    set_text(lists, 0, 0, "Controlled values are embedded in Tracker validations. This sheet is reserved for institutional extensions.")
+    set_text(lists, 0, 0, "Los valores controlados están incorporados en las validaciones del rastreador. Esta hoja se reserva para ampliaciones institucionales.")
     lists.IsVisible = False
 
     for name in ["LEAME", "Pipeline", "Viability", "Receivables", "Exceptions"]:
@@ -277,10 +285,13 @@ def build_book(ctx, synthetic=False):
 
     if synthetic:
         populate_synthetic(tr)
-        set_text(readme, 0, 14, "SYNTHETIC TEST COPY — DO NOT USE AS A LIVE REGISTER")
+        set_text(readme, 0, 14, "COPIA DE PRUEBA SINTÉTICA — NO USAR COMO REGISTRO REAL")
         readme.getCellRangeByName("A15:H15").merge(True)
         readme.getCellRangeByName("A15:H15").CellBackColor = AMBER
         readme.getCellRangeByName("A15:H15").CharWeight = 150
+
+    for i in range(sheets.Count):
+        enforce_contrast(sheets.getByIndex(i))
 
     path = SYNTHETIC if synthetic else TEMPLATE
     url = uno.systemPathToFileUrl(str(path))
@@ -303,9 +314,9 @@ def make_view(sheet, title, subtitle, metrics):
 
 def populate_synthetic(tr):
     rows = [
-        {0:"SYN-001",1:"Laboratorio Andino",2:"Colombia",3:"Español",4:"R-TEST-01",5:1,6:1,7:0,8:0,10:"COT-SYN-001",11:0,12:5928000,13:5928000,14:"2026-08-15",15:"2026-08-15",16:"2026-08-10",17:"2026-07-20",18:"2026-07-21 09:00",19:"Accepted PO",20:"Yes",21:"Yes",22:"Passed",23:"2026-07-21",24:"Revisor A",25:"Paid",26:5928000,29:"2026-08-01",30:"FAC-SYN-001",31:"P-SYN-001",32:"Simultaneous CO/SO₂",33:"Confirmed",44:"Coordinación",45:"Onboarding",46:"calaire_med@unal.edu.co",47:"2026-07-10",50:"Yes",51:"CS09-SYN-001",53:"Synthetic happy path"},
-        {0:"SYN-002",1:"Metrología Norte",2:"Colombia",3:"Español",4:"R-TEST-01",5:0,6:0,7:1,8:1,10:"COT-SYN-002",11:0,12:5928000,13:5928000,14:"2026-08-15",15:"2026-08-15",16:"2026-08-10",17:"2026-07-22",18:"2026-07-23 10:00",19:"Signed quote",20:"No",21:"Yes",22:"Passed",23:"2026-07-23",24:"Revisor A",25:"Partial",26:2964000,29:"2026-08-01",32:"Individual gas",33:"Accepted pending payment/PO",44:"Comercial",45:"Collect balance",46:"calaire_med@unal.edu.co",47:"2026-07-12",50:"No",51:"CS09-SYN-002",53:"Synthetic partial payment"},
-        {0:"SYN-003",1:"Aire Pacífico",2:"Ecuador",3:"Español",4:"R-TEST-01",5:1,6:0,7:0,8:0,11:0,12:0,13:0,20:"Yes",21:"Yes",22:"Pending",25:"Pending",26:0,32:"Individual gas",33:"Wait-listed",35:"2026-07-24 08:00",44:"Comercial",45:"Monitor slot",46:"calaire_med@unal.edu.co",47:"2026-05-01",50:"Not requested",53:"Synthetic wait-list/stale case"},
+        {0:"SYN-001",1:"Laboratorio Andino",2:"Colombia",3:"Español",4:"R-TEST-01",5:1,6:1,7:0,8:0,10:"COT-SYN-001",11:0,12:5928000,13:5928000,14:"2026-08-15",15:"2026-08-15",16:"2026-08-10",17:"2026-07-20",18:"2026-07-21 09:00",19:"Orden de compra aceptada",20:"Sí",21:"Sí",22:"Aprobada",23:"2026-07-21",24:"Revisor A",25:"Pagado",26:5928000,29:"2026-08-01",30:"FAC-SYN-001",31:"P-SYN-001",32:"CO/SO₂ simultáneos",33:"Confirmado",44:"Coordinación",45:"Incorporación",46:"calaire_med@unal.edu.co",47:"2026-07-10",50:"Sí",51:"CS09-SYN-001",53:"Caso sintético satisfactorio"},
+        {0:"SYN-002",1:"Metrología Norte",2:"Colombia",3:"Español",4:"R-TEST-01",5:0,6:0,7:1,8:1,10:"COT-SYN-002",11:0,12:5928000,13:5928000,14:"2026-08-15",15:"2026-08-15",16:"2026-08-10",17:"2026-07-22",18:"2026-07-23 10:00",19:"Cotización firmada",20:"No",21:"Sí",22:"Aprobada",23:"2026-07-23",24:"Revisor A",25:"Parcial",26:2964000,29:"2026-08-01",32:"Gas individual",33:"Aceptado pendiente de pago/orden",44:"Comercial",45:"Cobrar saldo",46:"calaire_med@unal.edu.co",47:"2026-07-12",50:"No",51:"CS09-SYN-002",53:"Caso sintético de pago parcial"},
+        {0:"SYN-003",1:"Aire Pacífico",2:"Ecuador",3:"Español",4:"R-TEST-01",5:1,6:0,7:0,8:0,11:0,12:0,13:0,20:"Sí",21:"Sí",22:"Pendiente",25:"Pendiente",26:0,32:"Gas individual",33:"En lista de espera",35:"2026-07-24 08:00",44:"Comercial",45:"Vigilar cupo",46:"calaire_med@unal.edu.co",47:"2026-05-01",50:"No solicitado",53:"Caso sintético de lista de espera/interés obsoleto"},
     ]
     numeric = {5,6,7,8,11,12,13,26}
     dates = {14,15,16,17,18,23,29,35,41,47}
@@ -327,6 +338,23 @@ def col(n):
         s = chr(n % 26 + 65) + s
         n = n // 26 - 1
     return s
+
+
+def enforce_contrast(sheet):
+    """Normaliza el libro a presentación monocromática."""
+    was_protected = sheet.isProtected()
+    if was_protected:
+        sheet.unprotect(PASSWORD)
+    cursor = sheet.createCursor()
+    cursor.gotoEndOfUsedArea(True)
+    end = cursor.RangeAddress
+    for row in range(end.StartRow, end.EndRow + 1):
+        for column in range(end.StartColumn, end.EndColumn + 1):
+            cell = sheet.getCellByPosition(column, row)
+            cell.CellBackColor = 0xFFFFFF
+            cell.CharColor = 0x000000
+    if was_protected:
+        sheet.protect(PASSWORD)
 
 
 def main():

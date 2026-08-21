@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALAIRE-EA — Ensayos de Aptitud para Gases Contaminantes Criterio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #fcfcfb;
+            --ink: #111111;
+            --muted: #777777;
+            --border: #eaeae5;
+            --primary: #2d5be3;
+            --primary-soft: #eef2ff;
+            --emerald: #059669;
+            --emerald-soft: #ecfdf5;
+            --rose: #e11d48;
+            --rose-soft: #fff1f2;
+            --amber: #d97706;
+            --amber-soft: #fffbeb;
+            --violet: #7c3aed;
+            --violet-soft: #f5f3ff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; scroll-snap-type: y proximity; }
+
+        body {
+            font-family: 'Outfit', -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--ink);
+            line-height: 1.6;
+            font-size: 16px;
+            overflow-x: hidden;
+        }
+
+        /* ─── NAV ─── */
+        nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+            padding: 1rem 3rem;
+            display: flex; align-items: center; justify-content: space-between;
+            background: rgba(252,252,251,0.8);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border);
+        }
+        .nav-brand {
+            font-weight: 800; font-size: 0.8rem;
+            letter-spacing: 0.08em; text-transform: uppercase;
+        }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a {
+            text-decoration: none; color: var(--muted);
+            font-size: 0.82rem; font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--ink); }
+        .nav-cta {
+            background: var(--ink); color: var(--bg);
+            padding: 0.6rem 1.4rem; border-radius: 6px;
+            text-decoration: none; font-size: 0.8rem; font-weight: 600;
+            transition: all 0.3s;
+        }
+        .nav-cta:hover { background: var(--primary); }
+
+        /* ─── FULL-SCREEN SECTIONS ─── */
+        .full-section {
+            min-height: 100vh;
+            display: flex; align-items: center;
+            padding: 6rem 3rem;
+            scroll-snap-align: start;
+            position: relative;
+        }
+        .full-inner {
+            max-width: 1200px; margin: 0 auto; width: 100%;
+        }
+
+        /* ─── HERO ─── */
+        .hero {
+            background: linear-gradient(135deg, #f8faff 0%, #f0f4ff 50%, #faf5ff 100%);
+        }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 4rem; align-items: center;
+        }
+        .hero-label {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.7rem; font-weight: 600;
+            color: var(--primary); letter-spacing: 0.15em;
+            text-transform: uppercase; margin-bottom: 1.5rem;
+            display: inline-flex; align-items: center; gap: 0.5rem;
+        }
+        .hero-label::before {
+            content: ''; width: 24px; height: 2px;
+            background: var(--primary);
+        }
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 900; line-height: 1.08;
+            letter-spacing: -0.03em; margin-bottom: 1.5rem;
+        }
+        .hero h1 .text-primary { color: var(--primary); }
+        .hero-desc {
+            font-size: 1.1rem; color: var(--muted);
+            max-width: 480px; line-height: 1.8; margin-bottom: 2.5rem;
+        }
+        .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+        .btn {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 0.9rem 1.8rem; border-radius: 8px;
+            font-family: inherit; font-size: 0.85rem; font-weight: 600;
+            text-decoration: none; cursor: pointer; border: none;
+            transition: all 0.3s;
+        }
+        .btn-primary { background: var(--primary); color: #fff; }
+        .btn-primary:hover { background: #1e4bc4; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(45,91,227,0.2); }
+        .btn-ghost { background: transparent; color: var(--ink); border: 1.5px solid var(--border); }
+        .btn-ghost:hover { border-color: var(--ink); }
+
+        .hero-visual {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
+        }
+        .hero-stat-card {
+            background: #fff; border: 1px solid var(--border);
+            border-radius: 14px; padding: 1.8rem;
+            transition: all 0.3s;
+        }
+        .hero-stat-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.06);
+        }
+        .hero-stat-card:first-child { grid-column: 1 / -1; }
+        .hero-stat-icon {
+            width: 36px; height: 36px; border-radius: 10px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.8rem; margin-bottom: 1rem;
+        }
+        .icon-blue { background: var(--primary-soft); color: var(--primary); }
+        .icon-green { background: var(--emerald-soft); color: var(--emerald); }
+        .icon-rose { background: var(--rose-soft); color: var(--rose); }
+        .icon-violet { background: var(--violet-soft); color: var(--violet); }
+        .icon-amber { background: var(--amber-soft); color: var(--amber); }
+        .hero-stat-val {
+            font-size: 1.8rem; font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+        .hero-stat-lbl {
+            font-size: 0.78rem; color: var(--muted); margin-top: 0.2rem;
+        }
+
+        /* ─── SECTION HEADERS ─── */
+        .sec-tag {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.65rem; font-weight: 600;
+            letter-spacing: 0.15em; text-transform: uppercase;
+            margin-bottom: 0.75rem;
+        }
+        .sec-tag-blue { color: var(--primary); }
+        .sec-tag-green { color: var(--emerald); }
+        .sec-tag-rose { color: var(--rose); }
+        .sec-tag-violet { color: var(--violet); }
+        .sec-tag-amber { color: var(--amber); }
+        .sec-title {
+            font-size: clamp(2rem, 3.5vw, 2.8rem);
+            font-weight: 800; letter-spacing: -0.02em;
+            margin-bottom: 1rem; line-height: 1.12;
+        }
+        .sec-desc {
+            font-size: 1rem; color: var(--muted);
+            max-width: 520px; line-height: 1.8; margin-bottom: 2.5rem;
+        }
+
+        /* ─── GAS PILLS ─── */
+        .gas-pills {
+            display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem;
+        }
+        .gas-pill {
+            background: #fff; border: 1.5px solid var(--border);
+            border-radius: 12px; padding: 1.5rem 2rem;
+            min-width: 180px; transition: all 0.3s;
+            position: relative; overflow: hidden;
+        }
+        .gas-pill::after {
+            content: '';
+            position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
+            background: var(--primary);
+            transform: scaleX(0); transition: transform 0.3s;
+        }
+        .gas-pill:hover { border-color: var(--primary); }
+        .gas-pill:hover::after { transform: scaleX(1); }
+        .gas-pill-symbol {
+            font-size: 1.6rem; font-weight: 800; margin-bottom: 0.2rem;
+        }
+        .gas-pill-name {
+            font-size: 0.78rem; color: var(--muted);
+        }
+        .gas-pill-unit {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.6rem; color: var(--muted);
+            margin-top: 0.3rem;
+        }
+
+        /* ─── TIMELINE ─── */
+        .timeline {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 0; position: relative;
+            margin-top: 2rem;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute; top: 28px; left: 5%; right: 5%;
+            height: 2px; background: var(--border);
+        }
+        .tl-step {
+            text-align: center; position: relative; padding: 0 0.5rem;
+        }
+        .tl-dot {
+            width: 18px; height: 18px; border-radius: 50%;
+            background: #fff; border: 3px solid var(--primary);
+            margin: 19px auto 1.2rem;
+            position: relative; z-index: 1;
+        }
+        .tl-num {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.6rem; font-weight: 600;
+            color: var(--primary); margin-bottom: 0.5rem;
+        }
+        .tl-title {
+            font-size: 0.82rem; font-weight: 600; margin-bottom: 0.4rem;
+        }
+        .tl-desc {
+            font-size: 0.72rem; color: var(--muted); line-height: 1.5;
+        }
+
+        /* ─── PRICING SECTION ─── */
+        .price-hero {
+            background: var(--ink); color: #fff;
+            border-radius: 20px; padding: 4rem;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;
+            align-items: center;
+        }
+        .price-big {
+            font-size: clamp(3rem, 5vw, 4.5rem);
+            font-weight: 900; letter-spacing: -0.03em;
+            line-height: 1;
+        }
+        .price-sub {
+            font-size: 0.85rem; color: rgba(255,255,255,0.5);
+            margin-top: 0.5rem; line-height: 1.5;
+        }
+        .price-note {
+            font-size: 0.75rem; color: rgba(255,255,255,0.35);
+            margin-top: 1.5rem; line-height: 1.6;
+        }
+        .price-list { list-style: none; }
+        .price-list li {
+            padding: 0.7rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            font-size: 0.88rem; color: rgba(255,255,255,0.65);
+            display: flex; align-items: center; gap: 0.75rem;
+        }
+        .price-list li::before {
+            content: ''; width: 6px; height: 6px;
+            border-radius: 50%; background: var(--primary);
+            flex-shrink: 0;
+        }
+
+        /* ─── SCOPE COLUMNS ─── */
+        .scope-cols {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;
+        }
+        .scope-col-card {
+            background: #fff; border: 1px solid var(--border);
+            border-radius: 14px; padding: 2.5rem;
+        }
+        .scope-col-card h3 {
+            font-size: 1rem; font-weight: 700;
+            margin-bottom: 1.5rem;
+            display: flex; align-items: center; gap: 0.5rem;
+        }
+        .scope-dot {
+            width: 10px; height: 10px; border-radius: 50%;
+        }
+        .scope-dot-green { background: var(--emerald); }
+        .scope-dot-rose { background: var(--rose); }
+        .scope-col-card ul { list-style: none; }
+        .scope-col-card li {
+            padding: 0.55rem 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.85rem; color: var(--muted);
+            padding-left: 1.2rem; position: relative;
+        }
+        .scope-col-card li::before {
+            position: absolute; left: 0; font-size: 0.7rem; font-weight: 700;
+        }
+        .scope-col-card.inc li::before { content: '+'; color: var(--emerald); }
+        .scope-col-card.exc li::before { content: '–'; color: var(--rose); }
+
+        /* ─── DATA TABLE ─── */
+        .data-sheet {
+            background: #fff; border: 1px solid var(--border);
+            border-radius: 14px; overflow: hidden; margin-top: 2rem;
+        }
+        .ds-row {
+            display: grid; grid-template-columns: 200px 1fr;
+            border-bottom: 1px solid var(--border);
+        }
+        .ds-row:last-child { border-bottom: none; }
+        .ds-label {
+            padding: 1rem 1.5rem; font-size: 0.82rem; font-weight: 600;
+            background: var(--bg);
+        }
+        .ds-value {
+            padding: 1rem 1.5rem; font-size: 0.82rem; color: var(--muted);
+        }
+
+        /* ─── CONTACT SPLIT ─── */
+        .contact-split {
+            display: grid; grid-template-columns: 1.2fr 1fr; gap: 3rem;
+        }
+        .contact-form-card {
+            background: #fff; border: 1px solid var(--border);
+            border-radius: 14px; padding: 3rem;
+        }
+        .contact-form-card h2 {
+            font-size: 2rem; font-weight: 800; margin-bottom: 1rem;
+        }
+        .contact-form-card p {
+            color: var(--muted); line-height: 1.7; margin-bottom: 2rem;
+        }
+        .contact-big-email {
+            display: inline-flex; align-items: center; gap: 0.75rem;
+            background: var(--primary-soft); color: var(--primary);
+            padding: 1rem 1.8rem; border-radius: 10px;
+            text-decoration: none; font-weight: 700; font-size: 1rem;
+            transition: all 0.3s;
+        }
+        .contact-big-email:hover {
+            background: var(--primary); color: #fff;
+        }
+        .team-card {
+            background: #fff; border: 1px solid var(--border);
+            border-radius: 14px; padding: 2.5rem;
+        }
+        .team-card h3 {
+            font-size: 1rem; font-weight: 700; margin-bottom: 1.5rem;
+        }
+        .tm {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+        .tm:last-child { border-bottom: none; }
+        .tm-name { font-size: 0.88rem; font-weight: 600; }
+        .tm-role { font-size: 0.75rem; color: var(--muted); margin-top: 0.15rem; }
+
+        /* ─── DISCLAIMER ─── */
+        .disclaimer-strip {
+            background: var(--amber-soft);
+            border: 1px solid #fde68a;
+            border-radius: 12px;
+            padding: 1.5rem 2rem;
+            font-size: 0.85rem; color: var(--amber);
+            line-height: 1.6; margin-top: 2rem;
+            text-align: center;
+        }
+
+        /* ─── FOOTER ─── */
+        footer {
+            padding: 3rem;
+            max-width: 1200px; margin: 0 auto;
+            border-top: 1px solid var(--border);
+            display: flex; justify-content: space-between; align-items: center;
+            font-size: 0.75rem; color: var(--muted);
+        }
+        footer a { color: var(--ink); text-decoration: none; }
+
+        /* ─── RESPONSIVE ─── */
+        @media (max-width: 1024px) {
+            .hero-grid, .price-hero, .scope-cols, .contact-split {
+                grid-template-columns: 1fr;
+            }
+            .timeline { grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+            .timeline::before { display: none; }
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .full-section { padding: 5rem 1.5rem; }
+            .timeline { grid-template-columns: 1fr 1fr; }
+            .hero-visual { grid-template-columns: 1fr; }
+            .gas-pills { flex-direction: column; }
+            .gas-pill { min-width: 100%; }
+            .ds-row { grid-template-columns: 1fr; }
+            .ds-label { padding-bottom: 0.3rem; }
+            .ds-value { padding-top: 0.3rem; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-brand">CALAIRE-EA</div>
+    <ul class="nav-links">
+        <li><a href="#que-es">Descripción</a></li>
+        <li><a href="#gases">Gases</a></li>
+        <li><a href="#proceso">Proceso</a></li>
+        <li><a href="#precio">Precio</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <a href="#contacto" class="nav-cta">Expresar interés</a>
+</nav>
+
+<!-- ═══════ HERO ═══════ -->
+<section class="full-section hero" id="inicio">
+    <div class="full-inner">
+        <div class="hero-grid">
+            <div>
+                <div class="hero-label">Universidad Nacional de Colombia — Sede Medellín</div>
+                <h1>Ensayos de Aptitud para <span class="text-primary">Gases Contaminantes</span> Criterio</h1>
+                <p class="hero-desc">
+                    Compare el desempeño de sus analizadores mediante bloques controlados
+                    para CO, SO₂, O₃ y NO/NO₂ en las instalaciones del Laboratorio CALAIRE.
+                </p>
+                <div class="hero-actions">
+                    <a href="#contacto" class="btn btn-primary">Expresar interés →</a>
+                    <a href="#que-es" class="btn btn-ghost">Conocer más</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-stat-card">
+                    <div class="hero-stat-icon icon-blue">⬡</div>
+                    <div class="hero-stat-val">4 bloques</div>
+                    <div class="hero-stat-lbl">CO · SO₂ · O₃ · NO/NO₂</div>
+                </div>
+                <div class="hero-stat-card">
+                    <div class="hero-stat-icon icon-green">◎</div>
+                    <div class="hero-stat-val">1–4</div>
+                    <div class="hero-stat-lbl">Bloques por organización</div>
+                </div>
+                <div class="hero-stat-card">
+                    <div class="hero-stat-icon icon-violet">⊞</div>
+                    <div class="hero-stat-val">4</div>
+                    <div class="hero-stat-lbl">Analizadores por gas</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════ QUÉ ES ═══════ -->
+<section class="full-section" id="que-es">
+    <div class="full-inner">
+        <div class="sec-tag sec-tag-blue">01 — Descripción</div>
+        <div class="sec-title">Qué es el servicio</div>
+        <div class="sec-desc">
+            Permite comparar el desempeño de analizadores de organizaciones participantes
+            mediante bloques controlados. La ronda se ejecuta en las instalaciones de CALAIRE
+            con soporte de los procedimientos vigentes del sistema de gestión.
+        </div>
+
+        <div style="max-width: 700px; background: var(--primary-soft); border-left: 3px solid var(--primary); border-radius: 0 12px 12px 0; padding: 2rem 2.5rem;">
+            <p style="font-size: 0.95rem; color: var(--ink); line-height: 1.8; font-style: italic;">
+                "La participación aporta una comparación documentada del desempeño del sistema de medición,
+                ayuda a identificar oportunidades de mejora y complementa los controles internos de calidad.
+                No constituye por sí solo una certificación ni acreditación."
+            </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5rem; margin-top: 3rem; max-width: 800px;">
+            <div style="padding: 1.5rem; background: #fff; border: 1px solid var(--border); border-radius: 12px;">
+                <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🔬</div>
+                <div style="font-size: 0.85rem; font-weight: 600; margin-bottom: 0.3rem;">Evidencia independiente</div>
+                <div style="font-size: 0.78rem; color: var(--muted);">Resultados comparables y documentados para aseguramiento de calidad.</div>
+            </div>
+            <div style="padding: 1.5rem; background: #fff; border: 1px solid var(--border); border-radius: 12px;">
+                <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">📋</div>
+                <div style="font-size: 0.85rem; font-weight: 600; margin-bottom: 0.3rem;">Mejora continua</div>
+                <div style="font-size: 0.78rem; color: var(--muted);">Identifique oportunidades de mejora en sus sistemas de medición.</div>
+            </div>
+            <div style="padding: 1.5rem; background: #fff; border: 1px solid var(--border); border-radius: 12px;">
+                <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🏛️</div>
+                <div style="font-size: 0.85rem; font-weight: 600; margin-bottom: 0.3rem;">Control de calidad</div>
+                <div style="font-size: 0.78rem; color: var(--muted);">Complemento a los controles internos de calidad de su organización.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════ GASES ═══════ -->
+<section class="full-section" id="gases" style="background: #f8faff;">
+    <div class="full-inner">
+        <div class="sec-tag sec-tag-green">02 — Cobertura</div>
+        <div class="sec-title">Bloques seleccionables</div>
+        <div class="sec-desc">Seleccione entre uno y cuatro bloques. Cada bloque incluye hasta un analizador por participación.</div>
+
+        <div class="gas-pills">
+            <div class="gas-pill">
+                <div class="gas-pill-symbol">CO</div>
+                <div class="gas-pill-name">Monóxido de carbono</div>
+                <div class="gas-pill-unit">µmol/mol</div>
+            </div>
+            <div class="gas-pill">
+                <div class="gas-pill-symbol">SO₂</div>
+                <div class="gas-pill-name">Dióxido de azufre</div>
+                <div class="gas-pill-unit">nmol/mol</div>
+            </div>
+            <div class="gas-pill">
+                <div class="gas-pill-symbol">O₃</div>
+                <div class="gas-pill-name">Ozono</div>
+                <div class="gas-pill-unit">nmol/mol</div>
+            </div>
+            <div class="gas-pill">
+                <div class="gas-pill-symbol">NO/NO₂</div>
+                <div class="gas-pill-name">Óxidos de nitrógeno</div>
+                <div class="gas-pill-unit">nmol/mol</div>
+            </div>
+        </div>
+
+        <div style="display: flex; gap: 2rem; margin-top: 1rem; flex-wrap: wrap;">
+            <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; color: var(--muted);">
+                <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--primary);"></span>
+                Capacidad individual: 4 analizadores por gas
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; color: var(--muted);">
+                <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--emerald);"></span>
+                CO/SO₂ simultáneos: 3 participantes, 6 analizadores
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════ PROCESO ═══════ -->
+<section class="full-section" id="proceso">
+    <div class="full-inner">
+        <div class="sec-tag sec-tag-violet">03 — Flujo</div>
+        <div class="sec-title">Cómo funciona</div>
+        <div class="sec-desc">Desde la expresión de interés hasta la entrega del informe final.</div>
+
+        <div class="timeline">
+            <div class="tl-step">
+                <div class="tl-dot"></div>
+                <div class="tl-num">01</div>
+                <div class="tl-title">Expresión de interés</div>
+                <div class="tl-desc">Envíe sus datos y la información de sus analizadores.</div>
+            </div>
+            <div class="tl-step">
+                <div class="tl-dot"></div>
+                <div class="tl-num">02</div>
+                <div class="tl-title">Cotización</div>
+                <div class="tl-desc">Reciba cotización con tarifa plana, condiciones y calendario.</div>
+            </div>
+            <div class="tl-step">
+                <div class="tl-dot"></div>
+                <div class="tl-num">03</div>
+                <div class="tl-title">Inscripción</div>
+                <div class="tl-desc">Regístrese, acepte términos y presente pago u orden de compra.</div>
+            </div>
+            <div class="tl-step">
+                <div class="tl-dot"></div>
+                <div class="tl-num">04</div>
+                <div class="tl-title">Confirmación</div>
+                <div class="tl-desc">Verificación de capacidad, equipo y pago.</div>
+            </div>
+            <div class="tl-step">
+                <div class="tl-dot"></div>
+                <div class="tl-num">05</div>
+                <div class="tl-title">Ejecución</div>
+                <div class="tl-desc">Transporte a Medellín. CALAIRE ejecuta la ronda.</div>
+            </div>
+            <div class="tl-step">
+                <div class="tl-dot"></div>
+                <div class="tl-num">06</div>
+                <div class="tl-title">Informe</div>
+                <div class="tl-desc">Informe técnico digital y constancia de participación.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════ PRECIO ═══════ -->
+<section class="full-section" id="precio" style="background: #f8faff;">
+    <div class="full-inner">
+        <div class="sec-tag sec-tag-amber">04 — Inversión</div>
+        <div class="sec-title">Modelo de participación</div>
+        <div class="sec-desc">Tarifa plana por organización participante. El mismo valor para uno a cuatro bloques.</div>
+
+        <div class="price-hero">
+            <div>
+                <div class="price-big">~5.928.000</div>
+                <div class="price-sub">COP por organización · sin impuestos · referencia provisional</div>
+                <div class="price-note">
+                    El valor es una referencia indicativa y no constituye precio aprobado.
+                    El precio final se determinará tras la aprobación del modelo de costos CS-04.
+                    Cotización y facturación únicamente en COP.
+                </div>
+            </div>
+            <ul class="price-list">
+                <li>Inscripción y revisión del pedido</li>
+                <li>Preparación y coordinación de la ronda</li>
+                <li>Uso de instalaciones y sistema de generación</li>
+                <li>Ejecución de los bloques contratados</li>
+                <li>Administración y evaluación de datos</li>
+                <li>Informe técnico digital</li>
+                <li>Constancia de participación</li>
+                <li>Canales de aclaraciones, quejas y apelaciones</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════ ALCANCE ═══════ -->
+<section class="full-section" id="alcance">
+    <div class="full-inner">
+        <div class="sec-tag sec-tag-rose">05 — Alcance</div>
+        <div class="sec-title">Incluido y excluido</div>
+        <div class="sec-desc">Detalles de lo que cubre la tarifa y lo que asume el participante.</div>
+
+        <div class="scope-cols">
+            <div class="scope-col-card inc">
+                <h3><span class="scope-dot scope-dot-green"></span> Incluido en la tarifa</h3>
+                <ul>
+                    <li>Inscripción y revisión del pedido</li>
+                    <li>Un cupo para un analizador en cada bloque contratado</li>
+                    <li>Preparación y coordinación de la ronda</li>
+                    <li>Uso de instalaciones y sistema de generación</li>
+                    <li>Ejecución para los gases contratados</li>
+                    <li>Administración y evaluación de datos</li>
+                    <li>Informe técnico digital</li>
+                    <li>Constancia de participación</li>
+                </ul>
+            </div>
+            <div class="scope-col-card exc">
+                <h3><span class="scope-dot scope-dot-rose"></span> A cargo del participante</h3>
+                <ul>
+                    <li>Transporte del analizador hacia y desde Medellín</li>
+                    <li>Seguro y riesgo del equipo</li>
+                    <li>Calibración, mantenimiento o reparación</li>
+                    <li>Aduanas, visas e impuestos de importación/exportación</li>
+                    <li>Alojamiento y alimentación del personal</li>
+                    <li>Impuestos de importación para clientes internacionales</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════ DETALLES ═══════ -->
+<section class="full-section" id="detalles" style="background: #f8faff;">
+    <div class="full-inner">
+        <div class="sec-tag sec-tag-blue">06 — Información clave</div>
+        <div class="sec-title">Detalles de la ronda</div>
+
+        <div class="data-sheet">
+            <div class="ds-row">
+                <div class="ds-label">Ubicación</div>
+                <div class="ds-value">Facultad de Minas, Universidad Nacional de Colombia, Sede Medellín</div>
+            </div>
+            <div class="ds-row">
+                <div class="ds-label">Modalidad</div>
+                <div class="ds-value">En instalaciones de CALAIRE — el participante transporta su analizador</div>
+            </div>
+            <div class="ds-row">
+                <div class="ds-label">Capacidad por gas</div>
+                <div class="ds-value">Hasta 4 analizadores participantes</div>
+            </div>
+            <div class="ds-row">
+                <div class="ds-label">CO y SO₂ simultáneos</div>
+                <div class="ds-value">Hasta 3 participantes, 6 analizadores en total</div>
+            </div>
+            <div class="ds-row">
+                <div class="ds-label">Evaluación</div>
+                <div class="ds-value">z o z′; con ζ y En cuando hay información de incertidumbre</div>
+            </div>
+            <div class="ds-row">
+                <div class="ds-label">Calificación</div>
+                <div class="ds-value">Sin calificación agregada a1–a7 ni aprobado/reprobado global</div>
+            </div>
+            <div class="ds-row">
+                <div class="ds-label">Moneda</div>
+                <div class="ds-value">COP exclusivamente</div>
+            </div>
+            <div class="ds-row">
+                <div class="ds-label">Validez de cotización</div>
+                <div class="ds-value">30 días calendario desde emisión</div>
+            </div>
+            <div class="ds-row">
+                <div class="ds-label">Plazo de pago</div>
+                <div class="ds-value">15 días calendario desde registro, sin exceder cierre de inscripción</div>
+            </div>
+        </div>
+
+        <div class="disclaimer-strip">
+            Esta es una propuesta de servicio en etapa previa a acreditación. CALAIRE-EA no afirma que
+            el servicio o la ronda estén acreditados.
+        </div>
+    </div>
+</section>
+
+<!-- ═══════ CONTACTO ═══════ -->
+<section class="full-section" id="contacto">
+    <div class="full-inner">
+        <div class="sec-tag sec-tag-green">Contacto</div>
+        <div class="sec-title">Expresión de interés</div>
+
+        <div class="contact-split">
+            <div class="contact-form-card">
+                <h2>Comience aquí</h2>
+                <p>
+                    Manifestar interés no constituye inscripción, no reserva cupo y no obliga a contratar.
+                    La cotización y el formulario definitivo se habilitarán después de aprobar la viabilidad,
+                    el precio y las condiciones.
+                </p>
+                <a href="mailto:calaire_med@unal.edu.co" class="contact-big-email">
+                    ✉ calaire_med@unal.edu.co
+                </a>
+                <div style="margin-top: 2rem; font-size: 0.82rem; color: var(--muted);">
+                    <strong style="color: var(--ink);">Dirección:</strong> Facultad de Minas, Universidad Nacional de Colombia, Sede Medellín
+                </div>
+            </div>
+            <div class="team-card">
+                <h3>Equipo del servicio</h3>
+                <div class="tm">
+                    <div class="tm-name">Carmen Elena Zapata</div>
+                    <div class="tm-role">Coordinadora EA / Gerente de servicio</div>
+                </div>
+                <div class="tm">
+                    <div class="tm-name">David Pulgarín</div>
+                    <div class="tm-role">Líder comercial</div>
+                </div>
+                <div class="tm">
+                    <div class="tm-name">Jeniffer Ochoa</div>
+                    <div class="tm-role">Gestión de calidad</div>
+                </div>
+                <div class="tm">
+                    <div class="tm-name">Wilson Salas</div>
+                    <div class="tm-role">Calidad del aire</div>
+                </div>
+                <div class="tm">
+                    <div class="tm-name">Maira Herrera</div>
+                    <div class="tm-role">Infraestructura</div>
+                </div>
+                <div class="tm">
+                    <div class="tm-name">Fabián Moreno</div>
+                    <div class="tm-role">Ingeniero operativo</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div>© 2026 Universidad Nacional de Colombia — CALAIRE-EA</div>
+    <div><a href="#">Política de datos</a> · <a href="mailto:calaire_med@unal.edu.co">Contacto</a></div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>CALAIRE-EA · Ensayos de Aptitud — AURORA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#06070c;
+    --bg-2:#0a0c14;
+    --line:rgba(255,255,255,.08);
+    --line-2:rgba(255,255,255,.04);
+    --ink:#e7eaf0;
+    --ink-2:#aab1c2;
+    --muted:#6f778a;
+    --g:#7cffb2;
+    --b:#7aa7ff;
+    --o:#ffb86b;
+    --p:#c7a0ff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.55}
+  body{
+    background:
+      radial-gradient(1100px 700px at 90% -10%, rgba(124,255,178,.10), transparent 60%),
+      radial-gradient(900px 600px at -10% 30%, rgba(122,167,255,.08), transparent 60%),
+      radial-gradient(700px 500px at 50% 110%, rgba(199,160,255,.06), transparent 60%),
+      var(--bg);
+    min-height:100vh;
+    overflow-x:hidden;
+  }
+  body::before{
+    content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+    background-image:
+      linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+    background-size:48px 48px;
+    mask-image:radial-gradient(ellipse at 50% 0%, #000 30%, transparent 75%);
+  }
+  .wrap{position:relative;z-index:1;max-width:1280px;margin:0 auto;padding:32px 32px 80px}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border:1px solid var(--line);border-radius:14px;background:rgba(10,12,20,.55);backdrop-filter:blur(14px);position:sticky;top:16px;z-index:10}
+  .logo{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:.01em}
+  .logo-mark{width:32px;height:32px;border-radius:9px;background:conic-gradient(from 200deg, var(--g), var(--b), var(--p), var(--g));position:relative}
+  .logo-mark::after{content:"";position:absolute;inset:7px;background:var(--bg);border-radius:4px;border:1.5px solid rgba(255,255,255,.18)}
+  .nav-links{display:flex;gap:6px}
+  .nav-links a{color:var(--ink-2);text-decoration:none;font-size:13px;padding:8px 12px;border-radius:8px;transition:all .2s}
+  .nav-links a:hover{background:rgba(255,255,255,.05);color:var(--ink)}
+  .nav-cta{font-size:12px;font-family:'JetBrains Mono',monospace;padding:9px 14px;border-radius:8px;background:linear-gradient(135deg,var(--g),#5de39a);color:#0a1410;font-weight:600;text-decoration:none;letter-spacing:.04em;display:inline-flex;align-items:center;gap:8px}
+  .nav-cta::after{content:"→"}
+  /* HERO */
+  .hero{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center;padding:80px 0 64px}
+  @media (max-width:920px){.hero{grid-template-columns:1fr;gap:32px;padding:48px 0}}
+  .tag{display:inline-flex;align-items:center;gap:10px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--g);padding:7px 12px;border:1px solid rgba(124,255,178,.25);border-radius:999px;letter-spacing:.14em;text-transform:uppercase;background:rgba(124,255,178,.05);margin-bottom:24px}
+  .tag::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--g);box-shadow:0 0 12px var(--g)}
+  h1{font-size:clamp(40px,6vw,80px);font-weight:700;letter-spacing:-.035em;line-height:1.0;margin-bottom:24px}
+  h1 .g{background:linear-gradient(120deg,var(--g) 0%, var(--b) 60%, var(--p) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;display:inline-block}
+  .lede{font-size:18px;color:var(--ink-2);max-width:54ch;margin-bottom:32px}
+  .cta-row{display:flex;gap:12px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 20px;border-radius:10px;font-weight:600;font-size:14px;text-decoration:none;transition:transform .15s, box-shadow .25s;cursor:pointer;border:1px solid transparent}
+  .btn-primary{background:linear-gradient(135deg,var(--g),#5de39a);color:#06120c;box-shadow:0 8px 30px rgba(124,255,178,.25)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(124,255,178,.4)}
+  .btn-ghost{background:rgba(255,255,255,.03);color:var(--ink);border-color:var(--line)}
+  .btn-ghost:hover{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.18)}
+  /* HERO VISUAL */
+  .visual{position:relative;aspect-ratio:1/1;border-radius:24px;border:1px solid var(--line);background:radial-gradient(circle at 30% 30%, rgba(124,255,178,.18), transparent 50%),radial-gradient(circle at 70% 70%, rgba(122,167,255,.15), transparent 55%),#0a0c14;overflow:hidden}
+  .visual::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg, transparent 0 22px, rgba(255,255,255,.025) 22px 23px)}
+  .ring{position:absolute;left:50%;top:50%;border-radius:50%;border:1px solid rgba(255,255,255,.08);transform:translate(-50%,-50%)}
+  .ring.r1{width:60%;height:60%;animation:spin 30s linear infinite}
+  .ring.r2{width:80%;height:80%;animation:spin 50s linear infinite reverse;border-style:dashed;border-color:rgba(124,255,178,.18)}
+  .ring.r3{width:100%;height:100%;border-color:rgba(122,167,255,.12)}
+  .dot{position:absolute;width:14px;height:14px;border-radius:50%;box-shadow:0 0 20px currentColor}
+  .dot.co{background:var(--o);color:var(--o);left:70%;top:30%}
+  .dot.so{background:#ff9eb5;color:#ff9eb5;left:30%;top:65%}
+  .dot.no{background:var(--b);color:var(--b);left:50%;top:18%}
+  .dot.o3{background:var(--g);color:var(--g);left:75%;top:75%}
+  .center-label{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);text-align:center;background:rgba(10,12,20,.7);backdrop-filter:blur(10px);padding:18px 22px;border-radius:14px;border:1px solid var(--line)}
+  .center-label small{display:block;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:.18em;text-transform:uppercase;margin-bottom:6px}
+  .center-label b{font-size:18px;letter-spacing:-.01em}
+  @keyframes spin{from{transform:translate(-50%,-50%) rotate(0)}to{transform:translate(-50%,-50%) rotate(360deg)}}
+  /* SECTIONS */
+  section{padding:64px 0;border-top:1px solid var(--line-2)}
+  .section-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:40px;gap:24px;flex-wrap:wrap}
+  .section-eyebrow{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--b);letter-spacing:.18em;text-transform:uppercase;margin-bottom:12px;display:block}
+  .section-head h2{font-size:clamp(28px,3.5vw,44px);font-weight:600;letter-spacing:-.025em;line-height:1.05;max-width:22ch}
+  .section-head p{color:var(--ink-2);max-width:50ch}
+  /* METRICS */
+  .metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+  @media (max-width:720px){.metrics{grid-template-columns:repeat(2,1fr)}}
+  .metric{background:var(--bg-2);padding:28px 24px}
+  .metric b{display:block;font-size:36px;font-weight:600;letter-spacing:-.02em;margin-bottom:4px}
+  .metric b span{color:var(--g)}
+  .metric small{color:var(--muted);font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:.06em;text-transform:uppercase}
+  /* BLOCKS */
+  .blocks{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  @media (max-width:920px){.blocks{grid-template-columns:repeat(2,1fr)}}
+  .block{position:relative;padding:24px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(180deg, rgba(255,255,255,.02), transparent);transition:all .2s;overflow:hidden}
+  .block:hover{border-color:rgba(255,255,255,.18);transform:translateY(-3px)}
+  .block::before{content:"";position:absolute;left:0;top:0;width:3px;height:100%;background:var(--c)}
+  .block .formula{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px}
+  .block h3{font-size:30px;font-weight:600;letter-spacing:-.01em;margin-bottom:6px}
+  .block .unit{font-size:12px;color:var(--ink-2);margin-bottom:16px}
+  .block p{font-size:13px;color:var(--ink-2)}
+  .block .bar{height:4px;background:rgba(255,255,255,.06);border-radius:2px;margin-top:18px;overflow:hidden}
+  .block .bar::after{content:"";display:block;height:100%;width:var(--w);background:linear-gradient(90deg, var(--c), transparent)}
+  /* PRICING */
+  .pricing{display:grid;grid-template-columns:1fr 1.4fr;gap:32px}
+  @media (max-width:920px){.pricing{grid-template-columns:1fr}}
+  .price-card{padding:36px;border:1px solid var(--line);border-radius:20px;background:radial-gradient(circle at 100% 0%, rgba(124,255,178,.08), transparent 50%), var(--bg-2);position:relative;overflow:hidden}
+  .price-card .anchor{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--g);letter-spacing:.14em;text-transform:uppercase;margin-bottom:16px;display:inline-flex;align-items:center;gap:8px}
+  .price-card .anchor::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--g);box-shadow:0 0 10px var(--g)}
+  .price-card h3{font-size:18px;font-weight:500;color:var(--ink-2);margin-bottom:8px}
+  .price-card .amount{font-size:48px;font-weight:600;letter-spacing:-.02em;margin:8px 0 4px}
+  .price-card .amount small{font-size:14px;color:var(--muted);font-weight:400;margin-left:6px;font-family:'JetBrains Mono',monospace}
+  .price-card .amount .cur{font-size:20px;color:var(--ink-2);font-weight:500;vertical-align:super;margin-right:4px}
+  .price-card .note{color:var(--muted);font-size:13px;line-height:1.6;margin-top:20px;padding-top:20px;border-top:1px solid var(--line)}
+  .price-features{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .feat{padding:14px 16px;background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:10px;font-size:13px;display:flex;align-items:center;gap:10px}
+  .feat::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--g);flex-shrink:0}
+  /* FLOW */
+  .flow{display:grid;grid-template-columns:repeat(8,1fr);gap:8px}
+  @media (max-width:920px){.flow{grid-template-columns:repeat(2,1fr)}}
+  .step{grid-column:span 2;padding:18px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.02);position:relative}
+  @media (max-width:920px){.step{grid-column:span 1}}
+  .step b{display:block;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--b);letter-spacing:.1em;margin-bottom:8px}
+  .step h4{font-size:14px;font-weight:500;margin-bottom:4px}
+  .step p{font-size:12px;color:var(--muted)}
+  /* FOOTER */
+  footer{margin-top:64px;padding:32px;border:1px solid var(--line);border-radius:20px;background:radial-gradient(circle at 0% 100%, rgba(122,167,255,.1), transparent 50%), var(--bg-2);display:grid;grid-template-columns:1.4fr 1fr;gap:32px;align-items:center}
+  @media (max-width:720px){footer{grid-template-columns:1fr}}
+  footer h3{font-size:26px;font-weight:600;letter-spacing:-.02em;margin-bottom:8px}
+  footer p{color:var(--ink-2);font-size:14px;margin-bottom:20px}
+  .contact-row{display:flex;gap:8px;flex-wrap:wrap}
+  .pill{font-family:'JetBrains Mono',monospace;font-size:12px;padding:8px 12px;border:1px solid var(--line);border-radius:8px;color:var(--ink-2);background:rgba(255,255,255,.02)}
+  .pill a{color:var(--g);text-decoration:none}
+  .meta-line{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:.18em;text-transform:uppercase}
+  /* status strip */
+  .strip{margin-top:24px;padding:14px 18px;border:1px dashed var(--line);border-radius:12px;display:flex;justify-content:space-between;align-items:center;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:.08em;flex-wrap:wrap;gap:8px}
+  .strip .ok{color:var(--g)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <div class="logo">
+      <span class="logo-mark"></span>
+      <span>CALAIRE-EA <span style="color:var(--muted);font-weight:400">/ PT-Service</span></span>
+    </div>
+    <div class="nav-links">
+      <a href="#alcance">Alcance</a>
+      <a href="#bloques">Bloques</a>
+      <a href="#tarifa">Tarifa</a>
+      <a href="#flujo">Flujo</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+    <a class="nav-cta" href="mailto:calaire_med@unal.edu.co">EoI</a>
+  </nav>
+
+  <header class="hero">
+    <div>
+      <span class="tag">CS-02 · propuesta v0.3</span>
+      <h1>Comparación independiente para <span class="g">analizadores de gases criterio</span>.</h1>
+      <p class="lede">Rondas de ensayo de aptitud para CO, SO₂, O₃ y NO/NO₂ ejecutadas en las instalaciones de CALAIRE — Universidad Nacional de Colombia, Sede Medellín — bajo procedimientos QMS vigentes.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="mailto:calaire_med@unal.edu.co">Manifestar interés →</a>
+        <a class="btn btn-ghost" href="#alcance">Ver alcance</a>
+      </div>
+    </div>
+    <div class="visual" aria-hidden="true">
+      <div class="ring r1"></div>
+      <div class="ring r2"></div>
+      <div class="ring r3"></div>
+      <span class="dot co"></span>
+      <span class="dot so"></span>
+      <span class="dot no"></span>
+      <span class="dot o3"></span>
+      <div class="center-label">
+        <small>PT-ROUND</small>
+        <b>4 gases · 4 bloques</b>
+      </div>
+    </div>
+  </header>
+
+  <section id="alcance">
+    <div class="section-head">
+      <div>
+        <span class="section-eyebrow">01 · Alcance</span>
+        <h2>Evidencia trazable para su aseguramiento de calidad.</h2>
+      </div>
+      <p>La participación entrega una comparación documentada del desempeño de su sistema de medición, identifica oportunidades de mejora y complementa sus controles internos.</p>
+    </div>
+    <div class="metrics">
+      <div class="metric"><b>4<span> bloques</span></b><small>Gases criterio</small></div>
+      <div class="metric"><b>z · z′<span> · ζ · En</span></b><small>Indicadores</small></div>
+      <div class="metric"><b>30 <span>días</span></b><small>Validez cotización</small></div>
+      <div class="metric"><b>12+ <span>resultados</span></b><small>Para consenso</small></div>
+    </div>
+  </section>
+
+  <section id="bloques">
+    <div class="section-head">
+      <div>
+        <span class="section-eyebrow">02 · Bloques seleccionables</span>
+        <h2>Elija entre uno y cuatro bloques.</h2>
+      </div>
+      <p>Cada organización puede contratar de uno a cuatro bloques, con hasta un analizador por bloque. Capacidad máxima: 4 analizadores por gas individual, 3 organizaciones simultáneas en CO/SO₂.</p>
+    </div>
+    <div class="blocks">
+      <div class="block" style="--c:#ffb86b;--w:80%">
+        <div class="formula">CO</div>
+        <h3>Monóxido</h3>
+        <div class="unit">µmol/mol</div>
+        <p>Analizadores participantes: 4. Límite individual.</p>
+        <div class="bar"></div>
+      </div>
+      <div class="block" style="--c:#ff9eb5;--w:80%">
+        <div class="formula">SO₂</div>
+        <h3>Dióxido de azufre</h3>
+        <div class="unit">nmol/mol</div>
+        <p>Analizadores participantes: 4. Compatible con CO simultáneo.</p>
+        <div class="bar"></div>
+      </div>
+      <div class="block" style="--c:#7aa7ff;--w:80%">
+        <div class="formula">NO / NO₂</div>
+        <h3>Óxidos de nitrógeno</h3>
+        <div class="unit">nmol/mol</div>
+        <p>Bloque único con analizador NOx. Hasta 4 analizadores.</p>
+        <div class="bar"></div>
+      </div>
+      <div class="block" style="--c:#7cffb2;--w:80%">
+        <div class="formula">O₃</div>
+        <h3>Ozono</h3>
+        <div class="unit">nmol/mol</div>
+        <p>Generación fotométrica. 4 analizadores por bloque.</p>
+        <div class="bar"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tarifa">
+    <div class="section-head">
+      <div>
+        <span class="section-eyebrow">03 · Tarifa plana</span>
+        <h2>Un valor por organización, sin importar cuántos bloques elija.</h2>
+      </div>
+      <p>Tarifa plana provisional por organización participante para uno a cuatro bloques. El valor mostrado es solo un benchmark de viabilidad — no constituye precio aprobado.</p>
+    </div>
+    <div class="pricing">
+      <div class="price-card">
+        <span class="anchor">Referencia benchmark</span>
+        <h3>Ancla indicativa por organización</h3>
+        <div class="amount"><span class="cur">COP</span>5.928.000<small>+ IVA</small></div>
+        <p style="color:var(--ink-2);font-size:13px;margin-top:4px">≈ EUR 1.600 · TRM 2026-07-14</p>
+        <p class="note">Valor no publicado como precio ofrecido. Antes de cotizar, CS-04 debe completar el modelo de costos y las revisiones financieras, técnicas y jurídicas deben estar cerradas. Impuestos y retenciones se determinan por la Universidad al emitir cada cotización.</p>
+      </div>
+      <div class="price-features">
+        <div class="feat">1 a 4 bloques al mismo precio</div>
+        <div class="feat">Hasta 1 analizador por bloque</div>
+        <div class="feat">Facturación en COP</div>
+        <div class="feat">Validez de cotización 30 días</div>
+        <div class="feat">Pago u orden de compra ≤ 15 días</div>
+        <div class="feat">Informe técnico digital</div>
+        <div class="feat">Constancia de participación</div>
+        <div class="feat">Canales de queja y apelación</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="flujo">
+    <div class="section-head">
+      <div>
+        <span class="section-eyebrow">04 · Flujo de inscripción</span>
+        <h2>De la expresión de interés al informe final.</h2>
+      </div>
+      <p>No se contempla etapa de informe preliminar. Fechas y plazo del informe final se definen en el aviso de ronda aprobado.</p>
+    </div>
+    <div class="flow">
+      <div class="step"><b>01</b><h4>Expresión de interés</h4><p>Sin compromiso. No reserva cupo.</p></div>
+      <div class="step"><b>02</b><h4>Cotización controlada</h4><p>30 días. Impuestos definidos por la UNAL.</p></div>
+      <div class="step"><b>03</b><h4>Registro y términos</h4><p>Aceptación de CS-08 y verificación de capacidad.</p></div>
+      <div class="step"><b>04</b><h4>Confirmación</h4><p>Pago u orden de compra aceptados. Cupo reservado.</p></div>
+    </div>
+    <div class="strip">
+      <span>EXCLUIDOS A CARGO DEL PARTICIPANTE</span>
+      <span class="ok">Transporte · seguro · calibración · visas · aduanas · estancia</span>
+    </div>
+  </section>
+
+  <footer id="contacto">
+    <div>
+      <div class="meta-line">05 · CONTACTO</div>
+      <h3 style="margin-top:10px">¿Su organización opera analizadores de gases criterio?</h3>
+      <p>Escriba al líder comercial para recibir el aviso de ronda y la manifestación de interés. Esta comunicación no constituye inscripción ni reserva cupo.</p>
+      <div class="contact-row">
+        <span class="pill">David Pulgarín · <a href="mailto:calaire_med@unal.edu.co">calaire_med@unal.edu.co</a></span>
+        <span class="pill">Quejas · <a href="mailto:calaire_med@unal.edu.co">calaire_med@unal.edu.co</a></span>
+      </div>
+    </div>
+    <div>
+      <div class="meta-line">PROVEEDOR</div>
+      <p style="margin-top:10px"><b>Universidad Nacional de Colombia</b><br>NIT 899.999.063-3 · Sede Medellín<br>Facultad de Minas · Laboratorio CALAIRE</p>
+      <p style="font-size:12px;color:var(--muted);margin-top:14px">Servicio en etapa previa a acreditación. La participación no implica certificación, acreditación ni declaración de competencia.</p>
+    </div>
+  </footer>
+</div>
+</body>
+</html>

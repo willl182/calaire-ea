@@ -1,0 +1,406 @@
+Delivered-To: wilsonsalas.c@gmail.com
+Received: by 2002:a5d:4a4d:0:b0:45e:ef33:c8c6 with SMTP id v13csp399331wrs;
+        Fri, 29 May 2026 11:08:30 -0700 (PDT)
+X-Received: by 2002:a05:690e:1593:20b0:652:5567:b3ec with SMTP id 956f58d0204a3-6605fea073cmr387245d50.37.1780078110019;
+        Fri, 29 May 2026 11:08:30 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1780078110; cv=pass;
+        d=google.com; s=arc-20240605;
+        b=UNb/1ewwWD/MQ4xSux0qgAA/DRDo2VgHIT58Pai6DlzNxCn1LRO6EAG6nLah+ITecp
+         Ja2+arh6dsq6/ApFiNfFIwA2IpLm94WF2BUniEC/+PKvFF1vQYhOOZrAG7TlCFGdIMk3
+         VRMvw2o7W8buEX8dRNAWHPcVsxNy+5F3KXSOtrEjX0naNCSdGr/ee8VaGdlxpNpd1vO6
+         M0X9l0XUbUBFYoPA9vogHvJM9oXjokbG+tcw+H/opsARwmorPYR+ON9smHkX1u5ElvZY
+         Sf1Zo6SeErBLVof43Z+1dNUEnWviN8vkoJgYT0ORgps5x5c539EYCsyAk8Pvnku//K20
+         3zDA==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=B9iFUA83TVQxl9+QA74966pwvRGYf2nN1LWtYZJ0L8E=;
+        fh=RaNl+Gzj/eStTcHW6Dw7CHboc80vq8L0vaqCQ/njQGU=;
+        b=TF8HSJ/WyDutDl/YEnH2KrHo+pxliRDvQuZIaAXvLUDvnBlpnfuNs3cvzFdWALdx43
+         Sd69ckS7xleAP5eGt4GmtIbfWG7XSanpdMTALqJOrWgd6h5S3z4k6jGOx905sjnSXuTd
+         BgHhKpFYSFqf/peobKj+quYWpyknPKYhIqCWnmEwFl0BJQ6ASQA4FzoNLqWijml+UdA0
+         niSXC0dGsEhsVoKG0zCFH+H7/kOA9wLPC0maV6UwS09gMeC5zSuLegWzKoPw18fugMaa
+         zpCeEY7ONAMyHFnAdv0Cqq3hK8Ft08sDjX73ZxsKuLh4aR8Q3ZExJ1uNVshXlxa8WVM2
+         b4Xg==;
+        dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@unal.edu.co header.s=google header.b=fpNpxWBT;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of sgccalaire_med@unal.edu.co designates 209.85.220.41 as permitted sender) smtp.mailfrom=sgccalaire_med@unal.edu.co;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=unal.edu.co;
+       dara=pass header.i=@gmail.com
+Return-Path: <sgccalaire_med@unal.edu.co>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 956f58d0204a3-6605342b170sor420715d50.0.2026.05.29.11.08.29
+        for <wilsonsalas.c@gmail.com>
+        (Google Transport Security);
+        Fri, 29 May 2026 11:08:29 -0700 (PDT)
+Received-SPF: pass (google.com: domain of sgccalaire_med@unal.edu.co designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unal.edu.co header.s=google header.b=fpNpxWBT;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of sgccalaire_med@unal.edu.co designates 209.85.220.41 as permitted sender) smtp.mailfrom=sgccalaire_med@unal.edu.co;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=unal.edu.co;
+       dara=pass header.i=@gmail.com
+ARC-Seal: i=1; a=rsa-sha256; t=1780078109; cv=none;
+        d=google.com; s=arc-20240605;
+        b=N0F15aEDABz6lVJNr4XPXqqDMRZC3IkO1uGjqjqaDXgmj3YEURBlRRySeCTuSZCrut
+         JnEZSwICoGF+6oJTXKEwqZ3miMNyuIVDhFW8YpcTuE/3tK2e811Kh6DYwyrwDpNjsoP2
+         SbmuI9MMsb2MQb/cMLda+YA8GyvLONAIIlS717Y/8sKOqK3LTvr+zB0cwwvZoVcKDGn9
+         vKJKVZ54Hvst/7+XPcDVeJul87tksmjjYXcKfBMPhLMQpCMfeRNhqh57d55opG0fMExR
+         vw8sPdPt9WMYI0YWyhMpAAPCepcomRaIg3OGjmknVHGfD3hV7qxCx++ZP6gyLIqCqa2E
+         vt7w==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=B9iFUA83TVQxl9+QA74966pwvRGYf2nN1LWtYZJ0L8E=;
+        fh=RaNl+Gzj/eStTcHW6Dw7CHboc80vq8L0vaqCQ/njQGU=;
+        b=bLfQ2OyY4A7oiooWE9EzP9/vATpKq7xaTqgwvoY1UpRpw98qQbou3fHtiVy2YXk9Ki
+         bedJtEf0wDtQowGpEIMqPZyYCsCPG1DmID/7Re3hVD0k+y+F/Dw8KqyV15QIi0SuBWkc
+         WTnQc+Sz0hJM3ye4z16zbfiuscyzOcDtQmjDz36Rvr8QUSPW39t/vZq86M87rmFrcVrb
+         e/L2xhzzFT1ghlfgf7X5ovzPlxUUcK3Id7T2cGG0+xu430NjMsLRw1vRGKhqoFKN4jMQ
+         gAST6eWkRpOtwGmXcUB/i/zp8d2wpG3Mm8JXQ5XzyVlN8sNSbEPGpkJN5kJnetVvSiMd
+         /y5g==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unal.edu.co; s=google; t=1780078109; x=1780682909; dara=google.com;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=B9iFUA83TVQxl9+QA74966pwvRGYf2nN1LWtYZJ0L8E=;
+        b=fpNpxWBTP5Cz0hpOWHzz4b8v3QDec1wYlD3Izojdw/HCbGUddm87i1nSbnpoupmQAi
+         QdEKxOotdLPiwtLfftXGRjnRs4UZalUJ6DotxBq/meDLKAbhw9mCWlcdVBymDrgtcnrd
+         qDlHmIm+pw4jcQd3xwJQ3UFHVxVMnmLjw2W+4=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20251104; t=1780078109; x=1780682909;
+        h=to:subject:message-id:date:from:mime-version:x-gm-gg
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=B9iFUA83TVQxl9+QA74966pwvRGYf2nN1LWtYZJ0L8E=;
+        b=GR+q1riD/PSqslj+3FoSUHNE51Cx4Qhk7vEnsZahwV9KoRcC8VVQAgXtXJBy4y80RZ
+         cmMz8m9YW6htcs/r9HUKzlfQLs9FPnB+g4B6sgfABHCiv+OoMWlcJ2iK5WxpYwRaqWdy
+         ZfsKDUquV1rglNEOeNMTmKKwDjUOOWedR1uGeVe7Zte30R3tM7AfN+Qb5GVCTqWUUr8o
+         cDGSnpnFH64kZDHavjwvFtihJDhVwTiE5ygMX2OXO4xRPneXKsykLgmuWq9LPxdp8xs/
+         htyV6UbEwSkl5yN/Y3hv+moLU1g/5C34PHpYd1PnxnGW44SVUy9bqv/BUmJa/7E8OLBr
+         6bPQ==
+X-Gm-Message-State: AOJu0YyG5SOXBYtAExQ7rVop7ruWqPIBDxdh+nnE8sSFQdXivl30FaNP
+	JoSealFzpi0xFVRGIMZ45cFfzhDRwVzYZaRYaB0eXKmXx38URj6i7WLJn0Uk67Xjm5HMGBXivx+
+	uKrKRSCR58Bx8CBD1n/KJ1RujUH0u/b+/KgYrEHQGXoX3/u6EQGFi+ZQ4Gw==
+X-Gm-Gg: Acq92OHBWS9oBaSrkUDOy/WTsVe30MseiiD1Krn4Xhh/eXEKc5T08bwIiUBHYLxFSUI
+	QZXvCx98gdS6TrfBr7Nglnyz1931tkeTfRPj2eHPAKc9sShms+l788wq3Tn/ERU123VCiNR8dkx
+	sRGlQOKUrWIt68wpDkzgVMzWUfgmWm51dGl7LDzMqfkDK6CD3rhw6xheIBmMNuC4U8SVOQocDgr
+	ExnqJbEFFcet8lwc1mywmsbWZef4WH/MEWalRY+hPqLrg042JcxswVn7GmvnKE/SX6Uos7wP2bk
+	zA3kEJ4wsPfyIO0YNn4MKOdHQt15NkzjqCtcdYTpWhH5Suj9jHLp6ZOM9Eot
+X-Received: by 2002:a05:690e:1918:b0:65e:41a4:54d5 with SMTP id
+ 956f58d0204a3-6606002d6fdmr299020d50.7.1780078109325; Fri, 29 May 2026
+ 11:08:29 -0700 (PDT)
+MIME-Version: 1.0
+From: Sistema de Gestion De Calidad del Aire <sgccalaire_med@unal.edu.co>
+Date: Fri, 29 May 2026 13:08:17 -0500
+X-Gm-Features: AVHnY4LMafT7oZ0GDP0aopZkrb9A4W1H1-6Fru5SGs8J5oKzKosziaB4nf5banE
+Message-ID: <CANiB1buNNWEanNWtvzFzgHJYjSG0Px8aoHCdL0O7xLmorqBq9A@mail.gmail.com>
+Subject: Balance piloto 1 proyecto EA
+To: WILSON R SALAS CH <wilsonsalas.c@gmail.com>, Fabian Moreno <famorenoc@gmail.com>, 
+	=?UTF-8?Q?Laboratorio_Calaire_=C3=81rea_Infraestructura?= <infracalaire_med@unal.edu.co>, 
+	Laboratorio CALAIRE <calaire_med@unal.edu.co>
+Content-Type: multipart/alternative; boundary="000000000000612a600652f8bb0b"
+
+--000000000000612a600652f8bb0b
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Saludos
+Revisi=C3=B3n de resultados del primer piloto
+
+Durante la sesi=C3=B3n se revisaron los resultados del primer piloto, se
+identificaron ajustes operativos para futuras pruebas y se definieron
+acciones de seguimiento para el cierre del ejercicio y la preparaci=C3=B3n =
+del
+piloto 2.
+Conclusiones del piloto 1
+
+Se acord=C3=B3 incluir 10 minutos como tiempo de estabilizaci=C3=B3n, cuyos=
+ datos no
+deben considerarse dentro de la prueba. Adem=C3=A1s, dado que se requiere
+garantizar el 75% de los datos establecidos por el m=C3=A9todo de calidad d=
+el
+aire, el tiempo total de las pruebas aumentar=C3=A1; por ejemplo, en CO y S=
+O2
+podr=C3=ADa llegar hasta 16 horas.
+
+Se resalt=C3=B3 la importancia de dejar claramente establecido ante los
+participantes que, una vez el cliente realiza su calibraci=C3=B3n, no es po=
+sible
+intervenir nuevamente en el equipo, as=C3=AD como las implicaciones en caso=
+ de
+falla.
+
+Tambi=C3=A9n se confirm=C3=B3 que el cilindro de referencia presenta un con=
+sumo
+aproximado de 2 psi.
+
+Adicionalmente, Wilson qued=C3=B3 encargado de confirmar con el SIATA la en=
+trega
+de los datos pendientes, con el fin de realizar una sesi=C3=B3n de trabajo =
+final
+con C=C3=A9sar.
+Preparaci=C3=B3n del piloto 2
+
+El piloto 2 est=C3=A1 previsto para finales de junio. A la fecha, se cuenta=
+ con
+la participaci=C3=B3n confirmada de Corantioquia para NO2 y O3.
+
+Queda pendiente confirmar con la UdeM si se vincular=C3=A1 a esta nueva fas=
+e.
+
+Se propuso estructurar un cronograma completo de una semana y considerar el
+uso del espacio exterior por parte de los participantes.
+
+Asimismo, se plante=C3=B3 la necesidad de contar con datos no satisfactorio=
+s por
+contaminante para evaluar el sistema en ese escenario. Como alternativa,
+Wilson propuso utilizar datos de prueba de los equipos propios, trat=C3=A1n=
+dolos
+como si correspondieran a un participante.
+Seguimiento t=C3=A9cnico
+
+En relaci=C3=B3n con el T700U, Fabi=C3=A1n realizar=C3=A1 la prueba del gen=
+erador sugerido
+por Sanambiente para descartar esta variable dentro del an=C3=A1lisis.
+Acciones definidas
+
+1.          Revisar la comunicaci=C3=B3n detallada dirigida a los participa=
+ntes,
+de modo que las condiciones del servicio queden completamente claras.
+
+1.          Establecer los tiempos de entrega de la incertidumbre por parte
+de los participantes.
+
+1.          Entregar el informe de resultados al participante 1,
+incorporando una nota aclaratoria en la que se indique que dicho informe no
+puede utilizarse como soporte del requisitos de ensayo de aptitud (ISO IEC
+17043).
+
+1.          Concretar con C=C3=A9sar una revisi=C3=B3n y una conclusi=C3=B3=
+n final de su
+parte sobre este primer piloto.
+
+
+
+
+
+JOH
+Profesional de Calidad
+Laboratorio de Calidad del Aire - CALAIRE
+Facultad de Minas
+Tel.: (57-4) 4255108 - 3017839747
+Universidad Nacional de Colombia
+Sede Medell=C3=ADn
+
+Visita nuestra p=C3=A1gina web:
+http://minas.medellin.unal.edu.co/laboratorios/calaire/
+
+Este mensaje y sus anexos est=C3=A1n dirigidos para ser usados por su(s)
+destinatario(s) exclusivamente y pueden contener informaci=C3=B3n confidenc=
+ial
+y/o reservada protegida legalmente. Si usted no es el destinatario, se le
+notifica que cualquier distribuci=C3=B3n o reproducci=C3=B3n del mismo, o d=
+e
+cualquiera de sus anexos, est=C3=A1 estrictamente prohibida. Si usted ha
+recibido este mensaje por error, por favor notif=C3=ADquenos inmediatamente=
+ y
+elimine su texto original, incluidos los anexos, o destruya cualquier
+reproducci=C3=B3n del mismo. Las opiniones expresadas en este mensaje son
+responsabilidad exclusiva de quien las emite y no necesariamente reflejan
+la posici=C3=B3n institucional de la Universidad Nacional de Colombia ni
+comprometen la responsabilidad institucional por el uso que el destinatario
+haga de las mismas. Este mensaje ha sido verificado con software antivirus.
+En consecuencia, la Universidad Nacional de Colombia no se hace responsable
+por la presencia en =C3=A9l, o en sus anexos, de alg=C3=BAn virus que pueda=
+ generar
+da=C3=B1os en los equipos o programas del destinatario.
+
+Antes de imprimir este mensaje, piense si es verdaderamente necesario
+hacerlo.
+
+Cuidar el medioambiente es responsabilidad de TODOS.
+
+--000000000000612a600652f8bb0b
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div><font color=3D"#000000"><br clear=3D"all"></font></di=
+v><div><font color=3D"#000000">Saludos</font></div><div><h1 style=3D"margin=
+:18pt 0cm 4pt;line-height:115%;break-after:avoid;font-family:&quot;Aptos Di=
+splay&quot;,sans-serif;font-weight:normal"><font size=3D"2" color=3D"#00000=
+0"><span style=3D"font-family:Aptos,sans-serif">Revisi=C3=B3n de resultados=
+ del primer piloto</span><span style=3D"line-height:115%;font-family:Aptos,=
+sans-serif"></span></font></h1>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 8pt;line-height:115%;font-fa=
+mily:Aptos,sans-serif"><font color=3D"#000000">Durante la sesi=C3=B3n se re=
+visaron los resultados del primer
+piloto, se identificaron ajustes operativos para futuras pruebas y se
+definieron acciones de seguimiento para el cierre del ejercicio y la
+preparaci=C3=B3n del piloto 2.</font></p>
+
+<h2 style=3D"margin:8pt 0cm 4pt;line-height:115%;break-after:avoid;font-fam=
+ily:&quot;Aptos Display&quot;,sans-serif"><font size=3D"2" color=3D"#000000=
+" style=3D""><span style=3D"font-family:Aptos,sans-serif">Conclusiones del =
+piloto 1</span><span style=3D"line-height:115%;font-family:Aptos,sans-serif=
+;font-weight:normal;line-height:115%"></span></font></h2>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 8pt;line-height:115%;font-fa=
+mily:Aptos,sans-serif"><font color=3D"#000000">Se acord=C3=B3 incluir 10 mi=
+nutos como tiempo de estabilizaci=C3=B3n,
+cuyos datos no deben considerarse dentro de la prueba. Adem=C3=A1s, dado qu=
+e se
+requiere garantizar el 75% de los datos establecidos por el m=C3=A9todo de =
+calidad
+del aire, el tiempo total de las pruebas aumentar=C3=A1; por ejemplo, en CO=
+ y SO2
+podr=C3=ADa llegar hasta 16 horas.</font></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 8pt;line-height:115%;font-fa=
+mily:Aptos,sans-serif"><font color=3D"#000000">Se resalt=C3=B3 la importanc=
+ia de dejar claramente establecido
+ante los participantes que, una vez el cliente realiza su calibraci=C3=B3n,=
+ no es
+posible intervenir nuevamente</font>=C2=A0en<font color=3D"#000000">=C2=A0e=
+l equipo, as=C3=AD como las implicaciones en caso de
+falla.</font></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 8pt;line-height:115%;font-fa=
+mily:Aptos,sans-serif"><font color=3D"#000000">Tambi=C3=A9n se confirm=C3=
+=B3 que el cilindro de referencia presenta
+un consumo aproximado de 2 psi.</font></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 8pt;line-height:115%;font-fa=
+mily:Aptos,sans-serif"><font color=3D"#000000">Adicionalmente, Wilson qued=
+=C3=B3 encargado de confirmar con el
+SIATA la entrega de los datos pendientes, con el fin de realizar una sesi=
+=C3=B3n de
+trabajo final con C=C3=A9sar.</font></p>
+
+<h2 style=3D"margin:8pt 0cm 4pt;line-height:115%;break-after:avoid;font-fam=
+ily:&quot;Aptos Display&quot;,sans-serif"><font size=3D"2" color=3D"#000000=
+" style=3D""><span style=3D"font-family:Aptos,sans-serif">Preparaci=C3=B3n =
+del piloto 2</span><span style=3D"line-height:115%;font-family:Aptos,sans-s=
+erif;font-weight:normal;line-height:115%"></span></font></h2>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 8pt;line-height:115%;font-fa=
+mily:Aptos,sans-serif"><font color=3D"#000000">El piloto 2 est=C3=A1 previs=
+to para finales de junio. A la fecha,
+se cuenta con la participaci=C3=B3n confirmada de Corantioquia para NO2 y O=
+3.</font></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 8pt;line-height:115%;font-fa=
+mily:Aptos,sans-serif"><font color=3D"#000000">Queda pendiente confirmar co=
+n la UdeM si se vincular=C3=A1 a esta
+nueva fase.</font></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 8pt;line-height:115%;font-fa=
+mily:Aptos,sans-serif"><font color=3D"#000000">Se propuso estructurar un cr=
+onograma completo de una semana
+y considerar el uso del espacio exterior por parte de los participantes.</f=
+ont></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 8pt;line-height:115%;font-fa=
+mily:Aptos,sans-serif"><font color=3D"#000000">Asimismo, se plante=C3=B3 la=
+ necesidad de contar con datos no
+satisfactorios por contaminante para evaluar el sistema en ese escenario. C=
+omo
+alternativa, Wilson propuso utilizar datos de prueba de los equipos propios=
+,
+trat=C3=A1ndolos como si correspondieran a un participante.</font></p>
+
+<h2 style=3D"margin:8pt 0cm 4pt;line-height:115%;break-after:avoid;font-fam=
+ily:&quot;Aptos Display&quot;,sans-serif;font-weight:normal"><font size=3D"=
+2" color=3D"#000000"><span style=3D"font-family:Aptos,sans-serif">Seguimien=
+to t=C3=A9cnico</span><span style=3D"line-height:115%;font-family:Aptos,san=
+s-serif"></span></font></h2>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 8pt;line-height:115%;font-fa=
+mily:Aptos,sans-serif"><font color=3D"#000000">En relaci=C3=B3n con el T700=
+U, Fabi=C3=A1n realizar=C3=A1 la prueba del
+generador sugerido por Sanambiente para descartar esta variable dentro del
+an=C3=A1lisis.</font></p>
+
+<h2 style=3D"margin:8pt 0cm 4pt;line-height:115%;break-after:avoid;font-fam=
+ily:&quot;Aptos Display&quot;,sans-serif"><font size=3D"2" color=3D"#000000=
+" style=3D""><span style=3D"font-family:Aptos,sans-serif">Acciones definida=
+s</span><span style=3D"line-height:115%;font-family:Aptos,sans-serif;font-w=
+eight:normal;line-height:115%"></span></font></h2>
+
+<p class=3D"gmail-MsoListParagraph" style=3D"margin:0cm 0cm 8pt 36pt;line-h=
+eight:115%;font-family:Aptos,sans-serif"><font color=3D"#000000"><span styl=
+e=3D"line-height:115%">1.<span style=3D"font-style:normal;font-variant:norm=
+al;font-size-adjust:none;font-kerning:auto;font-feature-settings:normal;fon=
+t-stretch:normal;line-height:normal;font-family:&quot;Times New Roman&quot;=
+">=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0
+</span></span><span style=3D"line-height:115%">Revisar
+la comunicaci=C3=B3n detallada dirigida a los participantes, de modo que la=
+s
+condiciones del servicio queden completamente claras.</span><span style=3D"=
+line-height:115%"></span></font></p>
+
+<p class=3D"gmail-MsoListParagraphCxSpLast" style=3D"margin:0cm 0cm 8pt 36p=
+t;line-height:115%;font-family:Aptos,sans-serif"><font color=3D"#000000"><s=
+pan style=3D"line-height:115%">1.<span style=3D"font-style:normal;font-vari=
+ant:normal;font-size-adjust:none;font-kerning:auto;font-feature-settings:no=
+rmal;font-stretch:normal;line-height:normal;font-family:&quot;Times New Rom=
+an&quot;">=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0
+</span></span><span style=3D"line-height:115%">Establecer
+los tiempos de entrega de la incertidumbre por parte de los participantes.<=
+/span><span style=3D"line-height:115%"></span></font></p>
+
+<p class=3D"gmail-MsoListParagraphCxSpLast" style=3D"margin:0cm 0cm 8pt 36p=
+t;line-height:115%;font-family:Aptos,sans-serif"><font color=3D"#000000"><s=
+pan style=3D"line-height:115%">1.<span style=3D"font-style:normal;font-vari=
+ant:normal;font-size-adjust:none;font-kerning:auto;font-feature-settings:no=
+rmal;font-stretch:normal;line-height:normal;font-family:&quot;Times New Rom=
+an&quot;">=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0
+</span></span><span style=3D"line-height:115%">Entregar
+el informe de resultados al participante 1, incorporando una nota aclarator=
+ia
+en la que se indique que dicho informe no puede utilizarse como soporte del
+requisitos de ensayo de aptitud (ISO IEC 17043).</span><span style=3D"line-=
+height:115%"></span></font></p>
+
+<p class=3D"gmail-MsoListParagraphCxSpLast" style=3D"margin:0cm 0cm 8pt 36p=
+t;line-height:115%;font-family:Aptos,sans-serif"><font color=3D"#000000"><s=
+pan style=3D"line-height:115%">1.<span style=3D"font-style:normal;font-vari=
+ant:normal;font-size-adjust:none;font-kerning:auto;font-feature-settings:no=
+rmal;font-stretch:normal;line-height:normal;font-family:&quot;Times New Rom=
+an&quot;">=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0
+</span></span><span style=3D"line-height:115%">Concretar
+con C=C3=A9sar una revisi=C3=B3n y una conclusi=C3=B3n final de su parte so=
+bre este primer
+piloto.</span><span style=3D"line-height:115%"></span></font></p></div><div=
+><font color=3D"#000000"><br></font></div><div><font color=3D"#000000"><br>=
+</font></div><div><font color=3D"#000000"><br></font></div><div><font color=
+=3D"#000000"><br></font></div><div><font color=3D"#000000"><br></font></div=
+><div><font color=3D"#000000">JOH</font></div><div><div dir=3D"ltr" class=
+=3D"gmail_signature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><d=
+iv><font color=3D"#000000">Profesional de Calidad<br>Laboratorio de Calidad=
+ del Aire - CALAIRE<br>Facultad de Minas<br>Tel.: (57-4) 4255108 - 30178397=
+47<br>Universidad Nacional de Colombia<br>Sede Medell=C3=ADn <br><br>Visita=
+ nuestra p=C3=A1gina web: <a href=3D"http://minas.medellin.unal.edu.co/labo=
+ratorios/calaire/" target=3D"_blank">http://minas.medellin.unal.edu.co/labo=
+ratorios/calaire/</a> <br><br>Este mensaje y sus anexos est=C3=A1n dirigido=
+s para ser usados por su(s) destinatario(s) exclusivamente y pueden contene=
+r informaci=C3=B3n confidencial y/o reservada protegida legalmente. Si uste=
+d no es el destinatario, se le notifica que cualquier distribuci=C3=B3n o r=
+eproducci=C3=B3n del mismo, o de cualquiera de sus anexos, est=C3=A1 estric=
+tamente prohibida. Si usted ha recibido este mensaje por error, por favor n=
+otif=C3=ADquenos inmediatamente y elimine su texto original, incluidos los =
+anexos, o destruya cualquier reproducci=C3=B3n del mismo. Las opiniones exp=
+resadas en este mensaje son responsabilidad exclusiva de quien las emite y =
+no necesariamente reflejan la posici=C3=B3n institucional de la Universidad=
+ Nacional de Colombia ni comprometen la responsabilidad institucional por e=
+l uso que el destinatario haga de las mismas. Este mensaje ha sido verifica=
+do con software antivirus. En consecuencia, la Universidad Nacional de Colo=
+mbia no se hace responsable por la presencia en =C3=A9l, o en sus anexos, d=
+e alg=C3=BAn virus que pueda generar da=C3=B1os en los equipos o programas =
+del destinatario.<br><br>Antes de imprimir este mensaje, piense si es verda=
+deramente necesario hacerlo.<br><br>Cuidar el medioambiente es responsabili=
+dad de TODOS.</font></div></div></div></div></div>
+
+--000000000000612a600652f8bb0b--

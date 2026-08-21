@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>CALAIRE-EA · Ensayos de Aptitud — ATLAS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --paper:#f4f1ea;
+    --paper-2:#ebe6da;
+    --ink:#0a0a0a;
+    --ink-2:#1f1f1f;
+    --ink-3:#3a3a3a;
+    --muted:#6b6b6b;
+    --line:#1a1a1a;
+    --line-2:#c9c2b1;
+    --line-3:#d8d2c0;
+    --accent:#b8311f;
+    --accent-2:#0a4a3a;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--paper);color:var(--ink);font-family:'IBM Plex Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.55}
+  body{min-height:100vh}
+  /* TOP STRIP — like journal masthead */
+  .strip-top{background:var(--ink);color:var(--paper);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;padding:8px 32px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+  .strip-top .l{opacity:.7}
+  .strip-top .r{opacity:.7}
+  .strip-top .r b{color:#f4d35e;font-weight:500}
+  /* HEADER — split */
+  .header{display:grid;grid-template-columns:1fr 1fr;min-height:520px;border-bottom:1px solid var(--ink)}
+  .h-left{background:var(--paper);padding:48px 48px 48px 32px;border-right:1px solid var(--ink);position:relative;display:flex;flex-direction:column;justify-content:space-between}
+  .h-right{background:var(--ink);color:var(--paper);padding:48px 32px 48px 48px;position:relative;display:flex;flex-direction:column;justify-content:space-between}
+  @media (max-width:900px){.h-left,.h-right{padding:32px 24px;border-right:0}.header{grid-template-columns:1fr}}
+  .h-left .topbar,.h-right .topbar{display:flex;justify-content:space-between;align-items:center;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:32px}
+  .h-left .topbar{color:var(--ink-3)}
+  .h-right .topbar{color:rgba(244,241,234,.65)}
+  .h-left .topbar b,.h-right .topbar b{font-weight:500}
+  .h-left h1{font-family:'IBM Plex Serif',serif;font-size:clamp(38px,5vw,68px);font-weight:500;line-height:1.02;letter-spacing:-.02em;color:var(--ink);margin-bottom:24px}
+  .h-left h1 em{font-style:italic;font-weight:400;color:var(--accent)}
+  .h-left .deck{font-family:'IBM Plex Serif',serif;font-size:18px;font-style:italic;line-height:1.45;color:var(--ink-3);max-width:46ch;margin-bottom:28px;font-weight:400}
+  .byline{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;color:var(--muted);text-transform:uppercase;border-top:1px solid var(--line-2);padding-top:18px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+  .h-right .issue{font-family:'IBM Plex Serif',serif;font-size:120px;font-weight:500;line-height:.85;letter-spacing:-.04em;color:var(--paper);margin-bottom:0}
+  .h-right .issue small{display:block;font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:#f4d35e;margin-bottom:12px}
+  .h-right .toc{display:grid;grid-template-columns:1fr 1fr;gap:8px 24px;margin-top:32px}
+  .h-right .toc a{color:rgba(244,241,234,.85);text-decoration:none;font-family:'IBM Plex Sans',sans-serif;font-size:13px;padding:10px 0;border-top:1px solid rgba(244,241,234,.18);display:flex;justify-content:space-between;align-items:center;transition:color .15s}
+  .h-right .toc a:hover{color:#f4d35e}
+  .h-right .toc a span{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em}
+  /* FIGURE — diagram */
+  .figure{background:var(--paper-2);border-bottom:1px solid var(--ink);padding:48px 32px;display:grid;grid-template-columns:1fr 1.4fr;gap:48px;align-items:center}
+  @media (max-width:900px){.figure{grid-template-columns:1fr;gap:24px;padding:32px 24px}}
+  .figure-cap{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;color:var(--ink-3);text-transform:uppercase;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);padding:14px 0;margin-bottom:18px;display:flex;justify-content:space-between}
+  .figure-cap b{font-weight:500}
+  .fig-body h3{font-family:'IBM Plex Serif',serif;font-size:30px;font-weight:500;line-height:1.1;letter-spacing:-.02em;margin-bottom:14px}
+  .fig-body p{font-size:14.5px;color:var(--ink-3);line-height:1.65;max-width:48ch}
+  .diagram{background:#fff;border:1px solid var(--ink);padding:28px;position:relative}
+  .diagram svg{width:100%;height:auto;display:block}
+  .legend{margin-top:14px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.06em;color:var(--muted);text-transform:uppercase;display:flex;gap:14px;flex-wrap:wrap}
+  .legend i{display:inline-block;width:10px;height:10px;margin-right:6px;vertical-align:middle}
+  /* GAS TABLE — like journal spec table */
+  .specs{padding:48px 32px;border-bottom:1px solid var(--ink)}
+  .sec-label{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.18em;color:var(--ink-3);text-transform:uppercase;margin-bottom:8px;display:flex;align-items:center;gap:12px}
+  .sec-label::before{content:"";width:24px;height:1px;background:var(--ink)}
+  .sec-h{font-family:'IBM Plex Serif',serif;font-size:clamp(28px,3.5vw,42px);font-weight:500;letter-spacing:-.02em;line-height:1.1;margin-bottom:32px;max-width:22ch}
+  .sec-h em{font-style:italic;color:var(--accent)}
+  table.spec{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--ink)}
+  table.spec th{background:var(--ink);color:var(--paper);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;text-align:left;padding:12px 16px;font-weight:500}
+  table.spec td{padding:18px 16px;border-top:1px solid var(--line-3);font-size:14px;color:var(--ink-2);vertical-align:top}
+  table.spec tr:nth-child(even) td{background:#fbf9f3}
+  table.spec td.sym{font-family:'IBM Plex Serif',serif;font-size:22px;font-weight:500;color:var(--accent);width:80px}
+  table.spec td.cap{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--ink-3);text-align:right;width:120px;letter-spacing:.04em}
+  table.spec td.cap b{display:block;color:var(--ink);font-weight:500}
+  /* PRICING — editorial */
+  .pricing{padding:64px 32px;border-bottom:1px solid var(--ink);display:grid;grid-template-columns:1fr 1fr;gap:0;border-left:1px solid var(--ink);border-right:1px solid var(--ink);background:var(--paper-2)}
+  @media (max-width:900px){.pricing{grid-template-columns:1fr}}
+  .p-card{padding:48px;background:var(--paper)}
+  .p-card.dark{background:var(--ink);color:var(--paper)}
+  .p-card + .p-card{border-left:1px solid var(--ink)}
+  @media (max-width:900px){.p-card + .p-card{border-left:0;border-top:1px solid var(--ink)}}
+  .p-card .lbl{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;opacity:.7;margin-bottom:18px;display:flex;align-items:center;gap:8px}
+  .p-card .lbl::before{content:"§";opacity:1;font-family:'IBM Plex Serif',serif;font-style:italic;font-size:16px;letter-spacing:0}
+  .p-card .title{font-family:'IBM Plex Serif',serif;font-size:22px;font-weight:500;margin-bottom:24px;letter-spacing:-.01em}
+  .p-card .amt{font-family:'IBM Plex Serif',serif;font-size:80px;font-weight:500;line-height:.95;letter-spacing:-.04em;margin-bottom:8px}
+  .p-card .amt .cur{font-size:20px;vertical-align:super;margin-right:6px;opacity:.6;font-weight:400}
+  .p-card .amt .per{font-size:14px;vertical-align:baseline;margin-left:6px;opacity:.6;font-weight:400;font-family:'IBM Plex Mono',monospace;letter-spacing:.06em}
+  .p-card .ref{font-family:'IBM Plex Mono',monospace;font-size:12px;opacity:.7;margin-bottom:28px;padding-bottom:28px;border-bottom:1px dashed currentColor}
+  .p-card ul{list-style:none;margin-top:8px}
+  .p-card li{padding:10px 0;font-size:13.5px;border-bottom:1px solid rgba(0,0,0,.08);display:flex;gap:10px;align-items:flex-start}
+  .p-card.dark li{border-bottom-color:rgba(244,241,234,.12)}
+  .p-card li::before{content:"■";font-size:8px;color:var(--accent);margin-top:6px;flex-shrink:0}
+  .p-card.dark li::before{color:#f4d35e}
+  /* FLOW */
+  .flow{padding:64px 32px;border-bottom:1px solid var(--ink)}
+  .flow-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--ink);background:#fff}
+  @media (max-width:900px){.flow-grid{grid-template-columns:1fr 1fr}}
+  .fs{padding:28px 24px;border-right:1px solid var(--line-3);position:relative;background:#fff}
+  .fs:last-child{border-right:0}
+  @media (max-width:900px){.fs:nth-child(2n){border-right:0}.fs:nth-child(-n+2){border-bottom:1px solid var(--line-3)}}
+  .fs .ord{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;color:var(--ink-3);text-transform:uppercase;margin-bottom:24px;display:flex;justify-content:space-between;align-items:center}
+  .fs .ord::after{content:"";width:18px;height:1px;background:var(--ink)}
+  .fs h4{font-family:'IBM Plex Serif',serif;font-size:22px;font-weight:500;line-height:1.15;letter-spacing:-.01em;margin-bottom:10px}
+  .fs p{font-size:13.5px;color:var(--ink-3);line-height:1.6}
+  /* COLOPHON / FOOTER */
+  .colophon{padding:64px 32px;display:grid;grid-template-columns:1.4fr 1fr;gap:48px;background:var(--ink);color:var(--paper)}
+  @media (max-width:900px){.colophon{grid-template-columns:1fr}}
+  .colophon .lbl{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:rgba(244,241,234,.6);margin-bottom:18px;display:block}
+  .colophon h3{font-family:'IBM Plex Serif',serif;font-size:36px;font-weight:500;line-height:1.15;letter-spacing:-.02em;margin-bottom:18px;max-width:18ch}
+  .colophon h3 em{font-style:italic;color:#f4d35e}
+  .colophon p{color:rgba(244,241,234,.7);font-size:14.5px;line-height:1.6;margin-bottom:18px;max-width:48ch}
+  .colophon .links a{display:inline-block;background:rgba(244,241,234,.08);color:var(--paper);padding:12px 18px;border-radius:4px;text-decoration:none;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;margin-right:8px;margin-bottom:8px;transition:background .2s;border:1px solid rgba(244,241,234,.15)}
+  .colophon .links a:hover{background:rgba(244,241,234,.18)}
+  .colophon .links a.primary{background:#f4d35e;color:var(--ink);border-color:#f4d35e;font-weight:500}
+  .colophon .meta{font-size:13px;color:rgba(244,241,234,.65);line-height:1.7;border-top:1px solid rgba(244,241,234,.18);padding-top:18px;margin-top:8px}
+  .colophon .meta b{color:var(--paper);font-weight:500;display:block;margin-top:8px}
+  .strip-bot{background:var(--ink);color:rgba(244,241,234,.45);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;padding:14px 32px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;border-top:1px solid rgba(244,241,234,.1)}
+</style>
+</head>
+<body>
+
+<div class="strip-top">
+  <span class="l">Vol. 01 · No. 01 · Propuesta Comercial</span>
+  <span class="r">CS-02 <b>v0.3</b> · Servicio en etapa previa a acreditación</span>
+</div>
+
+<header class="header">
+  <div class="h-left">
+    <div class="topbar">
+      <span>Sección <b>A</b> · Resumen</span>
+      <span>UNAL · CALAIRE</span>
+    </div>
+    <div>
+      <h1>Ensayos de Aptitud para <em>gases contaminantes criterio.</em></h1>
+      <p class="deck">Comparación independiente y trazable del desempeño de analizadores de CO, SO₂, O₃ y NO/NO₂ — ejecutada en las instalaciones de CALAIRE bajo procedimientos QMS vigentes.</p>
+    </div>
+    <div class="byline">
+      <span>Editor · <b style="color:var(--ink)">David Pulgarín</b> · Líder comercial</span>
+      <span>Coordinación · <b style="color:var(--ink)">C. E. Zapata</b></span>
+    </div>
+  </div>
+  <div class="h-right">
+    <div class="topbar">
+      <span>PT-Service</span>
+      <span>2026 · MEDELLÍN</span>
+    </div>
+    <div>
+      <div class="issue">
+        <small>Servicio</small>
+        4 × 4
+      </div>
+      <div class="toc">
+        <a href="#alcance"><span>Alcance</span><span>§ 01</span></a>
+        <a href="#bloques"><span>Bloques</span><span>§ 02</span></a>
+        <a href="#tarifa"><span>Tarifa</span><span>§ 03</span></a>
+        <a href="#flujo"><span>Flujo</span><span>§ 04</span></a>
+        <a href="#contacto"><span>Contacto</span><span>§ 05</span></a>
+        <a href="mailto:calaire_med@unal.edu.co"><span>EoI</span><span>→</span></a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="figure" id="alcance">
+  <div class="fig-body">
+    <div class="figure-cap">
+      <span><b>Fig. 01</b> · Esquema general del servicio</span>
+      <span>p. 01</span>
+    </div>
+    <h3>El participante entrega su analizador; CALAIRE opera la ronda y emite el informe.</h3>
+    <p>La participación entrega una comparación documentada del desempeño del sistema de medición, identifica oportunidades de mejora y complementa los controles internos. Está dirigido a laboratorios, redes de monitoreo, autoridades e instituciones académicas que operan analizadores de gases criterio.</p>
+  </div>
+  <div class="diagram" aria-hidden="true">
+    <svg viewBox="0 0 480 280" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#0a0a0a"/></marker>
+      </defs>
+      <!-- participant -->
+      <rect x="20" y="110" width="120" height="60" fill="none" stroke="#0a0a0a" stroke-width="1.5"/>
+      <text x="80" y="138" text-anchor="middle" font-family="IBM Plex Sans" font-size="13" font-weight="600" fill="#0a0a0a">PARTICIPANTE</text>
+      <text x="80" y="155" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="#6b6b6b">analizador · código</text>
+
+      <!-- center -->
+      <rect x="180" y="40" width="120" height="200" fill="#f4f1ea" stroke="#0a0a0a" stroke-width="1.5"/>
+      <text x="240" y="68" text-anchor="middle" font-family="IBM Plex Sans" font-size="13" font-weight="600" fill="#0a0a0a">CALAIRE-EA</text>
+      <line x1="200" y1="80" x2="280" y2="80" stroke="#c9c2b1"/>
+      <text x="240" y="105" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="#3a3a3a">preparación</text>
+      <text x="240" y="125" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="#3a3a3a">ronda PT</text>
+      <text x="240" y="145" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="#3a3a3a">evaluación</text>
+      <text x="240" y="165" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="#3a3a3a">informe</text>
+      <line x1="200" y1="180" x2="280" y2="180" stroke="#c9c2b1"/>
+      <text x="240" y="200" text-anchor="middle" font-family="IBM Plex Sans" font-size="11" font-weight="500" fill="#b8311f">z · z′ · ζ · En</text>
+
+      <!-- result -->
+      <rect x="340" y="110" width="120" height="60" fill="none" stroke="#0a0a0a" stroke-width="1.5"/>
+      <text x="400" y="138" text-anchor="middle" font-family="IBM Plex Sans" font-size="13" font-weight="600" fill="#0a0a0a">INFORME</text>
+      <text x="400" y="155" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="#6b6b6b">técnico digital</text>
+
+      <!-- arrows -->
+      <line x1="140" y1="140" x2="178" y2="140" stroke="#0a0a0a" stroke-width="1.2" marker-end="url(#arr)"/>
+      <line x1="300" y1="140" x2="338" y2="140" stroke="#0a0a0a" stroke-width="1.2" marker-end="url(#arr)"/>
+
+      <!-- footnote -->
+      <text x="240" y="265" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="#6b6b6b">Fig. 01 · Identidades sustituidas por código controlado · P-PSEA-19</text>
+    </svg>
+    <div class="legend">
+      <span><i style="background:#b8311f"></i> Identidad controlada</span>
+      <span><i style="background:#0a4a3a"></i> Procedimiento QMS</span>
+      <span><i style="background:#0a0a0a"></i> Confidencialidad</span>
+    </div>
+  </div>
+</section>
+
+<section class="specs" id="bloques">
+  <div class="sec-label">§ 02 · Bloques seleccionables</div>
+  <h2 class="sec-h">Cuatro bloques, <em>uno a cuatro a elegir.</em></h2>
+  <table class="spec">
+    <thead>
+      <tr>
+        <th style="width:80px">Gas</th>
+        <th>Nombre</th>
+        <th>Descripción</th>
+        <th style="text-align:right;width:160px">Capacidad</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="sym">CO</td>
+        <td><b>Monóxido de carbono</b><br><span style="font-family:'IBM Plex Mono';font-size:11px;color:var(--muted);letter-spacing:.06em">µmol/mol</span></td>
+        <td>Hasta 4 analizadores por bloque individual. Compatible con operación CO/SO₂ simultánea.</td>
+        <td class="cap"><b>4</b>analizadores</td>
+      </tr>
+      <tr>
+        <td class="sym">SO<sub style="font-size:.6em">2</sub></td>
+        <td><b>Dióxido de azufre</b><br><span style="font-family:'IBM Plex Mono';font-size:11px;color:var(--muted);letter-spacing:.06em">nmol/mol</span></td>
+        <td>Hasta 4 analizadores. La operación CO/SO₂ simultánea se limita a 3 organizaciones y 6 analizadores totales.</td>
+        <td class="cap"><b>4</b>analizadores</td>
+      </tr>
+      <tr>
+        <td class="sym">NO<sub style="font-size:.6em">x</sub></td>
+        <td><b>Óxidos de nitrógeno</b><br><span style="font-family:'IBM Plex Mono';font-size:11px;color:var(--muted);letter-spacing:.06em">nmol/mol · bloque único</span></td>
+        <td>Bloque único operado con un analizador NOx. Hasta 4 unidades por bloque.</td>
+        <td class="cap"><b>4</b>analizadores</td>
+      </tr>
+      <tr>
+        <td class="sym">O<sub style="font-size:.6em">3</sub></td>
+        <td><b>Ozono</b><br><span style="font-family:'IBM Plex Mono';font-size:11px;color:var(--muted);letter-spacing:.06em">nmol/mol · fotométrico</span></td>
+        <td>Generación fotométrica. Hasta 4 analizadores por bloque individual.</td>
+        <td class="cap"><b>4</b>analizadores</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="pricing" id="tarifa">
+  <div class="p-card dark">
+    <div class="lbl">Tarifa</div>
+    <div class="title">Tarifa plana por organización.</div>
+    <div class="amt"><span class="cur">COP</span>5.928.000<span class="per">/ org.</span></div>
+    <div class="ref">≈ EUR 1.600 · TRM 2026-07-14 · antes de impuestos</div>
+    <p style="font-size:13px;line-height:1.65;opacity:.8;margin-bottom:18px">El mismo valor para seleccionar entre uno y cuatro bloques. El número mostrado es un benchmark de viabilidad — no es precio aprobado y no puede usarse en una cotización real antes de completar CS-04 y las revisiones institucionales.</p>
+    <ul>
+      <li>Validez de cotización · 30 días</li>
+      <li>Plazo de pago · 15 días por defecto</li>
+      <li>Facturación exclusivamente en COP</li>
+      <li>Impuestos y retenciones definidos por la UNAL</li>
+    </ul>
+  </div>
+  <div class="p-card">
+    <div class="lbl">Alcance</div>
+    <div class="title">Qué incluye y qué no.</div>
+    <p style="font-size:13px;color:var(--ink-3);line-height:1.65;margin-bottom:14px">La tarifa cubre la operación del ensayo; el participante asume los costos de movilización y mantenimiento de su equipo.</p>
+    <ul>
+      <li>Inscripción, revisión y coordinación</li>
+      <li>Uso de instalaciones y sistema de generación</li>
+      <li>Ejecución y evaluación de datos</li>
+      <li>Informe técnico digital y constancia</li>
+      <li>Canales QMS de queja y apelación</li>
+    </ul>
+    <p style="margin-top:24px;font-size:12px;color:var(--muted);font-family:'IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase">Excluido · transporte, seguro, calibración, visas, aduanas, estancia</p>
+  </div>
+</section>
+
+<section class="flow" id="flujo">
+  <div class="sec-label">§ 04 · Flujo de inscripción</div>
+  <h2 class="sec-h">De la <em>expresión de interés</em> al informe final.</h2>
+  <div class="flow-grid">
+    <div class="fs">
+      <div class="ord"><span>§ 04.1</span><span>Etapa 01</span></div>
+      <h4>Expresión de interés</h4>
+      <p>Sin compromiso. No constituye inscripción ni reserva cupo.</p>
+    </div>
+    <div class="fs">
+      <div class="ord"><span>§ 04.2</span><span>Etapa 02</span></div>
+      <h4>Cotización controlada</h4>
+      <p>30 días de validez. Impuestos definidos por la UNAL en cada caso.</p>
+    </div>
+    <div class="fs">
+      <div class="ord"><span>§ 04.3</span><span>Etapa 03</span></div>
+      <h4>Registro y términos</h4>
+      <p>Aceptación de CS-08. Revisión de capacidad y pago u orden de compra.</p>
+    </div>
+    <div class="fs">
+      <div class="ord"><span>§ 04.4</span><span>Etapa 04</span></div>
+      <h4>Confirmación e informe</h4>
+      <p>Ejecución, evaluación y emisión del informe técnico digital.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="colophon" id="contacto">
+  <div>
+    <span class="lbl">§ 05 · Colofón · Contacto</span>
+    <h3>¿Su organización opera <em>analizadores de gases criterio?</em></h3>
+    <p>Escriba al líder comercial para recibir el aviso de ronda y la manifestación de interés. Esta comunicación no constituye inscripción ni reserva cupo. La distribución de informes a terceros requiere autorización escrita de CALAIRE-EA.</p>
+    <div class="links">
+      <a href="mailto:calaire_med@unal.edu.co" class="primary">calaire_med@unal.edu.co →</a>
+      <a href="#alcance">Revisar alcance</a>
+      <a href="#bloques">Ver bloques</a>
+    </div>
+  </div>
+  <div>
+    <span class="lbl">Pie de imprenta</span>
+    <div class="meta">
+      <b>Universidad Nacional de Colombia</b>
+      NIT 899.999.063-3 · Sede Medellín<br>
+      Facultad de Minas · Laboratorio CALAIRE
+      <b>Líder comercial</b>
+      David Pulgarín · calaire_med@unal.edu.co
+      <b>Coordinadora EA</b>
+      Carmen Elena Zapata
+      <b>Quejas y apelaciones</b>
+      Recepción y registro · clasificación SGC (P-PSEA-17)
+    </div>
+    <p style="margin-top:18px;font-size:12px;color:rgba(244,241,234,.55);font-style:italic">Servicio en etapa previa a acreditación. La participación no implica certificación, acreditación ni declaración de competencia.</p>
+  </div>
+</footer>
+
+<div class="strip-bot">
+  <span>mmxm3_ptservice · ATLAS v0.3 · 2026</span>
+  <span>Compuesto en IBM Plex · Impreso en pantalla</span>
+</div>
+
+</body>
+</html>

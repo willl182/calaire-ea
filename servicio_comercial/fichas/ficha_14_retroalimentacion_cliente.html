@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulario de retroalimentación del cliente — CALAIRE-EA</title>
+<style>
+  :root { --ink:#111827; --soft:#6B7280; --accent:#FDB913; --accent-dark:#E5A610;
+    --accent-soft:#F5F5F0; --amber:#A96200; --amber-soft:#FFF4DB; --line:#D1D5DB;
+    --line-soft:#E5E7EB; --bg:#E8EAED; --surface:#F5F6F7; --card:#FBFBFA;
+    --ok:#008760; --ok-soft:#E5F8EF; --danger:#C0103A; --danger-soft:#FFF0F3;
+    --focus-ring:rgba(253,185,19,.4); }
+  * { box-sizing:border-box; margin:0; }
+  body { font-family:"Droid Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; background:var(--bg); color:var(--ink); line-height:1.6; }
+  ::selection { background:var(--accent); color:var(--ink); }
+  :focus-visible { outline:2px solid var(--accent); outline-offset:2px; box-shadow:0 0 0 4px var(--focus-ring); }
+  .wrap { max-width:860px; margin:0 auto; padding:2rem 1.5rem 3rem; }
+  .head { background:var(--card); color:var(--ink); border-bottom:4px solid var(--accent);
+    border-radius:12px; padding:1.6rem 1.8rem; box-shadow:0 6px 18px rgba(17,24,39,.10); }
+  .head .grupo { font-size:.78rem; text-transform:uppercase; letter-spacing:.08em; opacity:.8; }
+  .head h1 { font-size:1.45rem; margin-top:.3rem; letter-spacing:-.01em; }
+  .meta { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:.8rem; margin:1.2rem 0; }
+  .meta .box { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:.8rem 1rem; box-shadow:0 2px 6px rgba(17,24,39,.08); }
+  .meta b.k { display:block; font-size:.72rem; text-transform:uppercase; letter-spacing:.06em; color:var(--soft); margin-bottom:.25rem; }
+  .meta .v { font-size:.92rem; font-weight:600; }
+  .tag { display:inline-block; font-size:.74rem; font-weight:700; padding:.18rem .6rem; border-radius:999px; }
+  .tag.aprob { background:var(--ok-soft); color:var(--ok); }
+  .tag.avance { background:var(--accent-soft); color:var(--accent); }
+  .tag.borrador { background:var(--amber-soft); color:var(--amber); }
+  h2 { font-size:1.02rem; color:var(--ink); margin:1.5rem 0 .6rem; border-left:4px solid var(--accent); padding-left:.6rem; }
+  p.prop { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:.9rem 1.1rem; font-size:.95rem; }
+  ul { padding-left:1.2rem; display:grid; gap:.45rem; font-size:.93rem; }
+  .foot { margin-top:1.8rem; font-size:.78rem; color:var(--soft); border-top:1px solid var(--line); padding-top:.8rem; }
+  code { background:var(--accent-soft); padding:.08rem .3rem; border-radius:4px; font-size:.85em; }
+  a { color:var(--ink); text-decoration-color:var(--accent-dark); text-decoration-thickness:2px; }
+  @media print { body{background:#fff} .wrap{padding:0} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="head">
+    <h1>Formulario de retroalimentación del cliente</h1>
+  </div>
+  <div class="meta">
+    <div class="box"><b class="k">Archivo fuente</b><div class="v"><code>servicio_comercial/06_entrega_retencion/CS-14_retroalimentacion.md</code></div></div>
+  </div>
+  <h2>Propósito</h2>
+  <p class="prop">Medir la experiencia del participante y la demanda futura del servicio al cierre de cada ronda.</p>
+  <h2>Contenido clave</h2>
+  <ul>
+    <li>12 preguntas: claridad de oferta y cotización, facilidad de registro y pago, comunicaciones, logística, utilidad del informe, valor percibido por precio, interés para la próxima ronda, NPS y comentarios libres.</li>
+    <li>Opción de envío anónimo (sin vínculo al código de participante; solo vistas agregadas).</li>
+    <li>Ventana de envío definida desde la entrega del informe final.</li>
+  </ul>
+  <h2>Se conecta con</h2>
+  <ul>
+    <li>Si el participante autoriza contacto de renovación, sus preferencias de gases y periodo generan una nueva expresión de interés vinculada a su registro en el rastreador.</li>
+    <li>Comentarios que revelen queja, apelación o no conformidad se enrutan al procedimiento del SGC en 1 día hábil; los temas con impacto económico abren registro de cambios.</li>
+  </ul>
+  <h2>Reglas críticas</h2>
+  <ul>
+    <li>El registro de retroalimentación no se cierra hasta que la queja quede registrada por separado en el SGC.</li>
+  </ul>
+  <div class="foot">Documento de consulta · corte al 2026-07-16 · <a href="indice.html">índice de documentos</a></div>
+</div>
+</body>
+</html>

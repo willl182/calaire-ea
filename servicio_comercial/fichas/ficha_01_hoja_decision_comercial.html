@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hoja de decisión comercial — CALAIRE-EA</title>
+<style>
+  :root { --ink:#111827; --soft:#6B7280; --accent:#FDB913; --accent-dark:#E5A610;
+    --accent-soft:#F5F5F0; --amber:#A96200; --amber-soft:#FFF4DB; --line:#D1D5DB;
+    --line-soft:#E5E7EB; --bg:#E8EAED; --surface:#F5F6F7; --card:#FBFBFA;
+    --ok:#008760; --ok-soft:#E5F8EF; --danger:#C0103A; --danger-soft:#FFF0F3;
+    --focus-ring:rgba(253,185,19,.4); }
+  * { box-sizing:border-box; margin:0; }
+  body { font-family:"Droid Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; background:var(--bg); color:var(--ink); line-height:1.6; }
+  ::selection { background:var(--accent); color:var(--ink); }
+  :focus-visible { outline:2px solid var(--accent); outline-offset:2px; box-shadow:0 0 0 4px var(--focus-ring); }
+  .wrap { max-width:860px; margin:0 auto; padding:2rem 1.5rem 3rem; }
+  .head { background:var(--card); color:var(--ink); border-bottom:4px solid var(--accent);
+    border-radius:12px; padding:1.6rem 1.8rem; box-shadow:0 6px 18px rgba(17,24,39,.10); }
+  .head .grupo { font-size:.78rem; text-transform:uppercase; letter-spacing:.08em; opacity:.8; }
+  .head h1 { font-size:1.45rem; margin-top:.3rem; letter-spacing:-.01em; }
+  .meta { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:.8rem; margin:1.2rem 0; }
+  .meta .box { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:.8rem 1rem; box-shadow:0 2px 6px rgba(17,24,39,.08); }
+  .meta b.k { display:block; font-size:.72rem; text-transform:uppercase; letter-spacing:.06em; color:var(--soft); margin-bottom:.25rem; }
+  .meta .v { font-size:.92rem; font-weight:600; }
+  .tag { display:inline-block; font-size:.74rem; font-weight:700; padding:.18rem .6rem; border-radius:999px; }
+  .tag.aprob { background:var(--ok-soft); color:var(--ok); }
+  .tag.avance { background:var(--accent-soft); color:var(--accent); }
+  .tag.borrador { background:var(--amber-soft); color:var(--amber); }
+  h2 { font-size:1.02rem; color:var(--ink); margin:1.5rem 0 .6rem; border-left:4px solid var(--accent); padding-left:.6rem; }
+  p.prop { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:.9rem 1.1rem; font-size:.95rem; }
+  ul { padding-left:1.2rem; display:grid; gap:.45rem; font-size:.93rem; }
+  .foot { margin-top:1.8rem; font-size:.78rem; color:var(--soft); border-top:1px solid var(--line); padding-top:.8rem; }
+  code { background:var(--accent-soft); padding:.08rem .3rem; border-radius:4px; font-size:.85em; }
+  a { color:var(--ink); text-decoration-color:var(--accent-dark); text-decoration-thickness:2px; }
+  @media print { body{background:#fff} .wrap{padding:0} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="head">
+    <h1>Hoja de decisión comercial</h1>
+  </div>
+  <div class="meta">
+    <div class="box"><b class="k">Archivo fuente</b><div class="v"><code>servicio_comercial/00_control/CS-01_decisiones_comerciales.md</code></div></div>
+  </div>
+  <h2>Propósito</h2>
+  <p class="prop">Fuente única de verdad para el alcance, el precio, las condiciones y las afirmaciones que se hacen sobre el servicio. Evita contradicciones entre folletos, cotizaciones, formularios, términos y correos a clientes: si dos documentos difieren, esta hoja tiene la autoridad.</p>
+  <h2>Contenido clave</h2>
+  <ul>
+    <li>Identidad del servicio: nombre, entidad legal (UNAL, NIT 899.999.063-3), unidad ejecutora (Facultad de Minas, Laboratorio CALAIRE), roles asignados e idioma de trabajo (español).</li>
+    <li>Alcance: cuatro bloques de gases (CO, SO₂, O₃, NO/NO₂) con capacidad de 4 analizadores por gas individual; definición de paquetes y de la unidad estándar de participación.</li>
+    <li>Ancla de precio: referencia de ≈ COP 5.928.000 por organización (tarifa plana provisional para 1 a 4 bloques), facturación solo en COP, validez de cotización de 30 días.</li>
+    <li>Límites de capacidad (provisionales; validación en espera del T700U), asignación de costos de ciclo de vida, estrategia de cilindros de gas certificado, tarifas de cancelación y texto estándar de uso del informe.</li>
+  </ul>
+  <h2>Se conecta con</h2>
+  <ul>
+    <li>Alimenta directamente el catálogo, la convocatoria, el modelo de costos, la cotización y los términos.</li>
+    <li>El texto estándar de uso del informe debe coincidir exactamente con los términos y la plantilla de entrega de informe.</li>
+  </ul>
+  <h2>Reglas críticas</h2>
+  <ul>
+    <li>Ningún material de cara al cliente puede afirmar algo que esta hoja no respalde.</li>
+    <li>El precio de referencia no es un precio aprobado: la acumulación de costos debe completarse primero.</li>
+  </ul>
+  <div class="foot">Documento de consulta · corte al 2026-07-16 · <a href="indice.html">índice de documentos</a></div>
+</div>
+</body>
+</html>

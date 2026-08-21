@@ -1,0 +1,386 @@
+Sesión Trabajo Resultados Pruebas Piloto
+Thu, Jul 30, 2026
+
+0:53 - Unidentified Speaker
+Hola cesar, buenas noches. Buenas noches, hola Wilson.
+
+0:58 - cesar yate
+¿Qué más cesar, cómo estás?
+
+1:02 - Wilson Salas
+Bien, ¿cómo estás, cómo te ha ido? Ay, aquí estoy penando porque me tocó quedarme en San Pedro, espero tener buena señal la noche de hoy.
+
+1:14 - cesar yate
+Ah, ¿verdad que se te dificulta?
+
+1:17 - Wilson Salas
+No, y la red celular no ha dado y iba a salir a las 2 de la tarde para Cali, tuvimos un problema en la planta y me tocó poner el pecho.
+
+1:29 - cesar yate
+Ay.
+
+1:29 - Wilson Salas
+Cosas que a mí me pasan, pero bueno, ¿cómo va todo?
+
+1:33 - cesar yate
+Bien, por aquí con también estoy por fuera, estoy en Viedecuesta, y me llegó el domicilio.
+
+1:42 - Unidentified Speaker
+Voy a comer rápido, pero no alcancé.
+
+1:47 - Wilson Salas
+No, igual me ayude, porque apenas están llegando los compañeros, pero Jennifer todavía se demoró un poquito en conectarse. Déjame, yo estoy aquí medio organizado. Fabian, buenas noches.
+
+2:07 - Fabian Moreno
+La noche, Luis Sánchez.
+
+2:09 - cesar yate
+La fallan, Luis Sánchez.
+
+2:13 - Unidentified Speaker
+Bien, muchas gracias.
+
+2:41 - Wilson Salas
+Hola Mayra, buenas noches. Buenas noches, ¿cómo están todos?
+
+2:49 - Unidentified Speaker
+Muy bien. Hola, buenas noches, ¿cómo están? Subtítulos por la comunidad de Amara.org Un saludo.
+
+3:36 - Wilson Salas
+Hola David, buenas noches. Buenas noches.
+
+4:36 - Wilson Salas
+Jennifer se demoró un poquito en conectar, entonces... El ventilador es que hace calor. Listo, ahora le damos un segundo.
+
+5:29 - Unidentified Speaker
+Listo.
+
+5:45 - Wilson Salas
+Bueno, listo, ahí se ve la pantalla. Pues, compañeros, compañeras, muy buenas noches. Cesar, buenas noches.
+
+5:52 - cesar yate
+Gracias por estar acá. Buenas noches, Gonzalo.
+
+5:56 - Unidentified Speaker
+Gracias.
+
+5:56 - Wilson Salas
+La idea de este espacio en la sesión de hoy es poder tocar tres temas, digamos, ya estando avanzados un poco en el desarrollo de las pruebas pilotos de estos ensayos de actitud. Entonces, lo primero pues ver los datos que hemos podido recopilar a lo largo de este periodo. Es como les decía, la idea es poder revisar los primeros estos resultados de las de nuestras tres rondas de ensayos de aptitud aquí digamos es importante pues manifestar que las rondas que hemos tenido pues hasta el momento no hemos podido realizar una con todos los contaminantes el único participante que tenía pues todos los equipos era el ciata pero ellos no tenían la facilidad operativa de utilizar todos los equipos en el mismo periodo entonces pues tuvimos dos rondas separadas Y nuestra tercera ronda fue con un solo participante, pero él solamente, digamos, tenía dos equipos, que era el analizador de dióxido de nitrógeno y el analizador de ozono. Después, digamos, esa ha sido nuestra como principal situación hasta el momento, pues no es un tema delimitante, ya digamos, pues también es el, pues las circunstancias cooperativas. El segundo punto que queremos tratar pues la noche de hoy es el tema digamos algunas dudas que nos han surgido a lo largo de esas rondas tanto en la parte de procesamiento de datos como en el manejo de las rondas hasta donde digamos pues podemos desarrollarlas bajo cierto estilo hay algunas digamos pues como inquietudes en el tema de apelaciones o situaciones o riesgos que pues no sean materiales pero vemos que sí están algo latentes y pues como más o menos por último pues tratar de recorrer como algunas sugerencias para una cuarta ronda que queremos pues poder realizar. Dios mediante se puede hacer pues con algún participante, dos participantes que puedan tener pues todo el conjunto de analizadores. Esto sobre todo pues para la parte digamos de infraestructura y de los instrumentos pues poder forzar el sistema para determinar nosotros con cuántos participantes podemos lanzar una ronda. Aquí les voy a presentar pues los resultados de las rondas. Esta primera parte quería hacer digamos pues como un análisis visual de inspección de las hemos podido recopilar, hay comportamientos que son diferentes, si los instrumentos entre el participante y el de nosotros como referencia, dejemos lo que en el valor global promedio que estamos calculando son semejantes, pero en algunos casos pues vemos comportamientos que son diferentes a lo largo de digamos de todo el periodo de análisis, estos son los primeros datos son de nuestra ronda 1. Esta fue del analizador de dióxido de azufre. El participante pues es la línea naranja, cierto, y nosotros somos pues la línea azul de referencia. Podemos ver que para el primer nivel pues nuestro instrumento es bastante estable y se mantiene relativamente cercano al valor de cero, mientras que el participante pues tiene este comportamiento de aumento y luego el analizador se estabiliza. Esta es de una de las señales con un poquito distintas. Para este contaminante en particular pues solamente hemos realizado una ronda, entonces pues de momento no podemos como tener esa visual de si era un comportamiento anómalo del instrumento, podría estar asociado algún problema de calibración. Listo, sobre todo pues en particular para este nivel del cero que es relativamente sensible. Nuestro segundo punto fue un punto de 180 nanomol por mol. Aquí sí podemos ver.
+
+10:24 - Unidentified Speaker
+Dígame.
+
+10:24 - cesar yate
+Ya, pues este fue el punto más elevado de concentración.
+
+10:29 - Wilson Salas
+Podemos ver que en este caso ambas señales si son bastante estables a lo largo de todo el periodo análisis. Este sí fue medido durante tres horas. Nuestro tercer nivel, que fue el de 121, pues vemos que los analizadores presentan una diferencia. No me atrevo a decir eso, me parece significativo, ¿no? Pero sí vemos pues que hay una separación entre las señales, tanto en valor a veces objetivo, como en tendencia a comportamiento. Que el analizador de nosotros pues tiene 3, como 3 momentos, en el del participante no son tan marcados, listo, parece un sesgo, exacto, miremos en el cuarto punto, aquí el sesgo es mucho más reducido, las señales tienen un muy buen comportamiento y en nuestro nivel 5 pues vemos el, afortunadamente pues si hay una correlación en la tendencia, la diferencia pues como el tercer nivel el sesgo aparente pues sí se ve que es relativamente menor, sí, entonces pues digamos que aquí nos empezamos a dar cuenta que hay analizadores que sí pueden tener un comportamiento similar o no y pues digamos ahí el tema va a ser cómo el participante estima la incertidumbre, en este caso muy muy particular pues digamos el CIATA todavía no nos la ha entregado ya están en esa parte, pero sí me terminaron de confirmar de que ellos utilizan un valor de incertidumbre, el mismo para todos los puntos de análisis, mientras que pues digamos nuestra forma de estimar la incertidumbre si pues tiene un componente absoluto, cierto, pero si tiene digamos algunos elementos que si van a depender del nivel de concentración que se esté manejando, entonces pues allí apenas pues el participante nos entregue ya los datos definitivos, si tendríamos como una segunda fase de revisión para mirar a ver pues justamente ese tema de la incertidumbre que es como tan... Que estamos observando que es relativamente variable en cómo cada participante pues lo estima. La norma pues invita a hacer una revisión exhaustiva pero pues cada red de monitoreo, cada participante definen a veces hasta dónde ser tan exhaustiva o poco exhaustivos en la estimación de la incertidumbre. Sí. Esto con la señal. Estas serían, digamos, de otro analizador. Como les digo, hay momentos donde los comportamientos son similares, en otros son bastante disimiles. El cero es más o menos sensible a esas variaciones, sobre todo pues allá en los comportamientos. Pues aquí podemos apreciar este contaminante también. No he encontrado como una correlación en la diferencia entre los sesgos. En el otro veíamos que habían dos niveles muy similares, otros niveles donde las diferencias eran mucho más marcadas. Digamos que para este caso, por ejemplo, pues uno podría ver que nuestro analizador pues tiene como más variabilidad tal vez en las señales. Entonces pues la idea de poder otro participante a futuro pues es poder evaluar justamente pues estos comportamientos y tendencias. Pues esto fueron la ronda 1, de esta como les digo solamente tuvimos una réplica de análisis.
+
+14:18 - Wilson Salas
+Entonces, como les decía, los dos analitos, el dióxido de azufre y el monóxido de carbono, hasta el momento sólo tenemos una réplica de ronda, entonces esperamos a futuro poder conseguir otro participante con estos equipos para poder hacer un análisis un poco más exhaustivo de los valores ¿Sí?
+
+14:46 - Unidentified Speaker
+Sí, sí, sí. Bien. Listo. Entendí.
+
+14:48 - cesar yate
+Entonces, ya aquí vienen las rondas dos y tres.
+
+14:52 - Wilson Salas
+En estas rondas, aquí sí tenemos, pues, réplicas. Eso sí lo pudimos hacer con el participante uno, que era el CIATE, y con el participante dos, que era Cora, Antioquia. Entonces, pues, aquí sí podemos ver algunos elementos. Como les digo, pues, podemos apreciar que las señales son más o menos coherentes digamos aquí el comportamiento es relativamente estable en el nivel 3 pues vemos alguna variabilidad pero yo alcanzo a observar alguna coherencia en los niveles, no es que estemos observando aumentos y disminuciones en el mismo periodo, vemos que más o menos el comportamiento durante la ronda fue similar, en este caso los valores del participante siempre estuvieron pues por encima del de nosotros de la referencia, pues en este caso por ejemplo en el nivel 4 el valor generado era el de 80, pues nuestro analizador se mantiene sobre esa línea, mientras que el del participante pues sí presenta un sesgo positivo, mientras que por ejemplo en el nivel 5 pues el valor generado era de 40, el participante general está más o menos en 41.5, así mientras que el de nosotros pues está uno más cercano al valor generado y pues digamos que está como en 39.5 esto es para el ozono listo para el óxido de nitrógeno las diferencias son un poco mayores este es el caso de los valores del cero si aquí tuvimos pues algunos datos faltantes que era digamos por la tasa de muestreo como les mencioné generalmente para este participante presentó datos por encima pues con un sesgo positivo con respecto al de nosotros y pues el valor utilizado definido en el generador de aire cero. Digamos para este nivel 2 pues no pudimos tener la completitud de las tres horas, hicimos el periodo un poco más corto. Ahí digamos tenemos un aprendizaje como futuro. Entonces como les mencionaba lo mismo el nivel 4 se mantienen por encima y nivel 5 está por encima. Listo, entonces pues como les mencionaba si hay unos comportamientos que son como un poquito distintos pero en el esquema global de las cosas pues hay como consistencia en los análisis. Este es el óxido de nitrógeno. Aquí el comportamiento que vamos a ver pues es que el del participante es menor pero es por la matemática del cálculo. Entonces, en este caso, el del participante siempre lo hemos encontrado por debajo del valor generado y el de nosotros como referencia. Esta es más o menos la tendencia. Y pues aquí podemos apreciar ya nuestra tercera ronda, que este ya fue con nuestro segundo participante. Creo que aquí tengo otra gráfica. Ahorita se las presento. Entonces vemos lo mismo, las variaciones como más bruscas las he encontrado alrededor del cero, mientras que pues para los demás niveles es más o menos consistente. Aquí si el participante uno pues se nota que o al menos yo percibo una deriva del instrumento, mientras que nuestro analizador se mantiene continuo. En ese nivel dos pues es donde es más disciente, en los demás niveles se como consistente las mediciones que hemos ido encontrando, pues tanto de nosotros como del participante. Listo, este es el caso pues del dióxido de nitrógeno, pues como les menciono nuevamente, el cero es como el nivel más variable, en los demás pues si observamos pues más o menos una relativa estabilidad pues en todo el periodo análisis, pues aquí vemos que el del participante es tiene comportamientos pues unas oscilaciones como más bruscas pero no son como lo puedo decir mejor si observamos el nivel 2 y el nivel 3 vemos que estos comportamientos no se mantienen aquí en el nivel 2 si vemos un descenso mientras que en el nivel 3 de análisis el analizador del participante si sigue más o menos la tendencia de nuestro instrumento Entonces pues digamos aquí pues son preguntas que le empiezan a salir, si es del instrumento, si es del nivel de concentración, porque no hay una correspondencia en decir listo, el participante va, presenta una tendencia diferente. Hay momentos donde lo es, pero en otros momentos donde digamos si hay consistencias allí. Y pues miremos por ejemplo en este caso el nivel 5 podemos ver que es relativamente estable. Entonces pues aparentemente puede ser del puede ser o del instrumento. Sería pues muy inocentemente es lo que consideraría yo. Porque pues digamos del sistema de medición no hemos no hemos hecho ninguna ninguna modificación. Entonces no deberíamos de tener como esa parte. Y pues miremos los datos del dióxido de nitrógeno. Miren que son muy, muy consistentes. Aquí los sesgos son menores, pero cuando pasamos al nivel 4, miren como el sesgo aumenta. Entonces puede ser la respuesta del instrumento. No sé si Fabian, vos que tenés como mucha experiencia en los equipos, voz.
+
+20:35 - Fabian Moreno
+Wilson, sería muy, o sea hay que tener en cuenta que esas pruebas las hicimos en el día y en la noche era todo corrido.
+
+20:48 - Wilson Salas
+Sí.
+
+20:49 - Fabian Moreno
+Y que no utilizamos control de temperatura, o sea.
+
+20:54 - Wilson Salas
+Solo mantuvimos el de la cámara, exacto.
+
+20:58 - Fabian Moreno
+El aire estaba funcionando normal, sin Sería bueno en la próxima corrida hacerla así como funciona el fotómetro, controlando la humedad y la temperatura.
+
+21:13 - Wilson Salas
+Ya. Porque los instrumentos como están prendidos tantas horas, obviamente pues se calientan, ¿cierto?
+
+21:20 - Fabian Moreno
+Y nosotros ahí no estamos controlando la temperatura. Estamos teniendo, no sé si la temperatura la descargaste, Si, yo ahí tengo los datos, pero aquí en ese momento yo no los traje. Ya los.
+
+21:39 - Wilson Salas
+Que sería muy bueno también mirar si hubieron cambios de temperatura bruscos.
+
+21:45 - Unidentified Speaker
+Ok.
+
+21:46 - Wilson Salas
+Voy a Temperatura del instrumento, perdón del instrumento no, del salón.
+
+21:52 - Fabian Moreno
+Es decir, en 24 horas si es mayor al 2.
+
+21:57 - Wilson Salas
+Al 2 a 2 grados.
+
+22:00 - Fabian Moreno
+La desviación es mayor a 2 grados en 24 horas. Hay que mirar eso. Listo.
+
+22:07 - Unidentified Speaker
+Listo.
+
+22:07 - Wilson Salas
+O en 12 horas, durante una prueba, cuánto cambió.
+
+22:11 - Fabian Moreno
+Ok. Porque nuestras pruebas son como de 12 o 13 horas.
+
+22:16 - Unidentified Speaker
+Son de 13 horas y piquitos, sí. Entonces sería como en 12 horas mirar si cambió mucho la temperatura.
+
+22:26 - Fabian Moreno
+listo listo digamos que también de los puntos que creo que considero interesantes para mirar y de ahí digamos que surgió una discusión era el tema del nivel más bajo que es el del cero pues aquí obviamente no estamos introduciendo el gas analito para revisión lo otro también que debemos probar y que no lo tenemos todavía es el manifold que te acuerdas que tú dijiste si manifold como lo tiene el fotómetro donde haya una redistribución de gas o sea que los dos equipos absorban a su manera el gas no inyectarlo a presión como es que en esta prueba que hicimos fue inyectando por la misma línea con derivación de dos líneas a los dos equipos. Si me hago entender. Si. Es diferente hacerlo así a tener un manifold donde hay una, donde el manifold se llena de un gas y los equipos aspiran ese gas a su manera. Entonces también podríamos probar y de pronto es mucho más estable así como lo estamos haciendo.
+
+23:50 - Unidentified Speaker
+pero no tenemos el manifold.
+
+23:53 - Fabian Moreno
+No sé si eso está en proceso de compra, si se va a comprar.
+
+24:01 - Wilson Salas
+Aprovechemos que tenemos a Mayra. Mayra nos va a llegar manifold de Navidad.
+
+24:08 - Fabian Moreno
+Porque el manifold que tenemos demuestra. Hola. El manifold que tenemos demuestra es solo una entrada y una salida. Sí, necesitamos ese manifold que tenga tres, cuatro, así como el fotómetro, que tiene hasta seis, siete, no me acuerdo cuántas salidas, entonces uno puede conectar en cuantos equipos quiera. Aquí no, tenemos un manifold de solo una entrada y una salida. Entonces esa es la, la, o sea, por eso ese manifold no, no es como el más indicado para la prueba.
+
+24:44 - Laboratorio Calaire Área Infraestructura
+Pero bueno, eso apenas lo en este momento, pues no habíamos como pensado en que el manifold que teníamos, pues como que no era el más apto para hacer las pruebas. Ajá. Entonces de pensar en, en mirar, de comprarlo, pues habría que evaluarlo y esos, esos manifolds ya no los, pues tocaría mandarlo a hacer.
+
+25:08 - Fabian Moreno
+Hacer, sí. Ah, pero no, del fotómetro no había otro de repuesto ¿No?
+
+25:13 - Laboratorio Calaire Área Infraestructura
+No lo recuerdo.
+
+25:15 - Fabian Moreno
+Ah, bueno, porque sería mirar y si no se manda a hacer, sí.
+
+25:19 - Laboratorio Calaire Área Infraestructura
+Yo creo que más fácil mandarlo a hacer, porque pues igual ese es el recurso de fotometría, uno nunca sabe. Y la idea es que la, pues todo lo que tiene que ver con los diseños de aptitud, pues tengan sus propios instrumentos. Hay que mirar, es como, pues si es el mismo diseño del de fotometría, dirías que es el mismo diseño o habría que mirar.
+
+25:42 - Fabian Moreno
+No, no porque el de fotometría es abierto, en la parte de arriba donde si hay exceso de sonido, el bota ese exceso de sonido por ahí. Nosotros, los equipos son los que botan el exceso de gas, entonces tiene que ser cerrado con una entrada y varias salidas.
+
+26:03 - Laboratorio CALAIRE
+Ok, habría que evaluarlo. Ok, sí. Lo que pudimos, Wilson, aprovechar el tiempo con cesar, relacionado con la evaluación de los resultados y eso, pues el aplicativo en lo que cesar nos puede ayudar, porque sin esto de Manifold, no creo que cesar nos pueda ayudar.
+
+26:21 - Wilson Salas
+Listo, entonces pues aquí les mostrará rápidamente pues más o menos cómo fue la variación de la temperatura en la última ronda, más vale fue tuvimos periodos de enfriamiento, las oscilaciones pues no se ven como aparentemente altas o que ya hemos alcanzado temperaturas elevadas, pero pues ya sería digamos en una segunda etapa tener en cuenta este este componente. Y eso era como rápido.
+
+26:45 - Fabian Moreno
+Pero si se nota que bajó mucho la temperatura, mira que bajó hasta 18 y después volvió a subir hasta 23. Son carnes muy bruscos, o sea, eso no no es bueno para el análisis que estamos haciendo. Hay que entonces empezar a poner, a controlar la temperatura.
+
+27:04 - Wilson Salas
+Ahí nos lleva entonces es la del reto con más participantes que podría pasar. Listo. Bueno, eso por ese lado. Y permítanme, pues paso hoy pasando a la aplicación. Ah, bueno, no, mentiras. Quería comentar este tema del valor del cero. Esto es como para, digamos, tratar de tener como una visual, una referencia de para la generación del cero nosotros podemos tener nosotros utilizamos el calibrador dinámico en principio a pesar de que no estamos pasando gas me corriges por favor y nosotros tenemos un generador de aire cero que él está digamos pasando ese aire limpio sí y también uno puede pues puede perdón tener un aire cero comprimido entonces pues aquí lo que quise traer a la observación o cómo se dieron los resultados del cero, tratando de ver si habían comportamientos disímiles en nuestro analizador, en nuestro sistema, pues versus el participante. Digamos que es la prueba con donde más podemos tener datos en el mismo nivel, a pesar de que son analizadores diferentes. Pues el punto azul nuevamente somos nosotros de referencia, pues vemos que no hay como un comportamiento más o menos consistente para decir que nuestro instrumento generalmente pues presenta un cero más bajo, en el ozono lo tenemos, en el dióxido de azufre lo tenemos, el del participante pues tiene mayor variación, mientras que en los óxidos de nitrógeno pues si tenemos en el uno más alto, en el otro pues es un poco más, el comportamiento pues va a la inversa. Listo pues aquí esta es una ronda, esta es otra ronda, entonces vemos que no pues en este corto momento no no pues podemos como hallar o una correspondencia o es muy pronto para decir que estamos pues viendo pues variaciones que puedan tener como alguna incidencia en nuestro sistema de medición.
+
+29:14 - cesar yate
+Lo que yo si veo ahí de esas gráficas es que el equipo de ustedes, el azul, si hay dispersión amarilla, el del participante.
+
+29:27 - Wilson Salas
+Sí, solamente en poquitos tenemos menos.
+
+29:29 - Unidentified Speaker
+Ok.
+
+29:29 - Wilson Salas
+Sí, es algo que llama la atención.
+
+29:32 - cesar yate
+De pronto puede ser la temperatura que estaban hablando hace un momento, pero sí veo en muchos casos dispersiones muy grandes. Eso sería bueno que se explicara, que se analizara desde algún punto de vista técnico, como lo estaba mencionando, puede ser temperatura que no debería ser así, porque esa dispersión refleja incertidumbre.
+
+29:51 - Wilson Salas
+ya puede haber tipo hay que puede ser significativo aquí digamos pues afortunadamente para nosotros en estas rondas, es como nosotros tenemos también el dato del participante, pues voy a poner un análisis como más exhaustivo en tema de la señal allí para mirar la la dispersión pues aquí está es con una desviación estándar de especie nuestros datos son un poquito más más dispersos aparente sino aparentemente no la métrica la métrica es clara solamente pues en un caso solamente para el dióxido de azufre si tenemos pues una menor una menor dispersión tiene la zona en un puntito ese es el del cero exactamente ah perdón aquí el de los sonos y en el de la ronda 3 no en la ronda no en la ronda 2 listo si ese era el comportamiento de las rondas nuestra tendencia eso era pues digamos con respecto pues al tema de las señales como tal digamos como les digo pues es es importante interesante mirarlo porque pues estamos levantando línea base de comportamiento y pues para el tema sobre toda la incertidumbre pues digamos creo que nosotros como referencia vamos a tener una incertidumbre pues más exhaustiva como les menciono ya un participante mencionó que tiene una referencia puede perdón una incertidumbre global para todo el proceso listo voy a cambiarme acá Y eso es con respecto a los datos. Pero digamos nosotros hasta momento pues ya es claro, no hemos podido conseguir un mayor número de participantes. He estado haciendo algunas simulaciones con los datos, me he atrevido a estimar algunas incertidumbres, pues por así decirlo, no al azar sino empeorando la incertidumbre simulada del participante un 10 un 15 por ciento respecto a la nuestra. Pero pues ahorita lo van a ver. Ahí estamos teniendo resultados que no parecen como consistentes.
+
+33:02 - Unidentified Speaker
+Voy avanzando en esta parte.
+
+33:07 - Wilson Salas
+Pues miremos la primera ronda. Como les mencionaba pues esta es nuestra primera ronda, aquí podemos ver el punto del cero, como les digo observar los diferentes niveles acá. Acá vamos a tener pues los datos de estabilidad y homogeneidad. Acá podemos ver pues los datos de cómo se han comportado, para si encontramos pues tal vez un dato atípico, no dato atípico. Para este primer caso, nuestra primera ronda, pues si encontramos que ambos métodos, sea el MADE o sea el NIQR, si nos genera una evaluación de la homogeneidad que cumple con el criterio en el primer caso para la estabilidad pues si tenemos que no hay un cumplimiento del criterio de estabilidad entonces pues aquí hay una contribución de la de la incertidumbre en este caso Pues aquí quedó como cesar me dijo, cuando el valor es negativo, pues pasa a ser cero, en ese caso para la homogeneidad. Y la estabilidad se estimó a partir de una diferencia absoluta entre las medidas de homogeneidad y estabilidad.
+
+34:55 - cesar yate
+Listo. Esta es como esta parte inicial.
+
+34:59 - Wilson Salas
+Estas pruebas de estabilidad a nosotros nos representa un reto operativo y un poquito logístico porque como se requieren al menos cierto mínimo 10 mediciones cuando lo llevamos a exhaustividad estaríamos hablando de 10 horas de medición entonces digamos nosotros allí tenemos riesgo latente porque uno de nuestros instrumentos que ya ya nos pasó por ese proceso de operación como tan continuo intenso que porfa me corrigen cierto no es como su operación usual tuvimos digamos una una situación en durante las pruebas entonces pues estas pruebas de homogeneidad de estabilidad si representan como como ese estrés físico para los instrumentos. A modo de comentario, a partir de quienes nosotros basamos el estudio para el diseño de estos ensayos de actitud, ellos documentan que como el ítem de ensayo es generado in situ y se transmite o se envía para análisis entre comillas ahí mismo, no consideran técnicamente que haya contribución a la homogeneidad o a la estabilidad. Sí, pero eso es como lo defienden el laboratorio europeo. Listo, hay como pues como para traer como esa ese comentario, pero si estas pruebas de homogeneidad y estabilidad si es pues es un reto adicional para para los equipos y también pues en tema de tiempo. Pero pues si son la vida pues para poder determinar si hay una si hay una efecto, no hay efecto en esa parte.
+
+36:52 - Unidentified Speaker
+No sé.
+
+36:53 - Wilson Salas
+Pues si lo trae a colación porque es particular como ellos lo ponen, como digo, tiene algo de sentido, pero no sé cesar si uno como pudiera justificar eso técnicamente si uno quisiera pues pensando en miras de una acreditación.
+
+37:16 - cesar yate
+Pues habría que justificarlo muy bien frente al criterio técnico. Una buena referencia la que ustedes dicen, ¿no? Porque, pues, recuerden que en algún tipo de auditoría, y si ustedes dicen que van a aplicar la 13.528, pues, una de las componentes va a ser esa, bueno, las componentes van a estar asociadas, a la incertidumbre, son la homogeneidad y la estabilidad del ítem, del ítem de ensayo, pero pues aquí, se puede justificar por lo que ustedes mencionan. Pero hay que justificarlo técnicamente. Y eso se lo va a revisar el auditorio experto que venga a revisar el ensayo. No es muy usual.
+
+38:06 - Wilson Salas
+Siempre se hace esa evaluación. Listo. Ahí yo digamos como tenía otra pregunta no sé si ese si nosotros pensando en aras de acreditación deberíamos de yo no sé hasta qué punto nosotros ese análisis por ejemplo el que mostré inicial de las señales aunque sólo sería para el nuestro debamos como tener eso para la cómo decirlo o sea hasta qué grado nosotros debemos profundizar con más en ese análisis cesar o más o menos por donde lo estamos llevando estando como como cumplimiento porque lo digo es que al final nosotros estamos revisando como son dos tres datos como puntuales y estamos hablando de homogeneidad de estabilidad pues hay una hay un comportamiento de la señal del equipo que pues tiene como otra evaluación no
+
+39:05 - cesar yate
+sé si organice como viene a no es material de referencia, ¿cierto?
+
+39:10 - Wilson Salas
+Sí, es material de referencia.
+
+39:12 - cesar yate
+Bueno, es que si es un material de referencia ya el proveedor tuvo que haber evaluado la homogeneidad y la estabilidad, entonces eso puede ser un buen insumo para no tener que evaluarla.
+
+39:24 - Wilson Salas
+Ya, porque él nos entrega, no tengo ese certificado, pero ellos nos dan el certificado con la incertidumbre absoluta para cada uno de los analitos que tenemos en la Bueno, si ese proveedor utilizó 33400, ya ahí está incluido el parámetro de homogeneidad. Ese era el anterior ISO 35.
+
+40:07 - cesar yate
+pues se cambió a la 33 400 y entonces si el gas se prepara con esa norma entonces la evaluación de la homogeneidad el proveedor en su parámetro de incertidumbre que muy seguramente si esa incertidumbre que le están dando ya debería tener ese parámetro pero homogeneidad y estabilidad, es que esa es la gran diferencia de utilizar esos materiales de referencia que muchas cosas ya están evaluadas.
+
+40:46 - Wilson Salas
+Ya. OK. Listo, ya quiero anotar para verificar esa parte. Sí, porque digamos, hay elementos que a uno le empiezan como a a levantar preguntas sobre eso y pues uno pensando hacia acreditación, pues a mí me empiezo a pensar, bueno, hasta dónde nosotros tenemos que tener cubiertas las bases, hasta dónde el planteamiento que estamos haciendo inicial nos dé esa cobertura o qué está quedando por fuera del RAC que pueda ser crítico. Pues digamos pues para este caso puntual, para esta primera ronda nosotros no tuvimos pues valores atípicos de acuerdo a la prueba de groups. Eso por esa parte. Pues obviamente como tenemos pocos datos no podemos hacer uso del algoritmo.
+
+41:49 - cesar yate
+¿Cuántos datos tenían?
+
+41:51 - Wilson Salas
+Aquí solamente somos dos.
+
+41:53 - cesar yate
+Dos participantes, sí, claro.
+
+41:56 - Wilson Salas
+En este caso nos fuimos por valor de referencia y por método de expertos. Y tomamos el valor del método de expertos para utilizar la ecuación que ya existía para la determinación de la desviación del ensayo de aptitud. Si es esto, no es esto. Sí, aquí está. Entonces, obviamente, pues él no me permite hacer el cálculo, pues, por valor de consenso ni por NIQR, pues, por el número de datos. Lo que les decía, pues, por valor de referencia y, pues, por método de expertos. Y esto que utilizan es ecuación que ya está tabulada, que fue levantada a partir de datos de mediciones de laboratorios de referencia. Entonces, por eso lo conservamos y que este método de expertos nos permite determinar esta desviación del ensayo, cierto, para todos los niveles. Es reactiva la concentración del contaminante. Y pues también evaluamos la que es la compatibilidad metrológica pues obviamente sería para el método de referencia y perdón para el método de expertos pues no podemos tenerla para para el algoritmo A ni para consenso pues no hay forma de hacer la evaluación ¿Vale?
+
+43:39 - cesar yate
+¿El participante entrega de incertidumbre?
+
+43:42 - Wilson Salas
+En este caso todavía no ha haciendo el cálculo y en este caso el participante lo que menciona es que ellos sólo tienen una incertidumbre para todos los valores. Sí, entonces pues allí ya pues estoy a la espera de que nos puedan hacer entrega para como para hacer ese comparativo. Listo, entonces vamos a calcular puntajes. Entonces tenemos nuestra primera Z. Queremos que el participante cumple, está dentro de nuestros de nuestros límites de tolerancia. Les digo, obviamente para los otros métodos no tenemos. El puntaje Z prima. Listo, también aquí presentamos cumplimiento. Ya donde se empieza a faltar otras palabras, pues como dañar un poco la parte de cálculos, ya es hacia la puntuación Z y el error normalizado. Yo aquí le puse al participante pues una incertidumbre que yo le estimé a partir de los datos, que pues me atrevo a decir que es una subestimación de ese resultado.
+
+44:58 - cesar yate
+¿Y en el Z qué utilizaste?
+
+45:02 - Wilson Salas
+La del SigmaPT. La del método de expertos, la de la ecuación. Que utiliza este coeficiente A, que es para nuestra pendiente, el coeficiente del intercepto, y que es reactivo a la concentración que estamos midiendo.
+
+45:19 - cesar yate
+Yo creo que esa sería como la más adecuada, porque las otras tienen en cuenta incertidumbres, pero no son tan confiables, ¿cierto?
+
+45:29 - Wilson Salas
+Y sobre todo en esta parte, digamos también como en este momento inicial que siento que estamos.
+
+45:37 - cesar yate
+Y si el participante tiene una incertidumbre global para todos los valores o niveles, es un poquito dudoso cómo la estimó. Si está bien estimada, es que esa es la duda cuando las incertidumbres no son tan confiables. Si tiene la competencia para poderla evaluar de manera correcta y comparable con la incertidumbre de usted. De pronto no son comparables y ahí pecamos de pronto por escoger el indicador menos confiable.
+
+46:05 - Wilson Salas
+Yo creo que hasta me reportaron el valor al inicio que era como .3 la incertidumbre y pues a mí me causó pues algo de curiosidad cuando tuvimos la conversación pues ya para que ellos procesaran los datos pues yo les mencioné que debían estimar la incertidumbre pues para todos los niveles de concentración ya fue pues pasado un tiempo que el participante me dijo no nosotros dentro de la forma en laboratorio lo hace, es una incertidumbre pues para todos los niveles. Ya pues digamos ahí quedó pues como anotado ese punto. Ya estaríamos a la espera del participante 2. No sé si Fabian nos adelanta, nos puede adelantar chismecito allí, mentiras.
+
+46:59 - Sistema de Gestion De Calidad del Aire
+Chicos, perdón, buenas noches, qué pena les pregunto, que yo estoy viendo que por acá la llamada dice que se va a terminar en 15 minutos.
+
+47:09 - Wilson Salas
+Wilson, tú la construiste desde tu correo de Gmail? Sí, desde Gmail porque el de la U está full y no me deja borrar más. Está para una hora.
+
+47:20 - Sistema de Gestion De Calidad del Aire
+Yo lo hubiera hecho.
+
+47:22 - Wilson Salas
+Yo estoy grabando de todas maneras pues internamente y si algo ahorita volvemos a ingresar si no había visto No, le voy a generar otro líneo, ahorita nos pasamos.
+
+47:34 - Unidentified Speaker
+Dale, listo.
+
+47:36 - Wilson Salas
+Listo, pues esto ya informe global, pues vamos hacia allá a mirar los puntos. Esta es la situación que más o menos estamos encontrando. Para este primer nivel, para el cero sobre todo, pues estamos encontrando que el participante pues utilizando la puntuación Z solo presenta un resultado satisfactorio en el nivel del cero.
+
+48:02 - cesar yate
+Claro, ahí se ven las diferencias que veíamos en las primeras, si se ve más marcado.
+
+48:08 - Wilson Salas
+Claro, ahí sí se ve la diferencia, el no satisfactorio. Y pues es, como decirlo, es crítico, pues entendiendo la fórmula porque nosotros estamos viviendo por un valor muy pequeño, que es este sigma PT, entonces esas diferencias se van a ver cuando pasamos pues ya la puntuación z prima que es una puntuación a falta como yo la entiendo es un poco menos castigadora por así decirlo vemos que ya pues el comportamiento para el participante es un poco mejor ya hay tres niveles en satisfactorio hay dos niveles que están en cuestionable y pues obviamente ya para la puntuación del z pues como se están incorporando esos elementos de incertidumbre, pues sea mal estimada a mi manera o si le atiene a la estimación de la incertidumbre del participante, si es mucho más, es menos castigadora, creo que castigadora no es la palabra, pero creo que es mucho menos severo que pues en la puntuación Z, sobre todo que digamos es la más crítica, entre nosotros como laboratorio de referencia. Tengamos una mejor desviación estándar del ensayo, pues una mejor incertidumbre, pues vamos a poner la vara, me corriges por fase de ser un poco más alta para todos los participantes.
+
+49:34 - cesar yate
+La ideal sería tener buenos participantes, por lo menos unos cuatro o cinco, para poder estimar una desviación estándar como AVE, o NIQR, o ya la algoritma, ya esa sería un gana-gana para todos.
+
+49:49 - Wilson Salas
+¿Qué es el aprendizaje? Conocer allí cómo es ese comportamiento y pues siento es algo que estamos levantando en este proyecto.
+
+50:08 - cesar yate
+¿Qué es el aprendizaje?
+
+50:10 - Wilson Salas
+Acá estaría por el método de expertos. Ya para el método de expertos, digamos, los resultados son menos marcados. Esto debido a que, como la desviación del ensayo depende de una ecuación, ¿cierto? Entonces es mucho más responsiva, es la palabra decirlo, a los niveles de concentración. No es tan brusco acá. Si la desviación del ensayo pues para el nivel del cero es esta. Sí, entonces la desviación del ensayo por pues cuando nosotros utilizamos pues el método de nosotros como referencia es mucho más pues es mucho menor pues a partir digamos de nuestros datos de medición mientras que pues el método de expertos pues como tiene esta ecuación es mucho más pues presentó unos resultados digamos que como tal vez para esta fase inicial más menos menos bruscos y siento que no levantan como tanta duda o tanta esa pregunta yo siento disculpan lo digo así a mí me acecha es venga ese valor de nosotros si está aterrizado o está como y por fuera si hay es ¿Cuál es la importancia de que ustedes hayan participado en un ensayo de aptitud?
+
+51:39 - cesar yate
+Sí. Esa es la realidad, la gran… Digamos, respondería esa pregunta.
+
+51:45 - Wilson Salas
+Si pueden llegar a ser referencia. Exacto. Entonces, estos son las dos formas que teníamos para analizar estos primeros datos. Voy. Permítanme… que no tenemos casi puntitos. Y pues como les digo, en esta vista podemos ver según el tipo de puntaje cómo estamos nosotros como referencia versus pues el participante según la puntuación. ¿Sí? Listo. Eso sería para esta primera ronda. Esta pregunta es como un poco más, creo que le aplica a todas. Cesar, en la parte digamos de comentar, porque hace unas semanas levantamos como la pregunta en el equipo y pues la 17.043 pues se habilita que, a ver si lo digo bien, estos ensayos de aptitud le permitan al participante recibir como algunos comentarios para mejorar Entonces, allí la primera pregunta que se levanta es, ¿cómo deberíamos de nosotros, tal vez, plasmar un análisis o un comentario con respecto a estos resultados?
+
+53:08 - cesar yate
+Pues que es una prueba piloto, ¿no? Es una prueba piloto donde se busca comparar al participante frente a los valores de referencia de la laboratorio de la Universidad Nacional.
+
+53:22 - Unidentified Speaker
+OK. Donde el objetivo estaba en identificar las capacidades de medición.
+
+53:28 - cesar yate
+Ustedes están identificando las capacidades, la comparabilidad de los resultados y la adecuada implementación del sistema de gestión que tiene la universidad para ensayos de aptitud. Yo lo pensaría así, porque ustedes están como en esa tónica. Porque fueron los y, en realidad, lo que buscan es el aprendizaje. Aprendizaje y tener datos y retar el sistema. En este caso, retar el software y retar lo que, digamos, la aplicabilidad del laboratorio, conocer. Ustedes también buscan mucho conocer el tema de la instalación y la infraestructura y que tuvieran la infraestructura adecuada, los recursos necesarios para poder prestar el servicio de enseñanza un total aprendizaje.
+
+54:21 - Wilson Salas
+Ya, entonces aquí la parte de análisis no deberíamos de llevarla tanto al desempeño del participante sino tal vez como a cómo se compararon ambos instrumentos, lo pregunto bien o...
+
+54:35 - cesar yate
+No, bueno, porque es un ensayo de aptitud, uno de los objetivos principales es la evaluación, si se fuera a la comparación interlaboral No, si fuera comparación, ahí sí lo que tú dices estaría bien, la comparación en el que cada uno coge sus resultados y los analice independientemente.
+
+54:56 - Unidentified Speaker
+Ya.
+
+54:56 - cesar yate
+Si de pronto ahorita ustedes deciden, no tenemos todavía la suficiente certeza frente a todo esto, podría dejarse como una comparación entre el laboratorio y que el participante también analice sus resultados y ustedes aseguran el tema de la trazabilidad, el tema de la confianza en las mediciones que ustedes hicieron. Pero no tanto con el objetivo de valorar el desempeño, sino pura comparación.
+
+55:20 - Unidentified Speaker
+Ya.
+
+55:20 - Wilson Salas
+OK.
+
+55:21 - cesar yate
+Y la clave está en si es comparación o un ensayo a pitú, que a mí me parece que esto es más una comparación, no tanto un ensayo a pitú.
+
+55:32 - Unidentified Speaker
+Porque era pura previsión.
+
+55:33 - Sistema de Gestion De Calidad del Aire
+Qué pena, les voy a interrumpir por acá, les levanté la mano. Pues primero, para decirles que hago esta intervención y nos pasamos del lead. Por favor. Sobre ese tema que están ustedes hablando, cesar, si se nos presentó esa duda. Más allá de la interpretación para el caso de la prueba piloto, que nos queda claro, desde la norma en aras ya de acreditaciones en numeral, cómo se maneja, me generaba como un poquito de ruido, pues porque vos sabes que desde 17.025 no evita mucho como hacer comentarios, interpretaciones, pero leímos la 17.043 y pues era evidente que ahí hay un numeral hacerlo. Entonces, desde tu experiencia, eso en laboratorios acreditados en este alcance, ¿cómo lo manejan?
+
+56:18 - cesar yate
+Así es, a la luz de una búsqueda de acreditación, sí es una evaluación de desempeño con indicadores y ahí tienes que al final generar un informe o un resultado en el que ustedes se hacen responsables declarando si es satisfactorio o no satisfactorio. Entonces, sí, es obligatorio. La opción de comparación entre laboratorios, sino que se van de una a evaluar el desempeño, que eso es obligatorio.
+
+56:46 - Sistema de Gestion De Calidad del Aire
+Wilson, no sé si tenés por ahí, es que yo recién me puse a entrar en el computador, tenés por ahí el numeral, es que nos llamó la atención, porque era un numeral casi como de usted interpreta los resultados que tiene el participante. Entonces yo decía, bueno, ¿hasta dónde hay que poner? O sea, ¿cómo hace uno para hacer esta actividad sin sobrepasar las líneas? Pues ya de interpretar los… ¿Cómo se llama? Esos resultados. Si quieren, mientras que lo buscamos, paseémonos de Lyn. Ahí les pasé.
+
+57:23 - Wilson Salas
+No, Lyn, porfa, para que allá nos vemos. ¿Listo? Ya se va a cerrar.
+
+57:32 - cesar yate
+¿Dónde está?
+
+57:33 - Wilson Salas
+¿Dónde está?
+
+57:35 - Unidentified Speaker
+¿Permiso? Porfa.
+
+58:03 - Wilson Salas
+Eso es... Está en el 7.4 voy. La evaluación del desempeño, listo.
+
+58:50 - Wilson Salas
+17.043.2023 es Australia.
+
+58:56 - Unidentified Speaker
+Página 21.

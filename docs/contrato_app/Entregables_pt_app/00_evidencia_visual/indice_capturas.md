@@ -1,0 +1,54 @@
+# Índice de evidencia visual reproducible
+
+**Fecha UTC:** 2026-07-14T20:20:38.390Z
+
+**Commit:** `5e766a39c0ffef48bedad7440cc4af2b5b34746c`
+
+**Navegador:** Chromium del sistema mediante Playwright 1.61.1
+
+**Datos:** copias no sensibles y congeladas en `datos_demo/`
+
+## Reproducción
+
+```bash
+npm ci
+scripts/documentacion/ejecutar_capturas.sh
+```
+
+## Capturas
+
+| ID | Pantalla | Archivo | SHA-256 | Viewport | Consumidores |
+|---|---|---|---|---|---|
+| CAP-01 | Inicio y carga | `capturas/CAP-01_inicio_carga.png` | `d5f1a775dbed606da22a93ceb09c86bc57ff59aebb35a394dd5760e4ef0284ca` | 1440x1200 | E01;E05;E06 |
+| CAP-02 | Carga válida | `capturas/CAP-02_carga_valida.png` | `0f332b8977686fd794332bdbc3b6dee0508a58737ff5ed5edb9c1ee3427378d6` | 1440x1200 | E05;E06;E08 |
+| CAP-03 | Preprocesador | `capturas/CAP-03_preprocesador.png` | `f026eedab3482e95b4e98fa2fb47a00ef1eedd64427c92dd5e803967d38e9b3a` | 1440x1200 | E05;E06 |
+| CAP-04 | Homogeneidad previa | `capturas/CAP-04_homogeneidad_previa.png` | `09853b207d4d3672d80786317472d83d483ec037d3236c0cf3eb05648f07f527` | 1440x1200 | E03;E05;E06 |
+| CAP-05 | Homogeneidad resultado | `capturas/CAP-05_homogeneidad_resultado.png` | `b7242119b6262f59962aacf1d56dd74785602eca2099a452cedc32929773b805` | 1440x1200 | E03;E06;E07;E09 |
+| CAP-06 | Estabilidad resultado | `capturas/CAP-06_estabilidad_resultado.png` | `af880516f3156e4bc929beda25f51da08d1a6df91d77e92ce573f544153225e2` | 1440x1200 | E03;E06;E07;E09 |
+| CAP-07 | Incertidumbre H/E | `capturas/CAP-07_incertidumbre_he.png` | `3ba932645e176211ee5c46399b6000ab9bf1b3be0da7e937eeed802dab7358c5` | 1440x1200 | E03;E06;E09 |
+| CAP-08 | Valores atípicos | `capturas/CAP-08_valores_atipicos.png` | `2eea950275a2d34c28cd8967044f607e72dc7ae13a0c99a1fc6683a4c55a42d5` | 1440x1200 | E03;E06;E07 |
+| CAP-09 | Algoritmo A | `capturas/CAP-09_algoritmo_a.png` | `42fd3c451daec1195e08dd6cd10a8fd6a1dc4deb7778a7e7d8ffbb7cb21307af` | 1440x1200 | E02;E03;E06;E09 |
+| CAP-10 | Valor consenso | `capturas/CAP-10_valor_consenso.png` | `93e07d0b4eed59d0a09725995eca82e85b48b32037c9b1f5a705eb2d66d6430f` | 1440x1200 | E03;E06;E07;E09 |
+| CAP-11 | Compatibilidad metrológica | `capturas/CAP-11_compatibilidad_metrologica.png` | `03ea6d8474190b82f781b5d73bfab1601c2ef51675a6569f28fe8caacc0833ba` | 1440x1200 | E03;E06;E07;E09 |
+| CAP-12 | Resumen de puntajes | `capturas/CAP-12_puntajes_resumen.png` | `68094bd11f265998f934bb5c6b42fd46a8180b4d13aca688bc4694a3577d058b` | 1440x1200 | E04;E06;E07;E09 |
+| CAP-13 | Puntajes z y z' | `capturas/CAP-13_puntajes_zprima.png` | `e1f975f5eb9d8c4efefc20e39cbd753eaef6b91ae7ea719bfb0475c9bb2cc6a2` | 1440x1200 | E04;E06;E07 |
+| CAP-13 | Puntajes z y z' | `capturas/CAP-13_puntajes_z.png` | `a2f34f7c8a130945d303f325cc8af18b37a50b8bca68f21b4be77bef8888a552` | 1440x1200 | E04;E06;E07 |
+| CAP-14 | Puntajes zeta y En | `capturas/CAP-14_puntajes_zeta.png` | `89629156b5b63a34fc14079ae754e5545519ca5ca54bcd9ecae5a8e35de3c18a` | 1440x1200 | E04;E06;E07 |
+| CAP-14 | Puntajes zeta y En | `capturas/CAP-14_puntajes_en.png` | `cebd2cd0466921e2ea72ffde0aa1fe4ab5d348be58e478ac87939e152d02cd37` | 1440x1200 | E04;E06;E07 |
+| CAP-15 | Informe global | `capturas/CAP-15_informe_global.png` | `c0c64138653258fef8a6121cfcbcb8c3ae14f10952bb440f77e96585bb023b06` | 1440x1200 | E06;E07;E09 |
+| CAP-16 | Participantes | `capturas/CAP-16_participantes.png` | `b481c06f11b2fe9dbb8904c6283ec95b14152fc7822a5d9f6f57b8120fb4755c` | 1440x1200 | E06;E07 |
+| CAP-17 | Generación de informes | `capturas/CAP-17_generacion_informes.png` | `4bfd8a4b4f0fd7ecb865ec0d9e3ce38965b3c85f25a27c680c9415e6a1f0b968` | 1440x1200 | E06;E08;E09 |
+| CAP-18 | Error de archivo | `capturas/CAP-18_error_archivo.png` | `6cf33a287460ebbe3fe62501bd775f5cb09229e47a90391e9e49900656f0b4e7` | 1440x1200 | E06;E08 |
+| CAP-19 | Vista en resolución menor | `capturas/CAP-19_resolucion_menor.png` | `a5aa7f87f34d3c57739d8df5cae3ee7242542ef8a5e2b4ee3b9cae6bb555de36` | 1024x768 | E05;E06;E08 |
+
+## Criterios de control
+
+- Cada captura exige contenido semántico visible antes de guardarse.
+- La ejecución falla ante errores de página o consola no reconocidos.
+- El registro conserva incluso diagnósticos conocidos no bloqueantes.
+- Los nombres, hashes, fecha, commit, resolución y datos quedan registrados.
+- CAP-19 usa 1024×768; las demás capturas usan 1440×1200.
+
+## Diagnósticos aceptados
+
+El JSON conserva un 404 de favicon y el error `adjustWidth` que DT emite al redimensionar una tabla oculta. No alteran contenido ni cálculos; cualquier otro diagnóstico hace fallar la corrida. Su eliminación queda como riesgo técnico residual para una fase de mantenimiento.

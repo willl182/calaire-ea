@@ -1,19 +1,20 @@
-# Equivalencia de Códigos QMS (Blueprint → Vigente)
+# Equivalencia de códigos del SGC (plan maestro → vigente)
 
-**Propósito:** los artefactos `CS-01` a `CS-15` citan códigos `P-PSEA-XX`, `F-PSEA-XX`, `I-PSEA-XX` del QMS. La matriz `docs/sgc/matriz_equivalencias_codigos_sgc_pea.md` (aprobada 2026-06-14) renumeró estos códigos. Esta tabla traduce referencias heredadas al código vigente del QMS para que la búsqueda directa funcione.
+**Propósito:** los artefactos `CS-01` a `CS-15` citan códigos `P-PSEA-XX`, `F-PSEA-XX`, `I-PSEA-XX` del SGC. La matriz `docs/sgc/matriz_equivalencias_codigos_sgc_pea.md` (aprobada 2026-06-14) renumeró estos códigos. Esta tabla traduce referencias heredadas al código vigente del SGC para que la búsqueda directa funcione.
+
 
 **Regla de uso:** cuando un artefacto diga `X-PSEA-NN` con significado antiguo, este mapa indica el código vigente. Si el significado antiguo y el nuevo son el mismo (no renumerado), se deja sin cambio.
 
 ## Procedimientos P-PSEA
 
-| Referencia en blueprint / artefacto | Significado que el blueprint le daba | Código vigente en QMS (post-renumeración 2026-06-14) | Notas |
+| Referencia en el plan maestro / artefacto | Significado asignado en el plan maestro | Código vigente en el SGC (tras la renumeración del 2026-06-14) | Notas |
 |---|---|---|---|
 | `P-PSEA-01` | Protocolo general EA | `P-PSEA-01` | Sin cambio. |
-| `P-PSEA-04` | Planificación redonda | `P-PSEA-04` | Sin cambio. |
+| `P-PSEA-04` | Planificación de ronda | `P-PSEA-04` | Sin cambio. |
 | `P-PSEA-05` | Comunicaciones del PEA | `P-PSEA-05` | Sin cambio en número ni significado (P-PSEA-20 → P-PSEA-05, mismo nombre). |
 | `P-PSEA-06` | Diseño y evaluación estadística | `P-PSEA-07` | Renumerado (antiguo P-PSEA-06 → nuevo P-PSEA-07). Actualizar referencias. |
 | `P-PSEA-07` | Statistical work | `P-PSEA-07` | Mismo código vigente, mismo significado funcional (se renumeró P-PSEA-06 → P-PSEA-07). |
-| `P-PSEA-08` | Digital data management | `P-PSEA-08` | Sin cambio. |
+| `P-PSEA-08` | Gestión de datos digitales | `P-PSEA-08` | Sin cambio. |
 | `P-PSEA-09` | Generación y emisión de informes | `P-PSEA-09` | Sin cambio en número (antiguo P-PSEA-07 → nuevo P-PSEA-09, mismo nombre funcional). |
 | `P-PSEA-15` | Mejora continua (antiguo) | `P-PSEA-15` | Cambio de significado: ahora = Trabajo no conforme / NC / CAPA. |
 | `P-PSEA-16` | Confidencialidad operativa (antiguo) | `P-PSEA-16` | Cambio de significado: ahora = Divulgación y control de valores sensibles. |
@@ -24,17 +25,17 @@
 
 ## Formatos y registros F-PSEA
 
-| Referencia en blueprint / artefacto | Significado que el blueprint le daba | Código vigente en QMS | Notas |
+| Referencia en el plan maestro / artefacto | Significado asignado en el plan maestro | Código vigente en el SGC | Notas |
 |---|---|---|---|
 | `F-PSEA-01` | Calendario redondo | `F-PSEA-01` | Sin cambio. |
 | `F-PSEA-02` | Horario redondo | `F-PSEA-02` | Sin cambio. |
-| `F-PSEA-04` | Informe final de resultados (código antiguo) | `F-PSEA-13` | Renumerado. En el QMS vigente, `F-PSEA-04` identifica el anexo técnico de equipos. **Para el informe final usar `F-PSEA-13`.** |
+| `F-PSEA-04` | Informe final de resultados (código antiguo) | `F-PSEA-13` | Renumerado. En el SGC vigente, `F-PSEA-04` identifica el anexo técnico de equipos. **Para el informe final usar `F-PSEA-13`.** |
 | `F-PSEA-05` | Plan redondo EA | `F-PSEA-03` | Renumerado. |
 | `F-PSEA-05A` | Anexo técnico de equipos (antiguo) | `F-PSEA-04` | Renumerado. El anexo técnico está en `F-PSEA-04`. **No usar `F-PSEA-05A`.** |
 | `F-PSEA-06` | Plan de ronda (antiguo) | `F-PSEA-05` | Renumerado. |
 | `F-PSEA-07` | Ficha digital de ronda (antiguo) | `F-PSEA-06` | Renumerado. |
 | `F-PSEA-08` a `F-PSEA-12` | Datos y preprocesamiento | `F-PSEA-07` a `F-PSEA-12` | Mapeo según matriz. |
-| `F-PSEA-13` | Paquete de homogeneidad / estabilidad (antiguo) | `F-PSEA-11` | Renumerado. **Y el "F-PSEA-13" del blueprint (informe final) ahora está en `F-PSEA-13`.** Colisión importante: la matriz renumeró el antiguo F-PSEA-13 a F-PSEA-11, y al mismo tiempo promovió el antiguo F-PSEA-04 (informe final) a F-PSEA-13. |
+| `F-PSEA-13` | Paquete de homogeneidad / estabilidad (antiguo) | `F-PSEA-11` | Renumerado. **Y el "F-PSEA-13" del plan maestro (informe final) ahora está en `F-PSEA-13`.** Colisión importante: la matriz renumeró el antiguo F-PSEA-13 a F-PSEA-11, y al mismo tiempo promovió el antiguo F-PSEA-04 (informe final) a F-PSEA-13. |
 | `F-PSEA-14` | Datos consolidados (antiguo) | `F-PSEA-12` | Renumerado. |
 | `F-PSEA-15` | Queja / NC / CAPA (antiguo) | `F-PSEA-14` | Renumerado. |
 | `F-PSEA-16` | Registro de queja / NC / CAPA (antiguo) | `F-PSEA-14` | Renumerado. Este es el antecedente correcto del registro vigente de quejas / NC / CAPA. |

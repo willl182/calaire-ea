@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zenith Servicios Comerciales</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #faf9f7;
+            --surface: #ffffff;
+            --text: #1c1917;
+            --muted: #78716c;
+            --accent: #b45309;
+            --border: #e7e5e4;
+            --serif: 'Cormorant Garamond', serif;
+            --sans: 'Montserrat', sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: var(--sans);
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            font-weight: 400;
+        }
+        nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+            padding: 1.5rem 6%;
+            display: flex; justify-content: space-between; align-items: center;
+            background: rgba(250,249,247,.92);
+            backdrop-filter: blur(10px);
+        }
+        .logo { font-family: var(--serif); font-size: 1.8rem; font-weight: 700; letter-spacing: 2px; }
+        .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+        .nav-links a { color: var(--muted); text-decoration: none; font-size: .85rem; text-transform: uppercase; letter-spacing: 1.5px; transition: color .3s; }
+        .nav-links a:hover { color: var(--text); }
+        .btn {
+            padding: .8rem 2rem; border: 1px solid var(--text); background: transparent;
+            color: var(--text); cursor: pointer; font-family: var(--sans); font-size: .75rem;
+            text-transform: uppercase; letter-spacing: 2px; transition: all .3s; text-decoration: none; display: inline-block;
+        }
+        .btn:hover { background: var(--text); color: var(--bg); }
+        .btn-solid { background: var(--text); color: var(--bg); }
+        .btn-solid:hover { background: transparent; color: var(--text); }
+        .menu-toggle { display: none; background: none; border: none; font-size: 1.4rem; cursor: pointer; }
+        header { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 8rem 6% 5rem; text-align: center; }
+        .hero-content { max-width: 900px; margin: 0 auto; }
+        .hero-label { color: var(--accent); font-size: .75rem; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 2rem; }
+        h1 { font-family: var(--serif); font-size: clamp(3rem, 6vw, 5.5rem); line-height: 1; font-weight: 600; letter-spacing: -1px; margin-bottom: 1.5rem; }
+        .hero-sub { font-size: 1.2rem; color: var(--muted); max-width: 560px; margin: 0 auto 3rem; }
+        .hero-cta { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+        .scroll-line {
+            width: 1px; height: 80px; background: var(--border); margin: 4rem auto 0;
+            position: relative; overflow: hidden;
+        }
+        .scroll-line::after {
+            content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 50%;
+            background: var(--text); animation: scroll 2s ease-in-out infinite;
+        }
+        @keyframes scroll { 0%,100%{transform:translateY(-100%)}50%{transform:translateY(200%)} }
+        section { padding: 7rem 6%; }
+        .section-title { text-align: center; margin-bottom: 5rem; }
+        .section-title h2 { font-family: var(--serif); font-size: clamp(2.2rem, 4vw, 3.5rem); font-weight: 600; margin-bottom: 1rem; }
+        .section-title p { color: var(--muted); font-size: 1.05rem; max-width: 560px; margin: 0 auto; }
+        .intro { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; max-width: 1200px; margin: 0 auto; align-items: center; }
+        .intro-text p { color: var(--muted); font-size: 1.1rem; margin-bottom: 1.5rem; }
+        .intro-image {
+            background: var(--surface); border: 1px solid var(--border); aspect-ratio: 4/5;
+            display: flex; align-items: center; justify-content: center; font-family: var(--serif);
+            font-size: 4rem; color: var(--border); font-style: italic;
+        }
+        .services-list { max-width: 900px; margin: 0 auto; }
+        .service-row {
+            display: flex; justify-content: space-between; align-items: center;
+            border-bottom: 1px solid var(--border); padding: 2.5rem 0;
+            transition: padding .3s; cursor: default;
+        }
+        .service-row:hover { padding-left: 1rem; }
+        .service-row h3 { font-family: var(--serif); font-size: 1.8rem; font-weight: 600; }
+        .service-row p { color: var(--muted); max-width: 360px; text-align: right; font-size: .95rem; }
+        .testimonial {
+            background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+            text-align: center; padding: 6rem 6%;
+        }
+        .testimonial blockquote {
+            font-family: var(--serif); font-size: clamp(1.6rem, 3vw, 2.4rem); font-style: italic;
+            max-width: 800px; margin: 0 auto 2rem; line-height: 1.4;
+        }
+        .testimonial cite { color: var(--muted); font-style: normal; text-transform: uppercase; letter-spacing: 2px; font-size: .8rem; }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; max-width: 1100px; margin: 0 auto; }
+        .contact-info h3 { font-family: var(--serif); font-size: 2rem; margin-bottom: 1.5rem; }
+        .contact-info p { color: var(--muted); margin-bottom: 2rem; }
+        .contact-detail { margin-bottom: 1.2rem; }
+        .contact-detail strong { display: block; font-weight: 600; margin-bottom: .2rem; }
+        .contact-detail span { color: var(--muted); font-size: .95rem; }
+        form { display: flex; flex-direction: column; gap: 1.2rem; }
+        input, textarea {
+            border: none; border-bottom: 1px solid var(--border); background: transparent;
+            padding: 1rem 0; font-family: var(--sans); font-size: .95rem; outline: none; transition: border-color .3s;
+        }
+        input:focus, textarea:focus { border-bottom-color: var(--text); }
+        textarea { min-height: 120px; resize: vertical; }
+        footer { padding: 3rem 6%; text-align: center; color: var(--muted); font-size: .85rem; border-top: 1px solid var(--border); }
+        @media (max-width: 900px) {
+            .intro, .contact-grid { grid-template-columns: 1fr; }
+            .service-row { flex-direction: column; align-items: flex-start; gap: 1rem; }
+            .service-row p { text-align: left; }
+            .nav-links { display: none; }
+            .menu-toggle { display: block; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">ZENITH</div>
+        <ul class="nav-links">
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <a href="#contacto" class="btn btn-solid">Agendar</a>
+        <button class="menu-toggle">☰</button>
+    </nav>
+    <header>
+        <div class="hero-content">
+            <div class="hero-label">Servicios comerciales exclusivos</div>
+            <h1>Elevamos tu negocio al siguiente nivel</h1>
+            <p class="hero-sub">Estrategia refinada, ejecución impecable y relaciones comerciales duraderas para empresas que buscan excelencia.</p>
+            <div class="hero-cta">
+                <a href="#contacto" class="btn btn-solid">Solicitar asesoría</a>
+                <a href="#servicios" class="btn">Explorar servicios</a>
+            </div>
+            <div class="scroll-line"></div>
+        </div>
+    </header>
+    <section id="nosotros">
+        <div class="intro">
+            <div class="intro-text">
+                <h2 style="font-family:var(--serif);font-size:clamp(2rem,4vw,3rem);margin-bottom:1.5rem;font-weight:600;">Excelencia en cada detalle comercial</h2>
+                <p>En Zenith creemos que vender no es una transacción, es el arte de construir confianza. Trabajamos con empresas exigentes que valoran la calidad por encima de todo.</p>
+                <p>Nuestro equipo combina décadas de experiencia en consultoría estratégica, desarrollo de negocios y relaciones corporativas para ofrecer resultados sostenibles.</p>
+                <a href="#contacto" class="btn" style="margin-top:1rem;">Conócenos</a>
+            </div>
+            <div class="intro-image">Z</div>
+        </div>
+    </section>
+    <section id="servicios">
+        <div class="section-title">
+            <h2>Servicios</h2>
+            <p>Soluciones pensadas para empresas que buscan distinción y resultados.</p>
+        </div>
+        <div class="services-list">
+            <div class="service-row">
+                <h3>Estrategia comercial</h3>
+                <p>Planes de crecimiento a medida, análisis de mercado y posicionamiento de alto valor.</p>
+            </div>
+            <div class="service-row">
+                <h3>Desarrollo de negocios</h3>
+                <p>Apertura de nuevos mercados, alianzas estratégicas y relaciones con grandes cuentas.</p>
+            </div>
+            <div class="service-row">
+                <h3>Consultoría de ventas</h3>
+                <p>Metodologías de venta consultiva, capacitación de equipos y optimización de procesos.</p>
+            </div>
+            <div class="service-row">
+                <h3>Experiencia del cliente</h3>
+                <p>Diseño de journey maps, programas de fidelización y servicio postventa premium.</p>
+            </div>
+            <div class="service-row">
+                <h3>Transformación digital</h3>
+                <p>Digitalización de canales comerciales con herramientas elegantes y eficientes.</p>
+            </div>
+        </div>
+    </section>
+    <section class="testimonial">
+        <blockquote>"Zenith transformó nuestra forma de relacionarnos con clientes. Su enfoque sofisticado y resultados concretos superaron todas nuestras expectativas."</blockquote>
+        <cite>— Elena Vargas, CEO de Grupo Meridian</cite>
+    </section>
+    <section id="contacto">
+        <div class="section-title">
+            <h2>Comienza la conversación</h2>
+            <p>Cuéntanos sobre tu proyecto y te responderemos en menos de 24 horas.</p>
+        </div>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3>Oficinas</h3>
+                <p>Preferimos las reuniones presenciales cuando el proyecto lo amerita. Agenda tu visita.</p>
+                <div class="contact-detail">
+                    <strong>Email</strong>
+                    <span>hola@zenith-servicios.com</span>
+                </div>
+                <div class="contact-detail">
+                    <strong>Teléfono</strong>
+                    <span>+52 55 3344 5566</span>
+                </div>
+                <div class="contact-detail">
+                    <strong>Dirección</strong>
+                    <span>Paseo de la Reforma 250, Ciudad de México</span>
+                </div>
+            </div>
+            <form>
+                <input type="text" placeholder="Nombre" required>
+                <input type="email" placeholder="Email" required>
+                <input type="text" placeholder="Empresa">
+                <textarea placeholder="Cuéntanos sobre tu proyecto" required></textarea>
+                <button type="submit" class="btn btn-solid" style="align-self:flex-start;">Enviar mensaje</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <p><strong>ZENITH</strong> — Servicios comerciales de excelencia</p>
+        <p style="margin-top:.5rem;">© 2026 Zenith. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

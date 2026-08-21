@@ -1,0 +1,93 @@
+Sesión Trabajo Resultados Pruebas Piloto
+Thu, Jul 30, 2026
+
+Summary:
+
+Revisión técnica de resultados y metodología de las rondas piloto de ensayo.
+• Se realizaron 3 rondas parciales, sin contaminantes simultáneos
+• Variaciones notables alrededor de cero en varios equipos
+• Oscilación de temperatura entre 18 °C y 23 °C
+• Manifold actual de una entrada no simula múltiples aspiraciones
+• Homogeneidad cumplida; estabilidad no cumplida (contribución registrada)
+• Falta CIATA incertidumbres definitivas; pocos participantes (2–3)
+
+
+Action Items:
+
+* Wilson Salas: Organizar una cuarta ronda con uno o dos participantes que cuenten con el conjunto completo de analizadores.
+* Wilson Salas: Buscar y coordinar la participación de otro laboratorio/participante con equipos de dióxido de azufre y monóxido de carbono para replicar las rondas pendientes.
+* Wilson Salas: Revisar y reportar los cambios de temperatura del salón y señalar si la desviación supera 2 °C en 24 horas
+* Fabian Moreno: Medir y reportar la variación de temperatura durante ventanas de 12 horas en próximas pruebas de 12–13 horas
+* Mayra: Confirmar la disponibilidad y la fecha de entrega del manifold mencionado
+* Laboratorio CALAIRE Área Infraestructura: Evaluar y gestionar la compra o la fabricación de un manifold con entrada única y múltiples salidas adecuado para las pruebas
+* Cesar Yate: Apoyar en el desarrollo o ajuste del aplicativo para la evaluación de resultados cuando se disponga del manifold apropiado
+* Wilson Salas: Verificar y obtener el certificado del proveedor del material de referencia para confirmar que incluye evaluación de homogeneidad y estabilidad
+* Participante: Entregar la estimación de incertidumbre desglosada por niveles de concentración para permitir la comparación
+* Wilson Salas: Calcular los puntajes Z, Z' y Z prima completos para todos los niveles y documentar las bases de cada cálculo
+* Wilson Salas: Generar y compartir un nuevo enlace de conexión para continuar la reunión si la sesión actual finaliza
+* Sistema de Gestion De Calidad del Aire: Revisar y proponer criterios para emitir comentarios a participantes sin sobrepasar los límites de interpretación establecidos por la norma
+* Wilson Salas: Compartir la cláusula 7.4 de la guía 17.043:2023 (evaluación del desempeño) y la referencia de la página 21 con los participantes
+* CIATA: Entregar los datos definitivos de incertidumbre utilizados en sus mediciones para permitir una segunda fase de revisión.
+* Wilson Salas: Realizar y compartir un análisis exhaustivo de la señal y la dispersión de los datos, incluyendo estimaciones de incertidumbre comparativas con los participantes
+
+
+Key Discussion Points:
+
+Inicio, asistencia y objetivos de la sesión
+Se registró la asistencia de los participantes y se mencionaron condiciones logísticas de conexión y señal. Wilson Salas expuso los tres objetivos de la reunión: revisar datos recopilados, discutir dudas de procesamiento y manejo de rondas, y plantear sugerencias para una cuarta ronda potencial.
+
+Ronda 1 — presentación de resultados y observaciones iniciales
+Wilson presentó análisis visuales de la ronda 1 centrados en el analizador de dióxido de azufre y otros analizadores, mostrando diferencias entre la referencia (línea azul) y los participantes (línea naranja), con especial sensibilidad en el nivel de cero y posibles problemas de calibración en algunos puntos. También se discutió la limitada replicación para dióxido de azufre y monóxido de carbono y la necesidad de buscar más participantes para réplicas adicionales.
+
+Rondas 2 y 3 — réplicas, sesgos y discusión sobre incertidumbre
+Las rondas 2 y 3 se realizaron con CIATE y CORA Antioquia y permitieron observar réplicas con coherencia general en varios niveles, aunque con sesgos positivos del participante en ozono y diferencias mayores en óxido de nitrógeno, así como datos faltantes en un nivel por tasas de muestreo. Se destacó que las variaciones más bruscas se dieron alrededor del cero y que la estimación de incertidumbre varía entre participantes, con CIATA sin entregar aún sus valores definitivos para revisión.
+
+Discusión sobre control de temperatura y su impacto
+Se planteó que las pruebas se realizaron durante día y noche sin control de humedad ni temperatura adicional, y que los instrumentos se calientan tras permanecer muchas horas encendidos. Se recomendó revisar cambios bruscos de temperatura en ventanas de 12 y 24 horas y controlar la temperatura en próximas corridas.
+
+Evaluación del manifold disponible y necesidad de uno apropiado
+Se explicó que el manifold usado solo tiene una entrada y una salida y no permite que varios equipos aspiren el gas como en el fotómetro; se discutió la necesidad de un manifold con múltiples salidas y la opción de mandarlo a hacer o comprarlo.
+
+Coordinación y disponibilidad del manifold y recursos asociados
+Se mencionó a Mayra respecto al suministro del manifold y se debatió si conviene fabricar o adquirir el manifold adecuado, revisando diferencias de diseño entre el manifold de fotometría (abierto) y el que requieren los equipos (cerrado con varias salidas).
+
+Presentación de variaciones de temperatura y consecuencias para las pruebas
+Wilson mostró las gráficas de temperatura de la última ronda, donde se observaron periodos de enfriamiento y oscilaciones de 18 °C a 23 °C; el equipo coincidió en que esas fluctuaciones pueden afectar los análisis y que es necesario implementar control térmico.
+
+Análisis de ceros, dispersión de señales e implicaciones de incertidumbre
+Se compararon los ceros entre el equipo de referencia y el participante, observando comportamientos distintos por analito y dispersiones amplias en algunos casos; se acordó realizar un análisis más exhaustivo de señal y dispersión y se reconoció la limitación por el número reducido de participantes.
+
+Resultados de homogeneidad y estabilidad de la primera ronda
+Para la primera ronda, los métodos MADE y NIQR indicaron que la homogeneidad cumple el criterio, pero la estabilidad no cumple el criterio, por lo que se registró una contribución a la incertidumbre y se ajustó el tratamiento de valores negativos a cero según lo indicado.
+
+Evaluación de homogeneidad y estabilidad
+Se explicó cómo se tratan las contribuciones negativas a la incertidumbre por homogeneidad (se ponen a cero) y que la estabilidad se calculó como la diferencia absoluta entre homogeneidad y estabilidad. También se comentó el reto operativo y logístico de las pruebas de estabilidad por el número mínimo de mediciones necesarias y el estrés sobre los instrumentos por mediciones prolongadas.
+
+Postura de terceros y requisitos de justificación para acreditación
+Se presentó la posición de un laboratorio europeo que no considera contribución a homogeneidad o estabilidad cuando el ítem se genera y analiza in situ, y se discutió la necesidad de justificar técnicamente esa postura ante un auditor experto en procesos de acreditación.
+
+Uso de materiales de referencia y certificados del proveedor
+Se aclaró que si el ítem es material de referencia, el proveedor debió evaluar homogeneidad y estabilidad y reflejarlo en la incertidumbre entregada, lo que puede evitar repetir evaluaciones internas; Wilson propuso verificar el certificado del proveedor.
+
+Datos disponibles y metodología de cálculo de desviaciones
+Se informó que en la primera ronda no hubo valores atípicos y que, por tener solo dos participantes, no fue posible usar algoritmos de consenso ni NIQR, por lo que se emplearon valor de referencia y método de expertos para determinar la desviación del ensayo.
+
+Incertidumbres del participante y comparabilidad
+Se discutió que un participante entregó una única incertidumbre global para todos los niveles, lo que suscitó dudas sobre cómo fue estimada y si es comparable con la incertidumbre del organizador.
+
+Resultados de puntuaciones Z, Z' y Z prima
+Se comunicó el cálculo de puntajes; la puntuación Z mostró cumplimiento solo en el nivel cero, mientras que Z' y Z prima, al incorporar incertidumbres, mostraron un comportamiento menos severo y más niveles en satisfactorio cuando la incertidumbre es mayor o está estimada de forma distinta.
+
+Mejora de la estimación estadística y número de participantes
+Se discutió la necesidad de mejorar la desviación estándar del ensayo para obtener menor incertidumbre y fijar una vara más alta para los participantes. Se propuso como ideal contar con cuatro o cinco participantes para poder estimar desviaciones mediante AVE o NIQR y así obtener mejores métricas para el análisis. Se introdujo el concepto de aprendizaje como objetivo general del proyecto.
+
+Métodos de análisis y vista preliminar de datos
+Se abordó el uso del método de expertos para analizar los datos y se observó que ese método tiende a arrojar resultados menos marcados debido a la dependencia de una ecuación y mayor responsividad a niveles de concentración. Se mostró una vista preliminar con pocos puntos y una comparación entre la referencia y los participantes para la primera ronda.
+
+Interpretación, propósito de la prueba piloto y requisitos de acreditación (17.043 / 17.025)
+Se planteó cómo plasmar comentarios para los participantes en la prueba piloto y se discutió si el ejercicio debe orientarse a comparación de resultados o a evaluación de desempeño; se recomendó enfocarlo como prueba piloto para aprendizaje, identificación de capacidades y prueba del software e infraestructura. Se aclaró que, en contexto de búsqueda de acreditación, la evaluación de desempeño es obligatoria y requiere emitir un resultado que declare si es satisfactorio o no, en consonancia con la norma aplicable; se señaló la cláusula 7.4 de la guía 17.043:2023 (evaluación del desempeño) como referencia en la página 21.
+
+
+Notepad:
+
+* No notes

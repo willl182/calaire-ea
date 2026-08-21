@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulse Servicios Comerciales</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0f0f0f;
+            --surface: #181818;
+            --text: #ffffff;
+            --muted: #a1a1aa;
+            --c1: #ff006e;
+            --c2: #fb5607;
+            --c3: #ffbe0b;
+            --c4: #8338ec;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.5;
+            overflow-x: hidden;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, var(--c1), var(--c2), var(--c3));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .gradient-bg {
+            position: fixed; inset: 0; z-index: 0; pointer-events: none;
+            background:
+                radial-gradient(circle at 20% 30%, rgba(255,0,110,.15) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(131,56,236,.12) 0%, transparent 40%);
+        }
+        nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+            padding: 1.2rem 5%;
+            display: flex; justify-content: space-between; align-items: center;
+            mix-blend-mode: difference;
+        }
+        .logo { font-size: 1.8rem; font-weight: 700; letter-spacing: -2px; }
+        .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+        .nav-links a { color: var(--text); text-decoration: none; font-weight: 500; }
+        .btn {
+            padding: .9rem 1.8rem; border-radius: 0; border: 2px solid var(--text);
+            cursor: pointer; font-weight: 700; text-decoration: none; display: inline-block;
+            text-transform: uppercase; letter-spacing: 1px; transition: all .2s;
+        }
+        .btn-primary { background: var(--text); color: var(--bg); }
+        .btn-primary:hover { background: transparent; color: var(--text); }
+        .btn-outline { background: transparent; color: var(--text); }
+        .btn-outline:hover { background: var(--text); color: var(--bg); }
+        .menu-toggle { display: none; background: none; border: none; color: var(--text); font-size: 1.6rem; cursor: pointer; }
+        header { min-height: 100vh; display: flex; align-items: center; padding: 8rem 5%; position: relative; z-index: 1; }
+        .hero { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .eyebrow { font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--c3); margin-bottom: 1rem; }
+        h1 { font-size: clamp(3rem, 6vw, 5.5rem); line-height: .95; letter-spacing: -4px; margin-bottom: 1.5rem; }
+        .hero p { color: var(--muted); font-size: 1.2rem; max-width: 520px; margin-bottom: 2.5rem; }
+        .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+        .marquee {
+            background: var(--surface); border-top: 1px solid #333; border-bottom: 1px solid #333;
+            padding: 1.2rem 0; overflow: hidden; position: relative; z-index: 1;
+        }
+        .marquee-inner {
+            display: flex; gap: 4rem; animation: marquee 20s linear infinite; width: max-content;
+            font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--muted);
+        }
+        @keyframes marquee { 0%{transform:translateX(0)}100%{transform:translateX(-50%)} }
+        section { padding: 7rem 5%; position: relative; z-index: 1; }
+        .section-title { margin-bottom: 4rem; }
+        .section-title h2 { font-size: clamp(2.2rem, 5vw, 3.5rem); letter-spacing: -2px; margin-bottom: 1rem; }
+        .section-title p { color: var(--muted); font-size: 1.1rem; max-width: 600px; }
+        .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 0; max-width: 1200px; margin: 0 auto; border-top: 1px solid #333; border-left: 1px solid #333; }
+        .service-item {
+            border-right: 1px solid #333; border-bottom: 1px solid #333;
+            padding: 3rem 2rem; transition: background .3s; cursor: default;
+        }
+        .service-item:hover { background: var(--surface); }
+        .service-item .num { font-size: .8rem; color: var(--c3); font-weight: 700; margin-bottom: 1rem; }
+        .service-item h3 { font-size: 1.5rem; margin-bottom: .8rem; }
+        .service-item p { color: var(--muted); }
+        .stats-band {
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem;
+            max-width: 1200px; margin: 0 auto;
+        }
+        .stat-box { text-align: center; }
+        .stat-box .big { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 700; letter-spacing: -2px; }
+        .stat-box .label { color: var(--muted); text-transform: uppercase; letter-spacing: 1px; font-size: .8rem; }
+        .cta-section { background: var(--surface); }
+        .cta-box {
+            max-width: 1000px; margin: 0 auto; text-align: center;
+            border: 2px solid #333; padding: 5rem 2rem; position: relative; overflow: hidden;
+        }
+        .cta-box::before {
+            content: ""; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+            background: conic-gradient(from 0deg, transparent, var(--c1), transparent 30%);
+            animation: rotate 6s linear infinite; opacity: .15; z-index: 0;
+        }
+        .cta-box > * { position: relative; z-index: 1; }
+        @keyframes rotate { 100%{transform:rotate(360deg)} }
+        footer { padding: 4rem 5%; border-top: 1px solid #333; position: relative; z-index: 1; }
+        .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 3rem; max-width: 1200px; margin: 0 auto; }
+        footer h4 { margin-bottom: 1rem; }
+        footer a { color: var(--muted); text-decoration: none; display: block; margin-bottom: .5rem; }
+        footer a:hover { color: var(--text); }
+        @media (max-width: 900px) {
+            .hero { grid-template-columns: 1fr; text-align: center; }
+            .hero p { margin: 0 auto 2rem; }
+            .hero-btns { justify-content: center; }
+            .nav-links { display: none; }
+            .menu-toggle { display: block; }
+            .stats-band { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="gradient-bg"></div>
+    <nav>
+        <div class="logo">PULSE</div>
+        <ul class="nav-links">
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#resultados">Resultados</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <a href="#contacto" class="btn btn-primary">Hablemos</a>
+        <button class="menu-toggle">☰</button>
+    </nav>
+    <header>
+        <div class="hero">
+            <div>
+                <div class="eyebrow">Servicios comerciales</div>
+                <h1>Vende más.<br><span class="gradient-text">Pesadamente.</span></h1>
+                <p>Diseñamos motores de crecimiento para empresas que no se conforman con lo ordinario. Estrategia, creatividad y ejecución sin filtros.</p>
+                <div class="hero-btns">
+                    <a href="#contacto" class="btn btn-primary">Quiero crecer</a>
+                    <a href="#servicios" class="btn btn-outline">Ver servicios</a>
+                </div>
+            </div>
+            <div style="display:grid;gap:1rem;">
+                <div style="background:var(--surface);border:1px solid #333;padding:2rem;">
+                    <div style="font-size:3rem;font-weight:700;letter-spacing:-2px;">+215%</div>
+                    <div style="color:var(--muted);text-transform:uppercase;letter-spacing:1px;font-size:.85rem;">Pipeline generado</div>
+                </div>
+                <div style="background:var(--surface);border:1px solid #333;padding:2rem;">
+                    <div style="font-size:3rem;font-weight:700;letter-spacing:-2px;">-40%</div>
+                    <div style="color:var(--muted);text-transform:uppercase;letter-spacing:1px;font-size:.85rem;">Costo de adquisición</div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="marquee">
+        <div class="marquee-inner">
+            <span>Estrategia comercial</span><span>Performance marketing</span><span>Ventas B2B</span><span>Automatización</span><span>Inteligencia de negocio</span>
+            <span>Estrategia comercial</span><span>Performance marketing</span><span>Ventas B2B</span><span>Automatización</span><span>Inteligencia de negocio</span>
+        </div>
+    </div>
+    <section id="servicios">
+        <div class="section-title">
+            <h2>Servicios que <span class="gradient-text">aceleran</span> resultados</h2>
+            <p>Cada solución está pensada para generar impacto directo en tus ingresos.</p>
+        </div>
+        <div class="services">
+            <div class="service-item">
+                <div class="num">01</div>
+                <h3>Go-to-Market</h3>
+                <p>Lanzamos o reposicionamos tu oferta en el mercado con un plan de ataque claro.</p>
+            </div>
+            <div class="service-item">
+                <div class="num">02</div>
+                <h3>Funnels de venta</h3>
+                <p>Construimos embudos multicanal que convierten visitantes en clientes recurrentes.</p>
+            </div>
+            <div class="service-item">
+                <div class="num">03</div>
+                <h3>Outbound escala</h3>
+                <p>Sistemas de prospección masiva personalizada para decisiones de alto valor.</p>
+            </div>
+            <div class="service-item">
+                <div class="num">04</div>
+                <h3>Campañas paid</h3>
+                <p>Anuncios que escalan: Meta, Google, LinkedIn y programmatic optimizados por ROAS.</p>
+            </div>
+            <div class="service-item">
+                <div class="num">05</div>
+                <h3>Revenue operations</h3>
+                <p>Conectamos marketing, ventas y customer success con datos y automatización.</p>
+            </div>
+            <div class="service-item">
+                <div class="num">06</div>
+                <h3>Brand comercial</h3>
+                <p>Mensajes, pitch decks y activos que venden antes de la primera llamada.</p>
+            </div>
+        </div>
+    </section>
+    <section id="resultados">
+        <div class="section-title" style="text-align:center;">
+            <h2>Resultados que hablan</h2>
+            <p>Métricas reales de clientes que confiaron en Pulse.</p>
+        </div>
+        <div class="stats-band">
+            <div class="stat-box"><div class="big">$60M+</div><div class="label">Ventas generadas</div></div>
+            <div class="stat-box"><div class="big">+180</div><div class="label">Clientes</div></div>
+            <div class="stat-box"><div class="big">35%</div><div class="label">Conversión media</div></div>
+            <div class="stat-box"><div class="big">24h</div><div class="label">Tiempo de respuesta</div></div>
+        </div>
+    </section>
+    <section id="contacto" class="cta-section">
+        <div class="cta-box">
+            <h2 style="font-size:clamp(2rem,5vw,3.5rem);letter-spacing:-2px;margin-bottom:1rem;">¿Tu negocio está listo para el siguiente nivel?</h2>
+            <p style="color:var(--muted);max-width:600px;margin:0 auto 2rem;">Contáctanos hoy y en 48 horas tendrás un diagnóstico inicial gratuito.</p>
+            <a href="mailto:hola@pulse-growth.com" class="btn btn-primary">Pedir diagnóstico</a>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <h4 style="font-size:1.5rem;letter-spacing:-1px;">PULSE</h4>
+                <p style="color:var(--muted);margin-top:1rem;">Servicios comerciales para empresas con ambición.</p>
+            </div>
+            <div>
+                <h4>Contacto</h4>
+                <a href="mailto:hola@pulse-growth.com">hola@pulse-growth.com</a>
+                <a href="tel:+525511223344">+52 55 1122 3344</a>
+            </div>
+            <div>
+                <h4>Legal</h4>
+                <a href="#">Privacidad</a>
+                <a href="#">Términos</a>
+            </div>
+        </div>
+        <p style="text-align:center;color:var(--muted);margin-top:3rem;font-size:.8rem;">© 2026 Pulse. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

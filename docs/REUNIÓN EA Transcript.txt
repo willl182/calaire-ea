@@ -1,0 +1,395 @@
+REUNIÓN EA
+Thu, Jul 30, 2026
+
+0:00 - Wilson Salas
+Evaluación del desempeño en la página 28.
+
+0:39 - Unidentified Speaker
+Eso es todo.
+
+1:00 - Wilson Salas
+Sí, era este.
+
+1:05 - Sistema de Gestion De Calidad del Aire
+Dice, cuando corresponda para los objetivos del programa, el proveedor de ensayos de aptitud debe proporcionar participantes con respecto a lo siguiente, el desempeño global en comparación con las expectativas previstas, ese numeral, cesar, eres el que nos generó un poquito de duda y queríamos conocer tu experiencia sobre eso, cómo se maneja.
+
+1:53 - Wilson Salas
+Es que al hablar del desempeño del participante, ese es... ¿Se da el centro? Sí, centro.
+
+2:00 - Sistema de Gestion De Calidad del Aire
+Esperemos a ver que... Tenía el micrófono en silencio, disculpen.
+
+2:05 - cesar yate
+Lo supusimos. Ya terminaba hasta de explicar la norma. Ay, Dios mío. Está bien.
+
+2:11 - Sistema de Gestion De Calidad del Aire
+Pasa, pasa. Les estaba comentando que todo parte de la planificación.
+
+2:16 - cesar yate
+Entonces, en la planificación sí, dentro de la planificación está algo un objetivo el de la evaluación de desempeño y cuál era pues el indicador y si de ahí sale algún tipo de análisis a realizar ya en el informe pues si tendría que haber algún tipo de comentario. Generalmente los que hacen esas inserciones de aptitud no se meten tan al detalle a exponerlo sino lo que exponen es por ejemplo que encontraron un sesgo grande o la incertidumbre está grande frente a la referencia. Eso es lo que le dicen, revisen su procedimiento de incertidumbre porque se observa que está subestimada o sobreestimada frente a la referencia. Así son las cosas, no tan al detalle. Ustedes hablan sobre si encuentran una diferencia muy grande, le dicen al participante que revisen su método, porque el sesgo puede estar asociado al método. Pero es más como recomendación sobre qué puede están los llevando, y también depende de la información que recibieron previamente, de si el participante les entregó procedimientos o si se vio algo durante el acompañamiento, le hacen alguna retroalimentación, antes a veces en el INM le dicen, al ver su procedimiento vemos que ustedes no están avalando una actividad que dice el METO, un proceso o una de las actividades que dice el procedimiento de medición, como muy al METO.
+
+3:45 - Sistema de Gestion De Calidad del Aire
+ok listo es claro es que era por eso era bueno preguntarte porque ya yo como que cuando hice comentarios especializados eso pues puede llegar a ser tan amplio como pues como uno se lo pueda imaginar o sea que eso sería importante nada después de buscar una acreditación que lo podamos como digamos que muchos prefieren no opinar y no para no comprometerse porque a veces los expertos no son del PEA, sino son externos subcontratados.
+
+4:18 - cesar yate
+Les prefiere no comprometerse con algún tipo de opinión que pueda después ser debatida. Ellos se van más a los resultados, a lo que se ve objetivamente y que no es subjetivo ni tampoco debatible. Entonces, si uno ve una incertidumbre muy grande frente a la otra de la referencia, pues es evidente que es sobreestimando la incertidumbre, por ejemplo.
+
+4:44 - Wilson Salas
+O sea, que la norma de ese punto no nos obliga a nosotros a hacer los comentarios y nuestro...
+
+4:51 - cesar yate
+No, no los obliga, no los obliga, pueden ver que con los comentarios no pasa nada.
+
+4:58 - Unidentified Speaker
+Ok.
+
+4:58 - Wilson Salas
+Porque miren que dice cuándo corresponde.
+
+5:01 - Sistema de Gestion De Calidad del Aire
+O sea, se puede renunciar a eso.
+
+5:04 - cesar yate
+Sí, se puede renunciar a eso, no es tan adecuado hacerlo así.
+
+5:09 - Sistema de Gestion De Calidad del Aire
+aprovechar que abrí fuera el micrófono que yo tengo unas pues venía yo con unas dudas. Cesar, bueno la pregunta es como yo me conecté tarde es ¿ya ustedes terminaron de pronto de revisar todos los datos que tiene el aplicativo o falta algo más por revisar?
+
+5:25 - Wilson Salas
+Falta revisar queríamos o sea mostré como los datos las señales que hemos obtenido y me falta mostrar pues las dos rondas que tenemos parecidas ronda 2 y ronda 3 que si tenemos el mismo, los mismos contaminantes con dos participantes, ya nos faltaría solo a esa.
+
+5:42 - Sistema de Gestion De Calidad del Aire
+No, entonces terminemos esa porque yo quiero hacerle una pregunta a cesar, es acerca de ya cuando él vea los datos que tenemos. Listo. Listo. Pago micrófono y te escuchamos. Voy tranquilo.
+
+5:55 - Wilson Salas
+Entonces, esa pues era la ronda de dióxido de azufre y de monóxido de carbón. Voy a ya listo esta es esta es nuestra segunda ronda los datos de nuestra segunda ronda pues para monóxido de nitrógeno dióxido de nitrógeno y ozono Perdón, vamos mejor a informarlo a la cámara. ¿Qué están más diciendo? ¿Listo? Entonces, para este primer participante, este es nuestro participante uno, en la ronda del monóxido de nitrógeno, ¿cierto? Utilizando el método de referencia, el participante no presenta resultados satisfactorios, vemos que pues hay valores bastante altos, no es en todos los niveles, generalmente pues en ese caso él presentó dos datos cuestionables, si nos vamos al método de expertos, que era la conversación que teníamos antes, pues vemos que el comportamiento de nuestras dos métricas, nuestras dos puntuaciones cambian, no para todas, pero al menos para el puntaje Z y el Z prima, si pasa a tener pues resultados satisfactorios, pues ya habíamos conversado que la ventaja del expertos es que me da una ecuación para la estimación de la desviación estándar pues del ensayo de aptitud entonces es más dinámica y es más reactiva en ese sentido pues como les digo para estos dos puntuaciones nos funciona para la puntuación de zeta y el error normalizado pues aquí tenemos nuevamente pues un resultado no satisfactorio pues como hemos debatido pues ya digamos depende de la incertidumbre y voy a pasarme acá estos son los resultados de nuestra tercera ronda el informe global. Voy a revisar un momentico el archivo. Pues digamos de momento, me disculpan allí, perdón, de verdad no sé qué pasó, entonces miremos, para el método de referencia el primer participante, lo puedo hacer así, listo, nuestro participante 1 por método de referencia para el monóxido de nitrógeno en los niveles del 0 y el nivel de en anomol por mol, el presente resultado no es satisfactorio y cuestionable. Listo. El valor definido en este caso, nuestro valor LXPT, pues para el 0 es 0.0080, para el valor de 119 es 118.8, esa es para la primera ronda, cierto. Mientras que segunda cuando ronda tuvimos con nuestra participante segunda 2, miren como el mismo método de referencia, si le presenta al participante pues unos resultados en este caso satisfactorios. Y se veía que era sesgo, porque la diferencia era muy grande.
+
+9:55 - cesar yate
+Por ejemplo, mostraba 121 contra 118. Y aquí con este resultado sí parece que es del participante el problema. Exacto.
+
+10:04 - Wilson Salas
+Sí, entonces pues aquí está más cercano. Sí, sí, es muy...
+
+10:09 - cesar yate
+Vuelvo y lo paso, me disculpa, hay que pasar las dos.
+
+10:14 - Wilson Salas
+121 contra 118, mientras que... Exacto. Mientras que en la segunda sí tuvimos un 119 menos un 120. Y usted está muy cerca al valor, digamos, nominal.
+
+10:26 - cesar yate
+Sí. Eso también pues da más confianza. Sí, afortunadamente.
+
+10:30 - Wilson Salas
+Eso sí lo notamos en los resultados, creo que hasta en la primera ronda lo comentamos con Fabian, después del primer día, eso nos dio como tranquilidad siendo referencia.
+
+10:42 - cesar yate
+Siendo referencia y que es un material de referencia, eso da tranquilidad.
+
+10:47 - Wilson Salas
+Exacto, eso y pues nuevamente pues mérito de expertos sigue siendo presentando pues mejor resultado, en este caso obviamente con esas incertidumbres pues para el cero se lo pierde un Exacto, mientras que pues para el puntaje pues digamos más alto se sigue pues como manteniendo, miremos el ozono, aquí está, entonces miren cómo el comportamiento pues empieza a cambiar para el ozono para el nivel del cero, en este otro lado, menos 0.33 será que midieron al revés o algo porque casi queda lo mismo pero con signo negativo ¿es normal? En este caso nosotros podemos tener signo negativo solamente en el cero porque el método te permite por la curva de calibración obtener esos datos negativos pero solamente solamente para los gases si nosotros estuviéramos con no sé el otro contaminante clásico de aire que es material particulado no podríamos tener datos negativos la concentración mínima y si es cero ¿Ese era el participante?
+
+11:58 - cesar yate
+¿Aquí tenía algún tipo de filtro o su curva no le daba para recuperar negativos? ¿Y eso no está en la incertidumbre? ¿Ustedes por qué miden cero? ¿Eso no está dentro del límite de cuantificación? ¿Sí está dentro de ese límite?
+
+12:13 - Wilson Salas
+Sí, sí, él siempre se mide cero. Y el cero tiene un LC y un LD, sí. No creo que el instrumento tenga algo diferente. ¿Podemos dar la pregunta al amigo, Fabian? Qué raro, era un negativo, ¿no?
+
+12:26 - cesar yate
+se hace como extraño. Físicamente es posible, químicamente es posible? No, pues químicamente no, pero por la curva de calibración.
+
+12:36 - Wilson Salas
+En material particulado si no, porque es masico, en ese si no puedes tener valor negativo, pero para los cuatro gases, los cuatro o cinco gases, los métodos equivalentes y de referencia si te permiten tener una concentración negativa, pero no puede superar, si mi memoria no me falla, creo que era el 1.8% absoluto o relativo, pero si hay un margen de tolerancia, algo negativo, sí lo hay.
+
+13:09 - cesar yate
+Si es permitido, sí, porque abajo de un externo que no tiene ni idea, eso será raro.
+
+13:16 - Wilson Salas
+Sí se presta para la situación. Entonces, pues digamos que aquí tenemos nuestro participante dos, ¿cierto? Donde solamente para el cero presenta un resultado cuestionable. Me voy a devolver un segundo, me disculpan. Este es nuestro participante uno en el ozono, ¿cierto? Pero miren cómo aquí cambia. En el cero presenta resultado satisfactorio, presenta no satisfactorio en las concentraciones intermedias. En un 21 no es normal.
+
+13:48 - cesar yate
+O sea, eso es que el participante definitivamente está muy errado o no entendió o hizo un procedimiento. Eso es un problema procedimental. Z21, eso no es de aleatoriedad, eso es de sesgo pero instrumentalmente, de la operación. Es que es muy lejos. Ok. Voy, voy, voy. Es decir, vale la pena un comentario muy técnico, ¿no?, del experto del ensayo. Bueno, sería pitú sin el experto porque es que ya eso es de demasiado lejos, demasiado, 20 veces lejos de lo que esperamos, muchísimo. Pasemos al método de expertos por un segundo.
+
+14:26 - Wilson Salas
+Ahí como te decía cesar, para mí me da la impresión de que es un tema de la deviación estándar del ensayo en la forma pues que la estimamos de momento, como ahorita igual nos lo dijiste, aparentemente nos está funcionando mejor la de la ecuación, es como menos...
+
+14:46 - cesar yate
+por la poca cantidad de participantes. Es decir, no necesariamente la ecuación. Más confianza.
+
+14:53 - Unidentified Speaker
+Exacto.
+
+14:53 - Wilson Salas
+Vemos que entonces el método experto es el participante. Para el OZONO sí presenta resultados satisfactorios. Sí están, digamos, mucho más compactos. Y cuando, paso nuevamente, nuestro participante 2, por método de expertos, pues ya los resultados son mucho más consistentes entre ambos. Vamos para el dato del 180, vemos que aquí el resultado del participante es 183, nuestro valor asignado es 180, lo permite, lo agrupa y Mientras que en nuestra primera ronda, nuestro valor asignado fue de 181 y el del participante pues fue 180. Aquí vemos que obviamente su puntuación es muchísimo mejor, es menos 0.09. Mientras que en el otro caso era 0.48. Y ese es el estándar de 4.6 es de, ¿me recuerdas?
+
+16:00 - cesar yate
+Este de 4.6 es la del método de expertos, es la de la ecuación.
+
+16:06 - Wilson Salas
+Claro, es grande. Sí, al ser grande esa diferencia.
+
+16:09 - cesar yate
+la opaca.
+
+16:10 - Wilson Salas
+Exacto, entonces pues para este caso si digamos pues podemos mirar ese ese comportamiento, si obviamente aquí ya vemos pues que en este momento en esta primera etapa el método de expertos nos arroja resultados más aterrizados a la realidad, si te agradezco mucho el comentario de ya un dato por encima, por encima de 10, 15 ya hay un sesgo, hay un error grande y es de otro tipo.
+
+16:40 - cesar yate
+Eso no es de cálculos, no, eso ya es operacional. Algo falló y es del participante, porque está muy lejos. Ok.
+
+16:50 - Unidentified Speaker
+Muy muy lejos.
+
+16:51 - Wilson Salas
+Listo, entonces pues eso para el ozono, obviamente pues ya lo hemos hablado pues con el tema de la incertidumbre, pues estas dos puntuaciones presentarían no satisfactorios, aunque vale pues como la pena el comentario no tenemos datos super volados y aquí lo más lejos pues fue 6.58 no es un 17 pero pues tampoco es que estén como tan alejados entonces digamos que tal vez por aquí si es el participante pues nos entrega tal vez un mejor dato un dato como más aterrizado podríamos tener como otro comportamiento si no fuese Mil disculpas. Sí, aquí, salvo este segundo punto de 40, que sí es como el más, perdón, si el de 40 es donde más está como esa diferencia, sí ya es un poco menos marcada, menos brusca. Este es nuestro participante 1, y miren nuestro participante 2, cómo pues su comportamiento es.
+
+17:56 - cesar yate
+Sí, pero ese es paranormalizado, que necesitan incertidumbres.
+
+17:59 - Wilson Salas
+Sí, entonces pues digamos ese ha sido el comportamiento que hemos tenido, como les digo pues yo he hecho simulaciones pero a mí me afán, no digo, la expresión no es mi afana, me genera muchas dudas cuando estamos ya trabajando en esta parte de la incertidumbre, yo sentía pues que el momento tal vez hacia donde lo podemos orientar en estas primeras etapas es mantenernos en puntuación zeta o zeta prima, que está como dentro de nuestro margen de operabilidad, mientras, falta otra palabra, comemos experticia en esto para ir metiéndonos hacia puntuaciones un poco más delicadas, que creo que nos ponen al borde de esa barrera de, pucha, aquí tal vez habría que hacer un comentario, pero ¿caemos en ese juego o mejor nos mantenemos? Pero es como mi lectura en este pequeño, en esta primera etapa.
+
+18:52 - cesar yate
+Sí, yo también creo que en este momento que está y más adelante es un riesgo, es un riesgo utilizar otros diferentes cuando la incertidumbre no es tan confiable. Del Z prima, lo único es que pues la norma, la 13.528 habla de que cuando se usa ese indicador es cuando la incertidumbre de la red, del XPT, la incertidumbre del XPT es mayor a 0,3 veces la desviación estándar, y ahí es donde yo recomiendo utilizar ese indicador de desempeño. O sea, ellos dicen, váyase con el Z y en caso que la incertidumbre, el XBT, sea mayor a ese 30% de la desviación estándar, ahí se utilicen el Z prima.
+
+19:41 - Wilson Salas
+Ok, yo aquí le puse pues digamos en el aplicativo que me diera justamente pues ese datico, si la incertidumbre cumple o no cumple, pues en este caso Ah, bueno, ahí viene la pregunta. Es una... A ver. Si la incertidumbre es menor o igual, ¿no puedo usar el Z prima o de todas maneras podría usarlo? Podrías usarlo.
+
+20:07 - cesar yate
+Aquí no es que sea tan obligatorio, no. Todas son recomendaciones, entonces sí podrías usarlo. Este es más como porque existe una preocupación porque esta incertidumbre pues no es tan conveniente frente a la dirección estándar. Ya, ok.
+
+20:30 - Wilson Salas
+de que sea exageradamente grande. Listo, ya aclaramos los resultados, pues es hacer un comentario muy, ni siquiera un comentario, pues una observación muy al punto de acuerdo a lo que nos dijiste entonces pues en esta primera etapa de verdad no vale tirarlo hacia prueba de desempeño a ver cómo decirlo tal vez en una siguiente etapa de rondas si podríamos forzar como el objetivo de las pruebas y más vale dejarlo en esta etapa inicial todavía un poco más abierto o A mí me gustaría es que ustedes pudieran hacer otro ensayo con más participantes para poder determinar la división estándar real y compararla con la que tienen.
+
+21:35 - cesar yate
+Sería muy beneficioso. Wilson, entendería yo pues que ahí ya barriste los datos.
+
+21:41 - Sistema de Gestion De Calidad del Aire
+Bueno, yo voy a ser cruda y directa porque lo que necesito es como la opinión de cesar, también cruda, directo. Yo sé que ya nos estimas, pero estamos viendo es viabilidad de un proyecto. Entonces, lo primero como por preguntarnos es, con estos datos que nosotros tenemos hasta el momento, ¿qué podemos concluir?
+
+22:08 - cesar yate
+¿Qué tenemos en este momento? Tienen una participación casi que bilateral, donde ya se tiene un panorama claro frente al entendimiento del ejercicio, pero quedan dudas, es en la desviación estándar. Ese punto es súper clave. Porque veíamos que con desviación estándar grande, pues pasa. Y con la fórmula. Y entonces alguien puede pensar que se está forzando para poder ayudar al participante a que pase. Eso puede ser algo que vaya en contra de ustedes, a menos de que se justifique muy bien esa desviación estándar. Y por el otro lado, pues uno ve valores tan, tan lejanos. Z21, los lleva a uno con el que no conozca a dudar del ensayo, porque puede ser que alguien hizo mal la medición y si fue así, fue que tal vez las instrucciones no fueron claras, o sea, parte del proveedor y entra un investigador, bastante qué fue lo que pasó ahí, para que en digamos en los resultados, en lo que yo pudiera ir. Y puede ser la desviación estándar la respuesta. Y como no tenemos tantos datos, queda como un panorama todavía por descubrir, como que todavía no está tan claro.
+
+23:29 - Sistema de Gestion De Calidad del Aire
+Pues así lo veo yo en este momento. Ok, como para terminar de redondear ese punto, nosotros de todo eso también notamos una limitación de infraestructura. O sea, si bien solo tuvimos un participante, que cada participante fue digamos resolviendo, el primero si llevó todos los gases, el segundo sólo llevó dos gases, nuestra infraestructura como que no respondía también y se nos generó ahí la gran alarma es ¿y qué haríamos donde entonces si llegaran dos o tres participantes más? Es algo que tenemos que resolver. En ese orden de ideas y para ir resolviendo el tema que hablas de la desviación estándar, porque también ahorita que me alcanzé a conectar estaba viendo que tú preguntabas sobre qué pudo haber pasado con el desempeño de un equipo y que se pudo haber sido la humedad, la temperatura, el manifold, x, y, z. ¿Vos ves viable que nosotros digamos que podamos programar otros pilotos, puede ser un par de pilotos más, donde en este momento busquemos que el participante lleve al menos los cuatro gases, pero de a un participante? O sea, ¿es posible que eso nos muestre más información y nos ayude a resolver ese tema de la desviación estándar? ¿O definitivamente necesitamos deberíamos tener en simultáneo estos participantes? Yo creería que lo podrían hacer individual, desde que el material les dé, ¿cierto?
+
+24:48 - cesar yate
+Desde que tengan suficiente cantidad de material para poderlo hacer. Es mejor hacerlo así, que ya tienen ese aprendizaje y, pues, pueden ir mirando poco a poco, despacito. Porque si la infraestructura no les da, después no sale bien y la culpa va a ser desde la infraestructura.
+
+25:08 - Wilson Salas
+les creería que podría ser por ese lado.
+
+25:13 - Sistema de Gestion De Calidad del Aire
+Sí, sobre todo porque el participante hace un gran esfuerzo en movilizar, que fuera a mover, no sé, un computador, pero es movilizar como unos equipos bien robustos.
+
+25:30 - Unidentified Speaker
+Dale, David. Adelante. Hola.
+
+25:36 - Laboratorio CALAIRE
+Hola, ¿me escuchan? Sí, pero lejos. Como regular, pero sí.
+
+25:41 - cesar yate
+Hola, ¿ahí me escuchan?
+
+25:43 - Unidentified Speaker
+Ya, mucho mejor, sí. Sí.
+
+25:45 - Laboratorio CALAIRE
+No, mi pregunta era un poquito pues como sumando a la de Wilson y Jennifer. Entonces nosotros vamos a ir como construyendo y vamos haciendo, pues sí, vamos a pasar varias rondas. Como dice cesar, pues mejor a ser, por ejemplo, cuatro participantes con un mismo gas, o lo que nos dé la infraestructura para hacerla. Y entonces, con eso vamos a ir afinando, buscando, encontrando una desviación estándar más propia de nuestro sistema de medición, y eso... ¿Cómo sabemos que la alcanzamos? ¿Eso parece que será viable con, no sé, dos, tres rondas más?
+
+26:30 - Unidentified Speaker
+¿O estamos hablando de decenas?
+
+26:33 - Laboratorio CALAIRE
+Sí, como hasta dónde crees que tenemos que llegar para poder, digamos, tener la propia. Bueno, la pregunta es buena.
+
+26:41 - cesar yate
+Si se hace una sola ronda donde pudieran participar varios participantes, eso sería suficiente, pero pues veo que no es el caso. Si van a hacer varias rondas donde solo participe uno o dos, pues digamos que el ideal sería tener más de 12, 12 pero eso se vuelve complejo, entiendo que yo entiendo la complejidad pero frente a la parte estadística entre más datos siempre va a ser mejor, por eso la idea es...
+
+27:11 - Laboratorio CALAIRE
+Ya dijiste que hay como un límite inferior pues, hay que alcanzar siquiera ese límite inferior.
+
+27:16 - cesar yate
+Sí, porque es que como tenemos tan poca información, muy poca, pues no sabemos dónde, ese valor que les dije es el estándar puede que esté muy corrido la real, no sabemos, porque no tenemos un panorama a dónde llegar, estamos como como buscando en la oscuridad una sombra, una pequeña luz, entonces la que nos aparece puede que sea engañosa, porque son muy poquitos datos, a menos de que se pudieran hacer simulaciones y ustedes internas de su proceso, digamos hacer un piloto pero solo ustedes, que son los confiables y pudieran hacer muchas réplicas sin otros participantes, solamente ustedes Si eso lo llegaran a tener, ya eso sería como un ideal.
+
+28:01 - Wilson Salas
+¿Esa fue lo que hicimos como al inicio?
+
+28:06 - cesar yate
+Ustedes pudieran hacer varias mediciones... Sí, que creo que sí lo habían hecho, me acuerdo. Y tienen ahí un valor Ese valor sería un ideal, porque ya es algo confiable. Ah, ok. Ahí tiene la mano levantada. Yo organizo yo mi pregunta.
+
+28:42 - Wilson Salas
+Sí, yo también estoy de acuerdo.
+
+28:48 - Fabian Moreno
+en que hay que hacer más rondas pero siempre hay un pedo y es que me preocupa es que no tengamos un generador dedicado para eso porque en las corridas que hemos hecho, las pruebas, las rondas he visto mucha complejidad para usar el generador de aire Yo sí los invito a que miremos, o sea, no miremos como que sí, eso se hace, eso se hace. Mira, no le has contado a Fabian. Eso, eso lo hacemos, eso le decimos.
+
+29:28 - Sistema de Gestion De Calidad del Aire
+A Fabian nosotros lo estamos, lo estamos consiguiendo, pues la idea es que no nos entremos como en las limitaciones que tengamos aquí, infraestructura con cesar, porque esas las tenemos que resolver, o sea, si llegamos a conseguir el generador de aire para cero, la Facultad de Minas y tener el espacio que realmente necesitamos tener, es ya uno para lanzarse de cabezas con el servicio, pero por lo pronto tenemos que entender qué nos hace falta para por lo menos tener esa línea base del servicio que es el objetivo del proyecto. El objetivo del proyecto ya está por cerrarse, Entonces, no te inquietes, estamos consiguiendo un generador de iris para el proyecto.
+
+30:10 - Fabian Moreno
+La meta es hacer más rondas, entonces es bueno.
+
+30:15 - cesar yate
+Sí, hay que tomar acciones correctivas.
+
+30:18 - Fabian Moreno
+Sí, hagamos más rondas, pero ¿con qué?
+
+30:23 - Unidentified Speaker
+Si es bueno que se tenga claro eso.
+
+30:27 - Sistema de Gestion De Calidad del Aire
+Listo, de pronto más preguntas alrededor de la primera que nos estaba mencionando cesar de la desviación, está lo que ya nos queda todos claros, si hay lo que necesitamos es más datos, no hay más.
+
+30:45 - Unidentified Speaker
+Más datos y no sé si hasta dónde simular.
+
+30:50 - Sistema de Gestion De Calidad del Aire
+A mí me inquieta un poquito la simulación, que la simulación no deja de ser simulación. Es diferente. La simulación termina siendo un dato controlado que para mí tendría un significativo. Yo creo que esto ha sido costoso, pero es mejor irnos buscando hacer uno o dos pilotos más.
+
+31:15 - Wilson Salas
+No, no, no. Está buenísimo porque digamos que como analizando la parte de los datos, yo creo que lo hablamos pero fue como así, o sea la pregunta era como la autocorrelación de los datos, porque como estamos cogiendo datos minutales, cierto, a partir de qué momento, a partir de 5-10 minutos, el dato que yo tuve ya no está correlacionado con el otro, eso fue un elemento que por ahí encontré con el tema de la simulación, yo no sé, lo que pasa es que en este momento tenemos uno, dos, tenemos casi tres juegos completos de datos, yo no sé si tal vez con un cuarto o un quinto, a ver cómo lo digo, creo que es mejor hacer simulaciones con esas cinco muestras que podríamos ir teniendo que esa simulación inicial con una, porque mi pregunta que iba como para cesar es, no tanto como a partir de cuántas simulaciones, sino cuando uno empieza a descansar con esa incertidumbre que va encontrando.
+
+32:16 - cesar yate
+Si este ensayo tiene como un error máximo permitido por el método, pues la tercera parte de ese valor sería un límite conservador y adecuado. Si ustedes comienzan a ver que los resultados se van aproximando a valores por ese lado, ustedes podrían pensar que ya ese valor representa la depresión está en la cintia de la depresión es muy por encima, ya comiencen de pronto a dudar, o muy por debajo. ¿El método tiene error máximo permitido?
+
+32:54 - Wilson Salas
+Nosotros tenemos límites hacia las curvas de calibración, pero hacia la medición error, hacia si abuelo el pájaro, yo creo que no. No recuerdo en mi experiencia es el término en medición de calidad del aire. Cuando ustedes declaran conformidad, ¿no hay una especificación que defina cuál es el límite?
+
+33:15 - cesar yate
+No.
+
+33:16 - Sistema de Gestion De Calidad del Aire
+Sería, y el ICA, pues es decir, ya viéndolo desde el punto de vista de los datos, cuando se suministran a los usuarios, la comunidad, al índice de calidad de aire, que uno puede decir que el ozono es moderado, es decir, las medidas ¿Podría hacer eso? Sí, podría hacer eso. Yo pues no sé, debería decirte Wilson que podríamos de pronto también expulgarnos ese handbook, ese handbook trae unas, o sea, él no lo expresa como errores máximos permitidos, pero él sí tiene muchas medidas de desempeño que digamos que tiemblan en el ensayo, o sea, que te dicen dónde, dónde te estás yendo mal, dónde te estás saliendo, cuánto busquemos por ahí.
+
+33:58 - Wilson Salas
+Con eso que estás diciendo y para antes de que se me escape, solo para que quede bien en el grabado, no solamente en el fanbook de la EPA, sino en las normas europeas para calidad del aire, ellos si tienen unos parámetros como un poquito, a falta otra palabra, como un poquito más técnicos a veces que el fanbook de la EPA, ellos tienen como 2, 3 parámetros adicionales, pero creo que por ahí podríamos intentar mirarlo.
+
+34:25 - cesar yate
+Eso podría ser una vista buena que ustedes podrían con este sigma que ya tenían histórico. Ok. Y ahí ya empiezan a hacer una relación entre los límites que dan las normas europeas, el sigma que ya tienen histórico del ensayato que ustedes ya habían investigado y lo que están viendo. Ya ahí pueden empezar a ver por dónde hay una tendencia y ya les puede dar un programa más claro. Mientras ya comienzan a coger experiencia y pues obviamente si pudieran tener en una ronda varios participantes es por lo menos 4 o 5, ya se puede hacer un MADE y ya eso representa por lo menos esa muestra. Si estuvieran 4 participantes, hacen un MADE y eso ya es algo, ya se puede trabajar con eso, porque hoy solo tenemos en vivo.
+
+35:15 - Wilson Salas
+Listo, venga, sobre esa pregunta que nos la hemos hecho todos, hasta donde lo permita el papel cesar, si nosotros hiciéramos 4 o 5 ensayos de cierto, 5 de estas pruebas, así sea un solo participante y dejemos lo que nos quedamos solamente con el ozono, si medimos ozono con 5 participantes en 5 momentos diferentes, si nosotros no cambiamos los niveles con los que estaríamos trabajando y por favor discúlpeme si de alguna forma pudiésemos asegurar que nosotros como referencia si estamos generando siempre, entre comillas, entre comillas, los mismos valores, nosotros podríamos pensar que hubiéramos hecho un ensayo con cuatro participantes al tiempo o es una, perdónenme, un abrupto machetazo, un machetazo, gracias.
+
+36:15 - cesar yate
+Yo lo veo como que no.
+
+36:18 - Wilson Salas
+Es muy machetazo? Sí.
+
+36:41 - Sistema de Gestion De Calidad del Aire
+en
+
+36:48 - Wilson Salas
+el mundo Sí, porque esa era la que más nos acosaba, porque pues igual te lo contamos, hemos manejado los mismos niveles, no nos hemos atrevido a hacer variaciones para no generarnos más ruidos internos.
+
+37:01 - cesar yate
+Ahora, algo que no se me ha ocurrido ahorita pensando bien, ustedes en su, ya como laboratorio 17025 cuando hacen su validación o verificación de método, ustedes no encuentran un valor de desviación de repetibilidad? Porque eso también podría ser un punto para tomar la desviación estándar.
+
+37:21 - Sistema de Gestion De Calidad del Aire
+Pero solo la podríamos de pronto tener para los ZONO, no para los otros tres gases. En los ZONO sí, podríamos mirarlo. Porque en los ZONO pues es que tenemos muchos calibradores que van, ¿cierto? Pues ese es el detalle ahí.
+
+37:41 - Wilson Salas
+Ahí como rápido cesar, nosotros hicimos una prueba, si llamémoslo así, una prueba corta de repetibilidad y reproducibilidad, en este caso nosotros lo que hicimos fue variar el operador, el analista, entonces digamos de momento para tres gases encontramos un coeficiente de variación inferior al 1% en todos los niveles, está bajito, eso para repetibilidad, pues para reproducibilidad están más o menos adecuados, pero pues si que encontré leyendo un poquito de literatura, que la recomendación sería tener al menos como un par más de réplicas en el mismo nivel como para ya forzar mejor esa reproducibilidad, pero inicialmente si tuvimos pues un buen comportamiento para tres gases, el gas como más allí, pero eso digamos que es un poquito más de trabajo, es para el NOX, pero lo que fue el CO, el SO y el ozono, tuvimos esa repetibilidad inferior al uno por en el coeficiente de variación, entonces pues creo que nos fue bien, por eso era como la pregunta de que si lo podíamos como repetir así, porque hemos notado que el proceso es relativamente estable.
+
+38:57 - cesar yate
+Con más mediciones, teniendo otras cuantas podría funcionar, empezar a ver ya un patrón.
+
+39:04 - Wilson Salas
+Listo, entonces programar más, podemos programar otras veces.
+
+39:08 - Sistema de Gestion De Calidad del Aire
+Bueno, yo tengo otra consulta que quiero hacer alrededor de la incertidumbre y puede que ya la hayan resuelto. Me excusan si es así, pero necesito resolverlo en mi cabeza. En algún momento con Wilson conversábamos acerca de la incertidumbre. La incertidumbre va a ser un reto del lado de los participantes, porque si bien, digamos que partimos del principio de que los que estaban viniendo a los ensayos estaban acreditados, pues no fue que llegaran y nos entregaban el dato tan sitio. Y pues para la muestra un botón, el primer piloto yo creo que lo hicimos como fue en mayo, si no estoy mal, Wilson me sacará de dudas y esta es la verdad que todavía estamos esperando que ese participante nos entregue las incertidumbres.
+
+39:56 - Wilson Salas
+Y todavía tiene dudas, aclaro, todavía tiene dudas.
+
+39:59 - Unidentified Speaker
+Exacto.
+
+40:00 - Sistema de Gestion De Calidad del Aire
+Muchísimas gracias. Se me genera una duda. Una cosa es la incertidumbre que ellas ellos puedan tener asociados a su método de ensayo y que es el que acreditan ante IDEAM y otra cosa es la incertidumbre que se pueda dar haciendo la el ensayo de aptitud. Sí, son diferentes, son muy diferentes.
+
+40:18 - Unidentified Speaker
+Son diferentes.
+
+40:19 - Sistema de Gestion De Calidad del Aire
+Sáquenme, yo sé que ya lo han hablado, excusenme acá como la falta del TDA. Cuál realmente es la que nos agrega valor para estas pruebas?
+
+40:27 - cesar yate
+La que se obtiene del ensayo de aptitud.
+
+40:30 - Sistema de Gestion De Calidad del Aire
+Ok, y si es la que se obtiene el ensayo de aptitud, no me interesa que él me entregue la que tiene acreditado, sino la que se calcule de este ensayo de aptitud.
+
+40:42 - cesar yate
+Pero eso depende del indicador de desempeño, porque si utilizas un indicador de desempeño como el Z que utiliza la incertidumbre o el error normalizado, ahí se vuelve relativamente importante. Pero si es el Z-score o el Z-prima, no nos interesaría la incertidumbre del participante.
+
+40:59 - Unidentified Speaker
+Sí, es mi recomendación, es que no utilicen la incertidumbre de participantes, sino que utilicen o el Z prima o el Z score.
+
+41:07 - Sistema de Gestion De Calidad del Aire
+Bueno, ahí me respondes otra pregunta que tenía, que era cuál era la métrica más apropiada según los datos que hasta el momento tenemos. O sea, podríamos nosotros decir, porque qué notamos ahorita, que no es tan sencillo de que lo hagan, y menos iba a tener que ser, digamos que un cálculo que ellos hagan posterior, salvo que le entreguemos literalmente la plantilla, monte los datos y eso le va a botar un resultado y regístremelo acá o casi que nosotros lo calculemos.
+
+41:36 - Unidentified Speaker
+Ah, pues entonces ahí se perdería el objetivo.
+
+41:39 - Sistema de Gestion De Calidad del Aire
+Ahí se perdería el objetivo porque yo estaría haciendo el trabajo de ellos para realizar un conflicto.
+
+41:46 - cesar yate
+Por eso en ese tipo de ensayos de aptitud lo más adecuado es o Zscore o Zprima y no más, porque no está estandarizada la insertión Si estuviera estandarizada, estandarizada es que existiera un método documentado que todos lo aplican, ahí sí valdría la pena, todos trabajamos en el mismo idioma, pero si algunos tienen las componentes, otros otras, si no se hablan y al comparar son muy diferentes, se perdería en el igual de desempeño, no tendría sentido, no nos daría ninguna información relevante para evaluarnos.
+
+42:22 - Sistema de Gestion De Calidad del Aire
+Sí, siento que eso es una gran conclusión porque es esforzarnos en ese tema pues nosotros hasta hasta nos pusimos en la tarea de hacer unas pruebas de precisión intermedia entre Fabian y otro compañero que nos sirvió ahí para de pronto recoger datos de calidad de los de calidad de aire pues de los gases que habitualmente no estamos trabajando pues diferentes a los ONU como para nosotros tener pues nuestra incertidumbre como tal pero pues eso fue un esfuerzo que es muy chévere haberlo hecho pero si no tenemos lo de los participantes pues no hay con qué comparar. Entonces, bueno, ahí se puede concluir esa partecita.
+
+42:57 - cesar yate
+Y aquí, entonces, se va a utilizar el Z' para asegurarse que la incertidumbre del valor asignado sea adecuada. Que, bueno, si se hace con algoritmo A, no hay problema, pero si no se hace con algoritmo A, pues vuelve y juega la desviación estándar, porque esa incertidumbre se calcula con la desviación estándar. Es decir, la desviación estándar está mal determinada, pues esa incertidumbre también va a estar mal definida. Perfecto, consolidamos la conclusión del tema de la desviación, listo.
+
+43:27 - Wilson Salas
+Ahí me sumo, digamos que en ese caso pues y también como con la experiencia yo creo, no sé cesar, por favor corregime si yo estoy teniendo tal vez una perspectiva que no es, yo siento que nosotros como referencia tenemos una mayor responsabilidad Y el grado con el que nosotros calculamos nuestra incertidumbre y los elementos que tenemos en cuenta, yo me atrevo a decir que es mucho más riguroso que la que puede tener uno como red de monitoreo, ¿sí? Entonces nosotros, por ejemplo, lo que tuvimos en cuenta en ese análisis de repetibilidad intermedia, ahí nosotros sacamos un elemento, sacamos un elemento de incertidumbre de la curva de calibración, de las mediciones del aire cero que Fabian hizo una prueba, pues ahí uno puede sacar información si ese airecero me está aportando algo de ruido o no, o la incertidumbre del patrón. Entonces nosotros tenemos al menos dos, tres elementos más en el momento de estimar nuestra incertidumbre, que si la comparamos con el de un participante que su metodología es más laxa, yo me atrevería a decir que nosotros podríamos tener una incertidumbre mayor y yo no sé eso ahí en la experiencia, en el ensayo de actitud, cómo está visto que el proveedor tenga una incertidumbre más grande que un participante? Creería yo que generalmente se trata de ser al revés.
+
+44:52 - cesar yate
+Al revés, es al revés, pero cuando todos los valores de incertidumbre son son comparables, se esperaría que todos dieran, pero en este caso no, no lo suman porque pues es que seguramente a estos laboratorios tampoco les se evalúa la incertidumbre.
+
+45:07 - Wilson Salas
+Seguramente lo que le dicen es, es sin el hombre. Estímelo y pare de contar. Sí, exacto, muéstrame cómo la estimó. Sí, parece decente, tuvo en cuenta unas fuentes, pare de contar.
+
+45:21 - cesar yate
+Sí, total, tal cual. Pero nadie se va al detalle de decir, venga, si la evaluaron bien, pues no es relevante.
+
+45:31 - Wilson Salas
+Listo, o sea, inicialmente nos podemos ir más vale orientando hacia esas dos métricas Z y Z', mientras construimos para llegar a ese punto y ir hacia un zeta griego, un error normalizado.
+
+45:45 - cesar yate
+Así es, sí, así es, sí. Yo creo que no hay que arriesgar el ensayo y todo el esfuerzo para que después le digan a ustedes, mire, es que ustedes tienen un índice de desempeño que no es válido, que no aplica, y pues después le ponen en duda los resultados.
+
+46:04 - Wilson Salas
+Ok.
+
+46:04 - Unidentified Speaker
+Para ir cerrando, cierto que yo porque ya todos queremos ir a descansar.
+
+46:09 - Sistema de Gestion De Calidad del Aire
+Tenemos expectativa de hacer un tercer piloto, yo les llamo pilotos prima, pues como que es un único piloto, pero lo hemos tenido que ir dosificando, como se dice. Considerando esto que has visto, que nos has escuchado, qué nos sugerirías tener en cuenta para este último que pudiese ser como de pronto es que nos entregue información más precisa.
+
+46:31 - Wilson Salas
+Puedo, puedo pegarme un momentico ahí Jennifer, solo como para...
+
+46:35 - Sistema de Gestion De Calidad del Aire
+¿Puedo poner un poco más la pregunta? Sí, sí señor, claro.
+
+46:40 - Wilson Salas
+Dale, mira, cesar, nosotros en esta ronda y pensando un poco en cómo quisiéramos lanzar el servicio, nosotros nos hemos encontrado con dos situaciones. La primera ronda que nosotros tuvimos el participante durante todo el tiempo haciendo la prueba y tuvimos un segundo ensayo donde el participante vino, instaló el equipo, hizo sus calibraciones, salió y regresó y solamente recogió el equipo, ¿sí? Sí. Entonces, la primera vez que lo hicimos, pues digamos procedió un poquito más normal, pero ya en esta segunda ronda donde no teníamos el participante, nosotros como empezamos a ver unas situaciones de cómo nos podríamos proteger ante una apelación, cómo nos podríamos proteger ante un participante que, voy a decirlo así, confió, dejó de su equipo y resulta que encontró un resultado que no le conviene y nos puede levantar una apelación, una queja, simplemente por el hecho de que él no estuvo y nosotros como laboratorio, cómo nos defendemos. Yo he pensado con unas cositas de actas, entonces quería como poner eso ahí adicional para enriquecer la pregunta, Jennifer, que es muy buena.
+
+47:58 - Sistema de Gestion De Calidad del Aire
+eso, perdón y te complemento otra cosa para que tú no lo hagas ver, yo a esa última metodología donde el participante se fue le vi riesgos que se materializaron y es que la infraestructura del participante puede tener problemas o la infraestructura de nosotros puede tener problemas, de hecho nos pasó, el aire cero literalmente sacó la mano y hubo que cambiarlo y al tenerlo que cambiar había que hacer una desconexión de los equipos de los de los del participante. Entonces, la pregunta es, ¿Hasta dónde yo lo puedo hacer como calaire que soy y que está haciendo el ensayo de aptitud? O realmente si necesito que esa persona que trae su equipo esté ahí, porque es que pueden pasar tanto, es que estamos haciendo pruebas que van a, están durando diez, doce horas, sus equipos, dándole ahí. Sí. Pues no porque la persona esté las diez, doce horas, pero no sé, yo a eso le di esos riesgos y y me gusta ponerlo acá en el escenario con experiencia que hay ahí para resolver.
+
+48:58 - cesar yate
+Claro, yo lo que he visto es que el proveedor debe interferir en lo menor posible en los resultados y en manipular equipos y nada, pero es una evaluación y el momento que ustedes intervienen ya están siendo parte del proceso y pues por lo tanto si algo sale mal ustedes son responsables, no es adecuado. Para nada es adecuado. Una de las cosas que ustedes aprendieron, creo que debe quedar como lección aprendida, es esa, que ustedes no pueden intervenir, ustedes no pueden ser participante, porque están evaluando, pero también ya al tocar los equipos, al conectar y desconectar, ya se perdió la imparcialidad, eso no es adecuado, no es adecuado.
+
+49:47 - Sistema de Gestion De Calidad del Aire
+Entonces en la esa respuesta orden estaría de como ideas digamos que ya indirectamente dada y es que el participante tendría que estar disponible, o sea si quiere váyase para la cafetería, allá está, pero si hay que llamarlo pues esté aquí en menos de cinco días porque no vamos a poder avanzar.
+
+50:07 - cesar yate
+Exactamente, sí. El participante debe estar 100% responsable de sus mediciones, porque esa es parte de la evaluación, esa es parte del proceso. Listo, es súper claro.

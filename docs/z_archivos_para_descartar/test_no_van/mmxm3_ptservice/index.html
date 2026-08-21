@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>CALAIRE-EA · Ensayos de Aptitud · 4 propuestas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#07080d;
+    --bg2:#0b0d14;
+    --ink:#e8eaf0;
+    --muted:#8b93a7;
+    --line:rgba(255,255,255,.07);
+    --card:rgba(255,255,255,.03);
+    --accent:#7cffb2;
+    --accent2:#7aa7ff;
+    --accent3:#ffb86b;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.5}
+  body{
+    background:
+      radial-gradient(900px 600px at 80% -10%, rgba(124,255,178,.12), transparent 60%),
+      radial-gradient(700px 500px at -10% 30%, rgba(122,167,255,.10), transparent 60%),
+      var(--bg);
+    min-height:100vh;
+  }
+  .wrap{max-width:1200px;margin:0 auto;padding:48px 32px 80px}
+  header{display:flex;align-items:center;justify-content:space-between;margin-bottom:64px;padding-bottom:24px;border-bottom:1px solid var(--line)}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.02em}
+  .logo-mark{width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,var(--accent),var(--accent2));position:relative}
+  .logo-mark::after{content:"";position:absolute;inset:6px;border:1.5px solid #07080d;border-radius:4px}
+  .badge{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);padding:6px 10px;border:1px solid var(--line);border-radius:999px;letter-spacing:.06em;text-transform:uppercase}
+  .hero{margin-bottom:80px}
+  .eyebrow{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent);letter-spacing:.18em;text-transform:uppercase;margin-bottom:16px;display:inline-flex;align-items:center;gap:10px}
+  .eyebrow::before{content:"";width:24px;height:1px;background:var(--accent)}
+  h1{font-size:clamp(36px,5.5vw,68px);font-weight:700;letter-spacing:-.03em;line-height:1.02;margin-bottom:24px;max-width:18ch}
+  h1 em{font-style:normal;background:linear-gradient(120deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .lede{max-width:62ch;color:var(--muted);font-size:18px;line-height:1.6}
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+  @media (max-width:820px){.grid{grid-template-columns:1fr}}
+  .card{
+    position:relative;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:20px;
+    padding:28px;
+    text-decoration:none;
+    color:inherit;
+    display:flex;flex-direction:column;
+    transition:transform .25s ease, border-color .25s ease, background .25s ease;
+    overflow:hidden;
+    min-height:320px;
+  }
+  .card:hover{transform:translateY(-4px);border-color:rgba(255,255,255,.18);background:rgba(255,255,255,.05)}
+  .card::before{
+    content:"";position:absolute;inset:0;border-radius:20px;padding:1px;
+    background:linear-gradient(135deg,transparent 40%,var(--c,transparent) 100%);
+    -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+    -webkit-mask-composite:xor;mask-composite:exclude;
+    pointer-events:none;opacity:.6;
+  }
+  .card-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px}
+  .num{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted)}
+  .open{font-size:12px;color:var(--muted);display:inline-flex;align-items:center;gap:6px}
+  .open::after{content:"→";transition:transform .2s}
+  .card:hover .open::after{transform:translateX(4px)}
+  .preview{aspect-ratio:16/9;border-radius:12px;margin-bottom:20px;border:1px solid var(--line);overflow:hidden;position:relative;background:#0d1018}
+  .preview-aurora{background:radial-gradient(circle at 30% 30%,#7cffb244,transparent 60%),radial-gradient(circle at 70% 70%,#7aa7ff44,transparent 60%),#0b0d14}
+  .preview-clarity{background:linear-gradient(180deg,#fafaf7 0%,#f3f1ea 100%)}
+  .preview-prism{background:conic-gradient(from 180deg at 50% 50%,#ff7ab8,#ffd86b,#7cf2c5,#7aa7ff,#ff7ab8)}
+  .preview-atlas{background:linear-gradient(90deg,#0a0a0a 0 50%,#f4f1ea 50% 100%)}
+  .preview-aurora::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 18px,rgba(255,255,255,.03) 18px 19px)}
+  .preview-clarity::after{content:"Aa";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-family:Georgia,serif;font-size:60px;color:#1a1a1a;opacity:.15}
+  .preview-prism::after{content:"";position:absolute;inset:0;backdrop-filter:blur(20px);background:rgba(255,255,255,.15)}
+  .preview-atlas::after{content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;background:rgba(0,0,0,.2)}
+  h2{font-size:24px;font-weight:600;letter-spacing:-.02em;margin-bottom:10px}
+  .card p{color:var(--muted);font-size:14px;line-height:1.55;flex:1}
+  .meta{margin-top:20px;display:flex;gap:8px;flex-wrap:wrap}
+  .chip{font-family:'JetBrains Mono',monospace;font-size:10px;padding:5px 9px;border:1px solid var(--line);border-radius:6px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+  footer{margin-top:80px;padding-top:24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--muted);font-family:'JetBrains Mono',monospace;flex-wrap:wrap;gap:12px}
+  .pulse{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 0 var(--accent);animation:pulse 2s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(124,255,178,.6)}70%{box-shadow:0 0 0 12px rgba(124,255,178,0)}100%{box-shadow:0 0 0 0 rgba(124,255,178,0)}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo"><span class="logo-mark"></span> CALAIRE-EA · Servicio Comercial</div>
+    <span class="badge"><span class="pulse" style="margin-right:8px"></span>PROPUESTA v0.3</span>
+  </header>
+
+  <section class="hero">
+    <div class="eyebrow">Ensayos de Aptitud · Gases Contaminantes Criterio</div>
+    <h1>Cuatro formas de presentar el <em>PT Service</em> de CALAIRE-EA.</h1>
+    <p class="lede">Cuatro propuestas visuales independientes —mismo contenido CS-02 aprobado— para que el equipo comercial compare antes de elegir. Cada landing cubre alcance, bloques seleccionables, modelo de tarifa, flujo de inscripción, evaluación y contacto.</p>
+  </section>
+
+  <div class="grid">
+    <a class="card" style="--c:#7cffb2" href="./v1_aurora.html">
+      <div class="card-head"><span class="num">01 / AURORA</span><span class="open">abrir</span></div>
+      <div class="preview preview-aurora"></div>
+      <h2>Aurora — Dark Lab</h2>
+      <p>Fondo oscuro con acentos neón verde-azul. Estética instrumental/de laboratorio con tipografía técnica. Ideal si se busca un tono científico moderno y disruptivo.</p>
+      <div class="meta">
+        <span class="chip">Dark</span><span class="chip">Neon</span><span class="chip">Mono + Inter</span><span class="chip">Scientific</span>
+      </div>
+    </a>
+
+    <a class="card" style="--c:#c4a572" href="./v2_clarity.html">
+      <div class="card-head"><span class="num">02 / CLARITY</span><span class="open">abrir</span></div>
+      <div class="preview preview-clarity"></div>
+      <h2>Clarity — Editorial</h2>
+      <p>Claro, minimalista, editorial. Tipografía serif combinada con sans, mucho espacio blanco, jerarquía sobria. Para audiencias que valoran sobriedad institucional.</p>
+      <div class="meta">
+        <span class="chip">Light</span><span class="chip">Serif</span><span class="chip">Editorial</span><span class="chip">Institutional</span>
+      </div>
+    </a>
+
+    <a class="card" style="--c:#ff7ab8" href="./v3_prism.html">
+      <div class="card-head"><span class="num">03 / PRISM</span><span class="open">abrir</span></div>
+      <div class="preview preview-prism"></div>
+      <h2>Prism — Color Mesh</h2>
+      <p>Malla cónica multicolor con efecto glassmorphism y layout asimétrico. Tono vibrante, casi editorial de diseño, que vincula cada gas a un color del espectro visible.</p>
+      <div class="meta">
+        <span class="chip">Colorful</span><span class="chip">Glass</span><span class="chip">Asymmetric</span><span class="chip">Playful</span>
+      </div>
+    </a>
+
+    <a class="card" style="--c:#8b93a7" href="./v4_atlas.html">
+      <div class="card-head"><span class="num">04 / ATLAS</span><span class="open">abrir</span></div>
+      <div class="preview preview-atlas"></div>
+      <h2>Atlas — Scientific Split</h2>
+      <p>Pantalla dividida 50/50 blanco y negro estilo journal científico. Diagramas, anotaciones técnicas, sensación de paper revisado por pares. Tono riguroso y académico.</p>
+      <div class="meta">
+        <span class="chip">Split</span><span class="chip">Mono</span><span class="chip">Diagrams</span><span class="chip">Academic</span>
+      </div>
+    </a>
+  </div>
+
+  <footer>
+    <span>mmxm3_ptservice · 4 propuestas visuales</span>
+    <span>UNAL Medellín · Facultad de Minas · Laboratorio CALAIRE</span>
+  </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CALAIRE-EA ⚡ Ensayo de Aptitud de Gases</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f2efe8; --ink:#111; --yellow:#ffd23f; --pink:#ff6b9d;
+  --green:#3ddc84; --blue:#4d9fff; --orange:#ff8c42;
+  --shadow:6px 6px 0 var(--ink);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+.display{font-family:'Archivo Black',sans-serif}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 22px;border-bottom:3px solid var(--ink);background:var(--bg);position:sticky;top:0;z-index:10}
+nav .brand{font-family:'Archivo Black';font-size:1.1rem}
+nav a{font-weight:700;text-decoration:none;color:var(--ink);background:var(--yellow);border:3px solid var(--ink);padding:9px 20px;box-shadow:4px 4px 0 var(--ink);transition:.15s}
+nav a:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink)}
+header{padding:72px 0 60px}
+.stamp{display:inline-block;background:var(--pink);border:3px solid var(--ink);padding:8px 18px;font-weight:700;font-size:.85rem;transform:rotate(-2deg);box-shadow:var(--shadow);margin-bottom:34px;text-transform:uppercase;letter-spacing:.05em}
+h1{font-family:'Archivo Black';font-size:clamp(2.4rem,7vw,5rem);line-height:.98;text-transform:uppercase;letter-spacing:-.01em}
+h1 .hl{background:var(--yellow);padding:0 12px;box-shadow:var(--shadow);display:inline-block;margin-top:10px}
+header p{margin-top:34px;font-size:1.15rem;max-width:600px;font-weight:500}
+.btn-big{display:inline-block;margin-top:36px;background:var(--green);border:3px solid var(--ink);padding:18px 40px;font-family:'Archivo Black';font-size:1.05rem;text-transform:uppercase;color:var(--ink);text-decoration:none;box-shadow:var(--shadow);transition:.15s}
+.btn-big:hover{transform:translate(3px,3px);box-shadow:3px 3px 0 var(--ink)}
+.marquee{border-top:3px solid var(--ink);border-bottom:3px solid var(--ink);background:var(--ink);color:var(--bg);overflow:hidden;white-space:nowrap;padding:12px 0}
+.marquee span{display:inline-block;font-family:'Archivo Black';font-size:.95rem;text-transform:uppercase;letter-spacing:.06em;animation:roll 24s linear infinite}
+@keyframes roll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+section{padding:72px 0}
+h2{font-family:'Archivo Black';font-size:clamp(1.6rem,4vw,2.6rem);text-transform:uppercase;margin-bottom:14px}
+.sub{font-size:1.02rem;max-width:620px;margin-bottom:42px;font-weight:500}
+.gases{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:26px}
+.gcard{border:3px solid var(--ink);padding:30px 24px;box-shadow:var(--shadow);transition:.15s;background:#fff}
+.gcard:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--ink)}
+.gcard .sym{font-family:'Archivo Black';font-size:2.4rem;line-height:1}
+.gcard .lbl{display:inline-block;border:2px solid var(--ink);padding:3px 10px;font-size:.72rem;font-weight:700;text-transform:uppercase;margin:14px 0;letter-spacing:.06em}
+.gcard p{font-size:.9rem;font-weight:500}
+.gc1{background:var(--blue)}.gc2{background:var(--yellow)}.gc3{background:var(--green)}.gc4{background:var(--orange)}
+.flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:26px;counter-reset:s}
+.fstep{border:3px solid var(--ink);background:#fff;padding:26px;box-shadow:var(--shadow);position:relative;counter-increment:s}
+.fstep::before{content:counter(s);position:absolute;top:-20px;left:-14px;width:44px;height:44px;background:var(--pink);border:3px solid var(--ink);display:grid;place-items:center;font-family:'Archivo Black';font-size:1.2rem;border-radius:50%}
+.fstep h3{font-size:1.02rem;text-transform:uppercase;margin-bottom:8px;font-weight:700}
+.fstep p{font-size:.9rem}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+@media(max-width:740px){.duo{grid-template-columns:1fr}}
+.panel{border:3px solid var(--ink);box-shadow:var(--shadow);background:#fff}
+.panel .head{border-bottom:3px solid var(--ink);padding:16px 24px;font-family:'Archivo Black';text-transform:uppercase;font-size:1rem}
+.panel.yes .head{background:var(--green)}
+.panel.no .head{background:var(--orange)}
+.panel ul{list-style:none;padding:18px 24px}
+.panel li{padding:9px 0;font-size:.93rem;font-weight:500;border-bottom:2px dashed #ccc}
+.panel li:last-child{border:none}
+.panel.yes li::before{content:'✔ ';font-weight:700}
+.panel.no li::before{content:'✘ ';font-weight:700}
+.bigquote{background:var(--yellow);border:3px solid var(--ink);box-shadow:var(--shadow);padding:44px 40px;font-family:'Archivo Black';font-size:clamp(1.2rem,2.8vw,1.7rem);line-height:1.35;text-transform:uppercase}
+.bigquote small{display:block;margin-top:18px;font-family:'Space Grotesk';font-weight:500;text-transform:none;font-size:.95rem}
+.warn{margin-top:30px;border:3px dashed var(--ink);padding:22px 28px;font-weight:500;font-size:.93rem;background:#fff}
+.cta-final{background:var(--ink);color:var(--bg);padding:90px 0;text-align:center}
+.cta-final h2{color:var(--bg)}
+.cta-final p{max-width:560px;margin:18px auto 36px;font-weight:500}
+.cta-final a{display:inline-block;background:var(--pink);color:var(--ink);border:3px solid var(--bg);padding:18px 44px;font-family:'Archivo Black';font-size:1.1rem;text-decoration:none;text-transform:uppercase;box-shadow:6px 6px 0 var(--bg);transition:.15s}
+.cta-final a:hover{transform:translate(3px,3px);box-shadow:3px 3px 0 var(--bg)}
+footer{padding:26px 0;font-size:.8rem;font-weight:500;text-align:center;border-top:3px solid var(--ink)}
+</style>
+</head>
+<body>
+<nav>
+  <div class="brand">CALAIRE-EA</div>
+  <a href="mailto:calaire_med@unal.edu.co">Escríbenos</a>
+</nav>
+
+<div class="wrap">
+  <header>
+    <div class="stamp">★ Etapa previa a acreditación</div>
+    <h1>Pon a prueba tus analizadores.<br><span class="hl">Con evidencia.</span></h1>
+    <p>Ensayo de aptitud para gases contaminantes criterio — CO, SO₂, O₃ y NO/NO₂ — en bloques controlados, en las instalaciones de CALAIRE, Universidad Nacional de Colombia, Sede Medellín.</p>
+    <a class="btn-big" href="mailto:calaire_med@unal.edu.co">Manifestar interés →</a>
+  </header>
+</div>
+
+<div class="marquee"><span>CO ✦ SO₂ ✦ O₃ ✦ NO/NO₂ ✦ BLOQUES CONTROLADOS ✦ INFORME FINAL DIGITAL ✦ CÓDIGO CONFIDENCIAL ✦ MEDELLÍN, COLOMBIA ✦ CO ✦ SO₂ ✦ O₃ ✦ NO/NO₂ ✦ BLOQUES CONTROLADOS ✦ INFORME FINAL DIGITAL ✦ CÓDIGO CONFIDENCIAL ✦ MEDELLÍN, COLOMBIA ✦ </span></div>
+
+<div class="wrap">
+  <section>
+    <h2>Elige tus bloques</h2>
+    <p class="sub">De uno a cuatro bloques por organización, hasta un analizador por bloque. Analizador adicional solo si queda capacidad residual.</p>
+    <div class="gases">
+      <div class="gcard gc1"><div class="sym">CO</div><div class="lbl">Monóxido de carbono</div><p>Hasta 4 analizadores por bloque individual.</p></div>
+      <div class="gcard gc2"><div class="sym">SO₂</div><div class="lbl">Dióxido de azufre</div><p>Simultáneo CO/SO₂: máx. 3 organizaciones, 6 analizadores totales.</p></div>
+      <div class="gcard gc3"><div class="sym">O₃</div><div class="lbl">Ozono</div><p>Hasta 4 analizadores por bloque individual.</p></div>
+      <div class="gcard gc4"><div class="sym">NO/NO₂</div><div class="lbl">Óxidos de nitrógeno</div><p>Un único bloque con analizador NOx.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Así funciona</h2>
+    <p class="sub">Flujo directo hasta el informe final. Sin informe preliminar.</p>
+    <div class="flow">
+      <div class="fstep"><h3>Interés</h3><p>Escribe al correo. No es inscripción, no reserva cupo, no obliga a nada.</p></div>
+      <div class="fstep"><h3>Cotización + registro</h3><p>Cotización controlada, registro y aceptación de términos.</p></div>
+      <div class="fstep"><h3>Confirmación</h3><p>Revisión de capacidad, equipo y pago/orden de compra. Luego instrucciones técnicas.</p></div>
+      <div class="fstep"><h3>Ronda + informe</h3><p>Trae tu analizador a Medellín. Ejecutamos, evaluamos y entregamos informe digital.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Qué incluye / qué no</h2>
+    <div class="duo">
+      <div class="panel yes">
+        <div class="head">La tarifa incluye</div>
+        <ul>
+          <li>Inscripción y revisión del pedido</li>
+          <li>Preparación, coordinación e instalaciones</li>
+          <li>Sistema de generación y ejecución de bloques</li>
+          <li>Administración y evaluación de datos</li>
+          <li>Informe técnico digital + constancia</li>
+          <li>Aclaraciones, quejas y apelaciones</li>
+        </ul>
+      </div>
+      <div class="panel no">
+        <div class="head">Tú asumes</div>
+        <ul>
+          <li>Transporte y seguro del equipo</li>
+          <li>Riesgo de traslado</li>
+          <li>Calibración, mantenimiento, reparación</li>
+          <li>Aduanas, visas, impuestos</li>
+          <li>Alojamiento y alimentación</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Evaluación honesta</h2>
+    <div class="bigquote">
+      z / z′ — y ζ y En cuando la incertidumbre es utilizable. Sin nota global. Sin aprobado/reprobado.
+      <small>Con menos de 12 resultados válidos: valor de referencia CALAIRE-EA. Con 12 o más: consenso robusto de participantes. Cada participante recibe un código controlado; los informes jamás revelan identidad ni resultados de terceros.</small>
+    </div>
+    <div class="warn">⚠ Propuesta de servicio en etapa previa a acreditación. CALAIRE-EA no afirma que el servicio o la ronda estén acreditados. El resultado no constituye certificación ni declaración general de competencia.</div>
+  </section>
+</div>
+
+<div class="cta-final">
+  <div class="wrap">
+    <h2>¿Operas analizadores de gases criterio?</h2>
+    <p>Laboratorios, redes de monitoreo, autoridades e instituciones académicas: la cotización se habilita tras aprobar viabilidad, precio, condiciones y fecha.</p>
+    <a href="mailto:calaire_med@unal.edu.co">calaire_med@unal.edu.co</a>
+  </div>
+</div>
+
+<footer>CALAIRE-EA · Universidad Nacional de Colombia, Sede Medellín · Manifestar interés no constituye inscripción.</footer>
+</body>
+</html>

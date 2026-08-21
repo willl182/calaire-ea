@@ -1,8 +1,6 @@
 # CS-15 — Mensaje de renovación/seguimiento y registro de clientes potenciales
 
-**Estado:** BORRADOR — contenido redactado; aprobación pendiente
-**Propietario:** Líder comercial
-**Requerido antes:** Después de la ronda
+**Propietario:** Profesional de proyectos
 **Última revisión:** 2026-07-14 (se agregaron SLA, vínculo con precios de fidelidad, gestión de falta de respuesta, sincronización con CS-05 y verificación del consentimiento de marketing)
 
 ## Objetivo
@@ -15,10 +13,10 @@ El seguimiento se envía dentro de un intervalo aprobado posterior a la ronda:
 
 | Hito | SLA |
 |---|---|
-| Seguimiento enviado tras informe final | [RELLENO: normalmente entre 2 y 4 semanas después de la entrega del informe final según el modelo 18] |
-| Seguimiento sin respuesta | [LLENAR: por ejemplo, 30 días después del primer seguimiento, envíe un recordatorio] |
-| Cliente potencial marcado como "obsoleto" si no hay respuesta | [RELLENO - por ejemplo, 90 días después del primer seguimiento] |
-| Intervalo de reintento para la siguiente ronda | [RELLENO - por ejemplo, 6 meses] |
+| Seguimiento enviado tras informe final | [POR DILIGENCIAR — normalmente entre 2 y 4 semanas después de la entrega del informe final según el modelo 18] |
+| Seguimiento sin respuesta | [POR DILIGENCIAR — por ejemplo, 30 días después del primer seguimiento, envíe un recordatorio] |
+| Cliente potencial marcado como "obsoleto" si no hay respuesta | [POR DILIGENCIAR — por ejemplo, 90 días después del primer seguimiento] |
+| Intervalo de reintento para la siguiente ronda | [POR DILIGENCIAR — por ejemplo, 6 meses] |
 
 Los clientes potenciales obsoletos se marcan en CS-10 con el "indicador Stale-EoI" (igual que CS-05) y se excluyen de las vistas de canalización activa.
 
@@ -49,8 +47,8 @@ Agradecemos sus comentarios para ayudarnos a mejorar el servicio:
 [ENLACE al formulario de comentarios CS-14]
 
 Próximo programa
-- Periodo previsto: [RELLENO]
-- Gases ofrecidos: [RELLENO]
+- Periodo previsto: [POR DILIGENCIAR]
+- Gases ofrecidos: [POR DILIGENCIAR]
 
 No se ofrece descuento automático por renovación durante la etapa de propuesta.
 Una futura política de fidelización requiere revisión de CS-01 y aprobación de
@@ -62,7 +60,7 @@ Si le interesa la próxima ronda, indíquenos qué gases desea incluir:
 Sus resultados de desempeño seguirán siendo confidenciales y no se utilizarán con fines de mercadeo. Puede revocar en cualquier momento su consentimiento para recibir comunicaciones comerciales respondiendo a este correo electrónico.
 
 Cordialmente,
-[LÍDER COMERCIAL]
+[PROFESIONAL DE PROYECTOS]
 ```
 
 ## Gestión de la falta de respuesta
@@ -105,10 +103,3 @@ Actualice el rastreador CS-10 con:
 - Consentimiento verificado antes de agregarlo a la lista de marketing (por separado del consentimiento del servicio).
 - Si el CS-14 se envió de forma anónima, el seguimiento de la renovación no puede hacer referencia a las respuestas anteriores; el mensaje es genérico.
 - El precio de fidelidad debe provenir del CS-04, no inventado en el CS-15.
-
-## Aprobación
-
-| Versión | Fecha | Aprobador | Notas |
-|---|---|---|---|
-| 0.1 BORRADOR | [RELLENO] | [RELLENO] | Plantilla inicial |
-| 0.2 BORRADOR | 2026-07-14 | [RELLENO] | Se agregó SLA de sincronización, regla condicional de precios de lealtad, manejo de falta de respuesta, sincronización CS-05, verificación de consentimiento de marketing. |

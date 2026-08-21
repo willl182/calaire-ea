@@ -1,20 +1,18 @@
 # CS-08 — Términos y condiciones / Acuerdo de participante
 
-**Estado:** BORRADOR — contenido redactado; aprobación pendiente
-**Propietario:** Gestión / legal
-**Requerido antes de:** Aceptación del pedido
-**Last revision:** 2026-07-14 (added data protection clause, dispute resolution, response time commitments, I-PSEA-01 reference, updated QMS code references)  
-**QMS code reference:** ver `00_control/equivalencia_codigos_sgc.md`. Las referencias a `P-PSEA-17`, `P-PSEA-18`, `P-PSEA-19` apuntan a los significados vigentes post-renumeración 2026-06-14.
+**Propietario:** Profesional de proyectos
+**Última revisión:** 2026-07-14 (se agregaron la cláusula de protección de datos, la resolución de controversias, los compromisos de tiempo de respuesta y la referencia I-PSEA-01; se actualizaron las referencias de códigos del SGC)
+**Referencia de códigos del SGC:** ver `00_control/equivalencia_codigos_sgc.md`. Las referencias a `P-PSEA-17`, `P-PSEA-18`, `P-PSEA-19` apuntan a los significados vigentes tras la renumeración del 2026-06-14.
 
 ## Objetivo
 
 Establecer condiciones de servicio vinculantes.
 
-## Important
+## Importante
 
 Las cláusulas vinculantes deberán ser aprobadas por la asesoría jurídica o la función de contratación autorizada de la Universidad. Este documento define el contenido, no la redacción legal.
 
-## Minimum clauses
+## Cláusulas mínimas
 
 ### 1. Fiestas y descripción del servicio.
 
@@ -41,9 +39,9 @@ resultados dentro del plazo.
 
 ### 4. Transporte, custodia, instalación y riesgo de equipos
 
-Reference: el empaquetado y transporte de los equipos del participante se realiza conforme a `I-PSEA-01` (Embalaje y transporte de equipos de participantes), versión vigente al momento de la aceptación. Sin este instructivo, la cláusula 4 no puede firmarse.
+Referencia: el empaquetado y transporte de los equipos del participante se realiza conforme a `I-PSEA-01` (Embalaje y transporte de equipos de participantes), versión vigente al momento de la aceptación. Sin este instructivo, la cláusula 4 no puede firmarse.
 
-[FILL — puntos de transferencia de riesgo, seguro, responsabilidad por daños. Texto típico: "El riesgo de pérdida o daño al analizador del participante se transfiere a CALAIRE-EA tras la recepción documentada en las instalaciones y revierte al participante tras el envío de devolución documentado. CALAIRE-EA mantiene un seguro a nivel de las instalaciones contra incendio y robo; el participante es responsable del seguro en tránsito".]
+[POR DILIGENCIAR — transferencia de riesgo, seguro y responsabilidad por daños]
 
 ### 5. Preparación de los participantes y consecuencias de una falla del instrumento
 
@@ -56,15 +54,15 @@ por fallas atribuibles al participante o a su equipo.
 
 ### 6. Precio, impuestos, condiciones de pago y orden de compra
 
-[FILL — derivación de precios a partir de CS-06; divisa; impuestos; calendario de pagos según CS-06 Sección 9; consecuencias de pago atrasado (por ejemplo, intereses, suspensión del servicio).]
+[POR DILIGENCIAR — precio, impuestos, condiciones de pago y orden de compra]
 
 ### 7. Inscripción mínima, aplazamiento y cancelación de proveedor
 
-[FILL — conditions under which CALAIRE-EA may postpone or cancel; refund/credit terms. Ver CS-01 Section 8 para tarifas y CS-12 para trazabilidad de cambios.]
+[POR DILIGENCIAR — aplazamiento o cancelación por el proveedor; condiciones de reembolso o crédito]
 
 ### 8. Gastos de baja, sustitución y cancelación de participantes
 
-[FILL: plazos y lista de tarifas para retiros según CS-01 Sección 8; reglas de sustitución (la sustitución del analizador se permite hasta N días antes del inicio de la ronda; la sustitución de la organización requiere la revisión y reaceptación del CS-09).]
+[POR DILIGENCIAR — plazos y tarifas de retiro; reglas de sustitución]
 
 ### 9. Plazos, correcciones de resultados y envíos tardíos
 
@@ -113,20 +111,20 @@ apelación formal conforme a `P-PSEA-18`. Vencido el plazo se emite el informe
 final. Una corrección posterior solo procede como enmienda controlada cuando se
 compruebe un error sustantivo. Las quejas se tramitan conforme a `P-PSEA-17`.
 
-**Response time commitments** (a documentar en CS-01 y referenciar aquí):
+**Compromisos de tiempo de respuesta** (se deben documentar en CS-01 y referenciar aquí):
 
-| Item | Target |
+| Elemento | Objetivo |
 |---|---|
-| Acknowledgement of complaint / appeal | 5 días hábiles |
-| Resolution of complaint | 30 días calendario |
-| Resolution of appeal (complex) | 60 días calendario |
+| Acuse de recibo de queja / apelación | 5 días hábiles |
+| Resolución de queja | 30 días calendario |
+| Resolución de apelación (compleja) | 60 días calendario |
 
 Si un plazo no puede cumplirse, CALAIRE-EA debe informar antes de su
 vencimiento la causa, el estado del caso y la nueva fecha prevista de respuesta.
 
 ### 15. Informes de modificación e informes reemplazados
 
-[FILL — condiciones para la enmienda; cómo se marcan los informes reemplazados. Texto sugerido: "Si un informe final contiene un error sustancial, CALAIRE-EA emite un informe enmendado marcado 'ENMENDADO' con un registro de cambios. El informe original está marcado como 'SUPERSEDIDO' y se conserva según la retención de registros del SGC. Las correcciones tipográficas menores no requieren una nueva emisión."]
+[POR DILIGENCIAR — condiciones de enmienda y marcación de informes reemplazados]
 
 ### 16. Uso permitido de informes y prohibición de afirmaciones engañosas
 
@@ -140,26 +138,14 @@ vencimiento la causa, el estado del caso y la nueva fecha prevista de respuesta.
 
 ### 18. Fuerza mayor, ley aplicable y lenguaje de responsabilidad aprobado
 
-[FILL - asesor legal para redactar. **Artículos específicos a cubrir:**]
+[POR DILIGENCIAR — redacción del asesor jurídico: alcance de fuerza mayor, ley aplicable, resolución de controversias, límite de responsabilidad y responsabilidad por daños al instrumento]
 
-- **Alcance de fuerza mayor** (según CS-01 Sección 8): enumere los eventos cubiertos (por ejemplo, desastre natural, pandemia, orden gubernamental, conflicto armado) o haga referencia a la ley aplicable.
-- **Applicable law:** leyes de la República de Colombia y normas contractuales internas aplicables a la Universidad Nacional de Colombia.
-- **Dispute resolution:** pendiente de validación por la oficina jurídica de la Universidad Nacional de Colombia. No se ofrecerá mediación, arbitraje ni jurisdicción específica hasta contar con texto institucional aprobado.
-- **Límite de responsabilidad:** [FILL: por ejemplo, limitado a las tarifas pagadas por la ronda, con exclusión de daños emergentes].
-- **Liability for instrument damage:** el participante conserva el riesgo y
-  decide sobre seguros de transporte y permanencia. CALAIRE documenta la
-  recepción, estado, instalación y devolución. La Universidad solo responderá
-  por daño directo que una investigación determine atribuible a actuación
-  dolosa o gravemente negligente de su personal, dentro de los límites que
-  apruebe la oficina jurídica. Se excluyen desgaste, falla propia, calibración o
-  embalaje inadecuados, transporte, fuerza mayor y pérdida de datos del equipo.
-
-### 19. Data protection (Habeas Data — Ley 1581 de 2012)
+### 19. Protección de datos (Habeas Data — Ley 1581 de 2012)
 
 Esta cláusula es **obligatoria** para cualquier acuerdo comercial que involucre personal
 datos de los representantes y del personal del participante. El controlador es el
 Universidad Nacional de Colombia; CALAIRE es la unidad ejecutora y no debe ser
-identified as a separate legal data controller.
+identificada como responsable legal independiente del tratamiento de datos.
 
 > "El participante autoriza a la Universidad Nacional de Colombia a recolectar,
 > almacenar, usar y circular los datos personales suministrados para gestionar
@@ -171,11 +157,3 @@ identified as a separate legal data controller.
 > https://unal.edu.co/tratamiento-de-datos-personales.html o escribiendo a
 > protecdatos_na@unal.edu.co. La retención se sujetará al procedimiento vigente
 > de control de registros del PEA y a las tablas institucionales aplicables."
-
-## Approval
-
-| Versión | Fecha | Aprobador | Notas |
-|---|---|---|---|
-| 0.1 BORRADOR | [RELLENO] | [RELLENO] | Esquema de contenido para revisión legal |
-| 0.2 BORRADOR | 2026-07-14 | [RELLENO] | Se agregó una cláusula de protección de datos, resolución de disputas, compromisos de tiempo de respuesta, referencia cruzada I-PSEA-01, referencias de códigos QMS actualizadas, texto estándar de uso de informes. |
-| 0.2.1 CORRECCIÓN | 2026-07-14 | [RELLENO] | Bloque estándar cláusula 16 unificado con CS-01 §9 y CS-13 (agrega frase de uso íntegro); estado actualizado a BORRADOR. |

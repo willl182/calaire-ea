@@ -1,0 +1,91 @@
+REUNIÓN EA
+Thu, Jul 30, 2026
+
+Summary:
+
+Revisión técnica y operativa del piloto de ensayos de aptitud para gases.
+• Norma permite omitir comentarios técnicos.
+• Z y Z' preferidos como métricas iniciales.
+• Desviación estándar del ensayo crítica y insuficiente.
+• Infraestructura limita número simultáneo de participantes.
+• Recomiendan >12 ensayos o réplicas internas.
+• Participante debe permanecer disponible durante el ensayo.
+
+
+Action Items:
+
+* Sistema de Gestion De Calidad del Aire: Programar un par de pilotos más con participantes individualizados para recopilar más datos controlados
+* Laboratorio CALAIRE: Realizar múltiples réplicas internas del proceso de medición para generar una base confiable de desviación (réplicas sin participantes externos)
+* Sistema de Gestion De Calidad del Aire: Conseguir y coordinar la disponibilidad de un generador de aire y el espacio necesario para mejorar la infraestructura
+* Wilson Salas: Revisar las normas europeas y comparar sus parámetros adicionales con el handbook de la EPA para definir métricas de desempeño aplicables
+* Sistema de Gestion De Calidad del Aire: Organizar una ronda con 4–5 participantes para posibilitar la realización de un MADE y obtener una muestra intercomparativa
+* Wilson Salas: Programar nuevas rondas de medición para aumentar la muestra y evaluar reproducibilidad
+* Sistema de Gestion De Calidad del Aire: Solicitar a los participantes la entrega de sus estimaciones de incertidumbre y registrar las respuestas pendientes
+* Cesar yate: Definir y formalizar el uso de Z-score y Z' como métricas oficiales para la evaluación del ensayo de aptitud
+* Wilson Salas: Preparar actas o formatos de registro para el piloto que documenten intervenciones y condiciones del equipo
+* Sistema de Gestion De Calidad del Aire: Establecer un requisito operativo que garantice la disponibilidad del participante durante el piloto (disponible en sitio en tiempo de respuesta corto)
+
+
+Key Discussion Points:
+
+Apertura y referencia al material (página 28)
+Se inició la reunión con la referencia a la evaluación del desempeño en la página 28 y una rápida confirmación de lectura del documento por parte de Wilson. A continuación se introdujo la pregunta sobre el numeral de la norma que motiva la discusión principal.
+
+Interpretación de la norma y alcance de comentarios de proveedores
+Se consultó a César sobre cómo deben manejarse los comentarios al participante según la norma, y César explicó que el trabajo parte de la planificación y que los proveedores suelen emitir observaciones objetivas (sesgo, incertidumbre) y recomendaciones de procedimiento, evitando opiniones técnicas extensas que comprometan expertos externos. También se aclaró que la norma no obliga a emitir tales comentarios pero que renunciar a ellos puede no ser lo más adecuado.
+
+Estado de la revisión de datos y rondas faltantes
+Se confirmó que la revisión de datos no estaba completa y que faltaban mostrar dos rondas adicionales (ronda 2 y ronda 3) con los mismos contaminantes y participantes, petición realizada por el equipo para poder responder preguntas técnicas posteriores.
+
+Resultados por participante y comparación de métodos (NOx y CO)
+Wilson presentó resultados detallados por participante y por ronda para monóxido de nitrógeno y otros gases, mostrando que el método de referencia arrojó resultados no satisfactorios en ciertos niveles mientras que el método de expertos mejoró las puntuaciones Z y Z' al estimar dinámicamente la desviación estándar del ensayo. Se discutieron casos de sesgo atribuibles al participante con ejemplos numéricos ilustrativos.
+
+Discusión sobre ozono y problemas procedimentales
+El análisis del ozono mostró cambios en el comportamiento por nivel; se detectaron resultados satisfactorios en ceros pero no en concentraciones intermedias, lo que se interpretó como fallas procedimentales o sesgo operacional del participante más que variabilidad aleatoria. También se aclaró la posibilidad de valores negativos en gases por curvas de calibración y límites de cuantificación.
+
+Incertidumbre, elección de indicadores y recomendaciones metodológicas
+Se debatió la conveniencia de usar indicadores más sensibles; Wilson y César coincidieron en priorizar Z y Z' en esta etapa por la baja confiabilidad de la incertidumbre y la escasa cantidad de participantes, citando la norma 13.528 que condiciona el uso de Z' a que la incertidumbre del XPT supere 0,3 veces la desviación estándar. Wilson indicó que el aplicativo muestra si la incertidumbre cumple la condición y propuso ampliar la muestra antes de aplicar métricas más críticas.
+
+Consulta sobre viabilidad del proyecto y solicitud de opinión
+La coordinadora solicitó una opinión directa y contundente de César sobre la viabilidad del proyecto con los datos actuales y preguntó qué conclusiones pueden extraerse de los datos disponibles hasta el momento, planteamiento que queda pendiente de respuesta en la porción registrada de la reunión.
+
+Evaluación inicial de los datos y preocupación por la desviación estándar
+Se abrió la discusión preguntando qué conclusiones se pueden extraer con los datos disponibles y se identificó la desviación estándar como un punto crítico que podría enmascarar errores de medición o justificar resultados inesperados, requiriendo justificación o investigación adicional sobre instrucciones y mediciones del proveedor.
+
+Limitaciones de infraestructura y su impacto en la escalabilidad
+El equipo destacó limitaciones de infraestructura durante las pruebas, señalando que la capacidad actual no respondería si se sumaran más participantes y que esto obliga a resolver recursos y espacios antes de ampliar el número de ensayos simultáneos.
+
+Estrategia propuesta: pilotos individualizados y disponibilidad de material
+Se propuso realizar pilotos adicionales con participantes individuales para reducir la carga de infraestructura y obtener más datos, condicionando la ejecución a la suficiencia de material y a la posibilidad de réplicas internas por parte del laboratorio.
+
+Tamaño de muestra, simulación y recomendaciones estadísticas
+Se planteó la duda sobre cuántas rondas son necesarias para definir una desviación estándar propia; se explicó que más de 12 ensayos sería ideal si las rondas tienen pocos participantes, y que las simulaciones pueden ayudar pero no reemplazan mediciones experimentales controladas.
+
+Referencias normativas y uso del sigma histórico para orientarse
+Se discutió la posibilidad de usar manuales y normas (EPA y normas europeas) para identificar parámetros de desempeño y comparar el sigma histórico del ensayo con límites normativos para detectar tendencias y orientar un programa de pruebas más claro.
+
+Resultados preliminares de repetibilidad y plan para más mediciones
+El laboratorio reportó una prueba corta de repetibilidad y reproducibilidad con coeficiente de variación inferior al 1% para CO, SO y ozono, se reconoció que NOx requiere más trabajo y se acordó programar más mediciones y réplicas para consolidar reproducibilidad y patrones estadísticos.
+
+Programación y apertura de consulta sobre incertidumbre
+Se comentó la posibilidad de programar más sesiones para avanzar en temas pendientes. A continuación se planteó una consulta sobre la incertidumbre asociada a los participantes y a los ensayos de aptitud, marcando el inicio del bloque técnico sobre medición de incertidumbres.
+
+Distinción de incertidumbres y elección de métricas
+Se explicó la diferencia entre la incertidumbre acreditada por un laboratorio y la incertidumbre calculada a partir del ensayo de aptitud, concluyéndose que la relevante para la evaluación es la del ensayo de aptitud. Se debatieron las dificultades prácticas para obtener datos de incertidumbre de los participantes y se recomendó usar Z-score y Z' como métricas estandarizadas mientras no exista un método documentado común.
+
+Impacto de la desviación estándar y validación del valor asignado
+Se afirmó que Z' permite verificar que la incertidumbre del valor asignado sea adecuada y que esa incertidumbre depende críticamente de la desviación estándar, por lo que errores en ésta afectan todo el resultado. Se consolidó la conclusión sobre la importancia de no arriesgar la validez del ensayo adoptando indicadores no validados.
+
+Comparación de rigurosidad entre organizador y participantes
+Se discutió que el organizador suele incorporar más fuentes de incertidumbre documentadas (curva de calibración, aire cero, patrón) y que esto puede generar discrepancias con los participantes, quienes muchas veces estiman incertidumbre de forma laxa o sin evaluación detallada.
+
+Decisión operativa sobre métricas a implementar
+Se acordó orientar inicialmente hacia las métricas Z y Z' como aproximación pragmática mientras se construye capacidad para indicadores más complejos como el error normalizado (zeta).
+
+Planificación del tercer piloto y riesgos operativos
+Se discutió la intención de hacer un tercer piloto y se consultó sobre cómo obtener información más precisa; se identificaron riesgos de realizar ensayos sin la presencia del participante, como fallos en infraestructura y manipulación de equipos por parte del laboratorio, y se propuso que el participante esté disponible y sea responsable de sus mediciones, junto con el uso de actas para protección documental.
+
+
+Notepad:
+
+* No notes

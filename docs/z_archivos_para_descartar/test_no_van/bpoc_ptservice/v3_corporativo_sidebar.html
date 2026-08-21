@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALAIRE-EA — Ensayos de Aptitud para Gases Contaminantes Criterio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #f5f5f0;
+            --card: #ffffff;
+            --ink: #1c1c1e;
+            --muted: #868686;
+            --border: #e8e8e3;
+            --blue: #2563eb;
+            --blue-light: #eff6ff;
+            --green: #16a34a;
+            --green-light: #f0fdf4;
+            --amber: #d97706;
+            --amber-light: #fffbeb;
+            --red: #dc2626;
+            --red-light: #fef2f2;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'DM Sans', -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--ink);
+            line-height: 1.6;
+            font-size: 15px;
+        }
+
+        /* ─── LAYOUT ─── */
+        .layout {
+            display: grid;
+            grid-template-columns: 260px 1fr;
+            min-height: 100vh;
+        }
+
+        /* ─── SIDEBAR ─── */
+        .sidebar {
+            position: fixed; top: 0; left: 0; bottom: 0;
+            width: 260px; background: var(--card);
+            border-right: 1px solid var(--border);
+            padding: 2rem 1.5rem;
+            display: flex; flex-direction: column;
+            overflow-y: auto;
+        }
+        .sidebar-brand {
+            font-size: 0.7rem; font-weight: 700;
+            letter-spacing: 0.12em; text-transform: uppercase;
+            color: var(--blue); margin-bottom: 0.3rem;
+        }
+        .sidebar-org {
+            font-size: 0.7rem; color: var(--muted);
+            margin-bottom: 2.5rem; padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .sidebar-nav { list-style: none; flex: 1; }
+        .sidebar-nav li { margin-bottom: 0.15rem; }
+        .sidebar-nav a {
+            display: flex; align-items: center; gap: 0.75rem;
+            text-decoration: none; color: var(--muted);
+            font-size: 0.82rem; font-weight: 500;
+            padding: 0.55rem 0.75rem; border-radius: 6px;
+            transition: all 0.2s;
+        }
+        .sidebar-nav a:hover { background: var(--bg); color: var(--ink); }
+        .sidebar-nav a.active { background: var(--blue-light); color: var(--blue); }
+        .sidebar-nav .nav-icon {
+            width: 18px; height: 18px; flex-shrink: 0;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.7rem;
+        }
+        .sidebar-footer {
+            padding-top: 1.5rem; border-top: 1px solid var(--border);
+            font-size: 0.7rem; color: var(--muted); line-height: 1.6;
+        }
+        .sidebar-footer a { color: var(--blue); text-decoration: none; }
+
+        /* ─── MAIN ─── */
+        .main {
+            margin-left: 260px;
+            padding: 3rem 4rem;
+            max-width: 1100px;
+        }
+
+        /* ─── HEADER ─── */
+        .page-header {
+            margin-bottom: 3.5rem;
+        }
+        .page-eyebrow {
+            font-family: 'DM Mono', monospace;
+            font-size: 0.7rem; font-weight: 500;
+            color: var(--blue); letter-spacing: 0.1em;
+            text-transform: uppercase; margin-bottom: 0.75rem;
+        }
+        .page-title {
+            font-size: clamp(2rem, 3.5vw, 2.8rem);
+            font-weight: 700; line-height: 1.15;
+            letter-spacing: -0.02em; margin-bottom: 1rem;
+        }
+        .page-subtitle {
+            font-size: 1rem; color: var(--muted);
+            max-width: 600px; line-height: 1.7;
+        }
+
+        /* ─── BADGES ─── */
+        .badge {
+            display: inline-flex; align-items: center; gap: 0.3rem;
+            padding: 0.3rem 0.75rem; border-radius: 50px;
+            font-size: 0.7rem; font-weight: 600;
+        }
+        .badge-blue { background: var(--blue-light); color: var(--blue); }
+        .badge-green { background: var(--green-light); color: var(--green); }
+        .badge-amber { background: var(--amber-light); color: var(--amber); }
+
+        /* ─── CARDS ─── */
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .card-header {
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid var(--border);
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        .card-header h3 {
+            font-size: 1rem; font-weight: 600;
+        }
+        .card-body { padding: 2rem; }
+        .card-body p { color: var(--muted); line-height: 1.7; }
+
+        /* ─── GAS GRID ─── */
+        .gas-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        .gas-chip {
+            background: var(--card); border: 1px solid var(--border);
+            border-radius: 10px; padding: 1.5rem;
+            text-align: center; transition: all 0.3s;
+            cursor: default;
+        }
+        .gas-chip:hover {
+            border-color: var(--blue);
+            box-shadow: 0 4px 20px rgba(37,99,235,0.08);
+            transform: translateY(-2px);
+        }
+        .gas-chip-symbol {
+            font-size: 2rem; font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+        .gas-chip-name {
+            font-size: 0.75rem; color: var(--muted);
+        }
+        .gas-chip-unit {
+            font-family: 'DM Mono', monospace;
+            font-size: 0.6rem; color: var(--muted);
+            margin-top: 0.3rem;
+        }
+
+        /* ─── STATS ROW ─── */
+        .stats-row {
+            display: grid; grid-template-columns: repeat(4, 1fr);
+            gap: 1rem; margin: 2rem 0;
+        }
+        .stat-card {
+            background: var(--card); border: 1px solid var(--border);
+            border-radius: 10px; padding: 1.5rem;
+        }
+        .stat-value {
+            font-size: 1.8rem; font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+        .stat-label {
+            font-size: 0.75rem; color: var(--muted);
+            margin-top: 0.3rem;
+        }
+
+        /* ─── PROCESS STEPS ─── */
+        .steps {
+            display: flex; flex-direction: column; gap: 0;
+        }
+        .step {
+            display: grid; grid-template-columns: 48px 1fr; gap: 1.25rem;
+            padding: 1.25rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+        .step:last-child { border-bottom: none; }
+        .step-num {
+            width: 36px; height: 36px;
+            background: var(--blue-light); color: var(--blue);
+            border-radius: 8px; display: flex; align-items: center;
+            justify-content: center;
+            font-family: 'DM Mono', monospace;
+            font-size: 0.75rem; font-weight: 500;
+        }
+        .step h4 { font-size: 0.9rem; font-weight: 600; margin-bottom: 0.3rem; }
+        .step p { font-size: 0.82rem; color: var(--muted); line-height: 1.6; }
+
+        /* ─── PRICING ─── */
+        .pricing-row {
+            display: grid; grid-template-columns: 1fr 1.5fr; gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .price-box {
+            background: var(--ink); color: #fff;
+            border-radius: 12px; padding: 2.5rem;
+            display: flex; flex-direction: column; justify-content: center;
+        }
+        .price-amount {
+            font-size: 2.8rem; font-weight: 700;
+            letter-spacing: -0.03em;
+        }
+        .price-unit {
+            font-size: 0.8rem; color: rgba(255,255,255,0.5);
+            margin-top: 0.3rem;
+        }
+        .price-note {
+            font-size: 0.75rem; color: rgba(255,255,255,0.4);
+            margin-top: 1rem; line-height: 1.5;
+        }
+
+        .features-list { list-style: none; }
+        .features-list li {
+            padding: 0.65rem 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.85rem; color: var(--muted);
+            display: flex; align-items: center; gap: 0.6rem;
+        }
+        .features-list li .check {
+            color: var(--green); font-weight: 700; font-size: 0.7rem;
+        }
+
+        /* ─── SCOPE ─── */
+        .scope-row {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .scope-col { list-style: none; }
+        .scope-col li {
+            padding: 0.55rem 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.82rem; color: var(--muted);
+            display: flex; align-items: start; gap: 0.5rem;
+        }
+        .scope-col li .icon { flex-shrink: 0; margin-top: 0.1rem; font-size: 0.7rem; }
+        .icon-plus { color: var(--green); }
+        .icon-minus { color: var(--red); }
+
+        /* ─── TABLE ─── */
+        .info-table {
+            width: 100%; border-collapse: collapse;
+            font-size: 0.85rem; margin-top: 1rem;
+        }
+        .info-table th {
+            text-align: left; font-weight: 600;
+            padding: 0.8rem 1rem;
+            background: var(--bg);
+            font-size: 0.75rem; letter-spacing: 0.03em;
+        }
+        .info-table td {
+            padding: 0.8rem 1rem;
+            border-bottom: 1px solid var(--border);
+            color: var(--muted);
+        }
+
+        /* ─── CONTACT ─── */
+        .contact-row {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .team-list { list-style: none; }
+        .team-list li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border);
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .team-name { font-size: 0.85rem; font-weight: 600; }
+        .team-role { font-size: 0.75rem; color: var(--muted); }
+        .contact-email {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            color: var(--blue); text-decoration: none;
+            font-size: 0.9rem; font-weight: 600;
+            padding: 0.8rem 1.5rem;
+            background: var(--blue-light); border-radius: 8px;
+            transition: all 0.2s; margin-top: 1rem;
+        }
+        .contact-email:hover {
+            background: var(--blue); color: #fff;
+        }
+
+        /* ─── DISCLAIMER ─── */
+        .disclaimer {
+            background: var(--amber-light);
+            border: 1px solid #fde68a;
+            border-radius: 10px;
+            padding: 1.5rem 2rem;
+            font-size: 0.82rem; color: var(--amber);
+            line-height: 1.6; margin-top: 1.5rem;
+        }
+
+        /* ─── FOOTER ─── */
+        footer {
+            margin-top: 4rem; padding: 2rem 0;
+            border-top: 1px solid var(--border);
+            font-size: 0.75rem; color: var(--muted);
+            display: flex; justify-content: space-between;
+        }
+        footer a { color: var(--blue); text-decoration: none; }
+
+        /* ─── RESPONSIVE ─── */
+        @media (max-width: 1024px) {
+            .sidebar { display: none; }
+            .layout { grid-template-columns: 1fr; }
+            .main { margin-left: 0; padding: 2rem; }
+        }
+        @media (max-width: 768px) {
+            .gas-grid { grid-template-columns: 1fr 1fr; }
+            .stats-row { grid-template-columns: 1fr 1fr; }
+            .pricing-row, .scope-row, .contact-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="layout">
+
+<aside class="sidebar">
+    <div class="sidebar-brand">CALAIRE-EA</div>
+    <div class="sidebar-org">Universidad Nacional de Colombia<br>Sede Medellín</div>
+
+    <ul class="sidebar-nav">
+        <li><a href="#inicio" class="active"><span class="nav-icon">◉</span> Inicio</a></li>
+        <li><a href="#que-es"><span class="nav-icon">◎</span> Qué es el servicio</a></li>
+        <li><a href="#gases"><span class="nav-icon">⬡</span> Bloques de gases</a></li>
+        <li><a href="#proceso"><span class="nav-icon">→</span> Flujo del proceso</a></li>
+        <li><a href="#precio"><span class="nav-icon">$</span> Modelo de participación</a></li>
+        <li><a href="#alcance"><span class="nav-icon">⊞</span> Incluido / Excluido</a></li>
+        <li><a href="#detalles"><span class="nav-icon">≡</span> Detalles de la ronda</a></li>
+        <li><a href="#contacto"><span class="nav-icon">✉</span> Contacto</a></li>
+    </ul>
+
+    <div class="sidebar-footer">
+        Servicio en etapa previa a acreditación.<br>
+        <a href="mailto:calaire_med@unal.edu.co">calaire_med@unal.edu.co</a>
+    </div>
+</aside>
+
+<main class="main" id="inicio">
+
+    <div class="page-header">
+        <div class="page-eyebrow">Facultad de Minas — Laboratorio CALAIRE</div>
+        <h1 class="page-title">Ensayos de Aptitud para Gases Contaminantes Criterio</h1>
+        <p class="page-subtitle">
+            Compare el desempeño de analizadores de organizaciones participantes mediante
+            bloques controlados para CO, SO₂, O₃ y NO/NO₂.
+        </p>
+    </div>
+
+    <div class="stats-row">
+        <div class="stat-card">
+            <div class="stat-value" style="color: var(--blue);">4</div>
+            <div class="stat-label">Bloques de gases</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value" style="color: var(--green);">1–4</div>
+            <div class="stat-label">Bloques por organización</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value" style="color: var(--amber);">4</div>
+            <div class="stat-label">Analizadores por gas</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value" style="color: var(--red);">COP</div>
+            <div class="stat-label">Tarifa plana por participante</div>
+        </div>
+    </div>
+
+    <!-- ─── QUÉ ES ─── -->
+    <div class="card" id="que-es" style="margin-bottom: 1.5rem;">
+        <div class="card-header">
+            <h3>Descripción del servicio</h3>
+            <span class="badge badge-blue">CS-02</span>
+        </div>
+        <div class="card-body">
+            <p>
+                El servicio de Ensayos de Aptitud para Gases Contaminantes Criterio permite comparar
+                el desempeño de analizadores de organizaciones participantes mediante bloques controlados
+                para CO, SO₂, O₃ y NO/NO₂. La ronda se ejecuta en las instalaciones de CALAIRE,
+                Universidad Nacional de Colombia, Sede Medellín, con el soporte de los procedimientos
+                vigentes del sistema de gestión.
+            </p>
+            <p style="margin-top: 1rem;">
+                <strong style="color: var(--ink);">A quién está dirigido:</strong> laboratorios, redes de monitoreo,
+                autoridades, instituciones académicas y demás organizaciones que operan analizadores
+                de gases criterio y buscan evidencia independiente para su aseguramiento de calidad.
+            </p>
+            <p style="margin-top: 1rem;">
+                <strong style="color: var(--ink);">Valor de participar:</strong> la participación aporta una comparación
+                documentada del desempeño del sistema de medición, ayuda a identificar oportunidades de
+                mejora y complementa los controles internos de calidad. No constituye certificación
+                ni acreditación.
+            </p>
+        </div>
+    </div>
+
+    <!-- ─── GASES ─── -->
+    <div class="card" id="gases" style="margin-bottom: 1.5rem;">
+        <div class="card-header">
+            <h3>Bloques seleccionables</h3>
+            <span class="badge badge-green">Hasta 4 bloques</span>
+        </div>
+        <div class="card-body">
+            <p>Cada organización puede proponer entre uno y cuatro bloques, con hasta un analizador por bloque.</p>
+            <div class="gas-grid">
+                <div class="gas-chip">
+                    <div class="gas-chip-symbol">CO</div>
+                    <div class="gas-chip-name">Monóxido de carbono</div>
+                    <div class="gas-chip-unit">µmol/mol</div>
+                </div>
+                <div class="gas-chip">
+                    <div class="gas-chip-symbol">SO₂</div>
+                    <div class="gas-chip-name">Dióxido de azufre</div>
+                    <div class="gas-chip-unit">nmol/mol</div>
+                </div>
+                <div class="gas-chip">
+                    <div class="gas-chip-symbol">O₃</div>
+                    <div class="gas-chip-name">Ozono</div>
+                    <div class="gas-chip-unit">nmol/mol</div>
+                </div>
+                <div class="gas-chip">
+                    <div class="gas-chip-symbol">NO/NO₂</div>
+                    <div class="gas-chip-name">Óxidos de nitrógeno</div>
+                    <div class="gas-chip-unit">nmol/mol</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ─── PROCESO ─── -->
+    <div class="card" id="proceso" style="margin-bottom: 1.5rem;">
+        <div class="card-header">
+            <h3>Flujo del proceso</h3>
+            <span class="badge badge-amber">6 pasos</span>
+        </div>
+        <div class="card-body">
+            <div class="steps">
+                <div class="step">
+                    <div class="step-num">01</div>
+                    <div>
+                        <h4>Expresión de interés</h4>
+                        <p>Envíe sus datos y la información de sus analizadores. No constituye inscripción, no reserva cupo y no obliga a contratar.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-num">02</div>
+                    <div>
+                        <h4>Cotización controlada</h4>
+                        <p>Reciba una cotización con la tarifa plana aprobada, condiciones y calendario de pagos. Validez: 30 días calendario.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-num">03</div>
+                    <div>
+                        <h4>Inscripción y aceptación de términos</h4>
+                        <p>Regístrese, acepte los términos y condiciones y presente su orden de compra o pago.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-num">04</div>
+                    <div>
+                        <h4>Confirmación</h4>
+                        <p>Verificación de capacidad, equipo y pago. Reciba confirmación y acceso a las instrucciones técnicas.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-num">05</div>
+                    <div>
+                        <h4>Ejecución de la ronda</h4>
+                        <p>Transporte su analizador a Medellín. CALAIRE prepara el montaje, ejecuta la ronda y procesa los datos.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-num">06</div>
+                    <div>
+                        <h4>Informe y constancia</h4>
+                        <p>Informe técnico digital y constancia de participación. Sin fase de informe preliminar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ─── PRECIO ─── -->
+    <div class="card" id="precio" style="margin-bottom: 1.5rem;">
+        <div class="card-header">
+            <h3>Modelo de participación</h3>
+            <span class="badge badge-blue">CS-04</span>
+        </div>
+        <div class="card-body">
+            <div class="pricing-row">
+                <div class="price-box">
+                    <div class="price-amount">~5.928.000</div>
+                    <div class="price-unit">COP por organización · sin impuestos</div>
+                    <div class="price-note">
+                        Referencia provisional. El precio final se determinará tras
+                        la aprobación del modelo de costos.
+                    </div>
+                </div>
+                <ul class="features-list">
+                    <li><span class="check">✓</span> Inscripción y revisión del pedido</li>
+                    <li><span class="check">✓</span> Preparación y coordinación de la ronda</li>
+                    <li><span class="check">✓</span> Uso de instalaciones y sistema de generación</li>
+                    <li><span class="check">✓</span> Ejecución de los bloques contratados</li>
+                    <li><span class="check">✓</span> Administración y evaluación de datos</li>
+                    <li><span class="check">✓</span> Informe técnico digital</li>
+                    <li><span class="check">✓</span> Constancia de participación</li>
+                    <li><span class="check">✓</span> Canales de aclaraciones, quejas y apelaciones</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ─── ALCANCE ─── -->
+    <div class="card" id="alcance" style="margin-bottom: 1.5rem;">
+        <div class="card-header">
+            <h3>Alcance del servicio</h3>
+        </div>
+        <div class="card-body">
+            <div class="scope-row">
+                <div>
+                    <h4 style="font-size: 0.85rem; font-weight: 600; margin-bottom: 1rem; color: var(--green);">
+                        Incluido en la tarifa
+                    </h4>
+                    <ul class="scope-col">
+                        <li><span class="icon icon-plus">+</span> Inscripción y revisión del pedido</li>
+                        <li><span class="icon icon-plus">+</span> Un cupo para un analizador en cada bloque contratado</li>
+                        <li><span class="icon icon-plus">+</span> Preparación y coordinación de la ronda</li>
+                        <li><span class="icon icon-plus">+</span> Uso de instalaciones y sistema de generación</li>
+                        <li><span class="icon icon-plus">+</span> Ejecución para los gases contratados</li>
+                        <li><span class="icon icon-plus">+</span> Administración y evaluación de datos</li>
+                        <li><span class="icon icon-plus">+</span> Informe técnico digital</li>
+                        <li><span class="icon icon-plus">+</span> Constancia de participación</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="font-size: 0.85rem; font-weight: 600; margin-bottom: 1rem; color: var(--red);">
+                        A cargo del participante
+                    </h4>
+                    <ul class="scope-col">
+                        <li><span class="icon icon-minus">–</span> Transporte del analizador hacia y desde Medellín</li>
+                        <li><span class="icon icon-minus">–</span> Seguro y riesgo del equipo</li>
+                        <li><span class="icon icon-minus">–</span> Calibración, mantenimiento o reparación</li>
+                        <li><span class="icon icon-minus">–</span> Aduanas, visas e impuestos de importación/exportación</li>
+                        <li><span class="icon icon-minus">–</span> Alojamiento y alimentación del personal</li>
+                        <li><span class="icon icon-minus">–</span> Impuestos de importación para clientes internacionales</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ─── DETALLES ─── -->
+    <div class="card" id="detalles" style="margin-bottom: 1.5rem;">
+        <div class="card-header">
+            <h3>Detalles de la ronda</h3>
+        </div>
+        <div class="card-body" style="padding: 0;">
+            <table class="info-table">
+                <thead>
+                    <tr><th>Campo</th><th>Detalle</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Ubicación</td><td>Facultad de Minas, Universidad Nacional de Colombia, Sede Medellín</td></tr>
+                    <tr><td>Modalidad</td><td>En instalaciones de CALAIRE — el participante transporta su analizador</td></tr>
+                    <tr><td>Capacidad por gas</td><td>Hasta 4 analizadores participantes</td></tr>
+                    <tr><td>CO y SO₂ simultáneos</td><td>Hasta 3 participantes, 6 analizadores en total</td></tr>
+                    <tr><td>Evaluación</td><td>z o z′; con ζ y En cuando hay información de incertidumbre</td></tr>
+                    <tr><td>Calificación</td><td>Sin calificación agregada a1–a7 ni aprobado/reprobado global</td></tr>
+                    <tr><td>Moneda</td><td>COP exclusivamente</td></tr>
+                    <tr><td>Validez de cotización</td><td>30 días calendario desde emisión</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- ─── DISCLAIMER ─── -->
+    <div class="disclaimer">
+        Esta es una propuesta de servicio en etapa previa a acreditación. CALAIRE-EA no afirma que
+        el servicio o la ronda estén acreditados.
+    </div>
+
+    <!-- ─── CONTACTO ─── -->
+    <div class="card" id="contacto" style="margin-top: 1.5rem; margin-bottom: 1.5rem;">
+        <div class="card-header">
+            <h3>Contacto</h3>
+        </div>
+        <div class="card-body">
+            <p style="margin-bottom: 1rem;">
+                Manifestar interés no constituye inscripción, no reserva cupo y no obliga a contratar.
+                La cotización y el formulario definitivo se habilitarán después de aprobar la viabilidad.
+            </p>
+            <a href="mailto:calaire_med@unal.edu.co" class="contact-email">✉ calaire_med@unal.edu.co</a>
+
+            <div class="contact-row" style="margin-top: 2rem;">
+                <div>
+                    <h4 style="font-size: 0.85rem; font-weight: 600; margin-bottom: 1rem;">Equipo del servicio</h4>
+                    <ul class="team-list">
+                        <li>
+                            <div>
+                                <div class="team-name">Carmen Elena Zapata</div>
+                                <div class="team-role">Coordinadora EA / Gerente de servicio</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <div class="team-name">David Pulgarín</div>
+                                <div class="team-role">Líder comercial</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <div class="team-name">Jeniffer Ochoa</div>
+                                <div class="team-role">Gestión de calidad</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <div class="team-name">Wilson Salas</div>
+                                <div class="team-role">Calidad del aire</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <div class="team-name">Maira Herrera</div>
+                                <div class="team-role">Infraestructura</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <div class="team-name">Fabián Moreno</div>
+                                <div class="team-role">Ingeniero operativo</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="font-size: 0.85rem; font-weight: 600; margin-bottom: 1rem;">Información institucional</h4>
+                    <table class="info-table">
+                        <tbody>
+                            <tr><td>Proveedor jurídico</td><td>Universidad Nacional de Colombia</td></tr>
+                            <tr><td>NIT</td><td>899.999.063-3</td></tr>
+                            <tr><td>Sede</td><td>Medellín</td></tr>
+                            <tr><td>Unidad ejecutora</td><td>Facultad de Minas, Laboratorio CALAIRE</td></tr>
+                            <tr><td>Moneda de facturación</td><td>COP</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div>© 2026 Universidad Nacional de Colombia — CALAIRE-EA</div>
+        <div><a href="#">Política de datos</a> · <a href="mailto:calaire_med@unal.edu.co">Contacto</a></div>
+    </footer>
+
+</main>
+</div>
+
+</body>
+</html>
