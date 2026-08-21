@@ -1,0 +1,4 @@
+"configuracion","longitud_m","diametro_interno_mm","volumen_interno_ml","caudal_l_min","tiempo_residencia_externo_s","tiempo_residencia_interno_s","tiempo_residencia_total_s","temperatura_C","no_entrada_nmol_mol","o3_entrada_nmol_mol","no2_entrada_nmol_mol","no2_formado_estimado_nmol_mol","cambio_relativo_pct","criterio_pct","decision_esperada"
+"A_corta",2,4,25.13,1,1.51,1.5,3.01,22,180,90,20,0.18,0.9,2,"aceptar_y_vigilar"
+"B_larga",8,6,226.19,1.8,7.54,1.8,9.34,28,180,90,20,0.43,2.15,2,"reducir_residencia_y_repetir"
+"C_larga_caliente",8,6,226.19,1.55,8.76,1.8,10.56,35,180,90,20,0.62,3.1,2,"invalidar_hasta_corregir"

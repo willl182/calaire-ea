@@ -1,0 +1,450 @@
+#!/usr/bin/env python3
+"""Construye el paquete HTML autocontenido del curso de incertidumbre en O₃."""
+
+from __future__ import annotations
+
+import base64
+import csv
+import html
+import re
+import shutil
+import subprocess
+import sys
+from pathlib import Path
+
+
+BASE_DIR = Path(__file__).resolve().parent
+COURSE_DIR = BASE_DIR.parent
+# Fuente canonica de guiones/handout: cursov2 (curso v2 para operadores de red).
+# contenido/modulos conserva el orden historico (M6 Monte Carlo, M7 taller) y ya no se usa para el paquete.
+SRC_DIR = COURSE_DIR / "cursov2"
+OUTPUT = BASE_DIR / "curso_paquete_completo.html"
+TITLE = "Curso 6 h — Incertidumbre en analizadores de O₃ y patrones de transferencia · Paquete completo"
+# Pandoc no permite tex_math_single_backslash sobre lector gfm. El lector
+# markdown conserva tablas de tubería y admite ambos delimitadores usados aquí.
+PANDOC_FROM = "markdown+tex_math_dollars+tex_math_single_backslash"
+
+DESIGN = SRC_DIR / "diseno_curso_v2.md"
+HANDOUT = SRC_DIR / "handout/handout_teorico_gum_o3.md"
+MODULES = [
+    SRC_DIR / "modulos/M1_trazabilidad.md",
+    SRC_DIR / "modulos/M2_modelo_medicion.md",
+    SRC_DIR / "modulos/M3_conceptos_gum.md",
+    SRC_DIR / "modulos/M4_presupuesto_analizador.md",
+    SRC_DIR / "modulos/M5_patrones_transferencia.md",
+    SRC_DIR / "modulos/M6_taller.md",
+    SRC_DIR / "modulos/M7_opcional_monte_carlo.md",
+]
+SOLUTIONS = [
+    SRC_DIR / "modulos/soluciones/SOL_M2.md",
+    SRC_DIR / "modulos/soluciones/SOL_M3.md",
+    SRC_DIR / "modulos/soluciones/SOL_M4.md",
+    SRC_DIR / "modulos/soluciones/SOL_M5.md",
+    SRC_DIR / "modulos/soluciones/SOL_M6.md",
+]
+DATASET_METADATA = SRC_DIR / "datasets/dataset_metadata.md"
+DATASET_CSV = SRC_DIR / "datasets/dataset_verificacion_multipunto.csv"
+DATASET_R = SRC_DIR / "datasets/generar_dataset.R"
+TEMPLATE_CSV = SRC_DIR / "plantillas/plantilla_presupuesto_casos.csv"
+TEMPLATE_R = SRC_DIR / "plantillas/plantilla_presupuesto.R"
+TEMPLATE_PY = SRC_DIR / "plantillas/generar_plantilla_xlsx.py"
+TEMPLATE_XLSX = SRC_DIR / "plantillas/plantilla_presupuesto.xlsx"
+MCM_R = SRC_DIR / "scripts/demo_mcm_beer_lambert.R"
+MCM_PNG = SRC_DIR / "scripts/demo_mcm_pdf_salida.png"
+KRISS = SRC_DIR / "casos/extracto_kriss_2024.md"
+
+SECTIONS = [
+    ("portada", "Portada e índice"),
+    ("diseno-curso", "Diseño del curso"),
+    ("handout", "Handout teórico"),
+    ("guiones", "Guiones M1–M6 + M7 opcional"),
+    ("materiales", "Materiales"),
+    ("solucionarios", "Solucionarios — solo instructor"),
+    ("reproducibilidad", "Apéndice de reproducibilidad"),
+]
+
+MODULE_NAV_TITLES = [
+    "M1 Trazabilidad",
+    "M2 Modelo de medición",
+    "M3 Conceptos GUM",
+    "M4 Presupuesto analizador",
+    "M5 Patrones de transferencia",
+    "M6 Taller integrador",
+    "M7 Monte Carlo (opcional)",
+]
+
+MATERIALS_NAV = [
+    ("material-dataset", "Dataset sintético"),
+    ("material-plantilla", "Plantilla de presupuesto"),
+    ("material-mcm", "Demostración MCM (opcional)"),
+    ("material-kriss", "Caso KRISS 2024"),
+]
+
+CSS = r"""
+:root{
+  --bg:#f7f8fa;--surface:#fff;--ink:#1c2330;--muted:#5a6478;
+  --accent:#0e6ba8;--accent-soft:#e3f0f9;--line:#dfe3ea;
+  --ok:#2e7d52;--warn:#9b5210;--chip:#eef1f6;--code:#f3f5f8;
+  color-scheme:light dark;
+}
+@media(prefers-color-scheme:dark){:root{
+  --bg:#12161d;--surface:#1a2029;--ink:#e6e9ef;--muted:#a8b1c0;
+  --accent:#5db3e8;--accent-soft:#173142;--line:#354052;
+  --ok:#6fc79a;--warn:#f0ad68;--chip:#232b37;--code:#10151c;
+}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:1rem}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.62 "Segoe UI",system-ui,-apple-system,sans-serif}
+a{color:var(--accent)}
+a:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.sidebar{position:fixed;inset:0 auto 0 0;width:17rem;overflow-y:auto;padding:1.25rem 1rem;background:var(--surface);border-right:1px solid var(--line);z-index:10}
+.sidebar strong{display:block;color:var(--accent);margin-bottom:.75rem}
+.sidebar ul{list-style:none;margin:0;padding:0}
+.sidebar li{margin:.15rem 0}
+.sidebar a{display:block;padding:.38rem .55rem;border-radius:6px;text-decoration:none;color:var(--ink)}
+.sidebar a:hover{background:var(--accent-soft);color:var(--accent)}
+main{max-width:1060px;margin-left:max(17rem,calc((100vw - 1400px)/2));padding:2rem 2rem 5rem}
+.hero{border-left:5px solid var(--accent);padding:1.25rem 1.5rem;margin:0 0 2rem;background:var(--surface);border-radius:0 10px 10px 0;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.hero h1{font-size:clamp(1.65rem,3vw,2.35rem);line-height:1.2;margin:.15rem 0 .65rem}
+.meta{color:var(--muted);font-size:.92rem}
+.chip{display:inline-block;background:var(--chip);border:1px solid var(--line);border-radius:999px;padding:.18rem .7rem;margin:.6rem .25rem 0 0;font-size:.82rem;color:var(--muted)}
+section.major{margin:3rem 0 4rem;scroll-margin-top:1rem}
+section.major>h2{font-size:1.55rem;border-bottom:3px solid var(--accent);padding-bottom:.45rem;margin-bottom:1.3rem}
+.source-block{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:1.15rem 1.35rem;margin:1.25rem 0;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.source-block>h3:first-child{margin-top:0;color:var(--accent)}
+h1,h2,h3,h4,h5,h6{line-height:1.28;scroll-margin-top:1rem}
+h1{font-size:1.65rem}h2{font-size:1.38rem;margin-top:2.2rem}h3{font-size:1.16rem;margin-top:1.7rem}h4{font-size:1.02rem}
+.index-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:.65rem;padding:0;list-style:none}
+.index-grid a{display:block;height:100%;padding:.8rem 1rem;background:var(--surface);border:1px solid var(--line);border-radius:8px;text-decoration:none;font-weight:600}
+.tablewrap{overflow-x:auto;margin:1rem 0;border:1px solid var(--line);border-radius:8px}
+table{border-collapse:collapse;width:100%;min-width:38rem;background:var(--surface);font-size:.9rem}
+th,td{border:1px solid var(--line);padding:.48rem .65rem;text-align:left;vertical-align:top}
+th{background:var(--accent-soft);position:sticky;top:0}
+pre{overflow-x:auto;max-width:100%;padding:1rem;background:var(--code);border:1px solid var(--line);border-radius:8px;line-height:1.45;tab-size:2}
+code{font-family:"Cascadia Code","SFMono-Regular",Consolas,monospace;font-size:.88em}
+:not(pre)>code{background:var(--chip);padding:.08rem .34rem;border-radius:4px}
+figure{margin:1.25rem 0;text-align:center}
+figure img{max-width:100%;height:auto;background:#fff;border:1px solid var(--line);border-radius:8px}
+figcaption{color:var(--muted);font-size:.9rem;margin-top:.4rem}
+.notice{border-left:5px solid var(--warn);background:color-mix(in srgb,var(--warn) 12%,var(--surface));padding:.85rem 1rem;border-radius:0 8px 8px 0;margin:1rem 0}
+details{background:var(--surface);border:1px solid var(--line);border-radius:9px;margin:1rem 0;padding:.2rem 1rem 1rem}
+summary{cursor:pointer;font-weight:700;color:var(--accent);padding:.8rem 0}
+.math.display{overflow-x:auto;display:block;padding:.35rem 0}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.path-list code{overflow-wrap:anywhere}
+footer{margin-top:3rem;color:var(--muted);font-size:.88rem;border-top:1px solid var(--line);padding-top:1rem}
+.sidebar ul.sub{list-style:none;margin:.1rem 0 .4rem;padding-left:.8rem;border-left:1px solid var(--line)}
+.sidebar ul.sub li{margin:.05rem 0}
+.sidebar ul.sub a{padding:.26rem .5rem;font-size:.85rem;color:var(--muted)}
+.sidebar ul.sub a:hover{background:var(--accent-soft);color:var(--accent)}
+.sidebar details{background:none;border:0;margin:0;padding:0}
+.sidebar details>summary{list-style:none;padding:0;font-weight:400;color:var(--ink);display:flex;align-items:center;gap:.3rem;border-radius:6px}
+.sidebar details>summary::-webkit-details-marker{display:none}
+.sidebar details>summary::before{content:"▸";font-size:.7em;color:var(--muted);transition:transform .15s}
+.sidebar details[open]>summary::before{transform:rotate(90deg)}
+.sidebar details>summary:hover{background:var(--accent-soft);color:var(--accent)}
+.sidebar details>summary>a{flex:1;padding:.38rem .1rem .38rem 0}
+@media(max-width:900px){.sidebar{position:static;width:auto;border-right:0;border-bottom:1px solid var(--line)}.sidebar>ul{display:flex;gap:.25rem;overflow-x:auto}.sidebar>ul>li{flex:0 0 auto}.sidebar a{white-space:nowrap}.sidebar ul.sub{display:none}.sidebar details>summary::before{display:none}main{margin:0;padding:1.25rem}}
+@media print{
+  :root{--bg:#fff;--surface:#fff;--ink:#000;--muted:#333;--accent:#245b7a;--accent-soft:#eef4f7;--line:#aaa;--code:#f5f5f5}
+  body{background:#fff;color:#000;font-size:10.5pt}.sidebar{display:none}main{max-width:none;margin:0;padding:0}
+  .hero,.source-block{box-shadow:none}section.major{break-before:page;margin:0 0 1.2rem}.source-block{break-inside:auto}
+  a{color:#000;text-decoration:none}pre,.tablewrap{overflow:visible}table{min-width:0;font-size:8.5pt}th{position:static}
+  details{display:block}details>summary{display:none}details>*{display:block!important}figure img{max-height:22cm}
+  .index-grid{display:block}.index-grid li{margin:.3rem 0}
+}
+"""
+
+
+def require_files(paths: list[Path]) -> None:
+    missing = [str(path) for path in paths if not path.is_file()]
+    if missing:
+        raise FileNotFoundError("Faltan archivos requeridos:\n" + "\n".join(missing))
+
+
+def pandoc_fragment(path: Path, id_prefix: str = "") -> str:
+    command = [
+        "pandoc",
+        "--from",
+        PANDOC_FROM,
+        "--to",
+        "html5",
+        "--mathml",
+        "--wrap=none",
+        str(path),
+    ]
+    if id_prefix:
+        command.insert(-1, f"--id-prefix={id_prefix}")
+    result = subprocess.run(command, check=True, capture_output=True, text=True)
+    return wrap_tables(result.stdout)
+
+
+def wrap_tables(fragment: str) -> str:
+    return re.sub(r"(?s)(<table(?:\s[^>]*)?>.*?</table>)", r'<div class="tablewrap">\1</div>', fragment)
+
+
+def strip_tags(fragment: str) -> str:
+    return re.sub(r"<[^>]+>", "", fragment).strip()
+
+
+def extract_h2_headings(fragment: str) -> list[tuple[str, str]]:
+    matches = re.findall(r'<h2 id="([^"]+)"[^>]*>(.*?)</h2>', fragment, flags=re.DOTALL)
+    return [(hid, strip_tags(label)) for hid, label in matches]
+
+
+def code_block(path: Path, language: str) -> str:
+    content = path.read_text(encoding="utf-8")
+    return (
+        f'<pre><code class="language-{html.escape(language, quote=True)}">'
+        f"{html.escape(content)}"
+        "</code></pre>"
+    )
+
+
+def csv_table(path: Path, caption: str) -> tuple[str, int]:
+    with path.open(newline="", encoding="utf-8-sig") as stream:
+        rows = list(csv.reader(stream))
+    if not rows:
+        raise ValueError(f"CSV vacío: {path}")
+    head, body = rows[0], rows[1:]
+    parts = [f'<div class="tablewrap"><table><caption>{html.escape(caption)}</caption><thead><tr>']
+    parts.extend(f"<th scope=\"col\">{html.escape(cell)}</th>" for cell in head)
+    parts.append("</tr></thead><tbody>")
+    for row in body:
+        parts.append("<tr>")
+        parts.extend(f"<td>{html.escape(cell)}</td>" for cell in row)
+        parts.append("</tr>")
+    parts.append("</tbody></table></div>")
+    return "".join(parts), len(body)
+
+
+def data_uri(path: Path) -> str:
+    encoded = base64.b64encode(path.read_bytes()).decode("ascii")
+    return f"data:image/png;base64,{encoded}"
+
+
+def section(section_id: str, title: str, body: str) -> str:
+    return f'<section class="major" id="{section_id}"><h2>{html.escape(title)}</h2>{body}</section>'
+
+
+def source_block(title: str, body: str, block_id: str | None = None) -> str:
+    id_attr = f' id="{html.escape(block_id, quote=True)}"' if block_id else ""
+    return f'<article class="source-block"{id_attr}><h3>{html.escape(title)}</h3>{body}</article>'
+
+
+def build() -> tuple[str, int, int]:
+    required = [
+        DESIGN,
+        HANDOUT,
+        *MODULES,
+        *SOLUTIONS,
+        DATASET_METADATA,
+        DATASET_CSV,
+        DATASET_R,
+        TEMPLATE_CSV,
+        TEMPLATE_R,
+        TEMPLATE_PY,
+        TEMPLATE_XLSX,
+        MCM_R,
+        MCM_PNG,
+        KRISS,
+    ]
+    require_files(required)
+    if shutil.which("pandoc") is None:
+        raise RuntimeError("pandoc no está disponible en PATH")
+
+    top_nav_items = "".join(f'<li><a href="#{sid}">{html.escape(label)}</a></li>' for sid, label in SECTIONS)
+    index = f'<ul class="index-grid">{top_nav_items}</ul>'
+    portada = section(
+        "portada",
+        "Portada e índice",
+        f'<header class="hero"><h1>{html.escape(TITLE)}</h1>'
+        '<p class="meta">Curso técnico · 6 horas obligatorias + 30 min opcionales · material integrado y reproducible · 2026-08-19</p>'
+        '<span class="chip">GUM</span><span class="chip">Fotometría UV</span>'
+        '<span class="chip">Patrones de transferencia</span><span class="chip">Monte Carlo opcional</span>'
+        '</header><p>Documento único para consulta en pantalla, trabajo de aula e impresión. '
+        'Incluye contenido de participante y material identificado para instructor.</p>'
+        f'<h3>Índice general</h3>{index}',
+    )
+
+    design_fragment = pandoc_fragment(DESIGN)
+    design = section("diseno-curso", "Diseño del curso", design_fragment)
+    design_headings = extract_h2_headings(design_fragment)
+
+    handout_fragment = pandoc_fragment(HANDOUT)
+    handout = section("handout", "Handout teórico", handout_fragment)
+    handout_headings = extract_h2_headings(handout_fragment)
+
+    module_blocks = []
+    for number, path in enumerate(MODULES, start=1):
+        module_blocks.append(source_block(f"Guion M{number}", pandoc_fragment(path, f"guion-m{number}-"), f"guion-m{number}"))
+    modules = section("guiones", "Guiones M1–M6 + M7 opcional", "".join(module_blocks))
+
+    dataset_table, dataset_rows = csv_table(DATASET_CSV, "Dataset sintético de verificación multipunto")
+    template_table, template_rows = csv_table(TEMPLATE_CSV, "Casos precargados de la plantilla de presupuesto")
+    materials_body = "".join(
+        [
+            source_block(
+                "Dataset sintético",
+                pandoc_fragment(DATASET_METADATA)
+                + f'<p><strong>Tabla completa:</strong> {dataset_rows} filas de datos.</p>'
+                + dataset_table
+                + '<h4>Código R del generador</h4>'
+                + code_block(DATASET_R, "r"),
+                "material-dataset",
+            ),
+            source_block(
+                "Plantilla de presupuesto",
+                '<p>Plantilla para componentes, PDF, divisor, coeficiente de sensibilidad, contribución y clasificación. '
+                f'Existe también archivo de hoja de cálculo <code>{html.escape(TEMPLATE_XLSX.name)}</code>, '
+                'no embebido como descarga para mantener navegación autocontenida y auditable.</p>'
+                f'<p><strong>Tabla de casos:</strong> {template_rows} filas.</p>'
+                + template_table
+                + '<h4>Código R de la plantilla</h4>'
+                + code_block(TEMPLATE_R, "r")
+                + '<h4>Código Python que genera el XLSX</h4>'
+                + code_block(TEMPLATE_PY, "python"),
+                "material-plantilla",
+            ),
+            source_block(
+                "Demostración MCM — material avanzado opcional",
+                '<p>Implementación reproducible del método de Monte Carlo para modelo Beer–Lambert. Material opcional conducido por el facilitador después del cierre obligatorio.</p>'
+                + code_block(MCM_R, "r")
+                + f'<figure><img src="{data_uri(MCM_PNG)}" alt="Salida gráfica de la demostración Monte Carlo Beer–Lambert">'
+                '<figcaption>Distribución de salida y comparación GUF–MCM generada por script del curso.</figcaption></figure>',
+                "material-mcm",
+            ),
+            source_block("Caso KRISS 2024", pandoc_fragment(KRISS), "material-kriss"),
+        ]
+    )
+    materials = section("materiales", "Materiales", materials_body)
+
+    solution_details = [
+        '<div class="notice" role="note"><strong>Solo instructor.</strong> '
+        'Bloques colapsados para evitar exposición accidental durante ejercicios. En impresión se muestran abiertos.</div>'
+    ]
+    solutions_nav: list[tuple[str, str]] = []
+    for path in SOLUTIONS:
+        module_name = path.stem.replace("SOL_", "")
+        sol_id = f"sol-{module_name.lower()}"
+        solutions_nav.append((sol_id, f"Solucionario {module_name}"))
+        solution_details.append(
+            f'<details id="{sol_id}"><summary>Solucionario {html.escape(module_name)} — solo instructor</summary>'
+            f'{pandoc_fragment(path, f"sol-{module_name.lower()}-")}</details>'
+        )
+    solution_details.append(
+        '<p class="meta">M7 es material avanzado opcional y corresponde a demostración del facilitador; no requiere solucionario separado.</p>'
+    )
+    solutions = section("solucionarios", "Solucionarios — solo instructor", "".join(solution_details))
+
+    paths = [path.relative_to(COURSE_DIR).as_posix() for path in required]
+    path_items = "".join(f"<li><code>{html.escape(path)}</code></li>" for path in paths)
+    reproducibility_body = (
+        '<p>Construcción usa Python 3, biblioteca estándar y ejecutable <code>pandoc</code> del sistema. No requiere pip.</p>'
+        '<h3>Regeneración</h3>'
+        '<pre><code class="language-bash">cd docs/capacitacion_incert/contenido\npython3 build_paquete_html.py</code></pre>'
+        '<h3>Semillas y artefactos</h3>'
+        '<ul><li>Dataset: semilla R <code>20260817</code>, definida en <code>datasets/generar_dataset.R</code>.</li>'
+        '<li>Demo MCM: semilla y criterio adaptativo definidos en <code>scripts/demo_mcm_beer_lambert.R</code>.</li>'
+        '<li>PNG: regenerar ejecutando <code>Rscript scripts/demo_mcm_beer_lambert.R</code> desde <code>cursov2/</code> (fuente de los scripts).</li>'
+        '<li>Plantilla XLSX: regenerar con <code>python3 plantillas/generar_plantilla_xlsx.py</code>.</li></ul>'
+        '<h3>Fuentes ensambladas</h3>'
+        f'<ul class="path-list">{path_items}</ul>'
+        '<h3>Conversión matemática</h3>'
+        f'<p>Markdown convertido con <code>pandoc --from {html.escape(PANDOC_FROM)} --to html5 --mathml</code>. '
+        'Se aceptan delimitadores reales <code>\\(...\\)</code>, <code>\\[...\\]</code> y <code>$...$</code>.</p>'
+        '<h3>Controles automáticos</h3><ul><li>Archivos requeridos presentes.</li>'
+        '<li>Dataset conserva 24 filas.</li><li>MathML presente.</li><li>Anclas internas resueltas.</li>'
+        '<li>Sin atributos <code>src</code> o <code>href</code> externos.</li></ul>'
+    )
+    reproducibility = section("reproducibilidad", "Apéndice de reproducibilidad", reproducibility_body)
+
+    guiones_nav = [(f"guion-m{n}", MODULE_NAV_TITLES[n - 1]) for n in range(1, 8)]
+    subnav_map = {
+        "diseno-curso": design_headings,
+        "handout": handout_headings,
+        "guiones": guiones_nav,
+        "materiales": MATERIALS_NAV,
+        "solucionarios": solutions_nav,
+    }
+    nav_li_parts = []
+    for sid, label in SECTIONS:
+        subs = subnav_map.get(sid)
+        if subs:
+            sub_lis = "".join(
+                f'<li><a href="#{sub_id}">{html.escape(sub_label)}</a></li>' for sub_id, sub_label in subs
+            )
+            nav_li_parts.append(
+                f'<li><details><summary><a href="#{sid}">{html.escape(label)}</a></summary>'
+                f'<ul class="sub">{sub_lis}</ul></details></li>'
+            )
+        else:
+            nav_li_parts.append(f'<li><a href="#{sid}">{html.escape(label)}</a></li>')
+    sidebar_nav_items = "".join(nav_li_parts)
+    nav = f'<nav class="sidebar" aria-label="Navegación principal"><strong>Paquete completo</strong><ul>{sidebar_nav_items}</ul></nav>'
+
+    body = portada + design + handout + modules + materials + solutions + reproducibility
+    document = (
+        '<!DOCTYPE html>\n<html lang="es"><head><meta charset="utf-8">'
+        '<meta name="viewport" content="width=device-width,initial-scale=1">'
+        f'<title>{html.escape(TITLE)}</title><style>{CSS}</style></head><body>{nav}<main>{body}'
+        '<footer>Paquete autocontenido generado por <code>contenido/build_paquete_html.py</code> (fuentes: <code>cursov2/</code>).</footer>'
+        '</main></body></html>\n'
+    )
+    return document, dataset_rows, len(SECTIONS)
+
+
+def validate(document: str, dataset_rows: int) -> None:
+    if dataset_rows != 24:
+        raise ValueError(f"Dataset debe tener 24 filas; tiene {dataset_rows}")
+    if "<math" not in document or "</math>" not in document:
+        raise ValueError("No se encontró MathML; revise formato pandoc y delimitadores matemáticos")
+    if not re.search(r'<math[^>]*>.*?<mi[^>]*>x</mi>', document, flags=re.DOTALL):
+        raise ValueError("Prueba MathML falló: fórmula real con x no fue convertida")
+    ids = set(re.findall(r'\bid="([^"]+)"', document))
+    hrefs = re.findall(r'\bhref="([^"]+)"', document)
+    missing = sorted({href[1:] for href in hrefs if href.startswith("#") and href[1:] not in ids})
+    if missing:
+        raise ValueError("Anclas internas inexistentes: " + ", ".join(missing))
+    external_attributes = re.findall(
+        r'\b(?:src|href)\s*=\s*["\']\s*(?:https?:)?//[^"\']+["\']', document, flags=re.IGNORECASE
+    )
+    if external_attributes:
+        raise ValueError("Referencias externas encontradas: " + "; ".join(external_attributes[:5]))
+    if not re.search(r'<img\s+src="data:image/png;base64,', document):
+        raise ValueError("PNG MCM no quedó embebido como data URI")
+    for section_id, _ in SECTIONS:
+        if f'id="{section_id}"' not in document:
+            raise ValueError(f"Falta sección requerida: {section_id}")
+    for number in range(1, 8):
+        if f'id="guion-m{number}"' not in document:
+            raise ValueError(f"Falta guion M{number}")
+    solution_detail_count = len(re.findall(r'<details id="sol-', document))
+    if solution_detail_count != len(SOLUTIONS):
+        raise ValueError("Conteo inesperado de solucionarios colapsados")
+    if "Solo instructor" not in document:
+        raise ValueError("Falta aviso de solo instructor")
+
+
+def main() -> int:
+    try:
+        document, dataset_rows, section_count = build()
+        validate(document, dataset_rows)
+        OUTPUT.write_text(document, encoding="utf-8")
+    except (FileNotFoundError, RuntimeError, ValueError, subprocess.CalledProcessError) as error:
+        print(f"ERROR: {error}", file=sys.stderr)
+        if isinstance(error, subprocess.CalledProcessError) and error.stderr:
+            print(error.stderr.strip(), file=sys.stderr)
+        return 1
+    size = OUTPUT.stat().st_size
+    print(f"Generado: {OUTPUT}")
+    print(f"Tamaño: {size:,} bytes ({size / 1024 / 1024:.2f} MiB)")
+    print(f"Secciones principales: {section_count}")
+    print(f"Filas dataset: {dataset_rows}")
+    print(f"Solucionarios: {len(SOLUTIONS)}")
+    print("Validaciones: MathML, anclas, secciones, data URI y referencias externas OK")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

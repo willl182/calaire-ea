@@ -1,0 +1,54 @@
+# Metadatos — datasets sintéticos M6 NOx
+
+## Identificación
+
+- Archivos: `dataset_nox_gpt_convertidor.csv` y `dataset_nox_linea_muestreo.csv`.
+- Naturaleza: datos enteramente sintéticos para enseñanza. No describen desempeño, calibración ni aceptación de equipo comercial.
+- Generador: `generar_dataset_nox.R`.
+- Semilla reproducible: `20260819`.
+- Fecha base simulada: 2026-08-19, UTC.
+
+## Dataset GPT y convertidor
+
+Contiene tres ciclos, cada uno con cero y cuatro niveles de NO₂ generado, para 15 filas. Concentraciones se expresan en nmol/mol salvo concentración del cilindro de NO, expresada en µmol/mol. Flujos conservan unidades indicadas en nombres de columnas.
+
+Ecuaciones didácticas principales:
+
+\[
+c_{NO,gen}=c_{cil}\frac{q_{NO}}{q_{dil}+q_{NO}}
+\]
+
+con unidades de flujo convertidas antes de operar, y
+
+\[
+c_{NO_2,ind}=c_{NO_x}-c_{NO}=b+\eta c_{NO_2,GPT}+\varepsilon.
+\]
+
+Eficiencia sintética nominal inicia cerca de 0.972 y disminuye 0.0015 por ciclo. El término fijo de +0.35 nmol/mol en el canal NOx representa un sesgo residual del canal y explica que la pendiente ajustada no coincida exactamente con η. Ruido común agregado a canales NO y NOₓ introduce correlación positiva deliberada; ruido específico de cada canal se suma después. Esta construcción permite comparar propagación independiente frente a propagación con covarianza.
+
+Temperatura, presión y flujos tienen incertidumbres estándar didácticas precargadas. Deliberadamente, `u_flujo_no_ml_min=0.08`, `u_temperatura_K=0.20` y `u_presion_kPa=0.10` no coinciden con las desviaciones estándar usadas para simular variación fila a fila (0.10 mL/min, 0.18 K y 0.08 kPa): las primeras son entradas declaradas del ejercicio y las segundas controlan la dispersión sintética. En filas de nivel cero, `flujo_no_ml_min=0`, coherente con la ecuación de generación. La columna `impureza_no2_nmol_mol=0.40` representa impureza declarada en el cilindro de NO, no su valor ya diluido en la mezcla final. `no2_gpt_nmol_mol` representa valor generado ya calculado para ejercicio corto; flujo de O₃ sirve como variable de diagnóstico, no como modelo cinético completo.
+
+## Dataset de línea de muestreo
+
+Tres configuraciones comparan línea corta, línea larga y línea larga caliente. Tiempo externo se obtiene de volumen/caudal y se suma a tiempo interno declarado. Formación estimada de NO₂ aumenta relativamente con tiempo de residencia y temperatura. Sus magnitudes son puramente ilustrativas y no representan una simulación cinética ni datos experimentales de Doval Miñarro et al. (2011); solo preservan una dependencia relativa coherente entre configuraciones.
+
+Criterio didáctico de 2 % separa decisiones del ejercicio. No es límite normativo universal. Participante debe distinguir aceptar, corregir, repetir o invalidar según objetivo y procedimiento aplicable.
+
+## Condiciones de referencia y correlaciones
+
+- Base de cantidad: fracción molar.
+- Temperatura y presión se registran para exigir base coherente de caudales; generador no aplica corrección adicional porque datos simulados ya comparten base.
+- Correlación positiva entre canales procede de término de ruido común. No inferir mismo coeficiente en equipo real.
+- Ceros, patrones y niveles no sustituyen certificado ni ensayo GPT trazable.
+
+## Fuentes y límites
+
+- BS EN 14211:2012: principio de medición, converter, GPT y ejemplo informativo de incertidumbre.
+- Doval Miñarro et al. (2011): mecanismo de formación NO₂ en línea y papel de residencia.
+- GUM/JCGM 100: propagación y covarianza.
+
+Anexo F de EN 14211 fue consultado para estructura y números del presupuesto; texto se parafrasea. Dataset no copia tabla normativa. Validar edición aplicable y requisitos colombianos antes de uso operativo.
+
+## Control documental
+
+HORIBA APOA-370 es analizador de O₃ por absorción UV, no analizador NOx. El manual local `APNA-370_Operaton_Manual_GZ9100497232L.pdf` corresponde a un HORIBA Ambient NOx Monitor (2021) y está disponible como fuente. Verificar si APNA-370 es el equipo realmente instalado queda a cargo del operador. Ninguna especificación del APOA-370 se usa aquí como especificación NOx.
