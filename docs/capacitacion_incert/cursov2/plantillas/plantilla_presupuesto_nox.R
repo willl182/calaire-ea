@@ -13,7 +13,12 @@ anexo_f <- data.frame(
 )
 anexo_f$varianza <- anexo_f$u^2
 uc_reconstruido <- sqrt(sum(anexo_f$varianza))
-# EN 14211 publica suma redondeada 30.4 y uc=5.5; usar esos redondeos para reporte.
+# Nota de reconstrucción (defecto D1, ver practica/E15 y diseño NOx):
+# la suma de estas 18 filas redondeadas/reconstruidas da Sum(u_i^2)=31.430601 (nmol/mol)^2
+# y uc_reconstruido=5.6063 nmol/mol. EN 14211 publica por separado suma=30.4 (nmol/mol)^2
+# y uc=5.5 nmol/mol; la diferencia (~3.4% en varianza, ~1.9% en uc) procede de redondeo y
+# reconstrucción de componentes, no de un error de cálculo. No se presenta uc_reconstruido
+# como reproducción exacta del total normativo; ambos valores se reportan por separado.
 uc_publicado <- 5.5
 k <- 2
 U_publicado <- k * uc_publicado
@@ -48,3 +53,5 @@ print(rbind(sin_cov, con_cov), row.names = FALSE)
 stopifnot(con_cov$u_c < sin_cov$u_c)
 stopifnot(abs(W_publicado - 10.576923) < 1e-6)
 cat("[OK] covarianza aplicada con signos de sensibilidad; W redondea a 10.6 %\n")
+cat(sprintf("[OK] uc_reconstruido=%.4f nmol/mol (18 filas); uc_publicado EN 14211=%.1f nmol/mol\n",
+            uc_reconstruido, uc_publicado))

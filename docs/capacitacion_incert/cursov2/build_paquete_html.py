@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Construye el paquete HTML autocontenido del curso de incertidumbre en O₃."""
+"""Construye el paquete HTML autocontenido del curso de incertidumbre en O₃ y NOx."""
 
 from __future__ import annotations
 
@@ -16,7 +16,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent
 COURSE_DIR = BASE_DIR.parent
 OUTPUT = BASE_DIR / "curso_paquete_completo.html"
-TITLE = "Curso 9 h — Incertidumbre en analizadores de O₃ y NOx · Paquete completo"
+TITLE = "Curso de dos días — Incertidumbre en analizadores de O₃ y NOx · Paquete completo"
 # Pandoc no permite tex_math_single_backslash sobre lector gfm. El lector
 # markdown conserva tablas de tubería y admite ambos delimitadores usados aquí.
 PANDOC_FROM = "markdown+tex_math_dollars+tex_math_single_backslash"
@@ -35,6 +35,24 @@ MODULES = [
     ("m6", "M6 NO/NO₂/NOx por quimioluminiscencia", BASE_DIR / "modulos/M6_no_nox_quimioluminiscencia.md"),
     ("m7", "M7 Taller integrador", BASE_DIR / "modulos/M7_taller.md"),
     ("m8", "M8 Monte Carlo (opcional)", BASE_DIR / "modulos/M8_opcional_monte_carlo.md"),
+]
+PRACTICE = [
+    ("p0", "P0 Agenda del Día 2", BASE_DIR / "practica/P0_agenda_dia2.md"),
+    ("e01", "E01 Ruido y repetibilidad de cero", BASE_DIR / "practica/E01_ruido_cero.md"),
+    ("e02", "E02 Verificación multipunto O₃", BASE_DIR / "practica/E02_verificacion_multipunto.md"),
+    ("e03", "E03 Covarianza NO/NOx", BASE_DIR / "practica/E03_covarianza_no_nox.md"),
+    ("e04", "E04 GPT y eficiencia del convertidor", BASE_DIR / "practica/E04_gpt_eficiencia_convertidor.md"),
+    ("e05", "E05 Corrección de firmware", BASE_DIR / "practica/E05_correccion_firmware.md"),
+    ("e06", "E06 Transmisión de línea", BASE_DIR / "practica/E06_transmision_linea.md"),
+    ("e07", "E07 Formación de NO₂ en línea", BASE_DIR / "practica/E07_formacion_no2_linea.md"),
+    ("e08", "E08 Deriva de cero y span", BASE_DIR / "practica/E08_deriva_cero_span.md"),
+    ("e09", "E09 Calidad de aire cero", BASE_DIR / "practica/E09_calidad_aire_cero.md"),
+    ("e11", "E11 Tiempo de respuesta", BASE_DIR / "practica/E11_tiempo_respuesta.md"),
+    ("e14", "E14 Recorrido documental", BASE_DIR / "practica/E14_recorrido_documental.md"),
+    ("e15", "E15 Presupuesto híbrido", BASE_DIR / "practica/E15_presupuesto_hibrido.md"),
+    ("e16", "E16 MCM con covarianza", BASE_DIR / "practica/E16_mcm_covarianza.md"),
+    ("registro-campo", "Hoja de registro de campo", BASE_DIR / "practica/hoja_registro_campo.md"),
+    ("checklist-seguridad", "Checklist de montaje y seguridad", BASE_DIR / "practica/checklist_montaje_seguridad.md"),
 ]
 SOLUTIONS = [
     ("m1", BASE_DIR / "modulos/soluciones/SOL_M1.md"),
@@ -67,6 +85,7 @@ SECTIONS = [
     ("diseno-curso", "Diseño del curso"),
     ("handout", "Handouts"),
     ("guiones", "Guiones M1–M7 obligatorios + M8 opcional"),
+    ("practica", "Práctica de laboratorio (Día 2)"),
     ("materiales", "Materiales"),
     ("solucionarios", "Solucionarios — solo instructor"),
     ("reproducibilidad", "Apéndice de reproducibilidad"),
@@ -239,6 +258,7 @@ def build() -> tuple[str, int, int, int, int]:
         DESIGN,
         *(path for _, path in HANDOUTS),
         *(path for _, _, path in MODULES),
+        *(path for _, _, path in PRACTICE),
         *(path for _, path in SOLUTIONS),
         DATASET_METADATA,
         DATASET_CSV,
@@ -267,7 +287,7 @@ def build() -> tuple[str, int, int, int, int]:
         "portada",
         "Portada e índice",
         f'<header class="hero"><h1>{html.escape(TITLE)}</h1>'
-        '<p class="meta">Curso técnico · jornada 9 h · 462 min obligatorios + 30 min opcionales · material integrado y reproducible · 2026-08-19</p>'
+        '<p class="meta">Curso técnico · Día 1 conceptual de 9 h + M8 opcional · Día 2 de laboratorio · material integrado y reproducible · 2026-08-26</p>'
         '<span class="chip">GUM + QUAM</span><span class="chip">Fotometría UV O₃</span>'
         '<span class="chip">Quimioluminiscencia NOx</span><span class="chip">Monte Carlo opcional</span>'
         '</header><p>Documento único para consulta en pantalla, trabajo de aula e impresión. '
@@ -292,6 +312,12 @@ def build() -> tuple[str, int, int, int, int]:
     for module_id, title, path in MODULES:
         module_blocks.append(source_block(f"Guion {title}", pandoc_fragment(path, f"guion-{module_id}-"), f"guion-{module_id}"))
     modules = section("guiones", "Guiones M1–M7 obligatorios + M8 opcional", "".join(module_blocks))
+
+    practice_blocks = []
+    for practice_id, title, path in PRACTICE:
+        block_id = f"practica-{practice_id}"
+        practice_blocks.append(source_block(title, pandoc_fragment(path, f"{block_id}-"), block_id))
+    practice = section("practica", "Práctica de laboratorio (Día 2)", "".join(practice_blocks))
 
     dataset_table, dataset_rows = csv_table(DATASET_CSV, "Dataset sintético de verificación multipunto")
     nox_gpt_table, nox_gpt_rows = csv_table(NOX_GPT_CSV, "Dataset GPT y convertidor NOx")
@@ -403,10 +429,12 @@ def build() -> tuple[str, int, int, int, int]:
     reproducibility = section("reproducibilidad", "Apéndice de reproducibilidad", reproducibility_body)
 
     guiones_nav = [(f"guion-{module_id}", title) for module_id, title, _ in MODULES]
+    practica_nav = [(f"practica-{practice_id}", title) for practice_id, title, _ in PRACTICE]
     subnav_map = {
         "diseno-curso": design_headings,
         "handout": handout_headings,
         "guiones": guiones_nav,
+        "practica": practica_nav,
         "materiales": MATERIALS,
         "solucionarios": solutions_nav,
     }
@@ -426,7 +454,7 @@ def build() -> tuple[str, int, int, int, int]:
     sidebar_nav_items = "".join(nav_li_parts)
     nav = f'<nav class="sidebar" aria-label="Navegación principal"><strong>Paquete completo</strong><ul>{sidebar_nav_items}</ul></nav>'
 
-    body = portada + design + handout + modules + materials + solutions + reproducibility
+    body = portada + design + handout + modules + practice + materials + solutions + reproducibility
     document = (
         '<!DOCTYPE html>\n<html lang="es"><head><meta charset="utf-8">'
         '<meta name="viewport" content="width=device-width,initial-scale=1">'
@@ -492,6 +520,9 @@ def validate(document: str, dataset_rows: int, nox_gpt_rows: int, nox_line_rows:
     for module_id, title, _ in MODULES:
         if f'id="guion-{module_id}"' not in document:
             raise ValueError(f"Falta guion {title}")
+    for practice_id, title, _ in PRACTICE:
+        if f'id="practica-{practice_id}"' not in document:
+            raise ValueError(f"Falta práctica {title}")
     if 'id="guion-m8"' not in document:
         raise ValueError("Falta ancla guion-m8")
     apoa_context = re.search(r"APOA-370.{0,300}(?:O₃|ozono|descartad)", strip_tags(document), flags=re.IGNORECASE | re.DOTALL)

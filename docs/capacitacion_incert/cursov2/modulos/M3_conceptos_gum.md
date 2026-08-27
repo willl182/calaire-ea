@@ -233,3 +233,5 @@ u_c=\sqrt{u_{ruido}^2+u_{deriva}^2+u_{linealidad}^2+u_{generador}^2}.
 Pida al grupo repetir la secuencia en voz alta: **identificar efecto y evidencia; decidir A/B; asignar PDF; convertir a estándar; declarar qué cubre; depurar duplicados; combinar si la independencia es defendible**.
 
 En M4 se aplicará esta secuencia a ruido RMS, límites rectangulares e incertidumbre expandida de un certificado en un presupuesto Tipo B de un analizador de O₃. M5 reutilizará la desviación estándar para comparar ciclos. M7 retomará la triangular publicada, las sensibilidades del modelo y, ya de forma explícita, la covarianza.
+
+**Enlace con la práctica:** en el Día 2 de laboratorio, `practica/E01_ruido_cero.md` convierte esta distinción en evidencia propia: la serie de 1 s y las medias de 1 min de cero permiten comparar directamente `s` con `s/√n_ef`, calcular la autocorrelación descrita en §3.2 y obtener un `u₀` experimental que M4 y E15 usan como término absoluto.

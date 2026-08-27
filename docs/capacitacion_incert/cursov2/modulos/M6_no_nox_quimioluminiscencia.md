@@ -131,7 +131,9 @@ W=100\frac{2(5.5)}{104}=10.6\%\text{, redondeado}.
 
 Para interferentes distintos de H₂O, EN 14211/EN ISO 14956 agrupa por signo: se suman por separado las respuestas positivas y negativas y se toma el grupo de mayor magnitud; H₂O se trata aparte. En el ejemplo, el valor 0.35 nmol/mol queda dominado por NH₃.
 
-Valores estándar principales, parafraseados del ejemplo: falta de ajuste 0.90; temperatura de muestra 0.26; entorno 0.44; H₂O 0.249; otros interferentes 0.35; promediación 2.70; reproducibilidad de campo 3.22; deriva cero 0.58; deriva span 1.44; diferencia muestra/calibración 1.04; convertidor 2.08; gas de calibración 2.08; gas cero 0.60 nmol/mol.
+Valores estándar principales, parafraseados del ejemplo: repetibilidad cero (dos filas) 0.00 y 0.00; repetibilidad a concentración 0.09; falta de ajuste 0.90; presión de muestra 0.06; temperatura de muestra 0.26; entorno 0.44; tensión 0.02; H₂O 0.249; otros interferentes 0.35; promediación 2.70; reproducibilidad de campo 3.22; deriva cero 0.58; deriva span 1.44; diferencia muestra/calibración 1.04; convertidor 2.08; gas de calibración 2.08; gas cero 0.60 nmol/mol — 18 filas en total, coherentes con `plantillas/plantilla_presupuesto_nox.R`.
+
+> **Nota de reconstrucción (defecto D1):** la suma de estas 18 filas redondeadas da `Σu_i²=31.4306 (nmol/mol)²` y `u_c=5.606 nmol/mol`, que **no** reproduce exactamente la suma publicada `30.4 (nmol/mol)²` ni `u_c=5.5 nmol/mol` del ejemplo EN 14211 (diferencia ≈3.4 % en varianza, por redondeo y reconstrucción). Ambos valores se reportan por separado; no se presenta 5.606 como reproducción exacta del total normativo. Ver comentario en `plantillas/plantilla_presupuesto_nox.R`.
 
 Dominan reproducibilidad, promediación, convertidor y gas de calibración. Reducir contribuciones diminutas no mejora total de forma material. Comparación con 15 % solo corresponde al contexto europeo indicado; no presentarla como criterio colombiano universal.
 
@@ -140,6 +142,12 @@ Dominan reproducibilidad, promediación, convertidor y gas de calibración. Redu
 **Nombre:** Diagnóstico GPT, convertidor y línea de muestra.
 
 **Organización:** parejas. Una persona calcula; otra audita unidades, fuentes, correcciones y decisiones. Cambiar roles después de 10 min.
+
+> **Advertencia sobre el dataset de GPT (defecto D4):** el diseño original de titulación dejaba NO residual ≈10 nmol/mol en el nivel más alto (≈6 % del NO inicial), margen demasiado estrecho. La escalera rediseñada y validada en `practica/E04_gpt_eficiencia_convertidor.md` usa NO base 450 nmol/mol y niveles GPT 0–160 nmol/mol, dejando NO residual mínimo de 290 nmol/mol (64.4 % del NO inicial). Use los valores recalculados de ese protocolo, no los del dataset original, al interpretar eficiencia.
+
+> **Advertencia sobre el dataset de línea NOx (defecto D6):** los valores de NO₂ formado en línea del dataset original (0.18–0.62 nmol/mol) subestiman la cinética NO+O₃ en 70–100×; el cálculo corregido con `k=1.8×10⁻¹⁴ cm³ molécula⁻¹ s⁻¹` da 18.45–45.13 nmol/mol para las mismas configuraciones. Ver protocolo real `practica/E07_formacion_no2_linea.md` y la sección "Cálculos correctivos" de su diseño. La Parte B del ejercicio siguiente conserva su dataset y su propósito didáctico (practicar la decisión operativa); úsese esta advertencia para explicar en clase que el nivel absoluto es ilustrativo y no predice el resultado de laboratorio, que se obtiene por separado en E07.
+
+**Enlace con la práctica:** el Día 2 de laboratorio trata con instrumento real los mismos temas de este módulo, como bloque independiente y sin reemplazar los ejercicios de esta sección: `practica/E03_covarianza_no_nox.md` mide la covarianza NO/NOx que la Parte C usa como dato; `practica/E04_gpt_eficiencia_convertidor.md` y `practica/E05_correccion_firmware.md` corresponden a la Parte A; `practica/E07_formacion_no2_linea.md` corresponde a la Parte B.
 
 **Parte A — GPT y eficiencia, 10 min**
 

@@ -35,3 +35,7 @@ Para corregir `lectura_ref`: X = (lectura_ref − b) / m, con:
 - UUT base: pendiente 0.9950, offset +0.30 ppb respecto al valor generado.
 
 Resultados esperados por ciclo (regresión UUT vs referencia corregida): pendiente ≈ 0.990–0.997, intercepto ≈ +0.1 a +1.3 ppb, s_residual ≈ 0.3–0.45 ppb.
+
+> **Nota (defecto D8):** este dataset es enteramente conforme, con holgura amplia frente a los límites de aceptación y sin deriva observable entre ciclos que fuerce una decisión de no conformidad. No se regeneró para introducir un ciclo no conforme. La rama de rechazo/estado encontrado (punto o ciclo que falla, investigación previa a un ajuste) se ejercita con datos reales en la práctica de laboratorio, `practica/E02_verificacion_multipunto.md`, donde el resultado depende del instrumento real y no está garantizado de antemano.
+>
+> **Nota de unidades (defecto D7):** las columnas de este dataset usan `ppb` por continuidad con el ejercicio original de M5. Para la práctica de laboratorio (`practica/`) y para cualquier hoja de campo nueva, la unidad de referencia es **nmol/mol** (numéricamente equivalente a ppb para fracción molar, pero preferida por BIPM.QM-K1 §4).
