@@ -8,6 +8,7 @@
 - **Materiales:** `cursov2/casos/extracto_kriss_2024.md`; BIPM.QM-K1 protocol v2.1, App. 1; presupuesto parcialmente resuelto; computador con calculadora u hoja de cálculo; lista combinada GUM §7 + QUAM cap. 9.
 - **Modalidad:** trabajo en equipos de dos o tres personas, seguido de revisión cruzada.
 - **Entregable:** presupuesto completado, declaración de resultado, propuesta de validación externa, frase de alcance y respuesta breve de transferencia del método a NOx.
+- **Relación con la jornada de laboratorio (Día 2):** este taller y su entregable son **independientes** de la práctica instrumental. El ejercicio con el caso KRISS/BIPM descrito aquí conserva íntegro su rol de cierre evaluado del Día 1. `practica/E15_presupuesto_hibrido.md` es un **entregable separado y adicional** del Día 2, que aplica el mismo método a evidencia propia; ninguno reemplaza al otro y cada uno se evalúa por su cuenta.
 - **Nivel de trabajo:** 100 nmol mol⁻¹.
 - **Fuentes de los datos:** resultados públicos de BIPM y KRISS. No se emplean datos operativos de organizaciones, redes o esquemas externos.
 

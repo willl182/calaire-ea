@@ -112,3 +112,5 @@ Pedir al grupo que complete oralmente tres frases: “Monte Carlo propaga…”,
 ## 6. Cierre del material avanzado opcional
 
 Monte Carlo aporta una representación numérica de la distribución de salida, mientras el marco GUM conserva su utilidad cuando sus aproximaciones son adecuadas; la validación permite comprobar esa adecuación para un caso definido. El veredicto no satisfactorio de la demostración enseña a separar estabilidad computacional de concordancia metrológica, sin proclamar un ganador universal. Este módulo no añade entregables ni requisitos al curso obligatorio, cerrado previamente con taller integrador M7.
+
+**Enlace con la práctica:** en el Día 2 de laboratorio, `practica/E16_mcm_covarianza.md` aplica este mismo procedimiento al modelo diferencial `NO2=(NOx-NO)/η`, usando la covarianza medida en `practica/E03_covarianza_no_nox.md` y la distribución de eficiencia de `practica/E04_gpt_eficiencia_convertidor.md` como entradas reales en lugar del ejemplo Beer–Lambert.

@@ -4,7 +4,7 @@
 "analizador_M4","deriva span 24h","SUPUESTO 1% de 120 ppb (spec real: 1%/mes)",1.2,"rectangular",1,Inf
 "analizador_M4","linealidad","±1% FS (200 ppb), rectangular",2,"rectangular",1,Inf
 "analizador_M4","efecto presion","0.36 ppb equivalente, SUPUESTO",0.36,"rectangular",1,Inf
-"analizador_M4","resolucion","0.1 ppb, rectangular (semiancho/2)",0.05,"rectangular",1,Inf
+"analizador_M4","resolucion","0.1 ppb, rectangular (semiancho a=0.05)",0.05,"rectangular",1,Inf
 "analizador_M4","certificado calibr.","U = 1.8 ppb, k = 2, SUPUESTO",1.8,"normal_U_k2",1,Inf
 "patron_M7","repetibilidad","s de 3 ciclos (Tipo A)",0.42,"normal_u",1,2
 "patron_M7","certificado referencia","U(X)=0.5+0.01X ppb @100 -> 1.5, k=2",1.5,"normal_U_k2",1,Inf

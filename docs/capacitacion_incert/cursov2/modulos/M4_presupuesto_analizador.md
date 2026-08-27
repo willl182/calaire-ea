@@ -166,12 +166,12 @@ p_i=100\frac{[c_i u(x_i)]^2}{u_c^2(y)}.
 1. tabla completa del caso 1, total combinado, incertidumbre expandida, clasificación matemática y clasificación de evidencia;
 2. diagrama causal de una página, con cada fila enlazada a una rama y cada vacío marcado;
 3. auditoría de procedencia y párrafo de comparación prudente con APOA-370;
-4. plan de reemplazo de tres filas por evidencia propia, por ejemplo ruido/deriva mediante precisión intermedia de QC, linealidad mediante verificación multipunto y residual, presión mediante calibración del sensor y diferencia sensor–celda, o pérdidas mediante prueba de transmisión de línea;
+4. plan de reemplazo de tres filas por evidencia propia, ejecutado en el Día 2 de laboratorio con protocolos concretos: ruido/deriva mediante `practica/E01_ruido_cero.md` y `practica/E08_deriva_cero_span.md` (E08 debe iniciarse ≥7 días antes, ver `practica/P0_agenda_dia2.md`), linealidad/falta de ajuste mediante verificación multipunto y residual en `practica/E02_verificacion_multipunto.md`, y pérdidas de línea mediante `practica/E06_transmision_linea.md`; la presión mediante calibración del sensor y diferencia sensor–celda queda documentada como vacío en `practica/E14_recorrido_documental.md` cuando no exista puerto de acceso aprobado;
 5. dos salidas conceptuales, sin recalcular: presupuesto actual bottom-up documental y futuro presupuesto híbrido con \(u_{PI}\), patrón y fuentes externas no cubiertas.
 
 Para el presupuesto híbrido use como regla: si la precisión intermedia ya contiene día, operador, recalibración, ambiente y equipo, no añada esas ramas otra vez. Documente cobertura y conserve solo mecanismos externos o no representados (QUAM cap. 7, pp. editoriales 16–25; ejemplo A4, pp. editoriales 60–71; PDF pp. 22–31 y 66–77).
 
-**Resultado esperado, en una línea:** el caso 1 ejecutado sin modificar debe dar aproximadamente \(u_c=1.75\) ppb, \(U=3.50\) ppb con \(k\approx2\) y \(W=2.9\%\), acompañado de la advertencia de que la deriva de span está mal periodizada frente al manual y tres entradas requieren una fuente adicional.
+**Resultado esperado, en una línea:** el caso 1 ejecutado sin modificar debe dar aproximadamente \(u_c=1.75\) ppb, \(U=3.50\) ppb con \(k=2\) exacto (\(gl=\infty\)) y \(W=2.9\%\), acompañado de la advertencia de que la deriva de span está mal periodizada frente al manual y tres entradas requieren una fuente adicional.
 
 ## 5 Errores frecuentes y preguntas típicas
 
@@ -205,6 +205,10 @@ u(c)=\sqrt{u_0^2+(u_r c)^2},
 \]
 
 donde \(u_0\) reúne términos absolutos como cero, ruido, resolución o residual, y \(u_r c\) reúne escala, patrón, pendiente y T/P relativas. Sin recalcular el caso 1, identifique cualitativamente qué término dominaría a 10, 120 y 180 nmol mol⁻¹. Cerca de cero suele dominar el término constante; a niveles altos, el proporcional. Fuente: QUAM App. E.5, pp. editoriales 117–120 (PDF pp. 123–126), y ejemplo A6, pp. editoriales 81–88 (PDF pp. 87–94).
+
+Para el ejercicio de esta sección, `k=2` es un valor exacto convencional (grados de libertad efectivos infinitos, `gl=Inf`), no una aproximación "≈2"; Welch–Satterthwaite queda para material avanzado cuando existan grados de libertad finitos documentados.
+
+**Enlace con la práctica:** el presupuesto híbrido cualitativo descrito aquí se calcula con datos reales en `practica/E15_presupuesto_hibrido.md`, que integra E01/E09 (u₀), E02 (u_r y residual), E06 (transmisión) y E08 (deriva) sin doble conteo. Ese experimento pertenece al Día 2 de laboratorio y es independiente del ejercicio documental de este módulo: ninguno reemplaza al otro.
 
 > **Alerta cerca de cero.** La incertidumbre relativa puede crecer sin límite útil, un intervalo simétrico puede incluir valores físicamente imposibles y detección, cuantificación, estimación y decisión no son equivalentes. El análisis numérico queda para material avanzado. Fuente: QUAM App. F, pp. editoriales 121–125 (PDF pp. 127–131).
 
