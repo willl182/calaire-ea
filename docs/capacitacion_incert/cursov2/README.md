@@ -4,6 +4,10 @@ Curso v2 para operadores de redes de calidad del aire. O₃ permanece como hilo 
 
 Desarrollado según `../plan_desarrollo_contenido.md` y diseño local `diseno_curso_v2.md`. Esta carpeta conserva adaptación para operadores; no reemplaza contenido original de `../contenido/`.
 
+## Correspondencia documental
+
+Cada sesión M1–M8 conserva su libreto principal en `modulos/` y cada unidad temporal de exposición tiene un archivo Markdown individual en `paginas/`. Los módulos funcionan como índice y contexto; las páginas contienen el texto dictable, el minutaje y los apoyos de cada página/diapositiva. No hay fuentes independientes PPT/PPTX/ODP en esta versión: el HTML es un artefacto derivado. El inventario completo, incluidas las excepciones E10/E12/E13 y M8 sin solucionario, está en [`control_documental_md.md`](control_documental_md.md).
+
 ## Estructura de dos días
 
 - **Día 1 — conceptual (obligatorio, 9 h + M8 opcional):** M1–M7 en aula, con datasets sintéticos y presupuestos documentales. Cierra con el taller evaluado M7 (caso KRISS/BIPM), que es el entregable de este día.
@@ -57,9 +61,11 @@ Secuencia QUAM transversal: **especificar, identificar, cuantificar, depurar, co
 | `plantillas/` | Presupuesto O₃ y plantilla NOx con modelo diferencial, eficiencia y covarianza |
 | `scripts/` | Demostración opcional M8 de Monte Carlo para Beer–Lambert |
 | `casos/` | Extracto BIPM.QM-K1 / KRISS 2024 para M7 (validación externa en Día 2) |
-| `modulos/` | Guiones M1–M7 obligatorios + M8 opcional (Día 1) |
+| `modulos/` | Libretos y contexto M1–M7 obligatorios + M8 opcional (Día 1); cada sección de guion enlaza sus páginas |
+| `paginas/` | 39 archivos Markdown, uno por página/diapositiva temporal del libreto M1–M8; fuente canónica de la exposición |
 | `modulos/soluciones/` | Solucionarios M1–M7; M8 es demostración sin solucionario separado |
 | `practica/` | Jornada de laboratorio Día 2: agenda (`P0_agenda_dia2.md`), un protocolo por experimento (`E0x_*.md`), hoja de registro de campo genérica y checklist de montaje y seguridad |
+| `control_documental_md.md` | Inventario de sesiones, libretos, páginas, prácticas y excepciones documentales |
 
 ## Fuentes troncales
 

@@ -24,67 +24,13 @@ Al finalizar el módulo, la persona participante podrá:
 
 ## 3. Guion de exposición con tiempos
 
-**Bloque 0–8 min — Verificación, calibración y estado encontrado.**
+El libreto de exposición está organizado en páginas/diapositivas Markdown independientes. Cada página conserva el texto dictable, el minutaje y sus apoyos; este apartado funciona como índice.
 
-Comience con una pregunta: “Si ajustamos el instrumento antes de comparar, ¿qué sabemos sobre su desempeño durante el periodo anterior?”. Recoja dos o tres respuestas y establezca la distinción. La **calibración** determina una relación entre indicaciones y valores de referencia, junto con información para interpretar el resultado. La **verificación** aporta evidencia de que se cumplen requisitos especificados. La **reverificación** comprueba que la relación previamente establecida continúa siendo válida. El **ajuste** modifica la respuesta del instrumento y, por ello, no debe confundirse con la observación independiente de su desempeño.
-
-**Apoyo en el handout:** ver *Handout teórico GUM–O₃*, §1.5 — Trazabilidad metrológica, para el papel del patrón de transferencia dentro de la cadena.
-
-Un patrón de transferencia lleva un valor de referencia desde un sistema de mayor jerarquía hasta otro instrumento o lugar. Su utilidad depende de una relación documentada, de una incertidumbre adecuada al propósito y de la estabilidad entre calibraciones. Un certificado vigente no elimina la necesidad de controlar lo ocurrido desde su emisión.
-
-Lea y explique esta cita exacta: “A candidate transfer standard must pass all the requirements below before being used for O3 measurement activities.” La frase exige evidencia previa y criterios, no confianza basada únicamente en que el equipo entrega valores plausibles (USEPA, *Transfer Standards for the Calibration of Air Monitoring Analyzers for Ozone*, P1016Y93, §4.1, p. física 33).
-
-**Bloque 8–18 min — Diseño de una comparación multipunto.**
-
-Explique que un diseño útil separa **nivel**, **ciclo** y **tiempo**. Cada ciclo incluye el cero y varios niveles distribuidos en el intervalo de uso. El cero identifica desplazamientos aditivos; los niveles bajos permiten evaluar diferencias absolutas; los niveles medios sostienen la estimación de la relación; y los niveles altos revelan diferencias proporcionales o curvatura. Repetir ciclos permite distinguir estabilidad de una secuencia aislada.
-
-P1016Y93 establece para la verificación un mínimo de tres ciclos estables, cada uno con cero y al menos seis concentraciones superiores a cero. Su apéndice indica exactamente: “A verification consists of three (3) testing cycles (performed independently) in which the candidate standard’s measurements are compared to those of the bench standard” (P1016Y93, §4.4.1 y App. A, pp. físicas 37 y 59).
-
-Presente los controles del montaje: calentamiento, acondicionamiento de líneas, aire cero, longitud y material de tubería, ausencia de fugas, flujo excedente, presión, temperatura y criterio de estabilidad. CARB advierte: “Incorrect venting of bypass flow will affect the total flow presented to the station and may introduce ambient air into the test path” (CARB, v5, App. C, §C.7.2, p. física 12). Una discrepancia puede originarse en el patrón, el equipo evaluado o la instalación; no debe atribuirse automáticamente a uno de ellos.
-
-La pertinencia de datos de desempeño depende del intervalo, matriz o composición, T/P/humedad, operadores y días, equipos, mantenimiento y recalibración, estabilidad del patrón y procedimiento de cálculo. Una dispersión pequeña obtenida en un único día no representa precisión intermedia anual. Esta revisión aplica QUAM cap. 7, pp. editoriales 16–25 (PDF pp. 22–31).
-
-El registro mínimo por punto comprende fecha y hora, ciclo, nivel nominal, indicaciones de referencia y equipo evaluado, temperatura, presión, flujo, configuración, tiempo de estabilización e incidencias. El SOP de calibradores aporta una regla operativa: “It is recommended to wait for a good stability (less than 1 ppb change in 5 minutes) before calibrating the point instead of calibrating the point consecutively until the point becomes stable” (USEPA, *SOP for Calibrators*, §12.3.3.1.7, p. física 10). La cifra pertenece a ese procedimiento; el principio transferible consiste en demostrar estabilidad antes de registrar o ajustar.
-
-**Bloque 18–28 min — Corrección por certificado, regresión y residuos.**
-
-Muestre que la indicación de la referencia no siempre es el valor que debe usarse como eje de comparación. Si el certificado simulado define
-
-\[
-X=\frac{I_{ref}-b}{m},
-\]
-
-primero se corrige la indicación \(I_{ref}\), y después se compara el equipo evaluado con \(X\). Los datos originales nunca se sobrescriben. Deben existir columnas distintas para indicación, valor corregido, diferencia y resultado de la regresión.
-
-Para cada ciclo se ajusta
-
-\[
-y_i=b_0+m_0X_i+e_i,
-\]
-
-donde \(m_0\) es la pendiente, \(b_0\) el intercepto y \(e_i\) el residuo. Una pendiente diferente de uno sugiere un efecto proporcional. Un intercepto diferente de cero sugiere un efecto aditivo. El residuo muestra la parte que la recta no explica: un patrón curvo puede revelar falta de ajuste; una tendencia con el orden temporal puede indicar deriva o estabilización incompleta; un punto aislado exige revisar el registro antes de excluirlo.
-
-**Apoyo en el handout:** ver *Handout teórico GUM–O₃*, §2.1 — Media, desviación estándar e incertidumbre de la media, para interpretar la dispersión de los residuos, y §2.4 — Autocorrelación y tamaño de muestra efectivo, si las lecturas por punto proceden de series promediadas.
-
-P1016Y93 describe el ajuste así: “an ordinary least squares linear regression line is fitted to data from all concentration test points to predict the measurement from the candidate transfer standard as a simple linear function of the measurement from the standard of higher authority” (P1016Y93, App. A, §A3, p. física 61). Aclare que la regresión del ejercicio sigue ese procedimiento. Una evaluación metrológica más amplia puede requerir incertidumbre en ambos ejes y covarianzas compartidas.
-
-QUAM App. E.4 señala que la incertidumbre de una concentración predicha depende de dispersión residual, pendiente, número de réplicas, número de puntos y posición respecto del centro de calibración. \(R^2\) no cuantifica por sí solo incertidumbre. OLS presupone una estructura de errores que debe declararse; si el eje de referencia posee incertidumbre relevante puede requerirse otro modelo (QUAM App. E.4, pp. editoriales 115–116; PDF pp. 121–122).
-
-Distinga cobertura: el residual informa falta de ajuste y precisión local; la dispersión de pendientes e interceptos entre ciclos informa estabilidad corta de la función; y la incertidumbre del valor de referencia no queda incluida automáticamente en el residual.
-
-No use el coeficiente de determinación como única prueba. Una relación casi perfectamente lineal puede conservar una pendiente inaceptable, un intercepto importante o diferencias por punto fuera del límite. La decisión se toma con todos los requisitos declarados.
-
-**Bloque 28–38 min — Estabilidad, deriva y decisión de ajustar.**
-
-Compare tres escalas temporales: variación dentro de un punto, diferencias entre ciclos y cambio entre verificaciones separadas. La deriva puede actuar sobre cero, pendiente, dispersión o varios elementos a la vez. La desviación estándar de las pendientes y de los interceptos entre ciclos proporciona una comprobación sencilla de estabilidad durante la verificación, pero no sustituye la historia de calibraciones.
-
-**Apoyo en el handout:** ver *Handout teórico GUM–O₃*, §2.1 — Media, desviación estándar e incertidumbre de la media, para el cálculo de la desviación estándar de pendientes e interceptos entre ciclos, y §2.2 — Grados de libertad, por el número reducido de ciclos.
-
-JCGM GUM-6 declara: “Whenever the standard is used, it is necessary to update its value and standard uncertainty reflecting the possible change in the measurement standard since it was last calibrated” (JCGM GUM-6:2020, §10.6.1). La historia temporal puede justificar un modelo de deriva y una predicción al tiempo de uso; esa predicción también posee incertidumbre y puede constituir extrapolación.
-
-Use enfoque híbrido de QUAM: QC histórico puede estimar precisión intermedia; auditorías o comparaciones independientes pueden estimar sesgo; incertidumbre del patrón, pérdidas de línea y ramas no cubiertas se añaden aparte. Una prueba de sesgo no significativa no demuestra sesgo cero. Fuente: QUAM §§7.7–7.9, pp. editoriales 18–22 (PDF pp. 24–28), y ejemplo A4, pp. editoriales 60–71 (PDF pp. 66–77).
-
-Explique por qué ajustar con frecuencia puede empeorar la evidencia. La USEPA señala: “Performing frequent adjustments to provide the ‘most accurate data possible’ can sometimes be self-defeating and result in additional measurement uncertainty” (*Quality Assurance Handbook*, vol. II, §12.4). Si una verificación cumple, se conserva el estado y se documenta. Si falla, primero se revisan referencia, certificado, aire cero, tubería, flujo, presión, temperatura, estabilización, factores internos y mantenimiento. Solo después se decide repetir, reparar, ajustar o recalibrar conforme al procedimiento autorizado.
+1. [M5 — Página 01 — Bloque 0–8 min — Verificación, calibración y estado encontrado.](../paginas/M5_01_bloque_08_min_verificacion_calibracion_y_estado_encontrado.md)
+2. [M5 — Página 02 — Bloque 8–18 min — Diseño de una comparación multipunto.](../paginas/M5_02_bloque_818_min_diseno_de_una_comparacion_multipunto.md)
+3. [M5 — Página 03 — Bloque 18–28 min — Corrección por certificado, regresión y residuos.](../paginas/M5_03_bloque_1828_min_correccion_por_certificado_regresion_y_residuos.md)
+4. [M5 — Página 04 — Bloque 28–38 min — Estabilidad, deriva y decisión de ajustar.](../paginas/M5_04_bloque_2838_min_estabilidad_deriva_y_decision_de_ajustar.md)
+5. [M5 — Página 05 — Bloque 60–68 min — Puesta en común y síntesis posterior al ejercicio.](../paginas/M5_05_bloque_6068_min_puesta_en_comun_y_sintesis_posterior_al_ejercicio.md)
 
 ## 4. Ejercicio/actividad
 

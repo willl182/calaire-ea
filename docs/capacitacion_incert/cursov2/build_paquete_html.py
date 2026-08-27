@@ -36,6 +36,48 @@ MODULES = [
     ("m7", "M7 Taller integrador", BASE_DIR / "modulos/M7_taller.md"),
     ("m8", "M8 Monte Carlo (opcional)", BASE_DIR / "modulos/M8_opcional_monte_carlo.md"),
 ]
+PAGES = [
+    ("m1", "m1-p01", BASE_DIR / "paginas/M1_01_3_1_que_significa_trazabilidad_0_a_4_min.md"),
+    ("m1", "m1-p02", BASE_DIR / "paginas/M1_02_3_2_por_que_el_ozono_exige_generacion_dinamica_4_a_9_min.md"),
+    ("m1", "m1-p03", BASE_DIR / "paginas/M1_03_3_3_la_cadena_documentada_e_ininterrumpida_9_a_14_min.md"),
+    ("m1", "m1-p04", BASE_DIR / "paginas/M1_04_3_4_jerarquia_srp_patrones_de_transferencia_y_analizador_14_a_20_min.md"),
+    ("m1", "m1-p05", BASE_DIR / "paginas/M1_05_3_5_tres_incertidumbres_que_no_deben_confundirse_20_a_27_min.md"),
+    ("m2", "m2-p01", BASE_DIR / "paginas/M2_01_3_1_subbloque_1_de_la_absorcion_uv_al_mensurando_010_min_acumulado_10_min.md"),
+    ("m2", "m2-p02", BASE_DIR / "paginas/M2_02_3_2_subbloque_2_modelo_de_fraccion_molar_y_condiciones_fisicas_1021_min_acumulado_21_min.md"),
+    ("m2", "m2-p03", BASE_DIR / "paginas/M2_03_3_3_subbloque_3_coeficientes_de_sensibilidad_2129_min_acumulado_29_min.md"),
+    ("m2", "m2-p04", BASE_DIR / "paginas/M2_04_3_4_subbloque_4_fuentes_fisicas_y_componentes_constantes_o_proporcionales_2936_min_acumulado_36_min.md"),
+    ("m3", "m3-p01", BASE_DIR / "paginas/M3_01_3_1_tipo_a_y_tipo_b_0_00_a_0_09_acumulado_0_09_9_min.md"),
+    ("m3", "m3-p02", BASE_DIR / "paginas/M3_02_3_2_tipo_a_que_representan_s_y_s_sqrt_n_0_09_a_0_18_acumulado_0_18_9_min.md"),
+    ("m3", "m3-p03", BASE_DIR / "paginas/M3_03_3_3_tipo_b_y_pdfs_que_reaparecen_en_el_curso_0_18_a_0_29_acumulado_0_29_11_min.md"),
+    ("m3", "m3-p04", BASE_DIR / "paginas/M3_04_3_4_contribuciones_combinacion_cuadratica_y_doble_conteo_0_29_a_0_38_acumulado_0_38_9_min.md"),
+    ("m4", "m4-p01", BASE_DIR / "paginas/M4_01_3_0_del_proceso_al_presupuesto_0_00_a_0_06_acumulado_0_06_6_min.md"),
+    ("m4", "m4-p02", BASE_DIR / "paginas/M4_02_3_1_del_dato_documental_a_la_fila_del_presupuesto_0_06_a_0_16_acumulado_0_16_10_min.md"),
+    ("m4", "m4-p03", BASE_DIR / "paginas/M4_03_3_2_combinacion_clasificacion_y_doble_conteo_0_16_a_0_26_acumulado_0_26_10_min.md"),
+    ("m4", "m4-p04", BASE_DIR / "paginas/M4_04_3_3_lectura_critica_del_thermo_49i_0_26_a_0_35_acumulado_0_35_9_min.md"),
+    ("m4", "m4-p05", BASE_DIR / "paginas/M4_05_3_4_comparacion_con_apoa_370_y_presupuestos_de_laboratorio_campo_0_35_a_0_43_acumulado_0_43_8_min.md"),
+    ("m5", "m5-p01", BASE_DIR / "paginas/M5_01_bloque_08_min_verificacion_calibracion_y_estado_encontrado.md"),
+    ("m5", "m5-p02", BASE_DIR / "paginas/M5_02_bloque_818_min_diseno_de_una_comparacion_multipunto.md"),
+    ("m5", "m5-p03", BASE_DIR / "paginas/M5_03_bloque_1828_min_correccion_por_certificado_regresion_y_residuos.md"),
+    ("m5", "m5-p04", BASE_DIR / "paginas/M5_04_bloque_2838_min_estabilidad_deriva_y_decision_de_ajustar.md"),
+    ("m5", "m5-p05", BASE_DIR / "paginas/M5_05_bloque_6068_min_puesta_en_comun_y_sintesis_posterior_al_ejercicio.md"),
+    ("m6", "m6-p01", BASE_DIR / "paginas/M6_01_3_1_que_mide_analizador_nox_0_00_a_0_12_acumulado_0_12_12_min.md"),
+    ("m6", "m6-p02", BASE_DIR / "paginas/M6_02_3_2_modelo_convertidor_y_covarianza_0_12_a_0_27_acumulado_0_27_15_min.md"),
+    ("m6", "m6-p03", BASE_DIR / "paginas/M6_03_3_3_fuentes_especificas_0_27_a_0_47_acumulado_0_47_20_min.md"),
+    ("m6", "m6-p04", BASE_DIR / "paginas/M6_04_3_4_presupuesto_informativo_en_14211_0_47_a_1_02_acumulado_1_02_15_min.md"),
+    ("m7", "m7-p01", BASE_DIR / "paginas/M7_01_bloque_1_encuadre_del_caso_y_flujo_maestro_010_min_acumulado_10_min.md"),
+    ("m7", "m7-p02", BASE_DIR / "paginas/M7_02_bloque_2_mensurando_y_modelo_1020_min_acumulado_20_min.md"),
+    ("m7", "m7-p03", BASE_DIR / "paginas/M7_03_bloque_3_presupuesto_fotometrico_de_bipm_srp27_2034_min_acumulado_34_min.md"),
+    ("m7", "m7-p04", BASE_DIR / "paginas/M7_04_bloque_4_covarianza_y_cobertura_3448_min_acumulado_48_min.md"),
+    ("m7", "m7-p05", BASE_DIR / "paginas/M7_05_bloque_5_trabajo_de_equipos_4872_min_acumulado_72_min.md"),
+    ("m7", "m7-p06", BASE_DIR / "paginas/M7_06_bloque_6_revision_cruzada_y_cierre_7285_min_acumulado_85_min.md"),
+    ("m8", "m8-p01", BASE_DIR / "paginas/M8_01_0_000_03_apertura_y_proposito_3_min_acumulado_3_min.md"),
+    ("m8", "m8-p02", BASE_DIR / "paginas/M8_02_0_030_08_procedimiento_de_propagacion_5_min_acumulado_8_min.md"),
+    ("m8", "m8-p03", BASE_DIR / "paginas/M8_03_0_080_13_numero_de_ensayos_estabilidad_y_tolerancia_5_min_acumulado_13_min.md"),
+    ("m8", "m8-p04", BASE_DIR / "paginas/M8_04_0_130_23_demostracion_en_vivo_10_min_acumulado_23_min.md"),
+    ("m8", "m8-p05", BASE_DIR / "paginas/M8_05_0_230_26_interpretacion_metrologica_3_min_acumulado_26_min.md"),
+    ("m8", "m8-p06", BASE_DIR / "paginas/M8_06_0_260_30_sintesis_y_enlace_4_min_acumulado_30_min.md"),
+]
+CONTROL_DOC = BASE_DIR / "control_documental_md.md"
 PRACTICE = [
     ("p0", "P0 Agenda del Día 2", BASE_DIR / "practica/P0_agenda_dia2.md"),
     ("e01", "E01 Ruido y repetibilidad de cero", BASE_DIR / "practica/E01_ruido_cero.md"),
@@ -253,11 +295,50 @@ def source_block(title: str, body: str, block_id: str | None = None) -> str:
     return f'<article class="source-block"{id_attr}><h3>{html.escape(title)}</h3>{body}</article>'
 
 
+def page_label(path: Path) -> str:
+    first_line = path.read_text(encoding="utf-8").splitlines()[0]
+    if not first_line.startswith("# "):
+        raise ValueError(f"Página sin título Markdown: {path}")
+    return first_line[2:].strip()
+
+
+def page_link_map() -> dict[str, str]:
+    return {path.name: f"#guion-{page_id}" for _, page_id, path in PAGES}
+
+
+def rewrite_page_links(fragment: str) -> str:
+    for filename, anchor in page_link_map().items():
+        fragment = fragment.replace(f'href="../paginas/{filename}"', f'href="{anchor}"')
+    return fragment
+
+
+def validate_pages() -> None:
+    page_ids = [page_id for _, page_id, _ in PAGES]
+    page_paths = [path for _, _, path in PAGES]
+    if len(page_ids) != len(set(page_ids)):
+        raise ValueError("Hay identificadores de páginas duplicados")
+    if len(page_paths) != len(set(page_paths)):
+        raise ValueError("Hay rutas de páginas duplicadas")
+    declared_modules = {module_id for module_id, _, _ in MODULES}
+    for module_id, page_id, path in PAGES:
+        if module_id not in declared_modules:
+            raise ValueError(f"Página {page_id} referencia módulo inexistente: {module_id}")
+        if path.suffix.lower() != ".md":
+            raise ValueError(f"La página {page_id} no es Markdown: {path}")
+        if not path.is_file():
+            raise FileNotFoundError(f"Falta página declarada: {path}")
+        if "## Libreto" not in path.read_text(encoding="utf-8"):
+            raise ValueError(f"Página sin sección Libreto: {path}")
+
+
 def build() -> tuple[str, int, int, int, int]:
+    validate_pages()
     required = [
         DESIGN,
+        CONTROL_DOC,
         *(path for _, path in HANDOUTS),
         *(path for _, _, path in MODULES),
+        *(path for _, _, path in PAGES),
         *(path for _, _, path in PRACTICE),
         *(path for _, path in SOLUTIONS),
         DATASET_METADATA,
@@ -308,9 +389,28 @@ def build() -> tuple[str, int, int, int, int]:
         handout_headings.append((block_id, title))
     handout = section("handout", "Handouts O₃ y NOx", "".join(handout_blocks))
 
+    pages_by_module: dict[str, list[tuple[str, Path]]] = {module_id: [] for module_id, _, _ in MODULES}
+    for module_id, page_id, path in PAGES:
+        pages_by_module[module_id].append((page_id, path))
     module_blocks = []
     for module_id, title, path in MODULES:
-        module_blocks.append(source_block(f"Guion {title}", pandoc_fragment(path, f"guion-{module_id}-"), f"guion-{module_id}"))
+        module_fragment = rewrite_page_links(pandoc_fragment(path, f"guion-{module_id}-"))
+        page_fragments = []
+        for page_id, page_path in pages_by_module[module_id]:
+            page_fragments.append(
+                source_block(
+                    page_label(page_path),
+                    pandoc_fragment(page_path, f"guion-{page_id}-"),
+                    f"guion-{page_id}",
+                )
+            )
+        module_blocks.append(
+            source_block(
+                f"Guion {title}",
+                module_fragment + "".join(page_fragments),
+                f"guion-{module_id}",
+            )
+        )
     modules = section("guiones", "Guiones M1–M7 obligatorios + M8 opcional", "".join(module_blocks))
 
     practice_blocks = []
@@ -429,6 +529,7 @@ def build() -> tuple[str, int, int, int, int]:
     reproducibility = section("reproducibilidad", "Apéndice de reproducibilidad", reproducibility_body)
 
     guiones_nav = [(f"guion-{module_id}", title) for module_id, title, _ in MODULES]
+    guiones_nav.extend((f"guion-{page_id}", page_label(path)) for _, page_id, path in PAGES)
     practica_nav = [(f"practica-{practice_id}", title) for practice_id, title, _ in PRACTICE]
     subnav_map = {
         "diseno-curso": design_headings,
@@ -520,6 +621,9 @@ def validate(document: str, dataset_rows: int, nox_gpt_rows: int, nox_line_rows:
     for module_id, title, _ in MODULES:
         if f'id="guion-{module_id}"' not in document:
             raise ValueError(f"Falta guion {title}")
+    for _, page_id, path in PAGES:
+        if f'id="guion-{page_id}"' not in document:
+            raise ValueError(f"Falta página {path.name}")
     for practice_id, title, _ in PRACTICE:
         if f'id="practica-{practice_id}"' not in document:
             raise ValueError(f"Falta práctica {title}")

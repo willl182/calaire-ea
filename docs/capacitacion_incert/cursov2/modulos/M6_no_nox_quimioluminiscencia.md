@@ -40,102 +40,14 @@ Al finalizar, participante podrá:
 9. diagnosticar eficiencia GPT y formación NO₂ en línea;
 10. proponer controles operativos defendibles.
 
-## 3 Guion de exposición con tiempos
+## 3. Guion de exposición con tiempos
 
-### 3.1 Qué mide analizador NOx — 0:00 a 0:12; acumulado 0:12 (12 min)
+El libreto de exposición está organizado en páginas/diapositivas Markdown independientes. Cada página conserva el texto dictable, el minutaje y sus apoyos; este apartado funciona como índice.
 
-**Idea fuerza:** detector responde a NO; NO₂ depende de conversión y diferencia.
-
-Reacciones:
-
-\[
-\mathrm{NO+O_3\rightarrow NO_2^*+O_2},\qquad
-\mathrm{NO_2^*\rightarrow NO_2+h\nu}.
-\]
-
-Emisión ocupa región amplia del infrarrojo cercano, con máximo aproximado cercano a 1200 nm. Ruta incluye cámara con exceso de O₃, filtro óptico, detector, bomba, orificios y control de presión/flujo.
-
-Canal NO mide muestra sin convertir. Canal NOₓ conduce muestra por convertidor NO₂→NO y mide NO original más fracción convertida. Equipos pueden conmutar rutas o usar canales paralelos. No describir NO₂ como lectura directa.
-
-**Pregunta de control:** si canal NOₓ marca 205 y canal NO marca 200 nmol/mol, ¿qué señal pequeña determina NO₂? Diferencia de 5 nmol/mol; incertidumbres absolutas de ambos canales importan.
-
-### 3.2 Modelo, convertidor y covarianza — 0:12 a 0:27; acumulado 0:27 (15 min)
-
-Modelo mínimo:
-
-\[
-c_{NO_2}=c_{NO_x}-c_{NO}.
-\]
-
-Modelo didáctico corregido:
-
-\[
-c_{NO_2}=\frac{c_{NO_x}-c_{NO}}{\eta_c}.
-\]
-
-Antes de aplicarlo, verificar arquitectura y software: si instrumento ya corrige eficiencia, dividir otra vez genera doble corrección.
-
-Coeficientes de sensibilidad:
-
-\[
-c_{NO_x}=1/\eta_c,\quad c_{NO}=-1/\eta_c,\quad
-c_{\eta}=-\frac{c_{NO_x}-c_{NO}}{\eta_c^2}.
-\]
-
-Propagación:
-
-\[
-u^2(c_{NO_2})=\frac{u^2(c_{NO_x})+u^2(c_{NO})-2\operatorname{cov}(c_{NO_x},c_{NO})}{\eta_c^2}
-+\left(\frac{c_{NO_x}-c_{NO}}{\eta_c^2}\right)^2u^2(\eta_c).
-\]
-
-Covarianza positiva reduce varianza de diferencia porque coeficientes de canales tienen signos opuestos. No asumir independencia ni correlación sin evidencia.
-
-- **Eficiencia:** fracción de NO₂ convertida.
-- **Selectividad:** capacidad de evitar respuesta por HNO₃, HONO, PAN, NH₃ y otros NOy.
-- **Estabilidad:** cambio con temperatura, edad, contaminación y matriz.
-
-EN 14211:2012 distingue capacidad mínima de convertidor, criterio de aprobación y corrección en intervalo intermedio; verificar cláusula y edición aplicables antes de convertir esos valores en regla local. Método EPA de 2002 usa criterio histórico distinto; no mezclar contextos.
-
-### 3.3 Fuentes específicas — 0:27 a 0:47; acumulado 0:47 (20 min)
-
-Construya diagrama causa–efecto con seis ramas:
-
-1. **Detector y canales:** repetibilidad, resolución, sincronización, respuesta, falta de ajuste, rutas, reproducibilidad.
-2. **Convertidor:** eficiencia, incertidumbre, concentración, temperatura, selectividad, envejecimiento, corrección automática.
-3. **Calibración y GPT:** certificado y estabilidad de NO, impureza NO₂, caudales, presión/temperatura, O₃, aire cero, residencia, regresión.
-4. **Interferencias y matriz:** NOy convertibles, quenching por H₂O/CO₂, condensación, memoria y ensayos de tipo.
-5. **Muestreo:** pérdidas en línea/filtro, reacción NO–O₃ previa, material, volumen, caudal, residencia, suciedad y caída de presión.
-6. **Ambiente y operación:** presión, temperatura, tensión, caudales, vacío, bomba, deriva y disponibilidad.
-
-EN 14211 reconoce pérdidas y formación NO₂ en muestreo, pero ejemplo informativo no cuantifica toda fuente física. “Reconocida” no significa “incluida”. Doval Miñarro et al. (2011) muestra dependencia del artefacto con NO, O₃, temperatura y residencia; usar mecanismo para diseñar controles, no copiar umbral como criterio universal.
-
-### 3.4 Presupuesto informativo EN 14211 — 0:47 a 1:02; acumulado 1:02 (15 min)
-
-Anexo F de BS EN 14211:2012 es informativo. Ejemplo a límite horario de NO₂:
-
-\[
-l_h=104\ \mathrm{nmol/mol}.
-\]
-
-Verificación directa contra PDF, Anexo F, ejemplo F.4:
-
-- suma de varianzas publicada: 30.4 (nmol/mol)²;
-- incertidumbre combinada publicada: 5.5 nmol/mol;
-- con factor de cobertura 2, incertidumbre expandida absoluta reconstruida: 11.0 nmol/mol;
-- incertidumbre expandida relativa publicada: 10.6 %.
-
-\[
-W=100\frac{2(5.5)}{104}=10.6\%\text{, redondeado}.
-\]
-
-Para interferentes distintos de H₂O, EN 14211/EN ISO 14956 agrupa por signo: se suman por separado las respuestas positivas y negativas y se toma el grupo de mayor magnitud; H₂O se trata aparte. En el ejemplo, el valor 0.35 nmol/mol queda dominado por NH₃.
-
-Valores estándar principales, parafraseados del ejemplo: repetibilidad cero (dos filas) 0.00 y 0.00; repetibilidad a concentración 0.09; falta de ajuste 0.90; presión de muestra 0.06; temperatura de muestra 0.26; entorno 0.44; tensión 0.02; H₂O 0.249; otros interferentes 0.35; promediación 2.70; reproducibilidad de campo 3.22; deriva cero 0.58; deriva span 1.44; diferencia muestra/calibración 1.04; convertidor 2.08; gas de calibración 2.08; gas cero 0.60 nmol/mol — 18 filas en total, coherentes con `plantillas/plantilla_presupuesto_nox.R`.
-
-> **Nota de reconstrucción (defecto D1):** la suma de estas 18 filas redondeadas da `Σu_i²=31.4306 (nmol/mol)²` y `u_c=5.606 nmol/mol`, que **no** reproduce exactamente la suma publicada `30.4 (nmol/mol)²` ni `u_c=5.5 nmol/mol` del ejemplo EN 14211 (diferencia ≈3.4 % en varianza, por redondeo y reconstrucción). Ambos valores se reportan por separado; no se presenta 5.606 como reproducción exacta del total normativo. Ver comentario en `plantillas/plantilla_presupuesto_nox.R`.
-
-Dominan reproducibilidad, promediación, convertidor y gas de calibración. Reducir contribuciones diminutas no mejora total de forma material. Comparación con 15 % solo corresponde al contexto europeo indicado; no presentarla como criterio colombiano universal.
+1. [M6 — Página 01 — 3.1 Qué mide analizador NOx — 0:00 a 0:12; acumulado 0:12 (12 min)](../paginas/M6_01_3_1_que_mide_analizador_nox_0_00_a_0_12_acumulado_0_12_12_min.md)
+2. [M6 — Página 02 — 3.2 Modelo, convertidor y covarianza — 0:12 a 0:27; acumulado 0:27 (15 min)](../paginas/M6_02_3_2_modelo_convertidor_y_covarianza_0_12_a_0_27_acumulado_0_27_15_min.md)
+3. [M6 — Página 03 — 3.3 Fuentes específicas — 0:27 a 0:47; acumulado 0:47 (20 min)](../paginas/M6_03_3_3_fuentes_especificas_0_27_a_0_47_acumulado_0_47_20_min.md)
+4. [M6 — Página 04 — 3.4 Presupuesto informativo EN 14211 — 0:47 a 1:02; acumulado 1:02 (15 min)](../paginas/M6_04_3_4_presupuesto_informativo_en_14211_0_47_a_1_02_acumulado_1_02_15_min.md)
 
 ## 4 Ejercicio/actividad — 1:02 a 1:22; acumulado 1:22 (20 min)
 
