@@ -1237,3 +1237,29 @@
 [2026-08-26 21:54:46] [--------] [info ] [gin_logger.go:102] 200 |          48ms |       127.0.0.1 | GET     "/v0/management/auth-files"
 [2026-08-26 21:58:46] [--------] [info ] [gin_logger.go:102] 200 |          48ms |       127.0.0.1 | GET     "/v0/management/auth-files"
 [2026-08-26 22:02:46] [--------] [info ] [gin_logger.go:102] 200 |          48ms |       127.0.0.1 | GET     "/v0/management/auth-files"
+[2026-08-27 13:53:48] [--------] [info ] [main.go:529] CLIProxyAPI Version: 7.2.81, Commit: 106270be, BuiltAt: 2026-07-16T19:51:03Z
+[2026-08-27 13:53:48] [--------] [info ] [antigravity_version.go:58] periodic antigravity version refresh started (interval=3h0m0s)
+[2026-08-27 13:53:48] [--------] [info ] [server.go:805] management routes registered after secret key configuration
+[2026-08-27 13:53:48] [--------] [info ] [model_updater.go:137] startup model refresh completed from https://raw.githubusercontent.com/router-for-me/models/refs/heads/main/models.json, changes detected for providers: [claude gemini vertex aistudio codex kimi antigravity xai]
+[2026-08-27 13:53:48] [--------] [info ] [model_updater.go:91] periodic model refresh started (interval=3h0m0s)
+[2026-08-27 13:53:49] [--------] [info ] [codex_client_models_updater.go:63] startup Codex client model refresh completed from https://raw.githubusercontent.com/router-for-me/models/refs/heads/main/codex_client_models.json, catalog updated
+[2026-08-27 13:53:49] [--------] [info ] [codex_client_models_updater.go:36] periodic Codex client model refresh started (interval=3h0m0s)
+[2026-08-27 13:53:49] [--------] [info ] [antigravity_version.go:83] fetched latest antigravity version version=2.11.0
+[2026-08-27 13:53:50] [--------] [info ] [clients.go:149] full client load complete - 5 clients (4 auth files + 0 Gemini API keys + 0 Vertex API keys + 0 Claude API keys + 0 Codex keys + 0 xAI keys + 1 OpenAI-compat)
+[2026-08-27 13:53:50] [--------] [info ] [service.go:1761] file watcher started for config and auth directory changes
+[2026-08-27 13:53:53] [--------] [warn ] [gin_logger.go:100] 404 |           5ms |       127.0.0.1 | HEAD    "/api/hello"
+[2026-08-27 13:53:58] [--------] [info ] [updater.go:285] management asset updated successfully (hash=769b154ba9c8c8b92d3eefd0cb9bb6271307f68f04e583002696527acf87ad86)
+[2026-08-27 13:54:08] [564a00de] [info ] [gin_logger.go:102] 200 |        3.356s |       127.0.0.1 | POST    "/v1/messages?beta=true"
+[2026-08-27 13:54:10] [b08bfd96] [info ] [gin_logger.go:102] 200 |        5.411s |       127.0.0.1 | POST    "/v1/messages?beta=true"
+[2026-08-27 13:54:16] [2d53d851] [info ] [gin_logger.go:102] 200 |        5.544s |       127.0.0.1 | POST    "/v1/messages?beta=true"
+[2026-08-27 13:54:21] [58d33469] [info ] [gin_logger.go:102] 200 |        5.517s |       127.0.0.1 | POST    "/v1/messages?beta=true"
+[2026-08-27 13:54:27] [bc3ead9d] [info ] [gin_logger.go:102] 200 |        5.241s |       127.0.0.1 | POST    "/v1/messages?beta=true"
+[2026-08-27 13:54:27] [--------] [info ] [service.go:423] re-registered models for 4 auth(s) due to model catalog changes: [claude gemini vertex aistudio codex kimi antigravity xai]
+[2026-08-27 13:54:27] [--------] [info ] [service.go:1771] core auth auto-refresh started (interval=15m0s)
+[2026-08-27 13:54:28] [--------] [info ] [events.go:125] auth file changed (WRITE): xai-wrsalasc182@gmail.com.json, processing incrementally
+[2026-08-27 13:54:28] [--------] [info ] [events.go:125] auth file changed (WRITE): claude-wrsalasc182@gmail.com.json, processing incrementally
+[2026-08-27 13:54:29] [--------] [info ] [events.go:125] auth file changed (WRITE): antigravity-wrsalasc182@gmail.com.json, processing incrementally
+[2026-08-27 13:54:33] [4a253b88] [info ] [gin_logger.go:102] 200 |        6.334s |       127.0.0.1 | POST    "/v1/messages?beta=true"
+[2026-08-27 13:56:38] [1f21c6dc] [info ] [gin_logger.go:102] 200 |        5.536s |       127.0.0.1 | POST    "/v1/messages?beta=true"
+[2026-08-27 13:56:45] [0b71d081] [info ] [gin_logger.go:102] 200 |        4.602s |       127.0.0.1 | POST    "/v1/messages?beta=true"
+[2026-08-27 14:01:51] [3c4351b7] [info ] [gin_logger.go:102] 200 |        6.253s |       127.0.0.1 | POST    "/v1/messages?beta=true"
