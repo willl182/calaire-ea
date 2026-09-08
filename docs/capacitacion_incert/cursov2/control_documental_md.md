@@ -88,11 +88,11 @@ Este inventario verifica la correspondencia entre sesiones, páginas/diapositiva
 5. [`paginas/M8_05_0_230_26_interpretacion_metrologica_3_min_acumulado_26_min.md`](paginas/M8_05_0_230_26_interpretacion_metrologica_3_min_acumulado_26_min.md)
 6. [`paginas/M8_06_0_260_30_sintesis_y_enlace_4_min_acumulado_30_min.md`](paginas/M8_06_0_260_30_sintesis_y_enlace_4_min_acumulado_30_min.md)
 
-## Prácticas del Día 2
+## Práctica de laboratorio (contenido aparte del curso de 9 h)
 
 | Unidad | Archivo Markdown | Estado |
 |---|---|---|
-| Agenda | [`practica/P0_agenda_dia2.md`](practica/P0_agenda_dia2.md) | Completo |
+| Agenda | [`practica/P0_agenda_practica.md`](practica/P0_agenda_practica.md) | Completo |
 | E01 | [`practica/E01_ruido_cero.md`](practica/E01_ruido_cero.md) | Protocolo |
 | E02 | [`practica/E02_verificacion_multipunto.md`](practica/E02_verificacion_multipunto.md) | Protocolo |
 | E03 | [`practica/E03_covarianza_no_nox.md`](practica/E03_covarianza_no_nox.md) | Protocolo |

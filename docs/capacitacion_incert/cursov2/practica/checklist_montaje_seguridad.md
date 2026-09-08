@@ -1,4 +1,4 @@
-# Checklist de montaje y seguridad — jornada de laboratorio Día 2
+# Checklist de montaje y seguridad — práctica de laboratorio
 
 Aplica a todos los experimentos E01–E16. Cada equipo lo completa antes de generar O₃ o abrir el cilindro de NO, y lo repite si cambia el montaje.
 

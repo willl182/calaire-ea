@@ -5,21 +5,21 @@ Fuente: dos revisiones Opus 5 del curso `docs/capacitacion_incert/cursov2/` y co
 ## Diagnóstico
 - Las 8 actividades del curso son de escritorio; ninguna toca instrumento. Datasets M5 y M6 sintéticos.
 - M4 ya redacta el "plan de reemplazo de filas documentales por evidencia propia" pero nunca lo ejecuta: es el esqueleto de la práctica.
-- Estructura horaria (462 min obligatorios) no admite práctica: se añade **Día 2 de laboratorio (6–8 h)**. M7 (entregable evaluado) migra a presupuesto del equipo propio; caso KRISS queda como validación externa/contraste.
+- Estructura horaria del curso (462 min obligatorios dentro de 9 h) no admite práctica instrumental: la práctica se desarrolla como **contenido de laboratorio aparte del curso**. M7 conserva su entregable evaluado con el caso KRISS; la práctica aporta su propio entregable (presupuesto del equipo propio).
 - Instrumentos disponibles (contexto red calidad del aire): analizador O3 UV, analizador NOx quimioluminiscencia con convertidor, calibrador-diluidor con generador O3 y GPT, cilindro NO certificado, generador de aire cero, fotómetro patrón / patrón de transferencia certificado.
 
 ## Experimentos priorizados
 
-### P1 — jornada mínima viable (Día 2, ~8 h)
+### P1 — bloque mínimo viable de la práctica (~8 h)
 - **E1** Ruido y repetibilidad de cero (M3/M4): series 1 s y 1 min en aire cero; s vs s/√n, autocorrelación, u0. 45+20 min.
 - **E2** Verificación multipunto O3, 3 ciclos (M5): cero + 6 niveles 20–180 nmol/mol; regresión por ciclo, residuos, estabilidad entre ciclos. 3×60 min.
 - **E3** Covarianza medida NO/NOx (M6/M8): ≥60 pares 1 min a NO estable; u(NO2) con ρ=0 vs ρ medido vs s de la diferencia. 60+20 min.
-- **E4** GPT y eficiencia de convertidor (M6): titulación 4–5 niveles, 2 días; η y u(η); c_η=−(NOx−NO)/η². 2×90 min. **Niveles a rediseñar** (ver defecto D4).
+- **E4** GPT y eficiencia de convertidor (M6): titulación 4–5 niveles, dos sesiones en días distintos; η y u(η); c_η=−(NOx−NO)/η². 2×90 min. **Niveles a rediseñar** (ver defecto D4).
 - **E5** Verificación corrección automática de η en firmware (M6): 30 min.
 - **E14** Recorrido documental cadena real (M1): certificados reales SRP/transferencia/analizador. 30 min.
 - **E15** Presupuesto híbrido del equipo propio (M7): u(c)=√(u0²+(u_r·c)²) con u0 de E1/E9, u_r de E2/E10; anti-doble-conteo. 90 min. Entregable evaluado.
 
-### P2 — segunda media jornada
+### P2 — bloque adicional opcional
 - **E6** Transmisión de línea O3 (línea corta patrón vs línea real+filtro). 60 min.
 - **E7** Formación NO2 en línea (NO+O3, línea corta/larga/larga caliente). 90 min. Sustituye dataset inverosímil.
 - **E9** Calidad de aire cero (3 fuentes). 45 min.

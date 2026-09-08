@@ -16,7 +16,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent
 COURSE_DIR = BASE_DIR.parent
 OUTPUT = BASE_DIR / "curso_paquete_completo.html"
-TITLE = "Curso de dos días — Incertidumbre en analizadores de O₃ y NOx · Paquete completo"
+TITLE = "Curso de 9 h — Incertidumbre en analizadores de O₃ y NOx · Paquete completo"
 # Pandoc no permite tex_math_single_backslash sobre lector gfm. El lector
 # markdown conserva tablas de tubería y admite ambos delimitadores usados aquí.
 PANDOC_FROM = "markdown+tex_math_dollars+tex_math_single_backslash"
@@ -79,7 +79,7 @@ PAGES = [
 ]
 CONTROL_DOC = BASE_DIR / "control_documental_md.md"
 PRACTICE = [
-    ("p0", "P0 Agenda del Día 2", BASE_DIR / "practica/P0_agenda_dia2.md"),
+    ("p0", "P0 Agenda de la práctica", BASE_DIR / "practica/P0_agenda_practica.md"),
     ("e01", "E01 Ruido y repetibilidad de cero", BASE_DIR / "practica/E01_ruido_cero.md"),
     ("e02", "E02 Verificación multipunto O₃", BASE_DIR / "practica/E02_verificacion_multipunto.md"),
     ("e03", "E03 Covarianza NO/NOx", BASE_DIR / "practica/E03_covarianza_no_nox.md"),
@@ -127,7 +127,7 @@ SECTIONS = [
     ("diseno-curso", "Diseño del curso"),
     ("handout", "Handouts"),
     ("guiones", "Guiones M1–M7 obligatorios + M8 opcional"),
-    ("practica", "Práctica de laboratorio (Día 2)"),
+    ("practica", "Práctica de laboratorio (contenido aparte del curso)"),
     ("materiales", "Materiales"),
     ("solucionarios", "Solucionarios — solo instructor"),
     ("reproducibilidad", "Apéndice de reproducibilidad"),
@@ -368,7 +368,7 @@ def build() -> tuple[str, int, int, int, int]:
         "portada",
         "Portada e índice",
         f'<header class="hero"><h1>{html.escape(TITLE)}</h1>'
-        '<p class="meta">Curso técnico · Día 1 conceptual de 9 h + M8 opcional · Día 2 de laboratorio · material integrado y reproducible · 2026-08-26</p>'
+        '<p class="meta">Curso técnico · 9 h + M8 opcional · práctica de laboratorio aparte · material integrado y reproducible · 2026-08-26</p>'
         '<span class="chip">GUM + QUAM</span><span class="chip">Fotometría UV O₃</span>'
         '<span class="chip">Quimioluminiscencia NOx</span><span class="chip">Monte Carlo opcional</span>'
         '</header><p>Documento único para consulta en pantalla, trabajo de aula e impresión. '
@@ -417,7 +417,7 @@ def build() -> tuple[str, int, int, int, int]:
     for practice_id, title, path in PRACTICE:
         block_id = f"practica-{practice_id}"
         practice_blocks.append(source_block(title, pandoc_fragment(path, f"{block_id}-"), block_id))
-    practice = section("practica", "Práctica de laboratorio (Día 2)", "".join(practice_blocks))
+    practice = section("practica", "Práctica de laboratorio (contenido aparte del curso)", "".join(practice_blocks))
 
     dataset_table, dataset_rows = csv_table(DATASET_CSV, "Dataset sintético de verificación multipunto")
     nox_gpt_table, nox_gpt_rows = csv_table(NOX_GPT_CSV, "Dataset GPT y convertidor NOx")

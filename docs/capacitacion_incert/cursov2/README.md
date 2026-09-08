@@ -1,4 +1,4 @@
-# Contenido del curso — Incertidumbre en analizadores de O₃ y NOx (Día 1: 9 h + M8 opcional; Día 2: 7.5–9 h de laboratorio)
+# Contenido del curso — Incertidumbre en analizadores de O₃ y NOx (9 h + M8 opcional; práctica de laboratorio aparte)
 
 Curso v2 para operadores de redes de calidad del aire. O₃ permanece como hilo conductor; M6 añade segunda familia instrumental obligatoria: NO, NO₂ y NOx por quimioluminiscencia. Base metrológica: JCGM/GUM, operacionalizada con Eurachem/CITAC QUAM 2012.
 
@@ -8,21 +8,21 @@ Desarrollado según `../plan_desarrollo_contenido.md` y diseño local `diseno_cu
 
 Cada sesión M1–M8 conserva su libreto principal en `modulos/` y cada unidad temporal de exposición tiene un archivo Markdown individual en `paginas/`. Los módulos funcionan como índice y contexto; las páginas contienen el texto dictable, el minutaje y los apoyos de cada página/diapositiva. No hay fuentes independientes PPT/PPTX/ODP en esta versión: el HTML es un artefacto derivado. El inventario completo, incluidas las excepciones E10/E12/E13 y M8 sin solucionario, está en [`control_documental_md.md`](control_documental_md.md).
 
-## Estructura de dos días
+## Alcance del curso y del material práctico
 
-- **Día 1 — conceptual (obligatorio, 9 h + M8 opcional):** M1–M7 en aula, con datasets sintéticos y presupuestos documentales. Cierra con el taller evaluado M7 (caso KRISS/BIPM), que es el entregable de este día.
-- **Día 2 — laboratorio (P1: 7.5–9 h con dos subequipos en paralelo; P2: 6.4–6.7 h adicionales, opcional):** jornada práctica con instrumentos reales de O₃ y NOx. Ejecuta los protocolos descritos en `practica/`, con sus propios entregables, entre ellos el presupuesto híbrido del equipo propio (`practica/E15_presupuesto_hibrido.md`). **Los ejercicios teóricos del Día 1 y los experimentos del Día 2 son bloques separados: ninguno reemplaza al otro y cada uno conserva su propio entregable.** P1 se ejecuta con **dos subequipos en paralelo** (vía O₃ y vía NOx) que convergen en E15; sin esa división, P1 dura 9.5–10.5 h en un solo equipo secuencial. Ver el detalle completo de cómputo en `practica/P0_agenda_dia2.md`.
+- **Curso teórico (obligatorio, 9 h):** M1–M7 en aula, con datasets sintéticos y presupuestos documentales. Cierra con el taller evaluado M7 (caso KRISS/BIPM), que es el entregable del curso. M8 (Monte Carlo) es opcional y queda fuera de las 9 h.
+- **Práctica de laboratorio (contenido aparte, no incluido en las 9 h):** protocolos con instrumentos reales de O₃ y NOx, en `practica/`. Es contenido práctico independiente del curso teórico, con su propia programación, sus propios prerrequisitos logísticos y sus propios entregables, entre ellos el presupuesto híbrido del equipo propio (`practica/E15_presupuesto_hibrido.md`). **Los ejercicios teóricos del curso y los experimentos de la práctica son bloques separados: ninguno reemplaza al otro y cada uno conserva su propio entregable.** El bloque P1 se ejecuta con **dos subequipos en paralelo** (vía O₃ y vía NOx) que convergen en E15; sin esa división, P1 dura 9.5–10.5 h en un solo equipo secuencial. Ver el detalle completo de cómputo en `practica/P0_agenda_practica.md`.
 
-**Prerrequisito logístico crítico:** `practica/E08_deriva_cero_span.md` es pasivo y debe **iniciarse al menos 7 días antes** del Día 2. Los analizadores, calibrador y patrón deben quedar **encendidos la noche anterior** al Día 2 (o mínimo 2 h antes) para no consumir tiempo de jornada en calentamiento. Ver agenda completa y checklist en `practica/P0_agenda_dia2.md` y `practica/checklist_montaje_seguridad.md`.
+**Prerrequisito logístico crítico de la práctica:** `practica/E08_deriva_cero_span.md` es pasivo y debe **iniciarse al menos 7 días antes** de la sesión práctica. Los analizadores, calibrador y patrón deben quedar **encendidos la noche anterior** (o mínimo 2 h antes) para no consumir tiempo de sesión en calentamiento. Ver agenda completa y checklist en `practica/P0_agenda_practica.md` y `practica/checklist_montaje_seguridad.md`.
 
-## Tabla de experimentos del Día 2
+## Tabla de experimentos de la práctica de laboratorio
 
 | Experimento | Nombre | Módulo(s) enlazado(s) | Bloque |
 |---|---|---|---|
 | E01 | Ruido y repetibilidad de cero | M3, M4 | P1, vía O₃ (tras E09) |
 | E02 | Verificación multipunto O₃, 3 ciclos | M5 | P1, vía O₃ (tras E11) |
 | E03 | Covarianza medida NO/NOx | M6, M8 | P2 |
-| E04 | GPT y eficiencia del convertidor | M6 | P1, vía NOx (2 días) |
+| E04 | GPT y eficiencia del convertidor | M6 | P1, vía NOx (requiere dos sesiones) |
 | E05 | Verificación de corrección de firmware | M6 | P1, vía NOx |
 | E06 | Transmisión de línea O₃ | M4 | P2 (documental en E15 hasta ejecutarlo) |
 | E07 | Formación de NO₂ en línea | M6 | P2 |
@@ -30,12 +30,12 @@ Cada sesión M1–M8 conserva su libreto principal en `modulos/` y cada unidad t
 | E09 | Calidad de aire cero | M4, M5 | P1, vía O₃ (prerrequisito de E01) |
 | E11 | Tiempo de respuesta t10/t90 | M5 | P1, vía O₃ (antes de E02) |
 | E14 | Recorrido documental de cadena metrológica | M1 | P1, vía O₃ |
-| E15 | Presupuesto híbrido del equipo propio | M7 | P1, convergencia de ambas vías; entregable evaluado del Día 2 |
+| E15 | Presupuesto híbrido del equipo propio | M7 | P1, convergencia de ambas vías; entregable evaluado de la práctica |
 | E16 | MCM con covarianza medida | M8 | P2 |
 
 E10, E12 y E13 se mencionan en el diagnóstico de la práctica pero no cuentan con protocolo diseñado en esta versión; quedan fuera de P1/P2.
 
-## Orden y tiempos — Día 1
+## Orden y tiempos del curso (9 h)
 
 | Orden | Módulo | Duración | Carácter |
 |---:|---|---:|---|
@@ -60,11 +60,11 @@ Secuencia QUAM transversal: **especificar, identificar, cuantificar, depurar, co
 | `datasets/` | Verificación multipunto O₃; GPT/convertidor NOx; línea de muestreo NOx; metadata y generadores reproducibles |
 | `plantillas/` | Presupuesto O₃ y plantilla NOx con modelo diferencial, eficiencia y covarianza |
 | `scripts/` | Demostración opcional M8 de Monte Carlo para Beer–Lambert |
-| `casos/` | Extracto BIPM.QM-K1 / KRISS 2024 para M7 (validación externa en Día 2) |
-| `modulos/` | Libretos y contexto M1–M7 obligatorios + M8 opcional (Día 1); cada sección de guion enlaza sus páginas |
+| `casos/` | Extracto BIPM.QM-K1 / KRISS 2024 para M7 (validación externa) |
+| `modulos/` | Libretos y contexto M1–M7 obligatorios + M8 opcional; cada sección de guion enlaza sus páginas |
 | `paginas/` | 39 archivos Markdown, uno por página/diapositiva temporal del libreto M1–M8; fuente canónica de la exposición |
 | `modulos/soluciones/` | Solucionarios M1–M7; M8 es demostración sin solucionario separado |
-| `practica/` | Jornada de laboratorio Día 2: agenda (`P0_agenda_dia2.md`), un protocolo por experimento (`E0x_*.md`), hoja de registro de campo genérica y checklist de montaje y seguridad |
+| `practica/` | Contenido práctico de laboratorio, aparte de las 9 h del curso: agenda (`P0_agenda_practica.md`), un protocolo por experimento (`E0x_*.md`), hoja de registro de campo genérica y checklist de montaje y seguridad |
 | `control_documental_md.md` | Inventario de sesiones, libretos, páginas, prácticas y excepciones documentales |
 
 ## Fuentes troncales
@@ -82,10 +82,9 @@ Secuencia QUAM transversal: **especificar, identificar, cuantificar, depurar, co
 
 ## Evaluación y verificaciones
 
-- Ejercicios M1–M6 producen evidencias parciales (Día 1).
-- **Día 1 — entregable evaluado: M7** (caso KRISS/BIPM), sin cambios respecto de la versión sin laboratorio.
-- **Día 2 — entregable evaluado propio y separado: `practica/E15_presupuesto_hibrido.md`**: presupuesto híbrido construido con evidencia propia (E01/E02/E06/E08/E09), reporte GUM/QUAM, alcance y transferencia breve a NOx. Se evalúa por su cuenta y no sustituye al de M7.
-- Si el curso se dicta sin Día 2, M7 conserva su rol de cierre evaluado documental tal como está descrito abajo.
+- Ejercicios M1–M6 producen evidencias parciales dentro del curso.
+- **Curso — entregable evaluado: M7** (caso KRISS/BIPM). Es el cierre evaluado del curso de 9 h, se dicte o no la práctica de laboratorio.
+- **Práctica de laboratorio — entregable evaluado propio y separado: `practica/E15_presupuesto_hibrido.md`**: presupuesto híbrido construido con evidencia propia (E01/E02/E06/E08/E09), reporte GUM/QUAM, alcance y transferencia breve a NOx. Se evalúa por su cuenta y no sustituye al de M7.
 - Rúbrica revisa mensurando completo, vínculo fuente–efecto, evidencia pertinente, ausencia de doble conteo, covarianza/dependencias y coherencia entre presupuesto y reporte.
 - Cifras KRISS contrastadas contra informe público; ejemplo EN 14211 reconstruido a 104 nmol/mol.
 - Solucionarios consistentes con datasets y plantillas.

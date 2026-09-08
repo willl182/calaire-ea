@@ -1,6 +1,6 @@
 # E14 — Recorrido documental de cadena metrológica
 
-Enlaza con **M1** (trazabilidad). Abre la jornada de laboratorio (no requiere gases).
+Enlaza con **M1** (trazabilidad). Abre la sesión práctica de laboratorio (no requiere gases).
 
 ## Objetivo y componente ilustrado
 

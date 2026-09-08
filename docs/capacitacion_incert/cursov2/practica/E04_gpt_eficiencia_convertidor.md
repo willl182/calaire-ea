@@ -20,7 +20,7 @@ Instrumentos comunes; calibrador GPT con cámara de mezcla; analizador de O₃ o
 
 ## Procedimiento
 
-### Día 1, aproximadamente 100 min
+### Sesión 1, aproximadamente 100 min
 
 1. **Montaje y seguridad, 15 min.** Comprobaciones comunes, venteo, fugas y caudal total.
 2. **Verificación de caudales, 10 min.** Medir caudal de NO y dilución en los puntos de trabajo.
@@ -30,11 +30,11 @@ Instrumentos comunes; calibrador GPT con cámara de mezcla; analizador de O₃ o
 6. **Retorno, 10 min.** Repetir nivel 80 nmol/mol y luego cero para detectar memoria o deriva.
 7. **Cierre, 5 min.** Desactivar O₃, mantener NO/aire cero hasta eliminar O₃, cerrar NO y purgar.
 
-### Día 2, aproximadamente 100 min
+### Sesión 2 (día distinto), aproximadamente 100 min
 
 Repetir preparación, cero y NO base; aplicar orden descendente 160, 120, 80, 40 nmol/mol; repetir nivel 80 y cero final; analizar pendientes por día y pendiente combinada con efecto de día.
 
-**Nota logística:** ver `P0_agenda_dia2.md` — el día 2 de E04 se agenda como continuación fuera de la jornada principal si el curso no dispone de una segunda sesión.
+**Nota logística:** ver `P0_agenda_practica.md` — la sesión 2 de E04 se agenda como continuación en un día distinto; si no se dispone de esa segunda sesión, se declara la limitación en E15.
 
 ## Tabla de registro
 
@@ -95,7 +95,7 @@ Con este error estándar de pendiente derivado de los datos (`0.0030`) y un comp
 u(\eta)=\sqrt{0.0030^2+0.0040^2}=0.0050,\qquad U(\eta)=2u(\eta)=0.010,
 \]
 
-es decir `η=0.970±0.010 (k=2)`. Si día 2 entrega 0.966, la diferencia entre días es 0.004, menor que `√(0.005²+0.005²)=0.0071`: sin cambio significativo detectado.
+es decir `η=0.970±0.010 (k=2)`. Si la sesión 2 entrega 0.966, la diferencia entre días es 0.004, menor que `√(0.005²+0.005²)=0.0071`: sin cambio significativo detectado.
 
 ## Criterios de aceptación
 

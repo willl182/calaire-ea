@@ -59,7 +59,7 @@ El libreto de exposición está organizado en páginas/diapositivas Markdown ind
 
 > **Advertencia sobre el dataset de línea NOx (defecto D6):** los valores de NO₂ formado en línea del dataset original (0.18–0.62 nmol/mol) subestiman la cinética NO+O₃ en 70–100×; el cálculo corregido con `k=1.8×10⁻¹⁴ cm³ molécula⁻¹ s⁻¹` da 18.45–45.13 nmol/mol para las mismas configuraciones. Ver protocolo real `practica/E07_formacion_no2_linea.md` y la sección "Cálculos correctivos" de su diseño. La Parte B del ejercicio siguiente conserva su dataset y su propósito didáctico (practicar la decisión operativa); úsese esta advertencia para explicar en clase que el nivel absoluto es ilustrativo y no predice el resultado de laboratorio, que se obtiene por separado en E07.
 
-**Enlace con la práctica:** el Día 2 de laboratorio trata con instrumento real los mismos temas de este módulo, como bloque independiente y sin reemplazar los ejercicios de esta sección: `practica/E03_covarianza_no_nox.md` mide la covarianza NO/NOx que la Parte C usa como dato; `practica/E04_gpt_eficiencia_convertidor.md` y `practica/E05_correccion_firmware.md` corresponden a la Parte A; `practica/E07_formacion_no2_linea.md` corresponde a la Parte B.
+**Enlace con la práctica:** la práctica de laboratorio —contenido aparte del curso— trata con instrumento real los mismos temas de este módulo, como bloque independiente y sin reemplazar los ejercicios de esta sección: `practica/E03_covarianza_no_nox.md` mide la covarianza NO/NOx que la Parte C usa como dato; `practica/E04_gpt_eficiencia_convertidor.md` y `practica/E05_correccion_firmware.md` corresponden a la Parte A; `practica/E07_formacion_no2_linea.md` corresponde a la Parte B.
 
 **Parte A — GPT y eficiencia, 10 min**
 

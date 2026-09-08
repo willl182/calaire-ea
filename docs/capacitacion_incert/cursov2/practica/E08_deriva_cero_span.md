@@ -1,6 +1,6 @@
 # E08 — Deriva de cero y span 24 h/7 d (pasivo, precurso)
 
-Enlaza con **M4**: es el experimento concreto del plan de reemplazo para deriva. **Debe iniciarse ≥7 días antes del Día 2 de laboratorio** (ver `P0_agenda_dia2.md`). Alimenta la deriva de **E15**.
+Enlaza con **M4**: es el experimento concreto del plan de reemplazo para deriva. **Debe iniciarse ≥7 días antes de la sesión práctica de laboratorio** (ver `P0_agenda_practica.md`). Alimenta la deriva de **E15**.
 
 ## Objetivo y componente ilustrado
 

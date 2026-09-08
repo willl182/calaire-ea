@@ -2,7 +2,7 @@
 
 Enlaza con **M4** (plan de reemplazo) y **M5**. Alimenta el término `u₀` de **E15** junto con E01.
 
-**Prerrequisito de agenda (A4):** en `P0_agenda_dia2.md`, E09 se ejecuta en **P1**, antes de **E01**, porque el residual de aire cero calculado aquí (`u_aire0,A=0.122 nmol/mol` en el ejemplo) es una entrada directa del ejemplo numérico de E01.
+**Prerrequisito de agenda (A4):** en `P0_agenda_practica.md`, E09 se ejecuta en **P1**, antes de **E01**, porque el residual de aire cero calculado aquí (`u_aire0,A=0.122 nmol/mol` en el ejemplo) es una entrada directa del ejemplo numérico de E01.
 
 ## Objetivo y componente ilustrado
 

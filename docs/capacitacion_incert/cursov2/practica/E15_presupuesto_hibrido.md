@@ -1,6 +1,6 @@
 # E15 — Presupuesto híbrido del equipo propio
 
-Enlaza con **M7** por método, no por sustitución: aplica a evidencia propia el mismo procedimiento que el taller documental. Es el **entregable evaluado del Día 2**, independiente del entregable de M7 (caso KRISS/BIPM, `../casos/extracto_kriss_2024.md`), que conserva íntegro su rol de cierre del Día 1. El caso KRISS puede usarse aquí como contraste de orden de magnitud, sin que ninguno de los dos entregables reemplace al otro.
+Enlaza con **M7** por método, no por sustitución: aplica a evidencia propia el mismo procedimiento que el taller documental. Es el **entregable evaluado de la práctica de laboratorio**, independiente del entregable de M7 (caso KRISS/BIPM, `../casos/extracto_kriss_2024.md`), que conserva íntegro su rol de cierre del curso. El caso KRISS puede usarse aquí como contraste de orden de magnitud, sin que ninguno de los dos entregables reemplace al otro.
 
 ## Objetivo y componente ilustrado
 
@@ -12,7 +12,7 @@ u(c)=\sqrt{u_0^2+(u_r c)^2}.
 
 Integra E01/E09 como término absoluto, E02 como término relativo y residual, E06 como transporte, E08 como deriva y el certificado como patrón. Entrena la depuración anti-doble-conteo.
 
-**Nota de agenda (A4):** en `P0_agenda_dia2.md`, **E09 se ejecuta en P1 como prerrequisito de E01** (su residual de aire cero alimenta directamente el `u₀` de E01). **E06 queda en P2** (bloque opcional); si el equipo no alcanza a ejecutar P2, el término de transmisión de línea se declara **documental** (supuesto conservador, no medido) y la limitación se anota explícitamente en la declaración final. El ejemplo numérico de esta sección asume que E06 sí se ejecutó (o que se dispone de una medición previa equivalente); si no es el caso, sustituya esa fila por el supuesto documental antes de calcular.
+**Nota de agenda (A4):** en `P0_agenda_practica.md`, **E09 se ejecuta en P1 como prerrequisito de E01** (su residual de aire cero alimenta directamente el `u₀` de E01). **E06 queda en P2** (bloque opcional); si el equipo no alcanza a ejecutar P2, el término de transmisión de línea se declara **documental** (supuesto conservador, no medido) y la limitación se anota explícitamente en la declaración final. El ejemplo numérico de esta sección asume que E06 sí se ejecutó (o que se dispone de una medición previa equivalente); si no es el caso, sustituya esa fila por el supuesto documental antes de calcular.
 
 ## Instrumentos y montaje
 

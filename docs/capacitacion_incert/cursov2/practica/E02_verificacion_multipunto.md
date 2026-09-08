@@ -2,7 +2,7 @@
 
 Enlaza con **M5** (calibración multipunto, deriva y verificación). Alimenta `u_r`, residual local y precisión intermedia de **E15**.
 
-**Prerrequisito de agenda:** en `P0_agenda_dia2.md`, **E11 (versión mínima, 30 min) se ejecuta antes de E02**, dentro de P1, para fijar con evidencia propia la espera mínima de estabilización usada en el paso 7 de este protocolo. No se usa la constante de tiempo del manual como sustituto.
+**Prerrequisito de agenda:** en `P0_agenda_practica.md`, **E11 (versión mínima, 30 min) se ejecuta antes de E02**, dentro de P1, para fijar con evidencia propia la espera mínima de estabilización usada en el paso 7 de este protocolo. No se usa la constante de tiempo del manual como sustituto.
 
 ## Objetivo y componente ilustrado
 
