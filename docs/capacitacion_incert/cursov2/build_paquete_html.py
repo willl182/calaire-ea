@@ -6,6 +6,7 @@ from __future__ import annotations
 import base64
 import csv
 import html
+import os
 import re
 import shutil
 import subprocess
@@ -16,16 +17,53 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent
 COURSE_DIR = BASE_DIR.parent
 OUTPUT = BASE_DIR / "curso_paquete_completo.html"
+<<<<<<< Updated upstream
 TITLE = "Curso 9 h — Incertidumbre en analizadores de O₃ y NOx · Paquete completo"
+=======
+TITLE = "Incertidumbre en analizadores de O₃ y NOx · Curso teórico de 9 h y práctica complementaria"
+>>>>>>> Stashed changes
 # Pandoc no permite tex_math_single_backslash sobre lector gfm. El lector
 # markdown conserva tablas de tubería y admite ambos delimitadores usados aquí.
 PANDOC_FROM = "markdown+tex_math_dollars+tex_math_single_backslash"
 
 DESIGN = BASE_DIR / "diseno_curso_v2.md"
 HANDOUTS = [
-    ("O₃ — GUM y fotometría UV", BASE_DIR / "handout/handout_teorico_gum_o3.md"),
-    ("NOx — quimioluminiscencia", BASE_DIR / "handout/handout_no_nox.md"),
+    {
+        "id": "gum-o3",
+        "title": "O₃ — GUM y fotometría UV",
+        "index": BASE_DIR / "handout/handout_teorico_gum_o3.md",
+        "sections": [
+            ("h00-proposito-alcance", "H00 Propósito y alcance", BASE_DIR / "handout/gum_o3/O3_H00_proposito_alcance.md"),
+            ("h01-conceptos-basicos", "H01 Conceptos básicos", BASE_DIR / "handout/gum_o3/O3_H01_conceptos_basicos.md"),
+            ("h02-evaluacion-tipo-a", "H02 Evaluación Tipo A", BASE_DIR / "handout/gum_o3/O3_H02_evaluacion_tipo_a.md"),
+            ("h03-tipo-b-pdfs", "H03 Tipo B y PDFs", BASE_DIR / "handout/gum_o3/O3_H03_tipo_b_pdfs.md"),
+            ("h04-propagacion-guf", "H04 Propagación GUF", BASE_DIR / "handout/gum_o3/O3_H04_propagacion_guf.md"),
+            ("h05-monte-carlo", "H05 Monte Carlo", BASE_DIR / "handout/gum_o3/O3_H05_monte_carlo.md"),
+            ("h06-validacion-guf-mcm", "H06 Validación GUF–MCM", BASE_DIR / "handout/gum_o3/O3_H06_validacion_guf_mcm.md"),
+            ("h07-informe-gum", "H07 Informe según GUM", BASE_DIR / "handout/gum_o3/O3_H07_informe_gum.md"),
+            ("h08-glosario", "H08 Glosario", BASE_DIR / "handout/gum_o3/O3_H08_glosario.md"),
+            ("h09-referencias", "H09 Referencias", BASE_DIR / "handout/gum_o3/O3_H09_referencias.md"),
+        ],
+    },
+    {
+        "id": "no-nox",
+        "title": "NOx — quimioluminiscencia",
+        "index": BASE_DIR / "handout/handout_no_nox.md",
+        "sections": [
+            ("h00-proposito-alcance", "H00 Propósito y alcance", BASE_DIR / "handout/no_nox/NOX_H00_proposito_alcance.md"),
+            ("h01-que-mide-sistema", "H01 Qué mide el sistema", BASE_DIR / "handout/no_nox/NOX_H01_que_mide_sistema.md"),
+            ("h02-modelo-minimo-corregido", "H02 Modelo mínimo y corregido", BASE_DIR / "handout/no_nox/NOX_H02_modelo_minimo_corregido.md"),
+            ("h03-convertidor", "H03 Convertidor", BASE_DIR / "handout/no_nox/NOX_H03_convertidor.md"),
+            ("h04-gpt", "H04 GPT", BASE_DIR / "handout/no_nox/NOX_H04_gpt.md"),
+            ("h05-muestreo-reactividad", "H05 Muestreo y reactividad", BASE_DIR / "handout/no_nox/NOX_H05_muestreo_reactividad.md"),
+            ("h06-presupuesto-anexo-f", "H06 Presupuesto Anexo F", BASE_DIR / "handout/no_nox/NOX_H06_presupuesto_anexo_f.md"),
+            ("h07-lista-auditoria", "H07 Lista de auditoría", BASE_DIR / "handout/no_nox/NOX_H07_lista_auditoria.md"),
+            ("h08-control-documental", "H08 Control documental", BASE_DIR / "handout/no_nox/NOX_H08_control_documental.md"),
+            ("h09-referencias", "H09 Referencias", BASE_DIR / "handout/no_nox/NOX_H09_referencias.md"),
+        ],
+    },
 ]
+LINK_FILTER = BASE_DIR / "pandoc_rewrite_links.lua"
 MODULES = [
     ("m1", "M1 Trazabilidad", BASE_DIR / "modulos/M1_trazabilidad.md"),
     ("m2", "M2 Modelo de medición", BASE_DIR / "modulos/M2_modelo_medicion.md"),
@@ -36,6 +74,27 @@ MODULES = [
     ("m7", "M7 Taller integrador", BASE_DIR / "modulos/M7_taller.md"),
     ("m8", "M8 Monte Carlo (opcional)", BASE_DIR / "modulos/M8_opcional_monte_carlo.md"),
 ]
+<<<<<<< Updated upstream
+=======
+PRACTICE = [
+    ("p0", "P0 Agenda de la práctica de laboratorio", BASE_DIR / "practica/P0_agenda_dia2.md"),
+    ("e01", "E01 Ruido y repetibilidad de cero", BASE_DIR / "practica/E01_ruido_cero.md"),
+    ("e02", "E02 Verificación multipunto O₃", BASE_DIR / "practica/E02_verificacion_multipunto.md"),
+    ("e03", "E03 Covarianza NO/NOx", BASE_DIR / "practica/E03_covarianza_no_nox.md"),
+    ("e04", "E04 GPT y eficiencia del convertidor", BASE_DIR / "practica/E04_gpt_eficiencia_convertidor.md"),
+    ("e05", "E05 Corrección de firmware", BASE_DIR / "practica/E05_correccion_firmware.md"),
+    ("e06", "E06 Transmisión de línea", BASE_DIR / "practica/E06_transmision_linea.md"),
+    ("e07", "E07 Formación de NO₂ en línea", BASE_DIR / "practica/E07_formacion_no2_linea.md"),
+    ("e08", "E08 Deriva de cero y span", BASE_DIR / "practica/E08_deriva_cero_span.md"),
+    ("e09", "E09 Calidad de aire cero", BASE_DIR / "practica/E09_calidad_aire_cero.md"),
+    ("e11", "E11 Tiempo de respuesta", BASE_DIR / "practica/E11_tiempo_respuesta.md"),
+    ("e14", "E14 Recorrido documental", BASE_DIR / "practica/E14_recorrido_documental.md"),
+    ("e15", "E15 Presupuesto híbrido", BASE_DIR / "practica/E15_presupuesto_hibrido.md"),
+    ("e16", "E16 MCM con covarianza", BASE_DIR / "practica/E16_mcm_covarianza.md"),
+    ("registro-campo", "Hoja de registro de campo", BASE_DIR / "practica/hoja_registro_campo.md"),
+    ("checklist-seguridad", "Checklist de montaje y seguridad", BASE_DIR / "practica/checklist_montaje_seguridad.md"),
+]
+>>>>>>> Stashed changes
 SOLUTIONS = [
     ("m1", BASE_DIR / "modulos/soluciones/SOL_M1.md"),
     ("m2", BASE_DIR / "modulos/soluciones/SOL_M2.md"),
@@ -67,6 +126,10 @@ SECTIONS = [
     ("diseno-curso", "Diseño del curso"),
     ("handout", "Handouts"),
     ("guiones", "Guiones M1–M7 obligatorios + M8 opcional"),
+<<<<<<< Updated upstream
+=======
+    ("practica", "Práctica de laboratorio complementaria"),
+>>>>>>> Stashed changes
     ("materiales", "Materiales"),
     ("solucionarios", "Solucionarios — solo instructor"),
     ("reproducibilidad", "Apéndice de reproducibilidad"),
@@ -139,6 +202,10 @@ footer{margin-top:3rem;color:var(--muted);font-size:.88rem;border-top:1px solid 
 .sidebar ul.sub li{margin:.05rem 0}
 .sidebar ul.sub a{padding:.26rem .5rem;font-size:.85rem;color:var(--muted)}
 .sidebar ul.sub a:hover{background:var(--accent-soft);color:var(--accent)}
+.sidebar ul.sub ul.sub{margin-left:.35rem;padding-left:.55rem}
+.sidebar ul.sub ul.sub a{font-size:.78rem;padding:.2rem .4rem}
+.handout-group{margin:2rem 0 3rem;scroll-margin-top:1rem}
+.handout-group>h3{color:var(--accent);font-size:1.3rem;border-bottom:1px solid var(--line);padding-bottom:.35rem}
 .sidebar details{background:none;border:0;margin:0;padding:0}
 .sidebar details>summary{list-style:none;padding:0;font-weight:400;color:var(--ink);display:flex;align-items:center;gap:.3rem;border-radius:6px}
 .sidebar details>summary::-webkit-details-marker{display:none}
@@ -164,6 +231,17 @@ def require_files(paths: list[Path]) -> None:
         raise FileNotFoundError("Faltan archivos requeridos:\n" + "\n".join(missing))
 
 
+def handout_link_targets() -> dict[Path, tuple[str, str]]:
+    targets = {}
+    for group in HANDOUTS:
+        group_id = f'handout-{group["id"]}'
+        targets[group["index"].resolve()] = (group_id, f"{group_id}-")
+        for section_id, _, path in group["sections"]:
+            article_id = f"{group_id}-{section_id}"
+            targets[path.resolve()] = (article_id, f"{article_id}-")
+    return targets
+
+
 def pandoc_fragment(path: Path, id_prefix: str = "") -> str:
     command = [
         "pandoc",
@@ -173,12 +251,23 @@ def pandoc_fragment(path: Path, id_prefix: str = "") -> str:
         "html5",
         "--mathml",
         "--wrap=none",
+        "--lua-filter",
+        str(LINK_FILTER),
         str(path),
     ]
     if id_prefix:
         command.insert(-1, f"--id-prefix={id_prefix}")
-    result = subprocess.run(command, check=True, capture_output=True, text=True)
-    return wrap_tables(result.stdout)
+    link_lines = []
+    for target, (article_id, heading_prefix) in handout_link_targets().items():
+        relative = Path(os.path.relpath(target, path.parent)).as_posix()
+        link_lines.append(f"{relative}\t{article_id}\t{heading_prefix}")
+    environment = os.environ.copy()
+    environment["CALAIRE_LINK_TARGETS"] = "\n".join(link_lines)
+    result = subprocess.run(command, check=True, capture_output=True, text=True, env=environment)
+    fragment = result.stdout
+    if id_prefix:
+        fragment = fragment.replace(f'href="#{id_prefix}handout-', 'href="#handout-')
+    return wrap_tables(fragment)
 
 
 def wrap_tables(fragment: str) -> str:
@@ -229,15 +318,18 @@ def section(section_id: str, title: str, body: str) -> str:
     return f'<section class="major" id="{section_id}"><h2>{html.escape(title)}</h2>{body}</section>'
 
 
-def source_block(title: str, body: str, block_id: str | None = None) -> str:
+def source_block(title: str, body: str, block_id: str | None = None, show_title: bool = True) -> str:
     id_attr = f' id="{html.escape(block_id, quote=True)}"' if block_id else ""
-    return f'<article class="source-block"{id_attr}><h3>{html.escape(title)}</h3>{body}</article>'
+    heading = f'<h3>{html.escape(title)}</h3>' if show_title else ""
+    return f'<article class="source-block"{id_attr}>{heading}{body}</article>'
 
 
 def build() -> tuple[str, int, int, int, int]:
     required = [
         DESIGN,
-        *(path for _, path in HANDOUTS),
+        LINK_FILTER,
+        *(group["index"] for group in HANDOUTS),
+        *(path for group in HANDOUTS for _, _, path in group["sections"]),
         *(path for _, _, path in MODULES),
         *(path for _, path in SOLUTIONS),
         DATASET_METADATA,
@@ -267,7 +359,11 @@ def build() -> tuple[str, int, int, int, int]:
         "portada",
         "Portada e índice",
         f'<header class="hero"><h1>{html.escape(TITLE)}</h1>'
+<<<<<<< Updated upstream
         '<p class="meta">Curso técnico · jornada 9 h · 462 min obligatorios + 30 min opcionales · material integrado y reproducible · 2026-08-19</p>'
+=======
+        '<p class="meta">Curso técnico · curso teórico de 9 h + M8 opcional · práctica de laboratorio complementaria · material integrado y reproducible · 2026-08-28</p>'
+>>>>>>> Stashed changes
         '<span class="chip">GUM + QUAM</span><span class="chip">Fotometría UV O₃</span>'
         '<span class="chip">Quimioluminiscencia NOx</span><span class="chip">Monte Carlo opcional</span>'
         '</header><p>Documento único para consulta en pantalla, trabajo de aula e impresión. '
@@ -275,24 +371,45 @@ def build() -> tuple[str, int, int, int, int]:
         f'<h3>Índice general</h3>{index}',
     )
 
-    design_fragment = pandoc_fragment(DESIGN)
+    design_fragment = pandoc_fragment(DESIGN, "design-")
     design = section("diseno-curso", "Diseño del curso", design_fragment)
     design_headings = extract_h2_headings(design_fragment)
 
-    handout_blocks = []
-    handout_headings = []
-    for index, (title, path) in enumerate(HANDOUTS, start=1):
-        fragment = pandoc_fragment(path, f"handout-{index}-")
-        block_id = f"handout-{index}"
-        handout_blocks.append(source_block(title, fragment, block_id))
-        handout_headings.append((block_id, title))
-    handout = section("handout", "Handouts O₃ y NOx", "".join(handout_blocks))
+    handout_groups = []
+    handout_nav = []
+    handout_index_items = []
+    for group in HANDOUTS:
+        group_id = f'handout-{group["id"]}'
+        group_sections = []
+        group_nav = []
+        for section_id, section_title, path in group["sections"]:
+            article_id = f"{group_id}-{section_id}"
+            fragment = pandoc_fragment(path, f"{article_id}-")
+            group_sections.append(source_block(section_title, fragment, article_id, show_title=False))
+            group_nav.append((article_id, section_title))
+        handout_groups.append(
+            f'<section class="handout-group" id="{group_id}"><h3>{html.escape(group["title"])}</h3>'
+            f'{"".join(group_sections)}</section>'
+        )
+        handout_nav.append((group_id, group["title"], group_nav))
+        handout_index_items.append(f'<li><a href="#{group_id}">{html.escape(group["title"])}</a></li>')
+    handout_index = f'<h3>Índice de handouts</h3><ul class="index-grid">{"".join(handout_index_items)}</ul>'
+    handout = section("handout", "Handouts O₃ y NOx", handout_index + "".join(handout_groups))
 
     module_blocks = []
     for module_id, title, path in MODULES:
         module_blocks.append(source_block(f"Guion {title}", pandoc_fragment(path, f"guion-{module_id}-"), f"guion-{module_id}"))
     modules = section("guiones", "Guiones M1–M7 obligatorios + M8 opcional", "".join(module_blocks))
 
+<<<<<<< Updated upstream
+=======
+    practice_blocks = []
+    for practice_id, title, path in PRACTICE:
+        block_id = f"practica-{practice_id}"
+        practice_blocks.append(source_block(title, pandoc_fragment(path, f"{block_id}-"), block_id))
+    practice = section("practica", "Práctica de laboratorio complementaria", "".join(practice_blocks))
+
+>>>>>>> Stashed changes
     dataset_table, dataset_rows = csv_table(DATASET_CSV, "Dataset sintético de verificación multipunto")
     nox_gpt_table, nox_gpt_rows = csv_table(NOX_GPT_CSV, "Dataset GPT y convertidor NOx")
     nox_line_table, nox_line_rows = csv_table(NOX_LINE_CSV, "Dataset de línea de muestreo NOx")
@@ -397,7 +514,9 @@ def build() -> tuple[str, int, int, int, int]:
         'Se aceptan delimitadores reales <code>\\(...\\)</code>, <code>\\[...\\]</code> y <code>$...$</code>.</p>'
         '<h3>Controles automáticos</h3><ul><li>Archivos requeridos presentes.</li>'
         '<li>Dataset O₃ conserva 24 filas; GPT NOx conserva 15 filas.</li>'
-        '<li>Columnas obligatorias NOx presentes.</li><li>MathML presente.</li><li>Anclas internas resueltas.</li>'
+        '<li>Columnas obligatorias NOx presentes.</li><li>MathML presente.</li>'
+        '<li>Anclas internas resueltas e IDs globalmente únicos.</li>'
+        '<li>Veinte secciones de handout ensambladas y enlaces Markdown internos transformados.</li>'
         '<li>Nota documental APOA-370 presente.</li><li>Sin atributos <code>src</code> o <code>href</code> externos.</li></ul>'
     )
     reproducibility = section("reproducibilidad", "Apéndice de reproducibilidad", reproducibility_body)
@@ -405,13 +524,28 @@ def build() -> tuple[str, int, int, int, int]:
     guiones_nav = [(f"guion-{module_id}", title) for module_id, title, _ in MODULES]
     subnav_map = {
         "diseno-curso": design_headings,
-        "handout": handout_headings,
         "guiones": guiones_nav,
         "materiales": MATERIALS,
         "solucionarios": solutions_nav,
     }
     nav_li_parts = []
     for sid, label in SECTIONS:
+        if sid == "handout":
+            group_lis = []
+            for group_id, group_title, group_sections in handout_nav:
+                section_lis = "".join(
+                    f'<li><a href="#{section_id}">{html.escape(section_title)}</a></li>'
+                    for section_id, section_title in group_sections
+                )
+                group_lis.append(
+                    f'<li><a href="#{group_id}">{html.escape(group_title)}</a>'
+                    f'<ul class="sub">{section_lis}</ul></li>'
+                )
+            nav_li_parts.append(
+                f'<li><details><summary><a href="#{sid}">{html.escape(label)}</a></summary>'
+                f'<ul class="sub">{"".join(group_lis)}</ul></details></li>'
+            )
+            continue
         subs = subnav_map.get(sid)
         if subs:
             sub_lis = "".join(
@@ -474,11 +608,31 @@ def validate(document: str, dataset_rows: int, nox_gpt_rows: int, nox_line_rows:
         raise ValueError("No se encontró MathML; revise formato pandoc y delimitadores matemáticos")
     if not re.search(r'<math[^>]*>.*?<mi[^>]*>x</mi>', document, flags=re.DOTALL):
         raise ValueError("Prueba MathML falló: fórmula real con x no fue convertida")
-    ids = set(re.findall(r'\bid="([^"]+)"', document))
+    id_list = re.findall(r'\bid="([^"]+)"', document)
+    ids = set(id_list)
+    duplicate_ids = sorted({item for item in id_list if id_list.count(item) > 1})
+    if duplicate_ids:
+        raise ValueError("IDs HTML duplicados: " + ", ".join(duplicate_ids))
     hrefs = re.findall(r'\bhref="([^"]+)"', document)
     missing = sorted({href[1:] for href in hrefs if href.startswith("#") and href[1:] not in ids})
     if missing:
         raise ValueError("Anclas internas inexistentes: " + ", ".join(missing))
+    markdown_hrefs = sorted({href for href in hrefs if re.search(r"\.md(?:#|$)", href, flags=re.IGNORECASE)})
+    if markdown_hrefs:
+        raise ValueError("Enlaces Markdown no transformados: " + ", ".join(markdown_hrefs))
+    expected_handout_ids = [
+        f'handout-{group["id"]}-{section_id}'
+        for group in HANDOUTS
+        for section_id, _, _ in group["sections"]
+    ]
+    missing_handouts = [article_id for article_id in expected_handout_ids if id_list.count(article_id) != 1]
+    if missing_handouts:
+        raise ValueError("Artículos de handout ausentes o duplicados: " + ", ".join(missing_handouts))
+    handout_article_count = len(re.findall(r'<article class="source-block" id="handout-', document))
+    if handout_article_count != len(expected_handout_ids):
+        raise ValueError(
+            f"Se esperaban {len(expected_handout_ids)} artículos de handout; se encontraron {handout_article_count}"
+        )
     external_attributes = re.findall(
         r'\b(?:src|href)\s*=\s*["\']\s*(?:https?:)?//[^"\']+["\']', document, flags=re.IGNORECASE
     )
@@ -522,7 +676,7 @@ def main() -> int:
     print(f"Filas GPT NOx: {nox_gpt_rows}")
     print(f"Filas línea NOx: {nox_line_rows}")
     print(f"Solucionarios: {len(SOLUTIONS)}")
-    print("Validaciones: datasets NOx, MathML, anclas, APOA-370, secciones, data URI y referencias externas OK")
+    print("Validaciones: datasets NOx, MathML, anclas e IDs únicos, 20 handouts, APOA-370, data URI y referencias externas OK")
     return 0
 
 

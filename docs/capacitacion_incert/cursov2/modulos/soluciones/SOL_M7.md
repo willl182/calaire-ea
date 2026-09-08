@@ -108,7 +108,7 @@ La fracción de cantidad de ozono en aire seco atribuida a KRISS-SRP5 al compara
 
 ## 5. Material avanzado opcional: Welch–Satterthwaite
 
-Welch–Satterthwaite no forma parte del ejercicio obligatorio. Puede estudiarse con JCGM 100:2008, Anexo G.4, y `handout_teorico_gum_o3.md`, §4.5, cuando se disponga de grados de libertad sustentados para las contribuciones relevantes. No corresponde inventar grados de libertad para reproducir una selección de \(k\); si una aplicación exige una cobertura más rigurosa, deben documentarse la información estadística, el cálculo de \(\nu_{eff}\) y el cuantil utilizado.
+Welch–Satterthwaite no forma parte del ejercicio obligatorio. Puede estudiarse con JCGM 100:2008, Anexo G.4, y el [handout teórico GUM–O₃, §4.5](../../handout/gum_o3/O3_H04_propagacion_guf.md#gum-welch-satterthwaite), cuando se disponga de grados de libertad sustentados para las contribuciones relevantes. No corresponde inventar grados de libertad para reproducir una selección de \(k\); si una aplicación exige una cobertura más rigurosa, deben documentarse la información estadística, el cálculo de \(\nu_{eff}\) y el cuantil utilizado.
 
 ## 6. Validación externa, alcance y transferencia a NOx
 

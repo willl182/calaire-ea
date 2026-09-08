@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 # Diseño de curso — Evaluación de incertidumbre en analizadores de O₃ y NOx (9 h + M8 opcional)
 
 **Versión:** v2 para operadores de red · 2026-08-19  
@@ -5,6 +6,49 @@
 **Modalidad:** presencial o virtual sincrónica; siete módulos obligatorios, incluido M6 NOx y M7 como taller integrador evaluado. M8 Monte Carlo es opcional y queda fuera de jornada nominal de 9 h.
 
 ## Objetivos de aprendizaje
+=======
+# Diseño de curso — Evaluación de incertidumbre en analizadores de O₃ y NOx (curso teórico único de 9 h con ejercicios; práctica de laboratorio complementaria)
+
+**Versión:** v2 para operadores de red · 2026-08-28 (curso teórico único y práctica complementaria separada)
+**Audiencia:** personal técnico de laboratorio/red de monitoreo con base en calibración de analizadores de gases; no se asume dominio previo del GUM.  
+**Modalidad:** curso teórico único, presencial o virtual sincrónico, de 9 h con ejercicios (siete módulos obligatorios, incluido M6 NOx y M7 como taller integrador). M8 Monte Carlo es opcional y queda fuera de las 9 h. La práctica de laboratorio es presencial, aparte y complementaria; no constituye una segunda jornada del curso.
+
+## Estructura del paquete
+
+- **Curso teórico único (9 h con ejercicios; M8 opcional fuera de las 9 h):** M1–M7 y sus ejercicios, descritos abajo.
+- **Práctica de laboratorio aparte y complementaria (P1: 7.5–9 h con dos subequipos en paralelo; P2: 6.4–6.7 h adicionales, opcional):** ejecuta con instrumentos reales los protocolos que el curso teórico solo describe documentalmente. P1 requiere dividir el grupo en dos subequipos en paralelo (vía O₃ y vía NOx, que convergen en E15); sin esa división, P1 dura 9.5–10.5 h en secuencia. Detalle completo en `practica/P0_agenda_dia2.md`; protocolos por experimento en `practica/E0x_*.md`; hoja de registro genérica en `practica/hoja_registro_campo.md`; checklist de montaje y seguridad en `practica/checklist_montaje_seguridad.md`.
+
+### Prerrequisitos logísticos de la práctica de laboratorio
+
+1. **E08 (deriva de cero y span) debe iniciarse ≥7 días antes** de la práctica de laboratorio; es pasivo y requiere verificaciones en `t=0`, `24 h` y `7 d`, idealmente diarias.
+2. Analizadores, calibrador-diluidor y patrón/fotómetro deben quedar **encendidos la noche anterior** a la práctica de laboratorio (mínimo 2 h antes si no es posible dejarlos encendidos toda la noche).
+3. Certificados vigentes del patrón, cilindro de NO y analizadores reunidos con antelación para E14.
+4. Cilindro de NO certificado, sujeción física, regulador compatible y destructor catalítico de O₃/extracción confirmados antes de la práctica de laboratorio.
+
+### Tabla de experimentos de la práctica de laboratorio
+
+| Experimento | Nombre | Módulo(s) enlazado(s) | Bloque |
+|---|---|---|---|
+| E01 | Ruido y repetibilidad de cero | M3, M4 | P1, vía O₃ (tras E09) |
+| E02 | Verificación multipunto O₃, 3 ciclos | M5 | P1, vía O₃ (tras E11) |
+| E03 | Covarianza medida NO/NOx | M6, M8 | P2 |
+| E04 | GPT y eficiencia del convertidor | M6 | P1, vía NOx (duración experimental: 2 días) |
+| E05 | Verificación de corrección de firmware | M6 | P1, vía NOx |
+| E06 | Transmisión de línea O₃ | M4 | P2 (documental en E15 hasta ejecutarlo) |
+| E07 | Formación de NO₂ en línea | M6 | P2 |
+| E08 | Deriva de cero y span 24 h/7 d | M4 | precurso ≥7 d antes |
+| E09 | Calidad de aire cero | M4, M5 | P1, vía O₃ (prerrequisito de E01) |
+| E11 | Tiempo de respuesta t10/t90 | M5 | P1, vía O₃ (antes de E02) |
+| E14 | Recorrido documental de cadena metrológica | M1 | P1, vía O₃ |
+| E15 | Presupuesto híbrido del equipo propio | M7 | P1, convergencia de ambas vías; entregable evaluado de la práctica de laboratorio |
+| E16 | MCM con covarianza medida | M8 | P2 |
+
+E10, E12 y E13 quedan fuera de esta versión por falta de protocolo diseñado. Cómputo de tiempos y justificación de la división en subequipos: ver `practica/P0_agenda_dia2.md`.
+
+## Detalle del curso teórico
+
+### Objetivos de aprendizaje
+>>>>>>> Stashed changes
 
 Al finalizar recorrido obligatorio, participante puede:
 
@@ -80,7 +124,7 @@ Recorrido obligatorio: **462 min (7 h 42 min)**. Jornada nominal: **540 min (9 h
 
 ## Materiales
 
-1. `handout/handout_teorico_gum_o3.md` y `handout/handout_no_nox.md`.
+1. [Handout teórico GUM/O₃](handout/handout_teorico_gum_o3.md) y [handout NO, NO₂ y NOₓ](handout/handout_no_nox.md).
 2. Dataset multipunto O₃, dataset GPT/convertidor NOx y dataset de línea NOx, con metadata y semillas.
 3. Plantillas de presupuesto O₃ y NOx; plantilla NOx soporta covarianza y eficiencia.
 4. Caso público KRISS 2024 para M7.
@@ -89,7 +133,11 @@ Recorrido obligatorio: **462 min (7 h 42 min)**. Jornada nominal: **540 min (9 h
 
 ## Evaluación del curso
 
+<<<<<<< Updated upstream
 Ejercicios M1–M6 generan evidencia formativa. M7 aporta evidencia de competencia. Rúbrica de 10 puntos:
+=======
+**El curso teórico y la práctica complementaria se evalúan por separado.** Ejercicios M1–M6 generan evidencia formativa y M7 (caso KRISS/BIPM) aporta la evidencia de competencia del **curso teórico**, con o sin laboratorio. Cuando se realiza la **práctica de laboratorio**, `practica/E15_presupuesto_hibrido.md` (presupuesto híbrido del equipo propio) constituye un entregable evaluado **adicional e independiente**; no reemplaza al de M7 ni convierte a M7 en preparatorio. La rúbrica siguiente se aplica dos veces, una por entregable: para E15, léase "caso KRISS" como "presupuesto del equipo propio" y "validación externa" como la comparación con KRISS/BIPM u otra evidencia independiente.
+>>>>>>> Stashed changes
 
 | Criterio | Puntos |
 |---|---:|

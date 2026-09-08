@@ -8,6 +8,10 @@
 - **Materiales:** `cursov2/casos/extracto_kriss_2024.md`; BIPM.QM-K1 protocol v2.1, App. 1; presupuesto parcialmente resuelto; computador con calculadora u hoja de cálculo; lista combinada GUM §7 + QUAM cap. 9.
 - **Modalidad:** trabajo en equipos de dos o tres personas, seguido de revisión cruzada.
 - **Entregable:** presupuesto completado, declaración de resultado, propuesta de validación externa, frase de alcance y respuesta breve de transferencia del método a NOx.
+<<<<<<< Updated upstream
+=======
+- **Relación con la práctica de laboratorio:** este taller y su entregable son **independientes** de la práctica instrumental. El ejercicio con el caso KRISS/BIPM descrito aquí conserva íntegro su rol de cierre evaluado del curso teórico. `practica/E15_presupuesto_hibrido.md` es un **entregable separado y adicional** de la práctica de laboratorio, que aplica el mismo método a evidencia propia; ninguno reemplaza al otro y cada uno se evalúa por su cuenta.
+>>>>>>> Stashed changes
 - **Nivel de trabajo:** 100 nmol mol⁻¹.
 - **Fuentes de los datos:** resultados públicos de BIPM y KRISS. No se emplean datos operativos de organizaciones, redes o esquemas externos.
 
@@ -55,7 +59,7 @@ y=a_0+a_1x,
 
 con \(a_0=0.41\ \mathrm{nmol\ mol^{-1}}\), \(u(a_0)=0.28\ \mathrm{nmol\ mol^{-1}}\), \(a_1=0.9971\), \(u(a_1)=0.0046\) y \(\operatorname{cov}(a_0,a_1)=-3.47\times10^{-4}\ \mathrm{nmol\ mol^{-1}}\) (KRISS report, §14.1, ecuaciones 9–10, p. 9).
 
-**Apoyo en el handout:** ver `handout_teorico_gum_o3.md`, §1.1 — Mensurando y resultado de medición, §1.2 — Modelo de medición y §4.1 — Coeficientes de sensibilidad.
+**Apoyo en el handout:** ver [§1.1 — Mensurando y resultado de medición](../handout/gum_o3/O3_H01_conceptos_basicos.md#gum-mensurando-resultado), [§1.2 — Modelo de medición](../handout/gum_o3/O3_H01_conceptos_basicos.md#gum-modelo-medicion) y [§4.1 — Coeficientes de sensibilidad](../handout/gum_o3/O3_H04_propagacion_guf.md#gum-coef-sensibilidad).
 
 Para el valor \(x\) asignado por BIPM-SRP27, los coeficientes de sensibilidad son \(c_x=a_1\), \(c_{a_0}=1\) y \(c_{a_1}=x\). El docente distingue el presupuesto fotométrico que produce \(u(x)\) de la propagación posterior hacia \(y\).
 
@@ -65,7 +69,7 @@ Para el valor \(x\) asignado por BIPM-SRP27, los coeficientes de sensibilidad so
 
 **Idea fuerza:** la fotometría UV combina una contribución absoluta y contribuciones proporcionales a la fracción de ozono.
 
-**Apoyo en el handout:** ver `handout_teorico_gum_o3.md`, §3.2 — Distribución rectangular, §3.3 — Distribución normal y §3.4 — Distribución triangular, para leer la columna de distribuciones publicadas, y §4.4 — Presupuesto y contribuciones, para la estructura de la tabla.
+**Apoyo en el handout:** ver [§3.2 — Distribución rectangular](../handout/gum_o3/O3_H03_tipo_b_pdfs.md#gum-pdf-rectangular), [§3.3 — Distribución normal](../handout/gum_o3/O3_H03_tipo_b_pdfs.md#gum-pdf-normal) y [§3.4 — Distribución triangular](../handout/gum_o3/O3_H03_tipo_b_pdfs.md#gum-pdf-triangular), para leer la columna de distribuciones publicadas, y [§4.4 — Presupuesto y contribuciones](../handout/gum_o3/O3_H04_propagacion_guf.md#gum-presupuesto-contribuciones), para la estructura de la tabla.
 
 El presupuesto se declara aplicable a BIPM-SRP27 y BIPM-SRP28 entre 0 y 500 nmol mol⁻¹ (BIPM.QM-K1 protocol v2.1, App. 1 §1, p. 21).
 
@@ -105,13 +109,13 @@ El protocolo señala que las mediciones realizadas con el mismo SRP a distintas 
 u_c^2(y)=a_1^2u^2(x)+u^2(a_0)+x^2u^2(a_1)+2x\operatorname{cov}(a_0,a_1).
 \]
 
-**Apoyo en el handout:** ver `handout_teorico_gum_o3.md`, §4.2 — Ley de propagación de incertidumbre, para el término cruzado de covarianza con su signo, y §4.3 — Doble conteo: GUM §4.3.10.
+**Apoyo en el handout:** ver [§4.2 — Ley de propagación de incertidumbre](../handout/gum_o3/O3_H04_propagacion_guf.md#gum-ley-propagacion), para el término cruzado de covarianza con su signo, y [§4.3 — Doble conteo: GUM §4.3.10](../handout/gum_o3/O3_H04_propagacion_guf.md#gum-doble-conteo).
 
 QUAM cap. 8 recomienda representar entradas que comparten patrón, calibración o datos como dependientes cuando corresponda. Covarianza es término cruzado del modelo, no nueva fila positiva. Si se usa valor absoluto o se agrega como componente independiente, cambia modelo y varianza.
 
 El signo negativo no se elimina ni se reemplaza por valor absoluto. Para el ejercicio obligatorio se fija **\(k=2\)** como aproximación convencional a una cobertura de aproximadamente 95 %, adecuada para practicar construcción e interpretación del presupuesto cuando no se dispone de grados de libertad documentados para todas las entradas. Debe declararse que esta elección no sustituye una evaluación de cobertura más detallada cuando el uso previsto la exija.
 
-**Material avanzado opcional, fuera de la actividad de 24 min:** revisar JCGM 100:2008, Anexo G.4, y `handout_teorico_gum_o3.md`, §4.5, para estudiar Welch–Satterthwaite y la selección de un cuantil t cuando existan grados de libertad sustentados. No se asignan grados de libertad ficticios ni se calcula \(\nu_{eff}\) en el entregable obligatorio.
+**Material avanzado opcional, fuera de la actividad de 24 min:** revisar JCGM 100:2008, Anexo G.4, y [§4.5](../handout/gum_o3/O3_H04_propagacion_guf.md#gum-welch-satterthwaite), para estudiar Welch–Satterthwaite y la selección de un cuantil t cuando existan grados de libertad sustentados. No se asignan grados de libertad ficticios ni se calcula \(\nu_{eff}\) en el entregable obligatorio.
 
 ### Bloque 5 — Trabajo de equipos — 48–72 min (acumulado: 72 min)
 
@@ -119,7 +123,7 @@ Los equipos desarrollan la actividad de la sección 4 durante 24 min. El docente
 
 ### Bloque 6 — Revisión cruzada y cierre — 72–85 min (acumulado: 85 min)
 
-**Apoyo en el handout:** ver `handout_teorico_gum_o3.md`, §7.1 — Contenido mínimo, §7.2 — Forma de expresar resultado, §7.3 — Redondeo y §7.4 — Lista de comprobación, como pauta de la revisión cruzada del informe GUM §7.
+**Apoyo en el handout:** ver [§7.1 — Contenido mínimo](../handout/gum_o3/O3_H07_informe_gum.md#gum-informe-contenido-minimo), [§7.2 — Forma de expresar resultado](../handout/gum_o3/O3_H07_informe_gum.md#gum-informe-expresion), [§7.3 — Redondeo](../handout/gum_o3/O3_H07_informe_gum.md#gum-informe-redondeo) y [§7.4 — Lista de comprobación](../handout/gum_o3/O3_H07_informe_gum.md#gum-informe-checklist), como pauta de la revisión cruzada del informe GUM §7.
 
 Cada equipo intercambia presupuesto e informe. Lista combinada GUM §7 + QUAM cap. 9 verifica:
 

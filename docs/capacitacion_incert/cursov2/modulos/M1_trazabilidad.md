@@ -32,11 +32,11 @@ En este módulo vamos a construir una imagen sencilla pero rigurosa de la trazab
 
 La trazabilidad no es una etiqueta adherida al instrumento ni una propiedad que se obtiene únicamente por tener un certificado vigente. Es una propiedad del **resultado de medición**. Ese resultado debe poder relacionarse con una referencia mediante una secuencia documentada y sin interrupciones de calibraciones. En cada calibración se compara, asigna o transfiere un valor, y cada una incorpora incertidumbre. Por eso la pregunta precisa no es «¿este equipo es trazable?», sino «¿este resultado, obtenido bajo estas condiciones y con esta calibración, conserva una cadena demostrable hasta la referencia?».
 
-**Apoyo en el handout:** ver *Handout teórico GUM–O₃*, §1.5 — Trazabilidad metrológica, y §1.1 — Mensurando y resultado de medición.
+**Apoyo en el handout:** ver [*Handout teórico GUM–O₃*, §1.5](../handout/gum_o3/O3_H01_conceptos_basicos.md#gum-trazabilidad-metrologica) — Trazabilidad metrológica, y [§1.1 — Mensurando y resultado de medición](../handout/gum_o3/O3_H01_conceptos_basicos.md#gum-mensurando-resultado).
 
 Un certificado puede ser una evidencia importante, pero no reemplaza el análisis de la cadena. También deben conocerse el mensurando, el intervalo, el procedimiento aplicado, las condiciones de medición, la incertidumbre declarada y la estabilidad entre calibraciones. QUAM recalca que la trazabilidad y la incertidumbre deben sostener cada enlace: un certificado cuyo mensurando no sea compatible, cuyo alcance no cubra el uso o cuya estabilidad no esté demostrada no establece por sí solo la trazabilidad del resultado.
 
-**Referencias exactas:** JCGM GUM-1:2023, §§2.5 y 3.1–3.5, páginas impresas 2–4; Eurachem/CITAC QUAM 2012, §3.3, p. editorial 9 (PDF p. 15); USEPA, *Quality Assurance Handbook for Air Pollution Measurement Systems, Volume II*, §12.1, páginas impresas 3–4 del capítulo (PDF 118–119); *Handout teórico GUM–O₃*, §1.5.
+**Referencias exactas:** JCGM GUM-1:2023, §§2.5 y 3.1–3.5, páginas impresas 2–4; Eurachem/CITAC QUAM 2012, §3.3, p. editorial 9 (PDF p. 15); USEPA, *Quality Assurance Handbook for Air Pollution Measurement Systems, Volume II*, §12.1, páginas impresas 3–4 del capítulo (PDF 118–119); [*Handout teórico GUM–O₃*, §1.5](../handout/gum_o3/O3_H01_conceptos_basicos.md#gum-trazabilidad-metrologica).
 
 ### 3.2 Por qué el ozono exige generación dinámica — 4 a 9 min
 
@@ -72,7 +72,7 @@ La compatibilidad del mensurando es crítica. No basta con que todos los documen
 
 También debemos separar trazabilidad y aptitud para el propósito. Un resultado puede tener una cadena documentada y, aun así, una incertidumbre demasiado grande para el uso previsto. La trazabilidad hace auditable el linaje del valor; la aptitud exige además juzgar si el desempeño y la incertidumbre son suficientes.
 
-**Referencias exactas:** JCGM GUM-1:2023, §§3.1–3.5, 4.4 y 4.7, páginas impresas 3–6; USEPA, *Quality Assurance Handbook for Air Pollution Measurement Systems, Volume II*, §12.1, páginas impresas 3–6 del capítulo (PDF 118–121), en particular la definición de cadena ininterrumpida; *Handout teórico GUM–O₃*, §1.5.
+**Referencias exactas:** JCGM GUM-1:2023, §§3.1–3.5, 4.4 y 4.7, páginas impresas 3–6; USEPA, *Quality Assurance Handbook for Air Pollution Measurement Systems, Volume II*, §12.1, páginas impresas 3–6 del capítulo (PDF 118–121), en particular la definición de cadena ininterrumpida; [*Handout teórico GUM–O₃*, §1.5](../handout/gum_o3/O3_H01_conceptos_basicos.md#gum-trazabilidad-metrologica).
 
 ### 3.4 Jerarquía SRP, patrones de transferencia y analizador — 14 a 20 min
 
@@ -88,7 +88,7 @@ El siguiente enlace es el **patrón de transferencia de Nivel 2**. Se calibra po
 
 Finalmente aparece el **analizador**. Este recibe ozono generado y asignado por el patrón de transferencia aplicable. La comparación puede producir una función de calibración, ajustes, correcciones o evidencia de desempeño. El resultado posterior conserva trazabilidad solo si el analizador se usa dentro de las condiciones y el intervalo cubiertos, se controlan los cambios relevantes y se mantiene vigente la cadena.
 
-**Apoyo en el handout:** ver *Handout teórico GUM–O₃*, §1.5 — Trazabilidad metrológica, para la cadena SRP → transferencia → analizador y la acumulación de incertidumbre por enlace.
+**Apoyo en el handout:** ver [*Handout teórico GUM–O₃*, §1.5](../handout/gum_o3/O3_H01_conceptos_basicos.md#gum-trazabilidad-metrologica) — Trazabilidad metrológica, para la cadena SRP → transferencia → analizador y la acumulación de incertidumbre por enlace.
 
 La secuencia puede verbalizarse así: el SRP de Nivel 1 asigna valores al patrón de Nivel 2; el Nivel 2 puede asignarlos a un Nivel 3; y el patrón aplicable asigna valores de calibración al analizador. Cada flecha representa una comparación documentada. Sobre ella deben poder escribirse una fecha, un procedimiento, un intervalo, un resultado y una incertidumbre.
 
@@ -108,7 +108,7 @@ La **incertidumbre propia del analizador** describe las contribuciones de su ind
 
 La **incertidumbre del valor transferido** corresponde a la comparación concreta entre patrón y analizador. Puede integrar la incertidumbre del valor suministrado por el patrón y las contribuciones del proceso de transferencia: estabilidad durante la comparación, pérdidas en el sistema, aire cero, repetibilidad de los puntos, regresión, resolución y condiciones operativas. Acompaña al valor o a la función asignada al analizador durante la calibración.
 
-**Apoyo en el handout:** ver *Handout teórico GUM–O₃*, §1.3 — Error e incertidumbre no son sinónimos, y §1.4 — Incertidumbre estándar, combinada y expandida, para el vocabulario con que se distinguen estas tres incertidumbres.
+**Apoyo en el handout:** ver [*Handout teórico GUM–O₃*, §1.3 — Error e incertidumbre no son sinónimos](../handout/gum_o3/O3_H01_conceptos_basicos.md#gum-error-vs-incertidumbre), y [§1.4 — Incertidumbre estándar, combinada y expandida](../handout/gum_o3/O3_H01_conceptos_basicos.md#gum-tipos-incertidumbre), para el vocabulario con que se distinguen estas tres incertidumbres.
 
 Para evitar confusiones, preguntemos: «¿de quién es el resultado y en qué etapa se produce?». Si hablamos del valor entregado por el patrón, evaluamos el patrón. Si hablamos de una lectura posterior del analizador, evaluamos el analizador con su calibración vigente. Si hablamos del valor asignado durante la calibración, evaluamos la transferencia. Cuando un valor pasa por varios niveles, la incertidumbre recibida no se borra: se propaga y se combina con las nuevas contribuciones.
 
@@ -116,7 +116,7 @@ Para evitar confusiones, preguntemos: «¿de quién es el resultado y en qué et
 
 Como anticipo, el ejemplo A3 de QUAM ilustra una cadena en etapas. Para componentes comunes y correlaciones, la referencia pertinente es QUAM cap. 8, p. editorial 27 (PDF p. 33), junto con el ejemplo A5, pp. editoriales 72–80 (PDF pp. 78–86); en M5 se retomará esta idea para la cadena SRP–patrón de transferencia–analizador.
 
-**Referencias exactas:** JCGM GUM-1:2023, §§2.5, 4.4, 4.7 y 5.3, páginas impresas 2 y 5–7; Eurachem/CITAC QUAM 2012, cap. 2, pp. editoriales 4–6 (PDF pp. 10–12), cap. 8, p. editorial 27 (PDF p. 33), y ejemplo A5, pp. editoriales 72–80 (PDF pp. 78–86); *Handout teórico GUM–O₃*, §1.5; USEPA, *Quality Assurance Handbook for Air Pollution Measurement Systems, Volume II*, §12.1, páginas impresas 3–6 del capítulo (PDF 118–121).
+**Referencias exactas:** JCGM GUM-1:2023, §§2.5, 4.4, 4.7 y 5.3, páginas impresas 2 y 5–7; Eurachem/CITAC QUAM 2012, cap. 2, pp. editoriales 4–6 (PDF pp. 10–12), cap. 8, p. editorial 27 (PDF p. 33), y ejemplo A5, pp. editoriales 72–80 (PDF pp. 78–86); [*Handout teórico GUM–O₃*, §1.5](../handout/gum_o3/O3_H01_conceptos_basicos.md#gum-trazabilidad-metrologica); USEPA, *Quality Assurance Handbook for Air Pollution Measurement Systems, Volume II*, §12.1, páginas impresas 3–6 del capítulo (PDF 118–121).
 
 ## 4. Ejercicio/actividad
 
@@ -134,7 +134,7 @@ Como anticipo, el ejemplo A3 de QUAM ilustra una cadena en etapas. Para componen
 
 **Resultado esperado:** un diagrama de una línea de trazabilidad, desde el SRP de Nivel 1 hasta el analizador, con cada enlace documentado, las correcciones `C`, las fallas o controles `F` y los vacíos señalados como acciones de seguimiento.
 
-**Referencia para revisar el resultado:** JCGM GUM-1:2023, §§3.1–3.5, 4.4, 4.7 y 5.3, páginas impresas 3–7; USEPA, *Quality Assurance Handbook for Air Pollution Measurement Systems, Volume II*, §12.1, páginas impresas 3–6 del capítulo (PDF 118–121); *Handout teórico GUM–O₃*, §1.5.
+**Referencia para revisar el resultado:** JCGM GUM-1:2023, §§3.1–3.5, 4.4, 4.7 y 5.3, páginas impresas 3–7; USEPA, *Quality Assurance Handbook for Air Pollution Measurement Systems, Volume II*, §12.1, páginas impresas 3–6 del capítulo (PDF 118–121); [*Handout teórico GUM–O₃*, §1.5](../handout/gum_o3/O3_H01_conceptos_basicos.md#gum-trazabilidad-metrologica).
 
 ## 5. Errores frecuentes y preguntas típicas
 

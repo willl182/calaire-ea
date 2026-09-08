@@ -1,0 +1,197 @@
+# M2 — Modelo de medición: fotometría UV y Beer–Lambert
+
+## 1. Ficha
+
+**Título:** M2 — Modelo de medición: fotometría UV y Beer–Lambert  
+**Duración total:** 48 min  
+**Distribución:** exposición guiada, 36 min; ejercicio de sensibilidad y especificación del mensurando, 12 min.  
+**Posición en la jornada:** segundo módulo del curso, inmediatamente después de M1 y antes de la introducción sistemática a los conceptos GUM de M3.  
+**Prerrequisito:** M1, en particular la distinción entre mensurando, referencia, instrumento y cadena de trazabilidad.  
+**Materiales:** diapositiva o pizarra para las ecuaciones; calculadora básica; hoja del ejercicio; extractos de 40 CFR 50 Appendix D, NISTIR 6963, JCGM GUM-6:2020 y handout teórico del curso.
+
+**Idea fuerza del módulo:** una ecuación de medición no es solo una fórmula para obtener un número. Es una representación física que permite identificar qué magnitudes influyen, en qué dirección lo hacen y cuánto aporta la incertidumbre de cada una. En fotometría UV, la temperatura, la presión, la longitud óptica y el coeficiente de absorción producen dependencias proporcionales a la fracción molar; el cociente de intensidades entra mediante un logaritmo y requiere especial atención cuando la transmitancia se aproxima a uno.
+
+## 2. Objetivos específicos
+
+Al finalizar el módulo, la persona participante podrá:
+
+1. **Explicar** cómo la disminución de intensidad UV se relaciona con la cantidad de ozono mediante la ley de Beer–Lambert.
+2. **Formular** el modelo de fracción molar \(x=-k_BT\ln(D)/(\sigma LP)\), identificando el significado y las unidades de sus magnitudes de entrada.
+3. **Derivar** los coeficientes de sensibilidad respecto de \(L\), \(T\), \(P\), \(D\) y \(\sigma\).
+4. **Clasificar** fuentes físicas de incertidumbre como aproximadamente constantes o proporcionales a la fracción molar, cuando el modelo y la evidencia sustenten esa clasificación.
+5. **Calcular y comparar** las contribuciones estándar asociadas a temperatura y presión en un punto de medición dado.
+6. **Redactar** una especificación completa del mensurando y declarar las fronteras del sistema de medición.
+
+## 3. Guion de exposición con tiempos
+
+### 3.1 Subbloque 1 — De la absorción UV al mensurando (0–10 min; acumulado: 10 min)
+
+**Idea fuerza:** el fotómetro no observa directamente una fracción molar; observa una disminución de intensidad y la convierte mediante un modelo físico.
+
+**Guion dictable:** Comencemos por separar tres elementos. El mensurando es la fracción molar de ozono que queremos atribuir al gas. Las observaciones primarias son dos intensidades ópticas: \(I_0\), obtenida para una condición de referencia sin absorción de ozono, e \(I\), obtenida cuando el ozono está presente en el trayecto óptico. El puente entre ambas observaciones y el mensurando es la ley de Beer–Lambert.
+
+Antes de modelar, debe especificarse qué resultado se atribuirá. «Concentración de ozono» es insuficiente. Una formulación adecuada para el caso fotométrico es: «fracción molar de O₃ en aire seco dentro de la celda fotométrica, en nmol mol⁻¹, atribuida mediante Beer–Lambert bajo T y P medidas». QUAM establece una declaración inequívoca del mensurando y un modelo coherente con ella (QUAM cap. 5, pp. editoriales 12–13; PDF pp. 18–19).
+
+Para un resultado de estación debe declararse, no presuponerse, si el mensurando incluye línea, filtro, acondicionamiento, intervalo de promedio y representatividad espacial o temporal. Esas fronteras determinan qué fuentes pertenecen al presupuesto fotométrico y cuáles pertenecen al resultado operativo de red.
+
+La transmitancia se define como
+
+\[
+D=\frac{I}{I_0}.
+\]
+
+La formulación reglamentaria expresa
+
+\[
+\text{Transmittance}=\frac{I}{I_0}=e^{-\alpha c l},
+\]
+
+y, al despejar la concentración expresada en partes por millón,
+
+\[
+c(\text{ppm})=-\frac{10^6}{\alpha l}\ln\left(\frac{I}{I_0}\right).
+\]
+
+La lectura física es directa. Sin absorción, \(I\) e \(I_0\) son casi iguales, \(D\) se aproxima a uno y \(\ln D\) se aproxima a cero. Al aumentar la cantidad de ozono en el camino óptico, disminuye \(D\), el logaritmo se hace más negativo y el signo negativo situado delante de la expresión produce una concentración positiva.
+
+**Apoyo en el handout:** ver Handout teórico, §1.1 — Mensurando y resultado de medición, y §1.2 — Modelo de medición, para la separación entre mensurando, observaciones y modelo.
+
+La regla final de la EPA de 2023 adopta para el coeficiente de absorción del ozono el valor \(304.39\ \text{atm}^{-1}\text{cm}^{-1}\), con incertidumbre estándar \(0.94\ \text{atm}^{-1}\text{cm}^{-1}\). La incertidumbre estándar relativa correspondiente es aproximadamente \(0.31\,\%\). Este parámetro fija la escala de la medición: una variación relativa en el coeficiente produce una variación relativa de igual magnitud y signo contrario en el resultado calculado.
+
+**Referencia exacta del bloque:** Eurachem/CITAC QUAM 2012, cap. 5, pp. editoriales 12–13 (PDF pp. 18–19); EPA, final rule 2023; **40 CFR Part 50, Appendix D, §4.1**; *Federal Register*, página **70595**, página **1 del PDF**, ecuaciones \(\text{Transmittance}=I/I_0=e^{-\alpha c l}\) y \(c(\text{ppm})=-10^6(\alpha l)^{-1}\ln(I/I_0)\). NISTIR 6963, **§3, página impresa 7**, para el principio de fotometría UV.
+
+### 3.2 Subbloque 2 — Modelo de fracción molar y condiciones físicas (10–21 min; acumulado: 21 min)
+
+**Idea fuerza:** temperatura y presión conectan la absorción observada con el número de moléculas y, por tanto, con la fracción molar.
+
+**Guion dictable:** Para trabajar con fracción molar emplearemos como contenido maestro el modelo
+
+\[
+x=-\frac{k_B T\ln(D)}{\sigma L P},
+\]
+
+donde \(x\) es la fracción molar, \(k_B\) es la constante de Boltzmann, \(T\) es la temperatura termodinámica del gas, \(P\) es la presión absoluta, \(\sigma\) es la sección eficaz de absorción por molécula, \(L\) es la longitud óptica efectiva y \(D=I/I_0\) es la transmitancia.
+
+Leamos el modelo antes de calcular. La temperatura aparece en el numerador: manteniendo fijas las demás magnitudes de entrada, una temperatura mayor produce una fracción molar calculada mayor. Presión, longitud óptica y sección eficaz aparecen en el denominador: si cualquiera aumenta mientras la absorción observada permanece fija, la fracción molar calculada disminuye. La transmitancia está dentro de un logaritmo y, por ello, su comportamiento no es simplemente proporcional.
+
+El modelo obliga a revisar las unidades y la realización de cada magnitud. \(T\) debe ser temperatura termodinámica, no un valor Celsius insertado directamente. \(P\) debe ser presión absoluta, no manométrica. \(L\) debe representar el trayecto óptico efectivo y no solo una dimensión nominal. La definición y las unidades de \(\sigma\) deben ser compatibles con la formulación molecular. Si se usa el coeficiente \(\alpha\) en \(\text{atm}^{-1}\text{cm}^{-1}\), corresponde emplear la forma reglamentaria y las conversiones pertinentes, no sustituirlo automáticamente en la ecuación molecular.
+
+QUAM distingue entre un **modelo físico racional**, que busca representar una relación física independiente del procedimiento, y un **resultado operacional**, cuya definición puede incorporar muestreo, acondicionamiento y promedio. Beer–Lambert es el núcleo físico; un resultado de red puede requerir factores o términos adicionales. Por ejemplo, sin imponerlos al modelo maestro:
+
+\[
+x_{resultado}=x_{BL}\,f_{linea}\,f_h+b_0,
+\]
+
+donde `f_linea` representa una corrección residual de transmisión, `f_h` una corrección residual de humedad y `b_0` una corrección aditiva de cero. Cada término se conserva solo si corresponde al mensurando y al sistema declarados, con su evidencia e incertidumbre.
+
+La ecuación (4) de la regulación hace visibles correcciones equivalentes mediante los factores \(T/273\) y \(760/P\), junto con una corrección de longitud asociada a pérdidas de ozono. Esa escritura y el modelo basado en \(k_B\) representan la misma necesidad física: relacionar la absorción con las condiciones del gas y con el camino efectivo de las moléculas que llegan a la celda.
+
+**Referencia exacta del bloque:** **40 CFR Part 50, Appendix D, §4.5.3.10**; *Federal Register*, página **70599**, página **5 del PDF**, ecuación (4), incluidos \(T/273\), \(760/P\) y la corrección de \(L\) por pérdidas. Handout teórico, **§1.2**, modelo de medición. JCGM GUM-6:2020, **§§5.5–5.9 y 6.1–6.7, páginas impresas 4–9**, para especificación y construcción del modelo. Eurachem/CITAC QUAM 2012, caps. 4–5, pp. editoriales 10–13 (PDF pp. 16–19), para flujo de evaluación, modelos racionales y mensurandos operacionales; ejemplo A5, pp. editoriales 72–80 (PDF pp. 78–86).
+
+### 3.3 Subbloque 3 — Coeficientes de sensibilidad (21–29 min; acumulado: 29 min)
+
+**Idea fuerza:** una derivada convierte la incertidumbre de una magnitud de entrada, expresada en su unidad, en una contribución expresada en la unidad del mensurando.
+
+**Guion dictable:** Para el modelo \(x=f(T,P,L,\sigma,D)\), cada coeficiente de sensibilidad es una derivada parcial evaluada a partir de las mejores estimaciones disponibles. Las derivadas son
+
+\[
+c_T=\frac{\partial x}{\partial T}=\frac{x}{T},
+\qquad
+c_P=\frac{\partial x}{\partial P}=-\frac{x}{P},
+\]
+
+\[
+c_L=\frac{\partial x}{\partial L}=-\frac{x}{L},
+\qquad
+c_\sigma=\frac{\partial x}{\partial \sigma}=-\frac{x}{\sigma},
+\]
+
+\[
+c_D=\frac{\partial x}{\partial D}
+=-\frac{k_B T}{\sigma LPD}
+=\frac{x}{D\ln D}.
+\]
+
+**Apoyo en el handout:** ver Handout teórico, §4.1 — Coeficientes de sensibilidad, donde estas mismas derivadas del modelo de Beer–Lambert están desarrolladas paso a paso.
+
+Los signos tienen interpretación física. \(c_T\) es positivo porque un incremento de temperatura incrementa el valor calculado de \(x\). Los coeficientes de presión, longitud y sección eficaz son negativos porque esas magnitudes dividen la expresión. Como \(0<D<1\), \(\ln D\) es negativo; por ello \(c_D\) también es negativo: una transmitancia mayor representa menor absorción y conduce a una fracción molar menor.
+
+La contribución estándar de una magnitud de entrada \(q_i\) se calcula como
+
+\[
+u_i(x)=|c_i|u(q_i).
+\]
+
+El signo no debe borrarse del razonamiento, porque permite interpretar la respuesta del modelo y resulta necesario al considerar covarianzas. No obstante, para comparar magnitudes de contribuciones independientes se usa el valor absoluto y, al combinar varianzas, cada contribución aparece al cuadrado.
+
+Las sensibilidades relativas de \(T\), \(P\), \(L\) y \(\sigma\) tienen magnitud uno. Un cambio relativo pequeño de uno por ciento en cualquiera produce, en primera aproximación, un cambio relativo de uno por ciento en \(x\), con el signo correspondiente. La sensibilidad a \(D\) contiene \(1/(D\ln D)\). Cuando \(D\) se aproxima a uno, \(\ln D\) se aproxima a cero y la sensibilidad puede crecer; por eso la resolución y estabilidad del cociente de intensidades adquieren especial importancia a baja absorción.
+
+**Referencia exacta del bloque:** Handout teórico, **§4.1**, coeficientes de sensibilidad. JCGM GUM-6:2020, **§§7.1–7.2, páginas impresas 9–10**, evaluación del modelo y sensibilidades. NISTIR 6963, **§11, páginas impresas 14–15**, ecuaciones y presupuesto de incertidumbre.
+
+### 3.4 Subbloque 4 — Fuentes físicas y componentes constantes o proporcionales (29–36 min; acumulado: 36 min)
+
+**Idea fuerza:** el presupuesto debe representar mecanismos físicos; copiar especificaciones sin conectarlas con el modelo no basta.
+
+**Guion dictable:** Para identificar fuentes sin copiar listas, QUAM propone recorrer tanto la ecuación como el proceso y depurar duplicados. Organice el análisis en cuatro grupos: **entradas explícitas** \(T, P, L, \sigma, D\); **operaciones** de generación, transporte, acondicionamiento, lectura y procesamiento; **fuentes externas** como ambiente, interferentes, estabilidad y calibración; y **depuración** de efectos ya cubiertos por otra cifra. Esta estructura procede de QUAM cap. 6, pp. editoriales 14–15 (PDF pp. 20–21), App. C, p. editorial 101 (PDF p. 107), y App. D, pp. editoriales 102–103 (PDF pp. 108–109).
+
+Conectemos cada término con la realización práctica. Primero, las pérdidas de ozono en líneas, conexiones o superficies hacen que la cantidad que llega a la celda sea menor que la presente aguas arriba. La regulación incorpora una corrección asociada a la longitud o al factor de pérdida. Los materiales de las líneas deben seleccionarse y acondicionarse para minimizar reactividad. Una pérdida conocida debe corregirse; la incertidumbre de esa corrección permanece en el presupuesto.
+
+Segundo, los gradientes de temperatura importan porque el valor introducido en la ecuación debe representar el gas en la región pertinente. Un sensor exacto situado en un punto no representativo no elimina la deficiencia del modelo. Deben considerarse calibración, resolución, estabilidad y diferencia entre la temperatura indicada y la temperatura efectiva de la celda.
+
+Tercero, la exactitud de presión influye de manera inversa. Debe verificarse que la presión sea absoluta, que el punto de medición represente la celda y que no se omitan caídas de presión. Calibración, resolución y estabilidad del sensor son fuentes separadas solamente si representan efectos que no están contenidos en una estimación agregada.
+
+Cuarto, la resolución del cociente de intensidades afecta \(D\). Intervienen resolución digital, ruido óptico, estabilidad de la fuente, detección electrónica y cálculo de \(I/I_0\). Debido a la función logarítmica, una resolución fija de señal puede comportarse aproximadamente como una contribución constante en unidades de fracción molar dentro de un intervalo limitado y puede dominar cerca de cero.
+
+**Apoyo en el handout:** ver Handout teórico, §4.4 — Presupuesto y contribuciones, para la organización de estos efectos en un presupuesto, y §3.2 — Distribución rectangular, para el tratamiento de la resolución.
+
+Conviene distinguir componentes proporcionales y constantes. Incertidumbres relativas aproximadamente constantes de \(\sigma\), \(L\), \(T\) y \(P\) producen contribuciones que aumentan con \(x\). Por ejemplo, la incertidumbre relativa de \(0.31\,\%\) del coeficiente de absorción aporta aproximadamente \(0.31\,\%\) del valor medido. En cambio, resolución, ruido de señal, corrección residual de cero o una pérdida expresada como cantidad fija pueden aportar una magnitud casi constante. Esta clasificación depende del modelo y de la evidencia y no debe imponerse por conveniencia.
+
+**Referencia exacta del bloque:** NISTIR 6963, **§§7–8, páginas impresas 9–10**, materiales y líneas; **§11, páginas impresas 14–15**, presupuesto. **40 CFR Part 50, Appendix D, §4.5.3.10** y *Federal Register*, página **70599**, página **5 del PDF**, corrección de longitud por pérdidas. JCGM GUM-6:2020, **§§5.5–5.9, páginas impresas 4–6**, identificación y representación de efectos. Eurachem/CITAC QUAM 2012, cap. 6, pp. editoriales 14–15 (PDF pp. 20–21), App. C, p. editorial 101 (PDF p. 107), y App. D, pp. editoriales 102–103 (PDF pp. 108–109).
+
+## 4. Ejercicio/actividad
+
+**Título:** Sensibilidad de la fracción molar a temperatura y presión  
+**Tiempo:** 12 min, del minuto 36 al 48.  
+**Organización sugerida:** 2 min para especificar mensurando y fronteras; 5 min de cálculo individual; 3 min de comparación en parejas; 2 min de puesta en común.
+
+**Enunciado completo:** Para una medición de fracción molar, calcule los coeficientes de sensibilidad respecto de temperatura y presión y sus contribuciones estándar. Interprete el signo de cada coeficiente y compare las magnitudes obtenidas. La comparación debe hacerse después de convertir ambas incertidumbres de entrada a la unidad del mensurando.
+
+**Datos de entrada:**
+
+- \(x=100\ \text{nmol/mol}\)
+- \(T=298.15\ \text{K}\)
+- \(P=101.325\ \text{kPa}\)
+- \(u(T)=0.15\ \text{K}\)
+- \(u(P)=0.05\ \text{kPa}\)
+- \(c_T=x/T\)
+- \(c_P=-x/P\)
+- \(u_T(x)=|c_T|u(T)\)
+- \(u_P(x)=|c_P|u(P)\)
+
+**Tareas:**
+
+1. Calcule \(c_T\) en \(\text{nmol mol}^{-1}\text{K}^{-1}\).
+2. Calcule \(c_P\) en \(\text{nmol mol}^{-1}\text{kPa}^{-1}\).
+3. Calcule \(u_T(x)\) y \(u_P(x)\) en \(\text{nmol/mol}\).
+4. Explique por qué \(c_T\) es positivo y \(c_P\) es negativo.
+5. Indique cuál contribución es mayor y si la diferencia es relevante para este ejemplo.
+6. Complete esta frase: «fracción molar de O₃ en ________, atribuida al punto ________, expresada en ________, obtenida mediante ________ y promediada durante ________; línea, filtro, acondicionamiento y representatividad quedan [incluidos/excluidos]».
+7. Indique si los valores de T y P representan el sensor, el gas real dentro de la celda o ambos; anote la evidencia o el vacío.
+8. Añada una fuente que no aparezca explícita en la ecuación básica e indique si entraría como factor unitario, término aditivo u otra entrada del modelo.
+
+**Recurso opcional para comprobar sensibilidades:** QUAM App. E.2 propone perturbar una entrada en \(u(x_i)\), recalcular la salida y comparar el cambio con \(|c_i|u(x_i)\). Esta comprobación por hoja de cálculo ayuda cuando las derivadas son menos accesibles, pero no reemplaza la derivación principal (QUAM App. E.2, pp. editoriales 106–107; PDF pp. 112–113).
+
+**Resultado esperado, en una línea:** \(c_T\approx0.335\ \text{nmol mol}^{-1}\text{K}^{-1}\), \(c_P\approx-0.987\ \text{nmol mol}^{-1}\text{kPa}^{-1}\), \(u_T\approx0.0503\ \text{nmol/mol}\), \(u_P\approx0.0494\ \text{nmol/mol}\); las magnitudes son similares.
+
+## 5. Errores frecuentes y preguntas típicas
+
+1. **¿Se puede usar temperatura en grados Celsius dentro del modelo?** No. La ecuación requiere temperatura termodinámica expresada en kelvin.
+2. **¿El signo negativo de \(c_P\) significa incertidumbre negativa?** No. El signo indica la dirección del cambio de \(x\); la incertidumbre estándar y la magnitud de la contribución son no negativas.
+3. **¿El valor nominal de la longitud de la celda siempre es \(L\)?** No necesariamente. Debe representar la longitud óptica efectiva y considerar la corrección aplicable por pérdidas.
+4. **¿La mayor incertidumbre numérica de entrada produce siempre la mayor contribución?** No. Primero debe multiplicarse cada incertidumbre por su coeficiente de sensibilidad y comparar en la unidad de salida.
+5. **¿Basta escribir “concentración de ozono” como mensurando?** No. Deben declararse especie, matriz, punto físico, unidad, condiciones, procedimiento, promedio y fronteras pertinentes.
+6. **¿Todos los efectos son proporcionales a la fracción molar?** No. Los efectos de escala suelen ser proporcionales, mientras que la resolución, el ruido o el cero pueden comportarse aproximadamente como componentes constantes en un intervalo definido.
+
+## 6. Cierre y transición al M3
+
+El modelo físico nos permitió identificar magnitudes de entrada, signos y factores de conversión hacia la fracción molar. En M3 se usará esta estructura para asignar incertidumbres estándar a las magnitudes de entrada, distinguir evaluaciones Tipo A y Tipo B y comenzar a construir un presupuesto de incertidumbre defendible.

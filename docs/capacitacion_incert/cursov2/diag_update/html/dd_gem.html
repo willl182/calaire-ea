@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnóstico Final: Arquitectura Documental cursov2</title>
+    <style>
+        body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 2rem; color: #333; background: #fdfdfd; }
+        h1, h2 { color: #2c3e50; }
+        h1 { border-bottom: 2px solid #eaeaea; padding-bottom: 0.5rem; margin-bottom: 2rem; }
+        h2 { margin-top: 2rem; border-bottom: 1px solid #eaeaea; padding-bottom: 0.3rem; }
+        pre { background: #f4f6f8; padding: 1rem; border-radius: 6px; overflow-x: auto; border: 1px solid #e1e4e8; }
+        code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 0.9em; }
+        ul, ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+        li { margin-bottom: 0.5rem; }
+        strong { color: #0366d6; }
+    </style>
+</head>
+<body>
+    <h1>Diagnóstico Final: Arquitectura Documental cursov2</h1>
+
+    <h2>1. Problema Raíz</h2>
+    <p>Módulos mezclan capas. Capa 0 (Meta/Instructor) fusionada con Capa 1 (Material Participante). 42% de <code>modulos/</code> es instrucción meta. Handout O₃ falla como material porque duplica Capa 1 y mezcla anexos con teoría. Handout NOx funciona bien como ficha. Diapositivas (Capa 2 y 3) no existen. <code>solo_md/</code> diverge por copia manual. Vocabulario operativo invertido (M1 usa términos definidos en M3 o handout).</p>
+
+    <h2>2. Modelo de Capas Objetivo (Flujo de Derivación)</h2>
+    <ul>
+        <li><strong>Capa 0 (Meta Maestro):</strong> Fuente única (<code>modulos/</code>). Contiene todo: minutaje, notas, guion, soluciones.</li>
+        <li><strong>Capa 1 (Material Teórico):</strong> Derivada de Capa 0. Prosa limpia para participante. Sin minutaje ni notas de instructor.</li>
+        <li><strong>Capa 2 (Guion Diapositivas):</strong> Derivada de Capa 1. Texto telegráfico.</li>
+        <li><strong>Capa 3 (Diapositivas Visuales):</strong> Capa 2 + diseño visual.</li>
+        <li><strong>Capa R (Referencia/Anexos):</strong> Perpendicular. Glosario, tablas, fórmulas, checklists. (Handouts rediseñados).</li>
+        <li><strong>Protocolos Prácticos:</strong> Autónomos para campo/laboratorio.</li>
+        <li><strong>Solucionarios:</strong> Privados, paso a paso.</li>
+    </ul>
+
+    <h2>3. Esquema de Marcado (Fuente Única)</h2>
+    <p>Ideas nuevas nacen en Capa 0. Extraer mecánicamente otras capas usando etiquetas regulares:</p>
+    <pre><code>### 3.N Título — 0:mm a 0:mm; acumulado 0:mm      &lt;- Capa 0
+**Idea fuerza:**                                  &lt;- Capa 2
+**Guion dictable:**                               &lt;- Capa 0, 1
+**Puntos:**                                       &lt;- Capa 2
+**Apoyo visual:**                                 &lt;- Capa 3
+**Nota de facilitación:**                         &lt;- Capa 0
+**Referencias exactas:**                          &lt;- Capa 0, 1 (corta)
+**Apoyo en la referencia:**                       &lt;- Capa 0</code></pre>
+
+    <h2>4. Plan de Acción (Resolución de Deuda)</h2>
+    <ol>
+        <li><strong>Declarar capas:</strong> Actualizar <code>README.md</code>. Fijar convención de bloques. Renombrar/declarar handout como Capa R.</li>
+        <li><strong>Resolver vocabulario (Inversión M1/M3):</strong> Crear bloque M0 (15-20 min) para términos básicos antes de M1. Robusto ante falta de prelectura.</li>
+        <li><strong>Estandarizar M5, M6, M8:</strong> Escribir <code>Guion dictable</code> faltante.</li>
+        <li><strong>Etiquetar M1-M4, M7:</strong> Aplicar convención de marcado a discurso existente.</li>
+        <li><strong>Podar handout O₃:</strong> Eliminar ~520 líneas duplicadas. Dejar solo glosario, tabla PDF, propagación, checklist (Capa R pura).</li>
+        <li><strong>Automatizar derivación:</strong> Crear <code>build_capas.py</code> para generar Capa 1, 2, 3 y <code>solo_md/</code> desde Capa 0. Evita drift silencioso.</li>
+    </ol>
+</body>
+</html>

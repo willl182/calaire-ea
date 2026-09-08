@@ -7,7 +7,7 @@
 - **Duración adicional:** 30 min, fuera de jornada nominal de 9 h y del recorrido obligatorio de 462 min.
 - **Posición:** último módulo del paquete, posterior al taller integrador M7 que cierra recorrido obligatorio.
 - **Prerrequisitos:** reconocer mensurando, modelo de medición, magnitudes de entrada, incertidumbre estándar, coeficientes de sensibilidad, distribuciones normal, rectangular y triangular, incertidumbre expandida e intervalo de cobertura.
-- **Materiales:** computador con R base; proyector o pantalla compartida; archivo `cursov2/scripts/demo_mcm_beer_lambert.R`; imagen `cursov2/scripts/demo_mcm_pdf_salida.png`; handout, §§5–6; pizarra o diapositiva para anotar los dos intervalos y la tolerancia.
+- **Materiales:** computador con R base; proyector o pantalla compartida; archivo `cursov2/scripts/demo_mcm_beer_lambert.R`; imagen `cursov2/scripts/demo_mcm_pdf_salida.png`; handout, [§5](../handout/gum_o3/O3_H05_monte_carlo.md#gum-mcm)–[§6](../handout/gum_o3/O3_H06_validacion_guf_mcm.md#gum-validacion-guf-mcm); pizarra o diapositiva para anotar los dos intervalos y la tolerancia.
 - **Modalidad:** material avanzado opcional, desarrollado como exposición dialogada y demostración del facilitador de 10 min. No hay ejercicio individual ni instalación de software por parte de las personas participantes.
 - **Idea fuerza:** Monte Carlo no sustituye el juicio metrológico: propaga numéricamente las distribuciones y dependencias asignadas al modelo, y permite comprobar si una aproximación coincide con esa propagación a la resolución requerida.
 
@@ -41,7 +41,7 @@ Presentar tres métodos complementarios descritos por QUAM cap. 8 y App. E: deri
 
 Dictar el procedimiento en seis pasos. Primero, definir la magnitud de salida y el modelo de medición. Segundo, asignar distribuciones a las magnitudes de entrada y representar sus dependencias mediante una distribución conjunta cuando corresponda. Tercero, generar un conjunto de valores de entrada compatible con esa información. Cuarto, evaluar el modelo con el conjunto generado. Quinto, repetir la generación y la evaluación hasta alcanzar estabilidad numérica suficiente. Sexto, resumir la distribución de salida mediante una estimación, una incertidumbre estándar y un intervalo o una región de cobertura.
 
-**Apoyo en el handout:** ver Handout teórico, §5.1 — Cuándo usar MCM, §5.2 — Procedimiento general y §5.3 — Muestreo de PDFs.
+**Apoyo en el handout:** ver Handout teórico, [§5.1 — Cuándo usar MCM](../handout/gum_o3/O3_H05_monte_carlo.md#gum-mcm-cuando-usar), [§5.2 — Procedimiento general](../handout/gum_o3/O3_H05_monte_carlo.md#gum-mcm-procedimiento) y [§5.3 — Muestreo de PDFs](../handout/gum_o3/O3_H05_monte_carlo.md#gum-mcm-muestreo-pdfs).
 
 JCGM 102:2011, §7.1.2, sitúa el núcleo del método en las extracciones repetidas de las distribuciones de entrada, o de su distribución conjunta, y en la evaluación de la magnitud de salida. El procedimiento paso a paso se presenta en §7.1.7. Para valores simulados \(y_1,\ldots,y_M\), la media aproxima la esperanza de la salida y la desviación estándar aproxima la incertidumbre estándar asociada a su distribución. Esta desviación caracteriza la dispersión atribuida al mensurando; no es el error numérico de la media simulada.
 
@@ -53,7 +53,7 @@ JCGM 102:2011, §§7.2.1–7.2.2, advierte que un número de ensayos fijado de a
 
 La tolerancia se vincula con las cifras significativas consideradas útiles. JCGM 102:2011, §7.8.2.1, define la tolerancia numérica como media unidad en la última posición decimal significativa seleccionada. Si el resultado se examina a una décima de la unidad de salida, media unidad en esa posición es \(\delta=0.05\). Frase dictable: “Delta no es una incertidumbre adicional ni un criterio de aceptación del instrumento; es la resolución con la que se juzgan la estabilidad del cálculo y la concordancia entre resultados”.
 
-**Apoyo en el handout:** ver Handout teórico, §5.4 — Procedimiento adaptativo y §5.5 — Intervalos de cobertura.
+**Apoyo en el handout:** ver Handout teórico, [§5.4 — Procedimiento adaptativo](../handout/gum_o3/O3_H05_monte_carlo.md#gum-mcm-adaptativo) y [§5.5 — Intervalos de cobertura](../handout/gum_o3/O3_H05_monte_carlo.md#gum-mcm-intervalos-cobertura).
 
 El script trabaja en bloques de 50 000 ensayos. Después de varios bloques calcula la dispersión de la media, la desviación estándar y los extremos del intervalo. Declara estabilidad cuando dos veces cada dispersión es menor o igual que \(\delta\). La lógica corresponde al uso de aplicaciones sucesivas y pruebas de estabilidad de JCGM 102:2011, §7.8.3, pasos g) a n), adaptada aquí a una salida y al control directo de los extremos. Destacar que la media puede parecer estable antes que los límites de cobertura; detenerse solo al estabilizar la media sería insuficiente.
 
@@ -75,7 +75,7 @@ Durante los minutos 9 y 10, mostrar la gráfica y revelar **VALIDACIÓN NO SATIS
 
 JCGM 102:2011, §8.1, recomienda comparar el marco GUM y Monte Carlo cuando existan dudas acerca de las condiciones de aplicación de la aproximación. El objetivo de §8.3 es determinar si los resultados concuerdan dentro de tolerancias numéricas estipuladas. La nota 1 de §8.3 limita la validación a la probabilidad y a la región de cobertura especificadas; la nota 2 permite formular la prueba mediante los parámetros que definen otro tipo de región. Para esta salida escalar, los parámetros comparados son los extremos del intervalo.
 
-**Apoyo en el handout:** ver Handout teórico, §6.1 — Propósito, §6.2 — Procedimiento y §6.3 — Interpretación de la validación GUF–MCM mediante tolerancia \(\delta\).
+**Apoyo en el handout:** ver Handout teórico, [§6.1 — Propósito](../handout/gum_o3/O3_H06_validacion_guf_mcm.md#gum-validacion-proposito), [§6.2 — Procedimiento](../handout/gum_o3/O3_H06_validacion_guf_mcm.md#gum-validacion-procedimiento) y [§6.3 — Interpretación de la validación GUF–MCM mediante tolerancia \(\delta\)](../handout/gum_o3/O3_H06_validacion_guf_mcm.md#gum-validacion-interpretacion).
 
 Alerta QUAM App. F, pp. editoriales 121–125: cerca de cero pueden aparecer distribuciones truncadas o asimétricas, intervalos simétricos físicamente problemáticos e incertidumbre relativa alta. Detección, cuantificación, estimación y decisión no son equivalentes.
 
@@ -87,7 +87,7 @@ Aclarar dos controles distintos: comparación GUF–MCM comprueba propagación b
 
 Pedir al grupo que complete oralmente tres frases: “Monte Carlo propaga…”, “Delta representa…” y “Validación no satisfactoria significa…”. Respuestas esperadas: distribuciones completas mediante evaluaciones repetidas; una tolerancia asociada a la resolución numérica; y falta de concordancia bajo condiciones estipuladas, no fallo informático. Concluir que estabilidad numérica y validación son pruebas distintas.
 
-**Referencias verificadas:** JCGM 102:2011, *Evaluation of measurement data — Supplement 2 to the “Guide to the expression of uncertainty in measurement” — Extension to any number of output quantities*, primera edición, 2011, también ISO/IEC Guide 98-3:2008/Suppl.2:2011: §§7.1.2 y 7.1.7, fundamento y procedimiento; §§7.2.1–7.2.2, número de ensayos; §7.8.2.1, tolerancia; §7.8.3, procedimiento adaptativo; §§8.1–8.3, validación. JCGM 101:2008 es la referencia para una sola salida; JCGM 102:2011 remite a su procedimiento escalar en §7.8.3, nota 3. Complementan estas fuentes `cursov2/handout/handout_teorico_gum_o3.md`, §§5–6, y `cursov2/scripts/demo_mcm_beer_lambert.R`.
+**Referencias verificadas:** JCGM 102:2011, *Evaluation of measurement data — Supplement 2 to the “Guide to the expression of uncertainty in measurement” — Extension to any number of output quantities*, primera edición, 2011, también ISO/IEC Guide 98-3:2008/Suppl.2:2011: §§7.1.2 y 7.1.7, fundamento y procedimiento; §§7.2.1–7.2.2, número de ensayos; §7.8.2.1, tolerancia; §7.8.3, procedimiento adaptativo; §§8.1–8.3, validación. JCGM 101:2008 es la referencia para una sola salida; JCGM 102:2011 remite a su procedimiento escalar en §7.8.3, nota 3. Complementan estas fuentes [§5](../handout/gum_o3/O3_H05_monte_carlo.md#gum-mcm)–[§6](../handout/gum_o3/O3_H06_validacion_guf_mcm.md#gum-validacion-guf-mcm) del handout teórico y `cursov2/scripts/demo_mcm_beer_lambert.R`.
 
 ## 4. Demostración opcional del facilitador
 
@@ -112,3 +112,8 @@ Pedir al grupo que complete oralmente tres frases: “Monte Carlo propaga…”,
 ## 6. Cierre del material avanzado opcional
 
 Monte Carlo aporta una representación numérica de la distribución de salida, mientras el marco GUM conserva su utilidad cuando sus aproximaciones son adecuadas; la validación permite comprobar esa adecuación para un caso definido. El veredicto no satisfactorio de la demostración enseña a separar estabilidad computacional de concordancia metrológica, sin proclamar un ganador universal. Este módulo no añade entregables ni requisitos al curso obligatorio, cerrado previamente con taller integrador M7.
+<<<<<<< Updated upstream
+=======
+
+**Enlace con la práctica:** en la práctica de laboratorio complementaria, `practica/E16_mcm_covarianza.md` aplica este mismo procedimiento al modelo diferencial `NO2=(NOx-NO)/η`, usando la covarianza medida en `practica/E03_covarianza_no_nox.md` y la distribución de eficiencia de `practica/E04_gpt_eficiencia_convertidor.md` como entradas reales en lugar del ejemplo Beer–Lambert.
+>>>>>>> Stashed changes

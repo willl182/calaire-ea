@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.10.1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Diagnóstico final integrado · Curso de incertidumbre de medición</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Diagnóstico final integrado · Curso de incertidumbre
+de medición</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a
+href="#diagnóstico-final-integrado-y-propuesta-de-arquitectura-documental"
+id="toc-diagnóstico-final-integrado-y-propuesta-de-arquitectura-documental">Diagnóstico
+final integrado y propuesta de arquitectura documental</a>
+<ul>
+<li><a
+href="#curso-de-incertidumbre-de-medición-para-operadores-de-redes-de-calidad-del-aire"
+id="toc-curso-de-incertidumbre-de-medición-para-operadores-de-redes-de-calidad-del-aire">Curso
+de incertidumbre de medición para operadores de redes de calidad del
+aire</a></li>
+<li><a href="#conclusión-ejecutiva" id="toc-conclusión-ejecutiva">1.
+Conclusión ejecutiva</a></li>
+<li><a href="#modelo-documental-objetivo"
+id="toc-modelo-documental-objetivo">2. Modelo documental
+objetivo</a></li>
+<li><a href="#hallazgos-que-sustentan-el-diagnóstico"
+id="toc-hallazgos-que-sustentan-el-diagnóstico">3. Hallazgos que
+sustentan el diagnóstico</a></li>
+<li><a href="#autoridad-y-contenido-de-cada-producto"
+id="toc-autoridad-y-contenido-de-cada-producto">4. Autoridad y contenido
+de cada producto</a></li>
+<li><a href="#reglas-de-gobierno-y-derivación"
+id="toc-reglas-de-gobierno-y-derivación">5. Reglas de gobierno y
+derivación</a></li>
+<li><a href="#mecanismo-de-implementación-recomendado"
+id="toc-mecanismo-de-implementación-recomendado">6. Mecanismo de
+implementación recomendado</a></li>
+<li><a href="#plan-de-trabajo-por-dependencia"
+id="toc-plan-de-trabajo-por-dependencia">7. Plan de trabajo por
+dependencia</a></li>
+<li><a href="#valoración-final" id="toc-valoración-final">8. Valoración
+final</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1
+id="diagnóstico-final-integrado-y-propuesta-de-arquitectura-documental">Diagnóstico
+final integrado y propuesta de arquitectura documental</h1>
+<h2
+id="curso-de-incertidumbre-de-medición-para-operadores-de-redes-de-calidad-del-aire">Curso
+de incertidumbre de medición para operadores de redes de calidad del
+aire</h2>
+<p><strong>Directorio evaluado:</strong>
+<code>docs/capacitacion_incert/cursov2/</code><br />
+<strong>Fecha:</strong> 2026-08-28<br />
+<strong>Alcance:</strong> arquitectura pedagógica, documental y de
+producción de los módulos, handouts, solucionarios, protocolos y futuras
+diapositivas.<br />
+<strong>Estado:</strong> propuesta de diagnóstico; no modifica el
+contenido didáctico existente.</p>
+<hr />
+<h2 id="conclusión-ejecutiva">1. Conclusión ejecutiva</h2>
+<p>El curso no presenta una carencia técnica sustantiva ni necesita
+reconstruirse desde cero. El problema principal es que sus productos
+documentales tienen <strong>funciones y audiencias diferentes, pero esas
+funciones no están declaradas ni gobernadas como una cadena de
+derivación</strong>.</p>
+<p>Los módulos M1–M8 ya contienen gran parte de la capa más completa del
+curso: teoría, secuencia pedagógica, minutaje, instrucciones de
+facilitación, ejercicios, resultados esperados, errores frecuentes y
+referencias. Al mismo tiempo, en esos mismos archivos está embebida una
+parte importante de la explicación que debería recibir el participante.
+El handout O₃ intenta suplir esa explicación, pero mezcla narrativa
+básica con consulta avanzada; el handout NOx funciona de hecho como
+referencia operativa, aunque su función aún no se declara. Las
+diapositivas aún no existen como capas separadas.</p>
+<p>Por tanto, el trabajo prioritario es editorial y arquitectónico:</p>
+<ol type="1">
+<li>declarar una fuente meta canónica para autor e instructor;</li>
+<li>derivar de ella un material teórico continuo para el
+participante;</li>
+<li>reclasificar los handouts según su uso real;</li>
+<li>corregir el orden de introducción de los conceptos metrológicos
+críticos;</li>
+<li>establecer reglas y, después, mecanismos reproducibles de derivación
+hacia referencias, solucionarios y diapositivas.</li>
+</ol>
+<hr />
+<h2 id="modelo-documental-objetivo">2. Modelo documental objetivo</h2>
+<p>La arquitectura propuesta distingue cuatro capas en secuencia y
+cuatro productos auxiliares. La relación entre la capa meta y el
+material del participante es de <strong>superconjunto</strong>: no son
+documentos hermanos que se reescriben por separado.</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Capa o producto</th>
+<th>Audiencia</th>
+<th>Función</th>
+<th>Estado actual</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>0. Meta maestro</strong></td>
+<td>Autor e instructor</td>
+<td>Fuente pedagógica completa: teoría, discurso, tiempos, decisiones
+docentes, ejercicios, respuestas y referencias.</td>
+<td>Existe de forma distribuida en M1–M8 y solucionarios; no está
+declarado como tal.</td>
+</tr>
+<tr>
+<td><strong>1. Material teórico del participante</strong></td>
+<td>Participante</td>
+<td>Narrativa completa, limpia y conservable; permite comprender el
+curso después de la sesión.</td>
+<td>Existe parcialmente, mezclado con capa 0 y con el handout O₃.</td>
+</tr>
+<tr>
+<td><strong>2. Guion textual de diapositivas</strong></td>
+<td>Instructor / producción</td>
+<td>Síntesis telegráfica de la capa 1: títulos, ideas y puntos
+esenciales.</td>
+<td>No existe como producto separado.</td>
+</tr>
+<tr>
+<td><strong>3. Diapositivas visuales</strong></td>
+<td>Participante en aula</td>
+<td>Diseño, diagramas, imágenes y jerarquía visual sin teoría
+nueva.</td>
+<td>No existe como producto separado.</td>
+</tr>
+<tr>
+<td><strong>R. Referencias, anexos y fichas</strong></td>
+<td>Participante e instructor según uso</td>
+<td>Consulta, profundización y apoyo operativo; no reemplaza el relato
+principal.</td>
+<td>Existe, pero bajo el rótulo ambiguo de “handout”.</td>
+</tr>
+<tr>
+<td><strong>Protocolos prácticos</strong></td>
+<td>Participante e instructor en campo/laboratorio</td>
+<td>Conducen una actividad completa y autónoma.</td>
+<td>Existen; requieren reglas de autonomía controlada.</td>
+</tr>
+<tr>
+<td><strong>Solucionarios</strong></td>
+<td>Instructor</td>
+<td>Resolución, corrección y variantes aceptables.</td>
+<td>Existen; deben conservarse privados y no duplicar doctrina.</td>
+</tr>
+<tr>
+<td><strong>Salidas de lectura/compilación</strong></td>
+<td>Distribución</td>
+<td>Versiones generadas para consulta o entrega.</td>
+<td><code>solo_md/</code> existe fuera de control de derivación.</td>
+</tr>
+</tbody>
+</table>
+<p>La cadena deseada es:</p>
+<pre class="text"><code>META MAESTRO
+    ├── MATERIAL TEÓRICO DEL PARTICIPANTE
+    │       └── GUION TEXTUAL DE DIAPOSITIVAS
+    │               └── DIAPOSITIVAS VISUALES
+    ├── ANEXOS TÉCNICOS Y REFERENCIAS
+    ├── FICHAS OPERATIVAS
+    ├── PROTOCOLOS PRÁCTICOS
+    └── SOLUCIONARIOS DEL INSTRUCTOR</code></pre>
+<p>Si se necesita una lectura continua del meta maestro, debe
+ensamblarse desde M1–M8; no debe crearse una copia manual adicional.</p>
+<hr />
+<h2 id="hallazgos-que-sustentan-el-diagnóstico">3. Hallazgos que
+sustentan el diagnóstico</h2>
+<h3 id="la-capa-meta-y-la-capa-del-participante-comparten-archivos">3.1
+La capa meta y la capa del participante comparten archivos</h3>
+<p>Los módulos actuales contienen, además de contenido conceptual,
+ficha, objetivos, distribución de tiempo, indicaciones de aula,
+preguntas, resultados esperados, errores frecuentes y transiciones. El
+inventario realizado sobre los ocho módulos estima que el <strong>42 %
+de <code>modulos/</code> corresponde a meta pura</strong> (información
+dirigida solo al instructor). El resto sigue siendo mixto: por ejemplo,
+los guiones de exposición incluyen minutajes, apuntes al handout y
+respuestas anticipadas.</p>
+<p>Esto no significa que los módulos estén mal escritos. Significa que
+funcionan como una versión meta distribuida. El defecto es no haber
+declarado ese papel ni disponer de una extracción limpia para el
+participante.</p>
+<p>Ejemplos de información apropiada para la capa meta, no para el
+entregable principal, son los resultados numéricos anticipados de
+ejercicios en M2 y M4, y las conclusiones previstas de la demostración
+de M8.</p>
+<h3 id="el-handout-o₃-tiene-dos-roles-incompatibles">3.2 El handout O₃
+tiene dos roles incompatibles</h3>
+<p>El handout de GUM/O₃ combina:</p>
+<ul>
+<li>contenido básico indispensable para seguir el curso: significado de
+<code>u</code>, <code>u_c</code>, <code>U</code>, <code>k</code>,
+cobertura, redondeo, vocabulario metrológico y elementos de
+informe;</li>
+<li>consulta avanzada legítima: tratamiento detallado de
+autocorrelación, distribuciones especiales, Welch–Satterthwaite,
+Cholesky y desarrollo extendido del método de Monte Carlo.</li>
+</ul>
+<p>También se verifican solapamientos claros entre módulos y handout:
+PDFs y divisores (M3 / <code>O3_H03</code>), coeficientes de
+sensibilidad y propagación (M2 / <code>O3_H04</code>), informe GUM (M7 /
+<code>O3_H07</code>) y trazabilidad (M1 / <code>O3_H01</code>). La causa
+del problema no es la repetición por sí misma, sino que hoy no se sabe
+qué versión es canónica, cuál es resumen y cuál es ampliación.</p>
+<p>La consecuencia propuesta es conservar el handout O₃, pero dividir
+explícitamente su función:</p>
+<ul>
+<li>integrar al material teórico del participante todo lo necesario para
+el recorrido obligatorio;</li>
+<li>conservar como anexos técnicos los desarrollos que amplían, derivan
+o cubren casos especiales;</li>
+<li>mantener glosario, tablas, fórmulas y checklist como referencias
+localizables.</li>
+</ul>
+<h3 id="el-handout-nox-ya-se-comporta-como-una-ficha-de-referencia">3.3
+El handout NOx ya se comporta como una ficha de referencia</h3>
+<p>El handout NOx es mucho más breve y no equivale funcionalmente al de
+O₃. Resume, apoya controles documentales y sirve como recordatorio de
+fórmulas y verificaciones; en varios temas M6 contiene más
+profundidad.</p>
+<p>No conviene forzar una simetría artificial entre ambos. Debe
+declararse como <strong>ficha operativa o referencia rápida</strong>,
+útil durante práctica, operación, auditoría y consulta posterior.</p>
+<h3 id="hay-una-inversión-en-el-orden-de-los-términos-metrológicos">3.4
+Hay una inversión en el orden de los términos metrológicos</h3>
+<p>La inquietud original es válida: en M1 y M2 aparecen incertidumbre
+estándar, corrección, incertidumbre residual, doble conteo, covarianza,
+mensurando y coeficientes de sensibilidad antes de que varios de ellos
+se definan formalmente. La secuencia <code>u_i → u_c → U = k·u_c</code>
+tampoco tiene hoy un dueño docente plenamente explícito.</p>
+<p>El glosario y parte de las definiciones existen, pero aparecen tarde
+o se delegan a una referencia cuya lectura previa no está indicada. En
+particular, M1 se presenta como fundamento de vocabulario, pero remite
+al handout para distinciones fundamentales; M3 introduce formalmente
+Tipo A/B, PDF y combinación cuando ya se han usado conceptos
+relacionados.</p>
+<p>La recomendación no es anteponer un glosario extenso. Es combinar
+tres mecanismos:</p>
+<ol type="1">
+<li>un <strong>bloque M0 breve</strong> (15–20 min, recomendado cuando
+no haya prelectura garantizada) con mensurando,
+error/corrección/incertidumbre, trazabilidad, <code>u</code>,
+<code>u_c</code>, <code>U</code>, <code>k</code> y la distinción mínima
+Tipo A/B;</li>
+<li>una definición completa de cada concepto inmediatamente antes de que
+se aplique de forma exigente;</li>
+<li>un glosario de consulta para repaso y trabajo posterior.</li>
+</ol>
+<p>Si se opta por prelectura en vez de M0, <code>O3_H00</code>,
+<code>O3_H01</code> y el glosario deben declararse de forma explícita
+como obligatorios. Para operadores de red, M0 es la opción más
+robusta.</p>
+<h3
+id="existen-otros-saltos-conceptuales-y-ambigüedades-de-lenguaje">3.5
+Existen otros saltos conceptuales y ambigüedades de lenguaje</h3>
+<ul>
+<li>M7 exige un resultado auditable conforme a GUM §7, pero la guía más
+completa de informe, cobertura, redondeo y coherencia vive fuera de la
+narrativa principal. Debe enseñarse antes del taller integrador.</li>
+<li>“Cobertura” se usa tanto en sentido GUM como para alcance de
+evidencia y matriz documental. Se propone reservar
+<strong>cobertura</strong> para el significado metrológico y usar
+<strong>alcance de la evidencia</strong> en los demás casos.</li>
+<li>M5, M6 y M8 no tienen el mismo grado de discurso redactado que los
+demás módulos. Para convertirlos en material del participante no basta
+con extraer bloques: habrá que completar la narrativa.</li>
+<li>Existen tres convenciones para la misma función
+(<code>Guion dictable</code>, <code>Párrafo dictable</code> y prosa sin
+etiqueta), lo que dificulta una derivación uniforme.</li>
+</ul>
+<h3 id="hay-riesgo-de-divergencia-en-copias-derivadas">3.6 Hay riesgo de
+divergencia en copias derivadas</h3>
+<p><code>solo_md/</code> replica el árbol de documentos para lectura
+externa, pero no está generado por el proceso de compilación ni está
+controlado en git; ya presenta diferencias con <code>modulos/</code>. El
+cambio actual parece benigno —enlaces desanclados—, pero el patrón es el
+mismo que genera drift: dos copias de un mismo discurso mantenidas por
+separado.</p>
+<p>Existe un precedente técnico útil: <code>build_paquete_html.py</code>
+ya valida archivos, tablas, anclas, IDs y recursos. La futura derivación
+puede aprovechar ese enfoque en vez de sostener copias manuales.</p>
+<hr />
+<h2 id="autoridad-y-contenido-de-cada-producto">4. Autoridad y contenido
+de cada producto</h2>
+<h3 id="meta-maestro-privado">4.1 Meta maestro privado</h3>
+<p>Debe conservar:</p>
+<ul>
+<li>teoría completa y secuencia argumental;</li>
+<li>propósito de cada bloque, transiciones y minutaje;</li>
+<li>instrucciones de facilitación, preguntas, variantes y puntos de
+énfasis;</li>
+<li>ejercicios, respuestas breves, resultados esperados y errores
+frecuentes;</li>
+<li>referencias exactas y justificación de decisiones didácticas;</li>
+<li>criterios de evaluación y vínculos con prácticas.</li>
+</ul>
+<p>Su pregunta rectora es: <strong>¿qué necesita saber y tener
+disponible el instructor para enseñar bien este bloque?</strong></p>
+<h3 id="material-teórico-del-participante">4.2 Material teórico del
+participante</h3>
+<p>Se deriva del meta maestro y debe conservar explicación,
+definiciones, ecuaciones necesarias, ejemplos, figuras, síntesis,
+ejercicios sin solución anticipada y referencias pertinentes. Elimina
+minutaje, instrucciones de aula, comentarios editoriales, respuestas,
+resultados de demostraciones y decisiones internas.</p>
+<p>Debe leerse como un manual breve y continuo. Puede estar dividido en
+capítulos M1–M8, pero no debe requerir otra fuente para completar
+conceptos básicos obligatorios.</p>
+<h3 id="anexos-técnicos-y-fichas-operativas">4.3 Anexos técnicos y
+fichas operativas</h3>
+<p>Los anexos técnicos amplían el recorrido principal sin repararlo. Las
+fichas contienen solo lo necesario para consulta rápida: fórmulas,
+controles, criterios de aceptación y advertencias. Ambos deben declarar
+destinatario y momento de uso.</p>
+<h3 id="protocolos-y-solucionarios">4.4 Protocolos y solucionarios</h3>
+<p>Los protocolos pueden repetir fórmulas, criterios y advertencias para
+permitir ejecución autónoma, pero deben remitir al material teórico para
+el fundamento y conservar idéntica notación. Los solucionarios
+permanecen privados: incluyen cálculo paso a paso, criterios de
+corrección y variantes aceptables, sin convertirse en una fuente teórica
+paralela.</p>
+<h3 id="diapositivas">4.5 Diapositivas</h3>
+<p>El guion textual reduce el material teórico a ideas y frases
+esenciales. Las diapositivas visuales agregan composición, diagramas,
+imágenes y tablas simplificadas. Ninguna debe introducir teoría por
+primera vez: las diapositivas <strong>reducen e ilustran; no
+amplían</strong>.</p>
+<hr />
+<h2 id="reglas-de-gobierno-y-derivación">5. Reglas de gobierno y
+derivación</h2>
+<ol type="1">
+<li><strong>Una idea nueva nace en la capa meta.</strong> Ningún
+protocolo, solucionario o diapositiva introduce silenciosamente un
+concepto ajeno a ella.</li>
+<li><strong>Autoridad definida.</strong> El meta maestro es canónico
+para contenido técnico, definiciones, ecuaciones, notación e intención
+pedagógica; el material teórico lo es para orden y experiencia de
+lectura del participante.</li>
+<li><strong>Anexos sin dependencia oculta.</strong> El recorrido
+obligatorio debe ser comprensible sin leer anexos avanzados.</li>
+<li><strong>Repetición deliberada.</strong> Fichas y protocolos solo
+duplican lo indispensable para su propósito operativo.</li>
+<li><strong>Respuestas fuera del entregable.</strong> El participante
+recibe enunciados, criterios y orientación, no soluciones reveladas de
+antemano.</li>
+<li><strong>Un dueño por concepto.</strong> Los demás módulos recuerdan
+o aplican, pero no redefinen de forma paralela.</li>
+<li><strong>Derivación verificable.</strong> Toda salida destinada a
+distribuirse debe poder reproducirse desde fuentes declaradas; no se
+mantienen copias narrativas manuales.</li>
+</ol>
+<p>Una distribución conceptual inicial razonable es:</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Módulo</th>
+<th>Conceptos de los que es dueño principal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M0</td>
+<td>Vocabulario de orientación: mensurando, error, corrección,
+incertidumbre, trazabilidad, <code>u</code>, <code>u_c</code>,
+<code>U</code>, <code>k</code>, Tipo A/B mínimo.</td>
+</tr>
+<tr>
+<td>M1</td>
+<td>Trazabilidad aplicada y arquitectura metrológica.</td>
+</tr>
+<tr>
+<td>M2</td>
+<td>Modelo de medición y coeficientes de sensibilidad.</td>
+</tr>
+<tr>
+<td>M3</td>
+<td>Incertidumbre estándar, Tipo A/B, PDFs y combinación.</td>
+</tr>
+<tr>
+<td>M4</td>
+<td>Presupuesto, contribuciones, doble conteo, cobertura,
+<code>U</code>, <code>k</code> y redondeo.</td>
+</tr>
+<tr>
+<td>M5</td>
+<td>Patrones, regresión, residuos y alcance de la evidencia.</td>
+</tr>
+<tr>
+<td>M6</td>
+<td>Modelo NOx, interferencias y covarianza.</td>
+</tr>
+<tr>
+<td>M7</td>
+<td>Integración, declaración del resultado e informe GUM.</td>
+</tr>
+<tr>
+<td>M8</td>
+<td>Validación opcional mediante Monte Carlo.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="mecanismo-de-implementación-recomendado">6. Mecanismo de
+implementación recomendado</h2>
+<p>Antes de automatizar, conviene estabilizar una convención editorial
+única por bloque. Por ejemplo:</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">### N. Título — minutaje                         ← capa 0</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>**Idea fuerza:**                                  ← semilla de capa 2</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>**Guion para participante:**                      ← capas 0 y 1</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>**Puntos para diapositiva:**                      ← capa 2</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>**Apoyo visual:**                                 ← capa 3</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>**Nota de facilitación:**                         ← capa 0</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>**Referencias:**                                  ← completa en 0; versión breve en 1</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>**Referencia de consulta:**                       ← puntero a R</span></code></pre></div>
+<p>No es obligatorio que la primera implementación sea un generador
+automático. Pero la estructura debe permitirlo, y evitar que cada
+producto se convierta en una reescritura no rastreable. Cuando los
+módulos estén normalizados, un único proceso de compilación puede
+generar el material del participante, guiones de diapositiva y
+<code>solo_md/</code>, aprovechando el patrón de validación ya presente
+en <code>build_paquete_html.py</code>.</p>
+<hr />
+<h2 id="plan-de-trabajo-por-dependencia">7. Plan de trabajo por
+dependencia</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Prioridad</th>
+<th>Acción</th>
+<th>Resultado esperado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Declarar en <code>README.md</code> las capas, su audiencia y el uso
+de cada familia documental.</td>
+<td>Se elimina la ambigüedad sobre módulos, handouts y referencias.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Decidir e introducir M0, o declarar prelectura obligatoria; se
+recomienda M0.</td>
+<td>Ningún concepto crítico se exige antes de una orientación
+mínima.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Fijar plantilla editorial común y aplicarla primero a M5.</td>
+<td>Piloto en el módulo con mayor déficit de narrativa y
+estructura.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Normalizar M1–M4 y M7; redactar el discurso faltante en M5, M6 y
+M8.</td>
+<td>Material del participante extraíble y coherente en los ocho
+módulos.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Construir el material teórico continuo; integrar en él el contenido
+básico de O₃ y la preparación para M7.</td>
+<td>Entregable principal autónomo, sin soluciones anticipadas.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Reclasificar O₃ como anexos/glosario/checklists y NOx como ficha
+operativa.</td>
+<td>Las referencias complementan, no compiten con la narrativa.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Gobernar o generar <code>solo_md/</code>; después implementar
+compilación de capas 1–3.</td>
+<td>Salidas reproducibles y sin drift.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Producir guion textual y luego diapositivas visuales.</td>
+<td>Presentación consistente con la narrativa ya estabilizada.</td>
+</tr>
+</tbody>
+</table>
+<p>Las capas de diapositivas deben comenzar al final de esta secuencia.
+Con aproximadamente 462 minutos de curso obligatorio, una referencia
+razonable es del orden de 150–200 diapositivas a 2–3 minutos por
+diapositiva; producirlas antes de fijar la narrativa multiplicaría el
+trabajo de revisión.</p>
+<hr />
+<h2 id="valoración-final">8. Valoración final</h2>
+<p>El contenido técnico, la trazabilidad de fuentes, los datasets
+reproducibles y la separación entre curso teórico y práctica están bien
+encaminados. El desfase es principalmente <strong>de una capa y
+media</strong>, no de fundamento: la capa meta está avanzada, la
+narrativa entregable está incompleta y las capas de presentación aún no
+han sido formalizadas.</p>
+<p>La decisión clave es reconocer que los módulos no son un handout
+defectuoso: son la materia prima madura de un meta maestro. A partir de
+esa decisión, el curso puede pasar de documentos valiosos pero
+superpuestos a una familia coherente de productos, cada uno con una
+audiencia, profundidad, autoridad y método de actualización claros.</p>
+</body>
+</html>

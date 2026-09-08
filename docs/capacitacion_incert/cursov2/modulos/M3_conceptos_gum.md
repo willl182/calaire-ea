@@ -5,7 +5,7 @@
 - **Duración total:** 54 min: 38 min de exposición guiada, 12 min de ejercicio, 2 min de errores frecuentes y 2 min de cierre.
 - **Posición en la jornada:** tercer módulo; antecede M4, donde se construye un presupuesto Tipo B para un analizador de ozono.
 - **Prerrequisitos:** M1, especialmente la distinción entre incertidumbre del analizador, del patrón y del valor transferido; M2, especialmente el modelo de medición y la identificación de entradas y salida.
-- **Materiales:** proyección o copia de la ficha Sabio Model 2030; tabla del ejercicio; calculadora; pizarra; handout teórico, en especial §§2.1–2.4, 3.1–3.3 y 4.1–4.4. Para autocorrelación, PDFs menos habituales y covarianza, véanse las secciones avanzadas del handout.
+- **Materiales:** proyección o copia de la ficha Sabio Model 2030; tabla del ejercicio; calculadora; pizarra; handout teórico, en especial [§§2.1–2.4](../handout/gum_o3/O3_H02_evaluacion_tipo_a.md#gum-tipo-a), [§§3.1–3.3](../handout/gum_o3/O3_H03_tipo_b_pdfs.md#gum-info-a-distribucion) y [§§4.1–4.4](../handout/gum_o3/O3_H04_propagacion_guf.md#gum-coef-sensibilidad). Para autocorrelación, PDFs menos habituales y covarianza, véanse las secciones avanzadas del handout.
 - **Fuentes principales:** JCGM 100:2008 / ISO/IEC Guide 98-3:2008, §§2.3, 3.2–3.3, 4.2–4.3 y 5.1–5.2; Eurachem/CITAC QUAM 2012, cap. 7, pp. editoriales 16–25, cap. 8, pp. editoriales 26–29, App. E.1, pp. editoriales 104–105, y App. G, pp. editoriales 126–131; Sabio Environmental, *Model 2030 Portable Ozone Transfer Standard*, ficha técnica de una página, 28 nov. 2023.
 - **Idea fuerza:** identificar efecto y evidencia; decidir A/B; asignar PDF; convertir a estándar; declarar qué cubre; depurar duplicados; combinar.
 
@@ -43,7 +43,7 @@ Use esta decisión operativa:
 
 **Conexión posterior:** M4 usa manuales y un certificado, por lo que su presupuesto es principalmente Tipo B. M5 calcula desviaciones estándar entre ciclos, una evaluación Tipo A. M7 exige reconocer ambos métodos sin inferirlos de la forma de la PDF.
 
-**Referencia integrada:** JCGM 100:2008, §§2.3.1–2.3.3 y 4.2–4.3. Eurachem/CITAC QUAM 2012, cap. 7, pp. editoriales 16–25 (PDF pp. 22–31), especialmente selección de datos disponibles. Handout teórico, §2 — Evaluación Tipo A (introducción) y §3.1 — De información disponible a distribución.
+**Referencia integrada:** JCGM 100:2008, §§2.3.1–2.3.3 y 4.2–4.3. Eurachem/CITAC QUAM 2012, cap. 7, pp. editoriales 16–25 (PDF pp. 22–31), especialmente selección de datos disponibles. Handout teórico, [§2 — Evaluación Tipo A (introducción)](../handout/gum_o3/O3_H02_evaluacion_tipo_a.md#gum-tipo-a) y [§3.1 — De información disponible a distribución](../handout/gum_o3/O3_H03_tipo_b_pdfs.md#gum-info-a-distribucion).
 
 ### 3.2 Tipo A: qué representan \(s\) y \(s/\sqrt n\) — 0:09 a 0:18; acumulado 0:18 (9 min)
 
@@ -73,11 +73,11 @@ Ejemplo verbal: si cinco verificaciones independientes de cero producen una desv
 
 «Solo disminuye con \(s/\sqrt n\) el componente asociado a observaciones independientes que se promedian. Un patrón común, deriva, sesgo o corrección compartida no desaparece al aumentar \(n\).»
 
-«Los analizadores pueden aplicar filtros digitales y las lecturas cercanas pueden estar autocorrelacionadas. En ese caso, registrar cada segundo no garantiza \(n\) datos independientes. Para este módulo basta la alerta: no usar automáticamente \(s/\sqrt n\). El cálculo con tamaño efectivo, bloques o series temporales queda en el handout avanzado (ver Handout teórico, §2.4 — Autocorrelación y tamaño de muestra efectivo).»
+«Los analizadores pueden aplicar filtros digitales y las lecturas cercanas pueden estar autocorrelacionadas. En ese caso, registrar cada segundo no garantiza \(n\) datos independientes. Para este módulo basta la alerta: no usar automáticamente \(s/\sqrt n\). El cálculo con tamaño efectivo, bloques o series temporales queda en el handout avanzado (ver Handout teórico, [§2.4 — Autocorrelación y tamaño de muestra efectivo](../handout/gum_o3/O3_H02_evaluacion_tipo_a.md#gum-autocorrelacion-neff)).»
 
 **Conexión posterior:** M5 usa la desviación estándar muestral de pendientes e interceptos entre tres ciclos; no calcula automáticamente la incertidumbre de una media. M7 fija didácticamente \(k=2\) sin asignar grados de libertad; Welch–Satterthwaite queda como ampliación avanzada.
 
-**Referencia integrada:** JCGM 100:2008, §§4.2.1–4.2.7. Eurachem/CITAC QUAM 2012, §§7.7–7.9, pp. editoriales 18–22 (PDF pp. 24–28), para precisión, sesgo y uso de datos experimentales. Handout teórico, §2.1 — Media, desviación estándar e incertidumbre de la media, y §2.2 — Grados de libertad; desarrollo de autocorrelación en §2.4.
+**Referencia integrada:** JCGM 100:2008, §§4.2.1–4.2.7. Eurachem/CITAC QUAM 2012, §§7.7–7.9, pp. editoriales 18–22 (PDF pp. 24–28), para precisión, sesgo y uso de datos experimentales. Handout teórico, [§2.1 — Media, desviación estándar e incertidumbre de la media](../handout/gum_o3/O3_H02_evaluacion_tipo_a.md#gum-media-desviacion), y [§2.2 — Grados de libertad](../handout/gum_o3/O3_H02_evaluacion_tipo_a.md#gum-grados-libertad); desarrollo de autocorrelación en [§2.4](../handout/gum_o3/O3_H02_evaluacion_tipo_a.md#gum-autocorrelacion-neff).
 
 ### 3.3 Tipo B y PDFs que reaparecen en el curso — 0:18 a 0:29; acumulado 0:29 (11 min)
 
@@ -130,9 +130,9 @@ Resumen para la pizarra:
 | Límites \(\pm a\), valores igualmente plausibles | rectangular: \(u=a/\sqrt3\) |
 | Límites \(\pm a\), centro más plausible | triangular: \(u=a/\sqrt6\) |
 
-«Las PDFs arcoseno y trapezoidal no se necesitan para resolver M4, M5 ni el ejercicio principal de M7. Se mencionan para reconocer que existen; sus mecanismos, fórmulas y ejemplos quedan en el handout avanzado (Handout teórico, §3.6 — Distribución arcoseno o en U, y §3.7 — Trapecio curvilíneo para límites inexactos).»
+«Las PDFs arcoseno y trapezoidal no se necesitan para resolver M4, M5 ni el ejercicio principal de M7. Se mencionan para reconocer que existen; sus mecanismos, fórmulas y ejemplos quedan en el handout avanzado (Handout teórico, [§3.6 — Distribución arcoseno o en U](../handout/gum_o3/O3_H03_tipo_b_pdfs.md#gum-pdf-arcoseno), y [§3.7 — Trapecio curvilíneo para límites inexactos](../handout/gum_o3/O3_H03_tipo_b_pdfs.md#gum-pdf-trapecio)).»
 
-**Referencia integrada:** JCGM 100:2008, §§4.3.1–4.3.9. Handout teórico, §3.1 — De información disponible a distribución, §3.2 — Distribución rectangular, §3.3 — Distribución normal y §3.4 — Distribución triangular; ejemplo desarrollado en §3.8.
+**Referencia integrada:** JCGM 100:2008, §§4.3.1–4.3.9. Handout teórico, [§3.1 — De información disponible a distribución](../handout/gum_o3/O3_H03_tipo_b_pdfs.md#gum-info-a-distribucion), [§3.2 — Distribución rectangular](../handout/gum_o3/O3_H03_tipo_b_pdfs.md#gum-pdf-rectangular), [§3.3 — Distribución normal](../handout/gum_o3/O3_H03_tipo_b_pdfs.md#gum-pdf-normal) y [§3.4 — Distribución triangular](../handout/gum_o3/O3_H03_tipo_b_pdfs.md#gum-pdf-triangular); ejemplo desarrollado en [§3.8](../handout/gum_o3/O3_H03_tipo_b_pdfs.md#gum-ejemplo-tipo-b).
 
 ### 3.4 Contribuciones, combinación cuadrática y doble conteo — 0:29 a 0:38; acumulado 0:38 (9 min)
 
@@ -177,9 +177,9 @@ Use esta lista por fila:
 5. ¿Qué ramas ya están cubiertas por esa cifra?
 6. ¿Qué dependencia existe con otras entradas?
 
-«La fórmula anterior supone independencia. Las entradas que comparten patrón, calibración o datos pueden requerir covarianza. Como el cálculo explícito de covarianza aparece recién en M7, aquí queda como alerta: no imponer independencia si se conoce una fuente compartida. El desarrollo y los términos cruzados se consultan en el handout avanzado (Handout teórico, §4.2 — Ley de propagación de incertidumbre) y se trabajan en M7.»
+«La fórmula anterior supone independencia. Las entradas que comparten patrón, calibración o datos pueden requerir covarianza. Como el cálculo explícito de covarianza aparece recién en M7, aquí queda como alerta: no imponer independencia si se conoce una fuente compartida. El desarrollo y los términos cruzados se consultan en el handout avanzado (Handout teórico, [§4.2 — Ley de propagación de incertidumbre](../handout/gum_o3/O3_H04_propagacion_guf.md#gum-ley-propagacion)) y se trabajan en M7.»
 
-**Referencia integrada:** JCGM 100:2008, §§5.1–5.2 y advertencia de doble conteo en §4.3.10. Eurachem/CITAC QUAM 2012, caps. 7–8, pp. editoriales 16–29 (PDF pp. 22–35), y ejemplo A4, pp. editoriales 60–71 (PDF pp. 66–77), para agrupación de precisión, sesgo y fuentes externas. Handout teórico, §4.1 — Coeficientes de sensibilidad, §4.2 — Ley de propagación de incertidumbre y §4.3 — Doble conteo: GUM §4.3.10.
+**Referencia integrada:** JCGM 100:2008, §§5.1–5.2 y advertencia de doble conteo en §4.3.10. Eurachem/CITAC QUAM 2012, caps. 7–8, pp. editoriales 16–29 (PDF pp. 22–35), y ejemplo A4, pp. editoriales 60–71 (PDF pp. 66–77), para agrupación de precisión, sesgo y fuentes externas. Handout teórico, [§4.1 — Coeficientes de sensibilidad](../handout/gum_o3/O3_H04_propagacion_guf.md#gum-coef-sensibilidad), [§4.2 — Ley de propagación de incertidumbre](../handout/gum_o3/O3_H04_propagacion_guf.md#gum-ley-propagacion) y [§4.3 — Doble conteo: GUM §4.3.10](../handout/gum_o3/O3_H04_propagacion_guf.md#gum-doble-conteo).
 
 ## 4 Ejercicio/actividad — 0:38 a 0:50; acumulado 0:50 (12 min)
 
@@ -233,3 +233,8 @@ u_c=\sqrt{u_{ruido}^2+u_{deriva}^2+u_{linealidad}^2+u_{generador}^2}.
 Pida al grupo repetir la secuencia en voz alta: **identificar efecto y evidencia; decidir A/B; asignar PDF; convertir a estándar; declarar qué cubre; depurar duplicados; combinar si la independencia es defendible**.
 
 En M4 se aplicará esta secuencia a ruido RMS, límites rectangulares e incertidumbre expandida de un certificado en un presupuesto Tipo B de un analizador de O₃. M5 reutilizará la desviación estándar para comparar ciclos. M7 retomará la triangular publicada, las sensibilidades del modelo y, ya de forma explícita, la covarianza.
+<<<<<<< Updated upstream
+=======
+
+**Enlace con la práctica:** en la práctica de laboratorio complementaria, `practica/E01_ruido_cero.md` convierte esta distinción en evidencia propia: la serie de 1 s y las medias de 1 min de cero permiten comparar directamente `s` con `s/√n_ef`, calcular la autocorrelación descrita en §3.2 y obtener un `u₀` experimental que M4 y E15 usan como término absoluto.
+>>>>>>> Stashed changes

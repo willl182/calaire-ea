@@ -15,7 +15,7 @@
 1. `datasets/dataset_nox_gpt_convertidor.csv` y `dataset_nox_linea_muestreo.csv`;
 2. `datasets/dataset_nox_metadata.md` y `datasets/generar_dataset_nox.R`;
 3. `plantillas/plantilla_presupuesto_nox.csv` y `.R`;
-4. `handout/handout_no_nox.md`;
+4. [Handout NO/NO₂/NOₓ](../handout/no_nox/NOX_H00_proposito_alcance.md#nox-handout);
 5. BS EN 14211:2012, especialmente Anexo F informativo;
 6. calculadora o R.
 
@@ -141,6 +141,15 @@ Dominan reproducibilidad, promediación, convertidor y gas de calibración. Redu
 
 **Organización:** parejas. Una persona calcula; otra audita unidades, fuentes, correcciones y decisiones. Cambiar roles después de 10 min.
 
+<<<<<<< Updated upstream
+=======
+> **Advertencia sobre el dataset de GPT (defecto D4):** el diseño original de titulación dejaba NO residual ≈10 nmol/mol en el nivel más alto (≈6 % del NO inicial), margen demasiado estrecho. La escalera rediseñada y validada en `practica/E04_gpt_eficiencia_convertidor.md` usa NO base 450 nmol/mol y niveles GPT 0–160 nmol/mol, dejando NO residual mínimo de 290 nmol/mol (64.4 % del NO inicial). Use los valores recalculados de ese protocolo, no los del dataset original, al interpretar eficiencia.
+
+> **Advertencia sobre el dataset de línea NOx (defecto D6):** los valores de NO₂ formado en línea del dataset original (0.18–0.62 nmol/mol) subestiman la cinética NO+O₃ en 70–100×; el cálculo corregido con `k=1.8×10⁻¹⁴ cm³ molécula⁻¹ s⁻¹` da 18.45–45.13 nmol/mol para las mismas configuraciones. Ver protocolo real `practica/E07_formacion_no2_linea.md` y la sección "Cálculos correctivos" de su diseño. La Parte B del ejercicio siguiente conserva su dataset y su propósito didáctico (practicar la decisión operativa); úsese esta advertencia para explicar en clase que el nivel absoluto es ilustrativo y no predice el resultado de laboratorio, que se obtiene por separado en E07.
+
+**Enlace con la práctica:** la práctica de laboratorio complementaria trata con instrumento real los mismos temas de este módulo, como bloque independiente y sin reemplazar los ejercicios de esta sección: `practica/E03_covarianza_no_nox.md` mide la covarianza NO/NOx que la Parte C usa como dato; `practica/E04_gpt_eficiencia_convertidor.md` y `practica/E05_correccion_firmware.md` corresponden a la Parte A; `practica/E07_formacion_no2_linea.md` corresponde a la Parte B.
+
+>>>>>>> Stashed changes
 **Parte A — GPT y eficiencia, 10 min**
 
 1. filtrar niveles distintos de cero;

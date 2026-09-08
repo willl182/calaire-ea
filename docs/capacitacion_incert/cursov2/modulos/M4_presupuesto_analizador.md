@@ -21,7 +21,7 @@
 1. `cursov2/plantillas/plantilla_presupuesto.R`, caso 1;
 2. Thermo Fisher Scientific, *Model 49i Instruction Manual*, Table 1-1 y cap. 4;
 3. HORIBA, *APOA-370 Operation Manual*, §10.2;
-4. `cursov2/handout/handout_teorico_gum_o3.md`, §§3.1–3.3 y 4.2–4.4;
+4. handout teórico GUM/O₃, [§§3.1–3.3](../handout/gum_o3/O3_H03_tipo_b_pdfs.md#gum-info-a-distribucion) y [§§4.2–4.4](../handout/gum_o3/O3_H04_propagacion_guf.md#gum-ley-propagacion);
 5. `evaluation and uncertainty budget of ozone.md`, utilizada únicamente como **fuente secundaria** para la estructura de presupuestos tipo EN 14625;
 6. calculadora o entorno R y una hoja para registrar fuente, interpretación, PDF, divisor, alcance de evidencia y contribución;
 7. Eurachem/CITAC QUAM 2012, cap. 6, pp. editoriales 14–15; App. C, p. editorial 101; App. D, pp. editoriales 102–103; App. E.5, pp. editoriales 117–120; App. F, pp. editoriales 121–125; App. G, pp. editoriales 126–131.
@@ -79,7 +79,7 @@ cuando un certificado declara incertidumbre expandida \(U\) y factor de cobertur
 
 Añada una columna obligatoria **alcance/cobertura de evidencia**. Un RMS a 60 s cubre dispersión para ese promedio y condiciones; deriva 24 h es un límite temporal, no precisión de meses; un certificado debe revisarse para saber si integra repetibilidad, T/P, regresión o estabilidad; y resolución puede estar contenida en repetibilidad observada.
 
-**Referencias verificadas:** handout, §§3.1–3.3: asignación de PDFs, distribución rectangular y normal. JCGM 100:2008, §§4.3 y 5.1, según la síntesis del handout.
+**Referencias verificadas:** handout, [§3.1 — asignación de PDFs](../handout/gum_o3/O3_H03_tipo_b_pdfs.md#gum-info-a-distribucion), [§3.2 — distribución rectangular](../handout/gum_o3/O3_H03_tipo_b_pdfs.md#gum-pdf-rectangular) y [§3.3 — distribución normal](../handout/gum_o3/O3_H03_tipo_b_pdfs.md#gum-pdf-normal). JCGM 100:2008, §§4.3 y 5.1, según la síntesis del handout.
 
 ### 3.2 Combinación, clasificación y doble conteo — 0:16 a 0:26; acumulado 0:26 (10 min)
 
@@ -105,7 +105,7 @@ p_i=100\frac{[c_i u(x_i)]^2}{u_c^2(y)}.
 
 “Para cada componente anotaremos su linaje: manual, certificado, ensayo propio o supuesto didáctico. La trazabilidad documental no es una columna decorativa; permite descubrir interpretaciones incorrectas antes de aceptar el total.”
 
-**Referencias verificadas:** handout, §4.2, ley de propagación; §4.3, doble conteo; §4.4, presupuesto y contribuciones. JCGM 100:2008, §§5.1–5.2 y advertencia de §4.3.10, según el handout.
+**Referencias verificadas:** handout, [§4.2 — ley de propagación](../handout/gum_o3/O3_H04_propagacion_guf.md#gum-ley-propagacion); [§4.3 — doble conteo](../handout/gum_o3/O3_H04_propagacion_guf.md#gum-doble-conteo); [§4.4 — presupuesto y contribuciones](../handout/gum_o3/O3_H04_propagacion_guf.md#gum-presupuesto-contribuciones). JCGM 100:2008, §§5.1–5.2 y advertencia de §4.3.10, según el handout.
 
 ### 3.3 Lectura crítica del Thermo 49i — 0:26 a 0:35; acumulado 0:35 (9 min)
 
@@ -147,7 +147,7 @@ p_i=100\frac{[c_i u(x_i)]^2}{u_c^2(y)}.
 
 ### Presupuesto Tipo B del Thermo 49i y comparación con APOA-370 — 0:43 a 1:14; acumulado 1:14 (31 min)
 
-**Apoyo en el handout:** ver Handout teórico, §3.8 — Ejemplo Tipo B con especificación genérica, como modelo de conversión de una especificación a incertidumbre estándar, y §4.4 — Presupuesto y contribuciones, para la estructura de la tabla y la clasificación.
+**Apoyo en el handout:** ver Handout teórico, [§3.8 — Ejemplo Tipo B con especificación genérica](../handout/gum_o3/O3_H03_tipo_b_pdfs.md#gum-ejemplo-tipo-b), como modelo de conversión de una especificación a incertidumbre estándar, y [§4.4 — Presupuesto y contribuciones](../handout/gum_o3/O3_H04_propagacion_guf.md#gum-presupuesto-contribuciones), para la estructura de la tabla y la clasificación.
 
 **Organización:** parejas; una persona opera la plantilla y la otra verifica manual y trazabilidad. Intercambian funciones a mitad del ejercicio.
 
@@ -166,7 +166,11 @@ p_i=100\frac{[c_i u(x_i)]^2}{u_c^2(y)}.
 1. tabla completa del caso 1, total combinado, incertidumbre expandida, clasificación matemática y clasificación de evidencia;
 2. diagrama causal de una página, con cada fila enlazada a una rama y cada vacío marcado;
 3. auditoría de procedencia y párrafo de comparación prudente con APOA-370;
+<<<<<<< Updated upstream
 4. plan de reemplazo de tres filas por evidencia propia, por ejemplo ruido/deriva mediante precisión intermedia de QC, linealidad mediante verificación multipunto y residual, presión mediante calibración del sensor y diferencia sensor–celda, o pérdidas mediante prueba de transmisión de línea;
+=======
+4. plan de reemplazo de tres filas por evidencia propia, ejecutado en la práctica de laboratorio complementaria con protocolos concretos: ruido/deriva mediante `practica/E01_ruido_cero.md` y `practica/E08_deriva_cero_span.md` (E08 debe iniciarse ≥7 días antes, ver `practica/P0_agenda_dia2.md`), linealidad/falta de ajuste mediante verificación multipunto y residual en `practica/E02_verificacion_multipunto.md`, y pérdidas de línea mediante `practica/E06_transmision_linea.md`; la presión mediante calibración del sensor y diferencia sensor–celda queda documentada como vacío en `practica/E14_recorrido_documental.md` cuando no exista puerto de acceso aprobado;
+>>>>>>> Stashed changes
 5. dos salidas conceptuales, sin recalcular: presupuesto actual bottom-up documental y futuro presupuesto híbrido con \(u_{PI}\), patrón y fuentes externas no cubiertas.
 
 Para el presupuesto híbrido use como regla: si la precisión intermedia ya contiene día, operador, recalibración, ambiente y equipo, no añada esas ramas otra vez. Documente cobertura y conserve solo mecanismos externos o no representados (QUAM cap. 7, pp. editoriales 16–25; ejemplo A4, pp. editoriales 60–71; PDF pp. 22–31 y 66–77).
@@ -206,6 +210,13 @@ u(c)=\sqrt{u_0^2+(u_r c)^2},
 
 donde \(u_0\) reúne términos absolutos como cero, ruido, resolución o residual, y \(u_r c\) reúne escala, patrón, pendiente y T/P relativas. Sin recalcular el caso 1, identifique cualitativamente qué término dominaría a 10, 120 y 180 nmol mol⁻¹. Cerca de cero suele dominar el término constante; a niveles altos, el proporcional. Fuente: QUAM App. E.5, pp. editoriales 117–120 (PDF pp. 123–126), y ejemplo A6, pp. editoriales 81–88 (PDF pp. 87–94).
 
+<<<<<<< Updated upstream
+=======
+Para el ejercicio de esta sección, `k=2` es un valor exacto convencional (grados de libertad efectivos infinitos, `gl=Inf`), no una aproximación "≈2"; Welch–Satterthwaite queda para material avanzado cuando existan grados de libertad finitos documentados.
+
+**Enlace con la práctica:** el presupuesto híbrido cualitativo descrito aquí se calcula con datos reales en `practica/E15_presupuesto_hibrido.md`, que integra E01/E09 (u₀), E02 (u_r y residual), E06 (transmisión) y E08 (deriva) sin doble conteo. Ese experimento pertenece a la práctica de laboratorio complementaria y es independiente del ejercicio documental de este módulo: ninguno reemplaza al otro.
+
+>>>>>>> Stashed changes
 > **Alerta cerca de cero.** La incertidumbre relativa puede crecer sin límite útil, un intervalo simétrico puede incluir valores físicamente imposibles y detección, cuantificación, estimación y decisión no son equivalentes. El análisis numérico queda para material avanzado. Fuente: QUAM App. F, pp. editoriales 121–125 (PDF pp. 127–131).
 
 ### Cierre

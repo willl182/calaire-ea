@@ -7,7 +7,7 @@
 **Distribución:** exposición guiada, 36 min; ejercicio de sensibilidad y especificación del mensurando, 12 min.  
 **Posición en la jornada:** segundo módulo del curso, inmediatamente después de M1 y antes de la introducción sistemática a los conceptos GUM de M3.  
 **Prerrequisito:** M1, en particular la distinción entre mensurando, referencia, instrumento y cadena de trazabilidad.  
-**Materiales:** diapositiva o pizarra para las ecuaciones; calculadora básica; hoja del ejercicio; extractos de 40 CFR 50 Appendix D, NISTIR 6963, JCGM GUM-6:2020 y handout teórico del curso.
+**Materiales:** diapositiva o pizarra para las ecuaciones; calculadora básica; hoja del ejercicio; extractos de 40 CFR 50 Appendix D, NISTIR 6963, JCGM GUM-6:2020 y [handout teórico del curso](../handout/handout_teorico_gum_o3.md).
 
 **Idea fuerza del módulo:** una ecuación de medición no es solo una fórmula para obtener un número. Es una representación física que permite identificar qué magnitudes influyen, en qué dirección lo hacen y cuánto aporta la incertidumbre de cada una. En fotometría UV, la temperatura, la presión, la longitud óptica y el coeficiente de absorción producen dependencias proporcionales a la fracción molar; el cociente de intensidades entra mediante un logaritmo y requiere especial atención cuando la transmitancia se aproxima a uno.
 
@@ -54,7 +54,7 @@ c(\text{ppm})=-\frac{10^6}{\alpha l}\ln\left(\frac{I}{I_0}\right).
 
 La lectura física es directa. Sin absorción, \(I\) e \(I_0\) son casi iguales, \(D\) se aproxima a uno y \(\ln D\) se aproxima a cero. Al aumentar la cantidad de ozono en el camino óptico, disminuye \(D\), el logaritmo se hace más negativo y el signo negativo situado delante de la expresión produce una concentración positiva.
 
-**Apoyo en el handout:** ver Handout teórico, §1.1 — Mensurando y resultado de medición, y §1.2 — Modelo de medición, para la separación entre mensurando, observaciones y modelo.
+**Apoyo en el handout:** ver [Handout teórico, §1.1 — Mensurando y resultado de medición](../handout/gum_o3/O3_H01_conceptos_basicos.md#gum-mensurando-resultado), y [§1.2 — Modelo de medición](../handout/gum_o3/O3_H01_conceptos_basicos.md#gum-modelo-medicion), para la separación entre mensurando, observaciones y modelo.
 
 La regla final de la EPA de 2023 adopta para el coeficiente de absorción del ozono el valor \(304.39\ \text{atm}^{-1}\text{cm}^{-1}\), con incertidumbre estándar \(0.94\ \text{atm}^{-1}\text{cm}^{-1}\). La incertidumbre estándar relativa correspondiente es aproximadamente \(0.31\,\%\). Este parámetro fija la escala de la medición: una variación relativa en el coeficiente produce una variación relativa de igual magnitud y signo contrario en el resultado calculado.
 
@@ -86,7 +86,7 @@ donde `f_linea` representa una corrección residual de transmisión, `f_h` una c
 
 La ecuación (4) de la regulación hace visibles correcciones equivalentes mediante los factores \(T/273\) y \(760/P\), junto con una corrección de longitud asociada a pérdidas de ozono. Esa escritura y el modelo basado en \(k_B\) representan la misma necesidad física: relacionar la absorción con las condiciones del gas y con el camino efectivo de las moléculas que llegan a la celda.
 
-**Referencia exacta del bloque:** **40 CFR Part 50, Appendix D, §4.5.3.10**; *Federal Register*, página **70599**, página **5 del PDF**, ecuación (4), incluidos \(T/273\), \(760/P\) y la corrección de \(L\) por pérdidas. Handout teórico, **§1.2**, modelo de medición. JCGM GUM-6:2020, **§§5.5–5.9 y 6.1–6.7, páginas impresas 4–9**, para especificación y construcción del modelo. Eurachem/CITAC QUAM 2012, caps. 4–5, pp. editoriales 10–13 (PDF pp. 16–19), para flujo de evaluación, modelos racionales y mensurandos operacionales; ejemplo A5, pp. editoriales 72–80 (PDF pp. 78–86).
+**Referencia exacta del bloque:** **40 CFR Part 50, Appendix D, §4.5.3.10**; *Federal Register*, página **70599**, página **5 del PDF**, ecuación (4), incluidos \(T/273\), \(760/P\) y la corrección de \(L\) por pérdidas. [Handout teórico, **§1.2**, modelo de medición.](../handout/gum_o3/O3_H01_conceptos_basicos.md#gum-modelo-medicion) JCGM GUM-6:2020, **§§5.5–5.9 y 6.1–6.7, páginas impresas 4–9**, para especificación y construcción del modelo. Eurachem/CITAC QUAM 2012, caps. 4–5, pp. editoriales 10–13 (PDF pp. 16–19), para flujo de evaluación, modelos racionales y mensurandos operacionales; ejemplo A5, pp. editoriales 72–80 (PDF pp. 78–86).
 
 ### 3.3 Subbloque 3 — Coeficientes de sensibilidad (21–29 min; acumulado: 29 min)
 
@@ -112,7 +112,7 @@ c_D=\frac{\partial x}{\partial D}
 =\frac{x}{D\ln D}.
 \]
 
-**Apoyo en el handout:** ver Handout teórico, §4.1 — Coeficientes de sensibilidad, donde estas mismas derivadas del modelo de Beer–Lambert están desarrolladas paso a paso.
+**Apoyo en el handout:** ver [Handout teórico, §4.1 — Coeficientes de sensibilidad](../handout/gum_o3/O3_H04_propagacion_guf.md#gum-coef-sensibilidad), donde estas mismas derivadas del modelo de Beer–Lambert están desarrolladas paso a paso.
 
 Los signos tienen interpretación física. \(c_T\) es positivo porque un incremento de temperatura incrementa el valor calculado de \(x\). Los coeficientes de presión, longitud y sección eficaz son negativos porque esas magnitudes dividen la expresión. Como \(0<D<1\), \(\ln D\) es negativo; por ello \(c_D\) también es negativo: una transmitancia mayor representa menor absorción y conduce a una fracción molar menor.
 
@@ -126,7 +126,7 @@ El signo no debe borrarse del razonamiento, porque permite interpretar la respue
 
 Las sensibilidades relativas de \(T\), \(P\), \(L\) y \(\sigma\) tienen magnitud uno. Un cambio relativo pequeño de uno por ciento en cualquiera produce, en primera aproximación, un cambio relativo de uno por ciento en \(x\), con el signo correspondiente. La sensibilidad a \(D\) contiene \(1/(D\ln D)\). Cuando \(D\) se aproxima a uno, \(\ln D\) se aproxima a cero y la sensibilidad puede crecer; por eso la resolución y estabilidad del cociente de intensidades adquieren especial importancia a baja absorción.
 
-**Referencia exacta del bloque:** Handout teórico, **§4.1**, coeficientes de sensibilidad. JCGM GUM-6:2020, **§§7.1–7.2, páginas impresas 9–10**, evaluación del modelo y sensibilidades. NISTIR 6963, **§11, páginas impresas 14–15**, ecuaciones y presupuesto de incertidumbre.
+**Referencia exacta del bloque:** [Handout teórico, **§4.1**, coeficientes de sensibilidad.](../handout/gum_o3/O3_H04_propagacion_guf.md#gum-coef-sensibilidad) JCGM GUM-6:2020, **§§7.1–7.2, páginas impresas 9–10**, evaluación del modelo y sensibilidades. NISTIR 6963, **§11, páginas impresas 14–15**, ecuaciones y presupuesto de incertidumbre.
 
 ### 3.4 Subbloque 4 — Fuentes físicas y componentes constantes o proporcionales (29–36 min; acumulado: 36 min)
 
@@ -142,7 +142,7 @@ Tercero, la exactitud de presión influye de manera inversa. Debe verificarse qu
 
 Cuarto, la resolución del cociente de intensidades afecta \(D\). Intervienen resolución digital, ruido óptico, estabilidad de la fuente, detección electrónica y cálculo de \(I/I_0\). Debido a la función logarítmica, una resolución fija de señal puede comportarse aproximadamente como una contribución constante en unidades de fracción molar dentro de un intervalo limitado y puede dominar cerca de cero.
 
-**Apoyo en el handout:** ver Handout teórico, §4.4 — Presupuesto y contribuciones, para la organización de estos efectos en un presupuesto, y §3.2 — Distribución rectangular, para el tratamiento de la resolución.
+**Apoyo en el handout:** ver [Handout teórico, §4.4 — Presupuesto y contribuciones](../handout/gum_o3/O3_H04_propagacion_guf.md#gum-presupuesto-contribuciones), para la organización de estos efectos en un presupuesto, y [§3.2 — Distribución rectangular](../handout/gum_o3/O3_H03_tipo_b_pdfs.md#gum-pdf-rectangular), para el tratamiento de la resolución.
 
 Conviene distinguir componentes proporcionales y constantes. Incertidumbres relativas aproximadamente constantes de \(\sigma\), \(L\), \(T\) y \(P\) producen contribuciones que aumentan con \(x\). Por ejemplo, la incertidumbre relativa de \(0.31\,\%\) del coeficiente de absorción aporta aproximadamente \(0.31\,\%\) del valor medido. En cambio, resolución, ruido de señal, corrección residual de cero o una pérdida expresada como cantidad fija pueden aportar una magnitud casi constante. Esta clasificación depende del modelo y de la evidencia y no debe imponerse por conveniencia.
 

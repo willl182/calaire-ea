@@ -28,7 +28,7 @@ Al finalizar el módulo, la persona participante podrá:
 
 Comience con una pregunta: “Si ajustamos el instrumento antes de comparar, ¿qué sabemos sobre su desempeño durante el periodo anterior?”. Recoja dos o tres respuestas y establezca la distinción. La **calibración** determina una relación entre indicaciones y valores de referencia, junto con información para interpretar el resultado. La **verificación** aporta evidencia de que se cumplen requisitos especificados. La **reverificación** comprueba que la relación previamente establecida continúa siendo válida. El **ajuste** modifica la respuesta del instrumento y, por ello, no debe confundirse con la observación independiente de su desempeño.
 
-**Apoyo en el handout:** ver *Handout teórico GUM–O₃*, §1.5 — Trazabilidad metrológica, para el papel del patrón de transferencia dentro de la cadena.
+**Apoyo en el handout:** ver *Handout teórico GUM–O₃*, [§1.5 — Trazabilidad metrológica](../handout/gum_o3/O3_H01_conceptos_basicos.md#gum-trazabilidad-metrologica), para el papel del patrón de transferencia dentro de la cadena.
 
 Un patrón de transferencia lleva un valor de referencia desde un sistema de mayor jerarquía hasta otro instrumento o lugar. Su utilidad depende de una relación documentada, de una incertidumbre adecuada al propósito y de la estabilidad entre calibraciones. Un certificado vigente no elimina la necesidad de controlar lo ocurrido desde su emisión.
 
@@ -64,7 +64,7 @@ y_i=b_0+m_0X_i+e_i,
 
 donde \(m_0\) es la pendiente, \(b_0\) el intercepto y \(e_i\) el residuo. Una pendiente diferente de uno sugiere un efecto proporcional. Un intercepto diferente de cero sugiere un efecto aditivo. El residuo muestra la parte que la recta no explica: un patrón curvo puede revelar falta de ajuste; una tendencia con el orden temporal puede indicar deriva o estabilización incompleta; un punto aislado exige revisar el registro antes de excluirlo.
 
-**Apoyo en el handout:** ver *Handout teórico GUM–O₃*, §2.1 — Media, desviación estándar e incertidumbre de la media, para interpretar la dispersión de los residuos, y §2.4 — Autocorrelación y tamaño de muestra efectivo, si las lecturas por punto proceden de series promediadas.
+**Apoyo en el handout:** ver *Handout teórico GUM–O₃*, [§2.1 — Media, desviación estándar e incertidumbre de la media](../handout/gum_o3/O3_H02_evaluacion_tipo_a.md#gum-media-desviacion), para interpretar la dispersión de los residuos, y [§2.4 — Autocorrelación y tamaño de muestra efectivo](../handout/gum_o3/O3_H02_evaluacion_tipo_a.md#gum-autocorrelacion-neff), si las lecturas por punto proceden de series promediadas.
 
 P1016Y93 describe el ajuste así: “an ordinary least squares linear regression line is fitted to data from all concentration test points to predict the measurement from the candidate transfer standard as a simple linear function of the measurement from the standard of higher authority” (P1016Y93, App. A, §A3, p. física 61). Aclare que la regresión del ejercicio sigue ese procedimiento. Una evaluación metrológica más amplia puede requerir incertidumbre en ambos ejes y covarianzas compartidas.
 
@@ -78,7 +78,7 @@ No use el coeficiente de determinación como única prueba. Una relación casi p
 
 Compare tres escalas temporales: variación dentro de un punto, diferencias entre ciclos y cambio entre verificaciones separadas. La deriva puede actuar sobre cero, pendiente, dispersión o varios elementos a la vez. La desviación estándar de las pendientes y de los interceptos entre ciclos proporciona una comprobación sencilla de estabilidad durante la verificación, pero no sustituye la historia de calibraciones.
 
-**Apoyo en el handout:** ver *Handout teórico GUM–O₃*, §2.1 — Media, desviación estándar e incertidumbre de la media, para el cálculo de la desviación estándar de pendientes e interceptos entre ciclos, y §2.2 — Grados de libertad, por el número reducido de ciclos.
+**Apoyo en el handout:** ver *Handout teórico GUM–O₃*, [§2.1 — Media, desviación estándar e incertidumbre de la media](../handout/gum_o3/O3_H02_evaluacion_tipo_a.md#gum-media-desviacion), para el cálculo de la desviación estándar de pendientes e interceptos entre ciclos, y [§2.2 — Grados de libertad](../handout/gum_o3/O3_H02_evaluacion_tipo_a.md#gum-grados-libertad), por el número reducido de ciclos.
 
 JCGM GUM-6 declara: “Whenever the standard is used, it is necessary to update its value and standard uncertainty reflecting the possible change in the measurement standard since it was last calibrated” (JCGM GUM-6:2020, §10.6.1). La historia temporal puede justificar un modelo de deriva y una predicción al tiempo de uso; esa predicción también posee incertidumbre y puede constituir extrapolación.
 
@@ -144,3 +144,8 @@ Errores frecuentes adicionales: usar límites de conformidad como incertidumbre 
 ## 6. Cierre y transición
 
 Una verificación defendible conserva el estado encontrado, aplica las correcciones vigentes, evalúa puntos, regresión, residuos y estabilidad, y documenta la decisión antes de cualquier intervención. El módulo M6 transfiere esta disciplina a NO/NO₂/NOₓ; el taller integrador M7 cierra el recorrido obligatorio con un presupuesto y un informe auditables. Monte Carlo queda como M8 opcional y material avanzado.
+<<<<<<< Updated upstream
+=======
+
+**Enlace con la práctica:** en la práctica de laboratorio complementaria, `practica/E02_verificacion_multipunto.md` ejecuta exactamente este diseño de tres ciclos (ascendente, descendente, pseudoaleatorio) con instrumento real, produce `u_pred`, `s_pooled`/ANOVA y la matriz de cobertura que este módulo describe de forma documental. `practica/E11_tiempo_respuesta.md` valida además la espera mínima usada antes de registrar cada punto.
+>>>>>>> Stashed changes

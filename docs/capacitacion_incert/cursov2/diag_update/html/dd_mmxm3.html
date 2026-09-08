@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Diagnóstico final y arquitectura documental propuesta</title>
+<style>
+:root{
+  --bg:#f7f8fa;--surface:#fff;--ink:#1c2330;--muted:#5a6478;
+  --accent:#0e6ba8;--accent-soft:#e3f0f9;--line:#dfe3ea;
+  --ok:#2e7d52;--warn:#9b5210;--chip:#eef1f6;--code:#f3f5f8;
+  color-scheme:light dark;
+}
+@media(prefers-color-scheme:dark){:root{
+  --bg:#12161d;--surface:#1a2029;--ink:#e6e9ef;--muted:#a8b1c0;
+  --accent:#5db3e8;--accent-soft:#173142;--line:#354052;
+  --ok:#6fc79a;--warn:#f0ad68;--chip:#232b37;--code:#10151c;
+}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:1rem}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.62 "Segoe UI",system-ui,-apple-system,sans-serif}
+a{color:var(--accent)}
+a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.sidebar{position:fixed;inset:0 auto 0 0;width:17rem;overflow-y:auto;padding:1.25rem 1rem;background:var(--surface);border-right:1px solid var(--line);z-index:10}
+.sidebar strong{display:block;color:var(--accent);margin-bottom:.75rem}
+.sidebar ul{list-style:none;margin:0;padding:0}
+.sidebar li{margin:.15rem 0}
+.sidebar a{display:block;padding:.38rem .55rem;border-radius:6px;text-decoration:none;color:var(--ink);font-size:.92rem}
+.sidebar a:hover{background:var(--accent-soft);color:var(--accent)}
+.sidebar .l2{padding-left:1.1rem;font-size:.85rem;color:var(--muted)}
+main{max-width:1060px;margin-left:max(17rem,calc((100vw - 1400px)/2));padding:2rem 2rem 5rem}
+.hero{border-left:5px solid var(--accent);padding:1.25rem 1.5rem;margin:0 0 2rem;background:var(--surface);border-radius:0 10px 10px 0;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.hero h1{font-size:clamp(1.65rem,3vw,2.35rem);line-height:1.2;margin:.15rem 0 .65rem}
+.meta{color:var(--muted);font-size:.92rem}
+section.major{margin:2.5rem 0 3rem;scroll-margin-top:1rem}
+section.major>h2{font-size:1.55rem;border-bottom:3px solid var(--accent);padding-bottom:.45rem;margin-bottom:1.3rem}
+h1,h2,h3,h4,h5,h6{line-height:1.28;scroll-margin-top:1rem}
+h1{font-size:1.65rem}h2{font-size:1.38rem;margin-top:2.2rem}h3{font-size:1.16rem;margin-top:1.7rem}h4{font-size:1.02rem}
+.tablewrap{overflow-x:auto;margin:1rem 0;border:1px solid var(--line);border-radius:8px}
+table{border-collapse:collapse;width:100%;min-width:38rem;background:var(--surface);font-size:.9rem}
+th,td{border:1px solid var(--line);padding:.48rem .65rem;text-align:left;vertical-align:top}
+th{background:var(--accent-soft);position:sticky;top:0}
+pre{overflow-x:auto;max-width:100%;padding:1rem;background:var(--code);border:1px solid var(--line);border-radius:8px;line-height:1.45;tab-size:2}
+code{font-family:"Cascadia Code","SFMono-Regular",Consolas,monospace;font-size:.88em}
+:not(pre)>code{background:var(--chip);padding:.08rem .34rem;border-radius:4px}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+blockquote{border-left:4px solid var(--accent);background:var(--surface);padding:.75rem 1rem;margin:1rem 0;border-radius:0 8px 8px 0;color:var(--ink)}
+ul,ol{padding-left:1.4rem}
+li{margin:.2rem 0}
+footer{margin-top:3rem;color:var(--muted);font-size:.88rem;border-top:1px solid var(--line);padding-top:1rem}
+@media(max-width:900px){.sidebar{position:static;width:auto;border-right:0;border-bottom:1px solid var(--line)}.sidebar>ul{display:flex;gap:.25rem;overflow-x:auto;flex-wrap:wrap}.sidebar>ul>li{flex:0 0 auto}.sidebar a{white-space:nowrap}main{margin:0;padding:1.25rem}}
+@media print{
+  :root{--bg:#fff;--surface:#fff;--ink:#000;--muted:#333;--accent:#245b7a;--accent-soft:#eef4f7;--line:#aaa;--code:#f5f5f5}
+  body{background:#fff;color:#000;font-size:10.5pt}.sidebar{display:none}main{max-width:none;margin:0;padding:0}
+  .hero{box-shadow:none}section.major{break-before:page;margin:0 0 1.2rem}
+  a{color:#000;text-decoration:none}pre,.tablewrap{overflow:visible}table{min-width:0;font-size:8.5pt}th{position:static}
+}
+</style>
+</head>
+<body>
+<nav class="sidebar" aria-label="Navegación"><strong>Diagnóstico final</strong><ul><li><a class="" href="#curso-de-incertidumbre-de-medicion-para-operadores-de-redes-de-calidad-del-aire">Curso de incertidumbre de medición para operadores de redes de calidad del aire</a></li><li><a class="" href="#1-conclusion-en-una-frase">1. Conclusión en una frase</a></li><li><a class="" href="#2-punto-de-partida">2. Punto de partida</a></li><li><a class="" href="#3-aclaracion-decisiva-la-funcion-meta-ya-existe">3. Aclaración decisiva: la función meta ya existe</a></li><li><a class="" href="#4-modelo-de-capas-y-flujo-autoral-correcto">4. Modelo de capas y flujo autoral correcto</a></li><li><a class="l2" href="#4-1-modelo-de-trabajo-del-autor">4.1 Modelo de trabajo del autor</a></li><li><a class="l2" href="#4-2-capa-0-version-meta-del-autor-e-instructor">4.2 Capa 0 — versión meta del autor e instructor</a></li><li><a class="l2" href="#4-3-capa-1-material-teorico-del-participante">4.3 Capa 1 — material teórico del participante</a></li><li><a class="l2" href="#4-4-capa-2-guion-textual-de-diapositivas">4.4 Capa 2 — guion textual de diapositivas</a></li><li><a class="l2" href="#4-5-capa-3-diapositivas-visuales">4.5 Capa 3 — diapositivas visuales</a></li><li><a class="l2" href="#4-6-capa-r-referencia-de-consulta-perpendicular">4.6 Capa R — referencia de consulta (perpendicular)</a></li><li><a class="" href="#5-estado-real-de-cada-capa">5. Estado real de cada capa</a></li><li><a class="" href="#6-mecanismo-propuesto-una-fuente-marcado-por-audiencia">6. Mecanismo propuesto: una fuente, marcado por audiencia</a></li><li><a class="" href="#7-ubicacion-de-los-materiales-actuales-dentro-del-flujo">7. Ubicación de los materiales actuales dentro del flujo</a></li><li><a class="l2" href="#7-1-modulos-m1-m8">7.1 Módulos M1–M8</a></li><li><a class="l2" href="#7-2-hallazgo-critico-la-capa-1-no-es-extraible-en-4-de-8-modulos">7.2 Hallazgo crítico: la capa 1 no es extraíble en 4 de 8 módulos</a></li><li><a class="l2" href="#7-3-handout-de-gum-guia-para-la-expresion-de-la-incertidumbre-de-medida-y-o">7.3 Handout de GUM (Guía para la Expresión de la Incertidumbre de Medida) y O₃</a></li><li><a class="l2" href="#7-4-asimetria-o-nox">7.4 Asimetría O₃ / NOx</a></li><li><a class="l2" href="#7-5-vacio-de-instruccion-de-uso-del-handout">7.5 Vacío de instrucción de uso del handout</a></li><li><a class="l2" href="#7-6-solucionarios">7.6 Solucionarios</a></li><li><a class="l2" href="#7-7-protocolos-practicos">7.7 Protocolos prácticos</a></li><li><a class="l2" href="#7-8-solo-md-capa-derivada-fuera-de-control">7.8 solo_md/ — capa derivada fuera de control</a></li><li><a class="" href="#8-diagnostico-pedagogico-que-permanece-vigente">8. Diagnóstico pedagógico que permanece vigente</a></li><li><a class="l2" href="#8-1-falta-una-entrada-terminologica-clara">8.1 Falta una entrada terminológica clara</a></li><li><a class="l2" href="#8-2-inversion-de-vocabulario-m1-m3">8.2 Inversión de vocabulario M1 ↔︎ M3</a></li><li><a class="l2" href="#8-3-existen-conceptos-usados-antes-de-ser-ensenados">8.3 Existen conceptos usados antes de ser enseñados</a></li><li><a class="l2" href="#8-4-el-informe-gum-se-exige-antes-de-ensenarse-de-manera-suficiente">8.4 El informe GUM se exige antes de enseñarse de manera suficiente</a></li><li><a class="l2" href="#8-5-cobertura-tiene-varios-sentidos">8.5 &quot;Cobertura&quot; tiene varios sentidos</a></li><li><a class="l2" href="#8-6-existe-duplicacion-no-gobernada">8.6 Existe duplicación no gobernada</a></li><li><a class="" href="#9-arquitectura-documental-objetivo">9. Arquitectura documental objetivo</a></li><li><a class="l2" href="#a-meta-maestro-privado">A. Meta maestro privado</a></li><li><a class="l2" href="#b-material-teorico-entregable">B. Material teórico entregable</a></li><li><a class="l2" href="#c-anexos-tecnicos">C. Anexos técnicos</a></li><li><a class="l2" href="#d-fichas-operativas-y-ayudas-de-campo">D. Fichas operativas y ayudas de campo</a></li><li><a class="l2" href="#e-protocolos-practicos">E. Protocolos prácticos</a></li><li><a class="l2" href="#f-solucionarios-privados">F. Solucionarios privados</a></li><li><a class="l2" href="#g-guion-textual-de-diapositivas">G. Guion textual de diapositivas</a></li><li><a class="l2" href="#h-diapositivas-visuales">H. Diapositivas visuales</a></li><li><a class="" href="#10-reglas-de-derivacion-y-control">10. Reglas de derivación y control</a></li><li><a class="l2" href="#regla-1-una-idea-nueva-nace-en-la-capa-meta">Regla 1. Una idea nueva nace en la capa meta</a></li><li><a class="l2" href="#regla-2-cada-capa-tiene-autoridad-definida">Regla 2. Cada capa tiene autoridad definida</a></li><li><a class="l2" href="#regla-3-las-diapositivas-reducen-no-amplian">Regla 3. Las diapositivas reducen, no amplían</a></li><li><a class="l2" href="#regla-4-los-anexos-amplian-sin-interrumpir">Regla 4. Los anexos amplían sin interrumpir</a></li><li><a class="l2" href="#regla-5-fichas-y-protocolos-repiten-segun-su-funcion">Regla 5. Fichas y protocolos repiten según su función</a></li><li><a class="l2" href="#regla-6-las-respuestas-permanecen-fuera-del-entregable-principal">Regla 6. Las respuestas permanecen fuera del entregable principal</a></li><li><a class="l2" href="#regla-7-cada-concepto-operativo-tiene-un-dueno">Regla 7. Cada concepto operativo tiene un dueño</a></li><li><a class="" href="#11-valoracion-del-desfase-actual">11. Valoración del desfase actual</a></li><li><a class="l2" href="#11-1-contenido-tecnico">11.1 Contenido técnico</a></li><li><a class="l2" href="#11-2-version-meta">11.2 Versión meta</a></li><li><a class="l2" href="#11-3-material-teorico-del-participante">11.3 Material teórico del participante</a></li><li><a class="l2" href="#11-4-anexos-y-ayudas-operativas">11.4 Anexos y ayudas operativas</a></li><li><a class="l2" href="#11-5-guion-textual-y-diapositivas-visuales">11.5 Guion textual y diapositivas visuales</a></li><li><a class="l2" href="#11-6-diagnostico-global">11.6 Diagnóstico global</a></li><li><a class="" href="#12-inventario-de-deuda">12. Inventario de deuda</a></li><li><a class="" href="#13-plan-propuesto">13. Plan propuesto</a></li><li><a class="" href="#14-solucion-conceptual">14. Solución conceptual</a></li><li><a class="" href="#15-lo-que-no-esta-mal">15. Lo que NO está mal</a></li><li><a class="" href="#16-conclusion-final">16. Conclusión final</a></li></ul></nav>
+<main>
+
+<section id="diagnóstico-final-y-arquitectura-documental-propuesta" class="level1">
+<h1 id=""></h1>
+<section id="curso-de-incertidumbre-de-medición-para-operadores-de-redes-de-calidad-del-aire" class="level2">
+<h2 id=""></h2>
+<p><strong>Directorio evaluado:</strong> <code>docs/capacitacion_incert/cursov2/</code> <strong>Alcance:</strong> arquitectura pedagógica y documental del curso; relación entre módulos, handouts, solucionarios, prácticas y futuras diapositivas. <strong>Propósito:</strong> consolidar el diagnóstico alcanzado después de aclarar el flujo real de autoría y uso del material.</p>
+<hr />
+</section>
+<section id="1-conclusión-en-una-frase" class="level2">
+<h2 id=""></h2>
+<p>El paquete no tiene un problema de contenido técnico: tiene un problema de <strong>capas sin declarar</strong>. Cinco artefactos con audiencias distintas conviven en dos carpetas, dos de ellos compiten por el mismo rol, y los <code>Guion dictable</code> que deberían producir la capa del participante faltan en tres módulos. El desfase es de una capa y media, no de arquitectura equivocada.</p>
+<hr />
+</section>
+<section id="2-punto-de-partida" class="level2">
+<h2 id=""></h2>
+<p>La evaluación comenzó con tres inquietudes:</p>
+<ol type="1">
+<li>si los términos metrológicos debían aclararse antes de iniciar los módulos;</li>
+<li>si los módulos omitían contenido importante que había quedado únicamente en los handouts;</li>
+<li>si los módulos ya funcionaban, en la práctica, como su propio handout.</li>
+</ol>
+<p>La primera lectura mostraba una mezcla de funciones. Los módulos contienen teoría, discurso, minutaje, instrucciones docentes, ejercicios, resultados y errores frecuentes. El handout de O₃ contiene tanto conceptos básicos como desarrollos avanzados. El handout de NOx resume parte de M6, pero no alcanza su profundidad. Los protocolos prácticos vuelven a explicar algunos conceptos para poder utilizarse de forma autónoma.</p>
+<p>Con esa información, parecía que los módulos estaban sobrecargados y que competían con los handouts como material del participante. Esa interpretación era incompleta porque faltaba declarar una pieza central del método de trabajo: la <strong>versión meta del curso</strong>.</p>
+<hr />
+</section>
+<section id="3-aclaración-decisiva-la-función-meta-ya-existe" class="level2">
+<h2 id=""></h2>
+<p>El flujo de autoría no comienza con el material que recibe el participante. Comienza con una capa más amplia, privada y cargada, que sirve al autor y al instructor.</p>
+<p>En el estado actual, esa función meta existe de manera distribuida, principalmente en los módulos M1–M8, pero todavía no está declarada ni gobernada como sistema. La decisión propuesta es tratarlos como capítulos coordinados del <strong>meta maestro canónico</strong>. Si se necesita una lectura continua, debe producirse mediante un ensamblado generado desde M1–M8, nunca mediante otra copia mantenida manualmente.</p>
+<p>El meta maestro objetivo debe contener:</p>
+<ul>
+<li>teoría completa;</li>
+<li>hilo narrativo cercano al discurso oral;</li>
+<li>propósito de cada bloque;</li>
+<li>secuencia pedagógica;</li>
+<li>transiciones;</li>
+<li>minutaje;</li>
+<li>instrucciones de facilitación;</li>
+<li>preguntas para el grupo;</li>
+<li>ejercicios y respuestas;</li>
+<li>resultados esperados;</li>
+<li>errores frecuentes;</li>
+<li>advertencias y puntos de énfasis;</li>
+<li>variantes según tiempo o nivel del grupo;</li>
+<li>contenido opcional;</li>
+<li>referencias y justificaciones;</li>
+<li>decisiones sobre qué incluir, simplificar o dejar como consulta.</li>
+</ul>
+<p>Su pregunta rectora es:</p>
+<blockquote>
+<p>¿Qué necesito saber, recordar y tener disponible para enseñar bien este bloque?</p>
+</blockquote>
+<p>Esta pieza no es un handout ni debe entregarse directamente al participante. Es la fuente pedagógica superior del curso.</p>
+<p>Al reconocer esta capa, cambia el diagnóstico: la densidad de los módulos, sus respuestas, su minutaje y sus instrucciones no son defectos por sí mismos. Son características coherentes con una versión meta. El problema real es que ese rol no está declarado y no existe todavía una derivación limpia y sistemática hacia los demás productos.</p>
+<hr />
+</section>
+<section id="4-modelo-de-capas-y-flujo-autoral-correcto" class="level2">
+<h2 id=""></h2>
+<p>El flujo deseado tiene cuatro capas principales y un artefacto perpendicular de referencia.</p>
+<section id="41-modelo-de-trabajo-del-autor" class="level3">
+<h3 id=""></h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>Capa</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>0</strong></td>
+<td><strong>Meta / instructor</strong></td>
+<td>Versión más cargada del material teórico. Minutaje, ficha, prerrequisitos, organización de actividades, errores frecuentes, transiciones, procedencia exacta de fuentes, soluciones, cómo destrabar al grupo.</td>
+</tr>
+<tr>
+<td><strong>1</strong></td>
+<td><strong>Material teórico del participante</strong></td>
+<td>Prosa completa, hilo narrativo lógico y consecuente. Es casi el discurso hablado. Se entrega como material teórico.</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td><strong>Diapositivas texto</strong></td>
+<td>Derivadas de capa 1. Texto comprimido, telegráfico.</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td><strong>Diapositivas finales</strong></td>
+<td>Capa 2 + imágenes, diagramas, diseño.</td>
+</tr>
+<tr>
+<td><strong>R</strong></td>
+<td><strong>Referencia de consulta</strong></td>
+<td>Artefacto perpendicular, no etapa del flujo. Glosario, tablas, fórmulas, checklists. Lo que el operador abre seis meses después en su puesto.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Relación entre 0 y 1: <strong>superconjunto</strong>, no hermanos. Capa 1 se obtiene <em>quitando</em> bloques de capa 0, no reescribiendo. Esta decisión gobierna todo el resto del diagnóstico.</p>
+</section>
+<section id="42-capa-0--versión-meta-del-autor-e-instructor" class="level3">
+<h3 id=""></h3>
+<p>Es la fuente pedagógica más completa. Conserva teoría, relato oral y decisiones docentes. Debe permitir preparar, impartir, ajustar y actualizar el curso.</p>
+<p>Actualmente, los módulos M1–M8 forman una fuente meta distribuida. El estado objetivo debe tratarlos como capítulos coordinados de un meta maestro y, si se necesita una lectura continua, ensamblarlos sin crear otra copia mantenida manualmente.</p>
+</section>
+<section id="43-capa-1--material-teórico-del-participante" class="level3">
+<h3 id=""></h3>
+<p>Se deriva de la versión meta.</p>
+<p>Mantiene:</p>
+<ul>
+<li>explicación completa;</li>
+<li>hilo narrativo lógico y consecuente;</li>
+<li>conceptos y definiciones;</li>
+<li>ecuaciones necesarias;</li>
+<li>ejemplos;</li>
+<li>figuras y tablas útiles;</li>
+<li>síntesis;</li>
+<li>ejercicios apropiados;</li>
+<li>referencias pertinentes.</li>
+</ul>
+<p>Elimina o separa:</p>
+<ul>
+<li>minutaje;</li>
+<li>instrucciones como "dictar", "preguntar" o "mostrar";</li>
+<li>estrategia de facilitación;</li>
+<li>respuestas anticipadas;</li>
+<li>soluciones completas;</li>
+<li>resultados de demostraciones antes de realizarlas;</li>
+<li>comentarios editoriales;</li>
+<li>decisiones internas del autor.</li>
+</ul>
+<p>Su pregunta rectora es:</p>
+<blockquote>
+<p>¿Qué necesita leer y conservar el participante para comprender el curso después de la sesión?</p>
+</blockquote>
+<p>Este material debe poder leerse como un manual breve y continuo. Puede conservar la división M1–M8, pero cada módulo debe funcionar como capítulo de una sola narrativa, no como documento independiente que obliga a consultar otra fuente para completar ideas básicas.</p>
+</section>
+<section id="44-capa-2--guion-textual-de-diapositivas" class="level3">
+<h3 id=""></h3>
+<p>Se deriva del material teórico, no directamente de una colección dispersa de módulos y handouts.</p>
+<p>Mantiene:</p>
+<ul>
+<li>mismo orden conceptual;</li>
+<li>mismas conclusiones;</li>
+<li>mismos ejemplos esenciales;</li>
+<li>mismas definiciones operativas.</li>
+</ul>
+<p>Reduce:</p>
+<ul>
+<li>longitud;</li>
+<li>detalle;</li>
+<li>derivaciones;</li>
+<li>explicaciones secundarias;</li>
+<li>densidad verbal.</li>
+</ul>
+<p>Su estilo es telegráfico y de alta síntesis: frases cortas, una idea principal por diapositiva y texto suficiente para orientar sin reemplazar la exposición oral.</p>
+<p>Su pregunta rectora es:</p>
+<blockquote>
+<p>¿Qué necesita estar escrito en pantalla mientras se explica esta idea?</p>
+</blockquote>
+</section>
+<section id="45-capa-3--diapositivas-visuales" class="level3">
+<h3 id=""></h3>
+<p>Se deriva del guion textual. Añade:</p>
+<ul>
+<li>imágenes;</li>
+<li>diagramas;</li>
+<li>composición;</li>
+<li>jerarquía visual;</li>
+<li>tablas simplificadas;</li>
+<li>señales de énfasis;</li>
+<li>revelado progresivo, cuando sea útil.</li>
+</ul>
+<p>No debe introducir teoría nueva. Si una idea aparece por primera vez en la diapositiva visual, existe una ruptura en el flujo de derivación.</p>
+<p>Su pregunta rectora es:</p>
+<blockquote>
+<p>¿Cómo hacer visible la idea sin convertir la diapositiva en una página del manual?</p>
+</blockquote>
+</section>
+<section id="46-capa-r--referencia-de-consulta-perpendicular" class="level3">
+<h3 id=""></h3>
+<p>Glosario, tablas de PDFs, ley de propagación, checklists de informe, fichas operativas. Lo que se abre seis meses después en el puesto de trabajo. No es etapa del flujo lineal: se construye y mantiene como artefacto aparte, paralelo a la capa 1.</p>
+<hr />
+</section>
+</section>
+<section id="5-estado-real-de-cada-capa" class="level2">
+<h2 id=""></h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Capa</th>
+<th>Dónde vive hoy</th>
+<th style="text-align: right;">Volumen</th>
+<th>Estado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0 — Meta</td>
+<td>disperso dentro de <code>modulos/</code> + <code>modulos/soluciones/</code></td>
+<td style="text-align: right;">607 + 1571 líneas</td>
+<td>existe, <strong>fusionado con capa 1</strong></td>
+</tr>
+<tr>
+<td>1 — Teórico participante</td>
+<td>embebido en <code>modulos/</code>, sin separar</td>
+<td style="text-align: right;">~818 líneas (mezcladas)</td>
+<td>existe, <strong>no extraíble en 4 de 8 módulos</strong></td>
+</tr>
+<tr>
+<td>2 — Diapositivas texto</td>
+<td>—</td>
+<td style="text-align: right;">0</td>
+<td><strong>no existe</strong></td>
+</tr>
+<tr>
+<td>3 — Diapositivas finales</td>
+<td>—</td>
+<td style="text-align: right;">0</td>
+<td><strong>no existe</strong></td>
+</tr>
+<tr>
+<td>R — Referencia</td>
+<td><code>handout/gum_o3/</code> + <code>handout/no_nox/</code></td>
+<td style="text-align: right;">869 + 120 líneas</td>
+<td>existe, <strong>contaminado con capa 1 duplicada</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>Verificación de ausencia de capas 2 y 3:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> . <span class="at">-iname</span> <span class="st">&quot;*slide*&quot;</span> <span class="at">-o</span> <span class="at">-iname</span> <span class="st">&quot;*diapo*&quot;</span> <span class="at">-o</span> <span class="at">-iname</span> <span class="st">&quot;*.pptx&quot;</span> <span class="dt">\</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>       <span class="at">-o</span> <span class="at">-iname</span> <span class="st">&quot;*reveal*&quot;</span> <span class="at">-o</span> <span class="at">-iname</span> <span class="st">&quot;*beamer*&quot;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 0 resultados</span></span></code></pre></div>
+<p>Reparto de líneas por rol de sección en los 8 módulos:</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Sección</th>
+<th style="text-align: right;">Líneas</th>
+<th>Audiencia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ficha + Objetivos (duración, prerrequisitos, materiales, distribución de tiempo)</td>
+<td style="text-align: right;">201</td>
+<td>solo instructor</td>
+</tr>
+<tr>
+<td>Guion de exposición</td>
+<td style="text-align: right;">818</td>
+<td>mezclado</td>
+</tr>
+<tr>
+<td>Ejercicio/actividad (enunciado, organización, tiempo, resultado esperado)</td>
+<td style="text-align: right;">245</td>
+<td>mezclado</td>
+</tr>
+<tr>
+<td>Errores frecuentes + Cierre y transición</td>
+<td style="text-align: right;">161</td>
+<td>solo instructor</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>42 % de <code>modulos/</code> es meta pura.</strong> El 57 % restante tampoco es limpio. Dentro del guion de exposición conviven, contados sobre los 8 módulos:</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Marcador</th>
+<th style="text-align: right;">Ocurrencias</th>
+<th>Capa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>acumulado</code> (minutaje)</td>
+<td style="text-align: right;">45</td>
+<td>0</td>
+</tr>
+<tr>
+<td><code>Apoyo en el handout:</code></td>
+<td style="text-align: right;">17</td>
+<td>0</td>
+</tr>
+<tr>
+<td><code>Idea fuerza:</code></td>
+<td style="text-align: right;">27</td>
+<td>2 (semilla)</td>
+</tr>
+<tr>
+<td><code>Referencias exactas:</code></td>
+<td style="text-align: right;">7</td>
+<td>0 + 1</td>
+</tr>
+<tr>
+<td><code>Resultado esperado:</code></td>
+<td style="text-align: right;">7</td>
+<td>0</td>
+</tr>
+<tr>
+<td><code>Enlace con la práctica:</code></td>
+<td style="text-align: right;">5</td>
+<td>0</td>
+</tr>
+<tr>
+<td><code>Referencia integrada</code></td>
+<td style="text-align: right;">4</td>
+<td>0 + 1</td>
+</tr>
+<tr>
+<td><code>Organización:</code></td>
+<td style="text-align: right;">3</td>
+<td>0</td>
+</tr>
+<tr>
+<td><code>Conexión posterior</code></td>
+<td style="text-align: right;">2</td>
+<td>0</td>
+</tr>
+<tr>
+<td><code>Pregunta de control:</code></td>
+<td style="text-align: right;">1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table></div>
+<p>Consecuencia: un mismo archivo sirve a dos lectores con necesidades opuestas. El instructor quiere más carga; el participante quiere menos. Nadie queda bien servido.</p>
+<hr />
+</section>
+<section id="6-mecanismo-propuesto-una-fuente-marcado-por-audiencia" class="level2">
+<h2 id=""></h2>
+<p>Fuente única por módulo (= capa 0). Las demás capas se generan quitando bloques.</p>
+<p>Ya existe la convención de facto: <code>**Idea fuerza:**</code>, <code>**Guion dictable:**</code>, <code>**Apoyo en el handout:**</code>. Falta que sea <strong>regular y legible por máquina</strong>. Esquema único por subbloque:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">### 3.N Título — 0:mm a 0:mm; acumulado 0:mm      ← capa 0 (minutaje)</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>**Idea fuerza:**            ← capa 2 (título de diapositiva)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>**Guion dictable:**         ← capas 0 y 1 (el discurso; el texto del material teórico)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>**Puntos:**                 ← capa 2 (3–5 viñetas comprimidas)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>**Apoyo visual:**           ← capa 3 (qué diagrama, foto o esquema)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>**Nota de facilitación:**   ← capa 0 (dónde se atasca el grupo, cómo destrabar)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>**Referencias exactas:**    ← capa 0 completa; capa 1 en versión corta</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>**Apoyo en la referencia:** ← capa 0 (puntero a capa R)</span></code></pre></div>
+<p>Un solo <code>build_capas.py</code> emite:</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Salida</th>
+<th>Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>capa 0</td>
+<td>el archivo tal cual</td>
+</tr>
+<tr>
+<td>capa 1</td>
+<td><code>Guion dictable</code> + referencias cortas; sin minutaje, sin notas de facilitación, sin errores frecuentes, sin punteros internos</td>
+</tr>
+<tr>
+<td>capa 2</td>
+<td><code>Idea fuerza</code> + <code>Puntos</code></td>
+</tr>
+<tr>
+<td>capa 3</td>
+<td>capa 2 + <code>Apoyo visual</code> como marcador de imagen</td>
+</tr>
+<tr>
+<td><code>solo_md/</code></td>
+<td>cualquiera de las anteriores, con enlaces desanclados</td>
+</tr>
+</tbody>
+</table></div>
+<p>Ventajas frente a mantener archivos paralelos:</p>
+<ol type="1">
+<li>Es lo que ya está escrito, sin querer.</li>
+<li>Anti-drift: el handout y <code>solo_md/</code> demuestran qué pasa con dos archivos que cuentan lo mismo.</li>
+<li>Un archivo por módulo, no dos ni cinco. Menos superficie que mantener.</li>
+</ol>
+<p>Precedente positivo: <code>build_paquete_html.py</code> + <code>pandoc_rewrite_links.lua</code> ya generan <code>curso_paquete_completo.html</code> con validación de archivos, filas, anclas e IDs únicos. La infraestructura de derivación existe; <code>solo_md/</code> y las capas 1–3 simplemente no la usan.</p>
+<hr />
+</section>
+<section id="7-ubicación-de-los-materiales-actuales-dentro-del-flujo" class="level2">
+<h2 id=""></h2>
+<section id="71-módulos-m1m8" class="level3">
+<h3 id=""></h3>
+<p>Los módulos actuales se acercan principalmente a la <strong>versión meta</strong>. Incluyen guion dictable, minutaje, exposición, ejercicios, resultados esperados, errores frecuentes y conexiones con otros materiales.</p>
+<p>Ejemplos:</p>
+<ul>
+<li>M2 publica el resultado numérico del ejercicio en <code>modulos/M2_modelo_medicion.md</code>;</li>
+<li>M4 entrega valores esperados de <code>u_c</code>, <code>U</code> y contribución dominante en <code>modulos/M4_presupuesto_analizador.md</code>;</li>
+<li>M8 anticipa resultados y conclusiones de la demostración en <code>modulos/M8_opcional_monte_carlo.md</code>.</li>
+</ul>
+<p>Ese contenido es útil para el instructor, pero no corresponde íntegramente al material entregable. Por tanto, los módulos no deben tratarse como un error editorial ni convertirse directamente en handout. Deben reconocerse como fuente meta y servir para producir una versión teórica limpia.</p>
+</section>
+<section id="72-hallazgo-crítico-la-capa-1-no-es-extraíble-en-4-de-8-módulos" class="level3">
+<h3 id=""></h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Módulo</th>
+<th style="text-align: right;">Subbloques <code>### 3.x</code></th>
+<th style="text-align: right;"><code>Idea fuerza</code></th>
+<th>Bloque de discurso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M1</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5</td>
+<td><code>Guion dictable</code> ×5</td>
+</tr>
+<tr>
+<td>M2</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">5</td>
+<td><code>Guion dictable</code> ×4</td>
+</tr>
+<tr>
+<td>M3</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">5</td>
+<td><code>Guion dictable</code> ×4</td>
+</tr>
+<tr>
+<td>M4</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5</td>
+<td><code>Guion dictable</code> ×5</td>
+</tr>
+<tr>
+<td>M5</td>
+<td style="text-align: right;"><strong>0</strong></td>
+<td style="text-align: right;"><strong>1</strong></td>
+<td><strong>ninguno</strong> — §3 es prosa plana</td>
+</tr>
+<tr>
+<td>M6</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;"><strong>1</strong></td>
+<td><strong>ninguno</strong></td>
+</tr>
+<tr>
+<td>M7</td>
+<td style="text-align: right;">0 (usa <code>### Bloque N</code>)</td>
+<td style="text-align: right;">4</td>
+<td><code>Párrafo dictable</code> ×4</td>
+</tr>
+<tr>
+<td>M8</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td><strong>ninguno</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>Tres nombres distintos para el mismo objeto: <code>Guion dictable</code>, <code>Párrafo dictable</code>, ninguno. Dos esquemas de encabezado: <code>### 3.x</code> y <code>### Bloque N</code>.</p>
+<p><strong>M5, M6 y M8 no tienen discurso redactado.</strong> Tienen contenido, no narración. Para ellos, capa 1 no se puede extraer porque no hay qué extraer: hay que escribirla.</p>
+</section>
+<section id="73-handout-de-gum-guía-para-la-expresión-de-la-incertidumbre-de-medida-y-o₃" class="level3">
+<h3 id=""></h3>
+<p>El handout de O₃ es una <strong>reescritura</strong> de la capa 1, no una extracción.</p>
+<p>Solapamiento verificado:</p>
+<ul>
+<li>M3 §3.3 (PDFs y divisores) ≈ <code>O3_H03_tipo_b_pdfs.md</code></li>
+<li>M2 §3.3 (coeficientes de sensibilidad) ≈ <code>O3_H04_propagacion_guf.md</code></li>
+<li>M7 bloque 6 (informe) ≈ <code>O3_H07_informe_gum.md</code></li>
+<li>M1 §3.1 (trazabilidad) ≈ <code>O3_H01 §1.5</code></li>
+</ul>
+<p>Contenido genuinamente único, es decir capa R legítima:</p>
+<ul>
+<li><code>O3_H08_glosario.md</code> — 23 términos, no aparecen definidos en ningún módulo</li>
+<li><code>O3_H03</code> — tabla de PDFs con divisores</li>
+<li><code>O3_H04</code> — ley de propagación en forma general</li>
+<li><code>O3_H07</code> — checklist de informe GUM §7</li>
+</ul>
+<p>Todo lo demás duplica narrativa. Estimación: de 869 líneas, ~350 son capa R real.</p>
+<p>El handout de O₃ mezcla dos funciones:</p>
+<ol type="1">
+<li>contiene piezas básicas que deberían formar parte del relato principal del participante;</li>
+<li>contiene desarrollos avanzados que funcionan correctamente como anexos técnicos.</li>
+</ol>
+<p>Pertenecen al material teórico principal, por ejemplo:</p>
+<ul>
+<li>relación entre incertidumbre estándar, combinada y expandida;</li>
+<li>significado de <code>u</code>, <code>u_c</code>, <code>U</code> y <code>k</code>;</li>
+<li>vocabulario metrológico mínimo;</li>
+<li>noción de cobertura;</li>
+<li>reglas de presentación y redondeo;</li>
+<li>elementos mínimos de un informe conforme a GUM.</li>
+</ul>
+<p>Pueden permanecer como referencia avanzada:</p>
+<ul>
+<li>tratamiento detallado de autocorrelación;</li>
+<li>distribución t desplazada;</li>
+<li>funciones de densidad de probabilidad (PDF) arcoseno y trapezoidal;</li>
+<li>Welch–Satterthwaite detallado;</li>
+<li>Cholesky;</li>
+<li>desarrollos extendidos del método de Monte Carlo (MCM).</li>
+</ul>
+<p>Criterio general: pertenece al material principal todo lo necesario para seguir los módulos obligatorios y resolver las actividades requeridas. Pertenece a anexos aquello que amplía, deriva o trata casos especiales sin ser necesario para completar el recorrido principal.</p>
+<p>El handout O₃ no debe desaparecer. Debe dejar de completar silenciosamente huecos básicos de los módulos y asumir un papel explícito como conjunto de anexos o referencia técnica.</p>
+</section>
+<section id="74-asimetría-o₃--nox" class="level3">
+<h3 id=""></h3>
+<p><code>handout/no_nox/</code> tiene 120 líneas en 10 archivos (<code>NOX_H03</code> = 7 líneas, <code>NOX_H08</code> = 3). M6 lo cita <strong>una sola vez</strong>. De facto ya funciona como capa R pura — checklist y control documental, sin duplicar a M6. Está mejor alineado que el de O₃, por accidente. Pero <code>README.md</code> presenta ambas familias como equivalentes.</p>
+<p>El handout de NOx no es equivalente al handout O₃. Es mucho más breve y, en varios puntos, contiene menos información que M6. Su utilidad real se parece más a:</p>
+<ul>
+<li>ficha operativa;</li>
+<li>referencia rápida;</li>
+<li>checklist de auditoría;</li>
+<li>ayuda de campo;</li>
+<li>recordatorio de fórmulas y controles documentales.</li>
+</ul>
+<p>No necesita mantener una simetría artificial con el handout O₃. Puede ser un producto distinto y legítimo, siempre que su función se declare correctamente.</p>
+</section>
+<section id="75-vacío-de-instrucción-de-uso-del-handout" class="level3">
+<h3 id=""></h3>
+<p>Búsqueda de <code>prelectura</code>, <code>lectura previa</code>, <code>antes del curso</code>, <code>leer.*handout</code> sobre <code>modulos/</code>, <code>README.md</code>, <code>diseno_curso_v2.md</code> y <code>handout/</code>: <strong>0 resultados</strong>. Nada dice si el handout se entrega antes, durante o después, ni si el participante debe leerlo. Esta ambigüedad es la que permite que el handout O₃ termine completando huecos de M1–M7 sin que nadie lo haya decidido.</p>
+</section>
+<section id="76-solucionarios" class="level3">
+<h3 id=""></h3>
+<p>Los solucionarios son material privado del instructor. Actualmente también reexplican parte de la teoría. Esa repetición puede ser útil para que la solución sea legible de forma autónoma, pero no debe convertirse en otra fuente conceptual paralela.</p>
+<p>El meta maestro debe ser canónico para contenido técnico, respuestas breves, propósito pedagógico y resultados esperados. El solucionario debe contener la resolución completa, los cálculos paso a paso, los criterios de corrección y las variantes aceptables, sin crear una tercera versión doctrinal.</p>
+</section>
+<section id="77-protocolos-prácticos" class="level3">
+<h3 id=""></h3>
+<p>Los protocolos E01–E16 necesitan cierto grado de autonomía porque se usan durante trabajo de laboratorio o campo. Por ello, alguna repetición de fórmulas, criterios y advertencias es aceptable.</p>
+<p>La duplicación debe ser deliberada:</p>
+<ul>
+<li>incluir lo necesario para ejecutar el protocolo sin abandonar la actividad;</li>
+<li>remitir al material teórico para fundamentos;</li>
+<li>evitar desarrollar una teoría alternativa o contradictoria;</li>
+<li>conservar la misma notación y terminología del material principal.</li>
+</ul>
+</section>
+<section id="78-solo_md--capa-derivada-fuera-de-control" class="level3">
+<h3 id=""></h3>
+<p><code>solo_md/</code> replica el árbol completo (592 K) con los enlaces Markdown desanclados, para lectura fuera del repositorio.</p>
+<ul>
+<li><strong>No lo genera <code>build_paquete_html.py</code></strong> — <code>grep solo_md build_paquete_html.py</code> → 0 resultados.</li>
+<li><strong>No está en git</strong> — sin historial; aparece como <code>??</code> en <code>git status</code>.</li>
+<li><strong>Ya divergió</strong> de <code>modulos/</code>: M1 14 líneas, M3 16, M2 12, M7 10, M8 10, M4 8, M5 6, M6 2.</li>
+</ul>
+<p>El delta es sistemático y benigno —quita <code>[texto](enlace)</code> y deja el texto—, pero la copia es manual y sin verificación. Es exactamente el patrón que produjo el problema del handout: dos archivos contando lo mismo, uno de ellos derivando en silencio.</p>
+<hr />
+</section>
+</section>
+<section id="8-diagnóstico-pedagógico-que-permanece-vigente" class="level2">
+<h2 id=""></h2>
+<p>Reconocer la capa meta corrige la interpretación de los módulos, pero no elimina todos los problemas encontrados.</p>
+<section id="81-falta-una-entrada-terminológica-clara" class="level3">
+<h3 id=""></h3>
+<p>El glosario existe en <code>handout/gum_o3/O3_H08_glosario.md</code>, pero está ubicado como sección tardía del handout y no funciona como puerta de entrada al curso.</p>
+<p>Además, define algunos términos avanzados y omite varios de alta frecuencia práctica:</p>
+<ul>
+<li>fotómetro de referencia estándar (SRP);</li>
+<li>repetibilidad;</li>
+<li>precisión intermedia;</li>
+<li>reproducibilidad;</li>
+<li>calibración, verificación y ajuste;</li>
+<li>doble conteo;</li>
+<li>escala completa;</li>
+<li>sesgo;</li>
+<li>patrón de transferencia;</li>
+<li>deriva de cero y de span.</li>
+</ul>
+</section>
+<section id="82-inversión-de-vocabulario-m1--m3" class="level3">
+<h3 id=""></h3>
+<p>El vocabulario formal vive en <code>O3_H01</code> (mensurando, modelo de medición, error vs. incertidumbre, estándar/combinada/expandida, trazabilidad) y en el glosario <code>O3_H08</code>. Pero la secuencia de aula lo introduce operativamente antes:</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Momento</th>
+<th>Términos usados</th>
+<th>Dónde están definidos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M1 (min 0–35)</td>
+<td>incertidumbre del patrón / del analizador / del valor transferido, corrección, incertidumbre residual, falla, doble conteo, covarianza</td>
+<td><code>O3_H01 §1.3</code>, <code>§1.4</code> — remitido, no dictado</td>
+</tr>
+<tr>
+<td>M2 (min 35–83)</td>
+<td>mensurando, coeficiente de sensibilidad</td>
+<td><code>O3_H01 §1.1</code>, <code>O3_H04 §4.1</code></td>
+</tr>
+<tr>
+<td>M3 (min 83–137)</td>
+<td><strong>recién aquí</strong> se definen Tipo A/B, PDF, combinación cuadrática</td>
+<td>el módulo mismo</td>
+</tr>
+</tbody>
+</table></div>
+<p><code>modulos/M1_trazabilidad.md:6</code> se autodeclara «establece el vocabulario y la arquitectura metrológica que se utilizarán en los módulos posteriores», pero <code>M1:111</code> delega ese vocabulario al handout: <em>«...para el vocabulario con que se distinguen estas tres incertidumbres»</em>.</p>
+<p>M1 pide prestado vocabulario que llega formalmente 82 min después, apoyándose en un documento cuyo momento de lectura nadie definió.</p>
+<p>Esta inversión <strong>no se resuelve sola</strong> al separar capas. Requiere decisión explícita. Dos salidas:</p>
+<ol type="1">
+<li><strong>Handout O₃ (capa R) como prelectura obligatoria</strong>, con <code>O3_H00</code> + <code>O3_H01</code> + glosario marcados como lectura mínima. M1 puede entonces asumir el vocabulario. Riesgo: depende de que lean; alto en operadores de red.</li>
+<li><strong>Bloque M0 de vocabulario, 15–20 min</strong>, antes de M1: mensurando, error/corrección/incertidumbre, estándar/combinada/expandida, trazabilidad, Tipo A/B en versión mínima. M3 pasa a profundizar, no a introducir. Costo: 20 min de los 78 min de reserva logística. El glosario de capa R queda como su respaldo natural.</li>
+</ol>
+<p>La opción 2 es robusta a que nadie lea nada antes. Es la recomendada si el curso se dicta a operadores sin envío previo de material.</p>
+</section>
+<section id="83-existen-conceptos-usados-antes-de-ser-enseñados" class="level3">
+<h3 id=""></h3>
+<p>M2 trabaja con expresiones como <code>u(T)</code> y <code>u(P)</code> antes de que M3 defina formalmente la incertidumbre estándar.</p>
+<p>La cadena:</p>
+<pre class="text"><code>u_i → u_c → U = k·u_c</code></pre>
+<p>no tiene todavía un dueño docente completamente claro. <code>U</code> y <code>k</code> aparecen en ejercicios y resultados, pero su introducción formal está principalmente en el handout.</p>
+<p>En la arquitectura final, cada concepto operativo debe tener un módulo dueño. El material del participante debe introducirlo antes de exigir su uso.</p>
+</section>
+<section id="84-el-informe-gum-se-exige-antes-de-enseñarse-de-manera-suficiente" class="level3">
+<h3 id=""></h3>
+<p>M7 solicita un resultado auditable conforme a GUM §7, mientras que la lista más completa de elementos del informe vive en <code>handout/gum_o3/O3_H07_informe_gum.md</code>.</p>
+<p>También se evalúan cobertura, redondeo y coherencia entre presupuesto y resultado. Estos criterios deben aparecer dentro del material teórico antes del taller, no únicamente como apoyo consultado durante la revisión final.</p>
+</section>
+<section id="85-cobertura-tiene-varios-sentidos" class="level3">
+<h3 id=""></h3>
+<p>El curso usa "cobertura" para:</p>
+<ul>
+<li>factor, probabilidad o intervalo de cobertura en sentido GUM;</li>
+<li>alcance cubierto por una evidencia;</li>
+<li>"matriz de cobertura" como artefacto del curso.</li>
+</ul>
+<p>Esta colisión puede confundir al participante. Conviene reservar <strong>cobertura</strong> para el sentido metrológico GUM y usar <strong>alcance de la evidencia</strong> para expresar qué condiciones o fuentes cubre un dato.</p>
+</section>
+<section id="86-existe-duplicación-no-gobernada" class="level3">
+<h3 id=""></h3>
+<p>Autocorrelación, covarianza, propagación y otros conceptos aparecen con distintos niveles de detalle en módulos, handouts, solucionarios y protocolos.</p>
+<p>La repetición no es siempre incorrecta. Se vuelve problemática cuando no se sabe:</p>
+<ul>
+<li>cuál versión es canónica;</li>
+<li>cuál es resumen;</li>
+<li>cuál es ampliación;</li>
+<li>cuál se mantiene manualmente;</li>
+<li>cuál debe actualizarse cuando cambia la teoría.</li>
+</ul>
+<hr />
+</section>
+</section>
+<section id="9-arquitectura-documental-objetivo" class="level2">
+<h2 id=""></h2>
+<section id="a-meta-maestro-privado" class="level3">
+<h3 id=""></h3>
+<p><strong>Base:</strong> módulos M1–M8.</p>
+<p><strong>Contenido:</strong></p>
+<ul>
+<li>teoría completa;</li>
+<li>discurso;</li>
+<li>decisiones pedagógicas;</li>
+<li>notas de instructor;</li>
+<li>tiempos;</li>
+<li>preguntas;</li>
+<li>respuestas;</li>
+<li>errores frecuentes;</li>
+<li>variantes;</li>
+<li>referencias;</li>
+<li>criterios de evaluación.</li>
+</ul>
+<p>Es fuente superior de intención pedagógica.</p>
+</section>
+<section id="b-material-teórico-entregable" class="level3">
+<h3 id=""></h3>
+<p><strong>Derivado del meta maestro.</strong></p>
+<p><strong>Contenido:</strong></p>
+<ul>
+<li>relato limpio y continuo;</li>
+<li>conceptos necesarios;</li>
+<li>ejemplos;</li>
+<li>fórmulas;</li>
+<li>conexiones entre módulos;</li>
+<li>síntesis;</li>
+<li>ejercicios sin revelar anticipadamente soluciones.</li>
+</ul>
+<p>Es fuente principal del participante.</p>
+</section>
+<section id="c-anexos-técnicos" class="level3">
+<h3 id=""></h3>
+<p><strong>Base:</strong> contenido avanzado del handout O₃.</p>
+<p><strong>Contenido:</strong></p>
+<ul>
+<li>derivaciones;</li>
+<li>casos especiales;</li>
+<li>métodos opcionales;</li>
+<li>referencias normativas extensas;</li>
+<li>material para profundización posterior.</li>
+</ul>
+<p><strong>Destinatario y uso:</strong> participantes que necesiten profundizar e instructor durante preparación o consulta. No son lectura obligatoria para completar recorrido principal.</p>
+</section>
+<section id="d-fichas-operativas-y-ayudas-de-campo" class="level3">
+<h3 id=""></h3>
+<p><strong>Base:</strong> partes útiles del handout NOx y material práctico.</p>
+<p><strong>Contenido:</strong></p>
+<ul>
+<li>checklists;</li>
+<li>fórmulas rápidas;</li>
+<li>criterios de aceptación;</li>
+<li>controles documentales;</li>
+<li>advertencias de montaje y seguridad.</li>
+</ul>
+<p><strong>Destinatario y uso:</strong> participantes durante práctica, operación o auditoría. Sirven para consulta rápida; no conducen por sí solas una actividad completa.</p>
+</section>
+<section id="e-protocolos-prácticos" class="level3">
+<h3 id=""></h3>
+<p><strong>Base:</strong> protocolos E01–E16.</p>
+<p><strong>Contenido:</strong></p>
+<ul>
+<li>propósito y alcance de cada actividad;</li>
+<li>materiales y condiciones previas;</li>
+<li>secuencia completa de ejecución;</li>
+<li>datos que deben registrarse;</li>
+<li>criterios de aceptación y cierre;</li>
+<li>referencias al fundamento teórico correspondiente.</li>
+</ul>
+<p><strong>Destinatario y uso:</strong> participantes e instructor durante laboratorio o campo. A diferencia de una ficha, un protocolo conduce la ejecución completa de una actividad.</p>
+</section>
+<section id="f-solucionarios-privados" class="level3">
+<h3 id=""></h3>
+<p><strong>Contenido:</strong></p>
+<ul>
+<li>resolución completa;</li>
+<li>cálculos paso a paso;</li>
+<li>criterios de corrección;</li>
+<li>errores típicos;</li>
+<li>variantes aceptables.</li>
+</ul>
+<p><strong>Destinatario y uso:</strong> instructor durante preparación, acompañamiento y evaluación. El meta maestro conserva respuesta breve, propósito pedagógico y resultado esperado; el solucionario conserva desarrollo completo.</p>
+</section>
+<section id="g-guion-textual-de-diapositivas" class="level3">
+<h3 id=""></h3>
+<p><strong>Derivado del material teórico.</strong></p>
+<p><strong>Contenido:</strong></p>
+<ul>
+<li>títulos;</li>
+<li>frases cortas;</li>
+<li>estructura por diapositiva;</li>
+<li>mensajes centrales;</li>
+<li>indicaciones básicas de apoyo visual.</li>
+</ul>
+</section>
+<section id="h-diapositivas-visuales" class="level3">
+<h3 id=""></h3>
+<p><strong>Derivadas del guion textual.</strong></p>
+<p><strong>Contenido:</strong></p>
+<ul>
+<li>diseño final;</li>
+<li>imágenes;</li>
+<li>diagramas;</li>
+<li>tablas simplificadas;</li>
+<li>composición y jerarquía visual.</li>
+</ul>
+<hr />
+</section>
+</section>
+<section id="10-reglas-de-derivación-y-control" class="level2">
+<h2 id=""></h2>
+<p>Para evitar drift entre productos, conviene adoptar reglas explícitas.</p>
+<section id="regla-1-una-idea-nueva-nace-en-la-capa-meta" class="level3">
+<h3 id=""></h3>
+<p>Ninguna diapositiva, protocolo o solucionario debe introducir silenciosamente un concepto que no esté reconocido en la versión meta.</p>
+</section>
+<section id="regla-2-cada-capa-tiene-autoridad-definida" class="level3">
+<h3 id=""></h3>
+<p>El meta maestro es canónico para contenido técnico, definiciones, ecuaciones, notación e intención pedagógica. El material teórico es canónico para orden, redacción y experiencia del participante. Toda corrección técnica debe incorporarse primero al meta maestro y después propagarse a productos derivados.</p>
+</section>
+<section id="regla-3-las-diapositivas-reducen-no-amplían" class="level3">
+<h3 id=""></h3>
+<p>Guion textual y diapositivas visuales pueden condensar, ilustrar y jerarquizar. No deben agregar teoría ausente del material teórico.</p>
+</section>
+<section id="regla-4-los-anexos-amplían-sin-interrumpir" class="level3">
+<h3 id=""></h3>
+<p>El relato principal debe ser comprensible sin leer todos los anexos. Los anexos permiten profundidad adicional, no reparación de huecos básicos.</p>
+</section>
+<section id="regla-5-fichas-y-protocolos-repiten-según-su-función" class="level3">
+<h3 id=""></h3>
+<p>Las fichas repiten solo lo necesario para consulta operativa rápida y no sustituyen una secuencia completa. Los protocolos repiten lo necesario para ejecutar una actividad de principio a fin. Ambos deben conservar notación, terminología y criterios del material principal.</p>
+</section>
+<section id="regla-6-las-respuestas-permanecen-fuera-del-entregable-principal" class="level3">
+<h3 id=""></h3>
+<p>El meta maestro conserva respuesta breve, resultado esperado y propósito pedagógico. El solucionario conserva resolución completa, cálculos paso a paso, criterios de corrección y variantes aceptables. Ninguno de estos contenidos debe anticiparse en el material teórico entregable.</p>
+</section>
+<section id="regla-7-cada-concepto-operativo-tiene-un-dueño" class="level3">
+<h3 id=""></h3>
+<p>Distribución conceptual objetivo propuesta:</p>
+<ul>
+<li><strong>M0 (vocabulario, propuesto):</strong> mensurando, error/corrección/incertidumbre, estándar/combinada/expandida, trazabilidad, Tipo A/B en versión mínima.</li>
+<li><strong>M1:</strong> trazabilidad, mensurando y vocabulario base;</li>
+<li><strong>M2:</strong> modelo de medición y coeficientes de sensibilidad;</li>
+<li><strong>M3:</strong> incertidumbre estándar, Tipo A/B, PDFs y combinación;</li>
+<li><strong>M4:</strong> presupuesto, contribuciones, doble conteo, <code>U</code>, <code>k</code>, cobertura y redondeo;</li>
+<li><strong>M5:</strong> patrones, regresión, residuos y alcance de evidencia;</li>
+<li><strong>M6:</strong> modelo NOx, interferencias y covarianza;</li>
+<li><strong>M7:</strong> integración, declaración del resultado e informe GUM;</li>
+<li><strong>M8:</strong> validación opcional mediante MCM.</li>
+</ul>
+<p>Otros módulos pueden recordar el concepto, pero no redefinirlo de manera paralela.</p>
+<hr />
+</section>
+</section>
+<section id="11-valoración-del-desfase-actual" class="level2">
+<h2 id=""></h2>
+<p>En esta sección, <strong>desfase</strong> expresa esfuerzo editorial y de consolidación necesario para alcanzar arquitectura objetivo. No califica calidad técnica del contenido existente.</p>
+<p>Escala usada:</p>
+<ul>
+<li><strong>bajo:</strong> producto ya existe y requiere ajustes menores de declaración, consistencia o limpieza;</li>
+<li><strong>medio:</strong> contenido existe, pero necesita consolidación, reclasificación o derivación significativa;</li>
+<li><strong>alto:</strong> producto o pipeline todavía no existe como salida gobernada y debe construirse a partir de capas previas.</li>
+</ul>
+<section id="111-contenido-técnico" class="level3">
+<h3 id=""></h3>
+<p><strong>Desfase bajo.</strong> Gran parte del conocimiento requerido ya existe en módulos, handouts, prácticas y solucionarios.</p>
+</section>
+<section id="112-versión-meta" class="level3">
+<h3 id=""></h3>
+<p><strong>Desfase bajo a medio.</strong> Los módulos ya constituyen una base sólida. Requieren declarar su rol, cerrar algunos saltos conceptuales y mejorar consistencia global.</p>
+</section>
+<section id="113-material-teórico-del-participante" class="level3">
+<h3 id=""></h3>
+<p><strong>Desfase medio a alto.</strong> Su contenido existe parcialmente, pero está repartido entre varias fuentes. Falta una narrativa limpia, continua y explícitamente entregable. Bloqueante: M5, M6 y M8 no tienen <code>Guion dictable</code>.</p>
+</section>
+<section id="114-anexos-y-ayudas-operativas" class="level3">
+<h3 id=""></h3>
+<p><strong>Desfase medio.</strong> Existe material valioso, pero las funciones de referencia avanzada, resumen y ficha de campo están mezcladas bajo el nombre "handout".</p>
+</section>
+<section id="115-guion-textual-y-diapositivas-visuales" class="level3">
+<h3 id=""></h3>
+<p><strong>Desfase alto como pipeline formal.</strong> Deben construirse después de estabilizar el material teórico. Producirlas antes consolidaría inconsistencias y multiplicaría trabajo de revisión.</p>
+</section>
+<section id="116-diagnóstico-global" class="level3">
+<h3 id=""></h3>
+<p>No se requiere reconstruir el curso desde cero. Se requiere una reorganización editorial importante y una cadena de derivación explícita.</p>
+<p>En términos cualitativos:</p>
+<ul>
+<li>conocimiento: avanzado;</li>
+<li>versión meta: avanzada;</li>
+<li>narrativa entregable: incompleta;</li>
+<li>clasificación de anexos: ambigua;</li>
+<li>pipeline hacia diapositivas: todavía no consolidado.</li>
+</ul>
+<hr />
+</section>
+</section>
+<section id="12-inventario-de-deuda" class="level2">
+<h2 id=""></h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>Deuda</th>
+<th>Impacto</th>
+<th>Esfuerzo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>D1</td>
+<td>M5, M6, M8 sin <code>Guion dictable</code> — capa 1 inexistente ahí</td>
+<td><strong>bloqueante</strong> para capas 1–3</td>
+<td>alto: redactar discurso</td>
+</tr>
+<tr>
+<td>D2</td>
+<td>Tres convenciones distintas para el bloque de discurso (<code>Guion dictable</code>, <code>Párrafo dictable</code>, ninguna) y dos esquemas de encabezado (<code>### 3.x</code>, <code>### Bloque N</code>)</td>
+<td>bloquea derivación mecánica</td>
+<td>bajo: renombrar</td>
+</tr>
+<tr>
+<td>D3</td>
+<td><code>handout/gum_o3/</code> duplica ~520 líneas de capa 1</td>
+<td>confusión de roles, riesgo de drift</td>
+<td>medio: podar a ~350 líneas de capa R real</td>
+</tr>
+<tr>
+<td>D4</td>
+<td>Rol del handout nunca declarado (prelectura / aula / consulta)</td>
+<td>impide decidir el orden de términos</td>
+<td>bajo: decisión + 1 párrafo en README</td>
+</tr>
+<tr>
+<td>D5</td>
+<td>Inversión de vocabulario M1 ↔︎ M3 (M1 usa términos cuya definición formal llega 82 min después)</td>
+<td>pedagógico, afecta a todos los participantes</td>
+<td>medio: bloque M0 de 15–20 min</td>
+</tr>
+<tr>
+<td>D6</td>
+<td><code>solo_md/</code> derivado a mano, fuera de git, ya divergido</td>
+<td>drift silencioso</td>
+<td>bajo: generar con <code>build_capas.py</code> o borrar</td>
+</tr>
+<tr>
+<td>D7</td>
+<td>27 <code>Idea fuerza</code> para ~120 subbloques-equivalentes</td>
+<td>capa 2 arranca con ~20 % de semillas</td>
+<td>alto, pero mecánico tras D2</td>
+</tr>
+<tr>
+<td>D8</td>
+<td>README presenta handout O₃ y NOx como equivalentes siendo asimétricos</td>
+<td>expectativa falsa</td>
+<td>bajo: 1 tabla en README</td>
+</tr>
+</tbody>
+</table></div>
+<p>Estimación de volumen para capas 2 y 3: 462 min de curso obligatorio, a 2–3 min por diapositiva ⇒ <strong>150–200 diapositivas</strong>.</p>
+<hr />
+</section>
+<section id="13-plan-propuesto" class="level2">
+<h2 id=""></h2>
+<p>Orden por dependencia, no por importancia.</p>
+<ol type="1">
+<li><strong>Declarar las cinco capas</strong> en <code>README.md</code> y fijar la convención de bloques de §6. Renombrar <code>handout/</code> → <code>referencia/</code> o declarar explícitamente su rol de capa R. Resuelve D4 y D8. Sin tocar contenido.</li>
+<li><strong>Piloto en M5</strong> — el módulo más incompleto: 0 subbloques, 1 <code>Idea fuerza</code>, sin discurso. Si el esquema aguanta ahí, aguanta en todos. Ataca D1 y D2 en el peor caso.</li>
+<li><strong><code>build_capas.py</code></strong>, siguiendo el patrón de <code>build_paquete_html.py</code>. <code>solo_md/</code> pasa a ser salida generada. Resuelve D6.</li>
+<li><strong>Propagar el esquema</strong> a M1–M4 y M7 (tienen discurso, solo falta etiquetar), después a M6 y M8 (hay que redactarlo). Cierra D1, D2.</li>
+<li><strong>Podar el handout O₃</strong> a capa R real: glosario, tablas de PDFs, ley de propagación, checklist de informe. Las 30 anclas existentes siguen sirviendo. Cierra D3.</li>
+<li><strong>Decidir el orden de términos</strong>: bloque M0 de vocabulario (recomendado) o prelectura obligatoria de capa R. Cierra D5.</li>
+<li><strong>Capas 2 y 3</strong> al final, cuando la derivación ya es mecánica. Cierra D7.</li>
+</ol>
+<hr />
+</section>
+<section id="14-solución-conceptual" class="level2">
+<h2 id=""></h2>
+<p>La solución no consiste en escoger entre módulos y handouts como si fueran productos rivales. Consiste en reconocer que cumplen funciones distintas y declararlas.</p>
+<pre class="text"><code>META MAESTRO (capa 0)              ─ fuente pedagógica superior
+    ├── MATERIAL TEÓRICO (capa 1)  ─ entregable principal del participante
+    │       └── GUION TEXTUAL (capa 2)
+    │               └── DIAPOSITIVAS VISUALES (capa 3)
+    ├── ANEXOS TÉCNICOS            ─ profundización opcional
+    ├── FICHAS OPERATIVAS          ─ consulta rápida en puesto
+    ├── PROTOCOLOS PRÁCTICOS       ─ ejecución autónoma en laboratorio/campo
+    └── SOLUCIONARIOS              ─ privado del instructor
+
+REFERENCIA (capa R)                ─ perpendicular: glosario, tablas, checklists</code></pre>
+<p>Dentro de este modelo:</p>
+<ul>
+<li>módulos actuales alimentan principalmente el meta maestro;</li>
+<li>partes básicas del handout O₃ se integran al material teórico;</li>
+<li>partes avanzadas del handout O₃ se convierten en anexos;</li>
+<li>handout NOx se redefine como ayuda operativa o ficha de campo;</li>
+<li>protocolos conservan autonomía controlada;</li>
+<li>solucionarios permanecen privados;</li>
+<li>diapositivas se derivan después de estabilizar narrativa del participante.</li>
+</ul>
+<hr />
+</section>
+<section id="15-lo-que-no-está-mal" class="level2">
+<h2 id=""></h2>
+<p>Para evitar que el diagnóstico se lea como una condena:</p>
+<ul>
+<li>El contenido técnico es sólido y está trazado a fuente con página exacta (JCGM, QUAM, EN 14211, EPA, NISTIR, BIPM.QM-K1).</li>
+<li>El control documental es riguroso: la nota sobre APOA-370 vs. APNA-370 evita atribuir especificaciones equivocadas.</li>
+<li>Los datasets son reproducibles con semilla declarada (<code>20260819</code>).</li>
+<li>La separación curso teórico / práctica de laboratorio, con entregables evaluados independientes (M7 y E15), está bien argumentada.</li>
+<li><code>build_paquete_html.py</code> ya valida archivos, filas, columnas, MathML, anclas, IDs únicos y ausencia de recursos externos. Es la base sobre la que se monta <code>build_capas.py</code>.</li>
+<li><code>handout/no_nox/</code> ya es capa R correcta. Sirve de modelo para podar la de O₃.</li>
+</ul>
+<p>El desfase es <strong>de una capa y media</strong>, no de arquitectura equivocada: contenido sobra, capa 0 y 1 están fusionadas, capas 2 y 3 no arrancaron.</p>
+<hr />
+</section>
+<section id="16-conclusión-final" class="level2">
+<h2 id=""></h2>
+<p>La inquietud inicial era válida: existía una sensación de que módulos y handouts se repetían, se completaban entre sí y no tenían fronteras claras. Sin embargo, la causa principal no era exceso de contenido ni una mala concepción del curso. Era ausencia de una arquitectura documental explícita.</p>
+<p>La aclaración sobre la versión meta permite interpretar correctamente el estado actual:</p>
+<ol type="1">
+<li>los módulos no están simplemente sobrecargados; son una base avanzada del documento meta del autor e instructor;</li>
+<li>el material teórico entregable todavía no existe como producto único, limpio y continuo, y en M5/M6/M8 ni siquiera tiene discurso redactado;</li>
+<li>el handout O₃ mezcla contenido básico que debe incorporarse al relato principal con material avanzado que debe quedar como anexo, y duplica ~520 líneas de capa 1;</li>
+<li>el handout NOx tiene más sentido como ficha operativa que como tratado paralelo;</li>
+<li>vocabulario inicial, cadena <code>u → u_c → U</code>, cobertura, redondeo e informe GUM requieren mejor ubicación dentro de la narrativa — la inversión M1 ↔︎ M3 es la más urgente;</li>
+<li>guion textual y diapositivas visuales deben derivarse del material teórico estabilizado, no de fuentes paralelas;</li>
+<li>el mecanismo ya tiene precedente (<code>build_paquete_html.py</code>) y la convención de marcado ya existe de facto en los módulos; falta declararla y formalizarla;</li>
+<li>el principal trabajo pendiente es editorial y arquitectónico, no una reconstrucción técnica.</li>
+</ol>
+<p>El curso está avanzado en conocimiento y en preparación docente. Su siguiente etapa natural es convertir esa riqueza meta en una secuencia controlada de productos, cada uno con destinatario, propósito y profundidad definidos.</p>
+</section>
+</section>
+
+<footer>Generado desde <code>dd_mmxm3.md</code> · dd_mmxm3.md → dd_mmxm3.html</footer>
+</main>
+</body>
+</html>
