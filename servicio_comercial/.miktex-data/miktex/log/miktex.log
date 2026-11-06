@@ -1,0 +1,558 @@
+2026-11-05 15:21:22,730-0500 INFO  miktex - this is One MiKTeX Utility 1.10 (MiKTeX 24.4)
+2026-11-05 15:21:22,730-0500 INFO  miktex - this process (6204) started by pdflatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex --quiet fndb refresh
+2026-11-05 15:21:22,730-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:22,730-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:22,730-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:22,730-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:22,730-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:22,730-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:22,731-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:22,731-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:22,731-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:22,731-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:22,731-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:22,731-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:22,732-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:22,732-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Setup
+2026-11-05 15:21:22,732-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:22,732-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:22,732-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:22,732-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:22,732-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:22,732-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:22,732-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:22,732-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:22,732-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:22,732-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:22,732-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:22,732-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:22,732-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:22,732-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:22,732-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:22,732-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:22,732-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:22,732-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:22,732-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:22,732-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:22,732-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:22,732-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:22,732-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:22,732-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:22,732-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:22,732-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:22,732-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:22,732-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:22,732-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:22,732-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\MPM
+2026-11-05 15:21:22,732-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:22,732-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:22,732-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:22,732-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:22,732-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:22,732-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:22,732-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:22,732-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:22,732-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:22,732-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:22,732-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:22,732-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:22,732-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:22,732-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:22,733-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:22,733-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:22,735-0500 INFO  miktex - Creating FNDB for user root directory (Z:\calaire-ea\servicio_comercial\.miktex-config)...
+2026-11-05 15:21:22,752-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:22,752-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:22,752-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:22,752-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:22,752-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:22,752-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:22,752-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:22,752-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:22,752-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:22,753-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:22,753-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:22,753-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:22,753-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:22,753-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:22,753-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:22,761-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:22,761-0500 ERROR miktex.core - Function: RegCreateKeyExW
+2026-11-05 15:21:22,761-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:22,761-0500 ERROR miktex.core - Data: path="Software\MiKTeX.org\MiKTeX\2.9\Core"
+2026-11-05 15:21:22,761-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:207
+2026-11-05 15:21:22,763-0500 FATAL miktex - Windows API error 5: Acceso denegado.
+
+2026-11-05 15:21:22,763-0500 FATAL miktex - Info: path="Software\MiKTeX.org\MiKTeX\2.9\Core"
+2026-11-05 15:21:22,763-0500 FATAL miktex - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp
+2026-11-05 15:21:22,763-0500 FATAL miktex - Line: 207
+2026-11-05 15:21:22,764-0500 INFO  miktex - this process (6204) finishes with exit code 1
+2026-11-05 15:21:22,868-0500 INFO  miktex - this is One MiKTeX Utility 1.10 (MiKTeX 24.4)
+2026-11-05 15:21:22,868-0500 INFO  miktex - this process (23496) started by pdflatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex --quiet fontmaps configure
+2026-11-05 15:21:22,868-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:22,868-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:22,868-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:22,868-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:22,868-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:22,868-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:22,868-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:22,869-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:22,869-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:22,869-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:22,869-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:22,869-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:22,869-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:22,869-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Setup
+2026-11-05 15:21:22,869-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:22,869-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:22,869-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:22,869-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:22,869-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:22,869-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:22,869-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:22,869-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:22,869-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:22,869-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:22,869-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:22,869-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:22,869-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:22,869-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:22,869-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:22,869-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:22,869-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:22,869-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:22,869-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:22,869-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:22,869-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:22,869-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:22,869-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:22,869-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:22,869-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:22,869-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:22,869-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:22,869-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:22,869-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:22,869-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\MPM
+2026-11-05 15:21:22,869-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:22,869-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:22,869-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:22,869-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:22,869-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:22,869-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:22,869-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:22,869-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:22,869-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:22,869-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:22,869-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:22,869-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:22,869-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:22,870-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:22,870-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:22,870-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:22,873-0500 INFO  miktex - Parsing configuration file "C:\Program Files\MiKTeX\miktex/config\updmap.cfg"...
+2026-11-05 15:21:29,754-0500 INFO  miktex - Writing Z:\calaire-ea\servicio_comercial\.miktex-data\fonts\map\dvipdfmx\kanjix.map...
+2026-11-05 15:21:30,774-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:30,775-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:30,775-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:30,775-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:30,775-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:30,776-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:30,776-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:30,776-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:30,776-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:30,776-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:30,777-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:30,777-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:30,777-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:30,777-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:30,777-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:30,777-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:30,777-0500 ERROR miktex.core - Function: RegCreateKeyExW
+2026-11-05 15:21:30,777-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:30,777-0500 ERROR miktex.core - Data: path="Software\MiKTeX.org\MiKTeX\2.9\Core"
+2026-11-05 15:21:30,777-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:207
+2026-11-05 15:21:31,156-0500 FATAL miktex - Windows API error 5: Acceso denegado.
+
+2026-11-05 15:21:31,156-0500 FATAL miktex - Info: path="Software\MiKTeX.org\MiKTeX\2.9\Core"
+2026-11-05 15:21:31,156-0500 FATAL miktex - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp
+2026-11-05 15:21:31,156-0500 FATAL miktex - Line: 207
+2026-11-05 15:21:31,157-0500 INFO  miktex - this process (23496) finishes with exit code 1
+2026-11-05 15:21:34,129-0500 INFO  miktex - this is One MiKTeX Utility 1.10 (MiKTeX 24.4)
+2026-11-05 15:21:34,129-0500 INFO  miktex - this process (22228) started by pdflatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex formats build pdflatex --engine pdftex
+2026-11-05 15:21:34,129-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:34,129-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:34,129-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:34,129-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:34,129-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:34,129-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:34,130-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:34,130-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:34,130-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:34,130-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:34,130-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:34,130-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:34,130-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:34,130-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Setup
+2026-11-05 15:21:34,130-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:34,130-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:34,130-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:34,130-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:34,130-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:34,130-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:34,130-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:34,130-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:34,130-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:34,130-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:34,130-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:34,130-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:34,130-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:34,130-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:34,130-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:34,130-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:34,130-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:34,130-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:34,130-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:34,130-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:34,130-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:34,130-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:34,130-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:34,130-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:34,130-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:34,130-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:34,130-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:34,130-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:34,130-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:34,130-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\MPM
+2026-11-05 15:21:34,130-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:34,130-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:34,130-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:34,130-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:34,130-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:34,130-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:34,130-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:34,130-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:34,130-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:34,130-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:34,130-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:34,130-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:34,131-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:34,131-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:34,131-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:34,131-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:34,133-0500 INFO  miktex - Building format 'pdflatex' with engine 'pdftex'...
+2026-11-05 15:21:34,136-0500 INFO  miktex.core - start process: miktex-makefmt.exe --engine=pdftex --dest-name=pdflatex --no-dump pdflatex.ini --engine-option=-tcx=cp227.tcx --miktex-disable-maintenance --miktex-disable-diagnose
+2026-11-05 15:21:34,142-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:34,142-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:34,142-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:34,142-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:34,142-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:34,143-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:34,143-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:34,143-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:34,143-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:34,143-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:34,143-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:34,143-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:34,143-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:34,143-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:34,143-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:52,025-0500 INFO  miktex - this process (22228) finishes with exit code 0
+2026-11-05 15:21:55,691-0500 INFO  miktex - this is One MiKTeX Utility 1.10 (MiKTeX 24.4)
+2026-11-05 15:21:55,691-0500 INFO  miktex - this process (13704) started by pdflatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex --quiet fndb refresh
+2026-11-05 15:21:55,691-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:55,691-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:55,691-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:55,691-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:55,691-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:55,691-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:55,691-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:55,691-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:55,691-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:55,692-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:55,692-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:55,692-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:55,692-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:55,692-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Setup
+2026-11-05 15:21:55,692-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:55,692-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:55,692-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:55,692-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:55,692-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:55,692-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:55,692-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:55,692-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:55,692-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:55,692-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:55,692-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:55,692-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:55,692-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:55,692-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:55,692-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:55,692-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:55,692-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:55,692-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:55,692-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:55,692-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:55,692-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:55,692-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:55,692-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:55,692-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:55,692-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:55,692-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:55,692-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:55,692-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:55,692-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:55,692-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\MPM
+2026-11-05 15:21:55,692-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:55,693-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:55,693-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:55,693-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:55,693-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:55,693-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:55,693-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:55,693-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:55,693-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:55,693-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:55,693-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:55,693-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:55,693-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:55,693-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:55,693-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:55,693-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:55,696-0500 INFO  miktex - Creating FNDB for user root directory (Z:\calaire-ea\servicio_comercial\.miktex-config)...
+2026-11-05 15:21:55,707-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:55,707-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:55,707-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:55,707-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:55,707-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:55,707-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:55,707-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:55,707-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:55,707-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:55,707-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:55,708-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:55,708-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:55,708-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:55,708-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:55,708-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:55,709-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:55,709-0500 ERROR miktex.core - Function: RegCreateKeyExW
+2026-11-05 15:21:55,709-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:55,709-0500 ERROR miktex.core - Data: path="Software\MiKTeX.org\MiKTeX\2.9\Core"
+2026-11-05 15:21:55,709-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:207
+2026-11-05 15:21:55,711-0500 FATAL miktex - Windows API error 5: Acceso denegado.
+
+2026-11-05 15:21:55,711-0500 FATAL miktex - Info: path="Software\MiKTeX.org\MiKTeX\2.9\Core"
+2026-11-05 15:21:55,711-0500 FATAL miktex - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp
+2026-11-05 15:21:55,711-0500 FATAL miktex - Line: 207
+2026-11-05 15:21:55,712-0500 INFO  miktex - this process (13704) finishes with exit code 1
+2026-11-05 15:21:55,843-0500 INFO  miktex - this is One MiKTeX Utility 1.10 (MiKTeX 24.4)
+2026-11-05 15:21:55,844-0500 INFO  miktex - this process (17388) started by pdflatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex --quiet fontmaps configure
+2026-11-05 15:21:55,844-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:55,844-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:55,844-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:55,844-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:55,844-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:55,844-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:55,844-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:55,844-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:55,844-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:55,844-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:55,844-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:55,844-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:55,844-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:55,844-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Setup
+2026-11-05 15:21:55,844-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:55,844-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:55,844-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:55,844-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:55,844-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:55,844-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:55,845-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:55,845-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:55,845-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:55,845-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:55,845-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:55,845-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:55,845-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:55,845-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:55,845-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:55,845-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:55,845-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:55,845-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:55,845-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:55,845-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:55,845-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:55,845-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:55,845-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:55,845-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:55,845-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:55,845-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:55,845-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:55,845-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:55,845-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:55,845-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\MPM
+2026-11-05 15:21:55,845-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:55,845-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:55,845-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:55,845-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:55,845-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:55,845-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:55,845-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:55,845-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:55,845-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:55,846-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:55,846-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:55,846-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:55,846-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:55,846-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:55,846-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:55,846-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:55,848-0500 INFO  miktex - Parsing configuration file "C:\Program Files\MiKTeX\miktex/config\updmap.cfg"...
+2026-11-05 15:21:58,154-0500 INFO  miktex - Writing Z:\calaire-ea\servicio_comercial\.miktex-data\fonts\map\dvipdfmx\kanjix.map...
+2026-11-05 15:21:58,156-0500 INFO  miktex - Writing Z:\calaire-ea\servicio_comercial\.miktex-data\fonts\map\dvips\builtin35.map...
+2026-11-05 15:21:58,164-0500 INFO  miktex - Writing Z:\calaire-ea\servicio_comercial\.miktex-data\fonts\map\dvips\download35.map...
+2026-11-05 15:21:58,171-0500 INFO  miktex - Writing Z:\calaire-ea\servicio_comercial\.miktex-data\fonts\map\dvips\ps2pk.map...
+2026-11-05 15:21:58,189-0500 INFO  miktex - Writing Z:\calaire-ea\servicio_comercial\.miktex-data\fonts\map\dvips\psfonts_pk.map...
+2026-11-05 15:21:58,213-0500 INFO  miktex - Writing Z:\calaire-ea\servicio_comercial\.miktex-data\fonts\map\dvips\psfonts_t1.map...
+2026-11-05 15:21:58,228-0500 INFO  miktex - Writing Z:\calaire-ea\servicio_comercial\.miktex-data\fonts\map\pdftex\pdftex_dl14.map...
+2026-11-05 15:21:58,243-0500 INFO  miktex - Writing Z:\calaire-ea\servicio_comercial\.miktex-data\fonts\map\pdftex\pdftex_ndl14.map...
+2026-11-05 15:21:58,259-0500 INFO  miktex - Copying Z:\calaire-ea\servicio_comercial\.miktex-data\fonts\map\dvips\psfonts_t1.map
+2026-11-05 15:21:58,259-0500 INFO  miktex -      to Z:\calaire-ea\servicio_comercial\.miktex-data\fonts\map\dvips\psfonts.map...
+2026-11-05 15:21:58,266-0500 INFO  miktex - Copying Z:\calaire-ea\servicio_comercial\.miktex-data\fonts\map\pdftex\pdftex_dl14.map
+2026-11-05 15:21:58,266-0500 INFO  miktex -      to Z:\calaire-ea\servicio_comercial\.miktex-data\fonts\map\pdftex\pdftex.map...
+2026-11-05 15:21:58,358-0500 INFO  miktex - running: miktex-fc-cache --miktex-disable-maintenance --miktex-disable-diagnose
+2026-11-05 15:21:58,359-0500 INFO  miktex.core - start process: miktex-fc-cache --miktex-disable-maintenance --miktex-disable-diagnose
+2026-11-05 15:21:58,369-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:58,369-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:58,369-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:58,369-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:58,369-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:58,370-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:58,370-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:58,370-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:58,370-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:58,370-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:58,371-0500 ERROR miktex.core - Acceso denegado.
+
+2026-11-05 15:21:58,371-0500 ERROR miktex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:58,371-0500 ERROR miktex.core - Result: 5
+2026-11-05 15:21:58,371-0500 ERROR miktex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:58,371-0500 ERROR miktex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:22:07,659-0500 WARN  miktex.core - still open: "C:\Program Files\MiKTeX\fontconfig/config\fonts.conf.in"
+2026-11-05 15:22:07,659-0500 WARN  miktex.core - still open: Z:\calaire-ea\servicio_comercial\.miktex-config\fontconfig\config\fonts.conf
+2026-11-05 15:22:07,665-0500 INFO  miktex - this process (17388) finishes with exit code 0
+2026-11-05 15:54:38,538-0500 INFO  miktex - this is One MiKTeX Utility 1.10 (MiKTeX 24.4)
+2026-11-05 15:54:38,538-0500 INFO  miktex - this process (23476) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex --enable-installer --quiet fndb refresh
+2026-11-05 15:54:38,540-0500 INFO  miktex - Creating FNDB for user root directory (Z:\calaire-ea\servicio_comercial\.miktex-config)...
+2026-11-05 15:54:38,549-0500 INFO  miktex - Creating FNDB for user root directory (Z:\calaire-ea\servicio_comercial\.miktex-data)...
+2026-11-05 15:54:38,587-0500 INFO  miktex - Creating FNDB for user root directory (C:\Users\USUARIO\AppData\Roaming\MiKTeX)...
+2026-11-05 15:54:38,626-0500 INFO  miktex - Skipping common root directory (C:\ProgramData\MiKTeX)...
+2026-11-05 15:54:38,626-0500 INFO  miktex - Skipping common root directory ("C:\Program Files\MiKTeX")...
+2026-11-05 15:54:40,540-0500 WARN  miktex.packagemanager - dependency problem: showframe is required by _miktex-latex-packages
+2026-11-05 15:54:40,541-0500 WARN  miktex.packagemanager - dependency problem: thailatex is required by _miktex-latex-packages
+2026-11-05 15:54:40,544-0500 WARN  miktex.packagemanager - dependency problem: luxi is required by _miktex-fonts-type1
+2026-11-05 15:54:40,618-0500 INFO  miktex - Refreshing FNDB for MPM...
+2026-11-05 15:54:43,305-0500 INFO  miktex - this process (23476) finishes with exit code 0
+2026-11-05 15:54:43,628-0500 INFO  miktex - this is One MiKTeX Utility 1.10 (MiKTeX 24.4)
+2026-11-05 15:54:43,629-0500 INFO  miktex - this process (28360) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex --enable-installer --quiet fontmaps configure
+2026-11-05 15:54:43,629-0500 INFO  miktex - Parsing configuration file "C:\Program Files\MiKTeX\miktex/config\updmap.cfg"...
+2026-11-05 15:54:43,812-0500 INFO  miktex - Writing Z:/calaire-ea/servicio_comercial/.miktex-data\fonts\map\dvipdfmx\kanjix.map...
+2026-11-05 15:54:43,814-0500 INFO  miktex - Writing Z:/calaire-ea/servicio_comercial/.miktex-data\fonts\map\dvips\builtin35.map...
+2026-11-05 15:54:43,820-0500 INFO  miktex - Writing Z:/calaire-ea/servicio_comercial/.miktex-data\fonts\map\dvips\download35.map...
+2026-11-05 15:54:43,825-0500 INFO  miktex - Writing Z:/calaire-ea/servicio_comercial/.miktex-data\fonts\map\dvips\ps2pk.map...
+2026-11-05 15:54:43,835-0500 INFO  miktex - Writing Z:/calaire-ea/servicio_comercial/.miktex-data\fonts\map\dvips\psfonts_pk.map...
+2026-11-05 15:54:43,843-0500 INFO  miktex - Writing Z:/calaire-ea/servicio_comercial/.miktex-data\fonts\map\dvips\psfonts_t1.map...
+2026-11-05 15:54:43,850-0500 INFO  miktex - Writing Z:/calaire-ea/servicio_comercial/.miktex-data\fonts\map\pdftex\pdftex_dl14.map...
+2026-11-05 15:54:43,857-0500 INFO  miktex - Writing Z:/calaire-ea/servicio_comercial/.miktex-data\fonts\map\pdftex\pdftex_ndl14.map...
+2026-11-05 15:54:43,864-0500 INFO  miktex - Copying Z:/calaire-ea/servicio_comercial/.miktex-data\fonts\map\dvips\psfonts_t1.map
+2026-11-05 15:54:43,864-0500 INFO  miktex -      to Z:/calaire-ea/servicio_comercial/.miktex-data\fonts\map\dvips\psfonts.map...
+2026-11-05 15:54:43,867-0500 INFO  miktex - Copying Z:/calaire-ea/servicio_comercial/.miktex-data\fonts\map\pdftex\pdftex_dl14.map
+2026-11-05 15:54:43,867-0500 INFO  miktex -      to Z:/calaire-ea/servicio_comercial/.miktex-data\fonts\map\pdftex\pdftex.map...
+2026-11-05 15:54:43,880-0500 INFO  miktex - running: miktex-fc-cache --miktex-disable-maintenance --miktex-disable-diagnose
+2026-11-05 15:54:43,880-0500 INFO  miktex.core - start process: miktex-fc-cache --miktex-disable-maintenance --miktex-disable-diagnose
+2026-11-05 15:54:46,653-0500 WARN  miktex.core - still open: "C:\Program Files\MiKTeX\fontconfig/config\fonts.conf.in"
+2026-11-05 15:54:46,654-0500 WARN  miktex.core - still open: Z:/calaire-ea/servicio_comercial/.miktex-config\fontconfig\config\fonts.conf
+2026-11-05 15:54:46,654-0500 INFO  miktex - this process (28360) finishes with exit code 0
+2026-11-05 15:54:47,079-0500 INFO  miktex - this is One MiKTeX Utility 1.10 (MiKTeX 24.4)
+2026-11-05 15:54:47,079-0500 INFO  miktex - this process (25404) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex --enable-installer formats build xelatex --engine xetex
+2026-11-05 15:54:47,081-0500 INFO  miktex - Building format 'xelatex' with engine 'xetex'...
+2026-11-05 15:54:47,084-0500 INFO  miktex.core - start process: miktex-makefmt.exe --engine=xetex --dest-name=xelatex --no-dump xelatex.ini --enable-installer --miktex-disable-maintenance --miktex-disable-diagnose
+2026-11-05 15:54:57,215-0500 INFO  miktex - this process (25404) finishes with exit code 0

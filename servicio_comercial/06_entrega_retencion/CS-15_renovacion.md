@@ -1,24 +1,38 @@
-# CS-15 — Mensaje de renovación/seguimiento y registro de clientes potenciales
+# CS-15 — Mensaje de renovación / seguimiento y registro de prospectos
 
+<<<<<<< Updated upstream
 **Propietario:** Profesional de proyectos
 **Última revisión:** 2026-07-14 (se agregaron SLA, vínculo con precios de fidelidad, gestión de falta de respuesta, sincronización con CS-05 y verificación del consentimiento de marketing)
+=======
+**Estado:** BORRADOR — contenido redactado; aprobación pendiente\
+**Propietario:** Líder comercial\
+**Requerido:** después de la ronda\
+**Última revisión:** 2026-07-14 (se agregaron plazos, regla de precios de fidelización, gestión de falta de respuesta, sincronización con CS-05 y verificación del consentimiento de comunicaciones)
+>>>>>>> Stashed changes
 
 ## Objetivo
 
 Convertir la participación completada en demanda recurrente.
 
-## SLA de plazos
+## Plazos
 
 El seguimiento se envía dentro de un intervalo aprobado posterior a la ronda:
 
-| Hito | SLA |
+| Hito | Plazo |
 |---|---|
+<<<<<<< Updated upstream
 | Seguimiento enviado tras informe final | [POR DILIGENCIAR — normalmente entre 2 y 4 semanas después de la entrega del informe final según el modelo 18] |
 | Seguimiento sin respuesta | [POR DILIGENCIAR — por ejemplo, 30 días después del primer seguimiento, envíe un recordatorio] |
 | Cliente potencial marcado como "obsoleto" si no hay respuesta | [POR DILIGENCIAR — por ejemplo, 90 días después del primer seguimiento] |
 | Intervalo de reintento para la siguiente ronda | [POR DILIGENCIAR — por ejemplo, 6 meses] |
+=======
+| Envío del seguimiento | Entre 2 y 4 semanas después de la entrega del informe final |
+| Recordatorio si no hay respuesta | 30 días después del primer seguimiento |
+| Prospecto marcado como inactivo si no hay respuesta | 90 días después del primer seguimiento |
+| Nuevo contacto para la siguiente ronda | 6 meses |
+>>>>>>> Stashed changes
 
-Los clientes potenciales obsoletos se marcan en CS-10 con el "indicador Stale-EoI" (igual que CS-05) y se excluyen de las vistas de canalización activa.
+Los prospectos inactivos se marcan en CS-10 con el indicador de expresión de interés vencida (igual que CS-05) y se excluyen de las vistas del embudo activo.
 
 ## Contenido del mensaje
 
@@ -27,12 +41,12 @@ Los clientes potenciales obsoletos se marcan en CS-10 con el "indicador Stale-Eo
 | Agradecer al participante | Sí | |
 | Enlace al formulario de comentarios (CS-14) | Sí | |
 | Identificar el siguiente periodo previsto del programa | Sí | Consultar CS-03 |
-| Registrar los gases de interés futuro | Sí | Registrar en el canal de oportunidades de CS-10 |
+| Registrar los gases de interés futuro | Sí | Registrar en el embudo de CS-10 |
 | Ofrecer la opción de expresión de interés | Sí | Enlace a CS-05 |
-| **Mencione cualquier precio de fidelidad o descuento por rondas múltiples** (si CS-04/CS-01 ha aprobado dicho esquema) | Condicional | Si no existe ningún plan de fidelización, omita esta fila por completo |
-| No divulgar ni hacer mercadeo con base en el desempeño confidencial | Sí | Obligatorio |
+| **Mencionar precios de fidelización o descuento por varias rondas** (solo si CS-04/CS-01 aprobaron dicho esquema) | Condicional | Si no existe un esquema aprobado, se omite |
+| No divulgar ni hacer divulgación comercial con base en el desempeño confidencial | Sí | Obligatorio |
 
-**Nota sobre precios de lealtad:** si CS-04 no incluye actualmente un descuento de ronda múltiple o un esquema de lealtad, el mensaje NO debe inventar uno. Se debe actualizar CS-04 para incluir el esquema (con la aprobación de la administración) o el mensaje omite la fila. Inventar un descuento en CS-15 rompe la integridad de la cotización de CS-06.
+**Nota sobre precios de fidelización:** si CS-04 no incluye un descuento por varias rondas o un esquema de fidelización, el mensaje no debe inventarlo. Se actualiza CS-04 (con aprobación de la dirección) o se omite el elemento. Inventar un descuento en CS-15 rompe la integridad de las cotizaciones CS-06.
 
 ### Plantilla
 
@@ -47,8 +61,13 @@ Agradecemos sus comentarios para ayudarnos a mejorar el servicio:
 [ENLACE al formulario de comentarios CS-14]
 
 Próximo programa
+<<<<<<< Updated upstream
 - Periodo previsto: [POR DILIGENCIAR]
 - Gases ofrecidos: [POR DILIGENCIAR]
+=======
+- Periodo previsto: [PERIODO según CS-03]
+- Bloques ofrecidos: [BLOQUES según CS-03]
+>>>>>>> Stashed changes
 
 No se ofrece descuento automático por renovación durante la etapa de propuesta.
 Una futura política de fidelización requiere revisión de CS-01 y aprobación de
@@ -60,46 +79,62 @@ Si le interesa la próxima ronda, indíquenos qué gases desea incluir:
 Sus resultados de desempeño seguirán siendo confidenciales y no se utilizarán con fines de mercadeo. Puede revocar en cualquier momento su consentimiento para recibir comunicaciones comerciales respondiendo a este correo electrónico.
 
 Cordialmente,
+<<<<<<< Updated upstream
 [PROFESIONAL DE PROYECTOS]
+=======
+David Pulgarín
+Líder comercial — CALAIRE-EA
+>>>>>>> Stashed changes
 ```
 
 ## Gestión de la falta de respuesta
 
 | Situación | Acción |
 |---|---|
-| No hay respuesta dentro de la ventana de recordatorio de SLA | Enviar recordatorio con el mismo contenido + "Si no recibimos noticias suyas antes del [FECHA], marcaremos su interés de renovación como inactivo. Puede reactivarlo en cualquier momento". |
-| No hay respuesta después del recordatorio | Marcar cliente potencial como "obsoleto" en CS-10 (indicador obsoleto-EoI = Sí) |
-| El cliente responde después de un indicador obsoleto | Reactivar el cliente potencial; reiniciar el plazo para marcarlo como obsoleto |
+| No hay respuesta dentro del plazo de recordatorio | Enviar recordatorio con el mismo contenido + "Si no recibimos noticias suyas antes del [FECHA], marcaremos su interés de renovación como inactivo. Puede reactivarlo en cualquier momento". |
+| No hay respuesta después del recordatorio | Marcar el prospecto como inactivo en CS-10 (expresión de interés vencida = Sí) |
+| El cliente responde después de quedar inactivo | Reactivar el prospecto y reiniciar el plazo |
 
-## Sincronizar con CS-05 (expresión de interés)
+## Sincronización con CS-05 (expresión de interés)
 
 Cuando el cliente responde al seguimiento con interés de renovación:
 
-- **No** cree un nuevo envío CS-05 desde cero. En su lugar, **actualice el registro CS-10 existente** con:
-- Nueva entrada en pipeline para la siguiente ronda (estado = Interés para la nueva ronda).
-- Gases de interés de la respuesta.
-  - Periodo preferido.
-  - Plazo de adquisición, si se indicó.
-- Indicador de consentimiento de marketing (por separado del consentimiento de servicio según la Ley 1581/2012).
-- El formulario CS-05 sigue siendo el canal formal de EoI para nuevos prospectos; para renovaciones, la actualización CS-10 es suficiente y evita volver a solicitar datos de organización/contacto.
+- **No** se crea un nuevo envío CS-05 desde cero; se **actualiza el registro CS-10 existente** con:
+    - Nueva entrada en el embudo para la siguiente ronda (estado = Interés para la nueva ronda).
+    - Bloques de interés de la respuesta.
+    - Periodo preferido.
+    - Plazo de compra, si se indicó.
+    - Indicador de consentimiento de comunicaciones comerciales (separado del consentimiento del servicio según la Ley 1581/2012).
+- El formulario CS-05 sigue siendo el canal formal de expresión de interés para nuevos prospectos; para renovaciones, la actualización CS-10 es suficiente y evita volver a solicitar datos de organización/contacto.
 
-Si el cliente envía explícitamente un nuevo CS-05 (por ejemplo, a través del formulario en lugar de responder al seguimiento), combine los datos en el registro CS-10 existente; no duplicar.
+Si el cliente envía explícitamente un nuevo CS-05 (por ejemplo, a través del formulario en lugar de responder al seguimiento), los datos se combinan en el registro CS-10 existente, sin duplicar.
 
-## Registro del cliente potencial
+## Registro del prospecto
 
-Actualice el rastreador CS-10 con:
+Se actualiza el seguimiento CS-10 con:
 
-- Nueva entrada en el canal de oportunidades para la próxima ronda (estado = Interés).
-- Gases de interés de respuesta.
+- Nueva entrada en el embudo para la próxima ronda (estado = Interés).
+- Bloques de interés de la respuesta.
 - Periodo preferido.
-- Plazo de adquisición, si se indicó.
-- Indicador de consentimiento de marketing.
-- Fecha de EoI obsoleta (90 días después del seguimiento si no hay respuesta).
+- Plazo de compra, si se indicó.
+- Indicador de consentimiento de comunicaciones comerciales.
+- Fecha de vencimiento del interés (90 días después del seguimiento si no hay respuesta).
 
 ## Controles
 
 - No hacer referencia a puntuaciones individuales, puntuaciones z ni desempeño relativo.
 - No afirmar que existe acreditación si no existe.
-- Consentimiento verificado antes de agregarlo a la lista de marketing (por separado del consentimiento del servicio).
+- Consentimiento verificado antes de agregar el contacto a la lista de comunicaciones comerciales (separado del consentimiento del servicio).
 - Si el CS-14 se envió de forma anónima, el seguimiento de la renovación no puede hacer referencia a las respuestas anteriores; el mensaje es genérico.
+<<<<<<< Updated upstream
 - El precio de fidelidad debe provenir del CS-04, no inventado en el CS-15.
+=======
+- El precio de fidelización debe provenir de CS-04, no inventarse en CS-15.
+
+## Aprobación
+
+| Versión | Fecha | Aprobador | Notas |
+|---|---|---|---|
+| 0.1 BORRADOR | 2026-07-12 | — | Plantilla inicial |
+| 0.2 BORRADOR | 2026-07-14 | — | Se agregaron plazos, regla condicional de precios de fidelización, manejo de falta de respuesta, sincronización con CS-05 y verificación del consentimiento de comunicaciones. |
+>>>>>>> Stashed changes

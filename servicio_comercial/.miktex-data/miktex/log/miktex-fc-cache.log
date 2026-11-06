@@ -1,0 +1,96 @@
+2026-11-05 15:21:58,594-0500 INFO  miktex-fc-cache - this process (14040) started by miktex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-fc-cache --miktex-disable-maintenance --miktex-disable-diagnose
+2026-11-05 15:21:58,594-0500 INFO  miktex-fc-cache - running on Windows 10.0.26200
+2026-11-05 15:21:58,595-0500 ERROR miktex-fc-cache.core - Acceso denegado.
+
+2026-11-05 15:21:58,595-0500 ERROR miktex-fc-cache.core - Function: RegOpenKeyExW
+2026-11-05 15:21:58,595-0500 ERROR miktex-fc-cache.core - Result: 5
+2026-11-05 15:21:58,595-0500 ERROR miktex-fc-cache.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:58,595-0500 ERROR miktex-fc-cache.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:58,597-0500 ERROR miktex-fc-cache.core - Acceso denegado.
+
+2026-11-05 15:21:58,597-0500 ERROR miktex-fc-cache.core - Function: RegOpenKeyExW
+2026-11-05 15:21:58,597-0500 ERROR miktex-fc-cache.core - Result: 5
+2026-11-05 15:21:58,597-0500 ERROR miktex-fc-cache.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:58,597-0500 ERROR miktex-fc-cache.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:58,597-0500 ERROR miktex-fc-cache.core - Acceso denegado.
+
+2026-11-05 15:21:58,597-0500 ERROR miktex-fc-cache.core - Function: RegOpenKeyExW
+2026-11-05 15:21:58,597-0500 ERROR miktex-fc-cache.core - Result: 5
+2026-11-05 15:21:58,597-0500 ERROR miktex-fc-cache.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Setup
+2026-11-05 15:21:58,597-0500 ERROR miktex-fc-cache.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:58,597-0500 ERROR miktex-fc-cache.core - Acceso denegado.
+
+2026-11-05 15:21:58,597-0500 ERROR miktex-fc-cache.core - Function: RegOpenKeyExW
+2026-11-05 15:21:58,598-0500 ERROR miktex-fc-cache.core - Result: 5
+2026-11-05 15:21:58,598-0500 ERROR miktex-fc-cache.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:58,598-0500 ERROR miktex-fc-cache.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:58,598-0500 ERROR miktex-fc-cache.core - Acceso denegado.
+
+2026-11-05 15:21:58,598-0500 ERROR miktex-fc-cache.core - Function: RegOpenKeyExW
+2026-11-05 15:21:58,598-0500 ERROR miktex-fc-cache.core - Result: 5
+2026-11-05 15:21:58,598-0500 ERROR miktex-fc-cache.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:58,598-0500 ERROR miktex-fc-cache.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:58,598-0500 ERROR miktex-fc-cache.core - Acceso denegado.
+
+2026-11-05 15:21:58,598-0500 ERROR miktex-fc-cache.core - Function: RegOpenKeyExW
+2026-11-05 15:21:58,598-0500 ERROR miktex-fc-cache.core - Result: 5
+2026-11-05 15:21:58,598-0500 ERROR miktex-fc-cache.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:58,598-0500 ERROR miktex-fc-cache.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:58,598-0500 ERROR miktex-fc-cache.core - Acceso denegado.
+
+2026-11-05 15:21:58,598-0500 ERROR miktex-fc-cache.core - Function: RegOpenKeyExW
+2026-11-05 15:21:58,598-0500 ERROR miktex-fc-cache.core - Result: 5
+2026-11-05 15:21:58,599-0500 ERROR miktex-fc-cache.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:58,599-0500 ERROR miktex-fc-cache.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:58,599-0500 ERROR miktex-fc-cache.core - Acceso denegado.
+
+2026-11-05 15:21:58,599-0500 ERROR miktex-fc-cache.core - Function: RegOpenKeyExW
+2026-11-05 15:21:58,599-0500 ERROR miktex-fc-cache.core - Result: 5
+2026-11-05 15:21:58,599-0500 ERROR miktex-fc-cache.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:58,599-0500 ERROR miktex-fc-cache.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:58,599-0500 ERROR miktex-fc-cache.core - Acceso denegado.
+
+2026-11-05 15:21:58,599-0500 ERROR miktex-fc-cache.core - Function: RegOpenKeyExW
+2026-11-05 15:21:58,599-0500 ERROR miktex-fc-cache.core - Result: 5
+2026-11-05 15:21:58,599-0500 ERROR miktex-fc-cache.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:58,599-0500 ERROR miktex-fc-cache.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:58,599-0500 ERROR miktex-fc-cache.core - Acceso denegado.
+
+2026-11-05 15:21:58,599-0500 ERROR miktex-fc-cache.core - Function: RegOpenKeyExW
+2026-11-05 15:21:58,599-0500 ERROR miktex-fc-cache.core - Result: 5
+2026-11-05 15:21:58,599-0500 ERROR miktex-fc-cache.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:58,600-0500 ERROR miktex-fc-cache.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:58,600-0500 ERROR miktex-fc-cache.core - Acceso denegado.
+
+2026-11-05 15:21:58,600-0500 ERROR miktex-fc-cache.core - Function: RegOpenKeyExW
+2026-11-05 15:21:58,600-0500 ERROR miktex-fc-cache.core - Result: 5
+2026-11-05 15:21:58,600-0500 ERROR miktex-fc-cache.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:58,600-0500 ERROR miktex-fc-cache.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:58,600-0500 ERROR miktex-fc-cache.core - Acceso denegado.
+
+2026-11-05 15:21:58,600-0500 ERROR miktex-fc-cache.core - Function: RegOpenKeyExW
+2026-11-05 15:21:58,600-0500 ERROR miktex-fc-cache.core - Result: 5
+2026-11-05 15:21:58,600-0500 ERROR miktex-fc-cache.core - Data: Software\MiKTeX.org\MiKTeX\2.9\MPM
+2026-11-05 15:21:58,600-0500 ERROR miktex-fc-cache.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:58,601-0500 ERROR miktex-fc-cache.core - Acceso denegado.
+
+2026-11-05 15:21:58,601-0500 ERROR miktex-fc-cache.core - Function: RegOpenKeyExW
+2026-11-05 15:21:58,601-0500 ERROR miktex-fc-cache.core - Result: 5
+2026-11-05 15:21:58,601-0500 ERROR miktex-fc-cache.core - Data: Software\MiKTeX.org\MiKTeX\2.9\MPM
+2026-11-05 15:21:58,601-0500 ERROR miktex-fc-cache.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:58,602-0500 ERROR miktex-fc-cache.core - Acceso denegado.
+
+2026-11-05 15:21:58,602-0500 ERROR miktex-fc-cache.core - Function: RegOpenKeyExW
+2026-11-05 15:21:58,602-0500 ERROR miktex-fc-cache.core - Result: 5
+2026-11-05 15:21:58,602-0500 ERROR miktex-fc-cache.core - Data: Software\MiKTeX.org\MiKTeX\2.9\MPM
+2026-11-05 15:21:58,602-0500 ERROR miktex-fc-cache.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:58,603-0500 ERROR miktex-fc-cache.core - Acceso denegado.
+
+2026-11-05 15:21:58,603-0500 ERROR miktex-fc-cache.core - Function: RegOpenKeyExW
+2026-11-05 15:21:58,603-0500 ERROR miktex-fc-cache.core - Result: 5
+2026-11-05 15:21:58,603-0500 ERROR miktex-fc-cache.core - Data: Software\MiKTeX.org\MiKTeX\2.9\MPM
+2026-11-05 15:21:58,603-0500 ERROR miktex-fc-cache.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:22:07,546-0500 INFO  miktex-fc-cache - this process (14040) finishes with exit code 0
+2026-11-05 15:54:44,694-0500 INFO  miktex-fc-cache - this process (5828) started by miktex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-fc-cache --miktex-disable-maintenance --miktex-disable-diagnose
+2026-11-05 15:54:44,695-0500 INFO  miktex-fc-cache - running on Windows 10.0.26200
+2026-11-05 15:54:46,567-0500 INFO  miktex-fc-cache - this process (5828) finishes with exit code 0

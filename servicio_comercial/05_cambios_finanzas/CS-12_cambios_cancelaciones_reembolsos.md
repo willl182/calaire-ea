@@ -1,13 +1,22 @@
 # CS-12 — Registro de cambios, cancelaciones y reembolsos
 
+<<<<<<< Updated upstream
 **Propietario:** Profesional de proyectos
 **Última revisión:** 2026-07-14 (se agregaron la referencia al catálogo de tarifas, el impacto en la viabilidad, el plazo de reembolso, la trazabilidad de la revisión de la cotización original y la doble autorización de decisiones financieras)
 **Referencia de códigos del SGC:** ver `00_control/equivalencia_codigos_sgc.md`. `P-PSEA-15` (vigente) = Trabajo no conforme / NC / CAPA. `P-PSEA-16` (vigente) = Divulgación y control de valores sensibles.
+=======
+**Estado:** BORRADOR — contenido redactado; aprobación pendiente\
+**Propietario:** Comercial / finanzas\
+**Requerido antes de:** cuando se activa un disparador\
+**Última revisión:** 2026-07-14 (se agregaron referencia a las reglas de tarifas, impacto en la viabilidad, plazo de reembolso, trazabilidad de la cotización original y doble autorización de decisiones financieras)\
+**Referencia de códigos SGC:** ver `00_control/equivalencia_codigos_sgc.md`. `P-PSEA-15` (vigente) = Trabajo no conforme / NC / CAPA. `P-PSEA-16` (vigente) = Divulgación y control de valores sensibles.
+>>>>>>> Stashed changes
 
 ## Objetivo
 
 Controlar los cambios comerciales y las decisiones financieras.
 
+<<<<<<< Updated upstream
 ## Eventos desencadenantes
 
 - [ ] El participante cambia los gases seleccionados.
@@ -78,3 +87,82 @@ La lista de tarifas aplicada en este registro se define en CS-01 Sección 8. El 
 | Error de informe sustancial (activador CS-13) | [POR DILIGENCIAR — normalmente reembolso completo de la tarifa de ronda + reemisión gratuita] |
 
 Ver CS-01 Sección 8 para conocer los valores autorizados y las reglas de decisión.
+=======
+## Disparadores
+
+1. [ ] El participante cambia los bloques seleccionados.
+2. [ ] El participante agrega o reemplaza un analizador.
+3. [ ] El participante se retira.
+4. [ ] CALAIRE-EA aplaza la ronda.
+5. [ ] CALAIRE-EA cancela la ronda (inscripción mínima no alcanzada o imposibilidad técnica/logística).
+6. [ ] Cambio de fechas o instalaciones.
+7. [ ] La fuerza mayor afecta la participación.
+8. [ ] Se solicita un reembolso o una nota crédito.
+9. [ ] El proveedor identifica un error sustantivo en el informe (cadena CS-13 → CS-12).
+
+## Registro mínimo
+
+Los campos en blanco se diligencian en cada registro.
+
+| Campo | Valor |
+|---|---|
+| ID del registro | Único |
+| Fecha de apertura | |
+| Cliente | |
+| Identificación de la ronda | |
+| **Cotización original (familia + revisión)** | Obligatoria para trazar los términos reemplazados (p. ej., Q-2026-0042 rev 0) |
+| **Cotización revisada (si aplica)** | |
+| Referencia de factura | |
+| Referencia de nota crédito (si aplica) | |
+| **Regla aplicable (CS-01 sección 8)** | Escenario de la tabla de reglas de abajo |
+| Compromiso original | Bloques, analizadores, fechas, precio |
+| Cambio solicitado o impuesto | |
+| Cláusula contractual aplicable | Cláusula de CS-08 |
+| Impacto técnico / de capacidad | Efecto en la planificación de la ronda (p. ej., "libera 1 cupo de CO") |
+| **Impacto en la viabilidad de la ronda** | Según CS-04 pestaña 7: viable / por debajo del mínimo |
+| Cálculo de tarifa, reembolso o crédito | Línea por línea: precio original, costos no recuperables documentados, valor a devolver o acreditar (COP) |
+| **Plazo de trámite del reembolso** | El de las políticas vigentes de la Universidad (CS-01 sección 8) |
+| **Vigencia de la nota crédito** | Según las políticas contables de la Universidad (CS-01 sección 8) |
+| Decisión | Aprobado / Rechazado / Pendiente |
+| Decisión autorizada por (comercial) | Nombre y fecha |
+| Decisión autorizada por (finanzas o dirección) | Nombre y fecha — **doble autorización obligatoria para toda decisión financiera** |
+| Fecha de notificación al cliente | |
+| Fila de CS-10 actualizada | |
+| Cotización actualizada | Número de la cotización revisada, si aplica |
+| Factura actualizada | Nota crédito o nueva factura |
+| Inscripción actualizada | |
+| Fecha de cierre | |
+| Cierre autorizado por | Nombre y fecha |
+
+## Controles
+
+- **Las decisiones financieras requieren doble autorización** (comercial + finanzas o dirección). Los cambios con una sola autorización no son válidos.
+- Los cambios de capacidad se reflejan de inmediato en CS-10 (sin actualizaciones por lotes).
+- Las revisiones de cotización siguen las reglas de control de CS-06; se cita la familia y revisión de la cotización original.
+- El reembolso se tramita en el plazo de las políticas de la Universidad; si se prevé un retraso, se notifica al cliente con la nueva fecha.
+- Las notas crédito se rigen por las políticas contables de la Universidad; una nota vencida no se acepta sin nueva autorización de la dirección.
+- Las quejas técnicas o no conformidades identificadas durante un cambio se remiten a los controles existentes del PEA (`P-PSEA-15` NC/CAPA, `P-PSEA-16` valores sensibles).
+- Si el cambio lo provoca un error sustantivo del informe (CS-13), el registro CS-12 cita el identificador del informe y la nota de corrección de CS-13.
+- Trazabilidad de la cotización original: cada registro cita la familia y revisión de la cotización original, lo que evita disputas sobre los términos vigentes al momento del compromiso.
+
+## Reglas de tarifas y reembolsos (resumen de CS-01 sección 8)
+
+| Escenario | Tratamiento |
+|---|---|
+| Retiro del participante ≥ 30 días calendario antes del inicio | Una única reprogramación sujeta a capacidad, o cancelación con devolución de lo pagado menos costos directos no recuperables documentados |
+| Retiro del participante < 30 días calendario antes del inicio | Una única reprogramación sujeta a capacidad y a costos incrementales documentados; sin devolución automática |
+| Participante no presentado | Sin reprogramación ni devolución, salvo fuerza mayor demostrada |
+| Aplazamiento por el proveedor | El participante elige conservar el cupo, trasladarlo o cancelar con devolución del 100 % |
+| Cancelación por el proveedor (inscripción mínima o imposibilidad técnica) | El participante elige reprogramar o cancelar con devolución del 100 % |
+| Fuerza mayor | Reprogramación o reconocimiento del saldo recuperable según impacto, costos comprometidos y políticas de la Universidad |
+| Error sustantivo del informe (disparador 9) | Reemisión controlada del informe sin costo; cualquier efecto financiero se decide con doble autorización |
+
+Los valores autorizados y las reglas de decisión están en CS-01 sección 8.
+
+## Aprobación
+
+| Versión | Fecha | Aprobador | Notas |
+|---|---|---|---|
+| 0.1 BORRADOR | 2026-07-12 | — | Plantilla inicial |
+| 0.2 BORRADOR | 2026-07-14 | — | Se agregaron reglas de tarifas, impacto en la viabilidad, plazo de reembolso, trazabilidad de la cotización original, doble autorización explícita y enlace a CS-13. |
+>>>>>>> Stashed changes

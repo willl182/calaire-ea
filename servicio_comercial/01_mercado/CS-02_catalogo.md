@@ -1,5 +1,6 @@
 # CS-02 — Catálogo de servicios / Folleto
 
+<<<<<<< Updated upstream
 **Propietario:** Profesional de proyectos
 **Última revisión:** 2026-07-14 (copia de la propuesta completa y campos consolidados pendientes de publicación)
 **Referencia de códigos del SGC:** ver `00_control/equivalencia_codigos_sgc.md`. Las referencias de confidencialidad usan `P-PSEA-19` (vigente = Confidencialidad operativa interna).
@@ -7,6 +8,17 @@
 ## Objetivo
 
 Brindar a un cliente potencial información suficiente para decidir si solicita una cotización, sin abrumarlo con detalles de procedimientos técnicos.
+=======
+**Estado:** CONTENIDO DE LA PROPUESTA COMPLETO: datos de publicación y aprobación de lanzamiento pendientes\
+**Propietario:** Líder comercial\
+**Requerido antes de:** lanzamiento al mercado\
+**Última revisión:** 2026-07-14 (copia de la propuesta completa y campos consolidados pendientes de publicación)\
+**Referencia de códigos SGC:** ver `00_control/equivalencia_codigos_sgc.md`. Las referencias de confidencialidad usan `P-PSEA-19` (vigente = Confidencialidad operativa interna).
+
+## Objetivo
+
+Brindar a un cliente potencial suficiente información para decidir si solicita una cotización sin abrumarlo con detalles de procedimientos técnicos.
+>>>>>>> Stashed changes
 
 ## Formato
 
@@ -54,7 +66,7 @@ organización.
 ### 5. Modelo de participación
 
 La propuesta evalúa una tarifa plana por organización para seleccionar entre
-uno y cuatro bloques. El valor de referencia es únicamente un benchmark para el
+uno y cuatro bloques. El valor de referencia es únicamente una referencia para el
 análisis de viabilidad: no es una tarifa aprobada, no puede publicarse ni usarse
 en una cotización real antes de completar CS-04 y las revisiones institucionales.
 
@@ -114,6 +126,7 @@ Manifestar interés no constituye inscripción, no reserva cupo y no obliga a
 contratar. La cotización y el formulario definitivo se habilitarán únicamente
 después de aprobar la viabilidad, el precio, las condiciones y la fecha.
 
+<<<<<<< Updated upstream
 ## Única sección pendiente para publicación
 
 | Campo | Valor |
@@ -125,12 +138,36 @@ después de aprobar la viabilidad, el precio, las condiciones y la fecha.
 | Responsable de la última revisión | [POR DILIGENCIAR — nombre] |
 | URL de la versión web | [POR DILIGENCIAR] |
 | Patrón del nombre de archivo PDF | `CS-02_catalogo_v[VERSIÓN]_[IDIOMA].pdf` |
+=======
+## Control de publicación
+
+| Campo | Valor |
+|---|---|
+| Idiomas de publicación | Español |
+| Versión | 0.2 |
+| Revisión | 12 meses desde la publicación o tras cualquier cambio en CS-01 |
+>>>>>>> Stashed changes
 
 ## Controles obligatorios de redacción
 
 - [x] Indica que se puede seleccionar uno o más de los cuatro bloques.
+<<<<<<< Updated upstream
 - [x] Evita la calificación global de aprobado/reprobado.
 - [x] Avoids claiming accreditation.
+=======
+- [x] Evita a1–a7 y la calificación global de aprobado/reprobado.
+- [x] Evita afirmar acreditación.
+>>>>>>> Stashed changes
 - [x] Presenta esto como una propuesta de viabilidad de servicio pago, no como un piloto gratuito lanzado.
-- [x] Avoids publishing concentration levels.
+- [x] Evita publicar niveles de concentración.
 - [x] Identifica los costos a cargo del participante por separado, incluido el riesgo de transporte y equipo.
+<<<<<<< Updated upstream
+=======
+
+## Aprobación
+
+| Versión | Fecha | Aprobador | Notas |
+|---|---|---|---|
+| 0.1 BORRADOR | 2026-07-12 | No registrado | Estructura inicial del CS-01 |
+| 0.2 PROPUESTA | 2026-07-14 | Pendiente de aprobación comercial/de gestión | Copia de la propuesta completada; sólo quedan pendientes los metadatos de control de publicación. |
+>>>>>>> Stashed changes

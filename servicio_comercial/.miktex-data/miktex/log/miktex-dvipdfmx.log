@@ -1,0 +1,576 @@
+2026-11-05 15:55:11,064-0500 INFO  miktex-dvipdfmx - this process (24448) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-e8309a00fbdee41b\input.pdf
+2026-11-05 15:55:11,064-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:55:11,478-0500 INFO  miktex-dvipdfmx - this process (24448) finishes with exit code 0
+2026-11-05 15:55:11,479-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:55:14,405-0500 INFO  miktex-dvipdfmx - this process (26884) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-e8309a00fbdee41b\input.pdf
+2026-11-05 15:55:14,408-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:55:14,828-0500 INFO  miktex-dvipdfmx - this process (26884) finishes with exit code 0
+2026-11-05 15:55:14,829-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:55:28,828-0500 INFO  miktex-dvipdfmx - this process (14560) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-4f622b099995ffdf\input.pdf
+2026-11-05 15:55:28,828-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:55:28,963-0500 INFO  miktex-dvipdfmx - this process (14560) finishes with exit code 0
+2026-11-05 15:55:28,964-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:55:31,493-0500 INFO  miktex-dvipdfmx - this process (15088) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-4f622b099995ffdf\input.pdf
+2026-11-05 15:55:31,493-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:55:31,620-0500 INFO  miktex-dvipdfmx - this process (15088) finishes with exit code 0
+2026-11-05 15:55:31,621-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:55:35,673-0500 INFO  miktex-dvipdfmx - this process (2332) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-0e9789dc46cc8f16\input.pdf
+2026-11-05 15:55:35,673-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:55:35,916-0500 INFO  miktex-dvipdfmx - this process (2332) finishes with exit code 0
+2026-11-05 15:55:35,917-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:55:38,317-0500 INFO  miktex-dvipdfmx - this process (25540) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-0e9789dc46cc8f16\input.pdf
+2026-11-05 15:55:38,318-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:55:38,535-0500 INFO  miktex-dvipdfmx - this process (25540) finishes with exit code 0
+2026-11-05 15:55:38,536-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:55:41,488-0500 INFO  miktex-dvipdfmx - this process (19604) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-6aeee4dfcbaa8935\input.pdf
+2026-11-05 15:55:41,488-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:55:41,644-0500 INFO  miktex-dvipdfmx - this process (19604) finishes with exit code 0
+2026-11-05 15:55:41,646-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:55:44,134-0500 INFO  miktex-dvipdfmx - this process (23156) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-6aeee4dfcbaa8935\input.pdf
+2026-11-05 15:55:44,134-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:55:44,257-0500 INFO  miktex-dvipdfmx - this process (23156) finishes with exit code 0
+2026-11-05 15:55:44,259-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:55:48,213-0500 INFO  miktex-dvipdfmx - this process (20524) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-ff81101f437bd964\input.pdf
+2026-11-05 15:55:48,213-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:55:48,383-0500 INFO  miktex-dvipdfmx - this process (20524) finishes with exit code 0
+2026-11-05 15:55:48,384-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:55:51,250-0500 INFO  miktex-dvipdfmx - this process (27824) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-ff81101f437bd964\input.pdf
+2026-11-05 15:55:51,251-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:55:51,388-0500 INFO  miktex-dvipdfmx - this process (27824) finishes with exit code 0
+2026-11-05 15:55:51,390-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:55:54,498-0500 INFO  miktex-dvipdfmx - this process (1592) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-34df39f14860e451\input.pdf
+2026-11-05 15:55:54,498-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:55:54,628-0500 INFO  miktex-dvipdfmx - this process (1592) finishes with exit code 0
+2026-11-05 15:55:54,629-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:55:57,324-0500 INFO  miktex-dvipdfmx - this process (7364) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-34df39f14860e451\input.pdf
+2026-11-05 15:55:57,324-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:55:57,460-0500 INFO  miktex-dvipdfmx - this process (7364) finishes with exit code 0
+2026-11-05 15:55:57,461-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:56:00,736-0500 INFO  miktex-dvipdfmx - this process (27864) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-73c24fb27fecafad\input.pdf
+2026-11-05 15:56:00,736-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:56:00,866-0500 INFO  miktex-dvipdfmx - this process (27864) finishes with exit code 0
+2026-11-05 15:56:00,878-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:56:03,790-0500 INFO  miktex-dvipdfmx - this process (20460) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-73c24fb27fecafad\input.pdf
+2026-11-05 15:56:03,790-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:56:03,913-0500 INFO  miktex-dvipdfmx - this process (20460) finishes with exit code 0
+2026-11-05 15:56:03,915-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:56:06,956-0500 INFO  miktex-dvipdfmx - this process (5480) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-2f213bb523b85ea9\input.pdf
+2026-11-05 15:56:06,956-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:56:07,319-0500 INFO  miktex-dvipdfmx - this process (5480) finishes with exit code 0
+2026-11-05 15:56:07,320-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:56:10,014-0500 INFO  miktex-dvipdfmx - this process (22916) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-2f213bb523b85ea9\input.pdf
+2026-11-05 15:56:10,015-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:56:10,378-0500 INFO  miktex-dvipdfmx - this process (22916) finishes with exit code 0
+2026-11-05 15:56:10,379-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:56:14,176-0500 INFO  miktex-dvipdfmx - this process (11964) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-15595c3f1f47142c\input.pdf
+2026-11-05 15:56:14,177-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:56:14,281-0500 INFO  miktex-dvipdfmx - this process (11964) finishes with exit code 0
+2026-11-05 15:56:14,282-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:56:16,883-0500 INFO  miktex-dvipdfmx - this process (15804) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-15595c3f1f47142c\input.pdf
+2026-11-05 15:56:16,883-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:56:16,998-0500 INFO  miktex-dvipdfmx - this process (15804) finishes with exit code 0
+2026-11-05 15:56:17,000-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:56:19,947-0500 INFO  miktex-dvipdfmx - this process (8848) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-8452b6b2fc356d2f\input.pdf
+2026-11-05 15:56:19,947-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:56:20,081-0500 INFO  miktex-dvipdfmx - this process (8848) finishes with exit code 0
+2026-11-05 15:56:20,082-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:56:22,624-0500 INFO  miktex-dvipdfmx - this process (16036) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-8452b6b2fc356d2f\input.pdf
+2026-11-05 15:56:22,625-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:56:22,929-0500 INFO  miktex-dvipdfmx - this process (16036) finishes with exit code 0
+2026-11-05 15:56:22,930-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:56:26,777-0500 INFO  miktex-dvipdfmx - this process (23732) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-54d3bdc2077b57c6\input.pdf
+2026-11-05 15:56:26,777-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:56:27,234-0500 INFO  miktex-dvipdfmx - this process (23732) finishes with exit code 0
+2026-11-05 15:56:27,235-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:56:29,709-0500 INFO  miktex-dvipdfmx - this process (16340) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-54d3bdc2077b57c6\input.pdf
+2026-11-05 15:56:29,709-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:56:30,167-0500 INFO  miktex-dvipdfmx - this process (16340) finishes with exit code 0
+2026-11-05 15:56:30,168-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:56:33,127-0500 INFO  miktex-dvipdfmx - this process (28824) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-a1b1706fa4cf6564\input.pdf
+2026-11-05 15:56:33,128-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:56:33,255-0500 INFO  miktex-dvipdfmx - this process (28824) finishes with exit code 0
+2026-11-05 15:56:33,257-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:56:35,724-0500 INFO  miktex-dvipdfmx - this process (21932) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-a1b1706fa4cf6564\input.pdf
+2026-11-05 15:56:35,724-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:56:35,831-0500 INFO  miktex-dvipdfmx - this process (21932) finishes with exit code 0
+2026-11-05 15:56:35,832-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:56:38,721-0500 INFO  miktex-dvipdfmx - this process (29312) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-6697ab12b107da33\input.pdf
+2026-11-05 15:56:38,722-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:56:38,833-0500 INFO  miktex-dvipdfmx - this process (29312) finishes with exit code 0
+2026-11-05 15:56:38,835-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:56:41,662-0500 INFO  miktex-dvipdfmx - this process (10312) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-6697ab12b107da33\input.pdf
+2026-11-05 15:56:41,662-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:56:41,859-0500 INFO  miktex-dvipdfmx - this process (10312) finishes with exit code 0
+2026-11-05 15:56:41,861-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:56:46,171-0500 INFO  miktex-dvipdfmx - this process (21800) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-d77f438abf7af895\input.pdf
+2026-11-05 15:56:46,172-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:56:46,676-0500 INFO  miktex-dvipdfmx - this process (21800) finishes with exit code 0
+2026-11-05 15:56:46,677-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:57:02,731-0500 INFO  miktex-dvipdfmx - this process (22700) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-d77f438abf7af895\input.pdf
+2026-11-05 15:57:02,731-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:57:02,905-0500 INFO  miktex-dvipdfmx - this process (22700) finishes with exit code 0
+2026-11-05 15:57:02,906-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:57:07,173-0500 INFO  miktex-dvipdfmx - this process (9740) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-8b4286c5c27d1405\input.pdf
+2026-11-05 15:57:07,173-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:57:07,639-0500 INFO  miktex-dvipdfmx - this process (9740) finishes with exit code 0
+2026-11-05 15:57:07,641-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:57:17,946-0500 INFO  miktex-dvipdfmx - this process (28928) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-8b4286c5c27d1405\input.pdf
+2026-11-05 15:57:17,946-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:57:18,355-0500 INFO  miktex-dvipdfmx - this process (28928) finishes with exit code 0
+2026-11-05 15:57:18,356-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:57:22,164-0500 INFO  miktex-dvipdfmx - this process (29536) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-088cc9e8c434f701\input.pdf
+2026-11-05 15:57:22,164-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:57:22,363-0500 INFO  miktex-dvipdfmx - this process (29536) finishes with exit code 0
+2026-11-05 15:57:22,364-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:57:24,940-0500 INFO  miktex-dvipdfmx - this process (27536) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-088cc9e8c434f701\input.pdf
+2026-11-05 15:57:24,940-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:57:25,151-0500 INFO  miktex-dvipdfmx - this process (27536) finishes with exit code 0
+2026-11-05 15:57:25,153-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:57:28,470-0500 INFO  miktex-dvipdfmx - this process (24712) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-433fddd640c3807d\input.pdf
+2026-11-05 15:57:28,470-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:57:28,596-0500 INFO  miktex-dvipdfmx - this process (24712) finishes with exit code 0
+2026-11-05 15:57:28,597-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:57:31,607-0500 INFO  miktex-dvipdfmx - this process (24592) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-433fddd640c3807d\input.pdf
+2026-11-05 15:57:31,608-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:57:31,751-0500 INFO  miktex-dvipdfmx - this process (24592) finishes with exit code 0
+2026-11-05 15:57:31,753-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:57:35,919-0500 INFO  miktex-dvipdfmx - this process (26660) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-654d4e67e4dc3c38\input.pdf
+2026-11-05 15:57:35,920-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:57:36,065-0500 INFO  miktex-dvipdfmx - this process (26660) finishes with exit code 0
+2026-11-05 15:57:36,066-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:57:38,606-0500 INFO  miktex-dvipdfmx - this process (25640) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-654d4e67e4dc3c38\input.pdf
+2026-11-05 15:57:38,606-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:57:38,743-0500 INFO  miktex-dvipdfmx - this process (25640) finishes with exit code 0
+2026-11-05 15:57:38,745-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:57:42,695-0500 INFO  miktex-dvipdfmx - this process (25292) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-8ff1ec1af3ed714f\input.pdf
+2026-11-05 15:57:42,695-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:57:42,840-0500 INFO  miktex-dvipdfmx - this process (25292) finishes with exit code 0
+2026-11-05 15:57:42,841-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:57:45,570-0500 INFO  miktex-dvipdfmx - this process (28372) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-8ff1ec1af3ed714f\input.pdf
+2026-11-05 15:57:45,570-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:57:45,714-0500 INFO  miktex-dvipdfmx - this process (28372) finishes with exit code 0
+2026-11-05 15:57:45,715-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:57:48,752-0500 INFO  miktex-dvipdfmx - this process (28360) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-a937f4404f32bb0a\input.pdf
+2026-11-05 15:57:48,753-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:57:49,048-0500 INFO  miktex-dvipdfmx - this process (28360) finishes with exit code 0
+2026-11-05 15:57:49,049-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:57:51,675-0500 INFO  miktex-dvipdfmx - this process (15264) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-a937f4404f32bb0a\input.pdf
+2026-11-05 15:57:51,675-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:57:51,792-0500 INFO  miktex-dvipdfmx - this process (15264) finishes with exit code 0
+2026-11-05 15:57:51,794-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:57:55,083-0500 INFO  miktex-dvipdfmx - this process (15016) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-beb4a5a8865fddb9\input.pdf
+2026-11-05 15:57:55,083-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:57:55,256-0500 INFO  miktex-dvipdfmx - this process (15016) finishes with exit code 0
+2026-11-05 15:57:55,258-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:57:58,880-0500 INFO  miktex-dvipdfmx - this process (24612) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-beb4a5a8865fddb9\input.pdf
+2026-11-05 15:57:58,880-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:57:59,005-0500 INFO  miktex-dvipdfmx - this process (24612) finishes with exit code 0
+2026-11-05 15:57:59,006-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:58:03,252-0500 INFO  miktex-dvipdfmx - this process (25840) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-8d68a58ea50d205b\input.pdf
+2026-11-05 15:58:03,252-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:58:03,622-0500 INFO  miktex-dvipdfmx - this process (25840) finishes with exit code 0
+2026-11-05 15:58:03,623-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:58:06,419-0500 INFO  miktex-dvipdfmx - this process (14832) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-8d68a58ea50d205b\input.pdf
+2026-11-05 15:58:06,419-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:58:06,830-0500 INFO  miktex-dvipdfmx - this process (14832) finishes with exit code 0
+2026-11-05 15:58:06,832-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:58:10,283-0500 INFO  miktex-dvipdfmx - this process (9884) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-bdd1cbcf301ec14d\input.pdf
+2026-11-05 15:58:10,284-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:58:10,405-0500 INFO  miktex-dvipdfmx - this process (9884) finishes with exit code 0
+2026-11-05 15:58:10,406-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:58:13,111-0500 INFO  miktex-dvipdfmx - this process (26140) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-bdd1cbcf301ec14d\input.pdf
+2026-11-05 15:58:13,111-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:58:13,236-0500 INFO  miktex-dvipdfmx - this process (26140) finishes with exit code 0
+2026-11-05 15:58:13,237-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:58:17,759-0500 INFO  miktex-dvipdfmx - this process (10232) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-d15190c18123d229\input.pdf
+2026-11-05 15:58:17,759-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:58:17,904-0500 INFO  miktex-dvipdfmx - this process (10232) finishes with exit code 0
+2026-11-05 15:58:17,906-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:58:20,664-0500 INFO  miktex-dvipdfmx - this process (26048) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-d15190c18123d229\input.pdf
+2026-11-05 15:58:20,664-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:58:20,805-0500 INFO  miktex-dvipdfmx - this process (26048) finishes with exit code 0
+2026-11-05 15:58:20,806-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:59:08,982-0500 INFO  miktex-dvipdfmx - this process (22300) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-6af49c77faca4645\input.pdf
+2026-11-05 15:59:08,982-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:59:09,498-0500 INFO  miktex-dvipdfmx - this process (22300) finishes with exit code 0
+2026-11-05 15:59:09,499-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:59:19,955-0500 INFO  miktex-dvipdfmx - this process (14836) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-6af49c77faca4645\input.pdf
+2026-11-05 15:59:19,956-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:59:20,096-0500 INFO  miktex-dvipdfmx - this process (14836) finishes with exit code 0
+2026-11-05 15:59:20,098-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:59:24,395-0500 INFO  miktex-dvipdfmx - this process (13632) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-f48f19d52423cdfc\input.pdf
+2026-11-05 15:59:24,396-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:59:24,625-0500 INFO  miktex-dvipdfmx - this process (13632) finishes with exit code 0
+2026-11-05 15:59:24,626-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:59:27,491-0500 INFO  miktex-dvipdfmx - this process (27664) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-f48f19d52423cdfc\input.pdf
+2026-11-05 15:59:27,492-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:59:27,747-0500 INFO  miktex-dvipdfmx - this process (27664) finishes with exit code 0
+2026-11-05 15:59:27,748-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:59:30,806-0500 INFO  miktex-dvipdfmx - this process (29184) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-af773202cdf44290\input.pdf
+2026-11-05 15:59:30,806-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:59:30,950-0500 INFO  miktex-dvipdfmx - this process (29184) finishes with exit code 0
+2026-11-05 15:59:30,951-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:59:33,560-0500 INFO  miktex-dvipdfmx - this process (12308) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-af773202cdf44290\input.pdf
+2026-11-05 15:59:33,560-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:59:33,694-0500 INFO  miktex-dvipdfmx - this process (12308) finishes with exit code 0
+2026-11-05 15:59:33,695-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:59:37,492-0500 INFO  miktex-dvipdfmx - this process (18904) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-fe4db41b10072cde\input.pdf
+2026-11-05 15:59:37,492-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:59:37,640-0500 INFO  miktex-dvipdfmx - this process (18904) finishes with exit code 0
+2026-11-05 15:59:37,641-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:59:40,321-0500 INFO  miktex-dvipdfmx - this process (4532) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-fe4db41b10072cde\input.pdf
+2026-11-05 15:59:40,322-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:59:40,479-0500 INFO  miktex-dvipdfmx - this process (4532) finishes with exit code 0
+2026-11-05 15:59:40,481-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:59:43,515-0500 INFO  miktex-dvipdfmx - this process (13644) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-ecf09b69ef589e38\input.pdf
+2026-11-05 15:59:43,515-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:59:43,658-0500 INFO  miktex-dvipdfmx - this process (13644) finishes with exit code 0
+2026-11-05 15:59:43,659-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:59:46,197-0500 INFO  miktex-dvipdfmx - this process (17136) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-ecf09b69ef589e38\input.pdf
+2026-11-05 15:59:46,197-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:59:46,324-0500 INFO  miktex-dvipdfmx - this process (17136) finishes with exit code 0
+2026-11-05 15:59:46,326-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:59:49,408-0500 INFO  miktex-dvipdfmx - this process (14360) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-80e55e80270b8394\input.pdf
+2026-11-05 15:59:49,409-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:59:49,545-0500 INFO  miktex-dvipdfmx - this process (14360) finishes with exit code 0
+2026-11-05 15:59:49,547-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:59:52,146-0500 INFO  miktex-dvipdfmx - this process (27132) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-80e55e80270b8394\input.pdf
+2026-11-05 15:59:52,147-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:59:52,282-0500 INFO  miktex-dvipdfmx - this process (27132) finishes with exit code 0
+2026-11-05 15:59:52,283-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:59:55,306-0500 INFO  miktex-dvipdfmx - this process (27464) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-8ffdc8bc6da81147\input.pdf
+2026-11-05 15:59:55,306-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:59:55,717-0500 INFO  miktex-dvipdfmx - this process (27464) finishes with exit code 0
+2026-11-05 15:59:55,718-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 15:59:58,314-0500 INFO  miktex-dvipdfmx - this process (26440) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-8ffdc8bc6da81147\input.pdf
+2026-11-05 15:59:58,315-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 15:59:58,730-0500 INFO  miktex-dvipdfmx - this process (26440) finishes with exit code 0
+2026-11-05 15:59:58,731-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:00:02,663-0500 INFO  miktex-dvipdfmx - this process (16756) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-5ed73f0365189d47\input.pdf
+2026-11-05 16:00:02,664-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:00:02,782-0500 INFO  miktex-dvipdfmx - this process (16756) finishes with exit code 0
+2026-11-05 16:00:02,783-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:00:05,650-0500 INFO  miktex-dvipdfmx - this process (16792) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-5ed73f0365189d47\input.pdf
+2026-11-05 16:00:05,650-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:00:05,769-0500 INFO  miktex-dvipdfmx - this process (16792) finishes with exit code 0
+2026-11-05 16:00:05,771-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:00:09,350-0500 INFO  miktex-dvipdfmx - this process (20096) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-0c39b3e435cd9ae4\input.pdf
+2026-11-05 16:00:09,351-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:00:09,519-0500 INFO  miktex-dvipdfmx - this process (20096) finishes with exit code 0
+2026-11-05 16:00:09,521-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:00:12,777-0500 INFO  miktex-dvipdfmx - this process (8628) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-0c39b3e435cd9ae4\input.pdf
+2026-11-05 16:00:12,777-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:00:13,081-0500 INFO  miktex-dvipdfmx - this process (8628) finishes with exit code 0
+2026-11-05 16:00:13,083-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:00:17,733-0500 INFO  miktex-dvipdfmx - this process (11372) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-49c2ae306a2e8ca1\input.pdf
+2026-11-05 16:00:17,733-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:00:18,208-0500 INFO  miktex-dvipdfmx - this process (11372) finishes with exit code 0
+2026-11-05 16:00:18,210-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:00:22,688-0500 INFO  miktex-dvipdfmx - this process (17292) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-49c2ae306a2e8ca1\input.pdf
+2026-11-05 16:00:22,695-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:00:23,303-0500 INFO  miktex-dvipdfmx - this process (17292) finishes with exit code 0
+2026-11-05 16:00:23,304-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:00:27,145-0500 INFO  miktex-dvipdfmx - this process (24816) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-cfb2d2a1ed2a8c02\input.pdf
+2026-11-05 16:00:27,145-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:00:27,260-0500 INFO  miktex-dvipdfmx - this process (24816) finishes with exit code 0
+2026-11-05 16:00:27,262-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:00:30,144-0500 INFO  miktex-dvipdfmx - this process (29044) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-cfb2d2a1ed2a8c02\input.pdf
+2026-11-05 16:00:30,145-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:00:30,279-0500 INFO  miktex-dvipdfmx - this process (29044) finishes with exit code 0
+2026-11-05 16:00:30,280-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:00:33,814-0500 INFO  miktex-dvipdfmx - this process (29516) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-5242c2e29b61d055\input.pdf
+2026-11-05 16:00:33,814-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:00:33,915-0500 INFO  miktex-dvipdfmx - this process (29516) finishes with exit code 0
+2026-11-05 16:00:33,916-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:00:36,891-0500 INFO  miktex-dvipdfmx - this process (6504) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-5242c2e29b61d055\input.pdf
+2026-11-05 16:00:36,891-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:00:37,008-0500 INFO  miktex-dvipdfmx - this process (6504) finishes with exit code 0
+2026-11-05 16:00:37,009-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:00:40,732-0500 INFO  miktex-dvipdfmx - this process (20136) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-a3f41f064afbf4e2\input.pdf
+2026-11-05 16:00:40,732-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:00:40,898-0500 INFO  miktex-dvipdfmx - this process (20136) finishes with exit code 0
+2026-11-05 16:00:40,900-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:00:44,087-0500 INFO  miktex-dvipdfmx - this process (26820) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-a3f41f064afbf4e2\input.pdf
+2026-11-05 16:00:44,087-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:00:44,242-0500 INFO  miktex-dvipdfmx - this process (26820) finishes with exit code 0
+2026-11-05 16:00:44,243-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:00:48,405-0500 INFO  miktex-dvipdfmx - this process (29668) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-ac43c7e4ec02f17e\input.pdf
+2026-11-05 16:00:48,405-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:00:48,781-0500 INFO  miktex-dvipdfmx - this process (29668) finishes with exit code 0
+2026-11-05 16:00:48,782-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:00:51,291-0500 INFO  miktex-dvipdfmx - this process (26580) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-ac43c7e4ec02f17e\input.pdf
+2026-11-05 16:00:51,291-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:00:51,660-0500 INFO  miktex-dvipdfmx - this process (26580) finishes with exit code 0
+2026-11-05 16:00:51,661-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:00:54,693-0500 INFO  miktex-dvipdfmx - this process (21236) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-e9c4a5d190d3bdc3\input.pdf
+2026-11-05 16:00:54,693-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:00:54,906-0500 INFO  miktex-dvipdfmx - this process (21236) finishes with exit code 0
+2026-11-05 16:00:54,908-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:00:57,399-0500 INFO  miktex-dvipdfmx - this process (6296) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-e9c4a5d190d3bdc3\input.pdf
+2026-11-05 16:00:57,399-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:00:57,591-0500 INFO  miktex-dvipdfmx - this process (6296) finishes with exit code 0
+2026-11-05 16:00:57,593-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:01:00,592-0500 INFO  miktex-dvipdfmx - this process (28388) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-03d259d6c4ef0917\input.pdf
+2026-11-05 16:01:00,593-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:01:00,711-0500 INFO  miktex-dvipdfmx - this process (28388) finishes with exit code 0
+2026-11-05 16:01:00,713-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:01:03,205-0500 INFO  miktex-dvipdfmx - this process (21004) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-03d259d6c4ef0917\input.pdf
+2026-11-05 16:01:03,205-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:01:03,311-0500 INFO  miktex-dvipdfmx - this process (21004) finishes with exit code 0
+2026-11-05 16:01:03,313-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:01:06,300-0500 INFO  miktex-dvipdfmx - this process (11524) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-7d946e36db023a51\input.pdf
+2026-11-05 16:01:06,300-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:01:06,430-0500 INFO  miktex-dvipdfmx - this process (11524) finishes with exit code 0
+2026-11-05 16:01:06,431-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:01:08,872-0500 INFO  miktex-dvipdfmx - this process (19004) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-7d946e36db023a51\input.pdf
+2026-11-05 16:01:08,872-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:01:09,000-0500 INFO  miktex-dvipdfmx - this process (19004) finishes with exit code 0
+2026-11-05 16:01:09,001-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:01:13,160-0500 INFO  miktex-dvipdfmx - this process (18796) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-a13dd666dd644085\input.pdf
+2026-11-05 16:01:13,160-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:01:13,322-0500 INFO  miktex-dvipdfmx - this process (18796) finishes with exit code 0
+2026-11-05 16:01:13,323-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:01:16,824-0500 INFO  miktex-dvipdfmx - this process (15464) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-a13dd666dd644085\input.pdf
+2026-11-05 16:01:16,825-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:01:17,051-0500 INFO  miktex-dvipdfmx - this process (15464) finishes with exit code 0
+2026-11-05 16:01:17,053-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:01:22,311-0500 INFO  miktex-dvipdfmx - this process (19848) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-0ebbc76282bff358\input.pdf
+2026-11-05 16:01:22,312-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:01:22,470-0500 INFO  miktex-dvipdfmx - this process (19848) finishes with exit code 0
+2026-11-05 16:01:22,471-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:01:26,661-0500 INFO  miktex-dvipdfmx - this process (9412) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-0ebbc76282bff358\input.pdf
+2026-11-05 16:01:26,661-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:01:26,787-0500 INFO  miktex-dvipdfmx - this process (9412) finishes with exit code 0
+2026-11-05 16:01:26,789-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:01:31,004-0500 INFO  miktex-dvipdfmx - this process (5828) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-04455e73b16b12bc\input.pdf
+2026-11-05 16:01:31,004-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:01:31,139-0500 INFO  miktex-dvipdfmx - this process (5828) finishes with exit code 0
+2026-11-05 16:01:31,141-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:01:35,003-0500 INFO  miktex-dvipdfmx - this process (9780) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-04455e73b16b12bc\input.pdf
+2026-11-05 16:01:35,004-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:01:35,259-0500 INFO  miktex-dvipdfmx - this process (9780) finishes with exit code 0
+2026-11-05 16:01:35,261-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:01:40,627-0500 INFO  miktex-dvipdfmx - this process (20764) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-dbbedfea2707994b\input.pdf
+2026-11-05 16:01:40,628-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:01:41,328-0500 INFO  miktex-dvipdfmx - this process (20764) finishes with exit code 0
+2026-11-05 16:01:41,330-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:01:45,631-0500 INFO  miktex-dvipdfmx - this process (16688) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-dbbedfea2707994b\input.pdf
+2026-11-05 16:01:45,631-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:01:46,000-0500 INFO  miktex-dvipdfmx - this process (16688) finishes with exit code 0
+2026-11-05 16:01:46,001-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:01:50,832-0500 INFO  miktex-dvipdfmx - this process (19632) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-302648e25b2dd4bf\input.pdf
+2026-11-05 16:01:50,832-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:01:50,950-0500 INFO  miktex-dvipdfmx - this process (19632) finishes with exit code 0
+2026-11-05 16:01:50,951-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:01:55,361-0500 INFO  miktex-dvipdfmx - this process (15848) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-302648e25b2dd4bf\input.pdf
+2026-11-05 16:01:55,361-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:01:55,485-0500 INFO  miktex-dvipdfmx - this process (15848) finishes with exit code 0
+2026-11-05 16:01:55,486-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:02:00,622-0500 INFO  miktex-dvipdfmx - this process (15504) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-e8d77b69480cf0cc\input.pdf
+2026-11-05 16:02:00,622-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:02:00,752-0500 INFO  miktex-dvipdfmx - this process (15504) finishes with exit code 0
+2026-11-05 16:02:00,753-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:02:04,942-0500 INFO  miktex-dvipdfmx - this process (28064) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-e8d77b69480cf0cc\input.pdf
+2026-11-05 16:02:04,942-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:02:05,078-0500 INFO  miktex-dvipdfmx - this process (28064) finishes with exit code 0
+2026-11-05 16:02:05,079-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:02:25,245-0500 INFO  miktex-dvipdfmx - this process (9228) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-e374401ac1481f91\input.pdf
+2026-11-05 16:02:25,245-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:02:25,371-0500 INFO  miktex-dvipdfmx - this process (9228) finishes with exit code 0
+2026-11-05 16:02:25,373-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:02:28,825-0500 INFO  miktex-dvipdfmx - this process (648) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-e374401ac1481f91\input.pdf
+2026-11-05 16:02:28,825-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:02:28,955-0500 INFO  miktex-dvipdfmx - this process (648) finishes with exit code 0
+2026-11-05 16:02:28,956-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:02:34,695-0500 INFO  miktex-dvipdfmx - this process (19076) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-feb8a2d12de6033b\input.pdf
+2026-11-05 16:02:34,695-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:02:35,116-0500 INFO  miktex-dvipdfmx - this process (19076) finishes with exit code 0
+2026-11-05 16:02:35,118-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:02:39,346-0500 INFO  miktex-dvipdfmx - this process (25380) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-feb8a2d12de6033b\input.pdf
+2026-11-05 16:02:39,346-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:02:39,591-0500 INFO  miktex-dvipdfmx - this process (25380) finishes with exit code 0
+2026-11-05 16:02:39,592-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:02:44,028-0500 INFO  miktex-dvipdfmx - this process (21484) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-f14dff1492f21727\input.pdf
+2026-11-05 16:02:44,028-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:02:44,238-0500 INFO  miktex-dvipdfmx - this process (21484) finishes with exit code 0
+2026-11-05 16:02:44,240-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:02:48,291-0500 INFO  miktex-dvipdfmx - this process (29296) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-f14dff1492f21727\input.pdf
+2026-11-05 16:02:48,292-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:02:48,422-0500 INFO  miktex-dvipdfmx - this process (29296) finishes with exit code 0
+2026-11-05 16:02:48,423-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:02:54,084-0500 INFO  miktex-dvipdfmx - this process (28112) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-a877ea07c9c42eb0\input.pdf
+2026-11-05 16:02:54,084-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:02:54,343-0500 INFO  miktex-dvipdfmx - this process (28112) finishes with exit code 0
+2026-11-05 16:02:54,345-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:02:58,497-0500 INFO  miktex-dvipdfmx - this process (27000) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-a877ea07c9c42eb0\input.pdf
+2026-11-05 16:02:58,497-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:02:58,726-0500 INFO  miktex-dvipdfmx - this process (27000) finishes with exit code 0
+2026-11-05 16:02:58,727-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:03:02,703-0500 INFO  miktex-dvipdfmx - this process (5660) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-625b2840f2e3d124\input.pdf
+2026-11-05 16:03:02,703-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:03:02,942-0500 INFO  miktex-dvipdfmx - this process (5660) finishes with exit code 0
+2026-11-05 16:03:02,943-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:03:06,427-0500 INFO  miktex-dvipdfmx - this process (10636) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-625b2840f2e3d124\input.pdf
+2026-11-05 16:03:06,428-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:03:06,641-0500 INFO  miktex-dvipdfmx - this process (10636) finishes with exit code 0
+2026-11-05 16:03:06,643-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:03:11,124-0500 INFO  miktex-dvipdfmx - this process (10116) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-036102a7d39d94fd\input.pdf
+2026-11-05 16:03:11,124-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:03:11,319-0500 INFO  miktex-dvipdfmx - this process (10116) finishes with exit code 0
+2026-11-05 16:03:11,321-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:03:15,459-0500 INFO  miktex-dvipdfmx - this process (5780) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-036102a7d39d94fd\input.pdf
+2026-11-05 16:03:15,459-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:03:15,584-0500 INFO  miktex-dvipdfmx - this process (5780) finishes with exit code 0
+2026-11-05 16:03:15,585-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:03:20,218-0500 INFO  miktex-dvipdfmx - this process (2332) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-1080b9130e04f758\input.pdf
+2026-11-05 16:03:20,218-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:03:20,608-0500 INFO  miktex-dvipdfmx - this process (2332) finishes with exit code 0
+2026-11-05 16:03:20,610-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:03:24,771-0500 INFO  miktex-dvipdfmx - this process (6588) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-1080b9130e04f758\input.pdf
+2026-11-05 16:03:24,771-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:03:25,164-0500 INFO  miktex-dvipdfmx - this process (6588) finishes with exit code 0
+2026-11-05 16:03:25,166-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:03:30,626-0500 INFO  miktex-dvipdfmx - this process (27876) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-8f88e3870ac411b1\input.pdf
+2026-11-05 16:03:30,626-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:03:30,796-0500 INFO  miktex-dvipdfmx - this process (27876) finishes with exit code 0
+2026-11-05 16:03:30,798-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:03:34,692-0500 INFO  miktex-dvipdfmx - this process (19508) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-8f88e3870ac411b1\input.pdf
+2026-11-05 16:03:34,692-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:03:34,798-0500 INFO  miktex-dvipdfmx - this process (19508) finishes with exit code 0
+2026-11-05 16:03:34,800-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:03:39,269-0500 INFO  miktex-dvipdfmx - this process (11600) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-33675dfe76d7e90d\input.pdf
+2026-11-05 16:03:39,269-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:03:39,385-0500 INFO  miktex-dvipdfmx - this process (11600) finishes with exit code 0
+2026-11-05 16:03:39,386-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:03:43,288-0500 INFO  miktex-dvipdfmx - this process (10372) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-33675dfe76d7e90d\input.pdf
+2026-11-05 16:03:43,288-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:03:43,738-0500 INFO  miktex-dvipdfmx - this process (10372) finishes with exit code 0
+2026-11-05 16:03:43,740-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:03:49,310-0500 INFO  miktex-dvipdfmx - this process (20076) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-cf84904988fb1d6c\input.pdf
+2026-11-05 16:03:49,311-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:03:50,177-0500 INFO  miktex-dvipdfmx - this process (20076) finishes with exit code 0
+2026-11-05 16:03:50,179-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:03:54,009-0500 INFO  miktex-dvipdfmx - this process (25108) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-cf84904988fb1d6c\input.pdf
+2026-11-05 16:03:54,009-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:03:54,804-0500 INFO  miktex-dvipdfmx - this process (25108) finishes with exit code 0
+2026-11-05 16:03:54,805-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:03:58,864-0500 INFO  miktex-dvipdfmx - this process (9692) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-c312a236ae2c16ad\input.pdf
+2026-11-05 16:03:58,864-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:03:59,006-0500 INFO  miktex-dvipdfmx - this process (9692) finishes with exit code 0
+2026-11-05 16:03:59,008-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:04:03,150-0500 INFO  miktex-dvipdfmx - this process (6440) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-c312a236ae2c16ad\input.pdf
+2026-11-05 16:04:03,150-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:04:03,279-0500 INFO  miktex-dvipdfmx - this process (6440) finishes with exit code 0
+2026-11-05 16:04:03,280-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:04:07,270-0500 INFO  miktex-dvipdfmx - this process (28140) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-4a8ba43dde5516af\input.pdf
+2026-11-05 16:04:07,270-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:04:07,378-0500 INFO  miktex-dvipdfmx - this process (28140) finishes with exit code 0
+2026-11-05 16:04:07,380-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:04:11,347-0500 INFO  miktex-dvipdfmx - this process (26920) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-4a8ba43dde5516af\input.pdf
+2026-11-05 16:04:11,347-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:04:11,453-0500 INFO  miktex-dvipdfmx - this process (26920) finishes with exit code 0
+2026-11-05 16:04:11,454-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:04:15,817-0500 INFO  miktex-dvipdfmx - this process (26764) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-86c84cbc0ee270ad\input.pdf
+2026-11-05 16:04:15,818-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:04:15,986-0500 INFO  miktex-dvipdfmx - this process (26764) finishes with exit code 0
+2026-11-05 16:04:15,987-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:04:20,051-0500 INFO  miktex-dvipdfmx - this process (23584) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-86c84cbc0ee270ad\input.pdf
+2026-11-05 16:04:20,057-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:04:20,302-0500 INFO  miktex-dvipdfmx - this process (23584) finishes with exit code 0
+2026-11-05 16:04:20,303-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:04:25,172-0500 INFO  miktex-dvipdfmx - this process (17960) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-9481801cd539b20b\input.pdf
+2026-11-05 16:04:25,172-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:04:25,834-0500 INFO  miktex-dvipdfmx - this process (17960) finishes with exit code 0
+2026-11-05 16:04:25,835-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:04:29,509-0500 INFO  miktex-dvipdfmx - this process (24852) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-9481801cd539b20b\input.pdf
+2026-11-05 16:04:29,509-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:04:29,891-0500 INFO  miktex-dvipdfmx - this process (24852) finishes with exit code 0
+2026-11-05 16:04:29,892-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:04:34,602-0500 INFO  miktex-dvipdfmx - this process (26156) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-054c8fffda09fc02\input.pdf
+2026-11-05 16:04:34,602-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:04:34,805-0500 INFO  miktex-dvipdfmx - this process (26156) finishes with exit code 0
+2026-11-05 16:04:34,806-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:04:38,934-0500 INFO  miktex-dvipdfmx - this process (11736) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-054c8fffda09fc02\input.pdf
+2026-11-05 16:04:38,934-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:04:39,166-0500 INFO  miktex-dvipdfmx - this process (11736) finishes with exit code 0
+2026-11-05 16:04:39,167-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:04:43,740-0500 INFO  miktex-dvipdfmx - this process (14056) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-289f90936dbd3c00\input.pdf
+2026-11-05 16:04:43,741-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:04:43,880-0500 INFO  miktex-dvipdfmx - this process (14056) finishes with exit code 0
+2026-11-05 16:04:43,881-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:04:47,637-0500 INFO  miktex-dvipdfmx - this process (10296) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-289f90936dbd3c00\input.pdf
+2026-11-05 16:04:47,637-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:04:47,832-0500 INFO  miktex-dvipdfmx - this process (10296) finishes with exit code 0
+2026-11-05 16:04:47,834-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:04:52,505-0500 INFO  miktex-dvipdfmx - this process (11344) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-d1381f3578517cfd\input.pdf
+2026-11-05 16:04:52,505-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:04:52,642-0500 INFO  miktex-dvipdfmx - this process (11344) finishes with exit code 0
+2026-11-05 16:04:52,643-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:04:56,837-0500 INFO  miktex-dvipdfmx - this process (14340) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-d1381f3578517cfd\input.pdf
+2026-11-05 16:04:56,837-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:04:56,985-0500 INFO  miktex-dvipdfmx - this process (14340) finishes with exit code 0
+2026-11-05 16:04:56,986-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:05:02,497-0500 INFO  miktex-dvipdfmx - this process (26556) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-0b7ef307daa2327a\input.pdf
+2026-11-05 16:05:02,497-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:05:02,723-0500 INFO  miktex-dvipdfmx - this process (26556) finishes with exit code 0
+2026-11-05 16:05:02,725-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:05:06,601-0500 INFO  miktex-dvipdfmx - this process (8848) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-0b7ef307daa2327a\input.pdf
+2026-11-05 16:05:06,602-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:05:06,735-0500 INFO  miktex-dvipdfmx - this process (8848) finishes with exit code 0
+2026-11-05 16:05:06,736-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:05:11,065-0500 INFO  miktex-dvipdfmx - this process (27024) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-4fbede0f6ed59627\input.pdf
+2026-11-05 16:05:11,065-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:05:11,237-0500 INFO  miktex-dvipdfmx - this process (27024) finishes with exit code 0
+2026-11-05 16:05:11,239-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:05:15,306-0500 INFO  miktex-dvipdfmx - this process (24672) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-4fbede0f6ed59627\input.pdf
+2026-11-05 16:05:15,306-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:05:15,424-0500 INFO  miktex-dvipdfmx - this process (24672) finishes with exit code 0
+2026-11-05 16:05:15,425-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:05:19,476-0500 INFO  miktex-dvipdfmx - this process (24864) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-67df7b76176a7b60\input.pdf
+2026-11-05 16:05:19,476-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:05:19,618-0500 INFO  miktex-dvipdfmx - this process (24864) finishes with exit code 0
+2026-11-05 16:05:19,619-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:05:23,385-0500 INFO  miktex-dvipdfmx - this process (27136) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-67df7b76176a7b60\input.pdf
+2026-11-05 16:05:23,385-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:05:23,562-0500 INFO  miktex-dvipdfmx - this process (27136) finishes with exit code 0
+2026-11-05 16:05:23,564-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:05:27,585-0500 INFO  miktex-dvipdfmx - this process (28372) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-d849df4278e6b4b6\input.pdf
+2026-11-05 16:05:27,585-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:05:27,939-0500 INFO  miktex-dvipdfmx - this process (28372) finishes with exit code 0
+2026-11-05 16:05:27,941-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:05:30,409-0500 INFO  miktex-dvipdfmx - this process (15276) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-d849df4278e6b4b6\input.pdf
+2026-11-05 16:05:30,409-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:05:30,783-0500 INFO  miktex-dvipdfmx - this process (15276) finishes with exit code 0
+2026-11-05 16:05:30,784-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:05:33,812-0500 INFO  miktex-dvipdfmx - this process (22328) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-0ee5833306cae084\input.pdf
+2026-11-05 16:05:33,812-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:05:33,932-0500 INFO  miktex-dvipdfmx - this process (22328) finishes with exit code 0
+2026-11-05 16:05:33,934-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:05:36,386-0500 INFO  miktex-dvipdfmx - this process (26580) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-0ee5833306cae084\input.pdf
+2026-11-05 16:05:36,387-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:05:36,498-0500 INFO  miktex-dvipdfmx - this process (26580) finishes with exit code 0
+2026-11-05 16:05:36,499-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:05:40,202-0500 INFO  miktex-dvipdfmx - this process (18400) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-2ea3932d0af3e704\input.pdf
+2026-11-05 16:05:40,202-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:05:40,328-0500 INFO  miktex-dvipdfmx - this process (18400) finishes with exit code 0
+2026-11-05 16:05:40,329-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:05:42,773-0500 INFO  miktex-dvipdfmx - this process (26416) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-2ea3932d0af3e704\input.pdf
+2026-11-05 16:05:42,773-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:05:42,899-0500 INFO  miktex-dvipdfmx - this process (26416) finishes with exit code 0
+2026-11-05 16:05:42,900-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:05:53,110-0500 INFO  miktex-dvipdfmx - this process (24852) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-9f4d822710543b13\input.pdf
+2026-11-05 16:05:53,110-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:05:53,474-0500 INFO  miktex-dvipdfmx - this process (24852) finishes with exit code 0
+2026-11-05 16:05:53,475-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:05:56,005-0500 INFO  miktex-dvipdfmx - this process (28740) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-9f4d822710543b13\input.pdf
+2026-11-05 16:05:56,005-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:05:56,392-0500 INFO  miktex-dvipdfmx - this process (28740) finishes with exit code 0
+2026-11-05 16:05:56,394-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:06:30,453-0500 INFO  miktex-dvipdfmx - this process (18020) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-12352b5ff66dfbfc\input.pdf
+2026-11-05 16:06:30,453-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:06:30,835-0500 INFO  miktex-dvipdfmx - this process (18020) finishes with exit code 0
+2026-11-05 16:06:30,836-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.
+2026-11-05 16:06:33,782-0500 INFO  miktex-dvipdfmx - this process (4104) started by xelatex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-dvipdfmx.exe --miktex-enable-installer -q -E -o C:/Users\USUARIO\AppData\Local\Temp\tex2pdf.-12352b5ff66dfbfc\input.pdf
+2026-11-05 16:06:33,782-0500 INFO  miktex-dvipdfmx - running on Windows 10.0.26200
+2026-11-05 16:06:34,200-0500 INFO  miktex-dvipdfmx - this process (4104) finishes with exit code 0
+2026-11-05 16:06:34,202-0500 WARN  miktex-dvipdfmx - minor issue: It has been a long time since a MiKTeX administrator has checked for updates.

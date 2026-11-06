@@ -1,22 +1,36 @@
 # CS-07 — Formulario de inscripción / pedido
 
+<<<<<<< Updated upstream
 **Propietario:** Profesional de proyectos
+=======
+**Estado:** BORRADOR — contenido redactado; aprobación pendiente\
+**Propietario:** Coordinador de ronda\
+**Requerido antes de:** aceptación del pedido\
+>>>>>>> Stashed changes
 **Última revisión:** 2026-07-14 (marca de tiempo/IP/canal agregado, prioridad de la lista de espera, estado de cotización revisado, referencia del código SGC aclarada para datos técnicos)
 
 ## Objetivo
 
+<<<<<<< Updated upstream
 Captura de comprador, alcance seleccionado y datos administrativos. Reutiliza los campos técnicos de aplicaciones/SGC existentes en lugar de duplicarlos.
 
 ## Reutilizar en lugar de duplicar
 
 Utilice la `calaire-app` existente y los campos técnicos del SGC para los datos de registro y equipos. Las referencias actuales de los campos del SGC (post-renumeración 2026-06-14) son:
+=======
+Capturar comprador, alcance seleccionado y datos administrativos. Reutiliza los campos técnicos existentes de `calaire-app` y del SGC en lugar de duplicarlos.
+
+## Reutilizar en lugar de duplicar
+
+Se usan la `calaire-app` existente y los campos técnicos del SGC para los datos de registro y equipos. Las referencias actuales de los campos del SGC (post-renumeración 2026-06-14) son:
+>>>>>>> Stashed changes
 
 - Datos de equipos e instrumentos: `F-PSEA-04` (antiguo `F-PSEA-05A`)
 - Registro de participantes: `F-PSEA-03` (antiguo `F-PSEA-05`)
 
 Ver `00_control/equivalencia_codigos_sgc.md` para el mapeo completo.
 
-Agregue una sección comercial en lugar de crear un segundo sistema de registro técnico.
+Se agrega una sección comercial en lugar de crear un segundo sistema de registro técnico.
 
 ## Campos comerciales/legales para agregar
 
@@ -27,16 +41,16 @@ Agregue una sección comercial en lugar de crear un segundo sistema de registro 
 | Dirección de facturación | Sí | |
 | Contacto de facturación | Sí | |
 | Número de cotización/orden de compra | Sí | Enlaces a CS-06 (deben ser válidos, no estar vencidos y no haber sido aceptados por otra parte) |
-| Paquete de gases seleccionado | Sí | CO, SO₂, NO, NO₂, O₃ |
+| Bloques seleccionados | Sí | CO, SO₂, O₃, NO/NO₂ |
 | Cantidad de analizadores | Sí | |
 | Idioma del informe solicitado | Sí | Derivado de la pregunta 15 del CS-05 |
 | Aceptación de los términos | Sí | Casilla de verificación / firma |
 | Selección de confidencialidad / divulgación | Sí | Según `P-PSEA-19` (vigente tras la renumeración) |
-| Consentimiento de marketing del participante | Sí | Separado del consentimiento del servicio; Texto de cumplimiento Ley 1581/2012 requerido |
+| Consentimiento de comunicaciones comerciales | Sí | Separado del consentimiento del servicio; requiere texto de la Ley 1581/2012 |
 | Contacto contractual autorizado | Sí | |
 | Contacto técnico autorizado | Sí | |
 | Documentos especiales de facturación / portal de adquisiciones | No | Si corresponde |
-| **Marca de tiempo de aceptación** | Sí | ISO 8601 con zona horaria; capturado automáticamente por el portal o anotado por el cliente comercial si es en papel |
+| **Marca de tiempo de aceptación** | Sí | ISO 8601 con zona horaria; capturada automáticamente por el portal o anotada por el equipo comercial si es en papel |
 | **Canal de aceptación** | Sí | Portal / correo electrónico / PDF firmado / papel; facilita la resolución de controversias |
 | **IP / origen de la aceptación (si se usa el portal)** | Sí (si se usa el portal) | Para auditoría; no se requiere en papel ni por correo electrónico |
 | **Prioridad en lista de espera** | Opcional (completar automáticamente) | Completado por CS-10 si estado = En lista de espera; basado en criterios de prioridad CS-01 |
@@ -52,12 +66,13 @@ Aceptado, pendiente de pago/orden de compra → Confirmado → En lista de esper
                   → volver a Cotizado con el número de cotización revisada
 ```
 
-**Sucursal:** cuando un cliente acepta una cotización que requiere revisión (por ejemplo, la capacidad de la ronda cambió, el cliente desea agregar gas, el precio debe volver a cotizarse), el registro pasa a "Cotización-revisión en curso" antes de regresar a "Cotizada" con un nuevo número de cotización. La familia de cotizaciones original se registra como "reemplazada" y se abre un registro CS-12.
+**Rama de revisión:** cuando un cliente acepta una cotización que requiere revisión (por ejemplo, la capacidad de la ronda cambió, el cliente desea agregar gas, el precio debe volver a cotizarse), el registro pasa a "Revisión de cotización en curso" antes de regresar a "Cotizada" con un nuevo número de cotización. La familia de cotizaciones original se registra como "reemplazada" y se abre un registro CS-12.
 
 Solo los participantes **"confirmados"** pasan a la planificación formal de la ronda.
 
 ## Lista de verificación de la inscripción
 
+<<<<<<< Updated upstream
 - [] Campos técnicos completados (a través de `calaire-app` y los campos SGC mencionados anteriormente).
 - [ ] Campos comerciales completados.
 - [ ] Términos aceptados.
@@ -67,3 +82,21 @@ Solo los participantes **"confirmados"** pasan a la planificación formal de la 
 - [ ] Marca de tiempo / canal de aceptación registrados.
 - [ ] Se inició la revisión del contrato (CS-09).
 - [ ] Si estado = En lista de espera, se registra la prioridad de la lista de espera (CS-10) y se notifica al cliente.
+=======
+- [ ] Campos técnicos completados (en `calaire-app` y los campos del SGC mencionados).
+- [ ] Campos comerciales completados.
+- [ ] Términos aceptados.
+- [ ] Consentimiento de divulgación registrado.
+- [ ] Consentimiento de comunicaciones comerciales registrado por separado con texto explícito de la Ley 1581.
+- [ ] Número de cotización válido y que coincide con la selección (y que aún no ha sido aceptado por otra parte).
+- [ ] Marca de tiempo y canal de aceptación registrados.
+- [ ] Se inició la revisión del contrato (CS-09).
+- [ ] Si estado = En lista de espera, se registra la prioridad de la lista de espera (CS-10) y se notifica al cliente.
+
+## Aprobación
+
+| Versión | Fecha | Aprobador | Notas |
+|---|---|---|---|
+| 0.1 BORRADOR | 2026-07-12 | — | Plantilla inicial |
+| 0.2 BORRADOR | 2026-07-14 | — | Se agregaron marca de tiempo, IP y canal de aceptación, prioridad de lista de espera, rama de revisión de cotización y referencias de códigos SGC actualizadas. |
+>>>>>>> Stashed changes

@@ -1,5 +1,6 @@
 # Control de acceso — `04_inscripcion_restringida/`
 
+<<<<<<< Updated upstream
 **Carpeta:** `servicio_comercial/04_inscripcion_restringida/`
 **Clasificación:** RESTRINGIDO
 **Propietario:** Directora del grupo
@@ -25,13 +26,40 @@
 - **No se permite la exportación** de datos de identidad de los participantes a sistemas externos (correo electrónico personal, SaaS de terceros, impresiones en papel dejadas desatendidas) sin una autorización explícita de la Directora del grupo documentada en `00_control/registro_cambios_versiones.md`.
 - **Consentimiento de marketing del cliente** es un indicador independiente en `CS-10`; Los datos solo se pueden utilizar para marketing si la bandera se establece según el consentimiento capturado en "CS-05" y confirmado en "CS-07".
 - **Retención de datos:** los registros de seguimiento se conservan durante 5 años según la retención de registros ISO/IEC 17043; Los registros CS-11 siguen el mismo período (según la sección de retención CS-13).
+=======
+**Carpeta:** `servicio_comercial/04_inscripcion_restringida/`\
+**Clasificación:** RESTRINGIDA\
+**Propietario:** Coordinador de ronda\
+**Última actualización:** 2026-07-14
+
+## Archivos de esta carpeta
+
+| Archivo | Clasificación | Acceso de lectura | Acceso de escritura |
+|---|---|---|---|
+| `CS-10_seguimiento.md` y su libro de Excel operativo | RESTRINGIDO: identidad del participante, estado comercial, pago, capacidad | Equipo comercial, finanzas, coordinador de ronda, gerente de servicio | Coordinador de ronda (con autorización del líder comercial para cambios en registros Confirmados) |
+| `CS-11_confirmaciones.md` | RESTRINGIDO: códigos de participante, datos de contacto, estado de pago | Equipo comercial, coordinador de ronda, gerente de servicio, dirección | Coordinador de ronda (con el líder comercial para cualquier cambio en un registro Confirmado) |
+
+## Por qué esta carpeta es restringida
+
+- El seguimiento CS-10 contiene **identidad del participante, razón social, datos de contacto, estado de pago y consumo de capacidad**: datos personales y comercialmente confidenciales. Su divulgación fuera del equipo autorizado violaría la Ley 1581/2012 (habeas data) y comprometería la confidencialidad comercial.
+- `CS-11_confirmaciones.md` incluye la **asignación de códigos de participante** y el **contenido del paquete de incorporación** con referencias a campos técnicos del SGC; es el puente entre la confirmación comercial y la planificación de la ronda en el SGC.
+
+## Procedimientos de acceso
+
+- **Acceso de lectura:** equipo comercial, finanzas, coordinador de ronda, gerente de servicio y dirección. El personal técnico puede recibir acceso de lectura para participantes confirmados específicos cuando sea necesario; queda en el registro de auditoría.
+- **Acceso de escritura:** coordinador de ronda (principal), con autorización del líder comercial para cualquier cambio en un registro Confirmado (reasignación de capacidad, retiros, etc.).
+- **No se permite exportar** datos de identidad de participantes a sistemas externos (correo personal, servicios de terceros, impresiones desatendidas) sin autorización comercial explícita registrada en el historial del archivo.
+- **Consentimiento de comunicaciones comerciales:** es un indicador independiente en CS-10; los datos solo se usan para comunicaciones comerciales si el indicador está activo según el consentimiento capturado en CS-05 y confirmado en CS-07.
+- **Retención de datos:** los registros de seguimiento se conservan 5 años según la retención de registros ISO/IEC 17043; los registros CS-11 siguen el mismo periodo (ver la sección de retención de CS-13).
+>>>>>>> Stashed changes
 
 ## Datos transfronterizos
 
-- Para los participantes internacionales, el **consentimiento de divulgación transfronteriza** capturado en CS-09 verificación 13 rige cualquier transferencia de datos fuera de Colombia. Sin consentimiento explícito, el informe se entrega al país de registro del participante solo cuando ese país tiene una decisión o tratado de adecuación con Colombia, O el participante firma un acuerdo de transferencia transfronteriza por separado.
+- Para participantes internacionales, el **consentimiento de transferencia internacional** registrado en la verificación 13 de CS-09 rige cualquier transferencia de datos fuera de Colombia. Sin consentimiento explícito, el informe solo se entrega al país del participante cuando ese país ofrece un nivel adecuado de protección reconocido por Colombia, o cuando el participante firma un acuerdo de transferencia separado.
 
 ## Auditoría
 
+<<<<<<< Updated upstream
 - Cualquier lectura o escritura de archivos en esta carpeta debe registrarse en el sistema de registro de acceso institucional.
 - Revisión trimestral: Directora del grupo y Profesional de proyectos verifican que las listas de acceso estén actualizadas y que los registros obsoletos estén archivados según la política de retención.
 
@@ -41,3 +69,14 @@
 - `00_control/registro_cambios_versiones.md` — historial de versiones.
 - `docs/qms/P-PSEA-19` (vigente) — Confidencialidad operativa interna, el control SGC con el que se alinea esta carpeta.
 - `docs/sgc/matriz_equivalencias_codigos_sgc_pea.md` — para el mapeo de códigos.
+=======
+- Toda lectura o escritura de archivos en esta carpeta debe registrarse en el sistema institucional de registro de accesos.
+- Revisión trimestral: el coordinador de ronda y el líder comercial verifican que las listas de acceso estén actualizadas y que los registros vencidos se archiven según la política de retención.
+
+## Artefactos relacionados
+
+- `00_control/CS-01_decisiones_comerciales.md` — reglas de confidencialidad y divulgación.
+- `00_control/registro_cambios_versiones.md` — historial de versiones.
+- `P-PSEA-19` (vigente) — Confidencialidad operativa interna, el control del SGC con el que se alinea esta carpeta.
+- `docs/sgc/matriz_equivalencias_codigos_sgc_pea.md` — equivalencia de códigos.
+>>>>>>> Stashed changes

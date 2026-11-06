@@ -1,0 +1,172 @@
+2026-11-05 15:21:36,859-0500 INFO  miktex-makefmt - this process (24504) started by miktex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-makefmt.exe --engine=pdftex --dest-name=pdflatex --no-dump pdflatex.ini --engine-option=-tcx=cp227.tcx --miktex-disable-maintenance --miktex-disable-diagnose
+2026-11-05 15:21:36,859-0500 INFO  miktex-makefmt - running on Windows 10.0.26200
+2026-11-05 15:21:36,860-0500 ERROR miktex-makefmt.core - Acceso denegado.
+
+2026-11-05 15:21:36,860-0500 ERROR miktex-makefmt.core - Function: RegOpenKeyExW
+2026-11-05 15:21:36,860-0500 ERROR miktex-makefmt.core - Result: 5
+2026-11-05 15:21:36,860-0500 ERROR miktex-makefmt.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:36,914-0500 ERROR miktex-makefmt.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:37,032-0500 ERROR miktex-makefmt.core - Acceso denegado.
+
+2026-11-05 15:21:37,032-0500 ERROR miktex-makefmt.core - Function: RegOpenKeyExW
+2026-11-05 15:21:37,032-0500 ERROR miktex-makefmt.core - Result: 5
+2026-11-05 15:21:37,032-0500 ERROR miktex-makefmt.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:37,032-0500 ERROR miktex-makefmt.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:37,032-0500 ERROR miktex-makefmt.core - Acceso denegado.
+
+2026-11-05 15:21:37,032-0500 ERROR miktex-makefmt.core - Function: RegOpenKeyExW
+2026-11-05 15:21:37,032-0500 ERROR miktex-makefmt.core - Result: 5
+2026-11-05 15:21:37,032-0500 ERROR miktex-makefmt.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Setup
+2026-11-05 15:21:37,032-0500 ERROR miktex-makefmt.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:37,032-0500 ERROR miktex-makefmt.core - Acceso denegado.
+
+2026-11-05 15:21:37,032-0500 ERROR miktex-makefmt.core - Function: RegOpenKeyExW
+2026-11-05 15:21:37,032-0500 ERROR miktex-makefmt.core - Result: 5
+2026-11-05 15:21:37,032-0500 ERROR miktex-makefmt.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:37,033-0500 ERROR miktex-makefmt.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:37,033-0500 ERROR miktex-makefmt.core - Acceso denegado.
+
+2026-11-05 15:21:37,033-0500 ERROR miktex-makefmt.core - Function: RegOpenKeyExW
+2026-11-05 15:21:37,033-0500 ERROR miktex-makefmt.core - Result: 5
+2026-11-05 15:21:37,033-0500 ERROR miktex-makefmt.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:37,033-0500 ERROR miktex-makefmt.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:37,033-0500 ERROR miktex-makefmt.core - Acceso denegado.
+
+2026-11-05 15:21:37,033-0500 ERROR miktex-makefmt.core - Function: RegOpenKeyExW
+2026-11-05 15:21:37,033-0500 ERROR miktex-makefmt.core - Result: 5
+2026-11-05 15:21:37,033-0500 ERROR miktex-makefmt.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:37,033-0500 ERROR miktex-makefmt.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:37,033-0500 ERROR miktex-makefmt.core - Acceso denegado.
+
+2026-11-05 15:21:37,033-0500 ERROR miktex-makefmt.core - Function: RegOpenKeyExW
+2026-11-05 15:21:37,033-0500 ERROR miktex-makefmt.core - Result: 5
+2026-11-05 15:21:37,033-0500 ERROR miktex-makefmt.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:37,033-0500 ERROR miktex-makefmt.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:37,033-0500 ERROR miktex-makefmt.core - Acceso denegado.
+
+2026-11-05 15:21:37,034-0500 ERROR miktex-makefmt.core - Function: RegOpenKeyExW
+2026-11-05 15:21:37,034-0500 ERROR miktex-makefmt.core - Result: 5
+2026-11-05 15:21:37,034-0500 ERROR miktex-makefmt.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:37,034-0500 ERROR miktex-makefmt.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:37,034-0500 ERROR miktex-makefmt.core - Acceso denegado.
+
+2026-11-05 15:21:37,034-0500 ERROR miktex-makefmt.core - Function: RegOpenKeyExW
+2026-11-05 15:21:37,034-0500 ERROR miktex-makefmt.core - Result: 5
+2026-11-05 15:21:37,034-0500 ERROR miktex-makefmt.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:37,034-0500 ERROR miktex-makefmt.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:37,034-0500 ERROR miktex-makefmt.core - Acceso denegado.
+
+2026-11-05 15:21:37,034-0500 ERROR miktex-makefmt.core - Function: RegOpenKeyExW
+2026-11-05 15:21:37,034-0500 ERROR miktex-makefmt.core - Result: 5
+2026-11-05 15:21:37,034-0500 ERROR miktex-makefmt.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:37,034-0500 ERROR miktex-makefmt.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:37,034-0500 ERROR miktex-makefmt.core - Acceso denegado.
+
+2026-11-05 15:21:37,034-0500 ERROR miktex-makefmt.core - Function: RegOpenKeyExW
+2026-11-05 15:21:37,034-0500 ERROR miktex-makefmt.core - Result: 5
+2026-11-05 15:21:37,034-0500 ERROR miktex-makefmt.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:37,034-0500 ERROR miktex-makefmt.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:37,035-0500 ERROR miktex-makefmt.core - Acceso denegado.
+
+2026-11-05 15:21:37,035-0500 ERROR miktex-makefmt.core - Function: RegOpenKeyExW
+2026-11-05 15:21:37,035-0500 ERROR miktex-makefmt.core - Result: 5
+2026-11-05 15:21:37,035-0500 ERROR miktex-makefmt.core - Data: Software\MiKTeX.org\MiKTeX\2.9\MPM
+2026-11-05 15:21:37,035-0500 ERROR miktex-makefmt.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:37,035-0500 ERROR miktex-makefmt.core - Acceso denegado.
+
+2026-11-05 15:21:37,035-0500 ERROR miktex-makefmt.core - Function: RegOpenKeyExW
+2026-11-05 15:21:37,035-0500 ERROR miktex-makefmt.core - Result: 5
+2026-11-05 15:21:37,035-0500 ERROR miktex-makefmt.core - Data: Software\MiKTeX.org\MiKTeX\2.9\MPM
+2026-11-05 15:21:37,035-0500 ERROR miktex-makefmt.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:37,036-0500 ERROR miktex-makefmt.core - Acceso denegado.
+
+2026-11-05 15:21:37,036-0500 ERROR miktex-makefmt.core - Function: RegOpenKeyExW
+2026-11-05 15:21:37,036-0500 ERROR miktex-makefmt.core - Result: 5
+2026-11-05 15:21:37,036-0500 ERROR miktex-makefmt.core - Data: Software\MiKTeX.org\MiKTeX\2.9\MPM
+2026-11-05 15:21:37,036-0500 ERROR miktex-makefmt.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:37,036-0500 ERROR miktex-makefmt.core - Acceso denegado.
+
+2026-11-05 15:21:37,036-0500 ERROR miktex-makefmt.core - Function: RegOpenKeyExW
+2026-11-05 15:21:37,036-0500 ERROR miktex-makefmt.core - Result: 5
+2026-11-05 15:21:37,036-0500 ERROR miktex-makefmt.core - Data: Software\MiKTeX.org\MiKTeX\2.9\MPM
+2026-11-05 15:21:37,037-0500 ERROR miktex-makefmt.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:37,610-0500 INFO  makefmt - found input file: C:\Program Files\MiKTeX\tex\latex\tex-ini-files\pdflatex.ini
+2026-11-05 15:21:37,721-0500 ERROR miktex-makefmt.core - Acceso denegado.
+
+2026-11-05 15:21:37,722-0500 ERROR miktex-makefmt.core - Function: RegOpenKeyExW
+2026-11-05 15:21:37,722-0500 ERROR miktex-makefmt.core - Result: 5
+2026-11-05 15:21:37,722-0500 ERROR miktex-makefmt.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:37,723-0500 ERROR miktex-makefmt.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:37,724-0500 ERROR miktex-makefmt.core - Acceso denegado.
+
+2026-11-05 15:21:37,724-0500 ERROR miktex-makefmt.core - Function: RegOpenKeyExW
+2026-11-05 15:21:37,724-0500 ERROR miktex-makefmt.core - Result: 5
+2026-11-05 15:21:37,725-0500 ERROR miktex-makefmt.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:37,725-0500 ERROR miktex-makefmt.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:37,725-0500 ERROR miktex-makefmt.core - Acceso denegado.
+
+2026-11-05 15:21:37,726-0500 ERROR miktex-makefmt.core - Function: RegOpenKeyExW
+2026-11-05 15:21:37,726-0500 ERROR miktex-makefmt.core - Result: 5
+2026-11-05 15:21:37,726-0500 ERROR miktex-makefmt.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:37,726-0500 ERROR miktex-makefmt.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:37,726-0500 ERROR miktex-makefmt.core - Acceso denegado.
+
+2026-11-05 15:21:37,726-0500 ERROR miktex-makefmt.core - Function: RegOpenKeyExW
+2026-11-05 15:21:37,726-0500 ERROR miktex-makefmt.core - Result: 5
+2026-11-05 15:21:37,726-0500 ERROR miktex-makefmt.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:37,726-0500 ERROR miktex-makefmt.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:37,727-0500 ERROR miktex-makefmt.core - Acceso denegado.
+
+2026-11-05 15:21:37,727-0500 ERROR miktex-makefmt.core - Function: RegOpenKeyExW
+2026-11-05 15:21:37,727-0500 ERROR miktex-makefmt.core - Result: 5
+2026-11-05 15:21:37,727-0500 ERROR miktex-makefmt.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:37,727-0500 ERROR miktex-makefmt.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:37,727-0500 INFO  makefmt - Creating the pdflatex format file...
+2026-11-05 15:21:38,185-0500 INFO  makefmt - Running miktex-pdftex.exe...
+2026-11-05 15:21:38,186-0500 INFO  makefmt - running: miktex-pdftex.exe --miktex-disable-maintenance --miktex-disable-diagnose --interaction=nonstopmode --initialize --halt-on-error --alias=pdflatex --job-name=pdflatex -tcx=cp227.tcx --enable-etex pdflatex.ini
+2026-11-05 15:21:38,186-0500 INFO  miktex-makefmt.core - start process: miktex-pdftex.exe --miktex-disable-maintenance --miktex-disable-diagnose --interaction=nonstopmode --initialize --halt-on-error --alias=pdflatex --job-name=pdflatex -tcx=cp227.tcx --enable-etex pdflatex.ini
+2026-11-05 15:21:38,222-0500 ERROR miktex-makefmt.core - Acceso denegado.
+
+2026-11-05 15:21:38,222-0500 ERROR miktex-makefmt.core - Function: RegOpenKeyExW
+2026-11-05 15:21:38,223-0500 ERROR miktex-makefmt.core - Result: 5
+2026-11-05 15:21:38,223-0500 ERROR miktex-makefmt.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:38,223-0500 ERROR miktex-makefmt.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:38,227-0500 ERROR miktex-makefmt.core - Acceso denegado.
+
+2026-11-05 15:21:38,228-0500 ERROR miktex-makefmt.core - Function: RegOpenKeyExW
+2026-11-05 15:21:38,228-0500 ERROR miktex-makefmt.core - Result: 5
+2026-11-05 15:21:38,228-0500 ERROR miktex-makefmt.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:38,228-0500 ERROR miktex-makefmt.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:38,229-0500 ERROR miktex-makefmt.core - Acceso denegado.
+
+2026-11-05 15:21:38,229-0500 ERROR miktex-makefmt.core - Function: RegOpenKeyExW
+2026-11-05 15:21:38,232-0500 ERROR miktex-makefmt.core - Result: 5
+2026-11-05 15:21:38,232-0500 ERROR miktex-makefmt.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:38,232-0500 ERROR miktex-makefmt.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:38,233-0500 ERROR miktex-makefmt.core - Acceso denegado.
+
+2026-11-05 15:21:38,233-0500 ERROR miktex-makefmt.core - Function: RegOpenKeyExW
+2026-11-05 15:21:38,233-0500 ERROR miktex-makefmt.core - Result: 5
+2026-11-05 15:21:38,233-0500 ERROR miktex-makefmt.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:38,233-0500 ERROR miktex-makefmt.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:38,236-0500 ERROR miktex-makefmt.core - Acceso denegado.
+
+2026-11-05 15:21:38,237-0500 ERROR miktex-makefmt.core - Function: RegOpenKeyExW
+2026-11-05 15:21:38,237-0500 ERROR miktex-makefmt.core - Result: 5
+2026-11-05 15:21:38,237-0500 ERROR miktex-makefmt.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:38,237-0500 ERROR miktex-makefmt.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,920-0500 INFO  makefmt - Installing Z:\calaire-ea\servicio_comercial\.miktex-data\miktex\log\makefmt\pdflatex\2026-11-05-15-21-37.log...
+2026-11-05 15:21:51,934-0500 INFO  makefmt - Installing Z:\calaire-ea\servicio_comercial\.miktex-data\miktex/data/le/pdftex\pdflatex.fmt...
+2026-11-05 15:21:52,008-0500 INFO  miktex-makefmt - this process (24504) finishes with exit code 0
+2026-11-05 15:21:52,008-0500 WARN  miktex-makefmt.core - still open: Z:\calaire-ea\servicio_comercial\.miktex-config\tex\generic\config\pdftexconfig.tex
+2026-11-05 15:21:52,008-0500 WARN  miktex-makefmt.core - still open: "C:\Program Files\MiKTeX\tex/generic/config\pdftexconfig.tex.in"
+2026-11-05 15:54:47,409-0500 INFO  miktex-makefmt - this process (24996) started by miktex in directory Z:\calaire-ea\servicio_comercial with command line: miktex-makefmt.exe --engine=xetex --dest-name=xelatex --no-dump xelatex.ini --enable-installer --miktex-disable-maintenance --miktex-disable-diagnose
+2026-11-05 15:54:47,409-0500 INFO  miktex-makefmt - running on Windows 10.0.26200
+2026-11-05 15:54:47,415-0500 INFO  makefmt - found input file: C:\Program Files\MiKTeX\tex\latex\latexconfig\xelatex.ini
+2026-11-05 15:54:47,419-0500 INFO  makefmt - Creating the xelatex format file...
+2026-11-05 15:54:47,426-0500 INFO  makefmt - Running miktex-xetex.exe...
+2026-11-05 15:54:47,426-0500 INFO  makefmt - running: miktex-xetex.exe --miktex-enable-installer --miktex-disable-maintenance --miktex-disable-diagnose --interaction=nonstopmode --initialize --halt-on-error --alias=xelatex --job-name=xelatex --enable-etex xelatex.ini
+2026-11-05 15:54:47,426-0500 INFO  miktex-makefmt.core - start process: miktex-xetex.exe --miktex-enable-installer --miktex-disable-maintenance --miktex-disable-diagnose --interaction=nonstopmode --initialize --halt-on-error --alias=xelatex --job-name=xelatex --enable-etex xelatex.ini
+2026-11-05 15:54:56,425-0500 INFO  makefmt - Installing Z:/calaire-ea/servicio_comercial/.miktex-data\miktex\log\makefmt\xelatex\2026-11-05-15-54-47.log...
+2026-11-05 15:54:56,556-0500 INFO  makefmt - Installing Z:/calaire-ea/servicio_comercial/.miktex-data\miktex/data/le/xetex\xelatex.fmt...
+2026-11-05 15:54:57,206-0500 INFO  miktex-makefmt - this process (24996) finishes with exit code 0

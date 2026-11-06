@@ -1,0 +1,1787 @@
+2026-11-05 15:21:38,438-0500 INFO  miktex-pdftex - this process (12892) started by miktex-makefmt in directory C:\Users\USUARIO\AppData\Local\Packages\sandbox.{65906d24-b95b-4de1-a0c4-f28c88b8375f}\AC\Temp\mik83142 with command line: miktex-pdftex.exe --miktex-disable-maintenance --miktex-disable-diagnose --interaction=nonstopmode --initialize --halt-on-error --alias=pdflatex --job-name=pdflatex -tcx=cp227.tcx --enable-etex pdflatex.ini
+2026-11-05 15:21:38,438-0500 INFO  miktex-pdftex - running on Windows 10.0.26200
+2026-11-05 15:21:38,439-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:38,439-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:38,439-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:38,440-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:38,440-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:38,440-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:38,440-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:38,440-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:38,440-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:38,440-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:38,440-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:38,440-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:38,440-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:38,440-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Setup
+2026-11-05 15:21:38,441-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:38,441-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:38,441-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:38,441-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:38,441-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:38,441-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:38,441-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:38,441-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:38,441-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:38,441-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:38,441-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:38,442-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:38,442-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:38,442-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:38,442-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:38,442-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:38,442-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:38,442-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:38,442-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:38,442-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:38,442-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:38,442-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:38,442-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:38,443-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:38,443-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:38,443-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:38,443-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:38,443-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:38,443-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:38,443-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:38,443-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:38,443-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:38,443-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:38,443-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:38,444-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:38,444-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:38,444-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:38,444-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:38,444-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:38,444-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:38,444-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:38,444-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:38,444-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:38,444-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:38,444-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\MPM
+2026-11-05 15:21:38,444-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:38,445-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:38,445-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:38,445-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:38,445-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\MPM
+2026-11-05 15:21:38,445-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:38,446-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:38,446-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:38,446-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:38,446-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\MPM
+2026-11-05 15:21:38,446-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:38,447-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:38,447-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:38,447-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:38,447-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\MPM
+2026-11-05 15:21:38,447-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:38,447-0500 INFO  miktex-pdftex - this is MiKTeX-PDFTEX 4.19.0 (1.40.26) (MiKTeX 24.4)
+2026-11-05 15:21:38,454-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:38,454-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:38,454-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:38,454-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:38,454-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:38,455-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:38,455-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:38,455-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:38,455-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:38,455-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:38,456-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:38,456-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:38,456-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:38,456-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:38,456-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:38,457-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:38,457-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:38,457-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:38,457-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:38,457-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:38,457-0500 INFO  miktex-pdftex - allowing known shell commands
+2026-11-05 15:21:38,459-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:38,459-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:38,459-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:38,459-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:38,459-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:38,460-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:38,460-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:38,460-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:38,460-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:38,460-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:38,461-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:38,461-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:38,461-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:38,461-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:38,461-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:38,461-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:38,461-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:38,461-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:38,461-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:38,461-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:38,484-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:38,485-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:38,485-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:38,485-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:38,485-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:38,485-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:38,485-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:38,486-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:38,486-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:38,486-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:38,486-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:38,486-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:38,486-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:38,487-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:38,487-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:38,487-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:38,487-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:38,487-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:38,488-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:38,488-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:38,677-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:38,678-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:38,678-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:38,678-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:38,678-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:38,679-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:38,679-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:38,679-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:38,679-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:38,679-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:38,679-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:38,680-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:38,680-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:38,680-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:38,680-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:38,680-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:38,681-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:38,681-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:38,681-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:38,681-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:38,681-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:38,681-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:38,682-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:38,682-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:38,682-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:38,852-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:38,852-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:38,852-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:38,852-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:38,852-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:38,853-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:38,853-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:38,853-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:38,853-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:38,853-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:38,854-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:38,854-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:38,854-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:38,854-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:38,854-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:38,855-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:38,855-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:38,855-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:38,855-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:38,855-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:38,856-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:38,856-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:38,856-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:38,856-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:38,856-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:38,865-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:38,865-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:38,865-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:38,865-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:38,865-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:38,866-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:38,866-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:38,866-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:38,866-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:38,866-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:38,867-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:38,867-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:38,867-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:38,867-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:38,867-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:38,868-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:38,868-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:38,868-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:38,868-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:38,868-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:38,869-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:38,869-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:38,869-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:38,870-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:38,870-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:38,881-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:38,881-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:38,881-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:38,882-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:38,882-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:38,882-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:38,883-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:38,883-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:38,883-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:38,883-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:38,884-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:38,884-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:38,884-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:38,884-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:38,884-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:38,885-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:38,885-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:38,885-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:38,885-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:38,885-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:38,886-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:38,886-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:38,886-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:38,887-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:38,887-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:39,112-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:39,113-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:39,113-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:39,113-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:39,113-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:39,114-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:39,114-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:39,116-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:39,116-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:39,116-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:39,117-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:39,117-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:39,118-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:39,118-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:39,118-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:39,118-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:39,119-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:39,119-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:39,119-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:39,119-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:39,119-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:39,120-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:39,120-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:39,120-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:39,120-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:46,915-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:46,915-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:46,915-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:46,915-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:46,915-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:46,915-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:46,915-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:46,916-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:46,916-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:46,916-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:46,916-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:46,916-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:46,916-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:46,916-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:46,916-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:46,916-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:46,917-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:46,917-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:46,917-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:46,917-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:46,917-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:46,917-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:46,917-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:46,917-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:46,917-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,010-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,010-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,010-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,010-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,011-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,011-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,011-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,011-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,011-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,011-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,011-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,011-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,012-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,012-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,012-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,012-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,012-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,012-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,012-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,012-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,012-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,013-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,013-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,013-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,013-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,060-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,060-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,060-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,060-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,061-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,061-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,061-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,061-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,061-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,061-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,061-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,061-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,062-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,062-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,062-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,062-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,062-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,062-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,062-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,062-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,063-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,063-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,063-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,063-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,063-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,244-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,244-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,244-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,244-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,244-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,245-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,245-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,245-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,245-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,245-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,245-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,245-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,245-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,245-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,246-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,246-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,246-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,246-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,246-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,246-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,246-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,246-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,247-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,247-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,247-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,267-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,267-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,267-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,267-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,267-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,268-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,268-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,268-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,268-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,268-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,268-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,268-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,269-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,269-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,269-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,269-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,269-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,269-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,269-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,269-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,270-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,270-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,270-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,270-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,270-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,296-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,296-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,296-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,296-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,296-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,296-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,296-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,296-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,296-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,296-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,297-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,297-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,297-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,297-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,297-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,297-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,297-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,297-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,297-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,298-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,298-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,298-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,298-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,298-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,298-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,316-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,318-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,318-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,318-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,318-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,318-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,318-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,318-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,319-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,319-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,319-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,319-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,319-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,319-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,319-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,320-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,320-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,320-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,320-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,320-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,320-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,320-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,320-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,320-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,320-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,336-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,336-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,336-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,336-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,336-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,336-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,336-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,336-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,336-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,336-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,337-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,337-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,337-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,337-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,337-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,337-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,337-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,337-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,338-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,338-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,338-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,338-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,338-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,338-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,338-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,355-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,355-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,355-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,355-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,355-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,355-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,355-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,355-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,355-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,356-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,356-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,356-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,356-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,356-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,356-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,356-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,356-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,356-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,357-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,357-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,357-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,357-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,357-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,357-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,357-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,372-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,372-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,372-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,372-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,372-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,372-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,372-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,372-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,373-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,373-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,373-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,373-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,373-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,373-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,373-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,373-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,374-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,374-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,374-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,374-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,374-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,374-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,374-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,374-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,374-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,417-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,418-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,418-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,418-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,418-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,418-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,418-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,418-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,418-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,418-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,419-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,419-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,419-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,419-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,419-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,419-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,419-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,419-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,419-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,419-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,420-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,420-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,420-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,420-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,420-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,435-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,435-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,435-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,435-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,435-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,435-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,435-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,435-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,436-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,436-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,436-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,436-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,436-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,436-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,436-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,436-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,436-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,437-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,437-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,437-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,437-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,437-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,437-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,437-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,437-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,459-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,459-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,460-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,460-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,460-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,460-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,460-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,460-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,460-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,460-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,461-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,461-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,461-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,461-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,461-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,461-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,461-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,461-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,461-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,461-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,462-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,462-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,462-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,462-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,462-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,478-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,478-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,478-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,478-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,479-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,479-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,479-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,479-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,479-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,479-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,479-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,480-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,480-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,480-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,480-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,480-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,480-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,480-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,480-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,480-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,481-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,481-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,481-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,481-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,481-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,494-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,494-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,494-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,494-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,494-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,494-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,495-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,495-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,495-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,495-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,495-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,495-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,495-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,495-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,495-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,496-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,496-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,496-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,496-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,496-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,496-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,496-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,496-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,496-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,496-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,512-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,512-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,512-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,512-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,512-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,512-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,512-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,512-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,512-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,512-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,513-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,513-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,513-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,513-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,513-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,513-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,514-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,514-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,514-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,514-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,514-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,514-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,514-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,514-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,514-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,540-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,540-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,540-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,540-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,540-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,540-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,540-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,540-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,541-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,541-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,541-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,541-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,541-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,541-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,541-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,542-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,542-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,542-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,542-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,542-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,542-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,542-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,542-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,543-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,543-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,564-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,564-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,564-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,564-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,564-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,565-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,565-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,565-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,565-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,565-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,565-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,565-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,565-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,565-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,565-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,566-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,566-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,566-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,566-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,566-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,566-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,566-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,566-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,567-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,567-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,586-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,587-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,587-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,587-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,587-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,587-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,587-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,587-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,587-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,587-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,588-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,588-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,588-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,588-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,588-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,588-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,588-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,588-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,588-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,588-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,589-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,589-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,589-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,589-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,589-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,605-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,605-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,605-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,605-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,605-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,605-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,606-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,606-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,606-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,606-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,606-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,606-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,606-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,606-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,606-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,607-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,607-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,607-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,607-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,607-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,607-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,607-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,607-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,607-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,607-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,621-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,621-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,621-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,621-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,621-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,621-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,621-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,621-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,622-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,622-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,622-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,622-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,622-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,622-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,622-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,622-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,623-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,623-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,623-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,623-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,623-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,623-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,623-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,623-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,623-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,651-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,651-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,651-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,651-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,652-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,652-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,652-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,652-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,652-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,652-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,652-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,653-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,653-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,653-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,653-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,653-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,653-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,653-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,653-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,653-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,654-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,654-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,654-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,654-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,654-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,678-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,699-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,700-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,700-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,700-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,700-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,700-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,700-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,700-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,700-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,701-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,701-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,701-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,701-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,701-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,701-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,701-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,701-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,701-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,701-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,702-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,702-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,702-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,702-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,702-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,922-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,922-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,922-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,922-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,922-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,923-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,923-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,923-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,923-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,923-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,923-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,923-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,923-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,923-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,923-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,924-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,924-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,924-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,924-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,924-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,924-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,924-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,924-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,925-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,925-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,928-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,928-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,928-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,928-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,928-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,929-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,929-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,929-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,929-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,929-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,929-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,929-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,929-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,929-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,930-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,930-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,930-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,930-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,930-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,930-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,931-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,933-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,933-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,933-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,933-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,958-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,958-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,958-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,958-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,958-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,959-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,959-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,959-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,959-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,959-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,959-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,959-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,959-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,959-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,959-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,960-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,960-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,960-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,960-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,960-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,960-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,960-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,960-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,960-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,960-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,964-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,966-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,966-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,966-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,966-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,967-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,967-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,967-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,967-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,967-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,967-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,967-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,967-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,967-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,967-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,968-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,968-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,968-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,968-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,968-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,968-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,968-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,969-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,969-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,969-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,976-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,977-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,977-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,977-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,977-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,977-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,977-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,977-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,977-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,977-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,978-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,978-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,978-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,978-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,978-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,978-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,978-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,978-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,979-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,979-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,979-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,979-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,979-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,979-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,979-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,985-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,986-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,986-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,986-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,986-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,986-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,986-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,986-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,986-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,986-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,987-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,987-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,987-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,987-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,987-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,987-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,987-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,987-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,987-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,987-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:47,988-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:47,988-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:47,988-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:47,988-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:47,988-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:48,004-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:48,004-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:48,004-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:48,004-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:48,004-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:48,005-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:48,005-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:48,005-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:48,005-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:48,005-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:48,005-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:48,005-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:48,005-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:48,005-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:48,006-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:48,006-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:48,006-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:48,006-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:48,006-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:48,006-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:48,006-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:48,006-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:48,007-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:48,007-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:48,007-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:48,016-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:48,016-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:48,016-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:48,016-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:48,016-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:48,017-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:48,017-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:48,017-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:48,017-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:48,017-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:48,017-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:48,017-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:48,017-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:48,017-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:48,017-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:48,018-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:48,018-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:48,018-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:48,018-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:48,018-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:48,018-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:48,018-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:48,018-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:48,018-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:48,018-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,391-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,391-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,391-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,391-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,391-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,392-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,392-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,392-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,392-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,392-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,392-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,392-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,392-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,392-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,392-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,393-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,393-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,393-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,393-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,393-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,393-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,393-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,393-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,393-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,393-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,396-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,396-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,396-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,396-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,396-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,397-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,397-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,397-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,397-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,397-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,398-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,398-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,398-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,398-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,398-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,399-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,399-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,399-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,399-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,399-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,399-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,399-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,400-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,400-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,400-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,419-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,419-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,419-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,419-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,419-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,420-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,420-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,420-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,420-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,420-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,420-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,420-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,420-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,420-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,420-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,421-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,421-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,421-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,421-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,421-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,422-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,422-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,422-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,422-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,422-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,436-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,436-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,437-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,437-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,437-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,437-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,437-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,438-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,438-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,438-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,438-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,438-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,439-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,439-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,439-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,439-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,440-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,440-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,440-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,440-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,440-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,440-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,440-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,440-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,440-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,455-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,456-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,456-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,456-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,456-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,456-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,456-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,456-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,456-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,456-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,457-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,457-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,457-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,457-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,457-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,457-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,457-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,457-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,457-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,457-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,458-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,458-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,458-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,458-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,458-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,474-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,475-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,475-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,475-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,475-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,475-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,475-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,475-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,475-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,475-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,476-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,476-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,476-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,476-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,476-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,476-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,476-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,476-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,476-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,476-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,477-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,477-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,477-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,477-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,477-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,507-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,507-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,507-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,507-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,507-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,507-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,507-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,507-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,507-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,507-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,508-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,508-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,508-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,508-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,508-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,508-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,508-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,508-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,508-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,508-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,509-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,509-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,509-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,509-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,509-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,516-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,516-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,516-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,516-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,516-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,517-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,517-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,517-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,517-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,517-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,517-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,517-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,517-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,517-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,518-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,518-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,518-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,518-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,518-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,518-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,518-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,518-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,519-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,519-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,519-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,542-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,542-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,542-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,542-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,542-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,543-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,543-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,543-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,543-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,543-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,543-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,543-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,543-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,543-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,543-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,544-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,544-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,544-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,544-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,544-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,544-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,544-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,544-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,544-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,544-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,553-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,553-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,553-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,553-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,553-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,553-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,553-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,553-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,553-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,554-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,554-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,554-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,554-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,554-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,554-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,554-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,554-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,555-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,555-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,555-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,555-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,555-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,555-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,555-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,555-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,581-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,581-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,581-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,581-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,581-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,582-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,582-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,582-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,582-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,582-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,582-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,582-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,582-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,582-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,582-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,583-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,583-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,583-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,583-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,583-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,583-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,583-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,583-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,583-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,583-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,591-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,591-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,591-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,591-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,591-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,591-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,591-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,592-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,592-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,592-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,592-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,592-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,592-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,592-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,592-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,593-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,593-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,593-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,593-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,593-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,593-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,593-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,593-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,593-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,593-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,622-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,622-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,622-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,622-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,622-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,623-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,623-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,623-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,623-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,623-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,623-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,623-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,623-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,623-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,623-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,624-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,624-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,624-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,624-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,624-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,624-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,624-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,624-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,624-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,625-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,640-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,640-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,640-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,640-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,641-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,641-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,641-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,641-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,641-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,641-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,641-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,642-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,642-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,642-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,642-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,642-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,642-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,642-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,642-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,642-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,643-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,643-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,643-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,643-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,643-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,654-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,655-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,655-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,655-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,655-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,655-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,655-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,655-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,655-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,655-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,656-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,656-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,656-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,656-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,656-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,656-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,656-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,657-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,657-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,657-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,657-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,658-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,658-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,658-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,658-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,669-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,669-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,670-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,670-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,670-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,670-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,670-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,670-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,670-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,670-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,671-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,671-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,671-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,671-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,671-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,671-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,671-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,671-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,671-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,671-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,672-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,672-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,672-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,672-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,672-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,690-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,691-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,691-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,691-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,691-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,691-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,691-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,692-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,692-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,692-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,692-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,692-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,692-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,692-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,693-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,693-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,693-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,693-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,693-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,693-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,694-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,694-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,695-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,695-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,695-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,706-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,706-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,707-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,707-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,707-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,707-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,707-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,707-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,707-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,707-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,708-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,708-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,708-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,708-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,708-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,708-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,708-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,708-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,708-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,708-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,709-0500 ERROR miktex-pdftex.core - Acceso denegado.
+
+2026-11-05 15:21:51,709-0500 ERROR miktex-pdftex.core - Function: RegOpenKeyExW
+2026-11-05 15:21:51,709-0500 ERROR miktex-pdftex.core - Result: 5
+2026-11-05 15:21:51,709-0500 ERROR miktex-pdftex.core - Data: Software\MiKTeX.org\MiKTeX\2.9\Core
+2026-11-05 15:21:51,709-0500 ERROR miktex-pdftex.core - Source: Libraries\MiKTeX\Core\win\winRegistry.cpp:83
+2026-11-05 15:21:51,874-0500 INFO  miktex-pdftex - this process (12892) finishes with exit code 0
